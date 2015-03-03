@@ -1,0 +1,279 @@
+\documentclass[fontsize = 20px, paper = a4]{article}
+\author{Alessandro Sieni, Gianluca Mondini}
+\title{Analisi II}
+\date{\today}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+
+\section{Th.Fondamentale dell'algebra}
+\subsection{Un po' di storia...}
+La storia del teorema fondamentale dell'algebra inizia con Leonardo Fibonacci, che accompagnando suo padre in Algeria per un viaggio di lavoro, si trovo' a contatto con l'Algebra,già nota in ambiente islamico,ma ancora materia ignota nel vecchio continente.\\
+In quell'epoca intanto in Europa erano noti i principali metodi di risoluzione delle equazioni di primo e secondo grado, e grazie a Cardano fu trovata la formula risolutiva per le equazioni di terzo grado, e grazie invece a Lodovico Ferreri, invece trovarono risoluzione le equazioni di quarto grado.\\
+In quell'epoca gli algebristi si fermarono al quarto grado, ma "inventarono" i numeri complessi,nati inizialmente per estrarre le radici negative come ad esempio: $$\sqrt{-1}$$
+che si incontravano applicando la formula di Cardano, anche quando le soluzioni erano tutte le reali.\\
+Due secoli piu' tardi, fu chiaro il perché non si riusciva a trovare la formula risolutiva per le equazione algebriche dal quarto grado in su: Galois, la sera prima di venire ucciso in duello, scrisse la dimostrazione del fatto che tali formule NON ESISTONO nel caso generale (ovviamente $x^5 = 1$ e' risolubile).\\
+Il problema algebrico era definitivamente chiaro: non e' sempre possibile trasformare,utilizzando le identità algebriche elementari un'equazione di quinto grado in una di tipo "speciale" che utilizzi sole le "operazioni"
+$\sqrt{}$,$\sqrt[3]{}$,$\sqrt[4]{}$,$\sqrt[5]{}$,ossia le soluzione rispettive "pure" $x^2 = k$ , $x^3 = k$ , $x^4 = k$ , $x^5 = k$.\\
+Dove sta allora il problema?Il problema consiste nel fatto che una cosa e' che non esista formula risolutiva, un'altra e' che non esistano soluzioni! Il punto di vista rivoluzionario,che nei secoli successivi pervase l'intera  
+Analisi Matematica, e' di innovare del tutto a porsi il problema della ricerca di formule risolutive ed occuparsi del seguente problema\\ \\
+\indent \textbf{" Dato un polinomio,esistono punti nel quale si annulla? "}\\ \\
+Ciò per GAUSS, il "princeps mathematicum".\\
+Una prima osservazione e' che i polinomi costanti(non nulli) non hanno zeri. Prenderemo dunque in considerazione solo polinomi NON costanti.Anche i polinomi non costanti, pero', hanno i loro problemi : $1 + x^2$ NON ha zeri reali ma zeri complessi $x = \pm i$.\\
+La risposta fornita da C.F. GAUSS, dopo vent'anni di ripensamenti e quattro diverse dimostrazioni, fu semplice e formidabile: 
+\subsection{Teorema}
+\subsubsection{Introduzione}
+\hspace*{1.3cm} \underline {Ogni Polinomio a coefficienti costanti in $\mathbb{C}$ ammette zeri in $\mathbb{C}$} \\ \\ 
+
+Noi sappiamo che questo teorema risulta falso quando si cercano gli zeri nell'insieme $\mathbb{R}$.\\
+Osserviamo anche che questo teorema non si occupa di trovare le soluzioni alle equazioni $$f(t) = 0$$ ma solo dimostrare che tali soluzioni esistono.\\
+Osserviamo infine che se $f(z^*) = 0$ allora risulta divisibile (per Ruffini) per $(z - z_{0})$, e dunque seguendo la regola si ottiene $$f(z^*) = (z - z^*) * q(z) = 0$$
+Dove $q(z)$ ( ovvero il quoziente della divisione di $f(z)$ per $z*$) e' un polinomio di grado inferiore di uno rispetto al polinomio di partenza,e dato che $f(z)$ si annulla in $z*$ e in tutti gli zeri di $q(z)$, (per la legge di annullamento del prodotto) allora e' possibile riapplicare il teorema di Gauss a $q(z)$ e alla fine,fattorizzarlo in una serie di polinomi di grado = 1: $$f(z) = A(z-z_{1})(z-z_{2})(z-z_{3})...(z-z_{n})$$ dove alcuni degli zeri $z_{1},...,z_{n}$ possono anche coincidere.\\
+Dunque, in sostanza, ogni polinomio a coefficienti complessi può essere scomposto in una serie di polinomi di grado = 1 e grado = 0 ( ovvero costanti ). La costante $A$ che appare risulta essere la costante del termine di ordine massimo.\\
+La dimostrazione sotto esplicata si basa sul la seguente linea di ragionamento, e su due risultati:\\\\
+\indent -Per ogni polinomio complesso $p(z)$ la funzione $f(z) = | p(z) |$ ammette \\ \indent           minimo assoluto in $\mathbb{C}$ \\\\
+\indent -Per ogni polinomio complesso non costante, se $p(z^*) \neq 0$ allora esiste $\bar{z}\in \mathbb{C}$ \indent tale che $|p(z^*)| >|p(\bar{z})|$   \\ \\
+Il teorema di GAUSS segue da questi due risultati perche',detto $z^*$ un punto di minimo assoluto di $|p(z)|$.\\
+\subsubsection{Lemma}
+\textbf{\underline{Se $p$ e' un polinomio in $\mathbb{C}$, allora $|p|$ ha minimo in $\mathbb{C}$}}\\\\
+Il prima risultato da stabilire riguarda il comportamento dei polinomi non costanti all'infinito\\
+\textbf{Lemma :} \textit{Se p : $\mathbb{C}\rightarrow \mathbb{C}$} e' non costante, allora $lim_{z \to \infty} p(z) = \infty $ \\
+\underline{Dim.} Posto $p(z) = \alpha_{n}z^n + \alpha_{n-1}z^{n-1} +....\alpha_{1}z + alpha_{0}$ con $\alpha_{n} \neq 0$ si ha che :
+$$p(z) = z^n(\alpha_{n} + \frac{\alpha_{n-1}}{z} + .... +\frac{\alpha_{n-k}}
+{z^k} + .... +\frac{\alpha_{0}}{z^n}) $$
+poiche' $ z \to \infty \Longrightarrow z^k \to \infty$,per ogni $k$ intero strettamente positivo e $f\rightarrow \infty \Longrightarrow \frac{1}{f} \rightarrow 0$, ne segue che il termine in parentesi tende a $\alpha_{n} \neq 0$, mentre $z^n \to \infty$, da cui $p(z)$ diverge.
+\subsubsection{Dimostrazione Teorema di Gauss}
+La dimostrazione e' immediata per i polinomi costanti: ogni punto e' di minimo.\\
+Fissato ad arbitrio $ z \in \mathbb{C}$ , se $p(z_{0}) = 0$, abbiamo gia' provato il teorema ( ed anche il teorema di Gauss) perche' 
+$$|p(z)| >= 0 = |p(z_{0})$$
+Se invece, risulta $p(z_{0}) \neq 0$, allora segue dalla divergenza di $p$ all'infinito che, scelto $\epsilon = |p(z_{0}| > 0$, si ha che esiste $\delta > 0$ tale che 
+$$ |p(z)| >\epsilon = |p(z_{0})| >= |p(z^*)|$$
+e dunque 
+$$|p(z)| >= |p(z^*)| \forall z \in \mathbb{C}$$
+La proprietà di divergenza all'infinito,che permette di restringere la ricerca del minimo ad un sistema chiuso e limitato sul quale e' assicurato dal teoroma di Weiestrass,viene (in altro contesto ) chiamata di \underline{COERCIVITA'}.
+\subsubsection{Teorema 1}
+\textit{\underline{Se $p(z)$ e' non costante, e $p(z^*) \neq 0$, allora esiste $\bar{z} \in \mathbb{C}$ tale che $|p(\bar{z})| < |p(z^*)|$ }}\\\\\\
+\textbf{Dim.} Poiche'  $p(z*) \neq 0$, si può definire un nuovo polinomio
+$$q(w) = \frac{1}{p(z^*)}* p(z^* + w) $$
+Il polinomio $q$ ha lo stesso grado di $p$,perché  sviluppando le potenze $(z^* + w)^m$ si ottiene sempre il termine $w^m$, ed inoltre $q(0) = 1$.\\
+Riordinando $q$ per potenze crescenti di $w$ si otterrà
+$$q(w) = 1 + \alpha_{k}w^k +w^{k+1}\tilde{q}(w)$$
+Ove $\tilde{q}(w)$ e' il polinomio che si ottiene raccogliendo $w^{k+1}$ fra tutti i termini di grado strettamente maggiore di $k$.\\
+Dalla precedente equazione, per la disuguaglianza triangolare si ha che:
+$$|q(w)| <= |1 + \alpha_{k}w^k| + |w|^{k+1} |\tilde{q}(w)|$$
+L'idea della dimostrazione e' di scegliere $\bar(w)$ in modo che $\alpha_{k}w^k$ sia reale,negativo e di modulo minore di 1.\\
+Perche' $\alpha_{k}w^k$ sia reale e negativo dovrà essere 
+$$ang(\alpha_{k}w^k) = \pi $$
+e cioe'
+$$\pi = ang(\alpha_{k}) + ang(w^k) = ang(\alpha_{k}) + k*ang(w) $$
+e infine
+$$\theta \equiv ang(w) = \frac{\pi - ang(\alpha_{k}}{k}$$
+In definitiva, per ogni $\bar{w} = p*e^{i\theta}$, con $p <= \frac{1}{|\alpha_{k}^{\frac{1}{k}}}$ e $\theta = \frac{\pi - ang(\alpha_{k}}{k}$, essendo $\alpha_{k}w^{k}$ reale,negativo e di modulo minore di 1 risulta che 
+$$|1 + \alpha_{k}\bar{w}^k| = 1 - |\alpha_{k}||\bar{w}^k|$$
+da cui 
+$$|q(\bar{w}| <= 1 - |\bar{w}|^k [|\alpha_{k}|+ |\bar{w}|*|\tilde{q}(w)]$$
+Facendo ora tendere $|\bar{w}|$ a zero,mantenendone l'argomento costantemente uguale a 0, si ottiene che il termine in parentesi quando tende a $|\alpha_{k}|$(>0 per come k e' stato definito) da cui per il teorema della permanenza del segno, esso mantiene lo stesso segno strettamente positivo del limite $|\alpha{l}|$ per tutti i $\bar{w} \neq 0$, di argomento uguale a 0 e modulo, già in partenza minore di $\frac{1}{|\alpha_{k}|^{\frac{1}{k}}}$,abbastanza piccolo. Ne segue che, per tale $\bar{w}$
+$$|\bar{w}*[|\alpha_{k} + |\bar{w}||\tilde{q}(\bar{w})|] > 0$$
+e di conseguenza
+$$|q(\bar{w}| < 1$$
+Ricordando la definizione di $q$, ne segue
+$$|p(z^* + \bar{w})| < |p(z^*)|$$
+e la tesi, scegliendo
+$$\bar{z} = z^* + \bar{w}$$
+\subsection{Conclusione}
+L'impiego del teorema della permanenza del segno consente di concludere che $|q|$ si comporta. per $w$ di..... piccole, come 
+$$1 + \alpha_{k}w^k$$
+e la caratteristica di $\mathbb{C}$ (non presente in $\mathbb{R}$) che consente di concludere la prova e' quella di poter fissare a piacere l'argomento di $\alpha_{k}w^k$! Per un polinomio reale con $k$ pari e $\alpha{k} > 0$ non si può evitare che $\alpha_{k}w^k$ sia positivo (ed e' esattamente ciò che accade a $P(x)= 1 + x^{2}$!).\\
+Su $\mathbb{C}$,invece,c'è una libertà molto maggiore.
+\subsection{Note Finali}
+\section{Convergenza delle funzioni omogenee nell'origine}
+\subsection{Premessa}
+Una delle conseguenze più interessanti della formula di Taylor per le funzione ad una variabile e' che,per funzioni sufficientemente regolari nell'intorno di un punto $x_{0}$ la differenza tra $F(x)$ e $F(x_{0})$ si comporta come $(x-x_{0})^h$ dove $h$ corrisponde alla prima derivata non nulla della funzione calcolata nel punto $x_{0}$ (se esiste).\\
+Cio' permette di studiare il $lim_{x \to x_{0}} \frac{f(x)}{g(x)}$, supposto che $f(x)$ e $g(x)$ siano infinitesime,sostituendo ad f e a g i loro sviluppo di Taylor con relativi resti si ottiene
+$$\frac{f(x)}{g(x)}=\frac{(x-x_{0})^h *\frac{f^{(h)}(x_{0})}{h!}+o(x-x_{0})^h}{(x-x_{0})^k *\frac{g^{(k)}(x_{0})}{k!}+o(x-x_{0})^k}$$ e tutto si risolve mettendo in evidenza $(x-x_{0})^h$ al numeratore e $(x-x_{0})^k$ al denominatore ottenendo cosi
+$$\frac{f(x)}{g(x)}=\frac{(x-x_{0})^h}{(x-x_{0})^k} * \frac{\frac{1}{h!}*f^{(h)}(x_{0}) + \frac{o(x-x_{0})^h}{(x-x_{0})^h}}{\frac{1}{k!}*g^{(k)}(x_{0}) + \frac{o(x-x_{0})^k}{(x-x_{0})^k}}$$
+e per definizione di "o" piccolo o la seconda frazione tende a $\frac{k!}{h!}\frac{f^{(h)}(x_{0})}{g^{(k)}(x_{0})}$, e dunque tutto si decide confrontando gli ordini h e k delle prime derivate non nulle di f e g.
+Esattamente lo stesso accadrebbe adoperando il teorema di Bernoulli (detto di del'Hospital).\\
+Poiché per le funzioni di più variabili non esiste un simile teorema,mentre esiste la formula di Taylor,sarebbe di grandissimo interesse il capire come adoperarle per calcolare i limiti.Prima di altre considerazioni sui resti o(...) (ovvero sui resti "o piccoli"),cominciamo con l'osservazione che, mentre in una variabile i termini polinomiali sono potenze (sia al numeratore che al denominatore) direttamente confrontabili e "semplificabili" nulla di simile accade in più variabili.\\
+Infatti supponiamo per semplicità che il punto "fisso" sul quale studiare il limite sia (0,0) e che f e g siano funzioni di due variabili, derivabili quante volte si vuole nell'origine. Supponiamo infine che qualunque delle loro derivate parziali (prime) non si annulli. In tal caso
+$$f(x,y) = x*f_x(0,0) + y*f_y(0,0) + o(\sqrt{x^2 + y^2})$$
+$$g(x,y) = x*g_x(0,0) + y*g_y(0,0) + o(\sqrt{x^2 + y^2})$$ 
+Anche se fosse vero (e \underline{NON LO E?!!}) che i resti siano trascurabili, ci si troverebbe a studiare il limite 
+$$\lim_{x,y \to 0}\frac{\alpha*x + \beta*y}{\gamma*y + \delta * y}$$
+con uno fra i valori $\alpha$ e $\beta$ e una fra $\gamma$ e $\delta$ non nulli, e non e' affatto detto che i due complessi dei termini di primo grado si possano semplificare: se fosse $f_x = 1 f_y = -1 g_x = 1 g_y = -1$ la frazione sarebbe $\frac{x-y}{x+y}$ che non e' in alcun modo semplificabile , e vedremo presto essere pessima riguardo la convergenza.\\
+L'unica cosa che hanno in comune la funzioni di una e più variabili e' che, una volta scoperta una derivata parziale non nulla, verrà individuato un polinomio omogeneo costanti con tutte le derivate dello stesso ordine e dunque, invece dei rapporti $\frac{(x-x_0)^h}{(x-x_0)^k}$ , stavolta occorrerà studiare i rapporti $\frac{p(x-x_0)}{q(x-x_0}$ ove p e q sono polinomi omogenei di grado h e k, rispettivamente.\\
+Anche se i resti non esistessero, come nel caso di $f(x,y) = x - y$ e $g(x,y) = x+y$ che verificano $f(0,0) = g(0,0) = 0$ e $f_x(0,0),f_y(0,0),g_x(0,0),g_y(0,0) \neq 0$, per i quali i resti sono nulli, ci sarebbe comunque il problema di studiare i limite dei rapporti di polinomi omogenei, che verra' scritto in quante note nel caso piu' generale delle funzioni(positivamente) omogenee.\\
+Gli strumenti che verranno sviluppati consentiranno di riconoscere subito che gli eventuali resti non sono trascurabili (in generale) respetto a termini di ordine più basso.\\
+Lo stadio che segue riguarda il comportamento nello origine. Lo studio in ($x_0$,$y_0$) puo' essere svolto sulla funzione $\tilde{f}(u,v) = f(x-x_0, y-y_0)$, che si comporta in (0,0) come f fa in ($x_0$,$y_0$).
+\subsection{Funzioni positivamente omogenee}
+La prossima definizione e' indispensabile nel caso generale.
+\subsubsection{Definizioni}
+DEFINIZIONE :  \underline{Dato $X\subseteq \mathbb{R}^n$, si dice che X e' \underline{ UN CONO} (rispetto all'origine 0) se}
+$$x\in X \Rightarrow tx \in X \quad \forall t > 0$$
+Dunque se un cono contiene un punto, contiene anche tutte le semirette nella direzione del punto, ma niente si dice dell'origine(notate la diseguaglianza stretta t>0?).\\ \\\\
+DEFINIZIONE :\underline{ Una funzione $f:X\rightarrow\mathbb{R}$, ove X è un cono,}\underline{si dirà $\alpha$-omogenea o }\\ 
+\underline{anche omogenea di grado $\alpha$, ($\alpha \in \mathbb{R}$) se}
+$$f(tx) = t^\alpha f(x) \quad \forall x \in \bar{X} \quad \forall t>0 $$
+Il dover calcolare $f(tx)\quad \forall x \forall t >0 $ rende necessario che il dominio di f sia un cono. Notiamo che il concetto è più generale di quello di polinomio omogeneo. Infatti la funzione | x |, definita su cono $\mathbb{R}^n$
+ verifica | tx | = | t | * | x | = t * | x | $\forall t > 0 \; \forall x$, ed è dunque una funzione omogenea di grado 1, senza essere un polinomio neutro, dato un qualunque polinomio di grado K
+ $$\begin{array}{lcl}p(x_1,x_2,...,x_n) =  \sum{\alpha_{i_1},...,\alpha_{i_n} x_1^{i_1} x_2^{i_2}.. x_n^{i_n}}\\ i_1 + i_2 +...+i_n = k \\ i_1,i_2,...,i_n \ge 0 \end{array}$$ 
+si ha,raccogliendo in evidenza $t^k$ in ogni addendo $p(tx) = p(tx_1,tx_2,...,tx_n) = t^kp(x_1,...,x_n) = t^kp(x)$
+e dunque un polinomio omogeneo di grado k è una funzione k-omogenea.\\
+Un semplicissimo esempio di funzione $\alpha$-omogenea è la funzione $x\rightarrow|x|^\alpha$.\\
+Dalle leggi di moltiplicazione,divisione e potenza di potenze ne segue tale lemma:\\
+\subsubsection{Lemma}
+LEMMA: \underline{Se f è $\alpha$-omogenea e g è $\beta$-omogenea, definite nello stesso cono X, allora:}\\\\
+\hspace*{1.5cm}- \underline{f*g è ($\alpha + \beta$)-omogenea}\\\\
+\hspace*{1.5cm}- \underline{$\frac{f}{g}$ è ($\alpha - \beta$)-omogenea in X - \{g = 0\}}\\\\
+\hspace*{1.5cm}- \underline{$f^{\gamma }$ è $\alpha \gamma $-omogenea}\\
+\subsubsection{Osservazioni}
+Se f è 0-omogenea, allora ($t*\alpha = 1$) e f è costanti sui raggi uscenti dall'origine (come per una scala a chiocciola). Un'altra utile osservazione è che, se f è $\alpha$-omogenea e $x \neq 0$, allora
+$$f(x) = f\left(| x | \frac{x}{| x |}\right) = | x |^\alpha f\left(\frac{x}{| x |}\right)$$
+e dunque una funzione omogenea è completamente individuata dai valori che assume sulla porzione della sfera unitaria che appartiene al proprio dominio X.\\
+Concludiamo con qualche esempio:\\
+La funzione f(x,y) = $\frac{x - y}{x + y}$ è definita sull'insieme $X = \left\{ (x,y) \in \mathbb{R}^n : x\neq -y \right\}$ che è un cono, perché (x,y) $\in X $ $\Rightarrow$  $x \neq -y$ $\Rightarrow$ $tx \neq ty$ $\forall t > 0$  $\Rightarrow(tx,ty) \in X$ ed è omogenea di grado 0, perché il rapporto dei polinomi omogenei di grado 1. \\
+La funzione $\frac{x^3 - x^2y}{x^2 + y^2}$ è definita su $X = \left \{(x,y) \neq ( 0,0 ) \right \}$ che è un cono perché (x,y) $\in X$ $\Leftrightarrow \, (x,y) \neq (0,0) \Rightarrow \, (tx,ty) \neq t(0,0) = (0,0) \, \forall t > 0 \Leftrightarrow (tx,ty) \in X$, ed è 1-omogenea, perché rapporto di un polinomio 3-omogeneo e uno 2-omogeneo.\\
+La funzione "$\sin \left ( \frac{x^2 - y^ 2}{x^2 + y^2} \right )$" è definita  nel cono precedente ed è 0-omogenea, perché $\frac{x^2 - y^2}{x^2 + y^2}$ è 0-omogenea, e dunque costante sui raggi uscenti dall'origine e di conseguenza anche "$\sin \left ( \frac{x^2 - y^ 2}{x^2 + y^2}\right )$" lo è.\\
+La norma di $\mathbb{R}^n$, essendo una norma, è 1-omogenea; la cosa è ricostruibile anche dal fatto che 
+$$|x| = \left(\sum{x_{i}^2} \right )^\frac{1}{2}$$
+e poiché $\left (\sum{x_{i}^2} \right )$ è un polinomio di grado 2-omogeneo, la sua potenza $\frac{1}{2}$ è di grado $2 * \frac{1}{2} = 1$. \\
+Infine, le forme quadratiche sono 2-omogenee.
+\subsection{Funzioni $\alpha$-omogenee con  $\alpha > 0$ }
+\subsubsection{Premessa}
+Le proprietà prima osservate, per la quale
+$$f(x) = | x |^\alpha f\Big (\frac{x}{| x |} \Big )$$
+lascia intravedere qualcosa di buono perché, al tendere di x a 0, anche | x | fa altrettanto e dunque anche $| x |^\alpha$ per $\alpha > 0$,per la continuità delle composizione di funzione continue.\\
+L'unico problema, serio, è che non sempre un prodotto dei fattore del quale è infinitesimo risulta infinitesimo soprattutto se l'altro fa il diavolo a quattro!\\
+\subsubsection{Teorema 1}
+TEOREMA: \underline{Sia $f:X\rightarrow \mathbb{R}$ $\alpha$-omogena, con $\alpha > 0$. Sia inoltre f limitata su }\\ \\
+\hspace*{2cm} \underline{$X \cap \{| x | = 1\}$}.\\ \\
+\underline{ALLORA: $lim_{x \to 0} f(x) = 0$}\\ \\
+\underline{DIMOSTRAZIONE }\\ \\
+Poiché f è limitata sulla porzione di sfera unitaria che appartiene ad X, esiste K > 0 tale che 
+$$| f(w) | \le L \qquad \forall w \in X \cap \{ | x | = 1 \}$$
+allora da 
+$$0 <= | f(x) | = | x |^\alpha | f \left( \frac{x}{| x | } \right )| \le K* | x |^\alpha \; (Purche' \; \frac{x}{|x|} \in X \cap \left \{ |w| = 1 \right \})$$
+e dal teorema del confronto, purché $K|x|^\alpha \rightarrow 0$ allora | f(x) | farà altrettanto.\\ \\
+\underline{NOTE FINALI} \\ \\
+Determinare la costante K, "a mano",che dovrà risolvere la disequazione | f(x) |<= K, con | x | = 1
+e $x \in X$, cosa tutt'altro che banale. La seguente versione fa uso del teorema di Weitrass per dedurre che K esiste, anche sente conoscerlo.
+\subsubsection{Teorema 2}
+TEOREMA: \underline{Sia f come sopra, ma in più sia continua su X, e infine $X \cap \{|w| = 1\}$} 
+\\ \\
+\underline{sia chiuso}
+\\ \\
+\underline{ALLORA f è infinitesima in 0}
+\\ \\
+\underline{DIMOSTRAZIONE}
+\\ \\
+Per ipotesi, l'intersezione $X \cap \{|w| = 1 \}$ è chiuso, ed è anche limitato, perché contenuto nella sfera unitaria B(0,1).\\
+Dal teorema di Weistrass, applicato alla funzione continua | f | ed al chiuso limitato $X \cap \{ |w| = 1 \}$ segue che 
+$$|f(x)| = |x|^\alpha | f \left( \frac{x}{|x|} \right ) | \le |x|^\alpha \, max \, |f(v)|  \quad v\in X \cap \{ |w| = 1 \}$$
+è il ragionamento del teorema precedente si può ripetere provando
+$$K = max \, |f(v)| \quad v \in X \cap \{|w| = 1 \}$$ 
+\\\\
+\underline{Esempio}
+\\\\
+$$\lim_{x,y \to 0} \frac{x^3 - x^2y}{x^2 + y^2} = 0$$
+perché $X = \{(x,y) \neq (0,0) \}$ e dunque 
+$$X \cap \{(w) = 1 \} = \{|w| = 1\}$$
+che è chiuso (e limitato). \\
+Invece, cosa accade a $lim_{x,y \to (0,0) \frac{x^2 + y^2}{x-y}}$, che è 1-omogenea come la precedente? \\
+Il dominio è $\{ (x,y) \in \mathbb{R}^2 : x \neq y \}$ e, intersecando con il cerchio unitario si ottiene l'insieme $\{ (x,y): x^2 + y^2 = 1 \, e \, x \neq y \}$ , che non è chiuso!\\
+Dunque il teorema non si può adoperare, ma resta il dubbio che risultati meno elementari potrebbero aggravare il problema.Purtroppo non è cosi ! \\
+Infatti, fissato ad arbitrio un intorno B (0,$\delta$) si considerino i punti ($\frac{\delta}{2} cos\theta$, $\frac{\delta}{2} sin\theta$) che stanno sulla circonferenza di raggio dimezzato ( e dunque appartengo all'intorno), ma per i quali risulta
+$$f\Big(\frac{\delta}{2} cos\theta \, , \, \frac{\delta}{2} sin \theta \Big) = \frac{\frac{\delta ^ 2}{4}(cos^2 \theta + sin^2 \theta )}{\frac{\delta}{2} (cos \theta - sin \theta)} = \frac{\delta}{2} \frac{1}{cos \theta - sin \theta}$$
+che diverge in modulo quando $\theta \to \frac{\pi}{4}$, con segni discordi dalle due parti. Dunque, in ogni intorno, esistono punti sui quali f assume valori arbitrariamente grandi, il che contrasta con la convergenza ( la f compresa tra 
+$L - \epsilon$ ed $L + \epsilon$ in un opportuno intorno ). \\
+\subsubsection{Teorema 3}
+Sia $f: X \to \mathbb{R}$ una funzione continua e $\alpha$-omogenea, con $\alpha > 0$. Il risultato provato in precedenza assume che il $lim_{x \to 0} f(x) = 0$ se f è limitata su $X \cap \{|x| = 1\}$.\\
+Se tale insieme è chiuso, essendo anche limitato, permette di ottenere la limitatezza di f mediante il teorema di Weistrass, ma cosa fare se $X \cap \{ |x| = 1\}$ NON è chiuso? \\
+Il seguente criterio, in apparenza macchinoso, ma molto utile in alcuni casi"reali", offre una risposta.\\\\
+TEOREMA: \underline{Se $f:X \to \mathbb{R}$ è continua e $\alpha$-omogenea, $\alpha > 0$, ed inoltre esiste finito}
+\\ \\ \underline{ il $lim_{x \to x_0} f(x)$ per ogni $x_0$, punto di accumulazione di $X \cap \{ |x| = 1\}$}
+\\ \\ ALLORA : \underline{$lim_{x \to x_0} f(x) = 0$}
+\\ \\ DIMOSTRAZIONE \\ \\
+Si può definire $\tilde{f}$ nei punti di accumulazione di $X \cap \{ |x| = 1 \}$ ma appartenenti ad esse ponendo 
+e la continuità di f assicura che le definizioni sono coerenti sui punti di accumulazione già appartenenti ad $ X \cap \{ |x| = 1 \}$.\\
+\[f(x) = \left\{
+  \begin{array}{lr}
+    f(x) \; se \; x \in X \cap \{|x| = 1 \} \\
+    \lim_{x \to 0 } f(x) \; se \; x \in \partial(X \cap \{|x| = 1 \}) 
+  \end{array}
+\right.
+\]
+La funzione $\tilde{f}$, così definita, è continua sull'insieme chiuso e limitato $X \cap \{|x| = 1 \} \cup \partial(X \cap \{|x| = 1 \})$, chiuso perché contiene per definizione si suoi punti di accumulazione e limitato perché sottoinsieme di B(0,1). Ne segue che $\tilde{f}$ è limitata ( ed anche f) e di conseguenza lo è, da cui la tesi segue come nel teorema precedente.\\ \\
+\subsubsection{Conclusioni}
+\underline{Esempio} \\ \\
+$$f(x,y) = \frac{x^2 + y^2}{x-y}$$
+Posti $x = cos\theta$ e $y = sin\theta$ si ottiene, sul cerchio unitario
+$$f(cos\theta,sin\theta) = \frac{cos^2\theta + sin^2\theta}{cos\theta - sin\theta}$$
+che è una funzione di una sola variabile $\theta$, di modulo divergente se $\theta \to \frac{\pi}{4}$ e $\theta \to\frac{5}{4}\pi$, che sono esattamente i punti di $\{|(x,y)| = 1 \}$ \underline{NON} appartenenti al dominio di f, che è $\{ (x,y) \in \mathbb{R} : x \neq y \}$. Dunque f NON è limitata.\\ \\
+\underline{ATTENZIONE!} Una funzione può benissimo essere limitata nell'intorno di un punto senza essere in convergente, come ad esempio $f(x) = sin\frac{1}{x}$ intorno a 0.\\
+Dunque, occorre stare attenti:l'esistenza dei limiti nei punti di accumulazione del dominio sulla sfera unitaria è una condizione sufficiente, \underline{MA NON NECESSARIA}, perché f sia infinitesima.\\
+\subsection{Le funzioni 0-omogenee}
+\subsubsection{Teorema 1}
+TEOREMA: \underline{Sia f 0-omogenea non costante fuori dall'origine }\\ \\
+ALLORA: \underline{$\lim_{x \to 0}f(x)$ NON ESISTE!}\\ \\
+DIMOSTRAZIONE\\ \\
+Se f è non costante fuori ai 0, esistono $x_1 , x_2 \in X$, non nulli,  tali che $f(x_1) \neq f(x_2)$. \\
+Allora
+$$f(tx_1) = f(x_1)$$
+$$f(tx_2) = f(x_2)$$
+$$\forall t > 0$$
+Scelto allora il solito intorno $B = B(0,\delta)$, si osserva che, essendo $|x_1| \neq 0 \; e \; |x_2| \neq 0$, segue che
+ \\ \\
+ \hspace*{3cm }$tx_1 \in B \; se \; |tx_1| < \delta $, e cioè se $|t| < \frac{\delta}{|x_1|}$, 
+\\ 
+ e che 
+\\ 
+\hspace*{3cm} $tx_2 \in B \; se \;|t| < \frac{\delta}{|x_2|} $. \\ \\
+In definitiva, in ogni intorno di 0, esistono punti (quelli dei raggi per l'origine $x_1$ e $x_2$) sui quali f assume i valori $f(x_1) \neq f(x_2)$. Basta allora porre $\epsilon < |f(x_2) - f(x_1)| $ per vedere violate le condizioni necessarie e sufficienti per la convergenza
+$$\forall \epsilon > 0 \; \exists \; \delta > 0 : \forall x,y \in dom(f) \; |x - x_0| < \delta \; |y - x_0| < \delta$$
+$$x \neq x_0 \; y \neq  x_0 \; risulta \; |f(x) - f(y)| < \epsilon$$
+\hspace{3.7cm}(\underline{CONDIZIONE DI CAUCHY})\\
+e dunque f non converge.
+\subsubsection{Esempio}
+$\frac{x-y}{x + y} \; , \; \frac{x^2 - y^2}{x^2 + y^2}$ non sono costanti, e quindi non convergono. Ad esempio, la restrizione di $\frac{x - y}{x + y}$ all'asse y(x = 0) vale (costantemente) 1, mentre la restrizione all'asse y(x = 0) vale -1, da cui ogni intorno contiene punti sui quali f vale 1 e altri sui quali f = -1. \\
+La condizione di cauchy è violata scegliendo $\epsilon < 2$.
+\subsection{Le funzioni $\alpha$-omogenee con $\alpha < 0$}
+\subsubsection{Teorema 1}
+\underline{TEOREMA: Sia f $\alpha$-omogenea , $\alpha$ < 0, non identicamente nulla fuori dall'origine.}\\ \\
+\underline{ALLORA f non converge in 0} \\ \\
+\underline{DIMOSTRAZIONE} \\ \\
+Sia $x_1 \neq 0 \; : \; f(x_1) \neq 0$. Allora 
+$$f(tx_1) =  t^\alpha f(x_1)$$
+Poiché $\alpha < 0 \; , \; \limsup_{t \to 0}t^\alpha = +\infty$ e dunque, essendo $f(x_1) \neq 0$, ne segue che f non è limitata in nessun intorno  di 0. 
+\subsection{Conclusione}
+E' una questione assai delicata! E' abbastanza evidente che se il denominatore si annulla nel punto limite ed il numeratore no, è insensato sperare nella convergenza, ma cosa dire di $\frac{x^2 - y^2}{x + y} = x-y \ su \ \mathbb{R}^2 - {x \neq y}$ che è certamente infinitesimo in (0,0). \\
+Una prima questione da affrontare, illustrata bene dall'esempio precedente, è di semplificare il semplificabile, ma la cosa è abbastanza complessa quando siamo in più variabili, e ciò ha condotto alla teoria delle "basi di GROBNER", davvero troppo per un caso elementare. \\
+Anche se numeratore e denominatore si annullano entrambi nel punto limite, può capitare che i luoghi degli zeri di f e g abbiano direzioni diverse come ad esempio
+$$\frac{x^2 - y^2}{y} \qquad 1-omogenea$$
+Come fa a "scoppiare"? Basta osservare che scegliendo un cammino che, senza toccare mai l'asse x, che è l'insieme singolare (y = 0), si può avvicinare ad esso rapidamente per esempio lungo la parabola cubica $y = x^3$ ottenendo
+$$\frac{x^2 - x^6}{x^3} = \frac{1 - x^4}{x}$$
+da cui facendo tendere x a 0 e mantenendo $y = x^3$ si ottiene che | f | diverge, nonostante f sia 1-omogeneo. \\
+Mentre in una sola variabile i rapporti di infinitesimi non convergenti sono quelli nei quali il denominatore è infinitesimo di ordine superiore rispetto al denominatore, ciò è falso , almeno se si pensa di identificare l'ordine di infinitesimo con il grado di omogeneità! \\
+Concludendo, non ci sono alternative allo studio degli zeri del numeratore e del numeratore, che poi è il problema generale della geometria algebrica, l'erede della geometria analitica di Fermat.
+
+\section{Il cambio di variabile nel limite}
+\subsection{Premessa}
+\subsection{"Teorema"}
+\subsection*{Teorema 1}
+\subsection{Teorema 2}
+\subsection{Teorema 3}
+\subsection{Conclusione}
+\section{Calcolo Differenziale}
+\subsection{Premessa}
+\subsection{Definizione}
+\subsection{Note}
+\subsection{Esempi}
+\subsection{Teorema di Fermat}
+\subsection{Conclusione}
+\end{document}
