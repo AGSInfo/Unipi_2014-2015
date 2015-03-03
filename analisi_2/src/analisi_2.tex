@@ -261,7 +261,6 @@ $$\frac{x^2 - x^6}{x^3} = \frac{1 - x^4}{x}$$
 da cui facendo tendere x a 0 e mantenendo $y = x^3$ si ottiene che | f | diverge, nonostante f sia 1-omogeneo. \\
 Mentre in una sola variabile i rapporti di infinitesimi non convergenti sono quelli nei quali il denominatore è infinitesimo di ordine superiore rispetto al denominatore, ciò è falso , almeno se si pensa di identificare l'ordine di infinitesimo con il grado di omogeneità! \\
 Concludendo, non ci sono alternative allo studio degli zeri del numeratore e del numeratore, che poi è il problema generale della geometria algebrica, l'erede della geometria analitica di Fermat.
-
 \section{Il cambio di variabile nel limite}
 \subsection{Premessa}
 \subsection{"Teorema"}
@@ -276,4 +275,59 @@ Concludendo, non ci sono alternative allo studio degli zeri del numeratore e del
 \subsection{Esempi}
 \subsection{Teorema di Fermat}
 \subsection{Conclusione}
+\section{Lista definizioni}
+\subsubsection{Definizione di Distanza}
+\hspace*{1cm}
+$$x,y \; \in \mathbb{R}^n$$
+$$d(x,y) = |x-y| = \sqrt{\sum_{i = 1}^{n}(x_i - y_i)^2} $$ \\ 
+Proprietà:
+$$d(x,y) \ge 0 \quad \forall \; x,y$$
+$$d(x,y) \Leftrightarrow x = y$$
+$$d(x,y) = d(y,x) $$
+$$d(x,y) \le d(x,z) + d(z,y)$$
+\subsubsection{Definizione di convergenza}
+\hspace*{1cm}
+$$\forall \; \epsilon > 0 \quad \exists n > \nu \; : \; L - \epsilon < x_n < L+\epsilon$$
+$$\quad\quad\quad\quad\quad\quad\quad\quad\quad \equiv$$
+$$\quad\quad\quad\quad\quad\quad\quad\quad\quad d(x_n,l)$$
+\textbf{Con} $x_n \in \mathbb{R}^N$
+$$\forall \; \epsilon > 0 \quad \exists n > \nu \; : \; d(x_n,L) < \epsilon$$
+ 
+\subsubsection{Definizione di sfera}
+\hspace*{1cm}
+$$B_\delta \left(x_0 \right) \equiv \left\{ y\in X : d \left( y,x_0\right )  < \delta  \right\}$$  \\
+La sfera viene detta \textbf{APERTA} se $\left\{ y\in X : d \left( y,x_0\right )  < \delta \right\}$ mentre viene detta \textbf{CHIUSA} se $\left\{ y\in X : d \left( y,x_0  \right ) \le \delta \right\}$\\
+La sfera viene chiamata anche intorno (quando siamo in uno spazio metrico).
+\subsubsection{Definizione di punto interno}
+Un punto si dice \textbf{interno} ad un insieme $\Omega$ se: \\
+$$\Omega \subseteq \mathbb{R}^n \qquad x_0 \; interno \; ad \; \Omega$$
+$$x_0 \in \Omega \qquad se \qquad \exists \; \delta > 0 \; : \; B_\delta(x_0) \subseteq \Omega$$ \\
+Quindi in definitiva un punto $x_0$ si dice \textbf{interno} se è compreso il punto ed anche la sua sfera $B_\delta(x_0)$ con un qualsiasi $\delta > 0$
+\subsubsection{Definizione di Punto esterno}
+Un punto si dice \textbf{esterno} ad un insieme $\Omega $ se:
+$$\exists \; \delta > 0 \; : \;  B_\delta(x_0) \cap \Omega = 0$$ \\
+Quindi in sintesi un punto si dice \textbf{esterno} ad un insieme se l'intersezione tra la sfera del punto ( centro compreso ) e l'insieme è vuota.
+\subsubsection{Definizione di punto di frontiera}
+Un punto $x_0$si dice di frontiera se :
+$$\forall \; \delta >0 \; \exists x_1,x_2 \in B_\delta(x_0) \; : \; x1 \in \Omega \; $$ \\
+I punti di frontiera sono quelli che si trovano ai "bordi" di un insieme e ed esistono solo se l'insieme è chiuso. \\
+Definito $\left \{ \mathbb{R}^n - \Omega \right \}$ il complementare di $\Omega$ si può affermare che se $\Omega$ non ammette punti di frontiera allora li ammetterà sicuramente il suo complementare, e viceversa. E' impossibile che entrambi gli insiemi siano dei punti di frontiera.
+\subsubsection{Definizione di punto di accumulazione}
+Un punto $x_0$ si dice di accumulazione ( $x_0 \in \partial \; \Omega$ ) se:
+$$\forall \; \delta > 0 \quad x \in \; \Omega \cap B_\delta \left(x_0 \right), \; x \neq x_0$$
+\subsubsection{Definizione di punto isolato}
+$x_0$ si dice \textbf{isolato} se $x_0 \in \Omega$ ed $\exists \; \epsilon > 0 \; : \; \Omega \cap B_\delta(x_0)$ ed è uguale \textbf{esclusivamente} ad $x_0$. \\
+Un punto \textbf{isolato} non può essere anche di \textbf{accumulazione} e viceversa.
+\subsubsection{Definizione di insieme aperto/chiuso}
+- Un insieme si dice \textbf{aperto} se ogni suo punto è \textbf{interno} (quindi non ha punti di frontiera). \\
+- Un insieme si dice \textbf{chiuso} se ammette dei punti di \textbf{frontiera}.
+\subsubsection{Definizione di insieme limitato}
+Un insieme $\Omega$ si dice limitato se:
+$$\exists \; [H,K] \supseteq \Omega$$
+quindi se $\Omega$ è compreso in un intervallo [H,K].\\\\
+Altra Definizione: \\ \\
+Un insieme $\Omega$ si dice limitato se:
+$$\exists \; x_0 \; , \delta \; : \; \Omega \subseteq B_\delta(x_0)$$
+
+\section{Esercizi}
 \end{document}
