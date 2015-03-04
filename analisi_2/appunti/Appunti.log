@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  4 MAR 2015 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  4 MAR 2015 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**analisi_2.tex
-(./analisi_2.tex
+**Appunti.tex
+(./Appunti.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -252,8 +252,8 @@ Now handling font encoding U ...
 LaTeX Warning: Unused global option(s):
     [fontsize=20px,paper=a4].
 
-(./analisi_2.aux)
-\openout1 = `analisi_2.aux'.
+(./Appunti.aux)
+\openout1 = `Appunti.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -268,394 +268,100 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Try loading font information for U+msa on input line 10.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 10.
-
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./anal
-isi_2.toc
-[2])
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Appu
+nti.toc)
 \tf@toc=\write3
-\openout3 = `analisi_2.toc'.
-
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 20--31
-
- []
+\openout3 = `Appunti.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--31
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 38--44
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--44
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--44
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 46--53
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--53
-
+Overfull \hbox (42.43837pt too wide) in paragraph at lines 73--75
+\OT1/cmr/m/n/10 Ma dato che $([][](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ))[]$ ^^
+Re uguale ad $[][](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[]$ quindi an-che $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--53
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
-
- []
-
-[6] [7]
-Overfull \hbox (19.83286pt too wide) in paragraph at lines 102--102
-[]\OT1/cmr/bx/n/14.4 Convergenza delle fun-zioni omo-ge-nee nell'origine 
- []
-
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 139.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 139.
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 156--159
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 167--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--172
-
- []
-
-
-Overfull \hbox (0.4658pt too wide) in paragraph at lines 167--172
-\OT1/cmr/m/n/10 Determinare la costante K, "a mano",che dovr^^Ra ri-sol-vere la
- dis-e-quazione $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/
-m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j ^^T
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
-
- []
-
-
-Overfull \hbox (2.66728pt too wide) in paragraph at lines 199--207
-\OT1/cmr/m/n/10 Il seguente cri-te-rio, in ap-parenza macchi-noso, ma molto uti
-le in al-cuni casi"reali",
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 213--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--223
-
- []
-
-
-Overfull \hbox (9.1951pt too wide) in paragraph at lines 219--223
-\OT1/cmr/m/n/10 do-minio sulla sfera uni-taria ^^Re una con-dizione suf-fi-cien
-te, $[]$,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 232--241
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--241
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--254
-
- []
-
-[15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
-
- []
-
-[19] [20] (./analisi_2.aux) ) 
+[5] [6] (./Appunti.aux) ) 
 Here is how much of TeX's memory you used:
- 563 strings out of 493117
- 6227 string characters out of 6135434
- 61719 words of memory out of 5000000
- 4060 multiletter control sequences out of 15000+600000
+ 544 strings out of 493117
+ 5872 string characters out of 6135434
+ 58728 words of memory out of 5000000
+ 4044 multiletter control sequences out of 15000+600000
  11849 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,7n,24p,526b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
-.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on analisi_2.pdf (20 pages, 239292 bytes).
+ 23i,6n,24p,485b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb>
+Output written on Appunti.pdf (6 pages, 161446 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

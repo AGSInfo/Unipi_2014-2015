@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Appunti 03/03/2015}{3}
+\contentsline {subsection}{\numberline {1.1}Definizioni}{3}
+\contentsline {subsubsection}{\numberline {1.1.1}Convergenza}{3}
+\contentsline {subsubsection}{\numberline {1.1.2}Sfera}{3}
+\contentsline {subsubsection}{\numberline {1.1.3}Punto intero}{3}
+\contentsline {subsubsection}{\numberline {1.1.4}Punto esterno}{3}
+\contentsline {subsubsection}{\numberline {1.1.5}Punto di frontiera}{3}
+\contentsline {section}{\numberline {2}Appunti 04/03/2015}{4}
+\contentsline {subsection}{\numberline {2.1}Diametro di un insieme}{4}
+\contentsline {subsubsection}{\numberline {2.1.1}Definizione}{4}
+\contentsline {subsubsection}{\numberline {2.1.2}Esempi}{4}
+\contentsline {subsubsection}{\numberline {2.1.3}Teorema}{4}
+\contentsline {subsection}{\numberline {2.2}Convergenza di successioni}{5}
+\contentsline {subsubsection}{\numberline {2.2.1}Lemma}{5}
+\contentsline {subsubsection}{\numberline {2.2.2}Definizione di convergenza}{6}
+\contentsline {subsubsection}{\numberline {2.2.3}Esempio}{6}

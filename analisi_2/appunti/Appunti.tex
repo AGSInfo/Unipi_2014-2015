@@ -1,0 +1,88 @@
+\documentclass[fontsize = 20px, paper = a4]{article}
+\author{Alessandro Sieni, Gianluca Mondini}
+\title{Appunti Analisi II }
+\date{\today}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Appunti 03/03/2015}
+\subsection{Definizioni}
+\subsubsection{Convergenza}
+\hspace*{1cm}
+$$\forall \; \epsilon > 0 \quad \exists \; \nu \; : \; L-\epsilon<x_n<L+\epsilon \quad \forall \; n > \nu$$ 
+\subsubsection{Sfera}
+\hspace*{1cm}
+$$B_\delta(x_0) = \left \{ y \in X \; : \; d(y,x_0) < \delta \right\}$$ \\
+Una sfera è un insieme di elementi che distano dal centro della sfera (indicato dall'elemento tra parentesi) di massima distanza uguale al raggio (indicato dal pedice sulla lettera B).\\
+Nel caso in cui (come quella sopra) la distanza sia obbligatoriamente \textbf{minore} del raggio allora la sfera si dice \textbf{aperta}, altrimenti se la distanza è minore o uguale del raggio la sfera si dice \textbf{chiusa}. \\
+Esempio di sfera chiusa:
+$$B_\delta(x_0) = \left \{ y \in X \; : \; d(y,x_0) \le \delta \right\}$$ 
+Quando siamo in uno spazio metrico la sfera viene definita anche intorno.
+\subsubsection{Punto intero}
+Un punto $x_0$si dice interno se preso un insieme $\Omega \subseteq \mathbb{R}^n$ si verifica la seguente condizione : 
+$$\exists \; \delta > 0 : B_\delta (x_0) \subseteq \Omega$$
+Ovvero spiegato a parole se l'insieme $\Omega$ contiene il punto (ovvero il centro della sfera) ed anche tutta la sfera di raggio $\delta$ a piacere.
+\subsubsection{Punto esterno}
+Un punto $x_0$ si dice esterno ad un insieme $\Omega \in \mathbb{R}^n$ se :
+$$\exists \; \delta > 0 \; : \; B_\delta (x_0) \cap \Omega = 0$$
+Ovvero un punto si dice esterno ad un insieme se una qualunque sfera centrata nel punto di raggio a piacere non si interseca con l'insieme.
+\subsubsection{Punto di frontiera}
+Un punto $x_0$si dice di frontiera se preso un insieme $\Omega \subseteq \mathbb{R}^n$ si verifica la seguente condizione : 
+$$\forall \; \delta > 0 \; \exists \; x_1,x_2 \in B_\delta (x_0) \; : \; x_1 \in \Omega \; e \; x_2 \ni\Omega $$
+Ovvero un punto si dice di frontiera se sta al "bordo"dell'insieme, ovvero se presa una qualunque sfera centrata nel punto $x_0$ ci sarà almeno un punto appartenente alla sfera interno all'insieme e uno esterno all'insieme.
+\section{Appunti 04/03/2015}
+\subsection{Diametro di un insieme}
+\subsubsection{Definizione}
+Il diametro di un insieme $\Omega$ è definito come :
+$$\sup_{x,y \in \Omega|}|x-y|$$
+\subsubsection{Esempi}
+Consideriamoci in $\mathbb{R}^2$ e più precisamente consideriamo $\Omega$ come il cerchio unitario, quindi da ciò ne deriva che presi $x,y \in \Omega$, $|x| \le 1 \; e \; |y| \le 1$ quindi $ | x - y | \le 2$ e dalla disuguaglianza triangolare ( che ricordiamo dice $|x+y| \le |x| + |y|$ ): 
+$$|x-y| \le |x| + |-y| \Longrightarrow |x-y| \le |x| + |y| \le 1 +1 = 2$$  \\ 
+Quindi considerando la sfera $B_\delta(x_0)$ e presi $x = (0,1)$ e $y=(-1,0)$ otteniamo che:
+$$sup_{B_\delta(x_0)} |x-y| \ge |(1,0) - (-1,0)| = |(2,0)| = 2$$ \\ 
+La disuguaglianza sopra deriva dal fatto che l'estremo superiore di $|x-y|$ è sempre maggiore uguale di $|x-y|$ qualunque punto si scelga, come ad esempio i punti $x = (0,1)$ e $y = (-1,0)$.
+\emph{Altro esempio}
+Scelto \\
+$$\Omega = \left \{ x\in \mathbb{R}^2 \; : \; |x| < 1 \right \} \quad \Longrightarrow \quad sfera \; aperta $$ \\
+Abbiamo già provato prima che 2 è un maggiorante e dalla definizione di diametro otteniamo che:
+$$d\;\Omega \le 2$$ \\
+In quanto definito la sfera come un insieme aperto e quindi di conseguenza $|y - x| = 2 -2\epsilon$. \\
+Il $2\epsilon$ deriva dal fatto che essendo aperta la sfera  (ovvero che $|x| < 1$ ) il grande valore che può assumere sarà 1 - una piccolissima, quanto si vuole, quantità che noi chiameremo $\epsilon$ che gli impedirà di raggiungere 1. Ciò avviene anche quando x tenta di raggiungere il valore di -1 che in valore assoluto corrisponde ad 1, quindi posto $x = 1-\epsilon$ e $y = -1 + \epsilon$ si ottiene $1 - \epsilon - (-1 + \epsilon) = 2 - 2\epsilon$. \\ 
+\subsubsection{Teorema}
+\textbf{Teorema: }\emph{Se un'insieme $\Omega$ è limitato $\Longleftrightarrow$ $d \; \Omega < +\infty$ }\\ \\ \underline{DIMOSTRAZIONE} \\ \\ 
+
+\subsection{Convergenza di successioni}
+\subsubsection{Lemma}
+\textbf{Lemma: } \emph{Sia} $\quad x \in \mathbb{R}^N \quad \Longrightarrow x = (x_1,x_2,......,x_N)$ \\\\ 
+\textbf{Allora: } \hspace{0.2cm}$|x_i| \le |x| \quad \forall \; i = 1....N $ \\ \\
+\underline{DIMOSTRAZIONE} \\ \\
+Consideriamo
+$$|x| \le \sqrt{N} * \max_{i = 1...N}(|x_i|)$$ \\
+Da cui otteniamo sostituendo alla norma del vettore il modo con cui è possibile calcolarla
+$$\sqrt{\sum_{i = 1}^n (x_i)^2} \le \sqrt{N} * \max_{i = 1...N}(|x_i|)$$ \\
+A questo punto effettuiamo una stima dall'alto considerando che :
+$$\sum_{i = 1} ^ n (x_i)^2 \ge \sqrt{x_i ^2}= |x_i| \quad \forall \; i = 1....n$$
+Mentre per effettuare una stima dal basso poniamo la seguente equazione:
+$$\sum_{i = 1}^n x_i ^2 \le N * \max_{i = 1...n}(x_i)^2$$ \\
+Adesso possiamo applicare la radice a entrambi i membri perché non varia il segno della disequazione  e otteniamo:
+$$\sqrt{\sum_{i = 1}^n x_i ^2} \le \sqrt{ N * (\max_{i = 1...n}(x_i)) ^ 2}$$ \\
+Ma dato che $(\max_{i = 1...n}(x_i))^2$ è uguale ad $\max_{i = 1...n}(x_i)^2$ quindi anche $\sqrt{(\max_{i = 1...n}(x_i))^2}$ è uguale a $\sqrt{\max_{i = 1...n}(x_i)^2}$ che a sua volta corrisponde a $\max_{i = 1...n}|(x_i)|$, portando anche a termine la stima dal basso e quindi la dimostrazione.
+\subsubsection{Definizione di convergenza}
+La definizione di convergenza è: 
+$$\forall \; \epsilon > 0 \quad \exists \; \delta \; : \; \forall \; n > \delta \; \; |x_n - \delta| < \epsilon$$ \\ \\
+In poche parole la convergenza di una successione vettoriale (ovvero composta da vettori e non scalari) convergerà al punto le cui componenti corrisponderanno al punto di convergenza  di ogni singola componente.
+\subsubsection{Esempio}
+Un chiaro esempio della definizione è :
+$$\left( \frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}},\frac{1}{n}\right) \longrightarrow \left(1,0\right)$$ \\ 
+Questo risultato è dato dal fatto che 
+$$\lim_{n \to \infty} \frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}} = 1 \quad e \quad \lim_{n \to \infty}\frac{1}{n} = 0$$
+
+
+
+\end{document}
