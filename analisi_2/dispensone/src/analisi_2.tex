@@ -39,13 +39,17 @@ Dove $q(z)$ ( ovvero il quoziente della divisione di $f(z)$ per $z*$) e' un poli
 Dunque, in sostanza, ogni polinomio a coefficienti complessi può essere scomposto in una serie di polinomi di grado = 1 e grado = 0 ( ovvero costanti ). La costante $A$ che appare risulta essere la costante del termine di ordine massimo.\\
 La dimostrazione sotto esplicata si basa sul la seguente linea di ragionamento, e su due risultati:\\\\
 \indent -Per ogni polinomio complesso $p(z)$ la funzione $f(z) = | p(z) |$ ammette \\ \indent           minimo assoluto in $\mathbb{C}$ \\\\
-\indent -Per ogni polinomio complesso non costante, se $p(z^*) \neq 0$ allora esiste $\bar{z}\in \mathbb{C}$ \indent tale che $|p(z^*)| >|p(\bar{z})|$   \\ \\
-Il teorema di GAUSS segue da questi due risultati perche',detto $z^*$ un punto di minimo assoluto di $|p(z)|$.\\
+\indent -Per ogni polinomio complesso non costante, se $p(z^*) \neq 0$ allora esiste $\bar{z}\in \mathbb{C}$ \indent tale che $|p(z^*)| >|p(\bar{z})|$   \\ \\ 
+Il teorema di GAUSS segue da questi due risultati perche',detto $z^*$ un punto di minimo assoluto di $|p(z)|$.
+\newpage
 \subsubsection{Lemma}
-\textbf{\underline{Se $p$ e' un polinomio in $\mathbb{C}$, allora $|p|$ ha minimo in $\mathbb{C}$}}\\\\
-Il prima risultato da stabilire riguarda il comportamento dei polinomi non costanti all'infinito\\
-\textbf{Lemma :} \textit{Se p : $\mathbb{C}\rightarrow \mathbb{C}$} e' non costante, allora $lim_{z \to \infty} p(z) = \infty $ \\
-\underline{Dim.} Posto $p(z) = \alpha_{n}z^n + \alpha_{n-1}z^{n-1} +....\alpha_{1}z + alpha_{0}$ con $\alpha_{n} \neq 0$ si ha che :
+\textbf{LEMMA: }\emph{Se $p$ e' un polinomio in $\mathbb{C}$}\\ \\
+\textbf{Allora: } \emph{$|p|$ ha minimo in $\mathbb{C}$} \\\\
+Il prima risultato da stabilire riguarda il comportamento dei polinomi non costanti all'infinito. \\ \\  \\
+\textbf{LEMMA :} \emph{ Se p : $\mathbb{C}\rightarrow \mathbb{C}$ e' non costante} \\ \\
+\textbf{Allora:} \emph{ $lim_{z \to \infty} p(z) = \infty $} \\ \\
+\underline{DIMOSTRAZIONE} \\ \\
+ Posto $p(z) = \alpha_{n}z^n + \alpha_{n-1}z^{n-1} +....\alpha_{1}z + alpha_{0}$ con $\alpha_{n} \neq 0$ si ha che :
 $$p(z) = z^n(\alpha_{n} + \frac{\alpha_{n-1}}{z} + .... +\frac{\alpha_{n-k}}
 {z^k} + .... +\frac{\alpha_{0}}{z^n}) $$
 poiche' $ z \to \infty \Longrightarrow z^k \to \infty$,per ogni $k$ intero strettamente positivo e $f\rightarrow \infty \Longrightarrow \frac{1}{f} \rightarrow 0$, ne segue che il termine in parentesi tende a $\alpha_{n} \neq 0$, mentre $z^n \to \infty$, da cui $p(z)$ diverge.
@@ -59,8 +63,10 @@ e dunque
 $$|p(z)| >= |p(z^*)| \forall z \in \mathbb{C}$$
 La proprietà di divergenza all'infinito,che permette di restringere la ricerca del minimo ad un sistema chiuso e limitato sul quale e' assicurato dal teoroma di Weiestrass,viene (in altro contesto ) chiamata di \underline{COERCIVITA'}.
 \subsubsection{Teorema 1}
-\textit{\underline{Se $p(z)$ e' non costante, e $p(z^*) \neq 0$, allora esiste $\bar{z} \in \mathbb{C}$ tale che $|p(\bar{z})| < |p(z^*)|$ }}\\\\\\
-\textbf{Dim.} Poiche'  $p(z*) \neq 0$, si può definire un nuovo polinomio
+\textbf{TEOREMA: } \emph{Se $p(z)$ e' non costante, e $p(z^*) \neq 0$,}\\ \\
+\textbf{Allora:} \emph{esiste $\bar{z} \in \mathbb{C}$ tale che $|p(\bar{z})| < |p(z^*)|$ }\\ \\
+\underline{DIMOSTRAZIONE} \\ \\
+Poiche'  $p(z*) \neq 0$, si può definire un nuovo polinomio
 $$q(w) = \frac{1}{p(z^*)}* p(z^* + w) $$
 Il polinomio $q$ ha lo stesso grado di $p$,perché  sviluppando le potenze $(z^* + w)^m$ si ottiene sempre il termine $w^m$, ed inoltre $q(0) = 1$.\\
 Riordinando $q$ per potenze crescenti di $w$ si otterrà
@@ -115,24 +121,23 @@ Lo stadio che segue riguarda il comportamento nello origine. Lo studio in ($x_0$
 \subsection{Funzioni positivamente omogenee}
 La prossima definizione e' indispensabile nel caso generale.
 \subsubsection{Definizioni}
-DEFINIZIONE :  \underline{Dato $X\subseteq \mathbb{R}^n$, si dice che X e' \underline{ UN CONO} (rispetto all'origine 0) se}
+\textbf{Definizione} :  \emph{Dato $X\subseteq \mathbb{R}^n$, si dice che X e' \underline{UN CONO} (rispetto all'origine \hspace*{2.3cm} 0) se}
 $$x\in X \Rightarrow tx \in X \quad \forall t > 0$$
-Dunque se un cono contiene un punto, contiene anche tutte le semirette nella direzione del punto, ma niente si dice dell'origine(notate la diseguaglianza stretta t>0?).\\ \\\\
-DEFINIZIONE :\underline{ Una funzione $f:X\rightarrow\mathbb{R}$, ove X è un cono,}\underline{si dirà $\alpha$-omogenea o }\\ 
-\underline{anche omogenea di grado $\alpha$, ($\alpha \in \mathbb{R}$) se}
-$$f(tx) = t^\alpha f(x) \quad \forall x \in \bar{X} \quad \forall t>0 $$
-Il dover calcolare $f(tx)\quad \forall x \forall t >0 $ rende necessario che il dominio di f sia un cono. Notiamo che il concetto è più generale di quello di polinomio omogeneo. Infatti la funzione | x |, definita su cono $\mathbb{R}^n$
- verifica | tx | = | t | * | x | = t * | x | $\forall t > 0 \; \forall x$, ed è dunque una funzione omogenea di grado 1, senza essere un polinomio neutro, dato un qualunque polinomio di grado K
+Dunque se un cono contiene un punto, contiene anche tutte le semirette nella direzione del punto, ma niente si dice dell'origine(notate la diseguaglianza stretta $t>0$?).\\ \\\\
+\textbf{Definizione} \emph{: Una funzione $f:X\rightarrow\mathbb{R}$, ove X è un cono,si dirà $\alpha$-omogenea \hspace*{2.4cm}anche omogenea di grado $\alpha$, ($\alpha \in \mathbb{R}$) se: }\\ 
+$$f(tx) = t^\alpha f(x) \quad \forall x \in \bar{X} \quad \forall t>0 $$ \\
+Il dover calcolare $f(tx)\quad \forall x \forall t >0 $ rende necessario che il dominio di f sia un cono. Notiamo che il concetto è più generale di quello di polinomio omogeneo. Infatti la funzione $| x | $, definita su cono $\mathbb{R}^n$
+ verifica $| tx | = | t | * | x | = t * | x |  $ $\forall t > 0 \; \forall x$, ed è dunque una funzione omogenea di grado 1, senza essere un polinomio neutro, dato un qualunque polinomio di grado K
  $$\begin{array}{lcl}p(x_1,x_2,...,x_n) =  \sum{\alpha_{i_1},...,\alpha_{i_n} x_1^{i_1} x_2^{i_2}.. x_n^{i_n}}\\ i_1 + i_2 +...+i_n = k \\ i_1,i_2,...,i_n \ge 0 \end{array}$$ 
 si ha,raccogliendo in evidenza $t^k$ in ogni addendo $p(tx) = p(tx_1,tx_2,...,tx_n) = t^kp(x_1,...,x_n) = t^kp(x)$
 e dunque un polinomio omogeneo di grado k è una funzione k-omogenea.\\
 Un semplicissimo esempio di funzione $\alpha$-omogenea è la funzione $x\rightarrow|x|^\alpha$.\\
 Dalle leggi di moltiplicazione,divisione e potenza di potenze ne segue tale lemma:\\
 \subsubsection{Lemma}
-LEMMA: \underline{Se f è $\alpha$-omogenea e g è $\beta$-omogenea, definite nello stesso cono X, allora:}\\\\
-\hspace*{1.5cm}- \underline{f*g è ($\alpha + \beta$)-omogenea}\\\\
-\hspace*{1.5cm}- \underline{$\frac{f}{g}$ è ($\alpha - \beta$)-omogenea in X - \{g = 0\}}\\\\
-\hspace*{1.5cm}- \underline{$f^{\gamma }$ è $\alpha \gamma $-omogenea}\\
+\textbf{LEMMA: }\emph{Se f è $\alpha$-omogenea e g è $\beta$-omogenea, definite nello stesso cono X} \\ \\ \textbf{Allora: }	\\\\
+\hspace*{1.5cm}- \emph{f*g è ($\alpha + \beta$)-omogenea}\\\\
+\hspace*{1.5cm}- \emph{$\frac{f}{g}$ è ($\alpha - \beta$)-omogenea in X - \{g = 0\}}\\\\
+\hspace*{1.5cm}- \emph{$f^{\gamma }$ è $\alpha \gamma $-omogenea}\\
 \subsubsection{Osservazioni}
 Se f è 0-omogenea, allora ($t*\alpha = 1$) e f è costanti sui raggi uscenti dall'origine (come per una scala a chiocciola). Un'altra utile osservazione è che, se f è $\alpha$-omogenea e $x \neq 0$, allora
 $$f(x) = f\left(| x | \frac{x}{| x |}\right) = | x |^\alpha f\left(\frac{x}{| x |}\right)$$
@@ -152,9 +157,9 @@ $$f(x) = | x |^\alpha f\Big (\frac{x}{| x |} \Big )$$
 lascia intravedere qualcosa di buono perché, al tendere di x a 0, anche | x | fa altrettanto e dunque anche $| x |^\alpha$ per $\alpha > 0$,per la continuità delle composizione di funzione continue.\\
 L'unico problema, serio, è che non sempre un prodotto dei fattore del quale è infinitesimo risulta infinitesimo soprattutto se l'altro fa il diavolo a quattro!\\
 \subsubsection{Teorema 1}
-TEOREMA: \underline{Sia $f:X\rightarrow \mathbb{R}$ $\alpha$-omogena, con $\alpha > 0$. Sia inoltre f limitata su }\\ \\
-\hspace*{2cm} \underline{$X \cap \{| x | = 1\}$}.\\ \\
-\underline{ALLORA: $lim_{x \to 0} f(x) = 0$}\\ \\
+\textbf{TEOREMA: } \emph{Sia $f:X\rightarrow \mathbb{R}$ $\alpha$-omogena, con $\alpha > 0$. Sia inoltre f limitata su }\\ 
+\hspace*{2.3cm} \emph{$X \cap \{| x | = 1\}$}.\\ \\
+\textbf{Allora: }$lim_{x \to 0} f(x) = 0$\\ \\
 \underline{DIMOSTRAZIONE }\\ \\
 Poiché f è limitata sulla porzione di sfera unitaria che appartiene ad X, esiste K > 0 tale che 
 $$| f(w) | \le L \qquad \forall w \in X \cap \{ | x | = 1 \}$$
@@ -162,14 +167,12 @@ allora da
 $$0 <= | f(x) | = | x |^\alpha | f \left( \frac{x}{| x | } \right )| \le K* | x |^\alpha \; (Purche' \; \frac{x}{|x|} \in X \cap \left \{ |w| = 1 \right \})$$
 e dal teorema del confronto, purché $K|x|^\alpha \rightarrow 0$ allora | f(x) | farà altrettanto.\\ \\
 \underline{NOTE FINALI} \\ \\
-Determinare la costante K, "a mano",che dovrà risolvere la disequazione | f(x) |<= K, con | x | = 1
+Determinare la costante K, "a mano",che dovrà risolvere la disequazione  $| f(x) | \le  K $, con$ | x | = 1$
 e $x \in X$, cosa tutt'altro che banale. La seguente versione fa uso del teorema di Weitrass per dedurre che K esiste, anche sente conoscerlo.
 \subsubsection{Teorema 2}
-TEOREMA: \underline{Sia f come sopra, ma in più sia continua su X, e infine $X \cap \{|w| = 1\}$} 
+\textbf{TEOREMA:} \emph{Sia f come sopra, ma in più sia continua su X, e infine $X \cap \{|w| =$ \hspace*{2.3cm}$1\}$ sia chiuso.}
 \\ \\
-\underline{sia chiuso}
-\\ \\
-\underline{ALLORA f è infinitesima in 0}
+\textbf{Allora: } \emph {f è infinitesima in 0.}
 \\ \\
 \underline{DIMOSTRAZIONE}
 \\ \\
@@ -196,10 +199,9 @@ $L - \epsilon$ ed $L + \epsilon$ in un opportuno intorno ). \\
 Sia $f: X \to \mathbb{R}$ una funzione continua e $\alpha$-omogenea, con $\alpha > 0$. Il risultato provato in precedenza assume che il $lim_{x \to 0} f(x) = 0$ se f è limitata su $X \cap \{|x| = 1\}$.\\
 Se tale insieme è chiuso, essendo anche limitato, permette di ottenere la limitatezza di f mediante il teorema di Weistrass, ma cosa fare se $X \cap \{ |x| = 1\}$ NON è chiuso? \\
 Il seguente criterio, in apparenza macchinoso, ma molto utile in alcuni casi"reali", offre una risposta.\\\\
-TEOREMA: \underline{Se $f:X \to \mathbb{R}$ è continua e $\alpha$-omogenea, $\alpha > 0$, ed inoltre esiste finito}
-\\ \\ \underline{ il $lim_{x \to x_0} f(x)$ per ogni $x_0$, punto di accumulazione di $X \cap \{ |x| = 1\}$}
-\\ \\ ALLORA : \underline{$lim_{x \to x_0} f(x) = 0$}
-\\ \\ DIMOSTRAZIONE \\ \\
+\textbf{TEOREMA: }\emph{Se $f:X \to \mathbb{R}$ è continua e $\alpha$-omogenea, $\alpha > 0$, ed inoltre } \hspace*{2.3cm} \emph{esiste finito il $lim_{x \to x_0} f(x)$ per ogni $x_0$, punto di accumulazione \hspace*{2.3cm} di $X \cap \{ |x| = 1\}$}
+\\ \\ \textbf{Allora : }$lim_{x \to x_0} f(x) = 0$
+\\ \\ \underline{DIMOSTRAZIONE} \\ \\
 Si può definire $\tilde{f}$ nei punti di accumulazione di $X \cap \{ |x| = 1 \}$ ma appartenenti ad esse ponendo 
 e la continuità di f assicura che le definizioni sono coerenti sui punti di accumulazione già appartenenti ad $ X \cap \{ |x| = 1 \}$.\\
 \[f(x) = \left\{
@@ -220,9 +222,9 @@ che è una funzione di una sola variabile $\theta$, di modulo divergente se $\th
 Dunque, occorre stare attenti:l'esistenza dei limiti nei punti di accumulazione del dominio sulla sfera unitaria è una condizione sufficiente, \underline{MA NON NECESSARIA}, perché f sia infinitesima.\\
 \subsection{Le funzioni 0-omogenee}
 \subsubsection{Teorema 1}
-TEOREMA: \underline{Sia f 0-omogenea non costante fuori dall'origine }\\ \\
-ALLORA: \underline{$\lim_{x \to 0}f(x)$ NON ESISTE!}\\ \\
-DIMOSTRAZIONE\\ \\
+\textbf{TEOREMA: } \emph{Sia f 0-omogenea non costante fuori dall'origine }\\ \\
+\textbf{Allora: } \emph{$\lim_{x \to 0}f(x)$ NON ESISTE!}\\ \\
+\underline{DIMOSTRAZIONE}\\ \\
 Se f è non costante fuori ai 0, esistono $x_1 , x_2 \in X$, non nulli,  tali che $f(x_1) \neq f(x_2)$. \\
 Allora
 $$f(tx_1) = f(x_1)$$
@@ -235,18 +237,18 @@ Scelto allora il solito intorno $B = B(0,\delta)$, si osserva che, essendo $|x_1
  e che 
 \\ 
 \hspace*{3cm} $tx_2 \in B \; se \;|t| < \frac{\delta}{|x_2|} $. \\ \\
-In definitiva, in ogni intorno di 0, esistono punti (quelli dei raggi per l'origine $x_1$ e $x_2$) sui quali f assume i valori $f(x_1) \neq f(x_2)$. Basta allora porre $\epsilon < |f(x_2) - f(x_1)| $ per vedere violate le condizioni necessarie e sufficienti per la convergenza
+In definitiva, in ogni intorno di 0, esistono punti (quelli dei raggi per l'origine $x_1$ e $x_2$) sui quali f assume i valori $f(x_1) \neq f(x_2)$. Basta allora porre $\epsilon < |f(x_2) - f(x_1)| $ per vedere violate le condizioni necessarie e sufficienti per la convergenza:
 $$\forall \epsilon > 0 \; \exists \; \delta > 0 : \forall x,y \in dom(f) \; |x - x_0| < \delta \; |y - x_0| < \delta$$
 $$x \neq x_0 \; y \neq  x_0 \; risulta \; |f(x) - f(y)| < \epsilon$$
-\hspace{3.7cm}(\underline{CONDIZIONE DI CAUCHY})\\
+\hspace{3.7cm}(\underline{CONDIZIONE DI CAUCHY})\\\\
 e dunque f non converge.
 \subsubsection{Esempio}
 $\frac{x-y}{x + y} \; , \; \frac{x^2 - y^2}{x^2 + y^2}$ non sono costanti, e quindi non convergono. Ad esempio, la restrizione di $\frac{x - y}{x + y}$ all'asse y(x = 0) vale (costantemente) 1, mentre la restrizione all'asse y(x = 0) vale -1, da cui ogni intorno contiene punti sui quali f vale 1 e altri sui quali f = -1. \\
 La condizione di cauchy è violata scegliendo $\epsilon < 2$.
 \subsection{Le funzioni $\alpha$-omogenee con $\alpha < 0$}
 \subsubsection{Teorema 1}
-\underline{TEOREMA: Sia f $\alpha$-omogenea , $\alpha$ < 0, non identicamente nulla fuori dall'origine.}\\ \\
-\underline{ALLORA f non converge in 0} \\ \\
+\textbf{Teorema:} \emph{Sia f $\alpha$-omogenea , $\alpha$ < 0, non identicamente nulla fuori dall'origine.}\\ \\
+\textbf{Allora: } \emph{f non converge in 0} \\ \\
 \underline{DIMOSTRAZIONE} \\ \\
 Sia $x_1 \neq 0 \; : \; f(x_1) \neq 0$. Allora 
 $$f(tx_1) =  t^\alpha f(x_1)$$
@@ -258,7 +260,7 @@ Anche se numeratore e denominatore si annullano entrambi nel punto limite, può 
 $$\frac{x^2 - y^2}{y} \qquad 1-omogenea$$
 Come fa a "scoppiare"? Basta osservare che scegliendo un cammino che, senza toccare mai l'asse x, che è l'insieme singolare (y = 0), si può avvicinare ad esso rapidamente per esempio lungo la parabola cubica $y = x^3$ ottenendo
 $$\frac{x^2 - x^6}{x^3} = \frac{1 - x^4}{x}$$
-da cui facendo tendere x a 0 e mantenendo $y = x^3$ si ottiene che | f | diverge, nonostante f sia 1-omogeneo. \\
+da cui facendo tendere x a 0 e mantenendo $y = x^3$ si ottiene che $| f | $ diverge, nonostante f sia 1-omogeneo. \\
 Mentre in una sola variabile i rapporti di infinitesimi non convergenti sono quelli nei quali il denominatore è infinitesimo di ordine superiore rispetto al denominatore, ciò è falso , almeno se si pensa di identificare l'ordine di infinitesimo con il grado di omogeneità! \\
 Concludendo, non ci sono alternative allo studio degli zeri del numeratore e del numeratore, che poi è il problema generale della geometria algebrica, l'erede della geometria analitica di Fermat.
 \section{Il cambio di variabile nel limite}
@@ -296,8 +298,8 @@ $$\forall \; \epsilon > 0 \quad \exists n > \nu \; : \; d(x_n,L) < \epsilon$$
 \subsubsection{Definizione di sfera}
 \hspace*{1cm}
 $$B_\delta \left(x_0 \right) \equiv \left\{ y\in X : d \left( y,x_0\right )  < \delta  \right\}$$  \\
-La sfera viene detta \textbf{APERTA} se $\left\{ y\in X : d \left( y,x_0\right )  < \delta \right\}$ mentre viene detta \textbf{CHIUSA} se $\left\{ y\in X : d \left( y,x_0  \right ) \le \delta \right\}$\\
-La sfera viene chiamata anche intorno (quando siamo in uno spazio metrico).
+La sfera viene detta \textbf{aperta} se $\left\{ y\in X : d \left( y,x_0\right )  < \delta \right\}$ mentre viene detta \textbf{chiusa} se $\left\{ y\in X : d \left( y,x_0  \right ) \le \delta \right\}$.\\
+Una sfera può anche essere  chiamata anche \textbf{intorno}(quando siamo in uno spazio metrico).
 \subsubsection{Definizione di punto interno}
 Un punto si dice \textbf{interno} ad un insieme $\Omega$ se: \\
 $$\Omega \subseteq \mathbb{R}^n \qquad x_0 \; interno \; ad \; \Omega$$
@@ -324,10 +326,11 @@ Un punto \textbf{isolato} non può essere anche di \textbf{accumulazione} e vice
 \subsubsection{Definizione di insieme limitato}
 Un insieme $\Omega$ si dice limitato se:
 $$\exists \; [H,K] \supseteq \Omega$$
-quindi se $\Omega$ è compreso in un intervallo [H,K].\\\\
-Altra Definizione: \\ \\
+quindi se $\Omega$ è compreso in un intervallo [H,K] chiuso e limitato, in quanto se un insieme è compreso in un intervallo limitato allora tale insieme sarà a sua volta limitato.\\\\
+\emph{Altra Definizione:}\\ \\
 Un insieme $\Omega$ si dice limitato se:
 $$\exists \; x_0 \; , \delta \; : \; \Omega \subseteq B_\delta(x_0)$$
+ovvero se è compreso in una qualsiasi sfera (che è limitata ) di raggio $\delta$ e centrata in un qualsiasi punto $x_0$.
 
 \section{Esercizi}
 \end{document}
