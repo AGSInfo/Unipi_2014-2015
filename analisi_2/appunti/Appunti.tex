@@ -1,32 +1,79 @@
-\documentclass[fontsize = 20px, paper = a4]{article}
+%% LyX 2.1.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[fontsize=20px,paper=a4]{article}
+\usepackage[utf8]{inputenc}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \author{Alessandro Sieni, Gianluca Mondini}
 \title{Appunti Analisi II }
 \date{\today}
 \usepackage{amsfonts}
+<<<<<<< HEAD
 \usepackage[utf8]{inputenc}
+=======
+
+
+
+
+
+\makeatother
+
+>>>>>>> origin/master
 \begin{document}
-\maketitle
-\newpage
-\tableofcontents
-\newpage
+\maketitle \newpage{}\tableofcontents{}\newpage{}
+
+
 \section{Appunti 03/03/2015}
+
+
 \subsection{Definizioni}
+
+
 \subsubsection{Convergenza}
-\hspace*{1cm}
-$$\forall \; \epsilon > 0 \quad \exists \; \nu \; : \; L-\epsilon<x_n<L+\epsilon \quad \forall \; n > \nu$$ 
+
+\hspace*{1cm} 
+\[
+\forall\;\epsilon>0\quad\exists\;\nu\;:\; L-\epsilon<x_{n}<L+\epsilon\quad\forall\; n>\nu
+\]
+
+
+
 \subsubsection{Sfera}
-\hspace*{1cm}
-$$B_\delta(x_0) = \left \{ y \in X \; : \; d(y,x_0) < \delta \right\}$$ \\
-Una sfera è un insieme di elementi che distano dal centro della sfera (indicato dall'elemento tra parentesi) di massima distanza uguale al raggio (indicato dal pedice sulla lettera B).\\
-Nel caso in cui (come quella sopra) la distanza sia obbligatoriamente \textbf{minore} del raggio allora la sfera si dice \textbf{aperta}, altrimenti se la distanza è minore o uguale del raggio la sfera si dice \textbf{chiusa}. \\
-Esempio di sfera chiusa:
-$$B_\delta(x_0) = \left \{ y \in X \; : \; d(y,x_0) \le \delta \right\}$$ 
-Quando siamo in uno spazio metrico la sfera viene definita anche intorno.
+
+\hspace*{1cm} 
+\[
+B_{\delta}(x_{0})=\left\{ y\in X\;:\; d(y,x_{0})<\delta\right\} 
+\]
+\\
+ Una sfera è un insieme di elementi che distano dal centro della sfera
+(indicato dall'elemento tra parentesi) di massima distanza uguale
+al raggio (indicato dal pedice sulla lettera B).\\
+ Nel caso in cui (come quella sopra) la distanza sia obbligatoriamente
+\textbf{minore} del raggio allora la sfera si dice \textbf{aperta},
+altrimenti se la distanza è minore o uguale del raggio la sfera si
+dice \textbf{chiusa}. \\
+ Esempio di sfera chiusa: 
+\[
+B_{\delta}(x_{0})=\left\{ y\in X\;:\; d(y,x_{0})\le\delta\right\} 
+\]
+Quando siamo in uno spazio metrico la sfera viene definita anche intorno. 
+
+
 \subsubsection{Punto intero}
-Un punto $x_0$si dice interno se preso un insieme $\Omega \subseteq \mathbb{R}^n$ si verifica la seguente condizione : 
-$$\exists \; \delta > 0 : B_\delta (x_0) \subseteq \Omega$$
-Ovvero spiegato a parole se l'insieme $\Omega$ contiene il punto (ovvero il centro della sfera) ed anche tutta la sfera di raggio $\delta$ a piacere.
+
+Un punto $x_{0}$si dice interno se preso un insieme $\Omega\subseteq\mathbb{R}^{n}$
+si verifica la seguente condizione : 
+\[
+\exists\;\delta>0:B_{\delta}(x_{0})\subseteq\Omega
+\]
+Ovvero spiegato a parole se l'insieme $\Omega$ contiene il punto
+(ovvero il centro della sfera) ed anche tutta la sfera di raggio $\delta$
+a piacere. 
+
+
 \subsubsection{Punto esterno}
+<<<<<<< HEAD
 Un punto $x_0$ si dice esterno ad un insieme $\Omega \in \mathbb{R}^n$ se :
 $$\exists \; \delta > 0 \; : \; B_\delta (x_0) \cap \Omega = 0$$
 Ovvero un punto si dice esterno ad un insieme se una qualunque sfera centrata nel punto $x_0$ di raggio a piacere non si interseca con l'insieme.
@@ -51,39 +98,128 @@ Quindi se l'insieme $\Omega$ è contenuto in un intervallo chiuso i cui estremi 
 Un altro modo per definire un'insieme limitato è:
 $$\exists \; x_0, \delta \;:\; \Omega \subseteq B_\delta (x_0)$$
 Ovvero un insieme si dice limitato se esiste un punto $x_0$ la cui sfera di raggio $\delta$ di dimensione a piacere contiene tutto l'insieme. Dato che una sfera è limitata se contiene tutto l'insieme anche quest'ultimo per forza di cose dovrà essere limitato.
+=======
+
+Un punto $x_{0}$ si dice esterno ad un insieme $\Omega\in\mathbb{R}^{n}$
+se : 
+\[
+\exists\;\delta>0\;:\; B_{\delta}(x_{0})\cap\Omega=0
+\]
+Ovvero un punto si dice esterno ad un insieme se una qualunque sfera
+centrata nel punto di raggio a piacere non si interseca con l'insieme. 
+
+
+\subsubsection{Punto di frontiera}
+
+Un punto $x_{0}$si dice di frontiera se preso un insieme $\Omega\subseteq\mathbb{R}^{n}$
+si verifica la seguente condizione : 
+\[
+\forall\;\delta>0\;\exists\; x_{1},x_{2}\in B_{\delta}(x_{0})\;:\; x_{1}\in\Omega\; e\; x_{2}\ni\Omega
+\]
+Ovvero un punto si dice di frontiera se sta al \textquotedbl{}bordo\textquotedbl{}dell'insieme,
+ovvero se presa una qualunque sfera centrata nel punto $x_{0}$ ci
+sarà almeno un punto appartenente alla sfera interno all'insieme e
+uno esterno all'insieme. 
+
+
+>>>>>>> origin/master
 \section{Appunti 04/03/2015}
+
+
 \subsection{Diametro di un insieme}
+
+
 \subsubsection{Definizione}
-Il diametro di un insieme $\Omega$ è definito come :
-$$\sup_{x,y \in \Omega|}|x-y|$$
+
+Il diametro di un insieme $\Omega$ è definito come : 
+\[
+\sup_{x,y\in\Omega|}|x-y|
+\]
+
+
+
 \subsubsection{Esempi}
-Consideriamoci in $\mathbb{R}^2$ e più precisamente consideriamo $\Omega$ come il cerchio unitario, quindi da ciò ne deriva che presi $x,y \in \Omega$, $|x| \le 1 \; e \; |y| \le 1$ quindi $ | x - y | \le 2$ e dalla disuguaglianza triangolare ( che ricordiamo dice $|x+y| \le |x| + |y|$ ): 
-$$|x-y| \le |x| + |-y| \Longrightarrow |x-y| \le |x| + |y| \le 1 +1 = 2$$  \\ 
-Quindi considerando la sfera $B_\delta(x_0)$ e presi $x = (0,1)$ e $y=(-1,0)$ otteniamo che:
-$$sup_{B_\delta(x_0)} |x-y| \ge |(1,0) - (-1,0)| = |(2,0)| = 2$$ \\ 
-La disuguaglianza sopra deriva dal fatto che l'estremo superiore di $|x-y|$ è sempre maggiore uguale di $|x-y|$ qualunque punto si scelga, come ad esempio i punti $x = (0,1)$ e $y = (-1,0)$.
-\emph{Altro esempio}
-Scelto \\
-$$\Omega = \left \{ x\in \mathbb{R}^2 \; : \; |x| < 1 \right \} \quad \Longrightarrow \quad sfera \; aperta $$ \\
-Abbiamo già provato prima che 2 è un maggiorante e dalla definizione di diametro otteniamo che:
-$$d\;\Omega \le 2$$ \\
-In quanto definito la sfera come un insieme aperto e quindi di conseguenza $|y - x| = 2 -2\epsilon$. \\
-Il $2\epsilon$ deriva dal fatto che essendo aperta la sfera  (ovvero che $|x| < 1$ ) il grande valore che può assumere sarà 1 - una piccolissima, quanto si vuole, quantità che noi chiameremo $\epsilon$ che gli impedirà di raggiungere 1. Ciò avviene anche quando x tenta di raggiungere il valore di -1 che in valore assoluto corrisponde ad 1, quindi posto $x = 1-\epsilon$ e $y = -1 + \epsilon$ si ottiene $1 - \epsilon - (-1 + \epsilon) = 2 - 2\epsilon$. \\ 
+
+Consideriamoci in $\mathbb{R}^{2}$ e più precisamente consideriamo
+$\Omega$ come il cerchio unitario, quindi da ciò ne deriva che presi
+$x,y\in\Omega$, $|x|\le1\; e\;|y|\le1$ quindi $|x-y|\le2$ e dalla
+disuguaglianza triangolare ( che ricordiamo dice $|x+y|\le|x|+|y|$
+): 
+\[
+|x-y|\le|x|+|-y|\Longrightarrow|x-y|\le|x|+|y|\le1+1=2
+\]
+\\
+ Quindi considerando la sfera $B_{\delta}(x_{0})$ e presi $x=(0,1)$
+e $y=(-1,0)$ otteniamo che: 
+\[
+sup_{B_{\delta}(x_{0})}|x-y|\ge|(1,0)-(-1,0)|=|(2,0)|=2
+\]
+\\
+ La disuguaglianza sopra deriva dal fatto che l'estremo superiore
+di $|x-y|$ è sempre maggiore uguale di $|x-y|$ qualunque punto si
+scelga, come ad esempio i punti $x=(0,1)$ e $y=(-1,0)$. \emph{Altro
+esempio} Scelto \\
+ 
+\[
+\Omega=\left\{ x\in\mathbb{R}^{2}\;:\;|x|<1\right\} \quad\Longrightarrow\quad sfera\; aperta
+\]
+\\
+ Abbiamo già provato prima che 2 è un maggiorante e dalla definizione
+di diametro otteniamo che: 
+\[
+d\;\Omega\le2
+\]
+\\
+ In quanto definito la sfera come un insieme aperto e quindi di conseguenza
+$|y-x|=2-2\epsilon$. \\
+ Il $2\epsilon$ deriva dal fatto che essendo aperta la sfera (ovvero
+che $|x|<1$ ) il grande valore che può assumere sarà 1 - una piccolissima,
+quanto si vuole, quantità che noi chiameremo $\epsilon$ che gli impedirà
+di raggiungere 1. Ciò avviene anche quando x tenta di raggiungere
+il valore di -1 che in valore assoluto corrisponde ad 1, quindi posto
+$x=1-\epsilon$ e $y=-1+\epsilon$ si ottiene $1-\epsilon-(-1+\epsilon)=2-2\epsilon$.
+\\
+ 
+
+
 \subsubsection{Teorema}
-\textbf{Teorema: }\emph{Se un'insieme $\Omega$ è limitato $\Longleftrightarrow$ $d \; \Omega < +\infty$ }\\ \\ \underline{DIMOSTRAZIONE} \\ \\ 
+
+\textbf{Teorema: }\emph{Se un'insieme $\Omega$ è limitato $\Longleftrightarrow$
+$d\;\Omega<+\infty$ }\\
+ \\
+ \underline{DIMOSTRAZIONE} \\
+ \\
+
+
 
 \subsection{Convergenza di successioni}
+
+
 \subsubsection{Lemma}
-\textbf{Lemma: } \emph{Sia} $\quad x \in \mathbb{R}^N \quad \Longrightarrow x = (x_1,x_2,......,x_N)$ \\\\ 
-\textbf{Allora: } \hspace{0.2cm}$|x_i| \le |x| \quad \forall \; i = 1....N $ \\ \\
-\underline{DIMOSTRAZIONE} \\ \\
-Consideriamo
-$$|x| \le \sqrt{N} * \max_{i = 1...N}(|x_i|)$$ \\
-Da cui otteniamo sostituendo alla norma del vettore il modo con cui è possibile calcolarla
-$$\sqrt{\sum_{i = 1}^n (x_i)^2} \le \sqrt{N} * \max_{i = 1...N}(|x_i|)$$ \\
-A questo punto effettuiamo una stima dall'alto considerando che :
-$$\sum_{i = 1} ^ n (x_i)^2 \ge \sqrt{x_i ^2}= |x_i| \quad \forall \; i = 1....n$$
+
+
+\subsubsection{\emph{Sia} $\quad x\in\mathbb{R}^{N}\quad\protect\Longrightarrow x=(x_{1},x_{2},......,x_{N})$
+\protect \\
+ Allora:  \hspace{0.2cm}$|x_{i}|\le|x|\quad\forall\; i=1....N$ \protect \\
+Dimostrazione}
+
+Consideriamo 
+\[
+|x|\le\sqrt{N}*\max_{i=1...N}(|x_{i}|)
+\]
+\\
+ Da cui otteniamo sostituendo alla norma del vettore il modo con cui
+è possibile calcolarla 
+\[
+\sqrt{\sum_{i=1}^{n}(x_{i})^{2}}\le\sqrt{N}*\max_{i=1...N}(|x_{i}|)
+\]
+\\
+ A questo punto effettuiamo una stima dall'alto considerando che :
+\[
+\sum_{i=1}^{n}(x_{i})^{2}\ge\sqrt{x_{i}^{2}}=|x_{i}|\quad\forall\; i=1....n
+\]
 Mentre per effettuare una stima dal basso poniamo la seguente equazione:
+<<<<<<< HEAD
 $$\sum_{i = 1}^n x_i ^2 \le N * \max_{i = 1...n}(x_i)^2$$ \\
 Adesso possiamo applicare la radice a entrambi i membri perché non varia il segno della disequazione  e otteniamo:
 $$\sqrt{\sum_{i = 1}^n x_i ^2} \le \sqrt{ N * (\max_{i = 1...n}(x_i)) ^ 2}$$ \\
@@ -120,5 +256,238 @@ $$\lim_{n \to \infty} \frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}} = 1 \quad
 Consideriamo la funzione $f \; : \; \Omega \rightarrow \mathbb{R}^N$ con $\Omega \subseteq \mathbb{R}^N$ ed un punto $x_0 \in \Omega$ una funzione si dice continua in $x_0$ se 
 $$\forall \; \epsilon > 0 \quad \exists \; \delta > 0 \; : \; \forall \; x \in dom(f) \; se |x-x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon$$
 In questo caso la definizione è la solita per le funzioni che lavorano sui numeri reali con la differenza che però essendo su $\mathbb{R}^N$ dovrà essere calcolata la norma dei vettori e non il valore assoluto del (che comunque giusto per chiarezza corrisponde alla norma di un vettore in $\mathbb{R}$.
+=======
+\[
+\sum_{i=1}^{n}x_{i}^{2}\le N*\max_{i=1...n}(x_{i})^{2}
+\]
+\\
+ Adesso possiamo applicare la radice a entrambi i membri perché non
+varia il segno della disequazione e otteniamo: 
+\[
+\sqrt{\sum_{i=1}^{n}x_{i}^{2}}\le\sqrt{N*(\max_{i=1...n}(x_{i}))^{2}}
+\]
+\\
+ Ma dato che $(\max_{i=1...n}(x_{i}))^{2}$ è uguale ad $\max_{i=1...n}(x_{i})^{2}$
+quindi anche $\sqrt{(\max_{i=1...n}(x_{i}))^{2}}$ è uguale a $\sqrt{\max_{i=1...n}(x_{i})^{2}}$
+che a sua volta corrisponde a $\max_{i=1...n}|(x_{i})|$, portando
+anche a termine la stima dal basso e quindi la dimostrazione. 
 
+
+\subsubsection{Definizione di convergenza}
+
+La definizione di convergenza è: 
+\[
+\forall\;\epsilon>0\quad\exists\;\delta\;:\;\forall\; n>\delta\;\;|x_{n}-\delta|<\epsilon
+\]
+\\
+ \\
+ In poche parole la convergenza di una successione vettoriale (ovvero
+composta da vettori e non scalari) convergerà al punto le cui componenti
+corrisponderanno al punto di convergenza di ogni singola componente. 
+
+
+\subsubsection{Esempio}
+
+Un chiaro esempio della definizione è : 
+\[
+\left(\frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}},\frac{1}{n}\right)\longrightarrow\left(1,0\right)
+\]
+\\
+ Questo risultato è dato dal fatto che 
+\[
+\lim_{n\to\infty}\frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}}=1\quad e\quad\lim_{n\to\infty}\frac{1}{n}=0
+\]
+
+
+
+\section{Appunti 05/03/15}
+
+
+\subsection{Dimostrazione del 4/3/15 rivisitata}
+
+
+\subsubsection{Ipotesi}
+
+$x_{0}\in\Game\Omega$
+
+
+\subsubsection{Tesi}
+
+$x_{n}\rightarrow x_{0}$
+
+
+\subsubsection{Dimostrazione}
+
+Si procede per induzione
+
+$P\left(n\right)=x_{1}..x_{n}$ sono indipendenti, due a due distinti.
+
+\[
+\left|x_{i}-x_{0}\right|<\frac{1}{2^{i-1}}
+\]
+
+
+È necessario provare $P\left(1\right)$
+
+$\delta=1$ $\exists\quad x_{1}$ tale che $x_{1}\in\Omega,$ $x_{1}\in B_{1}\left(x_{0}\right)$,
+$x_{1}\neq x_{0}$
+
+Supponiamo di avere $P(n)$
+
+\[
+\delta=min\left\{ \frac{1}{2^{n}},\left|x_{1}-x_{0}\right|,\left|x_{2}-x_{0}\right|...\left|x_{n}-x_{0}\right|\right\} 
+\]
+
+
+Questi ultimi valori sono tutti positivi maggiori di 0 in quanto l'esponenziale
+è una funzione positiva, la norma è definita positiva e $x_{i}\neq x_{0}$
+per ogni $i=1..n$
+
+$\exists x_{n+1}$ tale che
+\begin{enumerate}
+\item $\in\Omega$
+\item $\in B_{\delta}\left(x_{0}\right)$
+\item $\neq x_{0}$
+\end{enumerate}
+
+\subsection{Fatto}
+
+Se $\Omega$ è chiuso e $x_{0}\in\Game\Omega$, $x_{0}\in\Omega$
+
+
+\subsection{Definizione}
+
+Un insieme è chiuso se contiene la frontiera
+
+
+\subsection{Teorema della permanenza del segno}
+
+
+\subsubsection{Ipotesi}
+\begin{itemize}
+\item $f:\Omega\rightarrow\mathbb{R}$ continua in $x_{0}$
+\item $f(x_{0})<0$
+\end{itemize}
+
+\subsubsection{Tesi}
+
+\[
+\exists\quad\delta>0\quad\forall x\in B_{\delta}(x_{0})\quad f(x)<0
+\]
+
+
+
+\subsubsection{Dimostrazione}
+
+Dalla definizione di continuità abbiamo che: 
+
+$\forall\quad\epsilon>0\quad\exists\quad\delta>0$ tale che $\forall x\in dom\left(f\right)$
+
+$\left|x-x_{0}\right|<\delta$ (cioè $x\in B_{\delta}\left(x_{0}\right)$)
+
+$\left|f(x)-f\left(x_{0}\right)\right|<\epsilon$
+
+$f\left(x_{0}\right)-\epsilon<f(x)<f\left(x_{0}\right)+\epsilon$
+
+siccome
+
+$f(x)<0$ per ipotesi
+
+Se $\epsilon<\left|f\left(x_{0}\right)\right|$ si ha $f\left(x_{0}\right)+\epsilon<0$
+
+
+\subsection{Teorema di continuità della funzione somma (nome provvisorio)}
+
+
+\subsubsection{Ipotesi}
+
+$f:\Omega\rightarrow\mathbb{R}^{N}$ \\
+ $g:\Omega\rightarrow\mathbb{R}^{N}$ \\
+ $f,g$ continue in $x_{0}$
+
+
+\subsubsection{Tesi}
+
+$h(x)=f(x)+g(x)$ è continua in $x_{0}$ \\
+ In pratica, se due funzioni sono continue in un punto anche la loro
+somma sarà continua in tal punto
+
+
+\subsubsection{Dimostrazione}
+
+$\forall\epsilon>0\exists\delta>0$ tale che $\forall x\in dom(f+g)|x-x_{0}|<\delta$
+
+\[
+|h(x)-h(x_{0})|<\epsilon
+\]
+
+
+\[
+|f(x)+g(x)-f(x_{0})-g(x_{0})|<\epsilon
+\]
+
+
+\[
+|f(x)-f(x_{0})+g(x)-g(x_{0})|<\epsilon
+\]
+
+
+Grazie alla disugualianza triangolare abbiamo che:
+
+\[
+|f(x)-f(x_{0})+g(x)-g(x_{0})|<\epsilon\leq|f(x)-f(x_{0})|+|g(x)-g(x_{0})|
+\]
+
+
+Dall'ipotesi di continuità di f,g:\\
+
+
+$\forall\sigma\exists\delta_{1}$ : $x\in dom(f):|x-x_{0}|<\delta_{1}\forall\epsilon>0|$
+\\
+ $|f(x)-f(x_{0})|<\sigma$ con $\sigma=\frac{\epsilon}{2}$
+
+$\forall\sigma\exists\delta_{2}$ : $x\in dom(g):|x-x_{0}|<\delta_{2}\forall\epsilon>0|$
+\\
+ $|g(x)-g(x_{0})|<\sigma$ con $\sigma=\frac{\epsilon}{2}$
+
+\[
+\delta=min\lbrace\delta_{1},\delta_{2}\rbrace
+\]
+\[
+|h(x)-h(x_{0})|<\delta
+\]
+
+
+
+\subsection{Primo teorema di composizione}
+
+
+\subsubsection{Ipotesi}
+
+$f:\Omega\rightarrow\mathbb{R}^{N}continua$ \\
+ $x_{n}\in\Omega$ \\
+ $x_{n}\rightarrow x\in\Omega$
+
+
+\subsubsection{Tesi}
+
+$\lim f(x_{n})=f(x)$
+
+
+\subsection{Dimostrazione}
+
+\[
+\forall\epsilon>0\quad\exists\nu:\forall n>\nu\quad|f(x_{n})-f(x)|<\epsilon
+\]
+\[
+\forall\epsilon>0\quad\exists\delta>0\quad:\quad\forall t\in\Omega|t-x|<\epsilon|f(t)-f(x)|<\epsilon
+\]
+Poniamo $t=x_{n}$ $|x-x_{n}|<\delta$ implica che 
+\[
+|f(x_{n})-f(x)|<\epsilon
+\]
+
+>>>>>>> origin/master
+
+Per quale $n$ è verificata?
 \end{document}
