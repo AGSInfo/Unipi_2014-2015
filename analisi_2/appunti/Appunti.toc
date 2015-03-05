@@ -1,49 +1,47 @@
-\contentsline {section}{\numberline {1}Appunti 03/03/2015}{3}
-\contentsline {subsection}{\numberline {1.1}Definizioni}{3}
-\contentsline {subsubsection}{\numberline {1.1.1}Convergenza}{3}
-\contentsline {subsubsection}{\numberline {1.1.2}Sfera}{3}
-\contentsline {subsubsection}{\numberline {1.1.3}Punto intero}{3}
-\contentsline {subsubsection}{\numberline {1.1.4}Punto esterno}{3}
-\contentsline {subsubsection}{\numberline {1.1.5}Punto di frontiera}{4}
-<<<<<<< HEAD
-\contentsline {subsubsection}{\numberline {1.1.6}Insieme aperto/chiuso}{4}
-\contentsline {subsubsection}{\numberline {1.1.7}Punto di accumulazione}{4}
-\contentsline {subsubsection}{\numberline {1.1.8}Punto isolato}{4}
-\contentsline {subsubsection}{\numberline {1.1.9}Insieme limitato}{4}
-\contentsline {section}{\numberline {2}Appunti 04/03/2015}{5}
-\contentsline {subsection}{\numberline {2.1}Diametro di un insieme}{5}
-\contentsline {subsubsection}{\numberline {2.1.1}Definizione}{5}
-\contentsline {subsubsection}{\numberline {2.1.2}Esempi}{5}
-\contentsline {subsubsection}{\numberline {2.1.3}Teorema}{5}
-\contentsline {subsection}{\numberline {2.2}Convergenza di successioni}{6}
-\contentsline {subsubsection}{\numberline {2.2.1}Lemma}{6}
-\contentsline {subsubsection}{\numberline {2.2.2}Definizione}{7}
-\contentsline {subsubsection}{\numberline {2.2.3}Teorema 1}{7}
-\contentsline {subsubsection}{\numberline {2.2.4}Teorema 2}{7}
-\contentsline {subsubsection}{\numberline {2.2.5}Esempio}{7}
-\contentsline {subsection}{\numberline {2.3}Continuit\IeC {\`a}}{8}
-\contentsline {subsubsection}{\numberline {2.3.1}Definizione}{8}
-=======
-\contentsline {section}{\numberline {2}Appunti 04/03/2015}{4}
-\contentsline {subsection}{\numberline {2.1}Diametro di un insieme}{4}
-\contentsline {subsubsection}{\numberline {2.1.1}Definizione}{4}
-\contentsline {subsubsection}{\numberline {2.1.2}Esempi}{4}
-\contentsline {subsubsection}{\numberline {2.1.3}Teorema}{5}
-\contentsline {subsection}{\numberline {2.2}Convergenza di successioni}{5}
-\contentsline {subsubsection}{\numberline {2.2.1}Lemma}{5}
-\contentsline {subsubsection}{\numberline {2.2.2}Definizione di convergenza}{6}
-\contentsline {subsubsection}{\numberline {2.2.3}Esempio}{6}
-\contentsline {section}{\numberline {3}Appunti 05/03/15}{6}
-\contentsline {subsection}{\numberline {3.1}Teorema della permanenza del segno}{6}
-\contentsline {subsubsection}{\numberline {3.1.1}Ipotesi}{6}
-\contentsline {subsubsection}{\numberline {3.1.2}Tesi}{6}
-\contentsline {subsubsection}{\numberline {3.1.3}Dimostrazione}{6}
-\contentsline {subsection}{\numberline {3.2}Teorema di continuit\IeC {\`a} della funzione somma (nome provvisorio)}{7}
-\contentsline {subsubsection}{\numberline {3.2.1}Ipotesi}{7}
-\contentsline {subsubsection}{\numberline {3.2.2}Tesi}{7}
-\contentsline {subsubsection}{\numberline {3.2.3}Dimostrazione}{7}
-\contentsline {subsection}{\numberline {3.3}Primo teorema di composizione}{8}
-\contentsline {subsubsection}{\numberline {3.3.1}Ipotesi}{8}
-\contentsline {subsubsection}{\numberline {3.3.2}Tesi}{8}
-\contentsline {subsection}{\numberline {3.4}Dimostrazione}{8}
->>>>>>> origin/master
+\contentsline {section}{\numberline {1}Appunti 03/03/2015}{4}
+\contentsline {subsection}{\numberline {1.1}Definizioni}{4}
+\contentsline {subsubsection}{\numberline {1.1.1}Convergenza}{4}
+\contentsline {subsubsection}{\numberline {1.1.2}Sfera}{4}
+\contentsline {subsubsection}{\numberline {1.1.3}Punto intero}{4}
+\contentsline {subsubsection}{\numberline {1.1.4}Punto esterno}{4}
+\contentsline {subsubsection}{\numberline {1.1.5}Punto di frontiera}{5}
+\contentsline {subsubsection}{\numberline {1.1.6}Insieme aperto/chiuso}{5}
+\contentsline {subsubsection}{\numberline {1.1.7}Punto di accumulazione}{5}
+\contentsline {subsubsection}{\numberline {1.1.8}Punto isolato}{5}
+\contentsline {subsubsection}{\numberline {1.1.9}Insieme limitato}{5}
+\contentsline {subsubsection}{\numberline {1.1.10}Punto di frontiera}{6}
+\contentsline {section}{\numberline {2}Appunti 04/03/2015}{6}
+\contentsline {subsection}{\numberline {2.1}Diametro di un insieme}{6}
+\contentsline {subsubsection}{\numberline {2.1.1}Definizione}{6}
+\contentsline {subsubsection}{\numberline {2.1.2}Esempi}{6}
+\contentsline {subsubsection}{\numberline {2.1.3}Teorema}{7}
+\contentsline {subsection}{\numberline {2.2}Convergenza di successioni}{7}
+\contentsline {subsubsection}{\numberline {2.2.1}Lemma}{7}
+\contentsline {subsubsection}{\numberline {2.2.2}Teorema}{7}
+\contentsline {subsubsection}{\numberline {2.2.3}Definizione}{8}
+\contentsline {subsubsection}{\numberline {2.2.4}Teorema 1}{8}
+\contentsline {subsubsection}{\numberline {2.2.5}Teorema 2}{9}
+\contentsline {subsubsection}{\numberline {2.2.6}Esempio}{9}
+\contentsline {subsection}{\numberline {2.3}Continuit\IeC {\`a}}{9}
+\contentsline {subsubsection}{\numberline {2.3.1}Definizione}{9}
+\contentsline {subsubsection}{\numberline {2.3.2}Definizione di convergenza}{10}
+\contentsline {subsubsection}{\numberline {2.3.3}Esempio}{10}
+\contentsline {section}{\numberline {3}Appunti 05/03/15}{10}
+\contentsline {subsection}{\numberline {3.1}Dimostrazione del 4/3/15 rivisitata}{10}
+\contentsline {subsubsection}{\numberline {3.1.1}Ipotesi}{10}
+\contentsline {subsubsection}{\numberline {3.1.2}Tesi}{10}
+\contentsline {subsubsection}{\numberline {3.1.3}Dimostrazione}{11}
+\contentsline {subsection}{\numberline {3.2}Fatto}{11}
+\contentsline {subsection}{\numberline {3.3}Definizione}{11}
+\contentsline {subsection}{\numberline {3.4}Teorema della permanenza del segno}{11}
+\contentsline {subsubsection}{\numberline {3.4.1}Ipotesi}{11}
+\contentsline {subsubsection}{\numberline {3.4.2}Tesi}{11}
+\contentsline {subsubsection}{\numberline {3.4.3}Dimostrazione}{12}
+\contentsline {subsection}{\numberline {3.5}Teorema di continuit\IeC {\`a} della funzione somma (nome provvisorio)}{12}
+\contentsline {subsubsection}{\numberline {3.5.1}Ipotesi}{12}
+\contentsline {subsubsection}{\numberline {3.5.2}Tesi}{12}
+\contentsline {subsubsection}{\numberline {3.5.3}Dimostrazione}{12}
+\contentsline {subsection}{\numberline {3.6}Primo teorema di composizione}{13}
+\contentsline {subsubsection}{\numberline {3.6.1}Ipotesi}{13}
+\contentsline {subsubsection}{\numberline {3.6.2}Tesi}{13}
+\contentsline {subsection}{\numberline {3.7}Dimostrazione}{13}
