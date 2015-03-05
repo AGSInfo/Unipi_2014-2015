@@ -4,8 +4,6 @@
 \date{\today}
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
-
-
 \begin{document}
 \maketitle
 \newpage
@@ -31,11 +29,28 @@ Ovvero spiegato a parole se l'insieme $\Omega$ contiene il punto (ovvero il cent
 \subsubsection{Punto esterno}
 Un punto $x_0$ si dice esterno ad un insieme $\Omega \in \mathbb{R}^n$ se :
 $$\exists \; \delta > 0 \; : \; B_\delta (x_0) \cap \Omega = 0$$
-Ovvero un punto si dice esterno ad un insieme se una qualunque sfera centrata nel punto di raggio a piacere non si interseca con l'insieme.
+Ovvero un punto si dice esterno ad un insieme se una qualunque sfera centrata nel punto $x_0$ di raggio a piacere non si interseca con l'insieme.
 \subsubsection{Punto di frontiera}
 Un punto $x_0$si dice di frontiera se preso un insieme $\Omega \subseteq \mathbb{R}^n$ si verifica la seguente condizione : 
 $$\forall \; \delta > 0 \; \exists \; x_1,x_2 \in B_\delta (x_0) \; : \; x_1 \in \Omega \; e \; x_2 \ni\Omega $$
 Ovvero un punto si dice di frontiera se sta al "bordo"dell'insieme, ovvero se presa una qualunque sfera centrata nel punto $x_0$ ci sarà almeno un punto appartenente alla sfera interno all'insieme e uno esterno all'insieme.
+\subsubsection{Insieme aperto/chiuso}
+Un insieme si dice \textbf{aperto} se ogni suo punto è interno (non contenendo quindi alcun punto di frontiera).\\
+Un insieme si dice \textbf{chiuso} se contiene la propria frontiera.
+\subsubsection{Punto di accumulazione}
+Un punto $x_0$ si dice di accumulazione di un insieme $\Omega$ (si scrive $x_0 \in \partial \; \Omega$ se :
+$$\forall \; \delta > 0 \quad \exists\;x \in \; B_\delta (x_0) \; \cap \;\Omega \quad x \neq x_0$$ 
+\subsubsection{Punto isolato}
+Un punto $x_0$ si dice isolato rispetto ad un insieme $\Omega$ se :
+$$\exists \; \delta \; : \; \Omega \; \cap \; B_\delta (x_0) = x_0$$ \\
+Un esempio di punto isolato può essere un generico punto $x_0$ appartenente ad $\Omega$, che viene definito nel seguente mod: $\Omega = \Omega' + \{x_0\}$ con $\Omega'$ e $\{x_0 \}$ molto distanti.
+\subsubsection{Insieme limitato}
+Un insieme $\Omega $ si dice limitato se 
+$$\exists \; [H,K] \sup	seteq \Omega$$ 
+Quindi se l'insieme $\Omega$ è contenuto in un intervallo chiuso i cui estremi sono H e K. \\
+Un altro modo per definire un'insieme limitato è:
+$$\exists \; x_0, \delta \;:\; \Omega \subseteq B_\delta (x_0)$$
+Ovvero un insieme si dice limitato se esiste un punto $x_0$ la cui sfera di raggio $\delta$ di dimensione a piacere contiene tutto l'insieme. Dato che una sfera è limitata se contiene tutto l'insieme anche quest'ultimo per forza di cose dovrà essere limitato.
 \section{Appunti 04/03/2015}
 \subsection{Diametro di un insieme}
 \subsubsection{Definizione}
@@ -73,16 +88,37 @@ $$\sum_{i = 1}^n x_i ^2 \le N * \max_{i = 1...n}(x_i)^2$$ \\
 Adesso possiamo applicare la radice a entrambi i membri perché non varia il segno della disequazione  e otteniamo:
 $$\sqrt{\sum_{i = 1}^n x_i ^2} \le \sqrt{ N * (\max_{i = 1...n}(x_i)) ^ 2}$$ \\
 Ma dato che $(\max_{i = 1...n}(x_i))^2$ è uguale ad $\max_{i = 1...n}(x_i)^2$ quindi anche $\sqrt{(\max_{i = 1...n}(x_i))^2}$ è uguale a $\sqrt{\max_{i = 1...n}(x_i)^2}$ che a sua volta corrisponde a $\max_{i = 1...n}|(x_i)|$, portando anche a termine la stima dal basso e quindi la dimostrazione.
-\subsubsection{Definizione di convergenza}
+\subsubsection{Definizione}
 La definizione di convergenza è: 
 $$\forall \; \epsilon > 0 \quad \exists \; \delta \; : \; \forall \; n > \delta \; \; |x_n - \delta| < \epsilon$$ \\ \\
 In poche parole la convergenza di una successione vettoriale (ovvero composta da vettori e non scalari) convergerà al punto le cui componenti corrisponderanno al punto di convergenza  di ogni singola componente.
+\subsubsection{Teorema 1}
+\textbf{Teorema}: \emph{Supponiamo che l'insieme $C$ si chiuso e che la successione $x_n \in C$ \\
+\hspace*{1.7cm} che $x_n \to x$} \\ \\
+\textbf{Allora}: \hspace*{0.5cm}$x  \in C$ \\ \\
+\underline{DIMOSTRAZIONE } \\ \\ 
+Ipotizziamo per assurdo che $x \ni C$	.
+Ma cosa è $x$? Iniziamo partendo dalla definizione di punto convergente:
+$$\forall \; \epsilon \quad \exists \; \nu \; : \; \forall \; n > \nu \; |x_n - x| < \epsilon$$
+Quindi dalla definizione si può intuire che se $|x_n - x| < \epsilon$ allora significa anche che $x_n \in B_\epsilon (x)$, ma dato che la sfera è contenuta in C si verifica un assurdo perché anche il punto interno alla sfera è contenuto in C.
+\subsubsection{Teorema 2}
+\textbf{Teorema: }\emph{Consideriamo il punto $x_0$ come punto di accumulazione dell'insieme \\
+\hspace*{1.7cm} $\Omega$ (ovvero $x_0 \; \partial \; \Omega$) e consideriamo $x_1,x_2,....,x_N$ elementi distinti di  \\
+\hspace*{1.7cm } $\Omega$} \\ \\
+\textbf{Allora: } \hspace*{0.3cm}$x_n \to x_0$ \\ \\ 
+\underline{DIMOSTRAZIONE} \\ \\
+Per procedere con questa dimostrazione dobbiamo seguire il principio di induzione e quindi specificare
+
+
 \subsubsection{Esempio}
 Un chiaro esempio della definizione è :
 $$\left( \frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}},\frac{1}{n}\right) \longrightarrow \left(1,0\right)$$ \\ 
 Questo risultato è dato dal fatto che 
 $$\lim_{n \to \infty} \frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}} = 1 \quad e \quad \lim_{n \to \infty}\frac{1}{n} = 0$$
-
-
+\subsection{Continuità}
+\subsubsection{Definizione}
+Consideriamo la funzione $f \; : \; \Omega \rightarrow \mathbb{R}^N$ con $\Omega \subseteq \mathbb{R}^N$ ed un punto $x_0 \in \Omega$ una funzione si dice continua in $x_0$ se 
+$$\forall \; \epsilon > 0 \quad \exists \; \delta > 0 \; : \; \forall \; x \in dom(f) \; se |x-x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon$$
+In questo caso la definizione è la solita per le funzioni che lavorano sui numeri reali con la differenza che però essendo su $\mathbb{R}^N$ dovrà essere calcolata la norma dei vettori e non il valore assoluto del (che comunque giusto per chiarezza corrisponde alla norma di un vettore in $\mathbb{R}$.
 
 \end{document}

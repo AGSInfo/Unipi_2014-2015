@@ -1,0 +1,77 @@
+\documentclass[fontsize = 20px, paper = a4]{article}
+\author{Alessandro Sieni, Gianluca Mondini}
+\title{Appunti Fisica generale}
+\date{\today}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Appunti 03/03/2015}
+\subsection{Ordini di grandezza}
+Quando si parla di ordini di grandezza intendiamo non una precisa quantità ma un'indicazione utile ad effettuare delle stime che non devono essere necessariamente precise.
+\subsection{Calcolo dimensionale}
+\subsubsection{Definizione}
+Il calcolo dimensionale ci permette di lavorare solo con le dimensioni che compongono le componenti da studiare e ci permette di verificare se alcuni procedimenti o calcoli sono corretti dal punto di vista dimensionale, ovvero se la dimensione ottenuta è coerente con quella di ciò che dobbiamo calcolare.
+Nel caso di alcuni casi semplici è possibile ottenere delle formule senza alcun procedimento, ma solo mediante l'utilizzo del caso dimensionale.
+\subsubsection{Esempi}
+Esaminiamo in questo esempio la formula per ottenere il tempo di caduta di un corpo da una fissata altezza.
+Solo studiando in maniera puramente intuitiva il fenomeno una persona può ipotizzare che la velocità possa dipendere dall'accelerazione di gravita( g ) dal tempo di caduta (t) e dall'altezza dalla quale il corpo viene lanciato, quindi riportando queste tre grandezze sotto forma di dimensioni otteniamo che:
+$$g = [V][T]^-1 = [L][T]^-2$$
+e dato che $[V] = [L][T]^-1$ dobbiamo riottenere la stessa dimensione, e per l farlo dobbiamo trovare gli esponenti $x,y,z$ da assegnare a g,t,h che si andranno a moltiplicare, che ci permettano di ritrovare la stessa dimensione, in poche parole :
+$$[L][T]^-1 = \underbrace{([L][T]^-2)^x}_g \underbrace{[T]^y}_t \underbrace{[L]^z}_h$$
+Da questo procediamo in modo algebrico ottenendo
+$$[L][T]^-1 = \underbrace{[L]^x[T]^{-2x}}_g \underbrace{[T]^y}_t \underbrace{[L]^z}_h$$
+da cui abbiamo un sistema a due equazioni ma a tre variabili (x,y,z) in quanto
+$$
+\begin{array}{lr}
+   x+z = 1 \\
+   y - 2x = -1
+  \end{array}
+$$
+Per risolvere questo problema proviamo a non considerare l'altezza come fattore determinante per calcolare la velocità e troviamo quindi come si comporta il tempo di caduta rispetto a g e h.
+$$[T] = [T]^y ([L][T]^-2)^x$$
+ottenendo stavolta un sistema a due equazioni e due incognite che ha come soluzione $x = -\frac{1}{2}$ e $y = \frac{1}{2}$. Infatti la formula del tempo di caduta di un corpo è proprio $\sqrt{\frac{h}{g}}$-. \\
+\subsection{Vettori}
+\hspace*{0.1cm}
+\subsubsection{Introduzione}
+\hspace*{0.1cm} \\ 
+In fisica l'utilizzo di vettori invece che di semplici scalari è fondamentale in quanto ci permettono di rappresentare in modo corretto la realtà (ad esempio non è possibile rappresentare la posizione di un corpo con un solo numero, ma ne sono necessari 3, uno per ogni asse cartesiano x,y,z).
+\subsubsection{Operazioni sui vettori}
+Le operazioni che è possibile effettuare sui vettori sono le seguenti :
+\begin{itemize}
+\item Somma
+\item Prodotto tra un vettore ed uno scalare
+\item Prodotto scalare tra due vettori
+\item Prodotto vettoriale
+\end{itemize}
+\textbf{\textit{Somma}} \\  \\
+La somma tra due vettori restituisce un vettore le cui componenti corrispondono alla sommatoria delle componenti relativi alla solita posizione, esempio :
+$$(1,2,3) + (7,-3,4) = (1+ 7,2 + (-3),3+4) = (8,-1.7)$$ \\  
+\textbf{\textit{Prodotto di un vettore per uno scalare}} \\ \\
+Il prodotto di un vettore per uno scalare si ottiene moltiplicando ciascuna componente per lo scalare, esempio :
+$$3 * (4,2,5) = (4 * 3, 2 * 3, 5* 3) = (12,6,15)$$ \\ 
+\textbf{\textit{Prodotto scalare tra due vettori}} \\ \\
+Il risultato del prodotto scalare tra due vettori sarà appunto uno scalare che corrisponderà alla sommatoria del prodotto delle relative componenti dei due vettori, esempio presi $U = (1,2,3)$ e $V=(3,4,5)$ il prodotto scalare tra U e V sarà :
+$$U*V = \sum_{i = 1}^3 (U_i * V_I) = (1* 3) + (2*4) + (5 * 3) = 26$$ \\ 
+\textbf{\textit{Prodotto vettoriale tra due vettori}} \\ \\
+\subsubsection{Rappresentazione di un vettore}
+\hspace*{5cm} \\
+Per rappresentare un vettore ci sono 4 possibili modi : 
+\begin{itemize}
+\item Mediante le coordinate
+\item Mediante una freccia nel piano
+\item Mediante il modulo del vettore e il suo argomento
+\item Mediante l'utilizzo di versori
+\end{itemize}
+\hspace*{1cm}\\
+ \textbf{\textit{Coordinate}} \\  \\
+Quando si rappresenta un vettore mediante coordinate si esplicita una tupla di n numeri l'esempio più classico è $V = (1,2,3)$ \\ \\ 
+\textbf{\textit{Freccia nel Piano}} \\  \\
+Quando si rappresenta un vettore con una freccia si utilizzano le stesse coordinate illustrate sopra ma le si proiettano in un ipotetico spazio n-dimensionale (ovviamente questo nei modelli matematici, perché in quelli fisici non si supera la terza dimensione, eccetto alcuni rari casi) e si traccia una freccia che parte dall'origine degli assi e che arriva proprio nel punto dello spazio avente come coordinate cartesiane le componenti del vettore. \\ \\
+\textbf{\textit{Modulo e Argomento}} \\  \\
+\section{Appunti 04/03/2015}
+\section{Appunti 05/03/2015}
+\end{document}
