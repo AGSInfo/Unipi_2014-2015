@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  6 MAR 2015 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  6 MAR 2015 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -339,32 +339,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-[7] [8] (./appunti_fisica.aux) ) 
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 125--132
+
+ []
+
+
+Overfull \hbox (1.59758pt too wide) in paragraph at lines 125--132
+\OT1/cmr/m/n/10 Data un'equazione oraria, viene definita come \OT1/cmr/bx/n/10 
+ve-locit^^Ra \OT1/cmr/m/n/10 la derivata dell'equazione
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--132
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+[9] (./appunti_fisica.aux) ) 
 Here is how much of TeX's memory you used:
- 561 strings out of 493117
- 6254 string characters out of 6135434
+ 562 strings out of 493117
+ 6263 string characters out of 6135434
  61732 words of memory out of 5000000
- 4058 multiletter control sequences out of 15000+600000
+ 4059 multiletter control sequences out of 15000+600000
  11862 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  23i,13n,24p,601b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy7.pfb>
-Output written on appunti_fisica.pdf (8 pages, 146527 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb>
+Output written on appunti_fisica.pdf (9 pages, 151606 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

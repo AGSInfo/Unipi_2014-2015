@@ -1,6 +1,6 @@
 \documentclass[fontsize = 20px, paper = a4]{article}
 \author{Alessandro Sieni, Gianluca Mondini}
-\title{Appunti Fisica generale}
+\title{Appunti Fisica Generale}
 \date{\today}
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
@@ -122,7 +122,29 @@ Dove nel termine a destra appare appunto la posizione su uno degli assi in funzi
 Detto questo si può indicare come le coordinate di un punto in funzione del tempo siano : 
 $$\overrightarrow{P} = (x(t),y(t),z(t))$$ 
 \subsubsection{Velocità e accelerazione}
+\hspace*{1cm} \\
+\textbf{\textit{Velocità}} \\ \\ 
+Data un'equazione oraria, viene definita come \textbf{velocità} la derivata dell'equazione oraria in funzione del tempo.
+Molto importante osservare che la velocità non è un semplice scalare ma bensì un vettore formato da un modulo, che indica la "quantità di velocità" ed una direzione, che indica la direzione verso la quale si sposterà il corpo. Vedendo la velocità come un vettore, è importante constatare che le componenti che compongono il vettore sono appunto gli spostamenti che tale velocità produce lungo gli assi cartesiani (quindi avrà una componente x, una y e una z). \\ \\
+\textbf{Importante: } La velocità è un vettore che è sempre parallelo alla traiettoria del corpo. \\ \\
+\textbf{\textit{Velocità Istantanea}} \\ \\ 
+La \textbf{velocità istantanea} di un corpo viene definito come 
+$$\lim_{t \to 0} \frac{P_2(x_2(t),y_2(t),z_2(t)) - P_1(x_1(t),y_1(t),z_1(t))}{\Delta \; t}$$
+Con $P_1 \; e \; P_2$ due punti lungo la traiettoria del corpo. \\ 
+La velocità istantanea è per definizione sempre (in qualunque punto) \textbf{tangente} alla traiettoria nel punto nel quale vogliamo calcolare la velocità istantanea. \newpage
+\textbf{\textit{Accelerazione}} \\ \\ 
+L'accelerazione viene definita come la \textbf{variazione di velocità} nel tempo ed è quindi la derivata prima della velocità del tempo, e di conseguenza la derivata seconda dell'equazione oraria, ad esempio :
+$$\overrightarrow{a} = \frac{d\overrightarrow{V}}{dx} = \frac{d^2 \overrightarrow{P}}{dx}$$
+Ovviamente anche l'accelerazione è un vettore che avrà come componenti : 
+\begin{itemize}
+\item Come  x avrà la derivata della componente x del vettore velocità
+\item Come  y avrà la derivata della componente y del vettore velocità
+\item Come  z avrà la derivata della componente z del vettore velocità
+\end{itemize}
+Per visualizzare questo meglio 
+$$\overrightarrow{a} = (\frac{dV_x(t)}{dt},\frac{dV_y(t)}{dt},\frac{dV_z(t)}{dt})$$
 \subsubsection{Esempi}
+Supponiamo di avere l'equazione oraria $x(t) = A\cos(\omega t)$, trovare $\overrightarrow{V}$ e $\overrightarrow{a}$ :
 \section{Appunti 05/03/2015}
 \section{Appunti del 06/03/2015}
 \end{document}
