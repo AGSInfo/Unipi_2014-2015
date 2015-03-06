@@ -66,12 +66,63 @@ Per rappresentare un vettore ci sono 4 possibili modi :
 \item Mediante il modulo del vettore e il suo argomento
 \item Mediante l'utilizzo di versori
 \end{itemize}
-\hspace*{1cm}\\
- \textbf{\textit{Coordinate}} \\  \\
-Quando si rappresenta un vettore mediante coordinate si esplicita una tupla di n numeri l'esempio più classico è $V = (1,2,3)$ \\ \\ 
-\textbf{\textit{Freccia nel Piano}} \\  \\
-Quando si rappresenta un vettore con una freccia si utilizzano le stesse coordinate illustrate sopra ma le si proiettano in un ipotetico spazio n-dimensionale (ovviamente questo nei modelli matematici, perché in quelli fisici non si supera la terza dimensione, eccetto alcuni rari casi) e si traccia una freccia che parte dall'origine degli assi e che arriva proprio nel punto dello spazio avente come coordinate cartesiane le componenti del vettore. \\ \\
-\textbf{\textit{Modulo e Argomento}} \\  \\
 \section{Appunti 04/03/2015}
+\subsection{Rappresentazione di un vettore}
+\hspace*{5cm} \\
+Per rappresentare un vettore ci sono 4 possibili modi : 
+\begin{itemize}
+\item Mediante le coordinate
+\item Mediante una freccia nel piano
+\item Mediante il modulo del vettore e il suo argomento
+\item Mediante l'utilizzo di versori
+\end{itemize}
+\subsubsection{Coordinate}
+Quando si rappresenta un vettore mediante coordinate si esplicita una tupla di n numeri l'esempio più classico è $V = (1,2,3)$ \newpage
+\subsubsection{Freccia nel piano}
+Quando si rappresenta un vettore con una freccia si utilizzano le stesse coordinate illustrate sopra ma le si proiettano in un ipotetico spazio n-dimensionale (ovviamente questo nei modelli matematici, perché in quelli fisici non si supera la terza dimensione, eccetto alcuni rari casi) e si traccia una freccia che parte dall'origine degli assi e che arriva proprio nel punto dello spazio avente come coordinate cartesiane le componenti del vettore. \\ 
+\subsubsection{Modulo e Argomento}
+Quando si rappresenta un vettore con la notazione modulo e argomento intendiamo esprimere il modulo del vettore (nel caso sia rappresentabile in uno spazio con una freccia la sua lunghezza partendo dall'origine degli assi) e dato che la sola lunghezza non è sufficiente (in quanto dando solo la lunghezza di una freccia si potrebbe intendere una circonferenza di centro 0 e raggio uguale al modulo della freccia) viene espresso anche l'angolo che forma il vettore con un asse (nel caso sia su un piano) e con 2 assi (nel caso sia su uno spazio tridimensionale), esempio:
+$$\overrightarrow{U} = (3,30^\circ)$$
+In questo esempio viene indicato che il vettore $\overrightarrow{U}$ ha un modulo dal valore 3 e un inclinazione con gli assi di $30^\circ$. \\ 
+\subsubsection{Versori}
+Prima di illustrare la rappresentazione per versori è opportuno esprimere il concetto di versore. \\
+Il versore è un normale vettore che però rispetta queste due caratteristiche :
+\begin{itemize}
+\item Ha modulo pari ad 1
+\item Corrisponde con uno degli assi cartesiano
+\end{itemize}
+Introdotte queste due caratteristiche si può subito notare l'esistenza di tre versori, corrispondenti agli assi x,y,z. Questi versori sono :
+\begin{itemize}
+\item $\overrightarrow{i} = (1,0,0)$
+\item $\overrightarrow{j} = (0,1,0) $
+\item $\overrightarrow{k} =(0,0,1),$
+\end{itemize}
+Costruire un qualunque vettore con l'utilizzo di questi tre versori è molto semplice in quanto basterà esprimere il vettore come una sommatori di multipli di versori, ad esempio :
+$$\overrightarrow{U} = (7,-3.5 ) = 7\overrightarrow{i} + (-3)\overrightarrow{j} + 5\overrightarrow{k} =(7,0,0) + (0,-3,0) + (0,0,5 ) = (7,-3,5)$$ \\ 
+\subsection{Prodotto scalare}
+Un' operazione molto importante per i vettori è il prodotto scalare (il cui metodo di "elaborazione", per la rappresentazione in coordinate,è illustrato nella sezione del 04/03/2015 alla voce "operazione sui vettori") che quando siamo in rappresentazione per modulo è argomento funziona cosi (presi $\overrightarrow{U} = (\rho_1,\theta_1)$ e $\overrightarrow{V} = (\rho_2,\theta_2)$) :
+$$\overrightarrow{U} * \overrightarrow{V} = |\rho_1||\rho_2| * \cos(\theta_1 - \theta_2)$$ \\ 
+Da quest'ultima formula si nota subito una delle cose fondamentali del prodotto scalare, ovvero che esprime al suo interno l'angolo che si forma tra i due vettori, espresso sotto la funzione cos. Ed è proprio dalla funzione cos che si ricava subito un'informazione importante sul prodotto scalare, ovvero che se due vettori sono ortogonali (ovvero formano un angolo di 90 gradi) il loro prodotto scalare sarà uguale a zero, in quanto il coseno di 90 gradi corrisponde a 0. \\
+Ovviamente nel caso di di vettori espressi in modulo e argomento è inutile tutto questo discorso in quanto per calcolare l'angolo compreso basterà fare la differenza tra gli angoli dei due vettori, ma nel caso in cui invece fossimo nella rappresentazione per coordinate tutto può diventare estremamente utile, e in quel caso la formula del prodotto scalare (nota : ciò vale solo nei reali ) corrisponde a questa :
+$$\overrightarrow{U} * \overrightarrow{V} = |\overrightarrow{U}||\overrightarrow{V}| * \cos(\widehat{UV})$$
+Da cui è possibile ricavare l'angolo in questo modo :
+$$\widehat{UV} = \arccos \left( \frac{ |\overrightarrow{U}||\overrightarrow{V}|}{\overrightarrow{U} * \overrightarrow{V} } \right)$$ \\\
+\subsection{Cinematica}
+\hspace*{1cm}
+\subsubsection{Traiettoria}
+La \textbf{traiettoria} è una funzione nello spazio \underline{f(x,y,z) = 0} che indica tutti i punti dello spazio che sono stati, sono e saranno percorsi da un corpo durante il suo movimento. Ho usato il passato, il presente e il futuro contemporaneamente perché noi non sappiamo il tempo necessario a raggiungere un punto o ad effettuare uno spostamento, sempre se il corpo si muovo solo in un verso e che non faccia avanti e indietro, cosa che può accadere, ma sappiamo solo che il corpo durante il suo movimento passerà dal quel punto.
+\subsubsection{Equazione oraria}
+Se invece desiderassimo mettere in relazione la posizione di un corpo coni il tempo allora dovranno sarà necessaria un'equazione oraria, ovvero appunto un equazione che mette il relazione il punto dove si trova il corpo con il tempo e si indica nel seguente modo (per i tre assi cartesiani ) :
+\begin{itemize}
+\item $x(t) = ....$
+\item $y(t) = ....$
+\item $z(t) = ....$
+\end{itemize}
+Dove nel termine a destra appare appunto la posizione su uno degli assi in funzione del tempo, mentre a sinistra apparirà un normale membro di un'equazione. \\
+Detto questo si può indicare come le coordinate di un punto in funzione del tempo siano : 
+$$\overrightarrow{P} = (x(t),y(t),z(t))$$ 
+\subsubsection{Velocità e accelerazione}
+\subsubsection{Esempi}
 \section{Appunti 05/03/2015}
+\section{Appunti del 06/03/2015}
 \end{document}
