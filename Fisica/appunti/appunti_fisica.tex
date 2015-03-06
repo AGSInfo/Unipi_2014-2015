@@ -26,10 +26,10 @@ Da questo procediamo in modo algebrico ottenendo
 $$[L][T]^-1 = \underbrace{[L]^x[T]^{-2x}}_g \underbrace{[T]^y}_t \underbrace{[L]^z}_h$$
 da cui abbiamo un sistema a due equazioni ma a tre variabili (x,y,z) in quanto
 $$
-\begin{array}{lr}
+\left \{ \begin{array}{lr}
    x+z = 1 \\
    y - 2x = -1
-  \end{array}
+  \end{array} \right.
 $$
 Per risolvere questo problema proviamo a non considerare l'altezza come fattore determinante per calcolare la velocità e troviamo quindi come si comporta il tempo di caduta rispetto a g e h.
 $$[T] = [T]^y ([L][T]^-2)^x$$
@@ -168,25 +168,25 @@ Infatti tornando all'equazione di prima notiamo che $v(t) = 4t + 9t^2$ e $a(t) =
 \subsubsection{Primo esercizio}
 Prendiamo un sistema di due equazioni orarie (che descrivono quindi lo spostamento di un corpo lungo due assi)
 \[
-\begin{array}{lr}
+\left\{ \begin{array}{lr}
 	x(t) = 2t^2 -3t^3 \\ 
 	y(t) = 5t + 4 \\
-\end{array}
+\end{array} \right.
 \]
 trovare l'angolo tra vettore velocità e vettore accelerazione all'istante 1. \\ 
 Innanzi tutto procediamo a trovare i vettori velocità e accelerazione per entrambi gli assi :
 \[
-\begin{array}{lr}
+\left\{ \begin{array}{ll}
 	V_x(t) = 4t -9t^2  \qquad \Longrightarrow a_x(t) = 4 - 18t\\ 
 	V_y(t) = 5  \qquad \quad \qquad \Longrightarrow a_y(t) = 0
-\end{array}
+\end{array} \right.
 \]
 Adesso non ci rimane che sostituire 1 a t per ottenere il vettore velocità e accelerazione :
 \[
-\begin{array}{lr}
+\left\{  \begin{array}{ll}
 	V_x(1) = 4(1) -9(1)^2 = 4 - 9 = -5  \quad \Longrightarrow a_x(1) = 4 - 18(1) = 4- 18 = -14\\ 
 	V_y(1) = 5  \qquad \qquad \quad \qquad \qquad \quad \qquad \Longrightarrow a_y(1) = 0
-\end{array}
+\end{array} \right.
 \]
 Ecco che abbiamo ottenuto che V(1) = (1,1) e a(1) = (-14,0). \\  
 Per finire non ci rimane che ricordarsi che il prodotto scalare contiene il coseno dell'angolo compreso e applicare la formula per trovare un angolo a partire dal prodotto scalare :
@@ -194,33 +194,64 @@ $$\widehat{V(1)a(1)} = \arccos \left(\frac{V(1) a(1)}{|V(1)||a(1)|} \right) =\ar
 \subsubsection{Secondo esercizio}
 Calcolare la traiettoria dato il seguente sistema di equazioni orarie :
 \[
-\begin{array}{lr}
+\left \{ \begin{array}{lr}
 	x(t) = 6t^2 + 3  \Longrightarrow x = 6\frac{y}{2} + 3 \Longrightarrow 2x- 3y^2 - 4 = 0\\
 	y(t) = 2t  \; \qquad \Longrightarrow t = \frac{y}{2}
-\end{array}
+\end{array} \right.
 \]
 Dalla seconda equazione ricavo t (che poi andrà sostituito per farlo sparire, perché un equazione oraria non presenta il tempo) e lo sostituisco, ricavando l'equazione oraria che poi verrà sistemata con semplici passaggi algebrici(equazione oraria ottenuta : $ 2x- 3y^2 - 4 = 0$ ).
 \subsubsection{Terzo esercizio}
 Dato un sistema di equazioni orarie lungo due assi trovare, velocità,accelerazione e traiettoria:
 \[
-\begin{array}{lr}
+\left \{ \begin{array}{lr}
 	x(t) = A\cos(\omega t) \Longrightarrow V_x(t) = -\omega A \sin(\omega t) \Longrightarrow 
 				a_x(t) = -\omega^2 A^2\cos(\omega t)\\
 	y(t) = A\sin(\omega t) \, \Longrightarrow V_y(t) = \omega A\cos(\omega t) \; \;\,\Longrightarrow a_y(t) = -\omega^2 A^2 \sin(\omega t)
-\end{array}
+\end{array} \right.
 \]
 A questo punto abbiamo trovato velocità e accelerazione, non ci rimane che trovare la traiettoria, ma questa volta non è possibile sostituire come prima, ma visto che è presente il seno e il coseno possiamo elevare tutto al quadrato e usare le proprietà di seno e coseno.
 \[
-\begin{array}{lr}
+\left \{\begin{array}{lr}
 	x^2(t) = A^2\cos^2(\omega t) \Rightarrow x^2(t) = A^2(1 - \sin^2(\omega t)) \Rightarrow x^2 = A^2 (1 -\frac{y^2}{A^2})\Rightarrow x^2 + y^2 = A^2\\
 	y(^2t) = A^2\sin^2(\omega t)  \Rightarrow \sin^2(\omega t) = \frac{y^2}{A^2}
-\end{array}
+\end{array} \right.
 \]
 Dall'equazione oraria($x^2 + y^2 = A^2$) si vede che il corpo si muove secondo una traiettoria circolare (moto circolare) di raggio A. \\
 Essendo questo un moto curvilineo siamo sicuri che la velocità non sia costante, perché anche se della velocità ne è costante il modulo, non lo sarà sicuramente la direzione (che è tangente alla traiettoria),calcoliamo quindi il modulo della velocità :
-$$|\overrightarrow{V}| = \sqrt{V_x ^2 + V_y ^ 2} = \sqrt{\omega^2 A^2 \sin^2(\omega t) + \omega^2 A^2 \cos^2(\omega t)} = \omega A\$$
+$$|\overrightarrow{V}| = \sqrt{V_x ^2 + V_y ^ 2} = \sqrt{\omega^2 A^2 \sin^2(\omega t) + \omega^2 A^2 \cos^2(\omega t)} = \omega A$$
 Dato che A è il raggio si può constatare che il  modulo della velocità del corpo dipende dal raggio della sua traiettoria. \\
 Adesso calcoliamo il modulo dell'accelerazione:
-$$|\overrightarrow{a} = \sqrt{}$$
+$$|\overrightarrow{a}| = \sqrt{\omega^4 A^2\cos^2(\omega t) + \omega^4 A^2 \sin^2(\omega t)} = \omega^2 A $$
+E dato che A corrisponde al raggio e dato che il la direzione dell'accelerazione sia opposta al raggio(Si vede dal segno sulle equazioni che legano l'accelerazione lungo gli assi) si può dire in definitiva che $\overleftarrow{a} = -\omega^2R$. \\
+Quando abbiamo una accelerazione che di direzione opposta rispetto al raggio (quindi quando "tira" l'oggetto verso l'interno) si dice che abbiamo un'\textbf{accelerazione centripeta}. \\
+\subsubsection{Conclusione}
+Dato che per definizione la velocità è sempre tangente alla traiettoria, e dato che in questo caso siamo in una circonferenza si può notare che la velocità sia perpendicolare al raggio (e quindi all'accelerazione).Per dimostrarlo basta fare il prodotto scalare tra il vettore che rappresenta il raggio $\overleftarrow{R} = (A\cos(\omega t),A\sin(\omega t)$ e quello velocità : 
+$$\overrightarrow{R} * \overrightarrow{V} = -\omega A^2 \cos(\omega t) \sin(\omega t) +\omega A^2 \cos(\omega t) \sin(\omega t) = 0 $$
+e quindi proviamo anche che il vettore velocità è perpendicolare al vettore accelerazione:
+$$\overrightarrow{a} * \overrightarrow{V} = \omega^3A^2\cos(\omega t) \sin(\omega t) -\omega^3A^2\cos(\omega t) \sin(\omega t) = 0$$
+Per concludere notiamo che se invece il moto non è circolare ma ellittico allora il vettore accelerazione non sarà perpendicolare al vettore velocità, ma sarà sempre parallelo al vettore raggio dell'ellisse.
 \section{Appunti del 06/03/2015}
+\subsection{Prodotto scalare}
+\subsubsection{Breve Nota}
+Il prodotto scalare è massimo quando due vettori sono paralleli (perché l'angolo compreso è zero e il coseno di 0 è 1) ed è nullo quando sono ortogonali (coseno di 90 = 0).
+\subsection{Prodotto vettoriale}
+\subsubsection{Formula e dimostrazione}
+L'operazione di prodotto vettoriale tra due vettori restituisce un terzo vettore e si rappresenta nel seguente modo:
+$$\overrightarrow{c} = \overrightarrow{a} \wedge \overrightarrow{b}$$
+$$|\overrightarrow{c}|=|\overrightarrow{a}||\overrightarrow{b}|\sin(\widehat{ab})$$
+Quest'ultima formula si ottiene dalla seguente dimostrazione:$(a \wedge b)^2 = ((a \wedge b)*(a \wedge b) = a^2b^2 - (ab)^2 = a^2b^2 -(|a||b|\cos(\widehat{ab}))^2 = a^2b^2(1-\cos^2\widehat{ab})) = a^2b^2 \sin^2(\widehat{ab})$ e quindi si conclude dicendo che se $(a \wedge b)^2 = a^2b^2 \sin^2(\widehat{ab}) $ allora $\sqrt{(a \wedge b)^2} = \sqrt{a^2b^2 \sin^2(\widehat{ab})} $ da cui si ottiene che : $|(a \wedge b)| = |a||b|\sin(\widehat{ab})$. 
+\subsubsection{Calcolo del prodotto vettoriale}
+Per calcolare il prodotto vettoriale si usa una matrice avente per righe i vettori che servono per fare l'operazione, mettendo invece per colonne i versori i,j,k.
+\subsubsection{Identità vettoriali}
+\begin{enumerate}
+\item $(\overrightarrow{a} \wedge \overrightarrow{b})\wedge \overrightarrow{c} = (\overrightarrow{a}*\overrightarrow{b})*\overleftarrow{b} - (\overrightarrow{b}*\overrightarrow{c})*\overrightarrow{a} $
+\item $(\overrightarrow{a} \wedge \overrightarrow{b})*(\overrightarrow{c} \wedge \overrightarrow{d}) = (\overrightarrow{a}*\overrightarrow{c})*(\overrightarrow{b}*\overrightarrow{d})-(\overrightarrow{a}*\overrightarrow{d})*(\overrightarrow{b}*\overrightarrow{c})$
+\item $(\overrightarrow{a} \wedge \overrightarrow{b}) \wedge(\overrightarrow{c} \wedge \overrightarrow{d})= $
+\item $(\overrightarrow{a} \wedge \overrightarrow{b})*\overrightarrow{c}$ restituisce zero se i vettori sono complanari,perché il prodotto vettore restituisce un vettore ortogonale al piano ma se anche il terzo vettore appartiene allo stesso piano allora il prodotto scalare per il vettore ortogonale a tale piano sarà uguale a 0 ,altrimenti restituisce un valore corrispondente al volume del parallelepipedo costruito sui tre vettori.
+\end{enumerate}
+\subsection{Cambio sistema di riferimento}
+\subsubsection{Definizione}
+Per cambio di sistema di riferimento si intende il passaggio da un sistema di basi sul quale è costruito un vettore ad un altro, calcolandone dunque il corrispettivo vettore associato al nuovo sistema.\\
+Per calcolare il corrispettivo vettore sul nuovo sistema di riferimento basterà scrivere il vettore come combinazione lineare dei nuovi i,j,k.
+\subsubsection{Esempi}
 \end{document}

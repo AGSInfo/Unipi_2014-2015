@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  6 MAR 2015 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  6 MAR 2015 23:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -370,45 +370,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
-[9] [10]
+[9]
+Overfull \hbox (4.3742pt too wide) detected at line 190
+[]
+ []
+
+[10]
 Overfull \hbox (9.30615pt too wide) in paragraph at lines 201--203
 \OT1/cmr/m/n/10 l'equazione oraria che poi verr^^Ra sis-tem-ata con sem-plici p
 as-saggi al-ge-brici(equazione
  []
 
 
-Overfull \hbox (33.06377pt too wide) detected at line 218
+Overfull \hbox (42.31935pt too wide) detected at line 218
 []
  []
 
-[11] (./appunti_fisica.aux) ) 
+
+Overfull \hbox (21.3405pt too wide) in paragraph at lines 224--227
+\OT1/cmr/m/n/10 (quindi quando "tira" l'oggetto verso l'interno) si dice che ab
+-bi-amo un'\OT1/cmr/bx/n/10 accelerazione
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
+
+ []
+
+
+Overfull \hbox (0.52824pt too wide) in paragraph at lines 228--229
+\OT1/cmr/m/n/10 prodotto scalare tra il vet-tore che rap-p-re-senta il rag-gio 
+$[] = (\OML/cmm/m/it/10 A []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !t\OT1/cmr/m/n/10
+ )\OML/cmm/m/it/10 ; A []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !t\OT1/cmr/m/n/10 )$
+
+ []
+
+[11] [12] [13] (./appunti_fisica.aux) ) 
 Here is how much of TeX's memory you used:
  562 strings out of 493117
  6263 string characters out of 6135434
- 61732 words of memory out of 5000000
+ 63732 words of memory out of 5000000
  4059 multiletter control sequences out of 15000+600000
  11862 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  23i,13n,24p,601b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on appunti_fisica.pdf (11 pages, 169791 bytes).
+</usr/local/texlive/2014/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on appunti_fisica.pdf (13 pages, 177802 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
