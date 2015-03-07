@@ -1,0 +1,8477 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command makeindex
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 4cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth -2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle fancy
+\bullet 0 1 31 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Definizioni e teoremi v2 - Algebra Lineare
+\end_layout
+
+\begin_layout Author
+Mondini Gianluca
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Definizioni
+\end_layout
+
+\begin_layout Subsection
+Insieme 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fissato un generico intero 
+\begin_inset Formula $n$
+\end_inset
+
+, si chiamerà 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ l'insieme delle n-uple ordinate di numeri reali; 
+\begin_inset Formula $n$
+\end_inset
+
+ si dirà dimensione di 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ è un prodotto cartesiano di 
+\begin_inset Formula $n$
+\end_inset
+
+ coppie di numeri reali
+\end_layout
+
+\begin_layout Subsection
+Vettore in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dato 
+\begin_inset Formula $x\in R^{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $x=\left(x_{1}..x_{n}\right)$
+\end_inset
+
+ il numero reale 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ è detto i-esima componente del vettore 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Somma di vettori
+\end_layout
+
+\begin_layout Standard
+Dati due vettori appartenenti a 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+si definisce la loro somma come il vettore cha ha per componenti la somma
+ delle loro componenti corrispondenti
+\end_layout
+
+\begin_layout Subsection
+Vettore nullo
+\end_layout
+
+\begin_layout Standard
+In ogni spazio 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ si denota con 0 il vettore che ha tutte le componenti nulle (vettore nullo);
+ è l'elemento neutro della somma, cioè gode della proprietà di non alterare
+ alcun vettore a cui viene sommato.
+\end_layout
+
+\begin_layout Subsection
+Opposto di un vettore
+\end_layout
+
+\begin_layout Standard
+Dato un vettore 
+\begin_inset Formula $u$
+\end_inset
+
+ in 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+si definisce il suo opposto come il vettore ottenuto da esso cambiandone
+ di segno tutte le componenti, e si indica con 
+\begin_inset Formula $-u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Differenza tra due vettori
+\end_layout
+
+\begin_layout Standard
+La differenza 
+\begin_inset Formula $u-v$
+\end_inset
+
+ fra due vettori 
+\begin_inset Formula $u$
+\end_inset
+
+ e 
+\begin_inset Formula $v$
+\end_inset
+
+ appartenenti ad 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+, presi in ordine, è definita come la somma del primo con l'opposto del
+ secondo.
+\end_layout
+
+\begin_layout Subsection
+Spazio vettoriale
+\end_layout
+
+\begin_layout Standard
+È una struttura algebrica composta da:
+\end_layout
+
+\begin_layout Itemize
+un campo
+\end_layout
+
+\begin_layout Itemize
+un insieme i cui elementi sono detti vettori
+\end_layout
+
+\begin_layout Itemize
+due operazioni binarie, dette somma e moltiplicazione per uno scalare
+\end_layout
+
+\begin_layout Subsection
+Norma di un vettore
+\end_layout
+
+\begin_layout Standard
+Uno spazio vettoriale in cui è definita la norma di un vettore è uno sapzio
+ normato.
+ Vi sono diversi tipi di norma; la norma euclidea di un vettore 
+\begin_inset Formula $v=\left(v_{1}..v_{n}\right)\in R^{n}$
+\end_inset
+
+ è il numero:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|v\right|=\sqrt{v_{1}^{2}+...+v_{n}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Questa quantità è geometricamente interpretata come la lunghezza del vettore.
+\end_layout
+
+\begin_layout Subsection
+Versore
+\end_layout
+
+\begin_layout Standard
+Un versore è un vettore in uno spazio normato di modulo unitario, utilizzato
+ per indicare una particolare direzione e verso.
+ Dato un qualunque vettore 
+\begin_inset Formula $v$
+\end_inset
+
+ (diverso dal vettore nullo che è l'unico ad avere modulo pari a zero) è
+ possibile formare un versore moltiplicandolo per l'inverso del suo modulo
+\begin_inset Formula 
+\[
+\hat{v}=\frac{v}{\left|v\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|\hat{v}\right|=\left|\frac{1}{\left|u\right|}u\right|=\frac{1}{\left|\left|u\right|\right|}\left|u\right|=\frac{1}{\left|u\right|}\left|u\right|=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+posso togliere il valore assoluto perché la norma è definita positiva
+\end_layout
+
+\begin_layout Subsection
+Distanza euclidea
+\end_layout
+
+\begin_layout Standard
+È la distanza fra due punti, ossia la misura del segmento avente per estremi
+ i due punti.
+\end_layout
+
+\begin_layout Subsection
+Prodotto scalare
+\end_layout
+
+\begin_layout Standard
+Dati due vettori arbitrari in 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+, definiamo il loro prodotto scalare (o interno) come lo scalare ottenuto
+ dalla somma dei prodotti delle componenti corrispondenti.
+\end_layout
+
+\begin_layout Subsection
+Vettori ortogonali
+\end_layout
+
+\begin_layout Subsection
+Spazio euclideo
+\end_layout
+
+\begin_layout Standard
+È uno spazio vettoriae in cui valgono gli assiomi e i postulati della geometria
+ euclidea.
+\end_layout
+
+\begin_layout Subsection
+Coseno dell'angolo in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Coseno tra versori in 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u,v$
+\end_inset
+
+ in 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\left|u\right|=\left|v\right|=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u=\left(u_{1},u_{2}\right)=\left(cos\left(\phi\right),sin\left(\phi\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v=\left(v_{1},v_{2}\right)=\left(cos\left(\beta\right),sin\left(\beta\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $cos\left(\phi-\beta\right)=cos\left(\phi\right)cos\left(\beta\right)+sin\left(\phi\right)sin\left(\beta\right)=v_{1}u_{1}+u_{2}v_{2}=uv$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il coseno dell'angolo 
+\begin_inset Formula $\left(\phi-\beta\right)$
+\end_inset
+
+ compreso tra 
+\begin_inset Formula $u$
+\end_inset
+
+ e 
+\begin_inset Formula $v$
+\end_inset
+
+ è uguale al prodotto fra 
+\begin_inset Formula $u$
+\end_inset
+
+ e 
+\begin_inset Formula $v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Coseno dell'angolo in 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dati due vettori in 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ si definisce il coseno dell'angolo da essi formato come il rapporto fra
+ il loro prodotto scalare e il prodotto delle loro norme.
+\end_layout
+
+\begin_layout Subsection
+Proiezione ortogonale
+\end_layout
+
+\begin_layout Subsection
+Prodotto vettore in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il prodotto vettore (o esterno) è definito in 
+\begin_inset Formula $R^{3}$
+\end_inset
+
+ ponendo 
+\begin_inset Formula $a\wedge b=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(\begin{array}{c}
+a_{1}\\
+a_{2}\\
+a_{3}
+\end{array}\right)\wedge\left(\begin{array}{c}
+b_{1}\\
+b_{2}\\
+b_{3}
+\end{array}\right)=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+\left|\begin{array}{cc}
+a_{2} & b_{2}\\
+a_{3} & b_{3}
+\end{array}\right|\\
+-\left|\begin{array}{cc}
+a_{1} & b_{1}\\
+a_{3} & b_{3}
+\end{array}\right|\\
+\left|\begin{array}{cc}
+a_{1} & b_{1}\\
+a_{2} & b_{2}
+\end{array}\right|
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Span
+\end_layout
+
+\begin_layout Standard
+Insieme delle combinazioni lineari 
+\begin_inset Formula $\left\langle x,y,z\right\rangle $
+\end_inset
+
+ tale che 
+\begin_inset Formula $\left\langle x,y,z\right\rangle =\left\{ \alpha x+\beta y+\lambda z\,:\,\alpha,\beta,\lambda\in R\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Questo insieme è lo spazio generato da vettori dati ed è un sottospazio
+ dello spazio vettoriale
+\end_layout
+
+\begin_layout Subsection
+Sistema di vettori ortogonale
+\end_layout
+
+\begin_layout Standard
+Una base ortogonale è una base di vettori ortogonali rispetto al prodotto
+ scalare definito sullo spazio vettoriale.
+\end_layout
+
+\begin_layout Standard
+I vettori sono ortogonali 2 a 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e_{1}..e_{n}\quad t.c.\quad e_{i}e_{j}=\begin{cases}
+0 & i\neq j\\
+\alpha\neq0 & i=j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sistema di vettori ortonormale
+\end_layout
+
+\begin_layout Standard
+Una base ortonormale di uno spazio vettoriale munito di prodotto scalare
+ definito positivo è una base composta da vettori di norma unitaria e ortogonali
+ tra loro, ossia una base ortogonale di vettori di norma uno.
+\end_layout
+
+\begin_layout Standard
+La norma di ogni vettore è 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e_{1}..e_{n}\quad t.c.\quad e_{i}e_{j}=\begin{cases}
+0 & i\neq j\\
+1 & i=j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dimensione di uno spazio vettoriale
+\end_layout
+
+\begin_layout Standard
+La dimensione di uno spazio vettoriale è la cardinalità di una sua base,
+ ovvero è il numero di vettori che la compongono.
+\end_layout
+
+\begin_layout Subsection
+Applicazioni lineari
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $V$
+\end_inset
+
+ e 
+\begin_inset Formula $W$
+\end_inset
+
+ due spazi vettoriali definiti su un campo 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Supponiamo di avere un'applicazione
+\begin_inset Formula 
+\[
+F:V\rightarrow W
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un'applicazione tra spazi vettoriali si dice lineare se soddisfa tre condizioni
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F:0\in V\rightarrow0\in W$
+\end_inset
+
+, ossia
+\begin_inset Formula 
+\[
+F(0)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dati due vettori 
+\begin_inset Formula $v_{1},v_{2}\in V$
+\end_inset
+
+, l'immagine della somma è uguale alla somma delle immagini
+\begin_inset Formula 
+\[
+F\left(v_{1}+v_{2}\right)=F\left(v_{1}\right)+F\left(v_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dato 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+, l'immagine del prodotto di 
+\begin_inset Formula $v$
+\end_inset
+
+ per lo scalare è uguale al prodotto dello scalare per l'immagine
+\begin_inset Formula 
+\[
+F\left(\lambda v\right)=\lambda F(v)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Applicazione iniettiva (necessita rev.)
+\end_layout
+
+\begin_layout Standard
+Un'applicazione lineare si dice iniettiva quando la dimensione del suo nucleo
+ è uguale a 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dim\left(\ker\left(A\right)\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ è iniettiva se e solo se 
+\begin_inset Formula $A$
+\end_inset
+
+ ha rango 
+\begin_inset Formula $n$
+\end_inset
+
+ (in questo caso si dice che 
+\begin_inset Formula $A$
+\end_inset
+
+ ha rango per colonne massimo)
+\end_layout
+
+\begin_layout Subsection
+Applicazione suriettiva (necessita rev.)
+\end_layout
+
+\begin_layout Standard
+Un'applicazione lineare si dice suriettiva quando la sua immagine corrisponde
+ al codominio
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ è suriettiva se e solo se 
+\begin_inset Formula $A$
+\end_inset
+
+ ha rango 
+\begin_inset Formula $m$
+\end_inset
+
+ (in questo caso si dice che 
+\begin_inset Formula $A$
+\end_inset
+
+ ha rango per righe massimo)
+\end_layout
+
+\begin_layout Subsection
+Applicazione biiettiva
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ è invertibile se e solo se 
+\begin_inset Formula $A$
+\end_inset
+
+ ha rango 
+\begin_inset Formula $n$
+\end_inset
+
+ (e si dice che 
+\begin_inset Formula $A$
+\end_inset
+
+ ha rango massimo).
+ Questo accade se e solo se 
+\begin_inset Formula $f$
+\end_inset
+
+ è biettiva.
+\end_layout
+
+\begin_layout Subsection
+Applicazione inversa
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $V$
+\end_inset
+
+ e 
+\begin_inset Formula $W$
+\end_inset
+
+ spazi vettoriali, e 
+\begin_inset Formula $T$
+\end_inset
+
+ un'applicazione lineare invertibile (iniettiva (
+\begin_inset Formula $\ker(T)=0$
+\end_inset
+
+) e suriettiva 
+\begin_inset Formula $(Im(T)=W)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T:V\rightarrow W
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora l'applicazione inversa rispetto a 
+\begin_inset Formula $T$
+\end_inset
+
+ è
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S:W\rightarrow V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Spazio delle applicazioni lineari
+\end_layout
+
+\begin_layout Subsection
+Spazio duale
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $V$
+\end_inset
+
+ un 
+\begin_inset Formula $K$
+\end_inset
+
+-spazio vettoriale.
+ Lo spazio duale 
+\begin_inset Formula $V*$
+\end_inset
+
+ di 
+\begin_inset Formula $V$
+\end_inset
+
+ è lo spazio vettoriale formato da tutti i funzionali lineari
+\begin_inset Formula 
+\[
+f:V\rightarrow K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Insieme 
+\begin_inset Formula $C^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+È l'insieme delle n-uple di numeri complessi
+\end_layout
+
+\begin_layout Subsection
+Matrice
+\end_layout
+
+\begin_layout Standard
+Una matrice è una tabella ordinata di elementi.
+\end_layout
+
+\begin_layout Subsection
+Dimensione di una matrice
+\end_layout
+
+\begin_layout Subsection
+Vettore riga
+\end_layout
+
+\begin_layout Standard
+Un vettore riga è una matrice costituita da una sola riga (
+\begin_inset Formula $M_{1\times n}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Vettore colonna
+\end_layout
+
+\begin_layout Standard
+Un vettore colonna è una matrice costituita da una sola colonna (
+\begin_inset Formula $M_{n\times1}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Matrice quadrata
+\end_layout
+
+\begin_layout Standard
+Una matrice è detta quadrata se ha un numero uguale di righe e colonne,
+ detto ordine della matrice.
+ Viene altrimenti detta 
+\begin_inset Quotes eld
+\end_inset
+
+matrice 
+\begin_inset Formula $n\times n$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si tratta del tipo più comune e più importante di matrice, l'unico su cui
+ sono definiti concetti come determinante, (traccia), autovalore.
+\end_layout
+
+\begin_layout Standard
+Le matrici quadrate sono utili a modellizzare le trasformazioni lineari
+ di uno spazio vettoriale in se stesso (più precisamente, i suoi endomorfismi),
+ le forme bilineari ed i prodotti scalari.
+\end_layout
+
+\begin_layout Subsection
+Matrice identità
+\end_layout
+
+\begin_layout Standard
+La matrice identità, detta anche matrice identica o matrice unità, è una
+ matrice quadrata in cui tutti gli elementi della diagonale principale sono
+ costituiti dal numero 1, mentre i restanti sono 0.
+ Viene indicata con 
+\begin_inset Formula $I$
+\end_inset
+
+ oppure con 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+, dove 
+\begin_inset Formula $n$
+\end_inset
+
+ è il numero di righe della matrice.
+\end_layout
+
+\begin_layout Subsection
+Matrice triangolare
+\end_layout
+
+\begin_layout Standard
+Una matrice triangolare è una matrice che ha tutti gli elementi nulli sotto
+ o sopra la diagonale principale.
+\end_layout
+
+\begin_layout Subsection
+Matrice diagonale
+\end_layout
+
+\begin_layout Standard
+Una matrice diagonale è una matrice quadrata in cui solamente i valori della
+ diagonale principale possono essere diversi da 0.
+\end_layout
+
+\begin_layout Standard
+Non si impone che i valori sulla diagonale siano diversi da zero: la matrice
+ quadrata nulla è quindi diagonale.
+\end_layout
+
+\begin_layout Subsection
+Matrice trasposta
+\end_layout
+
+\begin_layout Standard
+La trasposta di una matrice 
+\begin_inset Formula $A$
+\end_inset
+
+ è la matrice 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ il cui generico elemento con indici 
+\begin_inset Formula $\left(i,j\right)$
+\end_inset
+
+ è l'elemento con indice 
+\begin_inset Formula $\left(j,i\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Applicazione (forma) bilineare
+\end_layout
+
+\begin_layout Subsubsection
+Definizione Longo
+\end_layout
+
+\begin_layout Standard
+Dato uno spazio vettoriale reale 
+\begin_inset Formula $X$
+\end_inset
+
+, chiameremo forma bilineare su 
+\begin_inset Formula $X$
+\end_inset
+
+ una qualunque funzione
+\begin_inset Formula 
+\[
+a:X\times X\rightarrow R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+tale che la funzione
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\rightarrow a(x,y)$
+\end_inset
+
+ lineare 
+\begin_inset Formula $\forall y$
+\end_inset
+
+ fissato
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\rightarrow a(x,y)$
+\end_inset
+
+ lineare 
+\begin_inset Formula $\forall x$
+\end_inset
+
+ fissato
+\end_layout
+
+\begin_layout Subsubsection
+Definizione internet
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $V$
+\end_inset
+
+ uno spazio vettoriale.
+ Un'applicazione
+\begin_inset Formula 
+\[
+f:V\times V\rightarrow K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+è detta forma bilineare su 
+\begin_inset Formula $V$
+\end_inset
+
+ se è lineare in entrambi gli argomenti.
+\end_layout
+
+\begin_layout Standard
+Gode delle seguenti proprietà:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(v+v',w\right)=f(v,w)+f(v',w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(v,w+w'\right)=f(v,w)+f(v,w')$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(kv,w)=f\left(v,kw\right)=kf(v,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si distingue in:
+\end_layout
+
+\begin_layout Itemize
+simmetrica se
+\begin_inset Formula 
+\[
+f(v,w)=f(w,v)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+antisimmetrica se
+\begin_inset Formula 
+\[
+f(v,w)=-f(w,v)
+\]
+
+\end_inset
+
+In particolare, essendo antisimettrica:
+\begin_inset Formula 
+\[
+f(v,v)=-f(v,v)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Forma bilineare simmetrica
+\end_layout
+
+\begin_layout Standard
+Data la forma bilineare 
+\begin_inset Formula $a:X\times X\rightarrow R$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ reale verrà detta simmetrica se e solo se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a\left(x,y\right)=a\left(y,x\right)
+\]
+
+\end_inset
+
+ per ogni 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Applicazione multilineare
+\end_layout
+
+\begin_layout Subsection
+Matrice associata ad un'applicazione bilineare
+\end_layout
+
+\begin_layout Subsection
+Matrice autoagguinta (o hermitiana)
+\end_layout
+
+\begin_layout Standard
+È una matrice a valori complessi che coincide con la propria trasposta coniugata
+ (o matrice aggiunta)
+\begin_inset Formula 
+\[
+a_{i,j}=\bar{a}_{j,i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Matrice singolare
+\end_layout
+
+\begin_layout Standard
+Una matrice 
+\begin_inset Formula $A$
+\end_inset
+
+ è singolare se ha determinante uguale a 0.
+\end_layout
+
+\begin_layout Subsection
+Complemento ortogonale
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $V$
+\end_inset
+
+ uno spazio vettoriale su un campo 
+\begin_inset Formula $K$
+\end_inset
+
+ munito di un prodotto scalare.
+ Sia 
+\begin_inset Formula $W$
+\end_inset
+
+ un sottoinsieme di 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Il sottospazio ortogonale 
+\begin_inset Formula $W^{\bot}$
+\end_inset
+
+di 
+\begin_inset Formula $W$
+\end_inset
+
+ è l'insieme dei vettori ortogonali a tutti i vettori di 
+\begin_inset Formula $W$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+W^{\bot}=\left\{ w\in V\quad|\quad\Phi\left(v,w\right)=0\forall w\in W\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proiezione su un sottospazio
+\end_layout
+
+\begin_layout Subsection
+Combinazione lineare
+\end_layout
+
+\begin_layout Standard
+Una combinazione lineare di alcuni elementi di uno spazio vettoriale è un
+ espressione del tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{1}v_{1}+...+a_{n}v_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove i 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ sono elementi dello spazio vettoriale e gli 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+sono scalari.
+ Il risultato di questa combinazione è un nuovo elemento dello spazio.
+\end_layout
+
+\begin_layout Subsection
+Dipendenza lineare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}..x_{n}\in X$
+\end_inset
+
+ spazio vettoriale reale o complesso, si dicono dipendenti (linearmente
+ indipendenti) se esistono 
+\begin_inset Formula $a_{1}..a_{n}$
+\end_inset
+
+ non tutti nulli tali che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}x_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CNS affinché 
+\begin_inset Formula $n$
+\end_inset
+
+ vettori 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+siano dipendenti è che uno di essi sia combinazione lineare degli altri,
+ cioè sta nello span degli altri; 2 vettori non allineati ad esempio generano
+ tutto il piano.
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ sono dipendenti uno di essi è combinazione lineare degli altri
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\exists a_{1}..a_{n}
+\]
+
+\end_inset
+
+ non tutti nulli tali che 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}x_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+supponiamo 
+\begin_inset Formula $a_{1}\ne0$
+\end_inset
+
+ (andrebbe bene un qualsiasi 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}x_{i}+\sum_{i=2}^{n}a_{i}x_{i}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $a_{i}x_{i}=-\sum_{i=2}^{n}a_{i}x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}=\sum_{i=2}^{n}-\frac{a_{i}x_{i}}{a_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+quindi almeno uno degli 
+\begin_inset Formula $n$
+\end_inset
+
+ vettori è combinazione lineare degli altri
+\end_layout
+
+\begin_layout Standard
+Se uno degli 
+\begin_inset Formula $n$
+\end_inset
+
+ vettori è combinazione lineare degli altri
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ dipendenti
+\end_layout
+
+\begin_layout Standard
+Supponiamo 
+\begin_inset Formula $x_{1}=\sum_{i=2}^{n}b_{j}x_{j}\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\sum_{j=2}^{n}b_{j}x_{j}$
+\end_inset
+
+ 
+\begin_inset Formula $\quad x_{1}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{j=1}^{n}b_{j}x_{j}=0,\quad b_{1}=-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ho almeno un coefficiente non nullo, e perciò sono linearmente indipendenti.
+\end_layout
+
+\begin_layout Subsection
+Dipendenza lineare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}..x_{n}\in X$
+\end_inset
+
+ spazio vettoriale reale o complesso, si dicono dipendenti (linearmente
+ dipendenti) se sistono 
+\begin_inset Formula $a_{1}..a_{n}$
+\end_inset
+
+ non tutti nulli tali che
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}x_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CNS affinché 
+\begin_inset Formula $n$
+\end_inset
+
+ vettori 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+siano dipendenti è che uno di essi sia combinazione lineare degli altri,
+ cioè sta nello span degli altri; ad esempio due vettori non allineati generano
+ tutto il piano.
+\end_layout
+
+\begin_layout Subsection
+Spazio di dimensione finita
+\end_layout
+
+\begin_layout Standard
+Uno spazio vettoriale ha dimensione finita quando la cardinalità della sua
+ base è un numero finito.
+\end_layout
+
+\begin_layout Subsection
+Matrice associata
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ con 
+\begin_inset Formula $A$
+\end_inset
+
+ lineare e 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ di dimensione finita.
+ Siano poi 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+una base di 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $f_{1}..f_{n}$
+\end_inset
+
+una base di 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ Si ha, per ogni fissato (?) 
+\begin_inset Formula $x\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(x\right)=A\left(\sum_{j=1}^{m}x_{j}e_{j}\right)=\sum_{j=1}^{m}x_{j}A\left(e_{j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $x_{1}..x_{m}$
+\end_inset
+
+sono le coordinate di 
+\begin_inset Formula $x$
+\end_inset
+
+ rispetto alla base 
+\begin_inset Formula $e_{1}..e_{m}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siano ora 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+, per ogni 
+\begin_inset Formula $i=1..n$
+\end_inset
+
+ le coordinate del vettore 
+\begin_inset Formula $A\left(e_{j}\right)$
+\end_inset
+
+ rispetto alla base 
+\begin_inset Formula $f_{1}..f_{n}$
+\end_inset
+
+.
+ Ne segue che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(x\right)=\sum_{j=1}^{m}x_{j}\sum_{j=1}^{n}a_{ij}f_{i}=\sum_{i=1}^{n}\left(\sum_{j=1}^{m}a_{ij}x_{j}\right)f_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La matrice 
+\begin_inset Formula $\left(a_{ij}\right)$
+\end_inset
+
+ avente come colonna 
+\begin_inset Formula $j$
+\end_inset
+
+ esima le coordinate del vettore 
+\begin_inset Formula $A\left(e_{j}\right)$
+\end_inset
+
+ rispetto alla base 
+\begin_inset Formula $f_{1}..f_{n}$
+\end_inset
+
+verrà detta matrice associata all'applicazione 
+\begin_inset Formula $A$
+\end_inset
+
+ e alle basi 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+di 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $f_{1}..f_{n}$
+\end_inset
+
+di 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matrice estratta/sottomatrice
+\end_layout
+
+\begin_layout Standard
+Una sottomatrice di una matrice 
+\begin_inset Formula $A_{n\times m}$
+\end_inset
+
+ con 
+\begin_inset Formula $n$
+\end_inset
+
+ e 
+\begin_inset Formula $m$
+\end_inset
+
+ interi non negativi, è una matrice 
+\begin_inset Formula $B_{r\times s}$
+\end_inset
+
+ con 
+\begin_inset Formula $r$
+\end_inset
+
+ e 
+\begin_inset Formula $s$
+\end_inset
+
+ interi tali che 
+\begin_inset Formula $0\leq r\leq n$
+\end_inset
+
+ e 
+\begin_inset Formula $0\leq s\leq m$
+\end_inset
+
+ ottenuta da 
+\begin_inset Formula $A$
+\end_inset
+
+ rimovendo 
+\begin_inset Formula $n-r$
+\end_inset
+
+ righe e 
+\begin_inset Formula $m-s$
+\end_inset
+
+ colonne
+\end_layout
+
+\begin_layout Subsection
+Matrice minore
+\end_layout
+
+\begin_layout Standard
+Un minore è il determinante di una sottomatrice (quadrata, cioè con 
+\begin_inset Formula $r=s$
+\end_inset
+
+).
+ Il numero 
+\begin_inset Formula $r$
+\end_inset
+
+ è definito ordine del minore.
+\end_layout
+
+\begin_layout Standard
+Un minore complementare è un minore di 
+\begin_inset Formula $A$
+\end_inset
+
+ ottenuto togliendo una sola riga e una sola colonna da 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Rango di una matrice
+\end_layout
+
+\begin_layout Standard
+Il rango (o caratteristica) di una matrice 
+\begin_inset Formula $A$
+\end_inset
+
+ a valori in un certo campo è il massimo numero di righe (o colonne) linearmente
+ indipendenti in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Le seguenti definizioni di rango sono tutte equivalenti:
+\end_layout
+
+\begin_layout Itemize
+il massimo numero di colonne linearmente indipendenti
+\end_layout
+
+\begin_layout Itemize
+il massimo numero di righe linearmente indipendenti
+\end_layout
+
+\begin_layout Itemize
+La dimensione del sottospazio di 
+\begin_inset Formula $K^{m}$
+\end_inset
+
+generato dalle colonne di 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La dimensioen del sottospazio di 
+\begin_inset Formula $K^{n}$
+\end_inset
+
+generato dalle righe di 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Caso di prodotto tra matrici
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+rg\left(AB\right)\leq min\left\{ rg\left(A\right),rg\left(B\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rango di una trasformazione lineare
+\end_layout
+
+\begin_layout Standard
+Il rango di un'applicazione lineare corrisponde alla dimensione  dello spazio
+ vettoriale dato dalla sua immagine.
+\end_layout
+
+\begin_layout Subsection
+Forma quadratica
+\end_layout
+
+\begin_layout Standard
+Dato uno spazio vettoriale reale 
+\begin_inset Formula $X$
+\end_inset
+
+, una funzione 
+\begin_inset Formula $H:X\rightarrow R$
+\end_inset
+
+ verrà detta forma quadratica su 
+\begin_inset Formula $X$
+\end_inset
+
+ se esiste una forma bilineare 
+\begin_inset Formula $a$
+\end_inset
+
+ su 
+\begin_inset Formula $X$
+\end_inset
+
+ tale che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H\left(x\right)=a(x,x)
+\]
+
+\end_inset
+
+ per ogni 
+\begin_inset Formula $x\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[necessita di revisione]
+\end_layout
+
+\begin_layout Subsection
+Forma diagonale rispetto ad una base
+\end_layout
+
+\begin_layout Subsection
+Operatore diagonalizzabile
+\end_layout
+
+\begin_layout Subsection
+Base spettrale
+\end_layout
+
+\begin_layout Standard
+Una base costituita da autovettori si dice base spettrale quindi 
+\begin_inset Formula $A$
+\end_inset
+
+ è diagonalizzabile se e solo se ammette base spettrale
+\end_layout
+
+\begin_layout Subsection
+Polinomio caratteristico di un operatore
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(x)=\det\left(A-xI\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operatore autoaggiunto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(u\right)v=uA\left(v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sistema 
+\begin_inset Quotes eld
+\end_inset
+
+a scala
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sottospazio affine
+\end_layout
+
+\begin_layout Subsubsection
+Premessa
+\end_layout
+
+\begin_layout Standard
+È un sottoinsieme di uno spazio affine avente proprietà tali da farne a
+ sua volta un altro spazio affine.
+ Esempi di sottospazi affini sono i punti, le rette e piani nell'ordinario
+ spazio euclideo.
+\end_layout
+
+\begin_layout Standard
+I sottospazi affini si distinguono dai sottospazi vettoriali per il fatto
+ che non sono forzati a passare per un punto fissato (l'origine dello spazio
+ vetoriale).
+ A differenza dei sottospazi vettoriali, i sottospazi affini possono quindi
+ non intersecarsi ed essere ad esempio paralleli.
+ Questa maggiore libertà ha però una controparte: per i sottospazi affini
+ non vale la formula di Grassmann.
+\end_layout
+
+\begin_layout Standard
+I sottospazi affini sono strettamente correlati ai sistemi lineari.
+\end_layout
+
+\begin_layout Subsubsection
+Definizione
+\end_layout
+
+\begin_layout Standard
+Un sottospazio affine di uno spazio vettoriale 
+\begin_inset Formula $V$
+\end_inset
+
+ è un sottoinsieme 
+\begin_inset Formula $S$
+\end_inset
+
+ del tipo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=p+W=\left\{ p+w\quad|\quad w\in W\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Spostamento sullo spazio X
+\end_layout
+
+\begin_layout Subsection
+Matrice di cambio di base
+\end_layout
+
+\begin_layout Subsubsection
+Premessa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\dim(X)=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+base di 
+\begin_inset Formula $X$
+\end_inset
+
+, non necessariamente canonica.
+\end_layout
+
+\begin_layout Standard
+Dato un vettore e una base, è possibile associare ad ogni vettore 
+\begin_inset Formula $x$
+\end_inset
+
+ una n-upla di scalari 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+corrispondenti alle coordinate del vettore tali che
+\begin_inset Formula 
+\[
+x=\sum_{i=1}^{n}x_{i}e_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cambiando la base di riferimento, cambiano le coordinate associate al vettore.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ applicazione lineare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $dim(X)=n$
+\end_inset
+
+ con 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+base per 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $dim(Y)=m$
+\end_inset
+
+ con 
+\begin_inset Formula $f_{1}..f_{n}$
+\end_inset
+
+base per Y
+\end_layout
+
+\begin_layout Standard
+Data un'applicazione lineare fra spazi di dimensione finita e scegliendo
+ una base nello spazio di partenza e una in quello di arrivo è possibile
+ definire la matrice associata
+\begin_inset Formula 
+\[
+A(x)=\sum_{i=1}^{m}\sum_{j=1}^{n}a_{ij}x_{j}f_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+la matrice associata ha come colonna 
+\begin_inset Formula $j$
+\end_inset
+
+-esima l'n-upla delle coordinate 
+\begin_inset Formula $A\left(e_{j}\right)$
+\end_inset
+
+ rispetto alla base 
+\begin_inset Formula $f_{1}..f_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Definizione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ spazio vettoriale di dimensione finita, 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+ e 
+\begin_inset Formula $e_{1}'..e_{n}'$
+\end_inset
+
+ basi di 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La matrice di cambio di base ( o di transizione o associata al cambio di
+ base) è definita come la matrice avente come colonne le coordinate di ciascuno
+ dei vettori 
+\begin_inset Formula $e_{1}'..e_{n}'$
+\end_inset
+
+ rispetto alla base 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M=\left(m_{ij}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $e_{j}'=\sum_{i=1}^{n}m_{ij}e_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fissato 
+\begin_inset Formula $j,$
+\end_inset
+
+ 
+\begin_inset Formula $m_{ij}$
+\end_inset
+
+ con 
+\begin_inset Formula $i..n$
+\end_inset
+
+ cioè tutta la colonna 
+\begin_inset Formula $j$
+\end_inset
+
+ rappresenta le coordinate di 
+\begin_inset Formula $e_{j}'$
+\end_inset
+
+ rispetto alla base 
+\begin_inset Quotes eld
+\end_inset
+
+vecchia
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Definizione (internet)
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $V$
+\end_inset
+
+ uno spazio vettoriale di dimensione finita.
+ Siano 
+\begin_inset Formula $B,C$
+\end_inset
+
+ due basi diverse di 
+\begin_inset Formula $V$
+\end_inset
+
+, e siano 
+\begin_inset Formula $b_{1}..b_{n}$
+\end_inset
+
+i vettori che compongono la base 
+\begin_inset Formula $B.$
+\end_inset
+
+ Si definisce matrice di cambiamento di base dalla base 
+\begin_inset Formula $B$
+\end_inset
+
+ alla base 
+\begin_inset Formula $C$
+\end_inset
+
+ l'unica matrice 
+\begin_inset Formula $M$
+\end_inset
+
+ le cui colonne sono le coordinate dei vettori 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ rispetto ai vettori della base 
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Autovettore e autovalore
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $V$
+\end_inset
+
+ uno spazio vettoriale e sia 
+\begin_inset Formula $T$
+\end_inset
+
+ un endomorfismo di 
+\begin_inset Formula $V$
+\end_inset
+
+, cioè una trasformazione lineare.
+\begin_inset Formula 
+\[
+T:V\rightarrow V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $v$
+\end_inset
+
+ è un vettore non nullo in 
+\begin_inset Formula $V$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ è uno scalare tale che
+\begin_inset Formula 
+\[
+T(v)=\lambda v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora 
+\begin_inset Formula $v$
+\end_inset
+
+ è un autovettore della trasformazione 
+\begin_inset Formula $T$
+\end_inset
+
+, e 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ è il suo autovalore.
+\end_layout
+
+\begin_layout Standard
+Poiché 
+\begin_inset Formula $T$
+\end_inset
+
+ è lineare, se 
+\begin_inset Formula $v$
+\end_inset
+
+ è un autovettore con autovalore 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, allora ogni suo multiplo non-nullo di 
+\begin_inset Formula $v$
+\end_inset
+
+ è anch'esso un autovettore con lo stesso autovalore 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Spettro e autospazio
+\end_layout
+
+\begin_layout Standard
+L'insieme degli autovalori di 
+\begin_inset Formula $A$
+\end_inset
+
+ si definisce spettro, mentre l'insieme degli autovettori relativi ad un
+ autovalore 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ e dello 0 verrà chiamato autospazio di 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Somma diretta
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}X_{i}=\bigoplus_{i=1}^{n}X_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se e solo se per ogni 
+\begin_inset Formula $x_{i},x_{i}'\in X_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1..n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}x_{i}'\Longrightarrow x_{i}=x_{i}'\quad\forall i=1..n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Lemma (criterio perché una somma sia diretta)
+\end_layout
+
+\begin_layout Standard
+Condizione necessaria e sufficiente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}X_{i}=\bigoplus_{i=1}^{n}X_{i}
+\]
+
+\end_inset
+
+ è che per ogni 
+\begin_inset Formula $x_{i}\in X_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}x_{i}=0\quad\Longrightarrow\quad x_{i}=0\quad\forall i=1..n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sistema di vettori indipendenti
+\end_layout
+
+\begin_layout Subsection
+Base di uno spazio vettoriale
+\end_layout
+
+\begin_layout Standard
+È un insieme di vettori linearmente indipendenti che generano lo spazio.
+ In modo equivalente, ogni elemento dello spazio vettoriale può essere scritto
+ in modo unico come combinazione lineare dei vettori appartenenti alla base.
+\end_layout
+
+\begin_layout Standard
+Se la base è composta da un numero finito di elementi allora la dimensione
+ dello spazio è finita.
+ In particolare, il numero di elementi della base è la dimensione dello
+ spazio.
+\end_layout
+
+\begin_layout Subsubsection
+Definizione
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $V$
+\end_inset
+
+ uno spazio vettoriale.
+ L'insieme 
+\begin_inset Formula $v_{1}..v_{n}$
+\end_inset
+
+ di elementi di 
+\begin_inset Formula $V$
+\end_inset
+
+ è una base di 
+\begin_inset Formula $V$
+\end_inset
+
+ se valgono entrambe le seguenti proprietà:
+\end_layout
+
+\begin_layout Itemize
+I vettori 
+\begin_inset Formula $v_{1}..v_{n}$
+\end_inset
+
+ sono linearmente indipendenti, ovvero:
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}v_{i}=0
+\]
+
+\end_inset
+
+è verificata solo se i numeri 
+\begin_inset Formula $a_{1}..a_{n}$
+\end_inset
+
+ sono tutti uguali a 0.
+\end_layout
+
+\begin_layout Itemize
+I vettori 
+\begin_inset Formula $v_{1}..v_{n}$
+\end_inset
+
+generano 
+\begin_inset Formula $V$
+\end_inset
+
+, ovvero:
+\begin_inset Formula 
+\[
+V=Span(v_{1}..v_{n})=\left\{ a_{1}v_{1}..a_{n}v_{n}\right\} 
+\]
+
+\end_inset
+
+in particolare, per ogni vettore 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ i numeri 
+\begin_inset Formula $a_{1}..a_{n}$
+\end_inset
+
+ sono le sue coordinate rispetto alla base scelta.
+\end_layout
+
+\begin_layout Subsection
+Sottospazio vettoriale
+\end_layout
+
+\begin_layout Standard
+È un sottinsieme di uno spazio vettoriale avente proprietà tali da renderlo
+ a sua volta uno spazio vettoriale.
+ Alcuni esempi sono le rette ed i piani nello spazio euclideo tridimensionale
+ passanti per l'origine.
+\end_layout
+
+\begin_layout Standard
+L'insieme W è un sottospazio vettoriale di V se esso è chiuso rispetto alle
+ operazioni di somma e di moltiplicazione per scalare.
+\end_layout
+
+\begin_layout Standard
+In pratica, si dimostra che 
+\begin_inset Formula $W$
+\end_inset
+
+ è un sottospazio vettoriale se e solo se valgono le seguenti proprietà:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u,v\in W,$
+\end_inset
+
+ allora 
+\begin_inset Formula $(u+v)\in W$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u\in W$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda\in R$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda u\in W$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Nucleo
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $F:V\rightarrow W$
+\end_inset
+
+ un applicazione lineare definita tra spazi vettoriali.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ker\left(F\right)=\left\{ v\in V\quad t.c.\quad F(v)=0\in W\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Immagine
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $F:V\rightarrow W$
+\end_inset
+
+ un applicazione lineare definita tra spazi vettoriali.
+\begin_inset Formula 
+\[
+Im\left(F\right)=\left\{ w\in W\quad t.c.\quad\exists v\in V\quad per\, cui\quad F(v)=w\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sottospazio somma
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $V$
+\end_inset
+
+ uno spazio vettoriale dotato di dimensoine finita.
+ Siano 
+\begin_inset Formula $W$
+\end_inset
+
+ e 
+\begin_inset Formula $U$
+\end_inset
+
+ due sottospazi di 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Si indica con 
+\begin_inset Formula $W+U$
+\end_inset
+
+ il sottospazio somma di 
+\begin_inset Formula $W$
+\end_inset
+
+ e 
+\begin_inset Formula $U$
+\end_inset
+
+ dato da:
+\begin_inset Formula 
+\[
+W+U=\left\{ w+u|w\in W,u\in U\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Matrice inversa
+\end_layout
+
+\begin_layout Standard
+Una matrice quadrata 
+\begin_inset Formula $A_{n\times n}$
+\end_inset
+
+ è detta invertibile se esiste una matrice 
+\begin_inset Formula $B_{n\times n}$
+\end_inset
+
+ tale che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+AB=BA=I_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Prodotto scalare hermitiano in 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Definizione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall z\in C$
+\end_inset
+
+, 
+\begin_inset Formula $\left|z\right|^{2}=z\cdot\bar{z}\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u,v\in C^{n}$
+\end_inset
+
+ : 
+\begin_inset Formula $uv=\sum_{i=1}^{n}u_{i}\bar{v_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Proprietà
+\end_layout
+
+\begin_layout Itemize
+Hemisimmetria (no simmetria): 
+\begin_inset Formula $vu\neq uv$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sesquilinearità (no linearità): 
+\begin_inset Formula $\left(\alpha u\right)v\neq u\left(\alpha v\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operatore diagonalizzabile
+\end_layout
+
+\begin_layout Standard
+Un operatore 
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ si dice diagonalizzabile se esiste una base rispetto alla quale è diagonalizzab
+ile
+\end_layout
+
+\begin_layout Subsection
+Sottospazio invariante
+\end_layout
+
+\begin_layout Standard
+Dato un operatore 
+\begin_inset Formula $T:V\rightarrow V$
+\end_inset
+
+, dove 
+\begin_inset Formula $V$
+\end_inset
+
+ è uno spazio vettoriale, un sottospazio invariante di 
+\begin_inset Formula $T$
+\end_inset
+
+ è un sottospazio vettoriale 
+\begin_inset Formula $W$
+\end_inset
+
+ di 
+\begin_inset Formula $V$
+\end_inset
+
+ tale che 
+\begin_inset Formula $T(W)\subset W$
+\end_inset
+
+, ovvero tale che l'immagine rispetto a 
+\begin_inset Formula $T$
+\end_inset
+
+ di ciascun elemento di 
+\begin_inset Formula $W$
+\end_inset
+
+ è contenuta in 
+\begin_inset Formula $W$
+\end_inset
+
+ stesso.
+ Si dice anche che 
+\begin_inset Formula $W$
+\end_inset
+
+ è 
+\begin_inset Formula $T-invariante$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teoremi
+\end_layout
+
+\begin_layout Subsection
+Disugualianza triangolare
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|x+y\right|\le\left|x\right|+\left|y\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione (trovata su internet)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\left|a\right|\leq a\leq\left|a\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\left|b\right|\leq b\leq\left|b\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+quindi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\left(\left|a\right|+\left|b\right|\right)\leq a+b\leq\left|a\right|+\left|b\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+da cui la tesi
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione (fatta da me..ha senso?)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(x+y\right)^{2}=\left(\left|x\right|^{2}+\left|y\right|^{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{2}+2xy+y^{2}=x^{2}+2\left|x\right|\left|y\right|+y^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+xy\leq\left|x\right|\left|y\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione (trovata su internet, caso complesso)
+\end_layout
+
+\begin_layout Subsection
+Disugualianza di Cauchy-Swartz
+\end_layout
+
+\begin_layout Subsubsection
+Definizione
+\end_layout
+
+\begin_layout Standard
+Il valore assoluto del prodotto scalare di due elementi è minore o uguale
+ al prodotto delle loro norme
+\end_layout
+
+\begin_layout Subsubsection
+Tesi (secondo Lang)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(AB\right)^{2}\leq\left(AA\right)\left(BB\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi (con radice estratta)
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula 
+\[
+\left|AB\right|\leq\left|A\right|\left|B\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione (da YouMath, caso complesso)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|u,v\right|\leq\sqrt{uu}\sqrt{vv}=\left|u\right|\left|v\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dato 
+\begin_inset Formula $a\in C$
+\end_inset
+
+ e dati 
+\begin_inset Formula $u,v$
+\end_inset
+
+ vale
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(u+av,u+av\right)=\left(uu\right)+\bar{a}\left(u,v\right)+a\left(u,v\right)+a\bar{a}\left(v,v\right)\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Poniamo 
+\begin_inset Formula $\left(v,u\right)=be^{i\theta}$
+\end_inset
+
+ e 
+\begin_inset Formula $a=te^{-i\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[to be continued..]
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione (Lang?)
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $x=BB$
+\end_inset
+
+ e 
+\begin_inset Formula $y=-AB$
+\end_inset
+
+; segue allora che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0\leq\left(xA+yB\right)\left(xA+yB\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sviluppando il secondo membro si ha che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0\leq x^{2}\left(AA\right)+2xy\left(AB\right)+y^{2}\left(BB\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sostituendo i valori di 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ si ottiene
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0\leq\left(BB\right)^{2}\left(AA\right)-2\left(BB\right)\left(AB\right)^{2}+\left(AB\right)^{2}\left(BB\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $B=0$
+\end_inset
+
+ la disuguaglianza da provare è ovvia essendo nulli entrambi i membri.
+ Se 
+\begin_inset Formula $B\neq0$
+\end_inset
+
+, allora 
+\begin_inset Formula $BB\neq0$
+\end_inset
+
+ e possiamo quindi dividere l'ultima espressione per 
+\begin_inset Formula $BB$
+\end_inset
+
+ ottenendo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0\leq\left(AA\right)\left(BB\right)-\left(AB\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La dimostrazione si conclude portando il termine 
+\begin_inset Formula $-\left(AB\right)^{2}$
+\end_inset
+
+ nel primo membro.
+\end_layout
+
+\begin_layout Subsection
+Lemma (3)
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ indipendenti
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\notin\left\langle x_{1}..x_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y,x_{1}..x_{n}$
+\end_inset
+
+ sono indipendenti
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Supponiamo per assurdo che 
+\begin_inset Formula $y,x_{1}..x_{n}$
+\end_inset
+
+ siano dipendenti perciò esistono 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ e 
+\begin_inset Formula $b$
+\end_inset
+
+ non tutti nulli tali che 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}x_{i}+by=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $b=0$
+\end_inset
+
+ allora
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}x_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}=0$
+\end_inset
+
+ per l'indipendenza di 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ perciò si ha un assurdo.
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=-\sum_{i=1}^{n}\frac{a_{i}}{b}x_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\in\left\langle x_{1}..x_{n}\right\rangle $
+\end_inset
+
+ che p un assurdo, perché va contro le ipotesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}..x_{n},y$
+\end_inset
+
+ sono indipendenti
+\end_layout
+
+\begin_layout Subsection
+Teorema della proiezione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(u-u_{\left\langle e_{1}..e_{n}\right\rangle }\right)e_{j}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Usando la linearità del prodotto scalare e il fatto che 
+\begin_inset Formula $e_{i}e_{j}\neq0$
+\end_inset
+
+ se 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ abbiamo che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(u-u_{\left\langle e_{1}..e_{n}\right\rangle }\right)e_{j}=\left(u-\sum_{i=1}^{n}u_{e_{i}}\right)e_{j}=\left(u-\sum_{i=1}^{n}\frac{u_{e_{i}}}{\left|e_{i}\right|^{2}}e_{i}\right)e_{j}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=ue_{j}-\sum_{i=1}^{n}\frac{u_{e_{i}}}{\left|e_{i}\right|^{2}}e_{i}e_{j}=u_{e_{i}}-\frac{u_{e_{i}}}{\left|e_{j}\right|^{2}}e_{j}e_{j}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tale proprietà di 
+\begin_inset Quotes eld
+\end_inset
+
+ortonogalità del resto
+\begin_inset Quotes erd
+\end_inset
+
+ ci assicura che il vettore 
+\begin_inset Formula $u-u_{\left\langle e_{1}..e_{n}\right\rangle }$
+\end_inset
+
+ è ortogonale a tutti i vettori 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+ e quindi anche a qualunque loro combinazione lineare.
+\end_layout
+
+\begin_layout Standard
+Infatti, posto 
+\begin_inset Formula $w=u-u_{\left\langle e_{1}..e_{n}\right\rangle }$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $we_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..n$
+\end_inset
+
+ si cha
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\sum_{i=1}^{n}a_{i}e_{i}\right)w=\sum_{i=1}^{n}a_{i}e_{i}w=\sum_{i=1}^{n}a_{i}0=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ciò (?) ci assicura che 
+\begin_inset Formula $u_{\left\langle e_{1}..e_{n}\right\rangle }$
+\end_inset
+
+ è l'elemento di 
+\begin_inset Formula $\left\langle e_{1}..e_{n}\right\rangle $
+\end_inset
+
+ di minima distanza da 
+\begin_inset Formula $u$
+\end_inset
+
+ ed la misura minore di 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|u\right|^{2}=\left|u-u_{\left\langle e_{1}..e_{n}\right\rangle }+u_{\left\langle e_{1}..e_{n}\right\rangle }\right|^{2}=\left|u-u_{\left\langle e_{i}..e_{n}\right\rangle }\right|^{2}+\left|u_{\left\langle e_{1}..e_{n}\right\rangle }\right|^{2}\geq\left|u_{\left\langle e_{1}..e_{n}\right\rangle }\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[to be continued]
+\end_layout
+
+\begin_layout Subsection
+CNS affinché 
+\begin_inset Formula $X+Y$
+\end_inset
+
+ = 
+\begin_inset Formula $X\oplus Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CNS perché 
+\begin_inset Formula $X+Y=X\oplus Y$
+\end_inset
+
+ (somma diretta) è che 
+\begin_inset Formula $X\cap Y=\left\{ 0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X+Y=X\oplus Y\quad\Longrightarrow\quad X\cap Y=\left\{ 0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X\cap Y=\left\{ 0\right\} \quad\Longrightarrow\quad X+Y=X\oplus Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{x}\in X\cap Y$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{x}\neq0$
+\end_inset
+
+ quindi 
+\begin_inset Formula $\bar{x}\in X$
+\end_inset
+
+ e 
+\begin_inset Formula $\bar{x}\in Y$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\bar{x}=\bar{x}+0=0+\bar{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+quind la somma non può essere diretta
+\end_layout
+
+\begin_layout Standard
+Se la somma è diretta
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z=x+y=x'+y'=z'
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z=x-x'=y'-y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z\in X\cap Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z=0$
+\end_inset
+
+ per ipotesi quindi 
+\begin_inset Formula $x=x'$
+\end_inset
+
+ e 
+\begin_inset Formula $y=y'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lemma (soluzione unica con colonne indipendenti)
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{1}..A_{n},B$
+\end_inset
+
+ in uno spazio vettoriale tale che 
+\begin_inset Formula 
+\[
+B=\sum_{i=1}^{n}\alpha_{i}A_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+per un opportuna scelta dei coefficienti 
+\begin_inset Formula $\alpha_{i}\in R\left(o\; C\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{1}..A_{n}$
+\end_inset
+
+ sono indipendenti se e solo se la scelti degli 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ è unica per ogni 
+\begin_inset Formula $B$
+\end_inset
+
+ per il quale esistono
+\end_layout
+
+\begin_layout Subsubsection
+Tesi (alternativa?)
+\end_layout
+
+\begin_layout Standard
+In un sistema lineare la soluzione è unica se le colonne sono linearmente
+ indipendenti
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $A_{1}..A_{n}$
+\end_inset
+
+indipendenti e 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ e 
+\begin_inset Formula $B_{i}$
+\end_inset
+
+ tali che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\sum_{i=1}^{n}\alpha_{i}A_{i}\quad e\quad B=\sum_{i=1}^{n}\beta_{i}A_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\alpha_{i}A_{i}=\sum_{i=1}^{n}\beta_{i}A_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\alpha_{i}A_{i}-\sum_{i=1}^{n}\beta_{i}A_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\left(a_{i}-\beta_{i}\right)A_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}-\beta_{i}=0$
+\end_inset
+
+ perché indipendenti 
+\begin_inset Formula $a_{i}=\beta_{i}$
+\end_inset
+
+ quindi gli 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ sono unici.
+\end_layout
+
+\begin_layout Standard
+Supponiamo che per ogni 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $\exists$
+\end_inset
+
+ un(?) (???) 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}A_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora l'unica soluzione di
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\alpha_{i}A_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sarà 
+\begin_inset Formula $\alpha_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..n$
+\end_inset
+
+ quindi 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ sono indipendenti
+\end_layout
+
+\begin_layout Subsection
+Un sistema di vettori ortogonali è linearmente indipendente
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle e_{1}..e_{n}\right\rangle $
+\end_inset
+
+ : 
+\begin_inset Formula $e_{i}e_{j}=0$
+\end_inset
+
+ 
+\begin_inset Formula $e_{i}e_{i}\neq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\lambda_{i}\left(e_{i}e_{j}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\sum_{i=1}^{n}\lambda_{i}e_{i}\right)e_{j}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+quindi 
+\begin_inset Formula $e_{j}=0$
+\end_inset
+
+ (con 
+\begin_inset Formula $j$
+\end_inset
+
+ fissato)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\lambda_{i}\left(e_{i}e_{j}\right)=\lambda e_{j}e_{j}
+\]
+
+\end_inset
+
+ (ricorda che 
+\begin_inset Formula $e_{j}e_{j}\neq0$
+\end_inset
+
+ per ipotesi)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lambda_{j}\left|e_{j}\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+quindi 
+\begin_inset Formula $\lambda_{j}=0$
+\end_inset
+
+ e questo dimostra che il sistema è linearmente indipendente.
+\end_layout
+
+\begin_layout Subsection
+Lemma fondamentale
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $x_{1}\in<x_{2}..x_{n}>$
+\end_inset
+
+ (
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ è combinazione lineare di 
+\begin_inset Formula $x_{2}..x_{n}$
+\end_inset
+
+) allora
+\begin_inset Formula 
+\[
+<x_{2}..x_{n}>=<x_{1},x_{2}..x_{n}>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}=\sum_{i=2}^{n}a_{i}x_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se 
+\begin_inset Formula $x_{1}\in<x_{2}..x_{n}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\sum_{I=1}^{n}b_{I}x_{I}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se 
+\begin_inset Formula $B\in<x_{1},x_{2}..x_{n}>$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=b_{1}x_{1}+\sum_{I=2}^{n}b_{I}x_{I}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=b_{1}\sum_{i=2}^{n}a_{i}x_{i}+\sum_{I=2}^{n}b_{I}X_{I}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+di conseguenza
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B\in<x_{2}..x_{n}>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un vettore dipendente dagli altri non aggiungerà 
+\begin_inset Quotes eld
+\end_inset
+
+nulla di nuovo
+\begin_inset Quotes erd
+\end_inset
+
+ al loro span e può essere aggiunto o eliminato a piacere senza alterarlo.
+\end_layout
+
+\begin_layout Subsection
+Lemma di scambio
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\in\left\langle x_{1}..x_{n}\right\rangle $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\ne0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists j\in\left\{ 1..n\right\} $
+\end_inset
+
+ tale che 
+\begin_inset Formula $\left\langle x_{1}..x_{j-1},y,x_{j+1}..x_{n}\right\rangle =\left\langle x_{1}..x_{j}..x_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $y\in\left\langle x_{1}..x_{n}\right\rangle $
+\end_inset
+
+ allora 
+\begin_inset Formula $\left\langle x_{1}..x_{n}\right\rangle =\left\langle y,x_{1}..x_{n}\right\rangle $
+\end_inset
+
+ per il lemma fondamentale.
+ Inoltre 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=\sum_{i=1}^{n}a_{i}x_{i}\ne0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+di conseguenza 
+\begin_inset Formula $\exists i$
+\end_inset
+
+ tale che 
+\begin_inset Formula $a_{i}\ne0$
+\end_inset
+
+.
+ Supponiamo che sia 
+\begin_inset Formula $i=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=\left(a_{1}\ne0\right)x_{i}+\sum_{i=2}^{n}a_{i}x_{1}\qquad\Longrightarrow\qquad x_{1}=\frac{y}{a_{1}}-\sum_{i=2}^{n}\frac{a_{i}}{a_{i}}x_{i}\qquad\Longrightarrow\qquad x_{1}\in\left\langle y,x_{2}..x_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\langle x_{1}..x_{n}\right\rangle =\left\langle y,x_{1}..x_{n}\right\rangle =\left\langle y,x_{2}..x_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+per il lemma fondamentale.
+\end_layout
+
+\begin_layout Standard
+Nell'algoritmo di Gauss ciò corrisponde a scambiare i pivot.
+\end_layout
+
+\begin_layout Subsection
+Teorema di esistenza della base
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\neq\left\{ 0\right\} $
+\end_inset
+
+ (non è costituito solo dal vettore nullo)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dimX<\infty$
+\end_inset
+
+ (dimensione finita)
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ ha una base
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $dimX<\infty$
+\end_inset
+
+ allora è generato da un numero finito di vettori, quindi 
+\begin_inset Formula $X=\left\langle x_{1}..x_{n}\right\rangle $
+\end_inset
+
+.
+ Poiché 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+, almeno uno di essi è non nullo.
+\end_layout
+
+\begin_layout Itemize
+Se 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ indipendenti, essi costituiscono la base richiesta.
+ 
+\end_layout
+
+\begin_layout Itemize
+Se non lo sono almeno uno di essi è combinazione lineare degli altri e per
+ il lemma fondamentale può essere rimosso senza alterare lo span, che è
+ 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Continuando a togliere i vettori dipendenti dagli altri si ottiene un sistema
+ che ha lo stesso span 
+\begin_inset Formula $X$
+\end_inset
+
+ ma formato da vettori dipendenti, in quanto essendo 
+\begin_inset Formula $X$
+\end_inset
+
+ non ridotto di solo zero, contiene vettori non nulli.
+ Quindi il sistema di generatori così trovato è indipendente e costituisce
+ una base.
+\end_layout
+
+\begin_layout Subsection
+Teorema fondamentale sul massimo numero di vettori indipendenti
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dim(X)<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ base di 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{1}..y_{m}\in X,$
+\end_inset
+
+ con 
+\begin_inset Formula $m>n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+Allora 
+\begin_inset Formula $y_{1}..y_{m}$
+\end_inset
+
+ dipendenti
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+In sostanza se 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ è una base per 
+\begin_inset Formula $X$
+\end_inset
+
+, il massimo numero di vettori indipendenti reperibili è 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Se qualche 
+\begin_inset Formula $y_{i}=0$
+\end_inset
+
+ il sistema è dipendente; quindi sono 
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+ vettori non nulli di 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Perciò:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+y_{1}\in\left\langle x_{1}..x_{n}\right\rangle =X\\
+y_{1}\neq0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+per il lemma di scambio segue che 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ può essere scambiato con uno dei vettori, supponiamo (per semplicità) 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X=\left\langle y_{1},x_{2}..x_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da 
+\begin_inset Formula $y_{2}\in X$
+\end_inset
+
+ segue che 
+\begin_inset Formula $y_{2}=ay_{1}+\sum_{i=2}^{n}b_{i}x_{i}$
+\end_inset
+
+.
+ Se 
+\begin_inset Formula $b_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=2..n$
+\end_inset
+
+.
+ 
+\begin_inset Formula $y_{2}=\alpha y_{1}$
+\end_inset
+
+ (
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ multiplo di 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+ dipendenti.
+ Se 
+\begin_inset Formula $b_{i}=0$
+\end_inset
+
+ allora il vettore 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ corrispondente può essere scambiato con 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ senza alterare lo span.
+ Supponiamo sia 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+y_{2}\in\left\langle 1?,x_{2}..x_{n}\right\rangle =X\\
+y_{2}\neq0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per il lemma di scambio 
+\begin_inset Formula $X=\left\langle y_{1},y_{2},x_{3}..x_{n}\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Continiuamo a scambiare i vettori 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ che seguono, fermandosi se essi sono combinazione dei solo? vettori 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ già scambiati e quindi 
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+ dipendenti, oppure scambiandoli con qualcuno degli 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ rimasti, che supponiamo per semplicità essere sempre il primo libero.
+\end_layout
+
+\begin_layout Standard
+Quindi se non ci siamo fermati perché i primi 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+sono dipendenti, dopo 
+\begin_inset Formula $n$
+\end_inset
+
+ scambi abbiamo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X=\left\langle y_{1},y_{2}..y_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e siccome 
+\begin_inset Formula $m>n$
+\end_inset
+
+, ogni 
+\begin_inset Formula $y_{j}\in\left\langle y_{1}..y_{n}\right\rangle ,$
+\end_inset
+
+ con 
+\begin_inset Formula $j<n$
+\end_inset
+
+ e quindi 
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+dipendenti.
+\end_layout
+
+\begin_layout Subsection
+Teorema della dimensione
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dimX<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+Tutte le sue basi avranno lo stesso numero di elementi 
+\begin_inset Formula $n$
+\end_inset
+
+, che si dirà dimensione di 
+\begin_inset Formula $X$
+\end_inset
+
+ (
+\begin_inset Formula $dimX=n$
+\end_inset
+
+, con 
+\begin_inset Formula $n$
+\end_inset
+
+ il massimo numero di vettori indipendenti di 
+\begin_inset Formula $X$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $dimX<\infty$
+\end_inset
+
+, per il Th.
+ di esistena della base 
+\begin_inset Formula $X$
+\end_inset
+
+ ammette basi.
+ Siano 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ e 
+\begin_inset Formula $y_{1}..y_{m}$
+\end_inset
+
+ basi di 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m>n$
+\end_inset
+
+ dal th.
+ sul massimo numero di vettori indipendenti essendo 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+una base ne seguirebbe che 
+\begin_inset Formula $y_{1}..y_{m}$
+\end_inset
+
+ siano dipendenti, contro l'ipotesi che siano una base
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m<n$
+\end_inset
+
+ avrebbe analogo ragionamento
+\end_layout
+
+\begin_layout Standard
+Ne segue che 
+\begin_inset Formula $n=m$
+\end_inset
+
+ e perciò tutte le basi hanno lo stesso numero di elementi.
+\end_layout
+
+\begin_layout Subsection
+Teorema del completamento
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dim(X)=n\neq0$
+\end_inset
+
+ (spazio di dimensione finita non nulla)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{1}..y_{m}\in X$
+\end_inset
+
+ indipendente con 
+\begin_inset Formula $m<n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists x_{n+1}..x_{n}\in X$
+\end_inset
+
+ tali che 
+\begin_inset Formula $y_{1}..y_{m},x_{m+1}..x_{n}$
+\end_inset
+
+base per 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $dim(X)=n$
+\end_inset
+
+ esiste una base 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ per 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Si procede quindi come nel Th.
+ sul massimo numero di vettori indipendenti, scambiando uno alla volta i
+ vettori 
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+con altrettanti vettori 
+\begin_inset Formula $x_{j1}..x_{jn}$
+\end_inset
+
+(lemma di scambio).
+ Siccome ad ogni passo 
+\begin_inset Formula $i$
+\end_inset
+
+ il vettore 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ è indipendente dai precendenti 
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+ nell'uguaglianza
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{i}=\sum_{k=1}^{i-1}a_{k}y_{k}+\sum_{j=i+1}^{n}b_{j}x_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+almeno un 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ deve essere non nullo, il che consente di scambiare 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ con il corrispondente 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Terminati gli scambi, tutti i vettori 
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+sono stati scambiati con altrettanti 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ mantenendo lo stesso span di di 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ne segue che 
+\begin_inset Formula $\left\{ y_{1}..y_{n}\right\} \cup\left\{ x_{1}:j\neq j_{1}..j_{n}\right\} $
+\end_inset
+
+ sono 
+\begin_inset Formula $n$
+\end_inset
+
+ generatori di 
+\begin_inset Formula $X$
+\end_inset
+
+, che è di dimensione 
+\begin_inset Formula $n$
+\end_inset
+
+ e dunque per il Th.
+ dei generatori, formano la base di 
+\begin_inset Formula $X$
+\end_inset
+
+ richiesta
+\end_layout
+
+\begin_layout Subsection
+Teorema di Grassmann per i sottospazi
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X,Y$
+\end_inset
+
+ sottospazi di 
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X+Y=\left\{ x+y\quad:\quad x\in X,y\in Y\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\cap Y=\left\{ w\in Z\quad:\quad w\in X,w\in Y\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Enunciato
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $Z$
+\end_inset
+
+ uno spazio vettoriale dotato di dimensione finita.
+ Siano 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ due sottospazi di 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ Indicando con 
+\begin_inset Formula $X+Y$
+\end_inset
+
+ il sottospazio somma e con 
+\begin_inset Formula $X\cap Y$
+\end_inset
+
+ la loro intersezione, la formula di Grassmann afferma che
+\begin_inset Formula 
+\[
+\dim(X+Y)=\dim(X)+\dim(Y)-\dim(X\cap Y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Poniamo 
+\begin_inset Formula $k=\dim(X\cap Y)$
+\end_inset
+
+, 
+\begin_inset Formula $m=\dim(X)$
+\end_inset
+
+ e 
+\begin_inset Formula $n=\dim(Y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{1}..w_{k}$
+\end_inset
+
+ base per 
+\begin_inset Formula $X\cap Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{1}..w_{k},x_{k+1}..x_{m}$
+\end_inset
+
+ completamento a base per 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{1}..w_{k},y_{k+1}..y_{n}$
+\end_inset
+
+ completamento a base per 
+\begin_inset Formula $Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dobbiamo dimostrare che 
+\begin_inset Formula $w_{1}..w_{k},x_{k+1}..x_{m},y_{k+1}..y_{n}$
+\end_inset
+
+ è una base per 
+\begin_inset Formula $X+Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall z\in X+Y\quad\exists x,y:\quad x\in X,y\in Y,\quad z=x+y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x=\sum_{i=1}^{k}a_{i}w_{i}+\sum_{j=k+1}^{m}b_{1}x_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=\sum_{i=1}^{k}\lambda_{1}w_{i}+\sum_{p=k+1}^{n}\delta_{p}y_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x+y\sum_{i=1}^{k}\left(a_{i}+\lambda_{i}\right)w_{i}+\sum_{j=k+1}^{m}b_{j}x_{j}+\sum_{p=k+1}^{n}\delta_{p}y_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x+y\in\left\langle w_{1}..w_{k},x_{k+1}..x_{m},y_{k+1}..y_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sono uno spazio di generatori, dimostriamo che sono indipendenti
+\end_layout
+
+\begin_layout Standard
+Siano ora 
+\begin_inset Formula $a_{i},b_{i},\lambda_{i}$
+\end_inset
+
+ tali che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{k}a_{i}w_{i}+\sum_{j=k+1}^{m}a_{j}x_{j}+\sum_{h=k+1}^{n}\lambda_{h}y_{h}=0\quad(\times)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w=\left(\sum_{i=1}^{k}a_{i}w_{i}+\sum_{j=k+1}^{m}a_{j}x_{j}\right)\in X=\left(-\sum_{h=k+1}^{n}\lambda_{h}y_{h}\right)\in Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w\in X\cap Y\Longrightarrow\exists\phi_{i}:w=\sum_{i=!}^{k}\phi_{i}w_{i}+\sum_{j=k+1}^{n}b_{j}x_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+affinché 
+\begin_inset Formula $w_{1}..w_{k},x_{k+1}..x_{n}$
+\end_inset
+
+siano indipendenti (base di 
+\begin_inset Formula $X$
+\end_inset
+
+) le coordinate di 
+\begin_inset Formula $w$
+\end_inset
+
+ rispetto alla base sono uniche
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b_{k+1}=b_{k+2}=..=b_{n}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+poiché si sa già che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w=\sum_{i=1}^{k}\phi_{i}w_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sostituendo nella 
+\begin_inset Formula $\left(\times\right)$
+\end_inset
+
+ 
+\begin_inset Formula $b_{j}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $j=k+1..n$
+\end_inset
+
+ si ottiene
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{k}a_{i}w_{i}+\sum_{h=k+1}^{n}\lambda_{h}y_{h}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+siccome 
+\begin_inset Formula $w_{1}..w_{k},y_{k+1}..y_{n}$
+\end_inset
+
+è una base per 
+\begin_inset Formula $Y$
+\end_inset
+
+ sono indipendenti, quindi 
+\begin_inset Formula $a_{i}=0\quad$
+\end_inset
+
+per ogni 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{h}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $h=k+1..n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w_{1}..w_{k},x_{k+1}..x_{m},y_{k+1}..y_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sono indipendenti e perciò formano una base per lo spazio 
+\begin_inset Formula $X+Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dim\left(X+Y\right)=m+n-k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema di Rouche
+\end_layout
+
+\begin_layout Standard
+Dato 
+\begin_inset Formula $\sum_{i=1}^{n}x_{i}a_{i}=b$
+\end_inset
+
+ sistema lineare, è risolvibile se il rango della matrice incompleta del
+ sistema è uguale al rango della matrice completa del sistema
+\begin_inset Formula 
+\[
+rank\left(a_{1}..a_{n}\right)=rank\left(a_{1}..a_{n},b\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+cioè 
+\begin_inset Formula $b$
+\end_inset
+
+ deve essere combinazione lineare delle restanti colonne, ovvero 
+\begin_inset Formula $b\in\left\langle a_{1}..a_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Teorema di esistenza delle soluzioni
+\end_layout
+
+\begin_layout Standard
+CNS affinché il sistema ammetta soluzioni è che 
+\begin_inset Formula $B\in\left\langle A_{1}..A_{n}\right\rangle $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Teorema dell'unicità della soluzione
+\end_layout
+
+\begin_layout Standard
+CNS affinché l'eventuale soluzione del sistema sia unica è che 
+\begin_inset Formula $A_{1}..A_{n}$
+\end_inset
+
+siano indipendenti
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Se avessimo soluzioni distinte 
+\begin_inset Formula $x_{1}\neq y_{1}$
+\end_inset
+
+ si avrebbe un assurdo in quanto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}x_{i}A_{i}=B\text{ e }\sum_{i=1}^{n}y_{i}A_{i}=B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sottraggo membro a membro e l'indipendenza delle 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+si ha che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\left(x_{i}-y_{i}\right)A_{i}=0\quad\Longrightarrow\quad x_{i}-y_{i}=0\quad\Longrightarrow x_{i}=y_{i}
+\]
+
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i$
+\end_inset
+
+, quindi la soluzione è unica.
+ 
+\end_layout
+
+\begin_layout Subsection
+Teorema di Cramer
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+Sistema lineare quadrato 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}x_{i}a_{i}=b\quad a_{1}..a_{n},b\in R^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+CNS affinché un sistema quadrato abbia soluzione unica 
+\begin_inset Formula $\forall b\in R^{n}$
+\end_inset
+
+è che il sistema omogeneo associato 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{k}x_{i}a_{i}=0
+\]
+
+\end_inset
+
+ abbia soluzione unica nulla, cioè le colonne sono indipendenti
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $a_{1}..a_{n}$
+\end_inset
+
+sono indipendenti, allora costituiscono una base per lo spazio 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+.
+ Siccome 
+\begin_inset Formula $b\in\left\langle a_{1}..a_{n}\right\rangle $
+\end_inset
+
+ allora 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall\quad b\in R^{n}\quad\exists\alpha_{1}..\alpha_{n}:\sum_{i=1}^{n}\alpha_{i}a_{i}=b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema: il 
+\begin_inset Formula $kerA$
+\end_inset
+
+ è un sottospazio
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ lineare
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $kerA$
+\end_inset
+
+ è un sottospazio di 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\in kerA$
+\end_inset
+
+ 
+\begin_inset Formula $A\left(x_{1}\right)=A\left(x_{2}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per linearità di 
+\begin_inset Formula $A$
+\end_inset
+
+ si ha che 
+\begin_inset Formula $A\left(x_{1}+x_{2}\right)=A\left(x_{1}\right)+A\left(x_{2}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(x_{1}+x_{2}\right)\in kerA$
+\end_inset
+
+ quindi il 
+\begin_inset Formula $kerA$
+\end_inset
+
+ è chiuso rispetto alla somma
+\end_layout
+
+\begin_layout Standard
+Inoltre, se 
+\begin_inset Formula $x\in kerA$
+\end_inset
+
+ si ha che 
+\begin_inset Formula $A(x)=0$
+\end_inset
+
+ quindi 
+\begin_inset Formula $A\left(\lambda x\right)=\lambda A\left(x\right)=\lambda0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda x\in kerA$
+\end_inset
+
+ chiuso rispetto al prodotto per uno scalare.
+\end_layout
+
+\begin_layout Standard
+Perciò la somma e multiplo scalare sono definiti e quindi il 
+\begin_inset Formula $kerA$
+\end_inset
+
+ che è un sottoinsieme di 
+\begin_inset Formula $X$
+\end_inset
+
+ è anche un sottospazio di 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema: se 
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ è lineare 
+\begin_inset Formula $A(X)$
+\end_inset
+
+ è un sottospazio di 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+(simile a quella del teorema precedente)
+\end_layout
+
+\begin_layout Subsection
+Lemma: iniettiva se e solo se 
+\begin_inset Formula $kerA=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ lineare
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ initiettiva se e solo se 
+\begin_inset Formula $ker\left(A\right)=\left\{ 0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Itemize
+Condizione necessaria: se 
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva allora 
+\begin_inset Formula $kerA=\left\{ 0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Siccome 
+\begin_inset Formula $A(0)=0$
+\end_inset
+
+ e 
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva, la controimmmagine di 0, cioè 
+\begin_inset Formula $ker(A)$
+\end_inset
+
+, contiene solo lo zero, perché non possiamo avere due valori distinti del
+ dominio che raggiungono lo 0.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Condizione sufficiente: se 
+\begin_inset Formula $kerA=\left\{ 0\right\} $
+\end_inset
+
+ allora 
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Siamo 
+\begin_inset Formula $x_{y}$
+\end_inset
+
+ tali che 
+\begin_inset Formula $A\left(x\right)=A\left(y\right)$
+\end_inset
+
+, per linearità si ha che 
+\begin_inset Formula $A\left(x\right)-A\left(y\right)=0$
+\end_inset
+
+, 
+\begin_inset Formula $A\left(x-y\right)=0$
+\end_inset
+
+ e quindi 
+\begin_inset Formula $\left(x-y\right)\in kerA$
+\end_inset
+
+.
+ Siccome 
+\begin_inset Formula $kerA=\left\{ 0\right\} $
+\end_inset
+
+ allora 
+\begin_inset Formula $x-y=0$
+\end_inset
+
+, da cui 
+\begin_inset Formula $x=y$
+\end_inset
+
+ e quindi 
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Lemma di linearità dell'inversa
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ lineare
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A^{-1}:Y\rightarrow X$
+\end_inset
+
+ è lineare
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siano 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{1},y_{2}\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x=A^{-1}\left(y_{1}\right),x_{2}=A^{-1}\left(y_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+quindi 
+\begin_inset Formula $A\left(x_{1}\right)=y_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $A\left(x_{2}\right)=y_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $A$
+\end_inset
+
+ è lineare allora
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(x_{1}+x_{2}\right)=A\left(x_{1}\right)+A\left(x_{2}\right)=y_{1}+y_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dalla definizione di inversa si ha che
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{-1}\left(y_{1}\right)+A^{-1}\left(y_{2}\right)=x_{1}+x_{2}=A^{-1}\left(y_{1}+y_{2}\right)\Longrightarrow$
+\end_inset
+
+addittività verificata
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{-1}\left(\lambda y\right)=\lambda x=\lambda A^{-1}\left(y\right)$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+omogeneità verificata
+\end_layout
+
+\begin_layout Subsection
+Teorema di Grassmann per le applicazioni lineari
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ lineare
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dim(X)<\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\begin_inset Formula 
+\[
+\dim(X)=\dim\left(\ker(A)\right)+\dim\left(A(X)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dimostrazione (con 
+\begin_inset Formula $\dim(A(X))=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Allora 
+\begin_inset Formula $A(X)=\left\{ 0\right\} $
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow\ker(A)=X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dim(X)=\dim\left(Ker(A)\right)+\dim(A(X))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dim(X)=dim(X)+0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dimostrazione (con 
+\begin_inset Formula $\dim\left(\ker(A)\right)=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Allora 
+\begin_inset Formula $\ker(A)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prendiamo 
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+ base per 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow\dim(X)=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\exists a_{1}..a_{n}$
+\end_inset
+
+ tali che 
+\begin_inset Formula $x=\sum_{i=1}^{n}a_{i}x_{i}$
+\end_inset
+
+.
+ Per linearità
+\begin_inset Formula 
+\[
+A(X)=A\left(\sum_{i=1}^{n}a_{i}x_{i}\right)=\sum_{i=1}^{n}a_{i}A\left(x_{i}\right)\Longrightarrow A(X)\in\left\langle A\left(x_{1}\right)...A\left(x_{n}\right)\right\rangle 
+\]
+
+\end_inset
+
+ generatori per 
+\begin_inset Formula $A(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Verifichiamo che 
+\begin_inset Formula $A\left(x_{1}\right)..A\left(x_{n}\right)$
+\end_inset
+
+ sono indipendenti, cioè
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\exists\lambda_{i}\in\mathbb{R}\,(o\,\mathbb{C})\quad:\quad\sum_{i=1}^{n}\lambda_{i}A\left(X_{i}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+per linearità
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\left(\sum_{i=1}^{n}\lambda_{i}x_{i}\right)=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\sum_{i=1}^{n}\lambda_{i}x_{i}=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\lambda_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..n$
+\end_inset
+
+ perché 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+
+\begin_inset Formula $A(X_{i})$
+\end_inset
+
+? sono indipendenti per ipotesi
+\end_layout
+
+\begin_layout Standard
+perciò 
+\begin_inset Formula $\dim\left(A(X)\right)=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dim(X)=\dim(A(X))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dimostrazione (con 
+\begin_inset Formula $\dim(A(X))\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $dim(ker(A))\neq0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Supponiamo 
+\begin_inset Formula $w_{1}..w_{n}$
+\end_inset
+
+base per 
+\begin_inset Formula $ker(A)$
+\end_inset
+
+, che esiste perché 
+\begin_inset Formula $ker(A)\neq0$
+\end_inset
+
+ per ipotesi, e 
+\begin_inset Formula $y_{1}..y_{k}$
+\end_inset
+
+base per 
+\begin_inset Formula $A(X)$
+\end_inset
+
+.
+ Siano 
+\begin_inset Formula $x_{1}..x_{k}\in X$
+\end_inset
+
+ tali che 
+\begin_inset Formula $A(x_{i})=y_{i}$
+\end_inset
+
+, per ogni 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per lemma, essendo gli 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ indipendenti, lo sono anche gli 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ scelto ad arbitrio.
+ 
+\begin_inset Formula $A(x)\in A(X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essendo 
+\begin_inset Formula $y_{1}..y_{k}$
+\end_inset
+
+ base per 
+\begin_inset Formula $A(X)$
+\end_inset
+
+, 
+\begin_inset Formula $\exists$
+\end_inset
+
+ 
+\begin_inset Formula $b_{1}..b_{k}$
+\end_inset
+
+tali che 
+\begin_inset Formula 
+\[
+A(x)=\sum_{j=1}^{k}b_{j}y_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+poniamo 
+\begin_inset Formula $\bar{x}=\sum_{j=1}^{k}b_{j}x_{j}$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $A\left(\bar{x}\right)=A\left(\sum_{j=1}^{k}b_{j}x_{j}\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum_{j=1}^{k}b_{j}A(x_{j})=$
+\end_inset
+
+
+\begin_inset Formula $\sum_{j=1}^{k}b_{i}y_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(x)=A(\bar{x})$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow A(x)-A(\bar{x})=A(x-\bar{x})=0$
+\end_inset
+
+ quindi 
+\begin_inset Formula $(x-\bar{x})\in\ker(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $w_{1}..w_{n}$
+\end_inset
+
+ base per 
+\begin_inset Formula $\ker(A)$
+\end_inset
+
+, 
+\begin_inset Formula $\exists a_{i}..a_{n}$
+\end_inset
+
+ tali che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x-\bar{x}=\sum_{i=1}^{n}a_{i}w_{i}$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow x=\bar{x}+\sum_{i=1}^{n}a_{i}w_{i}\Longrightarrow x=\sum_{j=1}^{k}b_{j}x_{j}+\sum_{i=1}^{n}a_{i}w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\in\left\langle x_{1}..x_{k},w_{1}..w_{k}\right\rangle $
+\end_inset
+
+ (esistono generatori per 
+\begin_inset Formula $X$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Per provare l'indipendenza di 
+\begin_inset Formula $x_{1}..x_{k},w_{1}..w_{n}$
+\end_inset
+
+ siano 
+\begin_inset Formula $\lambda_{1}..\lambda_{k},\mu_{1}..\mu_{n}$
+\end_inset
+
+tali che 
+\series bold
+(1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{j=1}^{k}\lambda_{j}x_{j}+\sum_{i=1}^{n}x_{i}w_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A lineare per ipotesi: 
+\begin_inset Formula $A(0)=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A\left(\sum_{i=1}^{k}\lambda_{j}x_{j}\right)+A\left(\sum_{i=1}^{n}\mu_{i}w_{i}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $A\left(\sum_{i=1}^{n}\mu_{i}w_{i}\right)\in\ker\left(A\right)$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow A\left(\begin{subarray}{c}
+\sum_{i=1}^{n}\mu_{i}w_{i}\end{subarray}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\left(\sum_{j=1}^{k}\lambda_{j}x_{j}\right)=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\sum_{j=1}^{k}\lambda_{j}A\left(x_{j}\right)=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\sum_{i=1}^{k}\lambda_{i}y_{i}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda_{j}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $j=1..k$
+\end_inset
+
+ (per via dell'indipendenza di 
+\begin_inset Formula $y_{j}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum_{i=1}^{n}\mu_{i}w_{i}=0$
+\end_inset
+
+ (sostituendo nella 
+\series bold
+1
+\series default
+)
+\begin_inset Formula $\Longrightarrow\mu_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..n$
+\end_inset
+
+ per l'indipendenza di 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}..x_{k},w_{1}..w_{n}$
+\end_inset
+
+ indipendenti e quindi formano una base per 
+\begin_inset Formula $X$
+\end_inset
+
+ e di conseguenza 
+\begin_inset Formula $n=m+k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dim(X)=\dim\left(\ker(A)\right)+\dim\left(A(X)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lemma di struttura delle soluzioni delle equazioni lineari
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\left(u\right)=f$
+\end_inset
+
+ equazione lineare dotata di soluzioni
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bar{u}\in X$
+\end_inset
+
+ una soluzione dell'equazione lineare scelta ad arbitrio
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+Per ogni 
+\begin_inset Formula $v$
+\end_inset
+
+ soluzione di 
+\begin_inset Formula $A(u)=f$
+\end_inset
+
+, esiste 
+\begin_inset Formula $\omega\in KerA$
+\end_inset
+
+ tale che 
+\begin_inset Formula $v=\bar{u}+\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(v-\bar{u}\right)=A\left(v\right)-A\left(\bar{u}\right)=f-f=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega=v-\bar{u}\in KerA
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema dei generatori
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dimX=n$
+\end_inset
+
+ (spazio di dimensione finita 
+\begin_inset Formula $n$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+Qualunque sistema di 
+\begin_inset Formula $n$
+\end_inset
+
+ vettori indipendenti di 
+\begin_inset Formula $X$
+\end_inset
+
+ è una base e ogni sistema di 
+\begin_inset Formula $n$
+\end_inset
+
+ generatori di 
+\begin_inset Formula $X$
+\end_inset
+
+ è una sua base.
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+ sono un qualunque sistema indipendente di 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Se fosse 
+\begin_inset Formula $\left\langle y_{1}..y_{n}\right\rangle \subset X$
+\end_inset
+
+, esisterebbe 
+\begin_inset Formula $B\in X$
+\end_inset
+
+ tale che 
+\begin_inset Formula $B\notin\left\langle y_{1}..y_{n}\right\rangle $
+\end_inset
+
+ e poiché 
+\begin_inset Formula $y_{1}..y_{n}$
+\end_inset
+
+indipendenti, anche 
+\begin_inset Formula $y_{1}..y_{n},B$
+\end_inset
+
+ indipendenti per lemma (3?).
+ Si ha un assurdo perché si avrebbero 
+\begin_inset Formula $n+1$
+\end_inset
+
+ vettori indipendenti in 
+\begin_inset Formula $X$
+\end_inset
+
+, e ciò andrebbe contro il teorema della dimensione per 
+\begin_inset Formula $dimX=n$
+\end_inset
+
+ per ipotesi.
+ 
+\begin_inset Formula $\left\langle y_{1}..y_{n}\right\rangle =X$
+\end_inset
+
+ (sono generatori di 
+\begin_inset Formula $X$
+\end_inset
+
+) e sono una base per 
+\begin_inset Formula $X$
+\end_inset
+
+ perché indipendenti.
+\end_layout
+
+\begin_layout Itemize
+Siano 
+\begin_inset Formula $y_{1}..y_{n}\in X$
+\end_inset
+
+ tali che 
+\begin_inset Formula $\left\langle y_{1}..y_{n}\right\rangle =X$
+\end_inset
+
+ (generano 
+\begin_inset Formula $X$
+\end_inset
+
+).
+ Se fossero dipendenti, almeno un elemento potrebbe essere eliminato senza
+ alterare lo span per il lemma fondamentale; eliminando tutti i vettori
+ dipendenti dagli altri si otterrebbe una base di dimensione massima 
+\begin_inset Formula $n-1,$
+\end_inset
+
+ che va contro il teorema della base.
+\end_layout
+
+\begin_layout Subsection
+Teorema di Cramer per le applicazioni lineari (generalizzazione)
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A:X\rightarrow Y$
+\end_inset
+
+ lineare
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dim(X)=\dim(Y)<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva se e solo se 
+\begin_inset Formula $A$
+\end_inset
+
+ è suriettiva
+\end_layout
+
+\begin_layout Itemize
+Dimostrazione (condizione necessaria)
+\end_layout
+
+\begin_layout Standard
+Dimostriamo che se 
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva, allora 
+\begin_inset Formula $A$
+\end_inset
+
+ è suriettiva
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva se e solo se 
+\begin_inset Formula $\ker\left(A\right)=\left\{ 0\right\} $
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\dim\left(\ker\left(A\right)\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dim(X)=dim(A(X))
+\]
+
+\end_inset
+
+ per Grassmann.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dim(Y)=dim(A(X))
+\]
+
+\end_inset
+
+ perché 
+\begin_inset Formula $dim(Y)=dim(X)$
+\end_inset
+
+ per ipotesi.
+ 
+\end_layout
+
+\begin_layout Standard
+Siccome 
+\begin_inset Formula $Y$
+\end_inset
+
+ è un sottospazio di 
+\begin_inset Formula $A(X)$
+\end_inset
+
+, ciò accade se e solo se 
+\begin_inset Formula $Y=A(X)$
+\end_inset
+
+, cioè 
+\begin_inset Formula $A$
+\end_inset
+
+ è suriettiva.
+\end_layout
+
+\begin_layout Itemize
+Dimostrazione (condizione sufficiente)
+\end_layout
+
+\begin_layout Standard
+Dimostriamo che se 
+\begin_inset Formula $A$
+\end_inset
+
+ è suriettiva, allora 
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ suriettiva
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $A(X)=Y$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $dim(A(X))=dim(Y)=dim(X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $dim(ker(A))=0$
+\end_inset
+
+ per Grassmann 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $ker(A)=\left\{ 0\right\} $
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $A$
+\end_inset
+
+ è iniettiva.
+\end_layout
+
+\begin_layout Subsection
+CNS affinché un operatore sia diagonalizzabile
+\end_layout
+
+\begin_layout Standard
+Condizione necessaria e sufficiente affinché 
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ sia diagonalizzabile è che esista una base di 
+\begin_inset Formula $X$
+\end_inset
+
+ costituita da autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Dimostrazione (condizione necessaria)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ è diagonalizzabile 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ ha una base di autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $A$
+\end_inset
+
+ è diagonalizzabile esisterà un cambio di base di matrice 
+\begin_inset Formula $M$
+\end_inset
+
+, tale che 
+\begin_inset Formula $M^{-1}AM$
+\end_inset
+
+ è diagonale.
+ Applicandola alla base canonica risulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(M^{-1}AM)e_{i}=\lambda_{i}e_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+MM^{-1}AMe_{i}=M\lambda_{i}e_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+AMe_{i}=\lambda_{i}Me_{i}
+\]
+
+\end_inset
+
+ siccome 
+\begin_inset Formula $Me_{i}$
+\end_inset
+
+ è la 
+\begin_inset Formula $i$
+\end_inset
+
+-esima colonna di 
+\begin_inset Formula $M=(M_{1}..M_{n})$
+\end_inset
+
+ si ha che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+AM_{i}=\lambda_{i}M_{i}
+\]
+
+\end_inset
+
+ quindi le colonne 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+verificano il sistema degli autovettori.
+ 
+\end_layout
+
+\begin_layout Standard
+Sono indipendenti e quindi non nulle, perché la matrice 
+\begin_inset Formula $M$
+\end_inset
+
+ è invertibile.
+ 
+\end_layout
+
+\begin_layout Standard
+Essendo 
+\begin_inset Formula $n$
+\end_inset
+
+ vettori indipendenti costituiscono una base per il Th.
+ dei generatori.
+\end_layout
+
+\begin_layout Itemize
+Dimostrazione (condizione sufficiente)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ ha una base di autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $A$
+\end_inset
+
+ è diagonalizzabile
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $u_{1}..u_{n}$
+\end_inset
+
+una base di 
+\begin_inset Formula $X$
+\end_inset
+
+ tale che 
+\begin_inset Formula $A\left(u_{i}\right)=\lambda_{i}u_{i}$
+\end_inset
+
+, quindi gli 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+sono autovettori.
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $M=\left(u_{1}..u_{n}\right)$
+\end_inset
+
+ la matrice che ha per colonne gli autovettori della base.
+ La matrice 
+\begin_inset Formula $M$
+\end_inset
+
+ è invertibile per il Th.
+ di Cramer, perché le colonne sono 
+\begin_inset Formula $n$
+\end_inset
+
+ vettori indipendenti e quindi l'applicazione associata è iniettiva e suriettiva
+ perché le colonne sono una base (invertibile)
+\end_layout
+
+\begin_layout Standard
+Si ha allora:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(M^{-1}AM\right)e_{i}=M^{-1}Au_{i}=M^{-1}A\left(u_{i}\right)=M^{-1}\lambda_{i}u_{i}=\lambda_{i}M^{-1}u_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+siccome
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M^{-1}(u_{1},u_{2}..u_{n})=M^{-1}M=I=(e_{1}..e_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M^{-1}u_{i}=e_{i}\Longrightarrow\left(M^{-1}AM\right)e_{i}=\lambda e_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+perciò la matrice associata ad 
+\begin_inset Formula $A$
+\end_inset
+
+, dopo il cambio di base 
+\begin_inset Formula $\left(M^{-1}AM\right)$
+\end_inset
+
+ è diagonale.
+\end_layout
+
+\begin_layout Subsection
+Teorema dell'indipendenza degli autovettori
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $A$
+\end_inset
+
+ un operatore su 
+\begin_inset Formula $X$
+\end_inset
+
+, spazio vettoriale reale o complesso.
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ autovettori relativi ad autovalori a 2 a 2 distinti (appartengono ad autospazi
+ differenti).
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ sono indipendenti.
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Usando l'induzione su 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\begin_inset Formula $n=2:$
+\end_inset
+
+
+\series default
+ siano 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+ relativi rispettivamente a 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+, con 
+\begin_inset Formula $\lambda_{1}\neq\lambda_{2}$
+\end_inset
+
+.
+ Se 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ fossero dipendenti esisterebbe uno scalare 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ tale che 
+\begin_inset Formula $u_{1}=\alpha u_{2}$
+\end_inset
+
+ da cui
+\begin_inset Formula 
+\[
+A\left(u_{1}\right)=\lambda_{1}u_{1}=\alpha\lambda_{1}u_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A\left(\alpha u_{2}\right)=\alpha A\left(u_{2}\right)=\alpha\lambda_{2}u_{2}
+\]
+
+\end_inset
+
+Sottraendo membro a membro
+\begin_inset Formula 
+\[
+\alpha\left(\lambda_{1}-\lambda_{2}\right)u_{2}=0
+\]
+
+\end_inset
+
+essendo 
+\begin_inset Formula $u_{2}\neq0$
+\end_inset
+
+ perché autovettore e 
+\begin_inset Formula $\left(\lambda_{1}-\lambda_{2}\right)\neq0$
+\end_inset
+
+ perché 
+\begin_inset Formula $\lambda_{1}\neq\lambda_{2}$
+\end_inset
+
+, si ha che 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ e quindi 
+\begin_inset Formula 
+\[
+u_{1}=\alpha u_{2}=0u_{2}=0
+\]
+
+\end_inset
+
+quindi
+\begin_inset Formula 
+\[
+u_{1}=0
+\]
+
+\end_inset
+
+che è un assurdo perché 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ è un autovettore per ipotesi.
+\end_layout
+
+\begin_layout Standard
+Supponiamo la tesi verificata per ogni sistema di 
+\begin_inset Formula $k-1$
+\end_inset
+
+ autovettori appartenenti ad autospazi distinti.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=k$
+\end_inset
+
+.
+ Supponiamo per assurdo che 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+siano dipendenti e siano 
+\begin_inset Formula $\lambda_{1}..\lambda_{k}$
+\end_inset
+
+ gli autovalori a due a due distinti ad essi relativi.
+ Se fossero dipendenti si avrebbe che almeno uno è combinazione lineare
+ degli altri (ad esempio il primo) e quindi
+\begin_inset Formula 
+\[
+u_{1}=\sum_{J=2}^{k}a_{J}u_{J}\Longrightarrow A\left(u_{1}\right)=A\left(\sum_{J=2}^{k}a_{J}u_{J}\right)=\sum_{J=2}^{k}a_{J}A\left(u_{J}\right)=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{J=2}^{K}a_{J}\lambda_{J}u_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(u_{1}\right)=\lambda_{1}u_{1}=\lambda_{1}\sum_{J=2}^{k}a_{J}u_{J}=\sum_{J=2}^{k}a_{J}\lambda_{1}u_{J}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sottraendo membro a membro si ottiene
+\begin_inset Formula 
+\[
+\sum_{J=2}^{k}a_{J}\left(\lambda_{J}-\lambda_{1}\right)u_{J}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+osserviamo che 
+\begin_inset Formula $a_{J}$
+\end_inset
+
+ sono tutti nulli per ipotesi assurda (?) 
+\begin_inset Formula $\left(\lambda_{J}-\lambda1\right)\neq0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $J=2..k$
+\end_inset
+
+ perchè 
+\begin_inset Formula $\lambda_{J}\neq\lambda_{1}$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $J=2..k$
+\end_inset
+
+.
+ L'unico modo per far annullare la somma è che gli 
+\begin_inset Formula $u_{j}$
+\end_inset
+
+ siano nulli, ma questo è un assurdo perché gli 
+\begin_inset Formula $u_{J}$
+\end_inset
+
+ sono autovettori e quindi non possono essere nulli.
+\end_layout
+
+\begin_layout Standard
+Ripetendo il procedimento per tutti i 
+\begin_inset Formula $k$
+\end_inset
+
+ autovettori si ha quindi che 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ sono indipendenti, in quanto autovettori di autospazi distinti.
+\end_layout
+
+\begin_layout Standard
+[to be continued?]
+\end_layout
+
+\begin_layout Subsection
+L'autospazio è uno spazio vettoriale
+\end_layout
+
+\begin_layout Standard
+Prendiamo 
+\begin_inset Formula $u$
+\end_inset
+
+ e 
+\begin_inset Formula $v$
+\end_inset
+
+ autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+ relativi ad uno stesso autovalore 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(u\right)=\lambda u\quad e\quad A\left(v\right)=\lambda v
+\]
+
+\end_inset
+
+ con 
+\begin_inset Formula $u,v\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Somma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A(u)+A(v)=\lambda u+\lambda v=\lambda A\left(u+v\right)=A\left(u+v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prodotto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(\alpha u\right)=\alpha\left(Au\right)=\alpha\left(\lambda u\right)=\lambda\left(\alpha u\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+lo 0 c'è per definizione
+\end_layout
+
+\begin_layout Standard
+Quindi l'autospazio è uno spazio vettoriale
+\end_layout
+
+\begin_layout Subsection
+Teorema di diagonalizzabilità
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ operatore lineare
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dim(X)=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ possiede 
+\begin_inset Formula $n$
+\end_inset
+
+ autovalori a 2 a 2 distinti
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ possiede una base formata da autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+ (
+\begin_inset Formula $A$
+\end_inset
+
+ diagonalizzabile)
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Abbiamo 
+\begin_inset Formula $\lambda_{1}..\lambda_{n}$
+\end_inset
+
+ autovalori di 
+\begin_inset Formula $A$
+\end_inset
+
+ tali che 
+\begin_inset Formula $\lambda_{i}\neq\lambda_{j}$
+\end_inset
+
+ con 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+, quindi 
+\begin_inset Formula $\exists$
+\end_inset
+
+
+\begin_inset Formula $u_{1}..u_{2}$
+\end_inset
+
+ relativi a 
+\begin_inset Formula $\lambda_{1}..\lambda_{2}$
+\end_inset
+
+tali che 
+\begin_inset Formula $A\left(u_{i}\right)=\lambda_{i}u_{i}$
+\end_inset
+
+.
+ Per il teorema 
+\begin_inset Quotes eld
+\end_inset
+
+precedente
+\begin_inset Quotes erd
+\end_inset
+
+, sappiamo che 
+\begin_inset Formula $u_{1}..u_{n}$
+\end_inset
+
+ sono indipendenti perché appartententi ad autospazi differenti.
+ Essendo 
+\begin_inset Formula $n$
+\end_inset
+
+ autovettori indipendenti costituiscono una base spettrale per 
+\begin_inset Formula $X$
+\end_inset
+
+ e quindi per CNS 
+\begin_inset Formula $A$
+\end_inset
+
+ è diagonalizzabile.
+\end_layout
+
+\begin_layout Subsection
+Teorema di esistenza degli autovettori o teorema degli spazi invarianti
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $X$
+\end_inset
+
+ uno spazio complesso di dimensione finita (non nulla) e sia 
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ lineare
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ contiene autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\exists\lambda\in\mathbb{C}$
+\end_inset
+
+ e 
+\begin_inset Formula $u\neq0\in C$
+\end_inset
+
+ : 
+\begin_inset Formula $A(u)=\lambda u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Dato che 
+\begin_inset Formula $\dim(x)=n<\infty$
+\end_inset
+
+, per il Th.
+ esiste una base 
+\begin_inset Formula $e_{1}..e_{n}$
+\end_inset
+
+ per 
+\begin_inset Formula $X$
+\end_inset
+
+, quindi possiamo rappresentare ogni vettore 
+\begin_inset Formula $u\in X$
+\end_inset
+
+ attraverso le sue componenti rispetto a tale base
+\begin_inset Formula 
+\[
+u=u_{i}e_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ indentiamo la matrice di rappresentazione di 
+\begin_inset Formula $A$
+\end_inset
+
+ rispetto alla base 
+\begin_inset Formula $e_{1}..e_{n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quindi:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\left(u\right)=A\left(u_{i}e_{i}\right)=a_{ij}u_{j}e_{i}$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $j,i=1..n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\left(u\right)=\lambda u=\lambda u_{i}e_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{ij}u_{j}e_{i}=\lambda u_{i}e_{i}$
+\end_inset
+
+ 
+\begin_inset Formula $a_{ij}u_{j}e_{i}-\lambda u_{i}e_{i}=0$
+\end_inset
+
+ 
+\begin_inset Formula $e_{i}\left(a_{ij}u_{j}-\lambda u_{i}\right)=0$
+\end_inset
+
+ (dove 
+\begin_inset Formula $e_{i}\neq0$
+\end_inset
+
+ per indip.) 
+\begin_inset Formula $\left(a_{ij}u_{j}-\lambda u_{i}\right)=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $j=1..n$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Questo sistema lineare omogeneo ha soluzione 
+\begin_inset Formula $u_{j}$
+\end_inset
+
+ non nulle se e solo se il determinante della matrice dei suoi coefficienti
+ è nullo.
+\end_layout
+
+\begin_layout Standard
+Essendo tale determinante un polinomio in 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ di grado maggiore o uguale ad uno, per il th.
+ fondamentale dell'algebra di Gauss si annulla sicuramente per qualche 
+\begin_inset Formula $\lambda\in\mathbb{C}$
+\end_inset
+
+.
+ Tali 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ saranno gli autovalori e per ognuno di essi e per ogni soluzione non nulla
+ 
+\begin_inset Formula $\left(u_{1}..u_{n}\right)\in C^{n}$
+\end_inset
+
+ del precedente sistema si otterrà l'autovettore
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u=\sum_{i=1}^{n}u_{i}e_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $u\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Nota
+\end_layout
+
+\begin_layout Standard
+Teorema dei sottospazi invarianti perché sostiene l'esistenza di autovettori
+ in ogni sottospazio del dominio dell'operatore che sia invariante, cioè
+ mutato in sè, da 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+CNS perché A possieda una base spettrale è la coincidenza tra molt.
+ alg.
+ e molt.
+ geom.
+\end_layout
+
+\begin_layout Standard
+CNS perché 
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ possieda una bse spettrale è che, per ogni autovalore, la sua molteplicità
+ algebrica coincida con al dimensione del relativo autospazio.
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione (condizione sufficiente): se la molteplicità algebrica di
+ ogni autovalore coincide con la dimensione del relativo autospazio allora
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ ha una base spettrale (è diagonalizzabile)
+\end_layout
+
+\begin_layout Standard
+Per il Th.
+ di Gauss il polionomio caratteristico 
+\begin_inset Formula $p\left(\lambda\right)$
+\end_inset
+
+ si può fattorizzare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p\left(\lambda\right)=a\left(\lambda-\lambda_{1}\right)^{\mu_{1}}\left(\lambda-\lambda_{2}\right)^{\mu_{n}}...\left(\lambda-\lambda_{n}\right)^{\mu_{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove
+\begin_inset Formula 
+\[
+\lambda_{1}+\lambda_{2}=n=dim(X)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ha senso? non dovrebbe essere 
+\begin_inset Formula $\mu_{1}?$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Dato che autovettori di autospazi distinti sono indipendenti, per il Th.
+ dei generatori si ha ce, se l'autospazio relativo a 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ possiede una base di 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ autovettori, allora il numero complessivo degli autovettori è 
+\begin_inset Formula $n$
+\end_inset
+
+ e siccome sono indipendenti, formano una base spettrale e quindi 
+\begin_inset Formula $A$
+\end_inset
+
+ è diagonalizzabile.
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione (condizione necessaria): Se 
+\begin_inset Formula $A$
+\end_inset
+
+ è diagonalizzabile (ha base spettrale) allora la molteplicità algebrica
+ di ogni autovalore coincide con la dimensione del relativo autospazio
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $x_{\lambda_{1}},x_{\lambda_{2}}...x_{\lambda_{k}}$
+\end_inset
+
+i 
+\begin_inset Formula $k$
+\end_inset
+
+ sottospazi relativi agli autovalori 
+\begin_inset Formula $\lambda_{1}..\lambda_{k}$
+\end_inset
+
+ di molteplicità 
+\begin_inset Formula $\mu_{1}..\mu_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per il Th.
+ di Gauss 
+\begin_inset Formula $\mu_{1}+\mu_{2}..\mu_{n}=n=dim(X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Poiché 
+\begin_inset Formula $x_{\lambda_{j}}\subseteq X$
+\end_inset
+
+ e 
+\begin_inset Formula $x_{\lambda_{i}}\cap x_{\lambda_{j}}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ ne segue che la somma
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{\lambda_{1}}+x_{\lambda_{2}}+...+x_{\lambda_{k}}\subseteq X
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+è diretta e quindi dal Th.
+ di Grassmann sui sottospazi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n\ge dim\left(x_{\lambda_{1}}\oplus x_{\lambda_{2}}\oplus...\oplus x_{\lambda_{k}}\right)=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=dim\left(\sum_{i=1}^{k}x_{\lambda_{i}}\right)=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{i=1}^{k}dim\left(x_{\lambda_{i}}\right)=\sum_{i=1}^{k}\mu_{i}=n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{k}\left(\mu_{i}-dim\left(x_{\lambda_{i}}\right)\right)\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siccome per il Th.
+ precedente 
+\begin_inset Formula $\mu_{i}\geq dim\left(x_{\lambda i}\right)$
+\end_inset
+
+, se segue che tutti gli addenti sono non negativi e dunque la somma è non
+ positiva se e solo se tutti gli addenti sono nulli e quindi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu_{i}=\dim\left(x_{\lambda_{i}}\right)
+\]
+
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ogni autovalore è reale
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ autoaggiunto.
+ Allora ogni suo autovalore è reale.
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $\lambda\in C$
+\end_inset
+
+ e 
+\begin_inset Formula $u\in X$
+\end_inset
+
+ rispettivamente un autovalore e un corrispondente autovettore.
+ Allora si ha
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lambda\left|u\right|^{2}=\left(\lambda u\right)u=\left(Au\right)u=u\left(Au\right)=u\left(\lambda u\right)=\bar{\lambda}\left|u\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essendo 
+\begin_inset Formula $u\neq0$
+\end_inset
+
+ per definizione di autovettore, dividendo per 
+\begin_inset Formula $\left|u\right|^{2}$
+\end_inset
+
+ segue 
+\begin_inset Formula $\lambda=\bar{\lambda}$
+\end_inset
+
+, e dunque 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ è reale.
+\end_layout
+
+\begin_layout Subsection
+Teorema spettrale complesso
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $X$
+\end_inset
+
+ uno spazio euclideo complesso di dimensione non nulla.
+ Sia 
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ autoaggiunto, e cioè verificante per ogni 
+\begin_inset Formula $u,v\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(u\right)v=uA\left(v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+Esiste una base ortonormale di 
+\begin_inset Formula $X$
+\end_inset
+
+ costituita da autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Poiché 
+\begin_inset Formula $A:X\rightarrow X$
+\end_inset
+
+ e 
+\begin_inset Formula $dimX>0$
+\end_inset
+
+, per il teorema di esistenza degli autovettori esiste 
+\begin_inset Formula $u_{1}\in X$
+\end_inset
+
+ tale che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{1}\neq0\text{  e  }A\left(u_{1}\right)=\lambda_{1}u_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Poiché 
+\begin_inset Formula $u_{1}\neq0$
+\end_inset
+
+ e ogni multiplo di autovettori è un autovettore si può rappresentare 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ con 
+\begin_inset Formula $\frac{u_{1}}{\left|u_{1}\right|}$
+\end_inset
+
+ che è un versore.
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $X=\left\langle u_{1}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ è la base di autovettori richiesta.
+\end_layout
+
+\begin_layout Standard
+Se no, supponiamo di avere già scelto 
+\begin_inset Formula $u_{1}..u_{k}\in X$
+\end_inset
+
+ (???) ortonormale (?) di autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+, e scegliamo per induzione un autovettore 
+\begin_inset Formula $u_{k+1}$
+\end_inset
+
+ di lunghezza 1 e perpendicolare a tutti gli altri.
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $k=n$
+\end_inset
+
+ il sistema 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ è la base spettrale.
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $k<n$
+\end_inset
+
+ allora 
+\begin_inset Formula $\left\langle u_{1}..u_{k}\right\rangle \subset X$
+\end_inset
+
+ per il teorema della dimensione, e dunque 
+\begin_inset Formula $\exists w\in X$
+\end_inset
+
+ : 
+\begin_inset Formula $w\notin\left\langle u_{1}..u_{k}\right\rangle $
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $w-w_{\left\langle u_{1}..u_{k}\right\rangle }\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Posto allora 
+\begin_inset Formula 
+\[
+\tilde{w}=w-w_{\left\langle u_{1}..u_{k}\right\rangle }
+\]
+
+\end_inset
+
+risulta per il teorema della proiezione, 
+\begin_inset Formula $\tilde{w}\perp u_{i}$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+ e dunque, posto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W=\left\{ w\in X\,:\, wu_{i}=0\quad\forall i=1..k\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+risulta che 
+\begin_inset Formula $W$
+\end_inset
+
+ (complemento ortogonale di 
+\begin_inset Formula $\left\langle u_{1}..u_{k}\right\rangle )$
+\end_inset
+
+ contiene almeno il vettore non nullo 
+\begin_inset Formula $\tilde{w}$
+\end_inset
+
+ e dunque
+\begin_inset Formula 
+\[
+dimW>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per il lemma precedente
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Se 
+\begin_inset Formula $u$
+\end_inset
+
+ è un autovettore di 
+\begin_inset Formula $A$
+\end_inset
+
+, e cioè 
+\begin_inset Formula $A(w)=\lambda u$
+\end_inset
+
+ con 
+\begin_inset Formula $u\neq0$
+\end_inset
+
+ e 
+\begin_inset Formula $A$
+\end_inset
+
+ è autoaggiunto, se 
+\begin_inset Formula $wu=0$
+\end_inset
+
+ allora 
+\begin_inset Formula $A(w)u=0$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $w\in W\Longleftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $wu_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\left(w\right)u_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\left(w\right)\in W
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e dunque 
+\begin_inset Formula $W$
+\end_inset
+
+ e invariante (?) per 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per il teorema di esistenza già citato (teorema degli spazi invarianti)
+ esisterà un autovettore di 
+\begin_inset Formula $A$
+\end_inset
+
+ in 
+\begin_inset Formula $W$
+\end_inset
+
+ e sia 
+\begin_inset Formula $v\neq0$
+\end_inset
+
+.
+ Poiché 
+\begin_inset Formula $v\in W$
+\end_inset
+
+ ne segue che è ortogonale a 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+.
+ Dividendolo per la propria norma si otterrà un autovettore unitario di
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ ortogonale a quelli già (???).
+\end_layout
+
+\begin_layout Standard
+Dopo 
+\begin_inset Formula $n$
+\end_inset
+
+ passi si sarà ottenuta la base spettrale 
+\begin_inset Formula $u_{1}..u_{n}$
+\end_inset
+
+, in quanto tali autovettori, a due a due ortogonali, sono per tale ragione
+ indipendenti e quindi (per il teorema dei generatori) essendo 
+\begin_inset Formula $n$
+\end_inset
+
+ sono una base per 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema spettrale reale
+\end_layout
+
+\begin_layout Subsubsection
+Ipotesi
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $A\in R^{n\times n}$
+\end_inset
+
+verificante 
+\begin_inset Formula $a_{ij}=a_{ji}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Tesi
+\end_layout
+
+\begin_layout Standard
+Allora esiste una base ortonormale di 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+costituita da autovettori di 
+\begin_inset Formula $A\left(u\right)=Au$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimostrazione
+\end_layout
+
+\begin_layout Standard
+Ambienteremo il problema in 
+\begin_inset Formula $C^{n}$
+\end_inset
+
+ per poter beneficiare del teorema di esistenza degli autovalori, e costruiremo
+ la base spettrale per induzione (finita).
+\end_layout
+
+\begin_layout Standard
+Per costruire il primo elemento poniamo, come abbiamo fatto più su, 
+\begin_inset Formula $A\left(u\right)=Au$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $u\in C^{n}$
+\end_inset
+
+.
+ Poiché 
+\begin_inset Formula $A:C^{n}\rightarrow C^{n}$
+\end_inset
+
+, per il teorema dei sottospazi invarianti, possiede un autovalore 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ed un autovettore 
+\begin_inset Formula $u\in C^{n}$
+\end_inset
+
+ad esso relativo.
+\end_layout
+
+\begin_layout Standard
+Poiché 
+\begin_inset Formula $A$
+\end_inset
+
+ è simmetrica, per i teoremi della 
+\begin_inset Quotes eld
+\end_inset
+
+sezione precedente
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ è autoaggiunto e quindi 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ è reale, e l'autospazio realtivo a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ contiene autovettori reali.
+ Sceltone uno ad arbitrio, e diviso per la sua norma (coincidente in 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+o 
+\begin_inset Formula $C^{n}$
+\end_inset
+
+) si ottiene un versore reale 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+, autovettore di 
+\begin_inset Formula $A$
+\end_inset
+
+ relativo a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, che costituirà il primo elemento della base spettrale.
+\end_layout
+
+\begin_layout Standard
+Supponiamo ora, per induzione, di aver già individuato 
+\begin_inset Formula $k<n$
+\end_inset
+
+ versori reali a due a due ortogonali, autovettori di 
+\begin_inset Formula $A$
+\end_inset
+
+, e costriuiamo il 
+\begin_inset Formula $\left(k+1\right)$
+\end_inset
+
+-esimo con le stesse proprietà come segue.
+ Sia 
+\begin_inset Formula $W$
+\end_inset
+
+ il complemento ortogonale in 
+\begin_inset Formula $C^{n}$
+\end_inset
+
+di 
+\begin_inset Formula $\left\langle u_{1}..u_{k}\right\rangle $
+\end_inset
+
+ ossia poniamo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W=\left\{ w\in C\,:\, wu_{i}=0\quad\forall i=1..k\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fino a che 
+\begin_inset Formula $k<n$
+\end_inset
+
+ , 
+\begin_inset Formula $W\ne\left\{ 0\right\} $
+\end_inset
+
+ perché, decomponendo il generico vettore 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $C^{n}$
+\end_inset
+
+rispetto a 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ si ottiene 
+\begin_inset Formula $\sum_{h=1}^{k}\left(xu_{h}\right)u_{h}+\bar{x}$
+\end_inset
+
+ ove, per il teorema della proiezione ortogonale, 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ è ortogonale a tutti gli 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ e dunque appartiene a 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Se, per assurdo, questo si riducesse al solo 0 vorrebbe dire che tutto
+ 
+\begin_inset Formula $C^{n}$
+\end_inset
+
+ sarebbe generato da 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ con 
+\begin_inset Formula $k<n$
+\end_inset
+
+ contro il fatto che è di dimensione 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Il sottospazio 
+\begin_inset Formula $W$
+\end_inset
+
+ di 
+\begin_inset Formula $C^{n}$
+\end_inset
+
+ è di dimensione nulla e invariante per 
+\begin_inset Formula $A$
+\end_inset
+
+, perché 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ equivale a 
+\begin_inset Formula $wu_{i}=0,$
+\end_inset
+
+ 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+ segue 
+\begin_inset Formula $\left(Aw\right)u_{i}=0$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $i=1..k$
+\end_inset
+
+ e dunque 
+\begin_inset Formula $Aw\in W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Per il teorema sui sottospai (complessi) invarianti per operatori autoaggiunti,
+ 
+\begin_inset Formula $W$
+\end_inset
+
+ contiene un autovettore (in generale, complesso) 
+\begin_inset Formula $v$
+\end_inset
+
+, relativo ad un autovalore, distinto o eventualmente coincidente con qualuno
+ degli autovalori precedenti, main ogni caso reale, perché l'operatore è
+ autoagginuto.
+ Poiché i versori 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+ sono tutti reali, e 
+\begin_inset Formula $v$
+\end_inset
+
+ è ortogonale a tutti loro in quanto appartiene a tutti loro in quanto appartien
+e a 
+\begin_inset Formula $W$
+\end_inset
+
+, per il lemma precendente ne segue che le sue parti reale e immaginaria
+ sono entrambe ortogonali a tutti i versori della base già costruiti e,
+ per l'ultimo risultato della sezione precedente, almeno uno fra esse è
+ un autovettore reale di 
+\begin_inset Formula $A$
+\end_inset
+
+, che denotiamo con 
+\begin_inset Formula $\bar{v}.$
+\end_inset
+
+Per completare il passo induttivo ed ottenere la tesi basta porre 
+\begin_inset Formula $u_{k+1}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{1}{\left|\bar{v}\right|}\bar{v},$
+\end_inset
+
+ che risulta un versore reale, ortogonale a 
+\begin_inset Formula $u_{1}..u_{k}$
+\end_inset
+
+e autovettore di 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La costruizione precedente può essere iterata sino a che 
+\begin_inset Formula $k<n$
+\end_inset
+
+, e dunque si arresta solo quando 
+\begin_inset Formula $k=n$
+\end_inset
+
+; gli 
+\begin_inset Formula $n$
+\end_inset
+
+ autovettori unitari 
+\begin_inset Formula $u_{1}..u_{n}$
+\end_inset
+
+, essendo mutuamente ortogonali, sono indipendenti, e duque formano la base
+ richiesta di 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
