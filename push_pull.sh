@@ -18,6 +18,8 @@ fi
 
 command -v "git" >/dev/null && continue || { echo "Comando git non trovato."; exit 1; }
 
+# Funzione di push
+
 if [ $1 == "push" ]
 then
    echo "Invio al server le modifiche apportate al repository locale"
@@ -25,12 +27,16 @@ then
    exit 0
 fi
 
+# Funzione di pull
+
 if [ $1 == "pull" ]
 then
    echo "Scarico dal server remoto le modifiche"
    git pull $SEVER $BRANCH
    exit 0
 fi
+
+# Funzione di commit
 
 if [ $1 == "commit" ]
 then

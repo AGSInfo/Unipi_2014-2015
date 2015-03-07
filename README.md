@@ -11,3 +11,5 @@ Questi contenuti vengono forniti senza alcuna garanzia.
  - Alessandro
  - Gianluca
  - Sam
+
+ È disponibile lo script `push_pull.sh` per automatizzare le operazioni di commit, push e pull da riga di comando
