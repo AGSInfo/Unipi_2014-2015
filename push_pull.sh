@@ -15,14 +15,14 @@ fi
 
 command -v "git" >/dev/null && continue || { echo "Comando git non trovato."; exit 1; }
 
-if [ $1 == "push"]
+if [ $1 == "push" ]
 then
    echo "Invio al server le modifiche apportate al repository locale"
    git push $SERVER $BRANCH
    exit 0
 fi
 
-if [ $1 == "pull"]
+if [ $1 == "pull" ]
 then
    echo "Scarico dal server remoto le modifiche"
    git pull $SEVER $BRANCH
