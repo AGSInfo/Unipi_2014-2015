@@ -1,0 +1,5281 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\begin_preamble
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother 
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 1cm
+\headsep 1cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Author
+Gianluca Mondini
+\end_layout
+
+\begin_layout Title
+Analisi I
+\end_layout
+
+\begin_layout Standard
+Ora di compilazione: 14:03
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Non mi ritengo responsabile di eventuali errori contenuti nella seguente
+ dispensa.
+\end_layout
+
+\begin_layout Standard
+I riferimenti del tipo [pagina x] si basano sul manuale 
+\begin_inset Quotes eld
+\end_inset
+
+Analisi Matematica uno
+\begin_inset Quotes erd
+\end_inset
+
+ di Paolo Marcellini - Carlo Sbordone
+\end_layout
+
+\begin_layout Title
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Strumenti generici
+\end_layout
+
+\begin_layout Section
+Coefficiente binomiale
+\end_layout
+
+\begin_layout Verbatim
+[Pagina 63]
+\end_layout
+
+\begin_layout Standard
+Il numero delle combinazioni di 
+\begin_inset Formula $k$
+\end_inset
+
+ elementi tra 
+\begin_inset Formula $n$
+\end_inset
+
+ dati è:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)=\frac{n!}{(n-k)!\cdot k!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Binomio di Newton
+\end_layout
+
+\begin_layout Verbatim
+[Pagina 64]
+\end_layout
+
+\begin_layout Standard
+Per ogni coppia di numeri reali 
+\begin_inset Formula $a,b$
+\end_inset
+
+ vale l'identità:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(a+b)^{n}=\left(\begin{array}{c}
+n\\
+0
+\end{array}\right)a^{n}+\left(\begin{array}{c}
+n\\
+1
+\end{array}\right)a^{n-1}b+\left(\begin{array}{c}
+n\\
+2
+\end{array}\right)a^{n-2}b^{2}+...+\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)a^{n-k}b^{k}+...+\left(\begin{array}{c}
+n\\
+n-1
+\end{array}\right)ab^{n-1}+\left(\begin{array}{c}
+n\\
+n
+\end{array}\right)b^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Numeri complessi
+\end_layout
+
+\begin_layout Verbatim
+[Pagina 66]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z=\varrho(\cos\alpha+i\sin\alpha)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Inverso di un numero complesso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z^{-1}=\frac{\bar{z}}{|z|^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se quindi scriviamo 
+\begin_inset Formula $z$
+\end_inset
+
+ come 
+\begin_inset Formula $z_{1}+iz_{2}$
+\end_inset
+
+ otteniamo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{z_{1}+iz_{2}}=\frac{z_{1}}{z_{1}^{2}+z_{2}^{2}}-i\left(\frac{z_{2}}{z_{1}^{2}+z_{2}^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Disuguaglianza triangolare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall x,y\in\mathbb{R},\quad|x+y|\leq|x|+|y|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Parte frazionaria e intera
+\end_layout
+
+\begin_layout Standard
+Si indica con 
+\begin_inset Formula $\left\{ x\right\} $
+\end_inset
+
+ la parte frazionaria di 
+\begin_inset Formula $x$
+\end_inset
+
+, e con 
+\begin_inset Formula $\left[x\right]$
+\end_inset
+
+ la sua parte intera.
+ È quindi vera l'uguaglianza:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ x\right\} =x-\left[x\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Serie di Taylor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{n=0}^{+\infty}\frac{f^{(n)}(x_{0})}{n!}(x-a)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+quindi, in pratica:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x_{0})+f'(x_{0})(x-x_{0})+\frac{f''(x_{0})}{2}\left(x-x_{0}\right)^{2}+\frac{f^{(3)}(x_{0})}{3!}\left(x-x_{0}\right)^{3}+...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel caso in cui 
+\begin_inset Formula $x_{0}=0$
+\end_inset
+
+ la serie viene chiamata anche 
+\series bold
+serie di Maclaurin
+\end_layout
+
+\begin_layout Subsection
+Resto di Peano
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{n}(x)=o\left(\left(x-x_{0}\right)^{n}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Resto di Lagrange
+\end_layout
+
+\begin_layout Standard
+S ela funzione è derivabile 
+\begin_inset Formula $n+1$
+\end_inset
+
+ volte in un intorno di 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+(si richiede che sia derivabile almeno 
+\begin_inset Formula $n$
+\end_inset
+
+ volte in un intorno del tipo 
+\begin_inset Formula $[x_{0},x),$
+\end_inset
+
+ più un altra volta in 
+\begin_inset Formula $\left(x_{0},x\right)$
+\end_inset
+
+ per qualche 
+\begin_inset Formula $x$
+\end_inset
+
+ esiste 
+\begin_inset Formula $\xi$
+\end_inset
+
+ compreso tra 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+e 
+\begin_inset Formula $x$
+\end_inset
+
+ tale che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{n}(x)=\frac{f^{(n+1)}\left(\xi\right)}{\left(n+1\right)!}(x-x_{0})^{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+questa formula permette di interpretare il teorema di Taylor come una generalizz
+azione del teorema di Lagrange.
+\end_layout
+
+\begin_layout Subsection
+Alcuni sviluppi in serie di Maclaurin
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{x}=\sum_{n=0}^{+\infty}\frac{x^{n}}{n!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Funzioni trigonometriche
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sin x=\sum\frac{(-1)^{n}}{(2n+1)!}x^{2n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cos x=\sum\frac{(-1)^{n}}{(2n)!}x^{2n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\arcsin x=\sum\frac{(2n)!}{4^{n}(n!)^{2}(2n+1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\arccos x=\frac{\pi}{2}-\arcsin x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Funzioni iperboliche
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sinh x=\sum\frac{x^{2n+1}}{(2n+1)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh x=\sum\frac{x^{2n}}{(2n)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per 
+\begin_inset Formula $\left|x\right|\leq1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+arsinh(x)=\sum\frac{(-1)^{n}(2n)!}{4^{n}(n!)^{2}(2n+1)}x^{2n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per 
+\begin_inset Formula $\left|x\right|\leq1,\quad x\neq\pm1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+artanh(x)=\sum\frac{x^{2n+1}}{2n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Teoremi
+\end_layout
+
+\begin_layout Section
+Teorema sull'esistenza dell'estremo superiore
+\end_layout
+
+\begin_layout Standard
+Un insieme 
+\begin_inset Formula $A\subset\mathbb{R}$
+\end_inset
+
+ non vuoto e limitato superiormente ha estremo superiore.
+\end_layout
+
+\begin_layout Section
+Teorema di Rolle
+\end_layout
+
+\begin_layout Paragraph
+Definizione 
+\begin_inset Quotes eld
+\end_inset
+
+a parole
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se una funzione è continua in un intervallo chiuso 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, derivabile in ogni punto dell'intervallo aperto 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ e assume valori uguali 
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+ negli estremi dell'intervallo, allora esistema almeno un punto 
+\begin_inset Formula $c$
+\end_inset
+
+ interno ad 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ in cui la derivata si annulla, cioè 
+\begin_inset Formula $f'(c)=0$
+\end_inset
+
+ (punto critico o stazionario)
+\end_layout
+
+\begin_layout Paragraph
+Definizione matematica
+\end_layout
+
+\begin_layout Standard
+Sia
+\begin_inset Formula $f:[a,b]\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ Se 
+\begin_inset Formula $f$
+\end_inset
+
+ è continua in 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, derivabile in 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ e se vale 
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+, allora esiste un punto 
+\begin_inset Formula $c\in(a,b)$
+\end_inset
+
+ tale che 
+\begin_inset Formula 
+\[
+f'(c)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema di limitatezza per successioni di numeri reali
+\end_layout
+
+\begin_layout Standard
+Una successione 
+\begin_inset Formula $\left(a_{n}\right)\quad n\in\mathbb{N}$
+\end_inset
+
+ di numeri reali, convergente ad un limite finite 
+\begin_inset Formula $l,$
+\end_inset
+
+ è limitata, esiste cioè un numero reale 
+\begin_inset Formula $K$
+\end_inset
+
+ tale che 
+\begin_inset Formula $\left|a_{n}\right|\le K$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teorema di unicità del limite
+\end_layout
+
+\begin_layout Standard
+Una successione 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+di numeri reali non può avere due limiti distinti.
+\end_layout
+
+\begin_layout Section
+Teorema di Weierstrass
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f:[a,b]\rightarrow R$
+\end_inset
+
+ una funzione continua, allora 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ assume massimo e minimo assoluti nell'intervallo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema di Lagrange (o del valor medio o dell'incremento finito)
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f:[a,b]\rightarrow R$
+\end_inset
+
+ una funzione continua in 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ e derivabile in 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Allora esiste un punto 
+\begin_inset Formula 
+\[
+c\in(a,b)\,:\, f'(c)=\frac{f(b)-f(a)}{b-a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema dei valori intermedi
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f\,:\,[a,b]\rightarrow R$
+\end_inset
+
+ una funzione continua.
+ Sia 
+\begin_inset Formula $f(a)<f(b)$
+\end_inset
+
+ (o viceversa 
+\begin_inset Formula $f(b)<f(a)$
+\end_inset
+
+).
+ Allora la funzione assume tutti i valori compresi tra 
+\begin_inset Formula $f(a)\mbox{ e }f(b)$
+\end_inset
+
+, ovvero, per ogni 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ tale che 
+\begin_inset Formula $f(a)<y_{0}<f(b)$
+\end_inset
+
+ (o rispettivamente 
+\begin_inset Formula $f(b)<y_{0}<f(a)$
+\end_inset
+
+), esiste un punto 
+\begin_inset Formula $x_{0}\in[a,b]$
+\end_inset
+
+ tale che 
+\begin_inset Formula $f(x_{0})=y_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema di Bolzano (o teorema degli zeri)
+\end_layout
+
+\begin_layout Standard
+Consideriamo una funzione 
+\begin_inset Formula $f:[a,b]\rightarrow R$
+\end_inset
+
+ continua.
+ Supponiamo che 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ e 
+\begin_inset Formula $f(b)$
+\end_inset
+
+ abbiano segno opposto, ovvero 
+\begin_inset Formula 
+\[
+f(a)<0<f(b)
+\]
+
+\end_inset
+
+ (oppure 
+\begin_inset Formula $f(b)<0<f(a)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Allora esiste un punto 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ in 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ tale che 
+\begin_inset Formula 
+\[
+f(x_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema di Fermat sui punti stazionari
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f:(a,b)\rightarrow R$
+\end_inset
+
+ una funzione e si supponga che 
+\begin_inset Formula $x_{0}\in(a,b)$
+\end_inset
+
+ sia un punto di estremo locale (max o min) di 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Se 
+\begin_inset Formula $f$
+\end_inset
+
+ è derivabile nel punto 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ allora 
+\begin_inset Formula $f'(x_{0})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema della permanenza del segno
+\end_layout
+
+\begin_layout Standard
+Una successione 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ che converge ad un limite strettamente positivo 
+\begin_inset Formula $a>0$
+\end_inset
+
+ (che può essere anche 
+\begin_inset Formula $+\infty$
+\end_inset
+
+) ha definitivamente soltanto termini positivi.
+ In altre parole, esiste un 
+\begin_inset Formula $N$
+\end_inset
+
+ tale che 
+\begin_inset Formula $a_{n}>0\quad\forall\quad n>N$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Teorema del confronto (o dei due carabinieri)
+\end_layout
+
+\begin_layout Standard
+Il teorema del confronto per le successioni asserisce che se 
+\begin_inset Formula $\left\{ a_{n}\right\} ,\left\{ b_{n}\right\} $
+\end_inset
+
+ e 
+\begin_inset Formula $\left\{ c_{n}\right\} $
+\end_inset
+
+ sono tre successioni di numeri reali che definitivamente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}\leq b_{n}\leq c_{n}
+\]
+
+\end_inset
+
+e se si ha:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+lim_{n\rightarrow\infty}a_{n}=lim_{n\rightarrow\infty}a_{n}=l
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora anche:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+lim_{n\rightarrow\infty}b_{n}=l
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema successioni monotòne
+\end_layout
+
+\begin_layout Paragraph
+Ipotesi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ è crescente 
+\begin_inset Formula $\left(a_{n+1}>a_{n}\quad\forall n\in\mathbb{N}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ è limitata superiormente
+\end_layout
+
+\begin_layout Paragraph
+Tesi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\exists L\in\mathbb{R}\quad\lim_{n\rightarrow+\infty}a_{n}=L=\sup_{n\in\mathbb{N}}a_{n}=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il 2° teorema è simile, dice che se la successione non è limitata superiormente
+ il limite di 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ vale 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teorema fondamentale del calcolo integrale (Torricelli-Barrow)
+\end_layout
+
+\begin_layout Subsection
+Parte I
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f:[a,b]\rightarrow\mathbb{R}$
+\end_inset
+
+ una funzione integrabile.
+ Si definisce integrale di 
+\begin_inset Formula $f$
+\end_inset
+
+ la funzione 
+\begin_inset Formula $F$
+\end_inset
+
+ tale che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=\int_{a}^{x}f(t)dt\quad a\le x\le b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $f$
+\end_inset
+
+ è limitata, allora 
+\begin_inset Formula $F$
+\end_inset
+
+ è una funzione continua in 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se inotrle 
+\begin_inset Formula $f$
+\end_inset
+
+ è una funzione continua in 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+, allora 
+\begin_inset Formula $F$
+\end_inset
+
+ è differenziabile in tutti i punti in cui 
+\begin_inset Formula $f$
+\end_inset
+
+ è continua e si ha:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F'(x)=f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+cioè la 
+\begin_inset Formula $F$
+\end_inset
+
+ risulta essere una primitiva di 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Parte II
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f:[a,b]\rightarrow\mathbb{R}$
+\end_inset
+
+ una funzione che ammette una primitiva 
+\begin_inset Formula $G$
+\end_inset
+
+ su 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Sia cioè 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ tale che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G'(x)=f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $f$
+\end_inset
+
+ è integrabile si ha:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx=G(b)-G(a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema della media integrale
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{b-a}\int_{a}^{b}f(x)dx=f(c)\quad\quad\int_{a}^{b}f(x)dx=(b-a)f(c)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Funzioni
+\end_layout
+
+\begin_layout Subsection
+Tipi di funzione
+\end_layout
+
+\begin_layout Paragraph
+Iniettiva
+\end_layout
+
+\begin_layout Standard
+Si definisce iniettiva una funzione che associa elementi distinti del domnio
+ in elementi distinti del codominio
+\end_layout
+
+\begin_layout Paragraph
+Suriettiva
+\end_layout
+
+\begin_layout Standard
+Si definisce suriettiva una funzione che associ, per ogni elemento del dominio,
+ almeno un elemento del codominio.
+\end_layout
+
+\begin_layout Paragraph
+Bigettiva
+\end_layout
+
+\begin_layout Standard
+Una funzione si definisce suriettiva se e solo se è contemporaneamente iniettiva
+ e suriettiva
+\end_layout
+
+\begin_layout Subsection
+Funzione inversa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f:X\rightarrow Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+si dice invertibile se esiste una funzione 
+\begin_inset Formula $G:X\rightarrow Y$
+\end_inset
+
+ tale che:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g\left(f(x)\right)=x\quad\forall x\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(g(x)\right)=y\quad\forall y\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per essere invertibile, una funzione deve essere necessariamente iniettiva
+ e suriettiva (quindi bigettiva)
+\end_layout
+
+\begin_layout Subsubsection
+Funzioni composte
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ e 
+\begin_inset Formula $g:Y\rightarrow Z$
+\end_inset
+
+ sono invertibili, allora l'inversa della loro composizione è data da:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(g\circ f\right)^{-1}=f^{-1}\circ g^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+cioè si compongono le inverse in ordine invertito.
+\end_layout
+
+\begin_layout Subsection
+Funzione continue
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:D\rightarrow\mathbb{R}$
+\end_inset
+
+ continua in 
+\begin_inset Formula $x_{0}\in D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\epsilon>0\quad\exists\quad\delta(\epsilon)>0\quad:\quad|f(x)+f(x_{0})|<\epsilon\quad\forall x\in D\quad|x-x_{0}|<\delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Limiti
+\end_layout
+
+\begin_layout Section
+Teorema di De Hopital
+\end_layout
+
+\begin_layout Standard
+Il teorema si applica se abbiamo una forma indeterminata del tipo 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+ oppure 
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Limiti notevoli
+\end_layout
+
+\begin_layout Subsection
+Trigonometria
+\end_layout
+
+\begin_layout Subsubsection
+Seno
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{sinx}{x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Coseno
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{1-cos(x)}{x^{2}}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{1-cos(x)}{x}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tangente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{tan(x)}{x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Arcoseno
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{arcsin(x)}{x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Arcotangente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{arctan(x)}{x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Logaritmi ed esponenziali
+\end_layout
+
+\begin_layout Subsubsection
+Logaritmi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{ln(1+x)}{x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{log_{a}(1+x)}{x}=\frac{1}{ln(a)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Esponenziali
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{e^{x}-1}{x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{a^{x}-1}{x}=ln(a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\pm\infty}\left(1+x\right)^{\frac{1}{x}}=e
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\frac{(1+x)^{a}-1}{x}=a
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0}\left(1+\frac{1}{x}\right)^{x}=e
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proprietà degli «o piccoli»
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $o(x^{n})+o(x^{n})=o(x^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c\cdot o(x^{n})=o\cdot(cx^{n})=o(x^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $o(x^{n})-o(x^{n})=o(x^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x^{m}\cdot o(x^{n})=o(x^{m+n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $o(x^{m})\cdot o(x^{n})=o(x^{m+n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $o(o(x^{n}))=o(x^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $o(x^{n}+o(x^{n}))=o(x^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Derivate
+\end_layout
+
+\begin_layout Section
+Definizione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Derivate fondamentali
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{n}\quad n\in\mathbb{R}\rightarrow nx^{n-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+|x|\rightarrow\frac{x}{|x|}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{x}\rightarrow-\frac{1}{x^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sqrt{x}\rightarrow\frac{1}{2\sqrt{x}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+^{n}\sqrt{x}\rightarrow\frac{1}{n\quad^{n}\sqrt{x^{n-1}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+log_{a}x\rightarrow\frac{1}{x}log_{a}e=\frac{1}{x\, ln(a)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+ln(x)\rightarrow\frac{1}{x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{x}\rightarrow a^{x}ln(a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{x}\rightarrow e^{x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+sin(x)\rightarrow cos(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+cos(x)\rightarrow-sin(x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+tan(x)\rightarrow\frac{1}{cos^{2}(x)}=1+tan^{2}(x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+arcsin(x)\rightarrow\frac{1}{\sqrt{1-x^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+arccos(x)\rightarrow-\frac{1}{\sqrt{1-x^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+arctan(x)\rightarrow\frac{1}{1+x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regole di derivazione
+\end_layout
+
+\begin_layout Subsection
+Derivata di una somma di funzioni
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k\, f(x)+h\, g(x)\rightarrow k\, f'(x)+h\, g'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivata di un prodotto di funzioni
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)\, g(x)\rightarrow f'(x)\, g(x)+f(x)\, g'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivata di un rapporto di funzioni
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{f(x)}{g(x)}\rightarrow\frac{f'(x)\, g(x)-f(x)\, g'(x)}{\left[g(x)\right]^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivata di una funzione composta (funzione di funzione)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(f(x))\rightarrow g'(f(x))\, f'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Esempi particolari:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ln|x|\rightarrow\frac{1}{x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+[f(x)]^{n}\rightarrow n\,[f(x)]^{n-1}f'(x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{f(x)}\rightarrow a^{f(x)}\, ln(a)\, f'(x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+e^{f(x)}\rightarrow e^{f(x)}f'(x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+ln|f(x)|\rightarrow\frac{f'(x)}{f(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivata di una funzione composta esponenziale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[f(x)]^{gx}\rightarrow[f(x)]^{g(x)}\left[g'(x)\, ln(f(x))+\frac{g(x)\, f'(x)}{f(x)}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f^{-1}(y)\rightarrow\left[\frac{1}{f(x)}\right]_{x-f^{-1}(y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivazione di una funzione integrale (necessita di revisione)
+\end_layout
+
+\begin_layout Standard
+Esempio (ha senso?)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D\left[\int_{4}^{6x}e^{t^{2}}dt\right]=e^{(6x)^{2}}D[6x]=6\cdot e^{36x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In generale
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=\int_{x_{0}}^{f(x)}g(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G'(x)=g(f(x))\cdot f'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel caso in cui gli estremi dell'integrale siano entrambi funzioni
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{-a(x)}^{b(x)}f(t)dt=\int_{-a(x)}^{0}f(t)dt+\int_{0}^{b(x)}f(t)dt=-\int_{0}^{a(x)}f(t)dt+\int_{0}^{b(x)}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivazione di una funzione integrale (lezione di Visciglia)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a(x)}^{b(x)}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Caso semplice
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a(x)=a,\quad b(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\int_{a}^{x}f(t)dt\right]'=f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Caso semisemplice
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=\int_{a}^{b(x)}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(y)=\int_{a}^{y}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G'(x)=F'\left(b(x)\right)\cdot b(x)=f\left(b(x)\right)\cdot b'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Caso complicato
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=\int_{a(x)}^{b(x)}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+divido l'integrale in due parti:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=\int_{a(x)}^{c}f(t)dt+\int_{c}^{b(x)}f(t)dt=-\int_{c}^{a(x)}f(t)dt+\int_{c}^{b(x)}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+adesso ci siamo ricondotti al caso di prima.
+ Otteniamo quindi la formula generale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\int_{a(x)}^{b(x)}f(t)dt\right]'=-f\left(a(x)\right)\cdot a'(x)+f\left(b(x)\right)\cdot b'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Integrali
+\end_layout
+
+\begin_layout Section
+Integrali notevoli
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int sin(x)cos(x)dx=-\frac{1}{2}cos^{2}(x)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int a^{x}dx=\frac{a^{x}}{log_{e}a}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{1}{\sqrt{x^{2}\pm a^{2}}}dx=\log\left|x+\sqrt{x^{2}\pm a^{2}}\right|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int sen^{2}(x)dx=\frac{1}{2}\left(x-sen(x)\cdot cos(x)\right)+C
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int cos^{2}(x)dx=\frac{1}{2}(x+sen(x)\cdot cos(x))+C
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int f^{n}(x)f'(x)dx=\frac{f^{n+1}(x)}{n+1}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int f'(x)cos\left(f(x)\right)dx=sen\left(f(x)\right)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int a^{f(x)}f'(x)dx=\frac{a^{f(x)}}{log_{e}a}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{f'(x)}{\sqrt{1-f^{2}(x)}}dx=\begin{cases}
+arcsen\left(f(x)\right)+C\\
+-arcsen\left(f(x)\right)+C
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{f'(x)}{1+f^{2}(x)}dx=arctg\left(f(x)\right)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\left|x\right|dx=\frac{x\left|x\right|}{2}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{1}{1-x^{2}}dx=\frac{1}{2}ln\left|\frac{1+x}{1-x}\right|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\sqrt{x^{2}\pm a^{2}}dx=\frac{x}{2}\sqrt{x^{2}\pm a^{2}}\pm\frac{a^{2}}{2}\ln\left(x+\sqrt{x^{2}\pm a^{2}}\right)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\sqrt{a^{2}-x^{2}}dx=\frac{1}{2}\left(a^{2}\cdot\arcsin\left(\frac{x}{a}\right)+x\cdot\sqrt{a^{2}-x^{2}}\right)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Altri integrali (copiati da YouMath)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{|x|dx}=\frac{x|x|}{2}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{1-x^{2}}dx}=\frac{1}{2}\ln{\left|\frac{1+x}{1-x}\right|}+c$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{\sqrt{x^{2}+1}}dx}=\ln{(x+\sqrt{1+x^{2}})}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{\sqrt{x^{2}-1}}dx}=\ln{|x+\sqrt{x^{2}-1}|}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{\sqrt{x^{2}\pm a^{2}}}dx}=\ln{(|x+\sqrt{x^{2}\pm a^{2}}|)}+c$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\sqrt{x^{2}\pm a^{2}}dx}=\frac{x}{2}\sqrt{x^{2}\pm a^{2}}\pm\frac{a^{2}}{2}\ln{(x+\sqrt{x^{2}\pm a^{2}})}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\sqrt{a^{2}-x^{2}}dx}=\frac{1}{2}\left(a^{2}\arcsin{\left(\frac{x}{a}\right)}+x\sqrt{a^{2}-x^{2}}\right)+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{\sqrt{a+bx}}dx}=\frac{2}{b}\sqrt{a+bx}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\sqrt{a+bx}dx}=\frac{2}{3b}\sqrt{(a+bx)^{3}}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{a+bx^{2}}dx}=\frac{1}{\sqrt{ab}}\arctan{\left(\sqrt{\frac{b}{a}}x\right)}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{a-bx^{2}}dx}=\frac{1}{2\sqrt{ab}}\ln{\left(\left|\frac{\sqrt{ab+bx}}{\sqrt{ab}-bx}\right|\right)}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{ax^{2}+bx+c}dx}=\frac{1}{\sqrt{b^{2}-4ac}}\ln{\left(\left|\frac{2ax+b-\sqrt{b^{2}-4ac}}{2ax+b+\sqrt{b^{2}-4ac}}\right|\right)}+c\mbox{ se }b^{2}-4ac>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{ax^{2}+bx+c}dx}=\frac{2}{\sqrt{4ac-b^{2}}}\arctan{\left(\frac{2ax+b}{\sqrt{4ac-b^{2}}}\right)}+c$
+\end_inset
+
+ se 
+\begin_inset Formula $b^{2}-4ac<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\ln{(x)}dx}=x\ln{(x)}-x+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\log_{a}{(x)}dx}=x\log_{a}{(x)}-x\log_{a}{(e)}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\tan{(x)}dx}=-\ln{(|\cos{(x)}|)}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\sin^{2}{(x)}dx}=\frac{1}{2}(x-\sin{(x)}\cos{(x)})+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\cos^{2}{(x)}dx}=\frac{1}{2}(x+\sin{(x)}\cos{(x)})+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\frac{1}{1+\cos{(x)}}dx}=\tan{\left(\frac{x}{2}\right)}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\arcsin{(x)}dx}=x\arcsin{(x)}+\sqrt{1-x^{2}}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\arccos{(x)}dx}=x\arccos{(x)}-\sqrt{1-x^{2}}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\arctan{(x)}dx}=x\arctan{(x)}-\frac{1}{2}\ln{(1+x^{2})}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int{\mbox{arccot}(x)dx}=x\mbox{arccot}(x)+\frac{1}{2}\ln{(1+x^{2})}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Integrale di Riemann
+\end_layout
+
+\begin_layout Subsection
+Proprietà
+\end_layout
+
+\begin_layout Subsubsection
+Linearità
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $f$
+\end_inset
+
+ e 
+\begin_inset Formula $g$
+\end_inset
+
+ due funzioni continue definite su di un intervallo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ e siano 
+\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\end_inset
+
+.
+ Allora:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{b}[\alpha f(x)+\beta g(x)]dx=\alpha\int_{a}^{b}f(x)dx+\beta\int_{a}^{b}g(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Additività
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f$
+\end_inset
+
+ continua e definita in un intervallo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ e sia 
+\begin_inset Formula $c\in[a,b]$
+\end_inset
+
+.
+ Allora:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Monotonia
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $f$
+\end_inset
+
+ e 
+\begin_inset Formula $g$
+\end_inset
+
+ due funzioni continue definite in un intervallo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ e 
+\begin_inset Formula $f(x)\geq g(x)$
+\end_inset
+
+.
+ Allora:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx\geq\int_{a}^{b}g(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Teorema del confronto
+\end_layout
+
+\begin_layout Standard
+Siano 
+\begin_inset Formula $f$
+\end_inset
+
+ e 
+\begin_inset Formula $g$
+\end_inset
+
+ due funzioni continue definite in un intervallo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ e tali che 
+\begin_inset Formula $f(x)\leq g(x)$
+\end_inset
+
+ in 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Allora:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx\leq\int_{a}^{b}g(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Valore assoluto
+\end_layout
+
+\begin_layout Standard
+Sia 
+\begin_inset Formula $f$
+\end_inset
+
+ integrabile in un intervallo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, allora si ha:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\int_{a}^{b}f(x)dx|\leq\int_{a}^{b}|f(x)|dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Scomposizioni
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{3}-a^{3}=(x-a)(x^{2}-ax+a^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Hermite
+\end_layout
+
+\begin_layout Standard
+La scomposizione di Hermite si applica solo nel caso in cui il grado del
+ denominatore sia maggiore di quello del numeratore.
+ In caso contrario si utilizza la normale divisione tra polinomi.
+\end_layout
+
+\begin_layout Standard
+Alcuni esempi:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ax+b\rightarrow\frac{A}{ax+b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ax^{2}+bx+c\rightarrow\frac{Ax+B}{ax^{2}+bx+c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(ax+b)^{n}\rightarrow\frac{A_{1}}{(ax+b)}+\frac{A_{2}}{(ax+b)^{2}}+...+\frac{A_{n}}{(ax+b)^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(ax^{2}+bx+c)\rightarrow\frac{A_{1}x+B_{1}}{(ax^{2}+bx+c)}+\frac{A_{2}x+B_{2}}{(ax^{2}+bx+c)^{2}}+...+\frac{A_{n}x+B_{n}}{(ax^{2}+bx+c)^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ad esempio, se il denominatore è nella forma 
+\begin_inset Formula $x^{4}-1$
+\end_inset
+
+ possiamo ricondurci alla differenza di quadrati 
+\begin_inset Formula $(x^{2}-1)(x^{2}+1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A questo punto il termine 
+\begin_inset Formula $(x^{2}-1)$
+\end_inset
+
+ è a sua volta una differenza di quadrati.
+ In pratica possiamo scrivere:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(x^{4}-1\right)=\left(x^{2}-1\right)\left(x^{2}+1\right)=\left(x+1\right)\left(x-1\right)\left(x^{2}+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e, grazie ad Hermite, il nostro integrale diventa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{A}{1-x}+\frac{B}{1+x}+\frac{Cx+D}{1+x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Serie
+\end_layout
+
+\begin_layout Section
+Note sulle successioni
+\end_layout
+
+\begin_layout Subsection
+Successione di Fibonacci
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{1}=1,\quad F_{2}=1,\quad F_{n}=F_{n-1}+F_{n-2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Condizione necessaria per la convergenza
+\end_layout
+
+\begin_layout Standard
+Condizione necessaria (ma non sufficiente) per la convergenza di una serie
+ è che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}a_{n}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Serie notevoli
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{n}q^{k}=\frac{1-q^{n+1}}{1-q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+da cui deriva, nel caso in cui 
+\begin_inset Formula $|q|<1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}q^{k}=\frac{1}{1-q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}\left(\frac{1}{k}\right)^{2}=\frac{\pi^{2}}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}\left(-1\right)^{k}\frac{1}{2k+1}=\frac{\pi}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}\left(\frac{1}{2k+1}\right)^{2}=\frac{\pi^{2}}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Serie a termini positivi
+\end_layout
+
+\begin_layout Subsection
+Primo criterio del confronto asintotico
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}\leq b_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+se la maggiorante converge, la minorante converge
+\end_layout
+
+\begin_layout Itemize
+se la minorante diverge, la maggiorante diverge
+\end_layout
+
+\begin_layout Subsection
+Secondo criterio del confronto asintotico
+\end_layout
+
+\begin_layout Itemize
+Se 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+è convergente e 
+\begin_inset Formula $\lim_{x\rightarrow\infty}\frac{a_{n}}{b_{n}}=l$
+\end_inset
+
+, dove 
+\begin_inset Formula $l$
+\end_inset
+
+ esiste ed è finito, allora 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+è convergente.
+\end_layout
+
+\begin_layout Itemize
+Se 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+è divergente e 
+\begin_inset Formula $lim_{x\rightarrow\infty}\frac{a_{n}}{b_{n}}>0$
+\end_inset
+
+ (anche 
+\begin_inset Formula $+\infty)$
+\end_inset
+
+, allora 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+è divergente.
+\end_layout
+
+\begin_layout Subsection
+Criterio della radice (o di Cauchy)
+\end_layout
+
+\begin_layout Standard
+Se esiste il limite 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+lim_{n\rightarrow\infty}\sqrt[n]{a_{n}}=k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+il carattere della serie risulta:
+\end_layout
+
+\begin_layout Itemize
+convergente se 
+\begin_inset Formula $k<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+divergente se 
+\begin_inset Formula $k>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+sconosciuto se 
+\begin_inset Formula $k=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Criterio del rapporto (o di d'Alambert)
+\end_layout
+
+\begin_layout Standard
+Se esiste il limite 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+lim_{n\rightarrow\infty}\frac{a_{n+1}}{a_{n}}=k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+il carattere della serie risulta:
+\end_layout
+
+\begin_layout Itemize
+convergente se 
+\begin_inset Formula $k<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+divergente se 
+\begin_inset Formula $k>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+sconosciuto se 
+\begin_inset Formula $k=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Criterio integrale
+\end_layout
+
+\begin_layout Standard
+Si deve avere una funzione 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+simile
+\begin_inset Quotes erd
+\end_inset
+
+ alla successione 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $f$
+\end_inset
+
+ è:
+\end_layout
+
+\begin_layout Itemize
+positiva;
+\end_layout
+
+\begin_layout Itemize
+decrescente;
+\end_layout
+
+\begin_layout Itemize
+infinitesima (per 
+\begin_inset Formula $x\rightarrow+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora la serie 
+\begin_inset Formula $\sum_{n=n_{0}}^{+\infty}a_{n}$
+\end_inset
+
+ converge se e solo se converge l'integrale
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{n_{0}}^{+\infty}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Serie a termini discordi
+\end_layout
+
+\begin_layout Subsection
+Criterio di convergenza assoluta
+\end_layout
+
+\begin_layout Standard
+Data una serie 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+, si dice che essa è 
+\series bold
+assolutamente convergente
+\series default
+ se 
+\begin_inset Formula $\sum|a_{n}|$
+\end_inset
+
+ converge.
+\end_layout
+
+\begin_layout Paragraph
+Teorema
+\end_layout
+
+\begin_layout Standard
+Se una serie è convergente assolutamente è anche convergente.
+\end_layout
+
+\begin_layout Subsection
+Criterio di Leibniz
+\end_layout
+
+\begin_layout Standard
+Data una serie a segno alterno
+\begin_inset Formula 
+\[
+S_{N}=\sum_{n=0}^{N}(-1)^{n}a_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se la successione 
+\begin_inset Formula $|a_{n}|$
+\end_inset
+
+ è definitivamente positiva, decrescente e tende a 0, cioè
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $|a_{n}|\geq|a_{n+1}|>0\quad\forall n<N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $lim_{n\rightarrow\infty}|a_{n}|=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+allora si ha che:
+\end_layout
+
+\begin_layout Itemize
+la serie è convergente ad 
+\begin_inset Formula $S\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+le somme parziali di orgine pari a quelle di ordine dispari sono monotone
+ e tendono ad 
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $|S_{n}-S|\leq|a_{n+1}|\quad\forall n$
+\end_inset
+
+, il resto n-esimo è minore al termine 
+\begin_inset Formula $a_{n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Serie di potenze
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{+\infty}a_{k}(x-x_{0})^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Convergenza con il criterio di D'Alambert
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{k\rightarrow+\infty}|\frac{a_{k+1}}{a_{k}}|=l
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=\begin{cases}
+0 & l=+\infty\\
++\infty & l=0\\
+\frac{1}{l} & 0<l<+\infty
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Convergenza con il criterio di Cauchy-Hadamard
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{k\rightarrow+\infty}\sqrt[k]{|a_{k}|}=l
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=\begin{cases}
+0 & l=+\infty\\
++\infty & l=0\\
+\frac{1}{l} & 0<l<+\infty
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Conseguenza della convergenza
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R=0$
+\end_inset
+
+ la serie di potenze converge puntualmente solo in 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ (centro della serie)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R=+\infty$
+\end_inset
+
+ la serie di potenze converge:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+puntualmente in ogni 
+\begin_inset Formula $x\in R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+uniformemente in ogni intervallo chiuso e limitato 
+\begin_inset Formula $[x_{0}+k,x_{0}+k],\quad k>0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $0<R<+\infty$
+\end_inset
+
+ la serie di potenze:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+converge puntualmente per ogni 
+\begin_inset Formula $x$
+\end_inset
+
+ tale che 
+\begin_inset Formula $\left|x-x_{0}\right|<R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+non converge in alcun punto 
+\begin_inset Formula $x$
+\end_inset
+
+ tale che 
+\begin_inset Formula $\left|x-x_{0}\right|>R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+converge uniformemente in ogni intervallo chiuso e limitato 
+\begin_inset Formula $[x_{0}-k,x_{0}+k],\quad0<k<R$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Equazioni differenziali
+\end_layout
+
+\begin_layout Section
+Equazioni del prim'ordine a variabili separabili
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y'(x)=g(x)\cdot f(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y'(x)=y(sinx)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y'$
+\end_inset
+
+può essere scritto come 
+\begin_inset Formula $\frac{dy}{dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Equazioni lineari del prim'ordine
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y'(x)+p(x)\cdot y(x)=q(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y'+\frac{y}{x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Procedimento:
+\end_layout
+
+\begin_layout Enumerate
+Si calcola 
+\begin_inset Formula $m(x)$
+\end_inset
+
+ primitiva di 
+\begin_inset Formula $p(x),$
+\end_inset
+
+ 
+\begin_inset Formula $m'(x)=p(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si scrive quindi la soluzione nella forma
+\begin_inset Formula 
+\[
+y(x)=e^{-m(x)}\int e^{m(x)}q(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Equazione di Bernoulli
+\end_layout
+
+\begin_layout Verbatim
+[Pagina 427]
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset Formula 
+\[
+y'=a(x)y+b(x)y^{\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si divide per 
+\begin_inset Formula $y^{\alpha}$
+\end_inset
+
+ ottenendo:
+\begin_inset Formula 
+\[
+\frac{y'}{y^{\alpha}}=a(x)y^{1-\alpha}+b(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si effettua la sostituzione 
+\begin_inset Formula $z'=(1-\alpha)y^{-\alpha}y'$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+z'=(1-\alpha)a(x)z+(1-\alpha)b(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si risolve 
+\begin_inset Quotes eld
+\end_inset
+
+normalmente
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Ad ogni soluzione 
+\begin_inset Formula $z(x)$
+\end_inset
+
+ corrisponde una soluzione 
+\begin_inset Formula $y(x)$
+\end_inset
+
+ data da:
+\begin_inset Formula 
+\[
+y(x)=\left[z(x)\right]^{\frac{1}{1-\alpha}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Equazione lineare del secondo ordine omogenea
+\end_layout
+
+\begin_layout Standard
+Ha la forma
+\begin_inset Formula 
+\[
+y"+ay'+by=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $a$
+\end_inset
+
+ e 
+\begin_inset Formula $b$
+\end_inset
+
+ sono coefficienti costanti.
+\end_layout
+
+\begin_layout Standard
+Bisogna cercare una soluzione del tipo:
+\begin_inset Formula 
+\[
+y=e^{\lambda x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si sostituisce nella precedente equazione omogenea, derivando e mettendo
+ in evidenza 
+\begin_inset Formula $e^{\lambda x}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+e^{\lambda x}(\lambda^{2}+a\lambda+b)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Poiché l'esponenziale non si annulla mai, tale equazione si annulla se e
+ solo se l'omogenea associata si annulla:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lambda^{2}+a\lambda+b=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta>0$
+\end_inset
+
+ Se le sue radici sono reali e distinte, ovvero 
+\begin_inset Formula $\lambda_{1}\neq\lambda_{2}\in\mathbb{R}$
+\end_inset
+
+, allora la soluzione è del tipo
+\begin_inset Formula 
+\[
+y=c_{1}e^{\lambda_{1}x}+c_{2}e^{\lambda_{2}x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta=0$
+\end_inset
+
+ Se le soluzioni sono reali e coincidenti, la soluzione è del tipo:
+\begin_inset Formula 
+\[
+y=(c_{1}+xc_{2})e^{\lambda_{1}x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta<0$
+\end_inset
+
+ Se invece le soluzioni sono complesse e coniugate, ovvero 
+\begin_inset Formula $\lambda_{1,2}=\alpha\pm i\beta\in\mathbb{C}$
+\end_inset
+
+ allora si possono considerare la parte reale e immaginaria separatamente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=e^{\alpha x}\left(c_{1}\cos(\beta x)+c_{2}\sin(\beta x)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Equazione differenziale lineare del second'ordine non omogenea
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y"+ay'+by=f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f(x)=P(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ è un polinomio di grado 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Va ricercata una soluzione particolare del tipo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x)=P_{1}(x)
+\]
+
+\end_inset
+
+dove 
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+ è un polinomio di grado 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se però 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ è soluzione (semplice) dell'equazione omogenea associata, allora si deve
+ cercare una soluzione del tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x)=xP_{1}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+in pratica 
+\begin_inset Formula $y_{f}(x)=x(bx+c)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f(x)=P(x)e^{\alpha x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $P(x)$
+\end_inset
+
+è un polinomio di grado 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Se 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ non è una radice dell'equazione 
+\begin_inset Formula $\lambda^{2}+a\lambda+b=0$
+\end_inset
+
+ allora si cerca una soluzione particolare del tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x)=P_{1}(x)e^{\alpha x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+è un polinomio formale dello stesso grado 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Se invece 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ coincide con una delle radici, allora si cerca una soluzione particolare
+ del tipo:
+\begin_inset Formula 
+\[
+u(x)=x^{r}P_{1}(x)e^{\alpha x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $r$
+\end_inset
+
+ è la molteplicità della radice 
+\begin_inset Formula $\alpha.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f(x)=Acos(\beta x)$
+\end_inset
+
+ oppure 
+\begin_inset Formula $f(x)=Asin(\beta x)$
+\end_inset
+
+ oppure 
+\begin_inset Formula $f(x)=Acos(\beta x)+Bsin(\beta x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $A,B$
+\end_inset
+
+ sono costanti date.
+ In questo caso se 
+\begin_inset Formula $i\beta$
+\end_inset
+
+ non è una radice dell'equazione 
+\begin_inset Formula $\lambda^{2}+a\lambda+b=0$
+\end_inset
+
+ allora si cerca una soluzione particolare del tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x)=Ccos(\beta x)+Dsin(\beta x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $C$
+\end_inset
+
+ e 
+\begin_inset Formula $D$
+\end_inset
+
+ sono costanti da determinare.
+ In caso contrario, si cerca una soluzione del tipo
+\begin_inset Formula 
+\[
+u(x)=x\left(Ccos(\beta x)+Dsin(\beta x)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f(x)=P(x)cos(\beta x)$
+\end_inset
+
+ oppure 
+\begin_inset Formula $f(x)=Q(x)sin(\beta x)$
+\end_inset
+
+ oppure 
+\begin_inset Formula $f(x)=P(x)cos(\beta x)+Q(x)sin(\beta x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $P(x),Q(x)$
+\end_inset
+
+ sono polinomi.
+ In questo caso, se 
+\begin_inset Formula $i\beta$
+\end_inset
+
+ non è una radice dell'equazione 
+\begin_inset Formula $\lambda^{2}+a\lambda+b=0$
+\end_inset
+
+ allora si cerca una soluzione particolare del tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x)=P_{1}(x)cos(\beta x)+Q_{1}(x)sin(\beta x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+ e 
+\begin_inset Formula $Q_{1}(x)$
+\end_inset
+
+ sono polinomi di grado rispettivamente uguale a quello di 
+\begin_inset Formula $P(x)$
+\end_inset
+
+e 
+\begin_inset Formula $Q(x).$
+\end_inset
+
+ In caso contrario, si cerca una soluzione del tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x)=x\left(P_{1}(x)cos(\beta x)+Q_{1}(x)sin(\beta x)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f(x)=f_{1}(x)+f_{2}(x)+...+f_{m}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+per la linearità dell'equazione si può risolvere separatamente:
+\begin_inset Formula 
+\[
+y"+ay'+by=f_{i}(x)\quad i=1,...,m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e successivamente sommare le 
+\begin_inset Formula $u_{i}(x)$
+\end_inset
+
+ soluzioni:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u=u_{1}+u_{2}+...+u_{m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Studio di funzione
+\end_layout
+
+\begin_layout Section
+Scaletta per lo studio di funzione
+\end_layout
+
+\begin_layout Subsection
+Studio del dominio (campo di esistenza)
+\end_layout
+
+\begin_layout Subsection
+Si verifica la parità o la disparità della funzione
+\end_layout
+
+\begin_layout Itemize
+se 
+\begin_inset Formula $f(x)=f(-x)$
+\end_inset
+
+ allora la funzione è 
+\series bold
+pari
+\series default
+ ed è simmetrica rispetto all'asse 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+se 
+\begin_inset Formula $f(-x)=-f(x)$
+\end_inset
+
+ allora la funzione è 
+\series bold
+dispari
+\series default
+ ed è simmetrica rispetto all'origine 
+\begin_inset Formula $O$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Studio del segno e intersezione con gli assi
+\end_layout
+
+\begin_layout Subsection
+Studio degli eventuali punti di discontinuità
+\end_layout
+
+\begin_layout Standard
+Qui è possibile trovare (degli asintoti verticali), dei 
+\begin_inset Quotes eld
+\end_inset
+
+buchi
+\begin_inset Quotes erd
+\end_inset
+
+ o dei 
+\begin_inset Quotes eld
+\end_inset
+
+salti
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Studio del comportamento della funzione agli estremi del dominio
+\end_layout
+
+\begin_layout Standard
+Si utilizzano i limiti.
+ In questa parte viene effettuata la ricerca degli asintoti verticali, orizzonta
+li ed obliqui.
+\end_layout
+
+\begin_layout Subsubsection
+Asintoto
+\end_layout
+
+\begin_layout Standard
+Un asintoto è una funzione del tipo 
+\begin_inset Formula $g(x)=ax+b$
+\end_inset
+
+ tale che:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\rightarrow+\infty}\left(f(x)-g(x)\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\rightarrow-\infty}\left(f(x)-g(x)\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In particolare (eventualmente cambiando il segno del limite)
+\end_layout
+
+\begin_layout Itemize
+Se 
+\begin_inset Formula $a=0$
+\end_inset
+
+ (asintoto orizzontale) si ha
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow+\infty}f(x)=b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Se 
+\begin_inset Formula $a\neq0$
+\end_inset
+
+ (asintoto obliquo) si hanno
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\infty}f(x)=\lim_{x\rightarrow\infty}g(x)=\infty
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow+\infty}\frac{f(x)}{x}=\lim_{x\rightarrow\infty}\frac{g(x)}{x}=a
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow+\infty}\left(f(x)-ax\right)=\lim_{x\rightarrow\infty}\left(g(x)-ax\right)=b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Questi asintoti lineari sono un caso particolare del concetto di comportamento
+ asintotico, in cui si cercano approssimazioni di 
+\begin_inset Formula $f$
+\end_inset
+
+ tramite funzioni 
+\begin_inset Formula $g$
+\end_inset
+
+, non necessariamente lineari.
+\end_layout
+
+\begin_layout Subsection
+Studi della crescenza e dei punti di massimo e minimo relativi
+\end_layout
+
+\begin_layout Standard
+Si utilizza la derivata prima
+\end_layout
+
+\begin_layout Itemize
+I punti dove si annulla 
+\begin_inset Formula $f'$
+\end_inset
+
+ sono i punti stazionari di 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Se 
+\begin_inset Formula $f'$
+\end_inset
+
+ si annulla su tutto un intervallo, in quell'intervallo la funzione è costante
+ e si ha un plateau
+\end_layout
+
+\begin_layout Itemize
+Gli insiemi di positività (o di negatività) di 
+\begin_inset Formula $f'$
+\end_inset
+
+ sono insiemi in cui 
+\begin_inset Formula $f$
+\end_inset
+
+ è monotòna crescente (o decrescente)
+\end_layout
+
+\begin_layout Standard
+Una funzione 
+\begin_inset Formula $f$
+\end_inset
+
+ può essere strettamente crescente in un intervallo anche se in quell'intervallo
+ la sua derivata 
+\begin_inset Formula $f'$
+\end_inset
+
+ non è definita, o se è definita e si annulla.
+\end_layout
+
+\begin_layout Paragraph
+Esempio
+\end_layout
+
+\begin_layout Standard
+La funzione 
+\begin_inset Formula $f(x)=x^{3}$
+\end_inset
+
+ è strettamente crescente su tutto il dominio, anche se 
+\begin_inset Formula $f'(0)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Studio della concavità e dei punti di flesso
+\end_layout
+
+\begin_layout Enumerate
+Si utilizza, assieme alla derivata prima, la derivata seconda
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Trigonometria
+\end_layout
+
+\begin_layout Standard
+Nella sezione 
+\begin_inset Quotes eld
+\end_inset
+
+Serie di Taylor
+\begin_inset Quotes erd
+\end_inset
+
+ è disponibile lo sviluppo in serie di alcune funzioni trigonometriche e
+ iperboliche
+\end_layout
+
+\begin_layout Section
+Funzioni iperboliche
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Immagini/sinh_cosh_tanh.png
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $sinh0=0$
+\end_inset
+
+, 
+\begin_inset Formula $cosh0=1$
+\end_inset
+
+, 
+\begin_inset Formula $tanh0=0$
+\end_inset
+
+, 
+\begin_inset Formula $sech0=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(cosht\right)^{2}-\left(sinht\right)^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Formule di addizione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sinh(x+y)=\sinh(x)\cosh(y)+\cosh(x)\sinh(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh(x+y)=\cosh(x)\cosh(y)+\sinh(x)\sinh(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Formule di bisezione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh\left(\frac{x}{2}\right)=\sqrt{\frac{1+\cosh(x)}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sinh\left(\frac{x}{2}\right)=\sqrt{\frac{\cosh(x)-1}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Relazioni con le funzioni trigonometriche
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $sinh(x)=\imath\sin(\imath x)$
+\end_inset
+
+, 
+\begin_inset Formula $\cosh(x)=cos(\imath x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivate
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dx}sinh(x)=cosh(x)$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{dx}cosh(x)=sinh(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tabella funzioni trigonometriche
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="10">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+120°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+135°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150°
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+180°
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $sin(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{0}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{1}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{3}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{4}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{3}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{1}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{0}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $cos(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{4}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{3}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{1}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\sqrt{0}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $-\frac{\sqrt{1}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $-\frac{\sqrt{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $-\frac{\sqrt{3}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $-\frac{\sqrt{4}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $tan(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{\frac{0}{4}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{\frac{2}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{\frac{3}{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $+\infty$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\sqrt{\frac{3}{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\sqrt{\frac{2}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\sqrt{\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\sqrt{\frac{0}{4}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $rad(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{3}\pi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{4}\pi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{5}{6}\pi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Formule trigonometriche
+\end_layout
+
+\begin_layout Subsection
+Identità fondamentale
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+sin^{2}(x)+cos^{2}(x)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Formule di addizione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+sen(x_{1}\pm x_{2})=sen(x_{1})cos(x_{2})\pm sen(x_{2})cos(x_{1})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+cos(x_{1}\pm x_{2})=cos(x_{1})cos(x_{2})\mp sen(x_{1})sen(x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scegliendo il segno 
+\begin_inset Formula $+$
+\end_inset
+
+ e ponendo 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+ otteniamo:
+\end_layout
+
+\begin_layout Subsection
+Formule di duplicazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sin(2x)=2\sin(x)\cos(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cos(2x)=cos^{2}(x)-sin^{2}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
