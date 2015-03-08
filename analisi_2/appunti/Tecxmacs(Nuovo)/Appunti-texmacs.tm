@@ -88,153 +88,86 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-20>>
 
-    <with|par-left|4tab|Ipotesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21><vspace|0.15fn>>
-
-    <with|par-left|4tab|Tesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22><vspace|0.15fn>>
-
-    <with|par-left|4tab|Dimostrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23><vspace|0.15fn>>
-
     <with|par-left|2tab|2.2.3<space|2spc>Definizione
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>>
+    <no-break><pageref|auto-21>>
 
     <with|par-left|2tab|2.2.4<space|2spc>Teorema 1
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25>>
-
-    <with|par-left|4tab|Ipotesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26><vspace|0.15fn>>
-
-    <with|par-left|4tab|Dimostrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27><vspace|0.15fn>>
+    <no-break><pageref|auto-22>>
 
     <with|par-left|2tab|2.2.5<space|2spc>Teorema 2
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>>
-
-    <with|par-left|4tab|Tesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29><vspace|0.15fn>>
-
-    <with|par-left|4tab|Dimostrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30><vspace|0.15fn>>
+    <no-break><pageref|auto-23>>
 
     <with|par-left|2tab|2.2.6<space|2spc>Esempio
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>>
+    <no-break><pageref|auto-24>>
 
     <with|par-left|1tab|2.3<space|2spc>Continuità
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>>
+    <no-break><pageref|auto-25>>
 
     <with|par-left|2tab|2.3.1<space|2spc>Definizione
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>>
+    <no-break><pageref|auto-26>>
 
     <with|par-left|2tab|2.3.2<space|2spc>Teorema sulle funzioni continue a
     valori vettoriali <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>>
-
-    <with|par-left|4tab|Ipotesi: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35><vspace|0.15fn>>
-
-    <with|par-left|4tab|Tesi: \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36><vspace|0.15fn>>
-
-    <with|par-left|4tab|Dimostrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37><vspace|0.15fn>>
+    <no-break><pageref|auto-27>>
 
     <with|par-left|2tab|2.3.3<space|2spc>Definizione di convergenza
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>>
+    <no-break><pageref|auto-28>>
 
     <with|par-left|2tab|2.3.4<space|2spc>Esempio
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>>
+    <no-break><pageref|auto-29>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Appunti
     del 5 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-40><vspace|0.5fn>
+    <no-break><pageref|auto-30><vspace|0.5fn>
 
     <with|par-left|1tab|3.1<space|2spc>Dimostrazione del 4/3/15 rivisitata
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-41>>
+    <no-break><pageref|auto-31>>
 
     <with|par-left|1tab|3.2<space|2spc>Teorema
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-42>>
-
-    <with|par-left|4tab|Ipotesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-43><vspace|0.15fn>>
-
-    <with|par-left|4tab|Tesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-44><vspace|0.15fn>>
-
-    <with|par-left|4tab|Dimostrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-45><vspace|0.15fn>>
+    <no-break><pageref|auto-32>>
 
     <with|par-left|1tab|3.3<space|2spc>Fatto
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-46>>
+    <no-break><pageref|auto-33>>
 
     <with|par-left|1tab|3.4<space|2spc>Definizione
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-47>>
+    <no-break><pageref|auto-34>>
 
     <with|par-left|1tab|3.5<space|2spc>Teorema della permanenza del segno
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-48>>
-
-    <with|par-left|2tab|3.5.1<space|2spc>Ipotesi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-49>>
-
-    <with|par-left|2tab|3.5.2<space|2spc>Tesi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-50>>
-
-    <with|par-left|2tab|3.5.3<space|2spc>Dimostrazione
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-51>>
+    <no-break><pageref|auto-35>>
 
     <with|par-left|1tab|3.6<space|2spc>Teorema di continuità della funzione
     somma (nome provvisorio) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-52>>
-
-    <with|par-left|2tab|3.6.1<space|2spc>Ipotesi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-53>>
-
-    <with|par-left|2tab|3.6.2<space|2spc>Tesi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-54>>
-
-    <with|par-left|2tab|3.6.3<space|2spc>Dimostrazione
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-55>>
+    <no-break><pageref|auto-36>>
 
     <with|par-left|1tab|3.7<space|2spc>Primo teorema di composizione
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-56>>
-
-    <with|par-left|2tab|3.7.1<space|2spc>Ipotesi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-57>>
-
-    <with|par-left|2tab|3.7.2<space|2spc>Tesi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-58>>
-
-    <with|par-left|2tab|3.7.3<space|2spc>Dimostrazione
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-59>>
+    <no-break><pageref|auto-37>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Appunti
     del 7 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-60><vspace|0.5fn>
+    <no-break><pageref|auto-38><vspace|0.5fn>
   </table-of-contents>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 
   <section|Appunti del 3 marzo 2015>
 
@@ -464,16 +397,20 @@
 
   <subsubsection|Teorema>
 
-  <paragraph|Ipotesi>
+  <strong|Ipotesi>
 
   <math|x\<in\><with|math-font|Bbb|R><rsup|N><space|1em><protect>\<Longrightarrow\>x=<around|(|x<rsub|1>,x<rsub|2>,......,x<rsub|N>|)>>
 
-  <paragraph|Tesi>
+  <\strong>
+    Tesi
+  </strong>
 
   <with|font-series|bold|><math|<around|\||x<rsub|i>|\|>\<le\><around|\||x|\|><space|1em>\<forall\><space|0.27em>i=1....*N>
   <protect>
 
-  <paragraph|Dimostrazione>
+  \;
+
+  <strong|Dimostrazione>
 
   Consideriamo
 
@@ -528,16 +465,16 @@
 
   <subsubsection|Teorema 1>
 
-  <paragraph|Ipotesi>\ 
+  <strong|Ipotesi>
 
   <em|Supponiamo che l'insieme <math|C> si chiuso e che la successione
   <math|x<rsub|n>\<in\>C> si comporti così: <math|x<rsub|n>\<to\>x>>
 
-  <with|font-series|bold|Tesi> <space|0.5cm>
+  <strong|Tesi>
 
   <math|x\<in\>C>
 
-  <paragraph|Dimostrazione>
+  <strong|Dimostrazione>
 
   Ipotizziamo per assurdo che <math|x\<ni\>C> . Ma cosa è <math|x>? Iniziamo
   partendo dalla definizione di punto convergente:
@@ -562,9 +499,11 @@
   consideriamo <math|x<rsub|1>,x<rsub|2>,....,x<rsub|N>> elementi distinti di
   <math|\<Omega\>>>
 
-  <paragraph|Tesi>
+  <strong|Tesi>
 
-  <space|0.3cm><math|x<rsub|n>\<to\>x<rsub|0>><next-line><next-line><paragraph|Dimostrazione>
+  <space|0.3cm><math|x<rsub|n>\<to\>x<rsub|0>><next-line>
+
+  <strong|Dimostrazione>
 
   Per procedere con questa dimostrazione dobbiamo seguire il principio di
   induzione e quindi specificare
@@ -625,7 +564,7 @@
 
   <subsubsection|Teorema sulle funzioni continue a valori vettoriali>
 
-  <paragraph|Ipotesi:>
+  <strong|Ipotesi>
 
   <\itemize-minus>
     <item><math|f : \<Omega\> \<rightarrow\> \<bbb-R\><rsup|N>>
@@ -635,7 +574,7 @@
     <item><math|\<Omega\> \<in\> \<bbb-R\><rsup|m>>
   </itemize-minus>
 
-  <paragraph|Tesi: >
+  <strong|Tesi>
 
   <math|<text| \ \ \ \ \ \ \ \ > <text| \ \ \ \ \ \ \ >\<forall\>
   \<varepsilon\> \<gtr\> 0 <text| \ \ >\<exists\> \<delta\>\<gtr\> 0 : <text|
@@ -644,7 +583,11 @@
   \|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>\| \<less\>
   \<varepsilon\><space|1em> >
 
-  <paragraph|Dimostrazione>
+  <\strong>
+    Dimostrazione
+
+    \;
+  </strong>
 
   \;
 
@@ -681,19 +624,19 @@
 
   <subsection|Teorema>
 
-  <paragraph|Ipotesi>
+  <strong|Ipotesi>
 
   <\math>
     x<rsub|0>\<in\>\<Omega\>
   </math>
 
-  <paragraph|Tesi>
+  <strong|Tesi>
 
   <\math>
     x<rsub|n>\<rightarrow\>x<rsub|0>
   </math>
 
-  <paragraph|Dimostrazione>
+  <strong|Dimostrazione>
 
   Si procede per induzione
 
@@ -736,13 +679,9 @@
   Se <math|\<Omega\>> è chiuso e <math|x<rsub|0>\<in\><space|0.27em>\<Omega\>>,
   <math|x<rsub|0>\<in\>\<Omega\>>
 
-  <subsection|Definizione>
-
-  Un insieme è chiuso se contiene la frontiera
-
   <subsection|Teorema della permanenza del segno>
 
-  <subsubsection|Ipotesi>
+  <strong|Ipotesi>
 
   <\itemize>
     <item><math|f:\<Omega\>\<rightarrow\><with|math-font|Bbb|R>> continua in
@@ -751,13 +690,13 @@
     <item><math|f<around|(|x<rsub|0>|)>\<less\>0>
   </itemize>
 
-  <subsubsection|Tesi>
+  <strong|Tesi>
 
   <\equation*>
     \<exists\><space|1em>\<delta\>\<gtr\>0<space|1em>\<forall\>x\<in\>B<rsub|\<delta\>><around|(|x<rsub|0>|)>*<space|1em>f<around|(|x|)>\<less\>0
   </equation*>
 
-  <subsubsection|Dimostrazione>
+  <strong|Dimostrazione>
 
   Dalla definizione di continuità abbiamo che:
 
@@ -783,7 +722,7 @@
 
   <subsection|Teorema di continuità della funzione somma (nome provvisorio)>
 
-  <subsubsection|Ipotesi>
+  <strong|Ipotesi>
 
   <\itemize>
     <item><math|f:\<Omega\>\<longrightarrow\><with|math-font|Bbb*|R<rsup|>><rsup|N>>
@@ -791,17 +730,22 @@
     <item><math|f:\<Omega\>\<longrightarrow\><with|math-font|Bbb*|R><rsup|N>>
 
     <item><math|f,g > continue in <math|x<rsub|0>>
+
+    \;
   </itemize>
 
-  <subsubsection|Tesi>
+  <strong|Tesi>
 
   <math|h<around|(|x|)>=f<around|(|x|)>+g<around|(|x|)>> è continua in
   <math|x<rsub|0>><next-line>In pratica, se due funzioni sono continue in un
   punto anche la loro somma sarà continua in tal punto.
 
-  <subsubsection|Dimostrazione>
+  \;
 
-  <math|\<forall\>\<epsilon\>\<gtr\>0\<exists\>\<delta\>\<gtr\>0> tale che
+  <strong|Dimostrazione<strong|>>
+
+  <math|\<forall\>\<epsilon\>\<gtr\>0 <text|
+  \ \ \ >\<exists\>\<delta\>\<gtr\>0> tale che
   <math|\<forall\>x\<in\>d*o*m*<around|(|f+g|)>*<around|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
 
   <\equation*>
@@ -856,7 +800,9 @@
 
   <subsection|Primo teorema di composizione>
 
-  <subsubsection|Ipotesi>
+  \;
+
+  <strong|Ipotesi>
 
   <\itemize>
     <item><math|f:\<Omega\> \<longrightarrow\><with|math-font|Bbb*|R><rsup|N>
@@ -867,13 +813,15 @@
     <item><math|x<rsub|n>\<longrightarrow\>x\<in\>\<Omega\>>
   </itemize>
 
-  <subsubsection|Tesi>
+  <strong|Tesi>
 
   <\equation*>
     lim f<around*|(|x<rsub|n>|)>=f<around*|(|x|)>
   </equation*>
 
-  <subsubsection|Dimostrazione>
+  <strong|Dimostrazione>
+
+  \;
 
   <\equation*>
     \<forall\>\<epsilon\>\<gtr\>0<space|1em>\<exists\> \<nu\> :
@@ -914,61 +862,61 @@
     <associate|auto-10|<tuple|1.1.8|3>>
     <associate|auto-11|<tuple|1.1.9|3>>
     <associate|auto-12|<tuple|1.1.10|3>>
-    <associate|auto-13|<tuple|2|4>>
-    <associate|auto-14|<tuple|2.1|4>>
-    <associate|auto-15|<tuple|2.1.1|4>>
+    <associate|auto-13|<tuple|2|3>>
+    <associate|auto-14|<tuple|2.1|3>>
+    <associate|auto-15|<tuple|2.1.1|3>>
     <associate|auto-16|<tuple|2.1.2|4>>
     <associate|auto-17|<tuple|2.1.3|4>>
     <associate|auto-18|<tuple|2.2|4>>
     <associate|auto-19|<tuple|2.2.1|4>>
     <associate|auto-2|<tuple|1.1|2>>
     <associate|auto-20|<tuple|2.2.2|4>>
-    <associate|auto-21|<tuple|2.2.2.1|4>>
-    <associate|auto-22|<tuple|2.2.2.2|5>>
-    <associate|auto-23|<tuple|2.2.2.3|5>>
-    <associate|auto-24|<tuple|2.2.3|5>>
-    <associate|auto-25|<tuple|2.2.4|5>>
-    <associate|auto-26|<tuple|2.2.4.1|6>>
-    <associate|auto-27|<tuple|2.2.4.2|6>>
-    <associate|auto-28|<tuple|2.2.5|6>>
-    <associate|auto-29|<tuple|2.2.5.1|6>>
+    <associate|auto-21|<tuple|2.2.3|5>>
+    <associate|auto-22|<tuple|2.2.4|5>>
+    <associate|auto-23|<tuple|2.2.5|6>>
+    <associate|auto-24|<tuple|2.2.6|6>>
+    <associate|auto-25|<tuple|2.3|6>>
+    <associate|auto-26|<tuple|2.3.1|6>>
+    <associate|auto-27|<tuple|2.3.2|7>>
+    <associate|auto-28|<tuple|2.3.3|7>>
+    <associate|auto-29|<tuple|2.3.4|7>>
     <associate|auto-3|<tuple|1.1.1|2>>
-    <associate|auto-30|<tuple|2.2.5.2|6>>
-    <associate|auto-31|<tuple|2.2.6|6>>
-    <associate|auto-32|<tuple|2.3|7>>
-    <associate|auto-33|<tuple|2.3.1|7>>
-    <associate|auto-34|<tuple|2.3.2|7>>
-    <associate|auto-35|<tuple|2.3.2.1|7>>
-    <associate|auto-36|<tuple|2.3.2.2|7>>
-    <associate|auto-37|<tuple|2.3.2.3|7>>
-    <associate|auto-38|<tuple|2.3.3|7>>
-    <associate|auto-39|<tuple|2.3.4|7>>
+    <associate|auto-30|<tuple|3|7>>
+    <associate|auto-31|<tuple|3.1|7>>
+    <associate|auto-32|<tuple|3.2|7>>
+    <associate|auto-33|<tuple|3.3|8>>
+    <associate|auto-34|<tuple|3.4|8>>
+    <associate|auto-35|<tuple|3.5|8>>
+    <associate|auto-36|<tuple|3.6|9>>
+    <associate|auto-37|<tuple|4|9>>
+    <associate|auto-38|<tuple|4|10>>
+    <associate|auto-39|<tuple|4|7>>
     <associate|auto-4|<tuple|1.1.2|2>>
-    <associate|auto-40|<tuple|3|8>>
-    <associate|auto-41|<tuple|3.1|8>>
-    <associate|auto-42|<tuple|3.2|8>>
-    <associate|auto-43|<tuple|3.2.0.1|8>>
-    <associate|auto-44|<tuple|3.2.0.2|8>>
-    <associate|auto-45|<tuple|3.2.0.3|8>>
-    <associate|auto-46|<tuple|3.3|8>>
-    <associate|auto-47|<tuple|3.4|8>>
-    <associate|auto-48|<tuple|3.5|9>>
-    <associate|auto-49|<tuple|3.5.1|9>>
+    <associate|auto-40|<tuple|4|8>>
+    <associate|auto-41|<tuple|4|8>>
+    <associate|auto-42|<tuple|4|8>>
+    <associate|auto-43|<tuple|4|8>>
+    <associate|auto-44|<tuple|4|8>>
+    <associate|auto-45|<tuple|4|8>>
+    <associate|auto-46|<tuple|4|8>>
+    <associate|auto-47|<tuple|4|8>>
+    <associate|auto-48|<tuple|4|9>>
+    <associate|auto-49|<tuple|4|9>>
     <associate|auto-5|<tuple|1.1.3|2>>
-    <associate|auto-50|<tuple|3.5.2|9>>
-    <associate|auto-51|<tuple|3.5.3|9>>
-    <associate|auto-52|<tuple|3.6|10>>
-    <associate|auto-53|<tuple|3.6.1|10>>
-    <associate|auto-54|<tuple|3.6.2|10>>
-    <associate|auto-55|<tuple|3.6.3|10>>
-    <associate|auto-56|<tuple|3.7|10>>
-    <associate|auto-57|<tuple|3.7.1|?>>
-    <associate|auto-58|<tuple|3.7.2|?>>
-    <associate|auto-59|<tuple|3.7.3|?>>
+    <associate|auto-50|<tuple|4|9>>
+    <associate|auto-51|<tuple|4|9>>
+    <associate|auto-52|<tuple|4|10>>
+    <associate|auto-53|<tuple|4|10>>
+    <associate|auto-54|<tuple|4|10>>
+    <associate|auto-55|<tuple|4|10>>
+    <associate|auto-56|<tuple|4|10>>
+    <associate|auto-57|<tuple|4|?>>
+    <associate|auto-58|<tuple|4|?>>
+    <associate|auto-59|<tuple|4|?>>
     <associate|auto-6|<tuple|1.1.4|2>>
     <associate|auto-60|<tuple|4|?>>
-    <associate|auto-7|<tuple|1.1.5|3>>
-    <associate|auto-8|<tuple|1.1.6|3>>
+    <associate|auto-7|<tuple|1.1.5|2>>
+    <associate|auto-8|<tuple|1.1.6|2>>
     <associate|auto-9|<tuple|1.1.7|3>>
   </collection>
 </references>
@@ -1056,161 +1004,77 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|4tab>|Ipotesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Tesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23><vspace|0.15fn>>
-
       <with|par-left|<quote|2tab>|2.2.3<space|2spc>Definizione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
+      <no-break><pageref|auto-21>>
 
       <with|par-left|<quote|2tab>|2.2.4<space|2spc>Teorema 1
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
-
-      <with|par-left|<quote|4tab>|Ipotesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27><vspace|0.15fn>>
+      <no-break><pageref|auto-22>>
 
       <with|par-left|<quote|2tab>|2.2.5<space|2spc>Teorema 2
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>>
-
-      <with|par-left|<quote|4tab>|Tesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30><vspace|0.15fn>>
+      <no-break><pageref|auto-23>>
 
       <with|par-left|<quote|2tab>|2.2.6<space|2spc>Esempio
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|1tab>|2.3<space|2spc>Continuità
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-25>>
 
       <with|par-left|<quote|2tab>|2.3.1<space|2spc>Definizione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
+      <no-break><pageref|auto-26>>
 
       <with|par-left|<quote|2tab>|2.3.2<space|2spc>Teorema sulle funzioni
       continue a valori vettoriali <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
-
-      <with|par-left|<quote|4tab>|Ipotesi:
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Tesi: \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37><vspace|0.15fn>>
+      <no-break><pageref|auto-27>>
 
       <with|par-left|<quote|2tab>|2.3.3<space|2spc>Definizione di convergenza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|2tab>|2.3.4<space|2spc>Esempio
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-29>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Appunti
       del 5 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40><vspace|0.5fn>
+      <no-break><pageref|auto-30><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>Dimostrazione del 4/3/15
       rivisitata <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
+      <no-break><pageref|auto-31>>
 
       <with|par-left|<quote|1tab>|3.2<space|2spc>Teorema
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
-
-      <with|par-left|<quote|4tab>|Ipotesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Tesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45><vspace|0.15fn>>
+      <no-break><pageref|auto-32>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Fatto
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>>
+      <no-break><pageref|auto-33>>
 
       <with|par-left|<quote|1tab>|3.4<space|2spc>Definizione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|3.5<space|2spc>Teorema della permanenza del
       segno <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
-
-      <with|par-left|<quote|2tab>|3.5.1<space|2spc>Ipotesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
-
-      <with|par-left|<quote|2tab>|3.5.2<space|2spc>Tesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>>
-
-      <with|par-left|<quote|2tab>|3.5.3<space|2spc>Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>>
+      <no-break><pageref|auto-35>>
 
       <with|par-left|<quote|1tab>|3.6<space|2spc>Teorema di continuità della
       funzione somma (nome provvisorio) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
-
-      <with|par-left|<quote|2tab>|3.6.1<space|2spc>Ipotesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
-
-      <with|par-left|<quote|2tab>|3.6.2<space|2spc>Tesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
-
-      <with|par-left|<quote|2tab>|3.6.3<space|2spc>Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|3.7<space|2spc>Primo teorema di
       composizione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56>>
-
-      <with|par-left|<quote|2tab>|3.7.1<space|2spc>Ipotesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>>
-
-      <with|par-left|<quote|2tab>|3.7.2<space|2spc>Tesi
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>>
-
-      <with|par-left|<quote|2tab>|3.7.3<space|2spc>Dimostrazione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>>
+      <no-break><pageref|auto-37>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Appunti
       del 7 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60><vspace|0.5fn>
+      <no-break><pageref|auto-38><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
