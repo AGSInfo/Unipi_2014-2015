@@ -26,7 +26,7 @@
 
   <subsubsection|Teorema di prova>
 
-  <paragraph|Ipotesi>
+  <strong|Ipotesi>
 
   <\itemize>
     <item>Ipotesi 1
@@ -34,11 +34,13 @@
     <item>Ipotesi 2
   </itemize>
 
-  <paragraph|Tesi>
+  <\strong>
+    Tesi
+  </strong>
 
   Esiste un <math|\<epsilon\>> ecc...
 
-  <paragraph|Dimostrazione>
+  <strong|Dimostrazione>
 
   Passaggi della dimostrazione.
 
@@ -50,8 +52,9 @@
   Il testo Punto esterno è di tipo Sotto-sotto-sezione e viene inserito con
   <verbatim|ALT+3>
 
-  I testi Ipotesi, Tesi e Dimostrazione sono di tipo Paragrafo e vengono
-  inseriti con <verbatim|ALT+4>
+  I testi Ipotesi, Tesi e Dimostrazione sono semplicemente testo grassetto e
+  vengono inseriti con <verbatim|F6>; questo evita che le voci vengano
+  inserite inutilmente nell'indice
 
   \;
 
@@ -123,22 +126,19 @@
   \;
 </body>
 
-<initial|<\collection>
-</collection>>
-
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-10|<tuple|2.2|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-11|<tuple|2.3|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-2|<tuple|1.1|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-3|<tuple|1.1.1|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-4|<tuple|1.1.2|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-5|<tuple|1.1.2.1|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-6|<tuple|1.1.2.2|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-7|<tuple|1.1.2.3|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-8|<tuple|2|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
-    <associate|auto-9|<tuple|2.1|?|../../.TeXmacs/texts/scratch/no_name_5.tm>>
+    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-10|<tuple|2.3|?>>
+    <associate|auto-11|<tuple|2.3|?>>
+    <associate|auto-2|<tuple|1.1|?>>
+    <associate|auto-3|<tuple|1.1.1|?>>
+    <associate|auto-4|<tuple|1.1.2|?>>
+    <associate|auto-5|<tuple|2|?>>
+    <associate|auto-6|<tuple|2.1|?>>
+    <associate|auto-7|<tuple|2.2|?>>
+    <associate|auto-8|<tuple|2.3|?>>
+    <associate|auto-9|<tuple|2.3|?>>
   </collection>
 </references>
 
@@ -148,6 +148,45 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Appunti
       del<space|0.2spc> 00 gennaio 0000> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Titolo dell'argomento
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>>
+
+      <with|par-left|<quote|2tab>|1.1.1<space|2spc>Punto esterno
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|2tab>|1.1.2<space|2spc>Teorema di prova
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|4tab>|Ipotesi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|Tesi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|Dimostrazione
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7><vspace|0.15fn>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Note
+      generali> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Formule matematiche
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Formattazione del testo
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Layout della pagina
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
     </associate>
   </collection>
 </auxiliary>

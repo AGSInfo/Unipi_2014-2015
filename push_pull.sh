@@ -4,7 +4,9 @@
 
 # Script di upload/download delle modifiche tramite riga di comando
 
+# Server al quale effettuare l'upload/download
 SERVER=https://github.com/AGSInfo/Unipi_2014-2015
+# Branch, per adesso 'master' è l'unico disponibile nel repository
 BRANCH=master
 
 if [ $# -ne 1 ]
@@ -17,6 +19,9 @@ then
 fi
 
 command -v "git" >/dev/null && continue || { echo "Comando git non trovato."; exit 1; }
+
+echo "SERVER: $SERVER"
+echo "BRANCH: $BRANCH"
 
 # Funzione di push
 
