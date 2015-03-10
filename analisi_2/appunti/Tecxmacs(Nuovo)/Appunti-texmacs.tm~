@@ -206,7 +206,9 @@
   seguente condizione :
 
   <\equation*>
-    \<exists\><space|0.27em>\<delta\>\<gtr\>0:B<rsub|\<delta\>><around|(|x<rsub|0>|)>\<subseteq\>\<Omega\>
+    \<exists\><space|0.27em> \<delta\> <text| >\<gtr\>0<text| >: <text|
+    >B<rsub|\<delta\><text| >><around|(|x<rsub|0>|)><text|
+    >\<subseteq\><text| \ >\<Omega\>
   </equation*>
 
   Ovvero spiegato a parole se l'insieme <math|\<Omega\>> contiene il punto
@@ -395,7 +397,7 @@
 
   <strong|Ipotesi>
 
-  <math|x\<in\><with|math-font|Bbb|R><rsup|N><space|1em><protect>\<Longrightarrow\>x=<around|(|x<rsub|1>,x<rsub|2>,......,x<rsub|N>|)>>
+  - <math|x\<in\><with|math-font|Bbb|R><rsup|N><space|1em><protect>\<Longrightarrow\>x=<around|(|x<rsub|1>,x<rsub|2>,......,x<rsub|N>|)>>
 
   <\strong>
     Tesi
@@ -740,9 +742,8 @@
 
   <strong|Dimostrazione<strong|>>
 
-  <math|\<forall\>\<epsilon\>\<gtr\>0 <text|
-  \ \ \ >\<exists\>\<delta\>\<gtr\>0> tale che
-  <math|\<forall\>x\<in\>d*o*m*<around|(|f+g|)>*<around|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
+  <math|\<forall\>\<epsilon\>\<gtr\>0 <text| \ \ \ >\<exists\><space|1em>
+  \<delta\>\<gtr\>0> tale che <math|\<forall\>x\<in\>d*o*m*<around|(|f+g|)>*<around|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
 
   <\equation*>
     <around|\||h<around|(|x|)>-h<around|(|x<rsub|0>|)>|\|>\<less\>\<epsilon\>
@@ -838,9 +839,84 @@
 
   Per quale <math|n> è verificata?
 
-  <section|Appunti del 7 marzo 2015>
+  <section|Appunti del 10 marzo 2015>
+
+  <subsection|Teorema (sulla composizione)>
 
   \;
+
+  <\strong>
+    Ipotesi
+  </strong>
+
+  <\itemize-dot>
+    <item><math|f : \<Omega\>\<rightarrow\>\<Omega\><rprime|'>>
+
+    <item><math|g : \<Omega\><rprime|'> \<rightarrow\> \<Omega\><rprime|''>>
+
+    <item><math|\<Omega\><rprime|'> \<subseteq\>
+    \<bbb-R\><rsup|M>\<nocomma\>,\<Omega\><rprime|''> \<subseteq\>
+    R<rsup|N>,\<Omega\><rprime|''> \<subseteq\> R<rsup|P>>
+
+    <item>f continua in <math|x<rsub|0>>
+
+    <item>g continua in <math|f<around*|(|x<rsub|0>|)>>
+
+    <item>h(x) = g(f(x))
+
+    <item><math|h : \<Omega\> \<rightarrow\>\<Omega\><rprime|''>>
+  </itemize-dot>
+
+  \;
+
+  <\strong>
+    Tesi
+  </strong>
+
+  <\itemize>
+    <item>h(x) continua in <math|x<rsub|0>>
+  </itemize>
+
+  \;
+
+  <strong|Dimostrazione>
+
+  Dato che conosciamo il concetto di continuità scriviamo direttamente la
+  disecuazione finale.
+
+  <\equation*>
+    \| h<around*|(|x|)>-h<around*|(|x<rsub|0>|)>\| \<less\> \<varepsilon\>
+  </equation*>
+
+  da cui si ottiene\ 
+
+  <\equation*>
+    \|g<around*|(|f<around*|(|x|)>|)>-g<around*|(|f<around*|(|x<rsub|0>|)>|)>\|
+    \<less\> \<varepsilon\>
+  </equation*>
+
+  dalla definzione di continuità che dice\ 
+
+  <\equation*>
+    \<forall\>\<varepsilon\> <text| >\<exists\> \<sigma\> \<gtr\>0<text|
+    \ >:<text| \ \ >\<forall\>y\<in\>dom<around*|(|y|)><text| \ >:<text|
+    \ >\|y-f<around*|(|x<rsub|0>|)>\| \<less\> \<sigma\> <text|
+    \ >\<Longrightarrow\> <text| \ >\|g<around*|(|y|)>-g<around*|(|y<rsub|0>|)>\|
+    \<less\> \<varepsilon\>
+  </equation*>
+
+  Che è vero se e solo se <math|\|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>\|\<less\>
+  \<sigma\>>.
+
+  Con questi passaggi abbiamo dimostrato la continuità di g(avente come
+  argomento f(x)) adesso non ci rimane che dimostrare la continuità di f (in
+  quanto un funzione composta da funzioni continue risulta essere continua).\ 
+
+  \;
+
+  \;
+
+  <math|>
 </body>
 
 <\initial>
@@ -885,7 +961,7 @@
     <associate|auto-35|<tuple|3.5|8>>
     <associate|auto-36|<tuple|3.6|9>>
     <associate|auto-37|<tuple|4|9>>
-    <associate|auto-38|<tuple|4|10>>
+    <associate|auto-38|<tuple|4.1|10>>
     <associate|auto-39|<tuple|4|7>>
     <associate|auto-4|<tuple|1.1.2|2>>
     <associate|auto-40|<tuple|4|8>>
