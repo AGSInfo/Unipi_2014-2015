@@ -268,8 +268,48 @@ Concludendo, non ci sono alternative allo studio degli zeri del numeratore e del
 Una tecnica piuttosto nota, efficace,ed insegnata nelle scuole, per il calcolo dei limiti fa uso del cambio di variabile, un esempio :
 $$\lim_{x \to 0} \frac{\sin x^2}{x^2} = \lim_{y \to 0}\frac{\sin y}{y} = 1$$
 Tecnica elegante, suggestiva,apparentemente elegante ma, in generale, FALSA!. Infatti, siano
+\[g(y) = \left\{
+  \begin{array}{lr}
+    1 \qquad se \; y = 0  \\
+   0  \qquad altrimenti 
+  \end{array}
+\right.
+\qquad e \qquad f(x) = x\sin \frac{1}{x}
+\]
+sia si ha che $\lim_{x \to 0}f(x) = 0$ e $\lim_{y \to 0}g(y) = 0$, in tal caso g(f(x)), che calcoleremo esplicitamente più giù, dovrebbe avere limite 
+$$\lim_{x \to 0}g(f(x)) "=_{y = f(x)}" \lim_{y \to 0}g(y) = 0$$
+ma ciò è falso, infatti : 
+\[g(f(y)) = \left\{
+  \begin{array}{lr}
+    1 \qquad se \; f(y) = 0 \Leftrightarrow \frac{1}{y} = K\pi \Rightarrow y = \frac{1}{K\pi} \; K \in \mathbb{Z} \\
+   0  \qquad altrimenti 
+  \end{array}
+\right.
+\]
+Poiché $\lim_{K \to +\infty}\frac{1}{K\pi} = 0$, vuol dire che n ogni intorno di 0 esistono punti sul quale $g(f(y)) = 1$, e dunque essa non può essere infinitesima in 0, in quanto viene violata la condizione di Cauchy. \\
+Tutto diventa più chiaro se si cerca di dimostrare il teorema corrispondente.
 \subsection{"Teorema"}
-\subsection*{Teorema 1}
+Una premessa molto importante da fare prima di esporre questo teorema è quella di affermare che questo teorema è \textbf{FALSO!}. \\  \\ 
+\textbf{Teorema: }\emph{Siano $f : \Omega \to \Sigma$ e $g : \Sigma \to H$ con $\Omega \subseteq \mathbb{R}^n$, $\Sigma \subseteq \mathbb{R}^m$, $H \subseteq \mathbb{R}^\rho$ e \hspace*{1.85cm}valgono i limiti :}
+ $$\lim_{x \to x_0}f(x) = L \qquad \qquad \lim_{y \to L}g(y) = M$$
+\\ \\
+\textbf{Allora: } \emph{(sappiamo dall'esempio che è falso)}:
+$$\lim_{x \to x_0}g(f(x)) = \lim_{y \to \L}g(y) = M$$ \\ \\
+\underline{DIMOSTRAZIONE} \\ \\
+Per provare la tesi occorre verificare che 
+$$\forall \; \epsilon > 0 \; \; \exists\;\delta > 0 \; : \;\forall \; x \in dom(g(f(x))) \; : \; |x - x_0| < \delta \; con \; x \neq x_0$$
+si abbia che $|g(f(x))- M| < \epsilon $. \\ 
+Dall'ipotesi sulla g si ha che, in corrispondenza allo \textbf{stesso} $\epsilon$ precedente
+$$\exists \; \delta > 0 \; : \; \forall \; y \in dom(g) \;|y-L| < \delta \;\; y \neq L $$
+risulta $|g(y)-M|<\epsilon$, che è esattamente quanto richiesto, a patto di poter sostituire y con f(x) (cioè cambiare variabile!). \\
+Per poter fare y = f(x) occorre che:
+\begin{itemize}
+\item $f(x) \in dom(g)$
+\item $|f(x) - L| < \delta$
+\item $f(x) \neq L$
+\end{itemize}
+Le ipotesi assunte garantiscono la prime due condizioni,purché $f:\Omega \to \Sigma$ e purché dall'ipotesi, sia f, $\lim_{x \to x_0}f(x) = L$, e quindi, dato il $\delta$ precedente esite
+\subsection{Teorema 1}
 \subsection{Teorema 2}
 \subsection{Teorema 3}
 \subsection{Conclusione}
@@ -280,6 +320,7 @@ Tecnica elegante, suggestiva,apparentemente elegante ma, in generale, FALSA!. In
 \subsection{Esempi}
 \subsection{Teorema di Fermat}
 \subsection{Conclusione}
+\newpage
 \section{Lista definizioni}
 \subsubsection{Definizione di Distanza}
 \hspace*{1cm}

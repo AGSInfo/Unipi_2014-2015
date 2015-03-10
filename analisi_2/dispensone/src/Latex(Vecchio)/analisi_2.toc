@@ -28,25 +28,26 @@
 \contentsline {section}{\numberline {3}Il cambio di variabile nel limite}{17}
 \contentsline {subsection}{\numberline {3.1}Premessa}{17}
 \contentsline {subsection}{\numberline {3.2}"Teorema"}{17}
-\contentsline {subsection}{\numberline {3.3}Teorema 2}{17}
-\contentsline {subsection}{\numberline {3.4}Teorema 3}{17}
-\contentsline {subsection}{\numberline {3.5}Conclusione}{17}
-\contentsline {section}{\numberline {4}Calcolo Differenziale}{17}
-\contentsline {subsection}{\numberline {4.1}Premessa}{17}
-\contentsline {subsection}{\numberline {4.2}Definizione}{17}
-\contentsline {subsection}{\numberline {4.3}Note}{17}
-\contentsline {subsection}{\numberline {4.4}Esempi}{17}
-\contentsline {subsection}{\numberline {4.5}Teorema di Fermat}{17}
-\contentsline {subsection}{\numberline {4.6}Conclusione}{17}
-\contentsline {section}{\numberline {5}Lista definizioni}{17}
-\contentsline {subsubsection}{\numberline {5.0.1}Definizione di Distanza}{17}
-\contentsline {subsubsection}{\numberline {5.0.2}Definizione di convergenza}{18}
-\contentsline {subsubsection}{\numberline {5.0.3}Definizione di sfera}{18}
-\contentsline {subsubsection}{\numberline {5.0.4}Definizione di punto interno}{18}
-\contentsline {subsubsection}{\numberline {5.0.5}Definizione di Punto esterno}{18}
-\contentsline {subsubsection}{\numberline {5.0.6}Definizione di punto di frontiera}{19}
-\contentsline {subsubsection}{\numberline {5.0.7}Definizione di punto di accumulazione}{19}
-\contentsline {subsubsection}{\numberline {5.0.8}Definizione di punto isolato}{19}
-\contentsline {subsubsection}{\numberline {5.0.9}Definizione di insieme aperto/chiuso}{19}
-\contentsline {subsubsection}{\numberline {5.0.10}Definizione di insieme limitato}{19}
-\contentsline {section}{\numberline {6}Esercizi}{20}
+\contentsline {subsection}{\numberline {3.3}Teorema 1}{18}
+\contentsline {subsection}{\numberline {3.4}Teorema 2}{18}
+\contentsline {subsection}{\numberline {3.5}Teorema 3}{18}
+\contentsline {subsection}{\numberline {3.6}Conclusione}{18}
+\contentsline {section}{\numberline {4}Calcolo Differenziale}{18}
+\contentsline {subsection}{\numberline {4.1}Premessa}{18}
+\contentsline {subsection}{\numberline {4.2}Definizione}{18}
+\contentsline {subsection}{\numberline {4.3}Note}{18}
+\contentsline {subsection}{\numberline {4.4}Esempi}{18}
+\contentsline {subsection}{\numberline {4.5}Teorema di Fermat}{18}
+\contentsline {subsection}{\numberline {4.6}Conclusione}{18}
+\contentsline {section}{\numberline {5}Lista definizioni}{19}
+\contentsline {subsubsection}{\numberline {5.0.1}Definizione di Distanza}{19}
+\contentsline {subsubsection}{\numberline {5.0.2}Definizione di convergenza}{19}
+\contentsline {subsubsection}{\numberline {5.0.3}Definizione di sfera}{19}
+\contentsline {subsubsection}{\numberline {5.0.4}Definizione di punto interno}{19}
+\contentsline {subsubsection}{\numberline {5.0.5}Definizione di Punto esterno}{20}
+\contentsline {subsubsection}{\numberline {5.0.6}Definizione di punto di frontiera}{20}
+\contentsline {subsubsection}{\numberline {5.0.7}Definizione di punto di accumulazione}{20}
+\contentsline {subsubsection}{\numberline {5.0.8}Definizione di punto isolato}{20}
+\contentsline {subsubsection}{\numberline {5.0.9}Definizione di insieme aperto/chiuso}{20}
+\contentsline {subsubsection}{\numberline {5.0.10}Definizione di insieme limitato}{20}
+\contentsline {section}{\numberline {6}Esercizi}{21}
