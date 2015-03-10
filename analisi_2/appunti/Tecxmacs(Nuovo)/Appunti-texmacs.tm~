@@ -153,8 +153,36 @@
     <no-break><pageref|auto-36>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Appunti
-    del 7 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    del 10 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37><vspace|0.5fn>
+
+    <with|par-left|1tab|4.1<space|2spc>Teorema (sulla composizione)
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-38>>
+
+    <with|par-left|1tab|4.2<space|2spc>Definizione insieme connesso
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-39>>
+
+    <with|par-left|1tab|4.3<space|2spc>Teorema degli zeri
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-40>>
+
+    <with|par-left|1tab|4.4<space|2spc>Teorema di Weistrass (sui massimi)
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-41>>
+
+    <with|par-left|1tab|4.5<space|2spc>Definzioni di limiti
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-42>>
+
+    <with|par-left|2tab|4.5.1<space|2spc>Limite di funzione convergente
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-43>>
+
+    <with|par-left|2tab|4.5.2<space|2spc>Limite di funzione divergente
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-44>>
   </table-of-contents>
 
   \;
@@ -910,13 +938,118 @@
 
   Con questi passaggi abbiamo dimostrato la continuità di g(avente come
   argomento f(x)) adesso non ci rimane che dimostrare la continuità di f (in
-  quanto un funzione composta da funzioni continue risulta essere continua).\ 
+  quanto un funzione composta da funzioni continue risulta essere
+  continua).Per essere sicuri che f sia continua scriviamo la definzione\ 
+
+  <\equation*>
+    \<exists\> <text| >\<delta\><text| > : <text| >x<text| > \<in\><text|
+    >dom<around*|(|f|)> <text| >:<text| > \|x-x<rsub|0>\| \<less\> 0
+  </equation*>
+
+  che ci consente di ammettere che verifica la condizione sopra richiesta.
+
+  \;
+
+  <subsection|Definizione insieme connesso>
+
+  \ Un insieme si dice <strong|connesso>(ad archi) se:
+
+  <\equation*>
+    \<forall\><text| >x<rsub|1><text|,><text|> x<rsub|2> <text| >\<in\>
+    <text| >\<Omega\><text| esiste >\<gamma\>:<around*|[|0,1|]>\<rightarrow\>
+    \<Omega\> <text|oontinua> : \<gamma\><around*|(|0|)> = x<rsub|1> <text|
+    >e<text| > \<gamma\><around*|(|1|)> = x<rsub|2>
+  </equation*>
+
+  <subsection|Teorema degli zeri>
+
+  \;
+
+  <strong|Ipotesi>
+
+  <\itemize-dot>
+    <item>f continua
+
+    <item>f definita in un intervallo <math|\<Longrightarrow\>> insieme
+    connesso.
+
+    <item><math|\<exists\><text| >x<rsub|1>,x<rsub|2> :
+    f<around*|(|x<rsub|1>|)>f<around*|(|x<rsub|2>|)> \<less\> 0> (ovvero sono
+    di segno opposto).
+
+    \;
+  </itemize-dot>
+
+  <strong|Tesi>
+
+  <\itemize-dot>
+    <item><math|\<exists\>> x*<math|> : f(x*) = 0 (ovviamente x* appartente
+    all'insieme connesso)
+  </itemize-dot>
+
+  \;
+
+  <strong|Dimostrazione>
+
+  Per effettuare questa dimostrazione dobbiamo definire una nuova funzione
+  h(x) = f(<math|\<gamma\>>(x)).Il dominio di h è l'intervallo [0,1] da cui
+  otteniamo che
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|h<around*|(|0|)> =
+    f<around*|(|\<gamma\><around*|(|0|)>|)> = f<around*|(|x<rsub|1>|)>
+    \<gtr\> 0>|<cell|>|<cell|>>|<row|h<around*|(|1|)> =
+    f<around*|(|\<gamma\><around*|(|1|)>|)>= f<around*|(|x<rsub|2>|)>
+    \<less\> 0|<cell|>|<cell|>>>>
+  </eqnarray*>
+
+  Questi due risultati sono ottenuti dalla definizione di insieme connesso.
+  La funzione h è continua perchè composizione di funzioni contiune, quindi
+  esisterà un t* <math|\<in\>> ]0,1[: h(t*) = 0. Questo perchè h(t*) =
+  f(<math|\<gamma\>>(t*) <math|\<Longrightarrow\>> x* = <math|\<gamma\>>(t*)
+  che per definizione è un punto di <math|\<Omega\>>, che annulla la funzione
+  e che quindi dimostra il teorema.
+
+  <subsection|Teorema di Weistrass (sui massimi)>
+
+  \;
+
+  <strong|Ipotesi>
+
+  <\itemize-dot>
+    <item>f continua in K <math|\<subseteq\> \<bbb-R\><rsup|n>>
+
+    <item>K insieme <strong|chiueso> e <strong|limitato>
+  </itemize-dot>
+
+  <strong|Tesi>
+
+  <\itemize-dot>
+    <item><math|\<exists\><text| >x<rsub|1>,x<rsub|2> : \<in\> K :
+    \ f<around*|(|x<rsub|1>|)> \<less\> f<around*|(|x|)> \<less\>
+    f<around*|(|x<rsub|2>|)> <text| \ \ \ \ \ \ >\<forall\><text| >x \<in\>
+    K>
+  </itemize-dot>
+
+  <math|><strong|Nota: >Quando si lavora con i vettori non si usano mai né
+  \<less\> né \<gtr\>, perché non si possono fare
+  \ \ \ \ \ \ \ \ \ \ \ \ \ \ questo tipo di confronti.
+
+  \;
+
+  <strong|Dimostrazione> ?
 
   \;
 
   \;
 
-  <math|>
+  <subsection|Definzioni di limiti>
+
+  <subsubsection|Limite di funzione convergente>
+
+  <subsubsection|Limite di funzione divergente>
+
+  \;
 </body>
 
 <\initial>
@@ -934,9 +1067,9 @@
     <associate|auto-10|<tuple|1.1.8|3>>
     <associate|auto-11|<tuple|1.1.9|3>>
     <associate|auto-12|<tuple|1.1.10|3>>
-    <associate|auto-13|<tuple|2|3>>
-    <associate|auto-14|<tuple|2.1|3>>
-    <associate|auto-15|<tuple|2.1.1|3>>
+    <associate|auto-13|<tuple|2|4>>
+    <associate|auto-14|<tuple|2.1|4>>
+    <associate|auto-15|<tuple|2.1.1|4>>
     <associate|auto-16|<tuple|2.1.2|4>>
     <associate|auto-17|<tuple|2.1.3|4>>
     <associate|auto-18|<tuple|2.2|4>>
@@ -958,17 +1091,17 @@
     <associate|auto-32|<tuple|3.2|7>>
     <associate|auto-33|<tuple|3.3|8>>
     <associate|auto-34|<tuple|3.4|8>>
-    <associate|auto-35|<tuple|3.5|8>>
+    <associate|auto-35|<tuple|3.5|9>>
     <associate|auto-36|<tuple|3.6|9>>
-    <associate|auto-37|<tuple|4|9>>
+    <associate|auto-37|<tuple|4|10>>
     <associate|auto-38|<tuple|4.1|10>>
-    <associate|auto-39|<tuple|4|7>>
+    <associate|auto-39|<tuple|4.2|11>>
     <associate|auto-4|<tuple|1.1.2|2>>
-    <associate|auto-40|<tuple|4|8>>
-    <associate|auto-41|<tuple|4|8>>
-    <associate|auto-42|<tuple|4|8>>
-    <associate|auto-43|<tuple|4|8>>
-    <associate|auto-44|<tuple|4|8>>
+    <associate|auto-40|<tuple|4.3|11>>
+    <associate|auto-41|<tuple|4.4|8>>
+    <associate|auto-42|<tuple|4.5|8>>
+    <associate|auto-43|<tuple|4.5.1|8>>
+    <associate|auto-44|<tuple|4.5.2|8>>
     <associate|auto-45|<tuple|4|8>>
     <associate|auto-46|<tuple|4|8>>
     <associate|auto-47|<tuple|4|8>>
@@ -988,7 +1121,7 @@
     <associate|auto-6|<tuple|1.1.4|2>>
     <associate|auto-60|<tuple|4|?>>
     <associate|auto-7|<tuple|1.1.5|2>>
-    <associate|auto-8|<tuple|1.1.6|2>>
+    <associate|auto-8|<tuple|1.1.6|3>>
     <associate|auto-9|<tuple|1.1.7|3>>
   </collection>
 </references>
@@ -1141,8 +1274,36 @@
       <no-break><pageref|auto-36>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Appunti
-      del 7 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      del 10 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Teorema (sulla composizione)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Definizione insieme connesso
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-39>>
+
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Teorema degli zeri
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-40>>
+
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Teorema di Weistrass (sui
+      massimi) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-41>>
+
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Definzioni di limiti
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42>>
+
+      <with|par-left|<quote|2tab>|4.5.1<space|2spc>Limite di funzione
+      convergente <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>>
+
+      <with|par-left|<quote|2tab>|4.5.2<space|2spc>Limite di funzione
+      divergente <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-44>>
     </associate>
   </collection>
 </auxiliary>
