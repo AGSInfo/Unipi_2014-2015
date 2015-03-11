@@ -183,6 +183,10 @@
     <with|par-left|2tab|4.5.2<space|2spc>Limite di funzione divergente
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-44>>
+
+    <with|par-left|1tab|4.6<space|2spc>Teorema permanenza del segno
+    (incompleto) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-45>>
   </table-of-contents>
 
   \;
@@ -830,12 +834,12 @@
   <strong|Ipotesi>
 
   <\itemize>
-    <item><math|f:\<Omega\> \<longrightarrow\><with|math-font|Bbb*|R><rsup|N>
-    > continua
+    <item><math|f:\<Omega\>ì*\<rightarrow\><with|math-font|Bbb*|R><rsup|N> >
+    continua
 
     <item><math|x<rsub|n>\<in\>\<Omega\>>
 
-    <item><math|x<rsub|n>\<longrightarrow\>x\<in\>\<Omega\>>
+    <item><math|x<rsub|n>\<rightarrow\>x\<in\>\<Omega\>>
   </itemize>
 
   <strong|Tesi>
@@ -1031,6 +1035,8 @@
     K>
   </itemize-dot>
 
+  \;
+
   <math|><strong|Nota: >Quando si lavora con i vettori non si usano mai né
   \<less\> né \<gtr\>, perché non si possono fare
   \ \ \ \ \ \ \ \ \ \ \ \ \ \ questo tipo di confronti.
@@ -1045,9 +1051,70 @@
 
   <subsection|Definzioni di limiti>
 
+  Quando si parla di limiti di funzioni in punto <math|x<rsub|0>> si intende
+  tale punto <math|x<rsub|0> > come punto di accumulazione (<math|x<rsub|0>
+  >\<in\> <math|\<partial\> \<Omega\>>).
+
+  \;
+
   <subsubsection|Limite di funzione convergente>
 
+  Una funzione f(x) : <math|\<Omega\>\<rightarrow\>\<bbb-R\><rsup|n>> si dice
+  convergente in <math|x<rsub|0> > (<math|lim<rsub|x \<rightarrow\>
+  x<rsub|0>>f<around*|(|x|)>> = L) se :
+
+  <\equation*>
+    \<forall\> <text| >\<varepsilon\>\<gtr\>0<text| >:<text|
+    >\<exists\><text| >\<delta\>\<gtr\>0<text| >:<text|
+    >\<forall\>x\<in\>dom<around*|(|f|)><text| >:<text|
+    >\|x-x<rsub|0>\|\<less\>\<delta\> <text| con >x \<neq\> x<rsub|0> <text|
+    si ha che >\|f<around*|(|x|)>- L\| \<less\> \<varepsilon\>
+  </equation*>
+
+  \;
+
   <subsubsection|Limite di funzione divergente>
+
+  Una funzione f(x) : <math|\<Omega\>\<rightarrow\>\<bbb-R\><rsup|n>> si dice
+  divergente in <math|x<rsub|0>> (<math|lim<rsub|x \<rightarrow\>
+  x<rsub|0>>f<around*|(|x|\<nobracket\>>>) = <math|\<infty\>>) se :
+
+  <\equation*>
+    \<forall\> \<varepsilon\> \<gtr\> 0<text| \ \ > \<exists\><text| >
+    \<delta\> \<gtr\> 0 <text| >:<text| > \<forall\>x \<in\>
+    dom<around*|(|f|)><text| > <text|: > \|x - x<rsub|0>\| <text|
+    >\<less\><text| >\<delta\> <text| con >x \<neq\>x<rsub|0> <text| si ha
+    che >\|f<around*|(|x|)>\| \<gtr\> \<varepsilon\>
+  </equation*>
+
+  \;
+
+  <strong|Nota :> Quando si lavora con i vettori non si indica mai più o meno
+  <math|\<infty\>> perchè si intende la distanza \ \ \ \ \ \ \ \ \ \ \ \ del
+  vettore dall'origine, che è sempre un numero positivo (ovviamente questo in
+  uno spazio \ \ \ \ \ \ \ \ \ \ metrico).
+
+  \;
+
+  <subsection|Teorema permanenza del segno (incompleto)>
+
+  <strong|Ipotesi>
+
+  <\itemize-dot>
+    <item>f : <math|\<Omega\>\<rightarrow\>\<bbb-R\><rsup| >> con
+    <math|\<Omega\>\<subseteq\>\<bbb-R\><rsup|n>>
+
+    <item><math|lim<rsub|x\<rightarrow\>x<rsub|0>>f<around*|(|x|)> = L
+    \<gtr\> 0>
+
+    <item><math|x\<neq\>x<rsub|0>>
+
+    \;
+  </itemize-dot>
+
+  <strong|Tesi>
+
+  \;
 
   \;
 </body>
@@ -1102,7 +1169,7 @@
     <associate|auto-42|<tuple|4.5|12>>
     <associate|auto-43|<tuple|4.5.1|12>>
     <associate|auto-44|<tuple|4.5.2|12>>
-    <associate|auto-45|<tuple|4|8>>
+    <associate|auto-45|<tuple|4.6|8>>
     <associate|auto-46|<tuple|4|8>>
     <associate|auto-47|<tuple|4|8>>
     <associate|auto-48|<tuple|4|9>>
@@ -1304,6 +1371,10 @@
       <with|par-left|<quote|2tab>|4.5.2<space|2spc>Limite di funzione
       divergente <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-44>>
+
+      <with|par-left|<quote|1tab>|4.6<space|2spc>Teorema permanenza del segno
+      (incompleto) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-45>>
     </associate>
   </collection>
 </auxiliary>

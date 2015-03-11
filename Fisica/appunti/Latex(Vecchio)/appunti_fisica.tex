@@ -1,4 +1,4 @@
-\documentclass[fontsize = 20px, paper = a4]{article}
+\documentclass[paper = a4]{article}
 \author{Alessandro Sieni, Gianluca Mondini}
 \title{Appunti Fisica Generale}
 \date{\today}
@@ -9,7 +9,7 @@
 \newpage
 \tableofcontents
 \newpage
-\section{Appunti 03/03/2015}
+\section{Appunti 03 marzo 2015}
 \subsection{Ordini di grandezza}
 Quando si parla di ordini di grandezza intendiamo non una precisa quantità ma un'indicazione utile ad effettuare delle stime che non devono essere necessariamente precise.
 \subsection{Calcolo dimensionale}
@@ -66,7 +66,7 @@ Per rappresentare un vettore ci sono 4 possibili modi :
 \item Mediante il modulo del vettore e il suo argomento
 \item Mediante l'utilizzo di versori
 \end{itemize}
-\section{Appunti 04/03/2015}
+\section{Appunti 04 marzo 2015}
 \subsection{Rappresentazione di un vettore}
 \hspace*{5cm} \\
 Per rappresentare un vettore ci sono 4 possibili modi : 
@@ -153,7 +153,7 @@ Notando il risultato salta subito all'occhio che l'accelerazione del corpo dipen
 $$a(t) = -\omega^2 A\cos (\omega t) =  -w^2x(t)$$
 Quando abbiamo che l'accelerazione di un corpo dipende dalla sua posizione si dice che abbiamo un \textbf{moto armonico}. \\
 Più in generale se $\frac{d^2 f(t)}{dt^2} = -Kf(t) $ si ha un moto periodico (f(t) non importa che sia obbligatoriamente x(t), ma può essere una qualunque funzione nel tempo). \newpage
-\section{Appunti 05/03/2015}
+\section{Appunti 05 marzo 2015}
 \subsection{Osservazione}
 Come si può osservare da questa equazione oraria
 $$x(t) = 2t^2 + 3t^3$$
@@ -230,7 +230,7 @@ $$\overrightarrow{R} * \overrightarrow{V} = -\omega A^2 \cos(\omega t) \sin(\ome
 e quindi proviamo anche che il vettore velocità è perpendicolare al vettore accelerazione:
 $$\overrightarrow{a} * \overrightarrow{V} = \omega^3A^2\cos(\omega t) \sin(\omega t) -\omega^3A^2\cos(\omega t) \sin(\omega t) = 0$$
 Per concludere notiamo che se invece il moto non è circolare ma ellittico allora il vettore accelerazione non sarà perpendicolare al vettore velocità, ma sarà sempre parallelo al vettore raggio dell'ellisse.
-\section{Appunti del 06/03/2015}
+\section{Appunti del 06 marzo 2015}
 \subsection{Prodotto scalare}
 \subsubsection{Breve Nota}
 Il prodotto scalare è massimo quando due vettori sono paralleli (perché l'angolo compreso è zero e il coseno di 0 è 1) ed è nullo quando sono ortogonali (coseno di 90 = 0).
@@ -252,5 +252,24 @@ Per calcolare il prodotto vettoriale si usa una matrice avente per righe i vetto
 \subsection{Cambio sistema di riferimento}
 \subsubsection{Definizione}
 Per cambio di sistema di riferimento si intende il passaggio da un sistema di basi sul quale è costruito un vettore ad un altro, calcolandone dunque il corrispettivo vettore associato al nuovo sistema.\\
-Per calcolare il corrispettivo vettore sul nuovo sistema di riferimento basterà scrivere il vettore come combinazione lineare dei nuovi i,j,k.
+Per calcolare il corrispettivo vettore sul nuovo sistema di riferimento basterà scrivere il vettore come combinazione lineare dei nuovi i,j,k. \\ \\
+\section{Appunti 10 marzo 2015}
+\subsection{Equazioni differenziali}
+Quando si parla di equazioni differenziali si intendono quella tipologia di equazioni dove compaiono come termini anche le derivate di funzioni. In fisica le equazioni differenziali sono molto ricorrenti, perché basta pensare alla velocità come derivata dello spazio nel tempo e l'accelerazione come la derivata nella velocità nel tempo ed ecco che se un moto ha una velocità che dipende punto in cui si trova abbiamo già un equazione differenziale perché
+$$\frac{dx(t)}{dt} = Kx(t)$$
+Oppure se è l'accelerazione a dipendere dallo spazio o viceversa, oppure ancora se lo spazio percorso dipende sia dalla velocità che dall'accelerazione (in questo caso abbiamo una differenziale del secondo ordine) come vedremo  nelle equazioni caratteristiche dei moti.
+\subsection{Equazioni dei moti}
+\subsubsection{Moto uniformemente accelerato}
+L'equazione oraria di un moto uniformemente accelerato è un'equazione differenziale del secondo ordine (perché l'accelerazione è la derivata seconda dello spazio nel tempo) che viene scritta in questo modo
+$$x(t) = x_0 + v_0t + \frac{1}{2}at^2$$
+dove $x_0$ è il punto di partenza del corpo (ovvero dove si trova al tempo 0), $v_0$ è la velocità del corpo al tempo 0 e a è il valore di accelerazione del corpo. Infatti se calcoliamo le derivate successive troviamo che 
+$$v(t) = v_0 + at $$ $$ a(t) = a$$ 
+che dimostra appunto le affermazioni precedenti (infatti a(t) = a indica accelerazione costante).
+\subsubsection{Moto rettilineo uniforme}
+Un moto rettilineo uniforme è un moto nella quale ad essere costante è la velocità (che ricordiamo è un vettore, e che quindi impone anche una traiettoria rettilinea per non cambiare direzione, che indicherebbe presenza di accelerazione) e si presenta con questa equazione oraria:
+$$x(t) = x_0 + v_0t$$
+Anche in questo caso sia $x_0$ che $v_0$ hanno lo stesso valore di prima, l'unica differenza è che non compare l'accelerazione, infatti se deriviamo otteniamo questo:
+$$v(t) = v_0$$
+$$a(t) = 0$$
+Ovvero proprio ciò che volevamo, cioè velocità costante e accelerazione pari a 0.
 \end{document}
