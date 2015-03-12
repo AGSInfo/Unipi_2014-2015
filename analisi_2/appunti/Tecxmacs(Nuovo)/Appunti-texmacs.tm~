@@ -1106,9 +1106,321 @@
 
     <item><math|lim<rsub|x\<rightarrow\>x<rsub|0>>f<around*|(|x|)> = L
     \<gtr\> 0>
+
+    <item><math|x\<neq\>x<rsub|0>>
+
+    \;
   </itemize-dot>
 
+  <strong|Tesi>
+
+  Manca roba
+
+  <subsection|Definizione di divergenza>
+
+  <math|lim<rsub|x\<rightarrow\>\<infty\>>f<around*|(|x|)>=\<infty\>> con
+  <math|f:\<Omega\>\<rightarrow\>R<rsup|N>>
+  \ <math|x<rsub|0>\<in\>\<partial\>\<Omega\>>
+
+  Nota: Non esiste il ``segno dell'infinito'' perché in campo vettoriale non
+  ha alcun senso parlare di \<pm\>\<infty\>
+
+  \<forall\> <math|\<varepsilon\>\<gtr\>0 > \<exists\>
+  <math|\<delta\>\<gtr\>0> : \<forall\> <math|x\<in\>dom<around*|(|f|)>>
+  <math|<around*|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
+  \ <math|x\<neq\>x<rsub|0> > <math|<around*|\||f<around*|(|x|)>|\|>\<gtr\>\<varepsilon\>>
+
+  <section|Appunti dell'11 marzo 2015>
+
+  <subsection|Limiti>
+
+  <math|f:\<Omega\>\<rightarrow\>R<rsup|N>>
+  \ <math|\<Omega\>\<subseteq\>R<rsup|M>>
+  \ <math|lim<rsub|\<infty\>>f<around*|(|x|)>=L\<in\>R<rsup|N>> con
+  <math|\<Omega\>> non limitato
+
+  <subsubsection|Caso della convergenza>
+
+  <\equation*>
+    lim<rsub|\<infty\>>f<around*|(|x|)>=L\<in\>R<rsup|N>
+  </equation*>
+
+  \<forall\> <math|\<varepsilon\>\<gtr\>0> \<exists\>
+  <math|\<delta\>\<gtr\>0> : \<forall\> <math|x\<in\>dom<around*|(|f|)> >
+  <math|<around*|\||x|\|>\<gtr\>\<delta\>> \ <math|\<Rightarrow\>>
+  \ <math|<around*|\||f<around*|(|x|)>-L|\|>\<less\>\<varepsilon\>>
+
+  <subsubsection|Caso della divergenza>
+
+  <\equation*>
+    lim<rsub|\<infty\>>f<around*|(|x|)>= \<infty\>
+  </equation*>
+
+  \<forall\> <math|\<varepsilon\>\<gtr\>0> <math|\<exists\>
+  \<delta\>\<gtr\>0> : <math|\<forall\>> <math|x\<in\>dom<around*|(|f|)>>
+  <math|<around*|\||x|\|>\<gtr\>\<delta\>> \ <math|\<Rightarrow\> >
+  <math|<around*|\||f<around*|(|x|)>|\|>\<gtr\>\<varepsilon\>>
+
   \;
+
+  Se <math|f:R<rsup|M>\<rightarrow\>R> ha senso parlare di
+  <math|\<pm\>\<infty\>> perché il codominio è costituito da scalari.
+
+  In generale, preso
+
+  <\equation*>
+    f:\<Omega\>\<rightarrow\>R<rsup|M><text| \ con
+    >\<Omega\>\<subseteq\>R<rsup|N>
+  </equation*>
+
+  possiamo avere i casi
+
+  <\itemize>
+    <item><math|x\<rightarrow\>\<infty\>>
+
+    <item><math|x\<rightarrow\>x<rsub|0>>
+  </itemize>
+
+  In particolare, se <math|N=1>, abbiamo anche che
+
+  <\itemize>
+    <item><math|x\<rightarrow\>x<rsub|0><rsup|+>>
+
+    <item><math|x\<rightarrow\>x<rsub|0><rsup|->>
+
+    <item><math|x\<rightarrow\>+\<infty\>>
+
+    <item><math|x\<rightarrow\>-\<infty\>>
+  </itemize>
+
+  Per quanto riguarda il limite, esso può essere (in generale)
+
+  <\itemize>
+    <item><math|f<around*|(|x|)>=L>
+
+    <item><math|f<around*|(|x|)>=\<infty\>>
+  </itemize>
+
+  In particolare, se <math|M=1>, abbiamo anche
+
+  <\itemize>
+    <item><math|f<around*|(|x|)>=+\<infty\>>
+
+    <item><math|f<around*|(|x|)>=-\<infty\>>
+  </itemize>
+
+  Verifichiamo che se <math|x<rsub|n>\<rightarrow\>x<rsub|0>>
+  <math|\<Leftrightarrow\>> <math|<around*|\||x-x<rsub|0>|\|>\<rightarrow\>0>
+
+  <math|x<rsub|n>\<rightarrow\>\<infty\>> \ \ \ <math|\<forall\>
+  \<varepsilon\>\<gtr\>0> \ \ <math|\<exists\> \<nu\>> \ \ :
+  \ \ <math|\<forall\> n\<gtr\>\<nu\>> \ \ \ <math|<sqrt|N>*max<around*|\||<around*|(|x<rsub|n>|)><rsub|i>|\|>\<geqslant\><around*|\||x<rsub|n>|\|>\<gtr\>\<varepsilon\>>
+
+  Esempio:
+
+  <\equation*>
+    <around*|\||<around*|(|n,<frac|1|n>|)>|\|>=<sqrt|n<rsup|2>+<frac|1|n<rsup|2>>>\<rightarrow\>\<infty\>
+  </equation*>
+
+  <paragraph|Nota>Il teorema dei due carabinieri si può applicare soltanto a
+  funzioni vettoriali in scalari in quanto, essendo un teorema di confronto,
+  richiede l'utilizzo degli operatori <math|\<less\>> e <math|\<gtr\>>, non
+  definiti per i vettori.
+
+  <subsection|Condizione di Cauchy per la convergenza>
+
+  (Viene dato solo un accenno di dimostrazione)
+
+  <paragraph|CNS><math|f<around*|(|x|)>> sia convergente in <math|x<rsub|0>>
+
+  \<forall\> <math|\<varepsilon\>\<gtr\>0> \ <math|\<exists\>
+  \<delta\>\<gtr\>0> \ : \ \<forall\> <math|x,y\<in\>dom<around*|(|f|)>>
+  \ <math|<around*|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
+  \ <math|<around*|\||y-y<rsub|0>|\|>\<less\>\<delta\>>
+  \ <math|x\<neq\>x<rsub|0> > \ e <math| y\<neq\>x<rsub|0>>
+  \ <math|f<around*|(|x|)>-f<around*|(|y|)>\<less\>\<varepsilon\>>
+
+  <math|lim<rsub|x\<rightarrow\>x<rsub|0>>f<around*|(|x|)>=L\<in\>R<rsup|N>>
+
+  <math|<around*|\||f<around*|(|x|)>-L|\|>\<less\>\<varepsilon\>/2>
+  \ <math|<around*|\||f<around*|(|x|)>-f<around*|(|y|)>|\|>\<leqslant\><around*|\||f<around*|(|x|)>-L|\|>+<around*|\||L-f<around*|(|y|)>|\|>\<less\>\<varepsilon\>>
+
+  <\equation*>
+    <around*|\||f<around*|(|y|)>-L|\|>\<less\><frac|\<varepsilon\>|2>
+  </equation*>
+
+  <paragraph|Esempio>
+
+  <\equation*>
+    f<around*|(|x|)>=<frac|x|<around*|\||x|\|>>=<choice|<tformat|<table|<row|<cell|+1<text|
+    \ per >x\<gtr\>0>>|<row|<cell|-1<text| \ per >x\<less\>0>>>>>
+  </equation*>
+
+  Se <math|\<varepsilon\>\<less\>2> il teorema ``salta'', quindi la fu
+
+  <\equation*>
+    \;
+  </equation*>
+
+  \;
+
+  <subsection|Sostituzione>
+
+  Per calcolare il limite
+
+  <\equation*>
+    lim<rsub|x\<rightarrow\>0><frac|sin<around*|(|x<rsup|2>|)>|x<rsup|2>>
+  </equation*>
+
+  poniamo <math|y=x<rsup|2>> ed otteniamo così
+
+  <\equation*>
+    lim<rsub|x\<rightarrow\>0><frac|sin*y|y>=1
+  </equation*>
+
+  Non possiamo però scrivere la regola generale
+
+  <\equation*>
+    lim<rsub|x\<rightarrow\>x<rsub|0>>f<around*|(|x|)>=L<text| \ \ e
+    \ \ >lim<rsub|y\<rightarrow\>L>g<around*|(|y|)>=M<text|
+    \ \ >\<Rightarrow\><text| \ \ >lim<rsub|x\<rightarrow\>x<rsub|0>>g<around*|(|f<around*|(|x|)>|)>=M
+  </equation*>
+
+  e lo dimostriamo con un controesempio: poniamo
+
+  <\equation*>
+    g<around*|(|y|)>=<choice|<tformat|<table|<row|<cell|1 per
+    y=0>>|<row|<cell|2 per y \<neq\> 0>>>>>
+  </equation*>
+
+  e
+
+  <\equation*>
+    f<around*|(|x|)>=x*sin<around*|(|<frac|1|x>|)> definita in
+    <with|math-font|Bbb*|R><rsup|>\<backslash\><around*|{|0|}>
+  </equation*>
+
+  abbiamo quindi\ 
+
+  <\equation*>
+    g<around*|(|f<around*|(|x|)>|)>=<choice|<tformat|<table|<row|<cell|2 per
+    x=0<text| (che va in contrasto col dominio di> f>>|<row|<cell|1
+    altrimenti>>>>>
+  </equation*>
+
+  poiché <math|sin<frac|1|x>=0> <math|1=k\<pi\>> \ con
+  <math|k\<in\><with|math-font|Bbb*|Z>\<backslash\><around*|{|0|}>>
+
+  Si prova a dimostrare il teorema ``falso'' (non viene chiesto all'esame,
+  l'importante è sapere di cosa si parla)
+
+  <\equation*>
+    <around*|\||g<around*|(|f<around*|(|x|)>|)>-M|\|>\<less\>\<varepsilon\>
+  </equation*>
+
+  a patto che
+
+  <\enumerate>
+    <item><math|f<around*|(|x|)>\<in\>dom*<around*|(|g|)>>
+
+    <item><math|<around*|\||f<around*|(|x|)>-L|\|>\<less\>\<sigma\>>
+
+    <item><math|f<around*|(|x|)>\<neq\>L>
+  </enumerate>
+
+  Nota: la (3) va posta come ipotesi
+
+  La (2) deriva da <math|lim<rsub|x\<rightarrow\>x<rsub|0>>f<around*|(|x|)>=L>
+
+  Per garantire la (3) posso:
+
+  <\itemize>
+    <item>prendere la funzione più esterna <math|<around*|(|g|)>> continua in
+    <math|L>
+
+    <item><math|g > non definita in <math|L>
+  </itemize>
+
+  3<degreesign> ipotesi: <math|\<exists\>> <math|\<delta\>\<gtr\>0 > tale che
+  <math|f<around*|(|x|)>\<neq\>L> \ \<forall\>
+  <math|x\<in\>B<rsub|\<delta\>><around*|(|x<rsub|0>|)>\<backslash\><around*|{|0|}>>
+
+  Le 3 condizioni:
+
+  <\enumerate>
+    <item>
+
+    <\equation*>
+      lim<rsub|x\<rightarrow\>x<rsub|0>>g<around*|(|f<around*|(|x|)>|)>=lim<rsub|y\<rightarrow\>L>g<around*|(|y|)>
+    </equation*>
+
+    <item>
+
+    <\equation*>
+      L=lim<rsub|x\<rightarrow\>x<rsub|0>>f<around*|(|x|)>
+    </equation*>
+
+    <item>Verificata almeno una di:
+
+    <\enumerate>
+      <item><math|g > è continua in <math|L>
+
+      <item><math|g> non è definita in <math|L>
+
+      <item><math|y > è discontinua <math|\<exists\>>
+      <math|\<delta\>\<gtr\>0> : <math|f<around*|(|x|)>\<neq\>L>
+      \ <math|\<forall\><around*|(|x|)>\<neq\>L>
+      \<forall\><math|x\<in\>B<rsub|\<delta\>><around*|(|x<rsub|0>|)>\<backslash\><around*|{|x<rsub|0>|}>>
+    </enumerate>
+  </enumerate>
+
+  <subsection|Limiti in più variabili>
+
+  <\equation*>
+    lim<rsub|\<infty\>>f<around*|(|x,y|)>=lim<rsub|\<infty\>>*x*y<text| \ con
+    \ >f:<with|math-font|Bbb*|R><rsup|2>\<rightarrow\><with|math-font|Bbb*|R>
+  </equation*>
+
+  <\equation*>
+    f<around*|(|<stack|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>|)>=x*y
+  </equation*>
+
+  Il limite non converge e non diverge.
+
+  <\equation*>
+    lim<rsub|<around*|(|x,y|)>\<rightarrow\>\<infty\>>x
+  </equation*>
+
+  non converge e non diverge.
+
+  <\equation*>
+    lim<rsub|x,y\<rightarrow\>0><frac|x<rsup|2>-y<rsup|2>|x<rsup|2>+y<rsup|2>>
+  </equation*>
+
+  si risolve ponendo <math|y=k*x>
+
+  <\equation*>
+    <frac|x<rsup|2>-k<rsup|2>x<rsup|2>|x<rsup|2>+k<rsup|2>x<rsup|2>>=<frac|1-k<rsup|2>|1+k<rsup|2>>
+  </equation*>
+
+  che non ha limite perché è una costante che varia in funzione di <math|k>,
+  e questo fa saltare la condizione di Cauchy.
+
+  <\equation*>
+    lim<rsub|<around*|(|x,y|)>\<rightarrow\><around*|(|0,0|)>><frac|x<rsup|2>+y<rsup|2>|x-y>
+  </equation*>
+
+  Sapendo che <math|\<rho\>=<sqrt|x<rsup|2>+y<rsup|2>>> e che\ 
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x=\<rho\>*cos<around*|(|\<theta\>|)>>>|<row|<cell|y=\<rho\>*sin<around*|(|\<theta\>|)>>>>>>
+  </equation*>
+
+  otteniamo
+
+  <\equation*>
+    <frac|\<rho\><rsup|2>cos<rsup|2><around*|(|\<theta\>|)>+\<rho\><rsup|2>sin<rsup|2><around*|(|\<theta\>|)>|\<rho\><rsup|<around*|(|2?|)>>cos<around*|(|\<theta\>|)>-\<rho\>sin<around*|(|\<theta\>|)>>=<frac|1|\<rho\>sin<around*|(|\<theta\>|)>-\<rho\>cos<around*|(|\<theta\>|)>>
+  </equation*>
 </body>
 
 <\initial>
@@ -1162,18 +1474,18 @@
     <associate|auto-43|<tuple|4.5.1|12>>
     <associate|auto-44|<tuple|4.5.2|12>>
     <associate|auto-45|<tuple|4.6|8>>
-    <associate|auto-46|<tuple|4|8>>
-    <associate|auto-47|<tuple|4|8>>
-    <associate|auto-48|<tuple|4|9>>
-    <associate|auto-49|<tuple|4|9>>
+    <associate|auto-46|<tuple|4.7|8>>
+    <associate|auto-47|<tuple|5|8>>
+    <associate|auto-48|<tuple|5.1|9>>
+    <associate|auto-49|<tuple|5.1.1|9>>
     <associate|auto-5|<tuple|1.1.3|2>>
-    <associate|auto-50|<tuple|4|9>>
-    <associate|auto-51|<tuple|4|9>>
-    <associate|auto-52|<tuple|4|10>>
-    <associate|auto-53|<tuple|4|10>>
-    <associate|auto-54|<tuple|4|10>>
-    <associate|auto-55|<tuple|4|10>>
-    <associate|auto-56|<tuple|4|10>>
+    <associate|auto-50|<tuple|5.1.2|9>>
+    <associate|auto-51|<tuple|5.1.2.1|9>>
+    <associate|auto-52|<tuple|5.2|10>>
+    <associate|auto-53|<tuple|5.2.0.2|10>>
+    <associate|auto-54|<tuple|5.2.0.3|10>>
+    <associate|auto-55|<tuple|5.3|10>>
+    <associate|auto-56|<tuple|5.4|10>>
     <associate|auto-57|<tuple|4|?>>
     <associate|auto-58|<tuple|4|?>>
     <associate|auto-59|<tuple|4|?>>
@@ -1367,6 +1679,41 @@
       <with|par-left|<quote|1tab>|4.6<space|2spc>Teorema permanenza del segno
       (incompleto) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>>
+
+      <with|par-left|<quote|1tab>|4.7<space|2spc>Definizione di divergenza
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-46>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Appunti
+      dell'11 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-47><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|5.1<space|2spc>Limiti
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-48>>
+
+      <with|par-left|<quote|2tab>|5.1.1<space|2spc>Caso della convergenza
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-49>>
+
+      <with|par-left|<quote|2tab>|5.1.2<space|2spc>Caso della divergenza
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-50>>
+
+      <with|par-left|<quote|4tab>|Nota <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-51><vspace|0.15fn>>
+
+      <with|par-left|<quote|1tab>|5.2<space|2spc>Condizione di Cauchy per la
+      convergenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-52>>
+
+      <with|par-left|<quote|1tab>|5.3<space|2spc>Sostituzione
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-53>>
+
+      <with|par-left|<quote|1tab>|5.4<space|2spc>Limiti in più variabili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-54>>
     </associate>
   </collection>
 </auxiliary>
