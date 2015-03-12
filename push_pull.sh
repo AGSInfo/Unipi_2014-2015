@@ -37,7 +37,7 @@ fi
 if [ $1 == "pull" ]
 then
    echo "Scarico dal server remoto le modifiche"
-   git pull $SEVER $BRANCH
+   git pull $SERVER
    exit 0
 fi
 
