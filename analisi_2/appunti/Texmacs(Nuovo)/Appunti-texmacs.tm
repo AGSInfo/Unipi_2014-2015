@@ -187,9 +187,42 @@
     <with|par-left|1tab|4.6<space|2spc>Teorema permanenza del segno
     (incompleto) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-45>>
-  </table-of-contents>
 
-  \;
+    <with|par-left|1tab|4.7<space|2spc>Definizione di divergenza
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-46>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Appunti
+    dell'11 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-47><vspace|0.5fn>
+
+    <with|par-left|1tab|5.1<space|2spc>Limiti
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-48>>
+
+    <with|par-left|2tab|5.1.1<space|2spc>Caso della convergenza
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-49>>
+
+    <with|par-left|2tab|5.1.2<space|2spc>Caso della divergenza
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-50>>
+
+    <with|par-left|4tab|Nota <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-51><vspace|0.15fn>>
+
+    <with|par-left|1tab|5.2<space|2spc>Condizione di Cauchy per la
+    convergenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-52>>
+
+    <with|par-left|1tab|5.3<space|2spc>Sostituzione
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-53>>
+
+    <with|par-left|1tab|5.4<space|2spc>Limiti in più variabili
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-54>>
+  </table-of-contents>
 
   \;
 
@@ -1222,16 +1255,17 @@
     <around*|\||<around*|(|n,<frac|1|n>|)>|\|>=<sqrt|n<rsup|2>+<frac|1|n<rsup|2>>>\<rightarrow\>\<infty\>
   </equation*>
 
-  <paragraph|Nota>Il teorema dei due carabinieri si può applicare soltanto a
-  funzioni vettoriali in scalari in quanto, essendo un teorema di confronto,
-  richiede l'utilizzo degli operatori <math|\<less\>> e <math|\<gtr\>>, non
-  definiti per i vettori.
+  <strong|Nota: > \ Il teorema dei due carabinieri si può applicare soltanto
+  a funzioni vettoriali in scalari in \ \ \ \ \ \ \ \ \ \ \ \ quanto, essendo
+  un teorema di confronto, richiede l'utilizzo degli operatori
+  <math|\<less\>> e <math|\<gtr\>>, non \ \ \ \ \ \ \ \ \ \ \ \ \ \ definiti
+  per i vettori.
 
   <subsection|Condizione di Cauchy per la convergenza>
 
   (Viene dato solo un accenno di dimostrazione)
 
-  <paragraph|CNS><math|f<around*|(|x|)>> sia convergente in <math|x<rsub|0>>
+  <strong|CNS : ><math|f<around*|(|x|)>> sia convergente in <math|x<rsub|0>>
 
   \<forall\> <math|\<varepsilon\>\<gtr\>0> \ <math|\<exists\>
   \<delta\>\<gtr\>0> \ : \ \<forall\> <math|x,y\<in\>dom<around*|(|f|)>>
@@ -1249,7 +1283,7 @@
     <around*|\||f<around*|(|y|)>-L|\|>\<less\><frac|\<varepsilon\>|2>
   </equation*>
 
-  <paragraph|Esempio>
+  <strong|Esempio>
 
   <\equation*>
     f<around*|(|x|)>=<frac|x|<around*|\||x|\|>>=<choice|<tformat|<table|<row|<cell|+1<text|
@@ -1475,11 +1509,11 @@
     <associate|auto-49|<tuple|5.1.1|9>>
     <associate|auto-5|<tuple|1.1.3|2>>
     <associate|auto-50|<tuple|5.1.2|9>>
-    <associate|auto-51|<tuple|5.1.2.1|9>>
-    <associate|auto-52|<tuple|5.2|10>>
-    <associate|auto-53|<tuple|5.2.0.2|10>>
-    <associate|auto-54|<tuple|5.2.0.3|10>>
-    <associate|auto-55|<tuple|5.3|10>>
+    <associate|auto-51|<tuple|5.2|9>>
+    <associate|auto-52|<tuple|5.3|10>>
+    <associate|auto-53|<tuple|5.4|10>>
+    <associate|auto-54|<tuple|5.4|10>>
+    <associate|auto-55|<tuple|5.4|10>>
     <associate|auto-56|<tuple|5.4|10>>
     <associate|auto-57|<tuple|4|?>>
     <associate|auto-58|<tuple|4|?>>
