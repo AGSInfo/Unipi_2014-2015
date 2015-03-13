@@ -208,20 +208,17 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-50>>
 
-    <with|par-left|4tab|Nota <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-51><vspace|0.15fn>>
-
     <with|par-left|1tab|5.2<space|2spc>Condizione di Cauchy per la
     convergenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-52>>
+    <no-break><pageref|auto-51>>
 
     <with|par-left|1tab|5.3<space|2spc>Sostituzione
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-53>>
+    <no-break><pageref|auto-52>>
 
     <with|par-left|1tab|5.4<space|2spc>Limiti in più variabili
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-54>>
+    <no-break><pageref|auto-53>>
   </table-of-contents>
 
   \;
@@ -1255,10 +1252,11 @@
     <around*|\||<around*|(|n,<frac|1|n>|)>|\|>=<sqrt|n<rsup|2>+<frac|1|n<rsup|2>>>\<rightarrow\>\<infty\>
   </equation*>
 
-  <paragraph|>Il teorema dei due carabinieri si può applicare soltanto a
-  funzioni vettoriali in scalari in quanto, essendo un teorema di confronto,
-  richiede l'utilizzo degli operatori <math|\<less\>> e <math|\<gtr\>>, non
-  definiti per i vettori.
+  <strong|Nota: > \ Il teorema dei due carabinieri si può applicare soltanto
+  a funzioni vettoriali in scalari in \ \ \ \ \ \ \ \ \ \ \ \ quanto, essendo
+  un teorema di confronto, richiede l'utilizzo degli operatori
+  <math|\<less\>> e <math|\<gtr\>>, non \ \ \ \ \ \ \ \ \ \ \ \ \ \ definiti
+  per i vettori.
 
   <subsection|Condizione di Cauchy per la convergenza>
 
@@ -1269,9 +1267,18 @@
   \<forall\> <math|\<varepsilon\>\<gtr\>0> \ <math|\<exists\>
   \<delta\>\<gtr\>0> \ : \ \<forall\> <math|x,y\<in\>dom<around*|(|f|)>>
   \ <math|<around*|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
-  \ <math|<around*|\||y-y<rsub|0>|\|>\<less\>\<delta\>>
+  \ <math|<around*|\||y-x<rsub|0>|\|>\<less\>\<delta\>>
   \ <math|x\<neq\>x<rsub|0> > \ e <math| y\<neq\>x<rsub|0>>
-  \ <math|f<around*|(|x|)>-f<around*|(|y|)>\<less\>\<varepsilon\>>
+  \ <math|<around*|\|||\<nobracket\>>f<around*|(|x|)>-f<around*|(|y|)><around*|\|||\<nobracket\>>\<less\>\<varepsilon\>>
+
+  \;
+
+  Ovvero il criterio dice che una funzione converge in un punto se e solo se
+  la differenza tra due punti abbastanza vicini al punto di convergenza può
+  essere contenuta in una sfera di raggio <math|\<varepsilon\>> e centrata in
+  <math|x<rsub|0>>.
+
+  \;
 
   <math|lim<rsub|x\<rightarrow\>x<rsub|0>>f<around*|(|x|)>=L\<in\>R<rsup|N>>
 
@@ -1281,6 +1288,8 @@
   <\equation*>
     <around*|\||f<around*|(|y|)>-L|\|>\<less\><frac|\<varepsilon\>|2>
   </equation*>
+
+  \;
 
   <strong|Esempio>
 
@@ -1449,6 +1458,8 @@
   <\equation*>
     <frac|\<rho\><rsup|2>cos<rsup|2><around*|(|\<theta\>|)>+\<rho\><rsup|2>sin<rsup|2><around*|(|\<theta\>|)>|\<rho\><rsup|<around*|(|2?|)>>cos<around*|(|\<theta\>|)>-\<rho\>sin<around*|(|\<theta\>|)>>=<frac|1|\<rho\>sin<around*|(|\<theta\>|)>-\<rho\>cos<around*|(|\<theta\>|)>>
   </equation*>
+
+  che con <math|\<theta\>> che va <math|<frac|\<pi\>|4> >tende ad infinito.
 </body>
 
 <\initial>
@@ -1466,10 +1477,10 @@
     <associate|auto-10|<tuple|1.1.8|3>>
     <associate|auto-11|<tuple|1.1.9|3>>
     <associate|auto-12|<tuple|1.1.10|3>>
-    <associate|auto-13|<tuple|2|4>>
-    <associate|auto-14|<tuple|2.1|4>>
-    <associate|auto-15|<tuple|2.1.1|4>>
-    <associate|auto-16|<tuple|2.1.2|4>>
+    <associate|auto-13|<tuple|2|3>>
+    <associate|auto-14|<tuple|2.1|3>>
+    <associate|auto-15|<tuple|2.1.1|3>>
+    <associate|auto-16|<tuple|2.1.2|3>>
     <associate|auto-17|<tuple|2.1.3|4>>
     <associate|auto-18|<tuple|2.2|4>>
     <associate|auto-19|<tuple|2.2.1|4>>
@@ -1477,40 +1488,40 @@
     <associate|auto-20|<tuple|2.2.2|4>>
     <associate|auto-21|<tuple|2.2.3|5>>
     <associate|auto-22|<tuple|2.2.4|5>>
-    <associate|auto-23|<tuple|2.2.5|6>>
-    <associate|auto-24|<tuple|2.2.6|6>>
-    <associate|auto-25|<tuple|2.3|6>>
-    <associate|auto-26|<tuple|2.3.1|6>>
-    <associate|auto-27|<tuple|2.3.2|7>>
-    <associate|auto-28|<tuple|2.3.3|7>>
-    <associate|auto-29|<tuple|2.3.4|7>>
+    <associate|auto-23|<tuple|2.2.5|5>>
+    <associate|auto-24|<tuple|2.2.6|5>>
+    <associate|auto-25|<tuple|2.3|5>>
+    <associate|auto-26|<tuple|2.3.1|5>>
+    <associate|auto-27|<tuple|2.3.2|6>>
+    <associate|auto-28|<tuple|2.3.3|6>>
+    <associate|auto-29|<tuple|2.3.4|6>>
     <associate|auto-3|<tuple|1.1.1|2>>
-    <associate|auto-30|<tuple|3|7>>
-    <associate|auto-31|<tuple|3.1|7>>
-    <associate|auto-32|<tuple|3.2|7>>
-    <associate|auto-33|<tuple|3.3|8>>
-    <associate|auto-34|<tuple|3.4|8>>
-    <associate|auto-35|<tuple|3.5|9>>
-    <associate|auto-36|<tuple|3.6|9>>
-    <associate|auto-37|<tuple|4|10>>
-    <associate|auto-38|<tuple|4.1|10>>
-    <associate|auto-39|<tuple|4.2|11>>
+    <associate|auto-30|<tuple|3|6>>
+    <associate|auto-31|<tuple|3.1|6>>
+    <associate|auto-32|<tuple|3.2|6>>
+    <associate|auto-33|<tuple|3.3|7>>
+    <associate|auto-34|<tuple|3.4|7>>
+    <associate|auto-35|<tuple|3.5|7>>
+    <associate|auto-36|<tuple|3.6|8>>
+    <associate|auto-37|<tuple|4|8>>
+    <associate|auto-38|<tuple|4.1|8>>
+    <associate|auto-39|<tuple|4.2|9>>
     <associate|auto-4|<tuple|1.1.2|2>>
-    <associate|auto-40|<tuple|4.3|11>>
-    <associate|auto-41|<tuple|4.4|12>>
-    <associate|auto-42|<tuple|4.5|12>>
-    <associate|auto-43|<tuple|4.5.1|12>>
-    <associate|auto-44|<tuple|4.5.2|12>>
-    <associate|auto-45|<tuple|4.6|8>>
-    <associate|auto-46|<tuple|4.7|8>>
-    <associate|auto-47|<tuple|5|8>>
-    <associate|auto-48|<tuple|5.1|9>>
-    <associate|auto-49|<tuple|5.1.1|9>>
+    <associate|auto-40|<tuple|4.3|9>>
+    <associate|auto-41|<tuple|4.4|10>>
+    <associate|auto-42|<tuple|4.5|10>>
+    <associate|auto-43|<tuple|4.5.1|10>>
+    <associate|auto-44|<tuple|4.5.2|10>>
+    <associate|auto-45|<tuple|4.6|10>>
+    <associate|auto-46|<tuple|4.7|11>>
+    <associate|auto-47|<tuple|5|11>>
+    <associate|auto-48|<tuple|5.1|11>>
+    <associate|auto-49|<tuple|5.1.1|11>>
     <associate|auto-5|<tuple|1.1.3|2>>
-    <associate|auto-50|<tuple|5.1.2|9>>
-    <associate|auto-51|<tuple|5.1.2.1|9>>
-    <associate|auto-52|<tuple|5.2|10>>
-    <associate|auto-53|<tuple|5.3|10>>
+    <associate|auto-50|<tuple|5.1.2|11>>
+    <associate|auto-51|<tuple|5.2|12>>
+    <associate|auto-52|<tuple|5.3|12>>
+    <associate|auto-53|<tuple|5.4|13>>
     <associate|auto-54|<tuple|5.4|10>>
     <associate|auto-55|<tuple|5.4|10>>
     <associate|auto-56|<tuple|5.4|10>>
@@ -1520,8 +1531,8 @@
     <associate|auto-6|<tuple|1.1.4|2>>
     <associate|auto-60|<tuple|4|?>>
     <associate|auto-7|<tuple|1.1.5|2>>
-    <associate|auto-8|<tuple|1.1.6|3>>
-    <associate|auto-9|<tuple|1.1.7|3>>
+    <associate|auto-8|<tuple|1.1.6|2>>
+    <associate|auto-9|<tuple|1.1.7|2>>
   </collection>
 </references>
 
@@ -1728,20 +1739,17 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-50>>
 
-      <with|par-left|<quote|4tab>|Nota <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51><vspace|0.15fn>>
-
       <with|par-left|<quote|1tab>|5.2<space|2spc>Condizione di Cauchy per la
       convergenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
+      <no-break><pageref|auto-51>>
 
       <with|par-left|<quote|1tab>|5.3<space|2spc>Sostituzione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-52>>
 
       <with|par-left|<quote|1tab>|5.4<space|2spc>Limiti in più variabili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
+      <no-break><pageref|auto-53>>
     </associate>
   </collection>
 </auxiliary>
