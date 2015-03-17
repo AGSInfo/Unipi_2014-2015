@@ -1,9 +1,11 @@
-\documentclass[paper = a4]{article}
+\documentclass[portrait]{article}
 \author{Alessandro Sieni, Gianluca Mondini}
-\title{Appunti Fisica Generale}
+\title{Appunti Fisica}
 \date{\today}
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
+\usepackage{multicol}
+
 \begin{document}
 \maketitle
 \newpage
@@ -272,4 +274,69 @@ Anche in questo caso sia $x_0$ che $v_0$ hanno lo stesso valore di prima, l'unic
 $$v(t) = v_0$$
 $$a(t) = 0$$
 Ovvero proprio ciò che volevamo, cioè velocità costante e accelerazione pari a 0.
+\subsubsection{Esempi}
+\newpage
+\section{Appunti 11 marzo 2015}
+\subsection{Moto relativo}
+\subsubsection{Definizione}
+Si parla di moto relativo quando vogliamo studiare il movimento di un corpo che si muove all'interno di un sistema che è anch'esso in movimento (esempio : studiare il comportamento di un corpo all'interno di un treno in movimento). \\
+Innanzitutto è opportuno indicare sia le formule per calcolare la velocità e l'accelerazione assolute di un corpo (ovvero la velocità e l'accelerazione"totali" di un corpo all'interno di un sistema in movimento).
+$$V_a = V_{trasc}  + V_{rel}$$
+$$a_a = a_{trasc}  + a_{rel}$$
+Dove con il pedice a si intende assoluta, con il pedice "trasc" si intende di trascinamento (ovvero quella del sistema, ad esempio quella del treno) e con il pedice "rel" si intende quella relativa al solo corpo all'interno del sistema. \\
+Dalle formule si vede che l'accelerazione(e la velocità) assoluta è la somma di due componenti, e quindi di conseguenza l'accelerazione/velocità relativa è la differenza tra quella assoluta e quella di trascinamento. Proprio questa differenza introduce il concetto di accelerazione "fittizia", ovvero un'accelerazione che sembra esistere ma che in realtà e solo frutto della differenza di altre due (come ad esempio l'accelerazione centrifuga, che in realtà è solo fittizia). \\
+Questa formula spiega anche come mai se cadiamo a terra da un ascensore, anch'esso in caduta, per noi che siamo al suo interno sembra che non ci sia gravità, in quanto l'accelerazione assoluta è "g", ma anche l'accelerazione relativa è "g" perché tutto l'ascensore sta cadendo al suolo, quindi g-g = 0, dimostrando che noi in quel momento non siamo sottoposti ad alcuna accelerazione, in maniera apparente. \\
+Tornando sui sistemi di rotazione (ovvero quei sistemi che si muovono roteando), l'accelerazione centrifuga è un'altra accelerazione apparente, in quanto non è altro che l'opposto dell'accelerazione di trascinamento (che in questo caso l'accelerazione centripeta).
+Anche l'accelerazione di coriolis è apparente, in quanto un corpo all'interno di un sistema di rotazione (come anche la terra) sembra che si muova in direzione opposta al senso di rotazione, ma in realtà il corpo sotto che "scivola" via dal corpo, che non si muovo in modo congiunto con il sistema.
+\subsection{Forze}
+Quando parliamo di forza viene subito da pensare alla formula 
+$$F = ma$$
+che però nel caso generale risulta \textbf{errata}, in quanto in realtà la forza è la derivata della quantità di moto nel tempo, quindi realmente 
+$$\overleftarrow{F} = \frac{d \overrightarrow{P}}{dt}$$
+la quantità di moto vene definita come il prodotto tra la massa e  la velocità
+$$\overrightarrow{P} = m\overrightarrow{V}$$
+da cui si ricava 
+$$\overrightarrow{F} = \frac{d\overrightarrow{V}}{dt}m + V\frac{d}{dt}m = \overrightarrow{a}m + V\frac{d}{dt}m$$
+Quindi in definitiva la forza è il prodotto tra la massa e l'accelerazione se e solo se la derivata della massa nel tempo è uguale a zero, ovvero se il corpo ha massa costante nel tempo, altrimenti la forza viene definita come una variazione della quantità di moto nel tempo.
+\subsubsection{Impulso}
+Viene definito impulso invece la dipendenza funzionale della forza dal tempo e si esprime con la seguente formula
+$$\overrightarrow{I} = \int_{t_i}^{t_f} \sum \overrightarrow{F}$$
+Da questa definizione si vede che l'impulso è un vettore il cui modulo è l'area sottesa alla curva forza-tempo in un intervallo $\Delta t = t_f - t_i$.
+\subsection{Conservazione quantità di moto}
+Ci sono alcuni casi in cui la quantità di moto si conserva, e questi casi sono :
+\begin{itemize}
+\item Se le forze esterne sono nulle (la variazione di tempo può essere nulla, non nulla o infinitesima)
+\item Se la variazione di tempo è nulla
+\item Se la forza non è nulla e la variazione di tempo non è nulla
+\end{itemize}
+In quest'ultimo caso è necessario controllare il tipo di forze esterne, se sono \textbf{impulsive} allora la quantità di moto varia, se non lo sono allora la quantità di moto rimane costante.
+\section{Appunti 12 marzo 2015}
+\subsection{Caduta dei gravi}
+\textbf{Nota:} Quando noi studiamo il comportamento di un corpo escludiamo la forza di attrazione gravitazionale del sole, non perché quest'ultima sia talmente piccola da essere trascurabile ma perché noi stessi siamo in "caduta libera" rispetto al sole, ovvero "tutta" la forza di attrazione del sole viene usata per attrarre l'intero pianeta, quindi sempre per il moto relativo a noi risulta una forza nulla (come nell'esempio dell'ascensore in caduta e le persone al suo interno che fluttuano come se non ci fosse gravità). \\ \\
+Quando si studia la caduta dei gravi si deve tenere conto non solo di uno spostamento lungo l'asse verticale (ovvero la caduta verticale di un corpo ) ma anche lo spostamento che esso può avere lungo l'asse delle x, dovuto alla forza di Coriolis(che ricordo essere una forza fittizia dovuta alla rotazione, in questo caso, della Terra), che nella maggioranza dei casi spingerà il corpo verso est.
+\subsubsection{Esempio}
+Esempio di una caduta di corpo con spostamento dovuto alla forza di Coriolis: \\ 
+In questo esempio l'accelerazione lungo l'asse z è uguale a -g (ovvero cade ad un accelerazione costante pari a g) con un equazione oraria di questo tipo
+\[ \begin{array}{lr}
+z(t) = -\frac{1}{2}gt^2 + h \\
+v_z(t) = -gt \\
+a_z(t) = -g \\
+\end{array}
+\]
+Dal prodotto vettore tra $V_z$ e $-2\omega$ si vede che l'oggetto in caduta si muove lungo l'asse x in direzione est e il suo spostamento sarà pari al modulo che è 
+$$-2\overrightarrow{\omega}*\overrightarrow{V_z} = |\omega||V_z|\sin(\frac{\pi}{2} + \lambda) = |\omega||V_z|\cos(\lambda)$$
+quindi il vettore generato dal prodotto vettore avrà queste componenti : $(0,2|\omega||V_z|\cos(\lambda),V_z)$ che corrisponderanno alle velocità lungo i tre assi.
+Adesso non ci rimane che ricavare l'equazione oraria lungo l'asse delle y che è uguale a 
+$$y(t) = \frac{1}{3}gt^3\cos(\lambda)$$
+\section{Appunti 13 marzo 2015}
+\subsection{Rappresentazione vettore}
+\subsubsection{Coordinate cartesiane (con versori)}
+Un vettore può essere rappresentato mediante coordinate cartesiane con l'ausilio di versori, che ci consento di vedere il nostro vettore come somma di altri n versori, dove n è uguale alla dimensione in cui stiamo studiando il problema. Quindi preso un vettore a caso $V = (A,B)$ la sua rappresentazione per mezzo di versori è 
+$$V = Au_x + Bu_y$$
+Dove $u_x$ e $u_y$ sono rispettivamente versori lungo l'asse x e y.
+\subsubsection{Coordinate polari}
+\subsection{Velocità}
+\subsubsection{Coordinate cartesiane (con versori)}
+\subsubsection{Coordinate Polari}
+\section{Appunti 17 marzo 2015}
 \end{document}
