@@ -339,4 +339,51 @@ Dove $u_x$ e $u_y$ sono rispettivamente versori lungo l'asse x e y.
 \subsubsection{Coordinate cartesiane (con versori)}
 \subsubsection{Coordinate Polari}
 \section{Appunti 17 marzo 2015}
+\subsection{Contatto tra corpi}
+Nella vita di tutti i giorni, capita di continuo di vedere due oggetti che si toccano, ma in realtà questa è solo una nostra "illusione" dovuta dalla bassa risoluzione dei nostri occhi (ovvero dalla minima dimensione di oggetto visibile dal nostro occhio) in quanto se andassi a magnificare la zona di contatto fino a livello atomico è possibile notare che in realtà gli atomi dei corpi si respingono, evitando quindi ogni qual forma di contatto.
+\subsection{Forza di attrito}
+La forza di attrito tra due corpi è dovuta dal fatto che le superfici dei due corpi non sono perfettamente lisce (ovviamente si parla a livello atomico ) ma forma una specie di percorso seghettato. Questo vuol dire che se due corpi si toccano la pressione che fa il corpo che si appoggia sulla superficie non viene distribuita lungo tutta la superficie di contatto, ma invece essa è concentrata lungo solo alcuni punti di contatto ( quelle che possono essere viste come le punte del percorso seghettato ), che subendo una cosi elevata pressione si "fondono" con la superficie di appoggio, ovvero penetrano nella superficie. La forza di attrito non è altro che la forza che oppone questa specie di "micro-saldatura" al movimento. \\ 
+\subsubsection{Attrito statico}
+La forza di attrito statica è una \textbf{forza di reazione}, cioè una forza che entra in gioco solo nel momento in cui si applica una forza esterna al corpo, trovando appunto la resistenza posta dalla forza di attrito.Questo vuol dire finché non applico forze che fanno muovere il corpo, la forza di attrito sarà pari a 0. Ciò infatti si capisce chiaramente se consideriamo $F = \frac{dP}{dt}$, infatti dato che dP = 0, perché non si muove, allora tutte le forze in gioco ( su quell'asse) devono essere pari a 0, e quindi anche la forza di attrito.\\
+La forza di attrito statica è anche una forza non costante, ovvero che non ha sempre il solito valore ( a parità di coefficiente e di forza normale) in quanto se cosi fosse, dato che è una forza di reazione, nel momento in cui applichiamo al corpo una forza minore di quella di attrito, esso dovrebbe muoversi nella direzione opposta, ma ciò non avviene perché la forza di attrito assume un valore pari alla forza che noi esercitiamo, ovviamente fino ad un certo limite, soltanto di direzione opposta. \\
+La forza massima che può essere generata dall'attrito statico è pari a 
+$$F_{as} =\mu_s |N| $$
+dove N è la forza normale (ovvero quella ortogonale al piano, nel caso di un piano orizzontale la forza peso) e $\mu_s$ invece il coefficiente di attrito statico.
+\subsubsection{Attrito dinamico}
+La forza di attrito dinamico è una forza di attrito costante dal valore minore della forza di attrito statico, in quanto muovendosi le superficie a contatto dei corpi hanno meno tempo per effettuare quelle "micro-saldature" che quindi saranno meno resistenti. La formula per l'attrito dinamico è invece 
+$$F_{ad} = \mu_d|N|$$
+dove $\mu_d$ è il coefficiente di attrito dinamico ($\mu_d < \mu_s < 1$).
+\subsubsection{Attrito volvente}
+L'attrito volvente invece è un tipo di attrito che si incontra negli oggetti sferici ( o a forma di ruota) ed è molto minore anche dell'attrito dinamico, in quanto durante la rotazione del corpo viene spostato molto velocemente il punto di contatto, riducendo quindi l'efficacia del contatto tra le due superfici, e quindi l'attrito.
+\subsection{Lavoro}
+Viene definito come la variazione del lavoro il prodotto scalare tra la forza e lo spostamento 
+$$dL = F * ds$$
+mentre viene definito \textbf{Lavoro} l'integrale in linea (ovvero fatto punto per punto lungo la traiettoria) del prodotto scalare tra la forza e lo spostamento
+$$L = \int_{linea}F * ds$$
+Nel caso in cui volessimo calcolare il lavoro lungo la traiettoria tra a e b allora otteniamo
+$$L_{a \to b} = \int_{a_{linea}}^b F *ds$$
+\subsection{Energia cinetica}
+Il teorema dell'energia cinetica dice che nel caso in cui la massa sia costante (quindi $F = ma$) allora la variazione del lavoro può essere espressa nel seguente modo:
+$$dL = m\frac{dV}{dt}*ds = m*dV*\frac{ds}{dt} = m*dV*V$$
+posta invece l'energia cinetica come variabile k il suo valore sarà 
+$$k = \frac{1}{2}mV^2$$
+e la sua variazione
+$$dk= \frac{m}{2}d(\overrightarrow{V} * \overrightarrow{V}) = \frac{m}{2}d\overrightarrow{V}\overrightarrow{V} * \frac{m}{2}\overrightarrow{V}d\overrightarrow{V}$$
+Si può anche esprimere il lavoro come la variazione dell'energia cinetica $L = \Delta k$
+\subsubsection{Forze conservative}
+Una forza si dice conservativa se il lavoro dipende solo dalla posizione iniziale e finale del corpo, e non dalla traiettoria che esso ha fatto per raggiungere tale posizione dalla partenze. \\ 
+Un esempio di forza conservativa è la forza peso, la forza elastica oppure la forza di attrazione gravitazionale, in quanto il movimento lungo la circonferenza non richiede lavoro, solamente quello lungo il raggio. \\
+Si può quindi dire in definitiva che 
+$$\Delta U + \Delta R = 0$$
+$$U + R = costante$$
+con U che corrisponde all'energia potenziale.
+\subsubsection{Conservazione energia meccanica}
+In un sistema reale la conservazione dell'energia meccanica avviene se tutte le forze sono conservative oppure se quelle che non lo sono hanno valore 0 (ovvero non influiscono). \\
+Schematizzando quindi i passi da fare per capire se un sistema conserva energia meccanica sono i seguenti : 
+\begin{enumerate}
+\item Guardare tutte le forze in gioco
+\item Controllare se tutte sono conservative (se si abbiamo finito)
+\item Se non lo sono verificare che le forze non conservative abbiano valore > 0 
+\item Se la risposta è si allora il sistema non conserva energia, altrimenti la conserva.
+\end{enumerate}
 \end{document}
