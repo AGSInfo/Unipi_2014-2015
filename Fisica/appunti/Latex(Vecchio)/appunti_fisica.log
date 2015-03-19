@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  17 MAR 2015 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.1)  19 MAR 2015 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -299,7 +299,7 @@ Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
 )
 
 LaTeX Warning: Unused global option(s):
-    [portrait].
+    [portait].
 
 (./appunti_fisica.aux)
 \openout1 = `appunti_fisica.aux'.
@@ -328,11 +328,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./appunti_fisica.toc [2])
+(./appunti_fisica.toc [2] [3])
 \tf@toc=\write3
 \openout3 = `appunti_fisica.toc'.
 
- [3] [4]
+ [4] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
@@ -358,17 +358,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--60
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
-
- []
-
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
+
+ []
+
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
@@ -383,12 +383,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 127--134
 
  []
@@ -414,17 +414,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--134
 
  []
 
-[9]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
-[10]
+[11]
 Overfull \hbox (4.3742pt too wide) detected at line 192
 []
  []
 
-[11]
+[12]
 Overfull \hbox (9.30615pt too wide) in paragraph at lines 203--205
 \OT1/cmr/m/n/10 l'equazione oraria che poi verr^^Ra sis-tem-ata con sem-plici p
 as-saggi al-ge-brici(equazione
@@ -454,7 +454,7 @@ $[] = (\OML/cmm/m/it/10 A []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !t\OT1/cmr/m/n/10
 
  []
 
-[12] [13]
+[13] [14]
 Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
@@ -476,12 +476,12 @@ Overfull \hbox (6.97285pt too wide) in paragraph at lines 260--261
 re alla ve-locit^^Ra come derivata
  []
 
-[14] [15] [16]
+[15] [16] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 315--317
 
  []
 
-[17]
+[18]
 Overfull \hbox (57.71594pt too wide) in paragraph at lines 327--330
 \OT1/cmr/m/n/10 quindi il vet-tore gen-er-ato dal prodotto vet-tore avr^^Ra que
 ste com-po-nenti : $(0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 j\OM
@@ -490,40 +490,40 @@ L/cmm/m/it/10 !\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 V[]\OMS/cmsy/m/n/10 j []\OT1
 r/m/n/10 )$
  []
 
-[18]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
-[19] [20] [21] (./appunti_fisica.aux) ) 
+[20] [21] [22] [23] (./appunti_fisica.aux) ) 
 Here is how much of TeX's memory you used:
  674 strings out of 493117
- 7942 string characters out of 6135434
- 69008 words of memory out of 5000000
+ 7941 string characters out of 6135434
+ 69005 words of memory out of 5000000
  4167 multiletter control sequences out of 15000+600000
  11862 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  23i,13n,24p,764b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb>
-Output written on appunti_fisica.pdf (21 pages, 210622 bytes).
+</usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb>
+Output written on appunti_fisica.pdf (23 pages, 211999 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
