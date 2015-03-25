@@ -1925,7 +1925,11 @@
 
   <math|x<rsub|0 >= <around*|(|1,2|)>>
 
-  \;
+  v = (1,1)
+
+  <math|x<rsub|0> \<noplus\>+v = <around*|(|1,2|)>>+ t(1,1) = (1+t,2+t).
+
+  <math|F<rsub|v><around*|(|x<rsub|0>|)> = >
 
   \;
 
@@ -1934,6 +1938,212 @@
   \ 
 
   <subsection|Derivata parziale>
+
+  <section|Appunti del 25 marzo 2015>
+
+  Teorema per ``legare'' la derivata direzionale a quella parziale
+
+  Con <math|f:\<Omega\>\<rightarrow\>R> abbiamo che
+
+  <\equation*>
+    \<exists\> <frac|\<partial\>f|\<partial\>v><around*|(|x<rsub|0>|)>=d*f<rsub|A<around*|(|v|)>>*<around*|(|x<rsub|0>\<nocomma\>\<nocomma\>,v|)><text|
+    \ con \ A(v) >lineare
+  </equation*>
+
+  <\equation*>
+    f<rsub|v><around*|(|x<rsub|0>|)>=A<around*|(|v|)>=A<around*|(|<big|sum>v<rsub|j>*e<rsub|i>|)>=<big|sum>v<rsub|j>*A<around*|(|e<rsub|i>|)>
+  </equation*>
+
+  <\equation*>
+    A<around*|(|e<rsub|i>|)>=<frac|\<partial\>f|\<partial\>e<rsub|i>><around*|(|x<rsub|0>|)>=<frac|\<partial\>f|\<partial\>x<rsub|i>><around*|(|x<rsub|0>|)>
+  </equation*>
+
+  <math|<frac|\<partial\>f|\<partial\>x<rsub|i>><around*|(|x<rsub|0>|)>>
+  rappresenta proprio la derivata parziale.
+
+  Abbiamo quindi
+
+  <\equation*>
+    f<rsub|v><around*|(|x<rsub|0>|)>=<big|sum><rsub|1><rsup|N>v<rsub|i>*<frac|\<partial\>f|\<partial\>x<rsub|i>><around*|(|x<rsub|0>|)>
+  </equation*>
+
+  <subsubsection|Gradiente>
+
+  Il gradiente di <math|f> si indica con <math|\<nabla\>f> (il simbolo
+  <math|\<nabla\>> è chiamato ``nabla'') e rappresenta
+
+  <\equation*>
+    \<nabla\>f<around*|(|x<rsub|0>|)>=<choice|<tformat|<table|<row|<cell|<frac|\<partial\>f|\<partial\>x<rsub|1>><around*|(|x<rsub|0>|)>>>|<row|<cell|<frac|\<partial\>f|\<partial\>x<rsub|2>><around*|(|x<rsub|0>|)>>>|<row|<cell|\<ldots\>>>|<row|<cell|<frac|\<partial\>f|\<partial\>x<rsub|n>><around*|(|x<rsub|0>|)>>>>>>
+  </equation*>
+
+  di conseguenza\ 
+
+  <\equation*>
+    f<rsub|v><around*|(|x<rsub|0>|)>=\<nabla\>f<around*|(|x<rsub|0>|)>v
+  </equation*>
+
+  Se <math|f> è differenziabile in <math|x<rsub|0>>
+
+  <\equation*>
+    d*f<around*|(|x<rsub|0>,v|)>=\<nabla\>f<around*|(|x<rsub|0>|)>v=<big|sum><rsub|1><rsup|N><frac|\<partial\>f|\<partial\>x<rsub|i>><around*|(|x<rsub|0>|)>*v<rsub|i>
+  </equation*>
+
+  Nota: per i fisici è rappresentato da:
+
+  <\equation*>
+    d*f<around*|(|x<rsub|0>,v|)>=\<nabla\>f<around*|(|x<rsub|0>|)>v=<big|sum><rsub|1><rsup|N><frac|\<partial\>f|\<partial\>x<rsub|i>><around*|(|x<rsub|0>|)>v<rsub|1>
+  </equation*>
+
+  <subsubsection|Esempio: proiezione>
+
+  <\equation*>
+    \<Pi\><rsub|i><around*|(|x|)>=x
+  </equation*>
+
+  <\equation*>
+    \<Pi\><rsub|i><around*|(|x+y|)>=\<Pi\><rsub|i><around*|(|x<rsub|1>+y<rsub|1>,x<rsub|2>+y<rsub|2>,\<ldots\>x<rsub|n>+y<rsub|n>|)>=x<rsub|i>+y<rsub|i>=\<Pi\><rsub|i><around*|(|x|)>+\<Pi\><rsub|i><around*|(|y|)>
+  </equation*>
+
+  <\equation*>
+    d*\<Pi\><rsub|i><around*|(|x<rsub|0>,v|)>=\<Pi\><rsub|i><around*|(|v|)>=V<rsub|i>
+  </equation*>
+
+  <\equation*>
+    d*\<Pi\><rsub|i>=d*x<rsub|i>
+  </equation*>
+
+  perché il differenziale di una applicazione lineare in un punto corrisponde
+  all'applicazione calcolata nel punto stesso.
+
+  <subsection|Studio dei diversi casi>
+
+  <subsubsection|Caso <math|R<rsub|>\<rightarrow\>R>>
+
+  Funzione: <math|f:R<rsub|>\<rightarrow\>R>
+
+  <math|f> è differenziabile se <math|\<exists\> A:R\<rightarrow\>R>
+  \ lineare <math|\<Longrightarrow\>> <math|\<exists\> a\<in\>R> :
+  <math|A<around*|(|w|)>=a*w>
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><around*|\||<frac|f<around*|(|x<rsub|0>+w|)>-f<around*|(|x<rsub|0>|)>-a*w|w>|\|>=0
+  </equation*>
+
+  Il valore assoluto può essere tolto perché il limite ha come valore 0. Se
+  fossimo in più variabili non sarebbe possibile fare lo stesso in quanto
+  effettuerei una divisione per un vettore, che non è definita.
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+w|)>-f<around*|(|x<rsub|0>|)>|w>-a=0
+  </equation*>
+
+  di conseguenza abbiamo che
+
+  <\equation*>
+    a=f<rprime|'><around*|(|x<rsub|0>|)>
+  </equation*>
+
+  in quanto otteniamo proprio il limite del rapporto incrementale.
+
+  Nota: nel caso in cui abbiamo una funzione ad una variabile, questa è
+  necessariamente derivabile se è differenziabile e viceversa.
+
+  <\equation*>
+    d*f<around*|(|x<rsub|0>,v|)>=f<rprime|'><around*|(|x<rsub|0>|)>*v
+  </equation*>
+
+  Nota: <math|A<around*|(|w\<cdot\>1|)>=w*A<around*|(|1|)>=a*w>
+
+  <subsubsection|Caso <math|R<rsub|>\<rightarrow\>R<rsup|N>>>
+
+  <math|\<gamma\>:R\<rightarrow\>R<rsup|N>> <math|\<exists\>
+  A:R\<rightarrow\>R<rsup|N>> lineare tale che
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><frac|<around*|\||\<gamma\><around*|(|x<rsub|0>+w|)>-\<gamma\><around*|(|x<rsub|0>|)>-A<around*|(|w|)>|\|><rsub|<with|math-font|Bbb*|R><rsup|N>>|<around*|\||w|\|>>
+  </equation*>
+
+  per la proprietà della norma <math|<around*|\||t*w|\|>=<around*|\||t|\|>*<around*|\||w|\|>>
+  abbiamo che
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><around*|\||<frac|1|w><matrix|<tformat|<table|<row|<cell|\<gamma\><rsub|1><around*|(|x<rsub|0>+w|)>-\<gamma\><around*|(|x<rsub|0>|)>-a<rsub|1>*w>>|<row|<cell|\<gamma\><rsub|2><around*|(|x<rsub|0>+w|)>-\<gamma\><around*|(|x<rsub|0>|)>-a<rsub|2>*w>>|<row|<cell|\<ldots\>>>|<row|<cell|\<gamma\><rsub|N><around*|(|x<rsub|0>+w|)>-\<gamma\><around*|(|x<rsub|0>|)>-a<rsub|N>*w>>>>>|\|>=0
+  </equation*>
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><frac|1|w><around*|[|\<gamma\><rsub|i><around*|(|x<rsub|0>+w|)>-\<gamma\><rsub|i><around*|(|x<rsub|0>|)>-a<rsub|i>*w|]>=0
+  </equation*>
+
+  <\equation*>
+    a<rsub|i>=<frac|d*\<gamma\><rsub|i>|d*t><text| \ con >t <text| variabile
+    ``di partenza''>
+  </equation*>
+
+  <\equation*>
+    \<gamma\><around*|(|x<rsub|0>|)>=<matrix|<tformat|<table|<row|<cell|\<gamma\><rsub|1><around*|(|x<rsub|0>|)>>>|<row|<cell|\<gamma\><rsub|2><around*|(|x<rsub|0>|)>>>|<row|<cell|\<ldots\>>>|<row|<cell|\<gamma\><rsub|N><around*|(|x<rsub|0>|)>>>>>>
+  </equation*>
+
+  Per schiarire le idee, facciamo un collegamento con la fisica. Quando
+  dobbiamo ricavare la velocità di un corpo di cui conosciamo l'equazione
+  oraria, deriviamo singolarmente le sue componenti
+
+  <subsubsection|Caso <math|R<rsub|><rsup|n>\<rightarrow\>R<rsup|m>>>
+
+  <math|f:R<rsup|n>\<rightarrow\>R<rsup|M>> con <math|m\<gtr\>1>
+
+  con <math|w\<in\>R<rsup|n>> e con\ 
+
+  <\equation*>
+    f<around*|(|x|)>=<matrix|<tformat|<table|<row|<cell|f<rsub|1><around*|(|x|)>>>|<row|<cell|f<rsub|2><around*|(|x|)>>>|<row|<cell|\<ldots\>>>|<row|<cell|f<rsub|m><around*|(|x|)>>>>>>
+  </equation*>
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><frac|<around*|\||f<around*|(|x<rsub|0>+w|)>-f<around*|(|x<rsub|0>|)>-A<around*|(|w|)>|\|>|<around*|\||w|\|>>=0
+  </equation*>
+
+  Il fatto che sia <math|=0> è un ipotesi in quanto supponiamo che la
+  <math|f> sia differenziabile
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><matrix|<tformat|<table|<row|<cell|<frac|1|<around*|\||w|\|>><around*|[|f<rsub|1><around*|(|x<rsub|0>+w|)>|]>-f<rsub|1><around*|(|x<rsub|0>|)>-A<rsub|1><around*|(|w|)>>>|<row|<cell|\<ldots\>>>|<row|<cell|<frac|1|<around*|\||w|\|>><around*|[|f<rsub|m><around*|(|x<rsub|0>+w|)>-f<rsub|m><around*|(|x<rsub|0>|)>-A<rsub|m><around*|(|w|)>|]>>>>>>
+  </equation*>
+
+  <\equation*>
+    \<Longleftrightarrow\>
+  </equation*>
+
+  <\equation*>
+    lim<rsub|w\<rightarrow\>0><frac|f<rsub|i><around*|(|x<rsub|0>+w|)>-f<rsub|i><around*|(|x<rsub|0>|)>-A<rsub|i><around*|(|w|)>|<around*|\||w<rsub|i>|\|>>=0<text|
+    \ >\<forall\> i=1\<ldots\>m
+  </equation*>
+
+  <\equation*>
+    A<rsub|i><around*|(|w|)>=<big|sum><rsub|j=1><rsup|n>w<rsub|j>*<frac|\<partial\>f<rsub|i>|\<partial\>x<rsub|j>><around*|(|x<rsub|0>|)>
+  </equation*>
+
+  <\equation*>
+    A<around*|(|w|)>=<matrix|<tformat|<table|<row|<cell|<big|sum><rsub|1><rsup|n><frac|\<partial\>f<rsub|i>|\<partial\>x<rsub|i>>w<rsub|j>>>|<row|<cell|\<ldots\>>>|<row|<cell|<big|sum><rsub|1><rsup|n><frac|\<partial\>f<rsub|m>|\<partial\>x<rsub|j>>>>>>>=<matrix|<tformat|<table|<row|<cell|<frac|\<partial\>f<rsub|1>|\<partial\>x<rsub|1>><space|1em>\<ldots\><space|1em><frac|\<partial\>f<rsub|1>|\<partial\>x<rsub|n>>>>|<row|<cell|\<ldots\><space|1em>\<ldots\><space|1em>\<ldots\>>>|<row|<cell|<frac|\<partial\>f<rsub|m>|\<partial\>x<rsub|1>><space|1em>\<ldots\><space|1em><frac|\<partial\>f<rsub|m>|\<partial\>x<rsub|n>>>>>>><text|>
+  </equation*>
+
+  quindi\ 
+
+  <\equation*>
+    d*f<around*|(|x<rsub|0>,w|)>=f<rprime|'><around*|(|x<rsub|0>|)>*w
+  </equation*>
+
+  Vediamo adesso i significati che assumono
+  <math|f<rprime|'><around*|(|x<rsub|0>|)>> ed il prodotto
+  <math|f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\>w> nei vari casi
+  dimensionali
+
+  <big-table|<tabular|<tformat|<table|<row|<cell|Dimensione di
+  partenza>|<cell|Dimensione di arrivo>|<cell|Significato di
+  <math|f<rprime|'><around*|(|x<rsub|0>|)>>>|<cell|Significato del
+  prodotto>>|<row|<cell|1>|<cell|1>|<cell|derivata>|<cell|>>|<row|<cell|1>|<cell|<math|m>>|<cell|derivata>|<cell|>>|<row|<cell|<math|n>>|<cell|1>|<cell|<math|\<nabla\>f<around*|(|x<rsub|0>|)>>>|<cell|>>|<row|<cell|<math|n>>|<cell|<math|m>>|<cell|<math|<around*|(|<frac|\<partial\>f<rsub|i>|>|)>>>|<cell|>>>>>|>
+
+  \;
+
+  \;
 </body>
 
 <\initial>
@@ -2107,14 +2317,14 @@
     <associate|auto-7|<tuple|1.1.5|2>>
     <associate|auto-70|<tuple|8|?>>
     <associate|auto-71|<tuple|8.1|?>>
-    <associate|auto-72|<tuple|1.1.6|?>>
-    <associate|auto-73|<tuple|1.1.7|?>>
-    <associate|auto-74|<tuple|1.1.8|?>>
-    <associate|auto-75|<tuple|1.1.9|?>>
-    <associate|auto-76|<tuple|1.1.10|?>>
-    <associate|auto-77|<tuple|2|?>>
-    <associate|auto-78|<tuple|2.1|?>>
-    <associate|auto-79|<tuple|2.1.1|?>>
+    <associate|auto-72|<tuple|9|?>>
+    <associate|auto-73|<tuple|9.0.1|?>>
+    <associate|auto-74|<tuple|9.0.2|?>>
+    <associate|auto-75|<tuple|9.1|?>>
+    <associate|auto-76|<tuple|9.1.1|?>>
+    <associate|auto-77|<tuple|9.1.2|?>>
+    <associate|auto-78|<tuple|9.1.3|?>>
+    <associate|auto-79|<tuple|1|?>>
     <associate|auto-8|<tuple|1.1.6|2>>
     <associate|auto-80|<tuple|2.1.2|?>>
     <associate|auto-81|<tuple|2.1.3|?>>
@@ -2427,6 +2637,32 @@
       <with|par-left|<quote|1tab>|8.1<space|2spc>Derivata parziale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-71>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>Appunti
+      del 25 marzo 2015> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-72><vspace|0.5fn>
+
+      <with|par-left|<quote|2tab>|9.0.1<space|2spc>Gradiente
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-73>>
+
+      <with|par-left|<quote|2tab>|9.0.2<space|2spc>Esempio: proiezione
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-74>>
+
+      <with|par-left|<quote|1tab>|9.1<space|2spc>Studio dei diversi casi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-75>>
+
+      <with|par-left|<quote|2tab>|9.1.1<space|2spc>Caso
+      <with|mode|<quote|math>|R<rsub|>\<rightarrow\>R>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-76>>
+
+      <with|par-left|<quote|2tab>|9.1.2<space|2spc>Caso
+      <with|mode|<quote|math>|R<rsub|>\<rightarrow\>R<rsup|N>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-77>>
     </associate>
   </collection>
 </auxiliary>
