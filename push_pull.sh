@@ -46,6 +46,7 @@ fi
 if [ $1 == "commit" ]
 then
    echo "Effettuo il commit delle modifiche"
+   git add *
    git commit -a
    exit 0
 fi

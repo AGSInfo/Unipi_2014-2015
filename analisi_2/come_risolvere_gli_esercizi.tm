@@ -1,11 +1,118 @@
 <TeXmacs|1.99.2>
 
-<style|<tuple|generic|italian>>
+<style|<tuple|article|italian>>
 
 <\body>
   <doc-data|<doc-title|Risoluzione degli esercizi di Analisi
   II>|<doc-author|<author-data|<author-name|Mondini Gianluca e di chiunque
   altro mi aiuti>>>>
+
+  <\table-of-contents|toc>
+    <with|par-left|1tab|1.<space|2spc>Piano tangente
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-1>>
+
+    <with|par-left|2tab|1.1.<space|2spc>Piano tangente a superficie
+    cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2>>
+
+    <with|par-left|1tab|2.<space|2spc>Vettore normale
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3>>
+
+    <with|par-left|1tab|3.<space|2spc>Gradiente
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4>>
+
+    <with|par-left|1tab|4.<space|2spc>Derivata parziale
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-5>>
+
+    <with|par-left|2tab|4.1.<space|2spc>Derivate di ordine
+    <with|mode|math|\<geqslant\>2> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-6>>
+
+    <with|par-left|1tab|5.<space|2spc>Derivata direzionale
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-7>>
+
+    <with|par-left|2tab|5.1.<space|2spc>Formula del gradiente
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-8>>
+
+    <with|par-left|1tab|6.<space|2spc>Polinomio di Taylor
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-9>>
+
+    <with|par-left|2tab|6.1.<space|2spc>Formula di ordine 1
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-10>>
+
+    <with|par-left|2tab|6.2.<space|2spc>Formula di ordine 2
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-11>>
+
+    <with|par-left|1tab|7.<space|2spc>Studio della continuità in un punto
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-12>>
+
+    <with|par-left|1tab|8.<space|2spc>Stabilire se una funzione è
+    differenziabile <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-13>>
+
+    <with|par-left|1tab|9.<space|2spc>Stabilire se è possibile effettuare un
+    cambio di variabile nell'intorno di un punto
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-14>>
+
+    <with|par-left|1tab|10.<space|2spc>Punti critici
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-15>>
+
+    <with|par-left|2tab|10.1.<space|2spc>Casi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-16>>
+
+    <with|par-left|1tab|11.<space|2spc>Punti di massimo e di minimo
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-17>>
+
+    <with|par-left|2tab|11.1.<space|2spc>Insiemi chiusi e limitati
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-18>>
+
+    <with|par-left|4tab|Metodo di Lagrange
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-19><vspace|0.15fn>>
+
+    <with|par-left|1tab|12.<space|2spc>Formule trigonometriche utili
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-20>>
+
+    <with|par-left|2tab|12.1.<space|2spc>Formule di addizione e sottrazione
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-21>>
+
+    <with|par-left|2tab|12.2.<space|2spc>Formule di duplicazione
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-22>>
+
+    <with|par-left|2tab|12.3.<space|2spc>Formule di bisezione
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-23>>
+
+    <with|par-left|2tab|12.4.<space|2spc>Formule parametriche
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-24>>
+
+    <with|par-left|1tab|13.<space|2spc>Lunghezza di una curva
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-25>>
+
+    <with|par-left|1tab|14.<space|2spc>Integrale curvilineo
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-26>>
+  </table-of-contents>
 
   <subsection|Piano tangente>
 
@@ -14,6 +121,27 @@
   <\equation*>
     z=f<around*|(|x<rsub|0>,y<rsub|0>|)>+f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)><around*|(|x-x<rsub|0>|)>+f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)><around*|(|y-y<rsub|0>|)>
   </equation*>
+
+  <subsection|Vettore normale>
+
+  Il vettore normale di <math|f<around*|(|x,y|)>> si trova:
+
+  <\itemize>
+    <item>Per una superficie parametrica:
+
+    <\equation*>
+      f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>\<wedge\>f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>
+    </equation*>
+
+    <item>Per una superficie cartesiana:
+
+    <\equation*>
+      <matrix|<tformat|<table|<row|<cell|f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>>>|<row|<cell|f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>>>|<row|<cell|-1>>>>>
+    </equation*>
+  </itemize>
+
+  Per ottenere il versore normale è necessario dividere il vettore per la sua
+  norma
 
   <subsection|Gradiente>
 
@@ -81,7 +209,7 @@
 
   Necessita di revisione!
 
-  <subsubsection|Formula ordine 1>
+  <subsubsection|Formula di ordine 1>
 
   <\equation*>
     f<around*|(|x<rsub|0>,y<rsub|0>|)>+f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)><around*|(|x-x<rsub|0>|)>+f<rsub|y><around*|(|x<rsub|0,>y<rsub|0>|)><around*|(|y<rsub|>-y<rsub|0>|)>
@@ -295,6 +423,30 @@
     tan<around*|(|\<alpha\>|)>=<frac|2*tan<around*|(|<frac|\<alpha\>|2>|)>|1-tan<rsup|2><around*|(|<frac|\<alpha\>|2>|)>>
   </equation*>
 
+  <subsection|Lunghezza di una curva>
+
+  <\equation*>
+    <big|int><rsub|a><rsup|b><around*|\<\|\|\>|<wide|\<gamma\>|\<dot\>>|\<\|\|\>>*dt
+  </equation*>
+
+  Nel caso in una variabile si riduce a
+
+  <\equation*>
+    <big|int><rsub|a><rsup|b><sqrt|1+<wide|f<around*|(|t|)>|\<dot\>>>*dt<text|
+    \ con \ >y=f<around*|(|t|)>
+  </equation*>
+
+  <subsection|Integrale curvilineo>
+
+  Data la curva <math|\<gamma\><around*|(|t|)>=<around*|(|x<around*|(|t|)>,y<around*|(|t|)>|)>>
+  con <math|t\<in\><around*|[|a,b|]>> l'integrale curvilineo (o di linea)
+  della funzione <math|f<around*|(|x,y|)>> su <math|\<gamma\><around*|(|t|)>>
+  è:
+
+  <\equation*>
+    <big|int><rsub|a><rsup|b>f<around*|(|\<gamma\><around*|(|t|)>|)>\<cdot\><around*|\<\|\|\>|<wide|\<gamma\><around*|(|t|)>|\<dot\>>|\<\|\|\>>*dt
+  </equation*>
+
   \;
 
   \;
@@ -315,29 +467,32 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?>>
-    <associate|auto-10|<tuple|5.2|?>>
-    <associate|auto-11|<tuple|6|?>>
-    <associate|auto-12|<tuple|7|?>>
-    <associate|auto-13|<tuple|8|?>>
-    <associate|auto-14|<tuple|9|?>>
-    <associate|auto-15|<tuple|9.1|?>>
-    <associate|auto-16|<tuple|10|?>>
-    <associate|auto-17|<tuple|10.1|?>>
-    <associate|auto-18|<tuple|10.1.1|?>>
-    <associate|auto-19|<tuple|11|?>>
-    <associate|auto-2|<tuple|1.1|?>>
-    <associate|auto-20|<tuple|11.1|?>>
-    <associate|auto-21|<tuple|11.2|?>>
-    <associate|auto-22|<tuple|11.3|?>>
-    <associate|auto-23|<tuple|11.4|?>>
-    <associate|auto-3|<tuple|2|?>>
-    <associate|auto-4|<tuple|3|?>>
-    <associate|auto-5|<tuple|3.1|?>>
-    <associate|auto-6|<tuple|4|?>>
-    <associate|auto-7|<tuple|4.1|?>>
-    <associate|auto-8|<tuple|5|?>>
-    <associate|auto-9|<tuple|5.1|?>>
+    <associate|auto-1|<tuple|1|3>>
+    <associate|auto-10|<tuple|6.1|4>>
+    <associate|auto-11|<tuple|6.2|4>>
+    <associate|auto-12|<tuple|7|4>>
+    <associate|auto-13|<tuple|8|5>>
+    <associate|auto-14|<tuple|9|5>>
+    <associate|auto-15|<tuple|10|5>>
+    <associate|auto-16|<tuple|10.1|5>>
+    <associate|auto-17|<tuple|11|5>>
+    <associate|auto-18|<tuple|11.1|6>>
+    <associate|auto-19|<tuple|11.1.1|6>>
+    <associate|auto-2|<tuple|1.1|3>>
+    <associate|auto-20|<tuple|12|6>>
+    <associate|auto-21|<tuple|12.1|6>>
+    <associate|auto-22|<tuple|12.2|6>>
+    <associate|auto-23|<tuple|12.3|6>>
+    <associate|auto-24|<tuple|12.4|6>>
+    <associate|auto-25|<tuple|13|7>>
+    <associate|auto-26|<tuple|14|7>>
+    <associate|auto-3|<tuple|2|3>>
+    <associate|auto-4|<tuple|3|3>>
+    <associate|auto-5|<tuple|4|4>>
+    <associate|auto-6|<tuple|4.1|4>>
+    <associate|auto-7|<tuple|5|4>>
+    <associate|auto-8|<tuple|5.1|4>>
+    <associate|auto-9|<tuple|6|4>>
   </collection>
 </references>
 
@@ -352,83 +507,103 @@
       cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|2<space|2spc>Gradiente
+      <with|par-left|<quote|1tab>|2<space|2spc>Vettore normale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|3<space|2spc>Derivata parziale
+      <with|par-left|<quote|1tab>|3<space|2spc>Gradiente
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|2tab>|3.1<space|2spc>Derivate di ordine
-      <with|mode|<quote|math>|\<geqslant\>2>
+      <with|par-left|<quote|1tab>|4<space|2spc>Derivata parziale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|4<space|2spc>Derivata direzionale
+      <with|par-left|<quote|2tab>|4.1<space|2spc>Derivate di ordine
+      <with|mode|<quote|math>|\<geqslant\>2>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|2tab>|4.1<space|2spc>Formula del gradiente
+      <with|par-left|<quote|1tab>|5<space|2spc>Derivata direzionale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|5<space|2spc>Polinomio di Taylor
+      <with|par-left|<quote|2tab>|5.1<space|2spc>Formula del gradiente
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|2tab>|5.1<space|2spc>Formula ordine 1
+      <with|par-left|<quote|1tab>|6<space|2spc>Polinomio di Taylor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|2tab>|5.2<space|2spc>Formula di ordine 2
+      <with|par-left|<quote|2tab>|6.1<space|2spc>Formula di ordine 1
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|6<space|2spc>Studio della continuità in un
-      punto <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|6.2<space|2spc>Formula di ordine 2
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
-      <with|par-left|<quote|1tab>|7<space|2spc>Stabilire se una funzione è
-      differenziabile <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|7<space|2spc>Studio della continuità in un
+      punto <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|8<space|2spc>Stabilire se è possibile
-      effettuare un cambio di variabile nell'intorno di un punto
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|8<space|2spc>Stabilire se una funzione è
+      differenziabile <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|9<space|2spc>Punti critici
+      <with|par-left|<quote|1tab>|9<space|2spc>Stabilire se è possibile
+      effettuare un cambio di variabile nell'intorno di un punto
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|2tab>|9.1<space|2spc>Casi
+      <with|par-left|<quote|1tab>|10<space|2spc>Punti critici
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
-      <with|par-left|<quote|1tab>|10<space|2spc>Punti di massimo e di minimo
+      <with|par-left|<quote|2tab>|10.1<space|2spc>Casi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
-      <with|par-left|<quote|1tab>|11<space|2spc>Formule trigonometriche utili
+      <with|par-left|<quote|1tab>|11<space|2spc>Punti di massimo e di minimo
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
 
-      <with|par-left|<quote|2tab>|11.1<space|2spc>Formule di addizione e
-      sottrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|11.1<space|2spc>Insiemi chiusi e limitati
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-18>>
 
-      <with|par-left|<quote|2tab>|11.2<space|2spc>Formule di duplicazione
+      <with|par-left|<quote|4tab>|Metodo di Lagrange
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-19><vspace|0.15fn>>
 
-      <with|par-left|<quote|2tab>|11.3<space|2spc>Formule di bisezione
+      <with|par-left|<quote|1tab>|12<space|2spc>Formule trigonometriche utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|2tab>|11.4<space|2spc>Formule parametriche
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|12.1<space|2spc>Formule di addizione e
+      sottrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|2tab>|12.2<space|2spc>Formule di duplicazione
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>>
+
+      <with|par-left|<quote|2tab>|12.3<space|2spc>Formule di bisezione
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>>
+
+      <with|par-left|<quote|2tab>|12.4<space|2spc>Formule parametriche
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>>
+
+      <with|par-left|<quote|1tab>|13<space|2spc>Lunghezza di una curva
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
+
+      <with|par-left|<quote|1tab>|14<space|2spc>Integrale curvilineo
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26>>
     </associate>
   </collection>
 </auxiliary>
