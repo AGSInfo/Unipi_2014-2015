@@ -15,6 +15,7 @@ then
    echo "push      Invia il repository locale al server"
    echo "pull      Scarica le modifiche remote nel repository locale"
    echo "commit    Effettua il commit delle modifiche locali"
+   echo "broswer   Apri il repository nel broswer di default (solo Linux?)"
    exit 1
 fi
 
@@ -49,6 +50,15 @@ then
    git add *
    git commit -a
    exit 0
+fi
+
+# Apri il repository nel browser
+
+if [ $1 == "browser" ]
+then
+	echo "Apro il repository nel browser"
+	xdg-open $SERVER
+	exit 0
 fi
 
 echo "Il comando specificato è errato. Avvia lo script senza argomenti per visualizzare le opzioni disponibili"
