@@ -77,19 +77,80 @@
 
   <subsubsection|Curva chiusa>
 
+  Una curva chiusa <math|\<gamma\>> è una funzione continua
+
+  <\equation*>
+    \<gamma\><around*|[|a,b|]>\<rightarrow\>\<Omega\><text| \ con
+    \ >\<Omega\>\<subseteq\>R<rsup|n>
+  </equation*>
+
+  tale che\ 
+
+  <\equation*>
+    \<gamma\><around*|(|a|)>=\<gamma\><around*|(|b|)>
+  </equation*>
+
   <subsubsection|Curva costante>
+
+  Una curva costante <math|\<gamma\>> è una funzione
+
+  <\equation*>
+    \<gamma\><around*|[|a,b|]>\<rightarrow\>R<rsup|n><text| \ con
+    \ >\<Omega\>\<subseteq\>R<rsup|n>
+  </equation*>
+
+  tale che
+
+  <\equation*>
+    \<gamma\><around*|(|t|)>=x<rsub|0><text| \ \ \ >\<forall\> t
+    \<in\><around*|[|a,b|]><text| \ e \ >x<rsub|0>\<in\>\<Omega\>
+  </equation*>
 
   <subsubsection|Curva semplice>
 
+  Una curva semplice <math|\<gamma\>> è una funzione
+
+  <\equation*>
+    \<gamma\>:<around*|[|a,b|]>\<rightarrow\>R<rsup|n><text| \ iniettiva su
+    \ ><around*|(|a,b|)>
+  </equation*>
+
+  cioè tale che
+
+  <\equation*>
+    \<gamma\><around*|(|t|)>\<neq\>\<gamma\><around*|(|s|)><text| \ se
+    \ >t\<neq\>s<text| \ per ogni \ >t,s\<in\><around*|(|a,b|)>
+  </equation*>
+
   <subsubsection|Insieme connesso (per archi)>
+
+  Dato <math|\<Omega\>\<subseteq\>R<rsup|n>\<nocomma\>>, si dirà un insieme
+  connesso se
+
+  <\equation*>
+    \<forall\> x,y\<in\>\<Omega\><text| \ >\<exists\>
+    \<gamma\>:<around*|[|a,b|]>\<rightarrow\>\<Omega\><text| \ :
+    \ >\<gamma\><around*|(|a|)>=x<text| \ e
+    \ >\<gamma\><around*|(|b|)>=y<text| \ continua>
+  </equation*>
+
+  In pratica: presi due punti qualsiasi <math|x,y\<in\>\<Omega\>> esiste una
+  curva parametrica (o arco) <math|\<gamma\>> continua appartenente ad
+  <math|\<Omega\>> che conginunge i due punti.
 
   <subsubsection|Funzione oscillante>
 
   <subsubsection|Derivata direzionale>
 
-  \;
-
   <subsubsection|Derivata parziale>
+
+  Se nel calcolare la derivata direzionale si usa come direzione quella dei
+  vettori della base canonica la derivata direzionale prende il nome di
+  derivata parziale.
+
+  <\equation*>
+    <frac|\<partial\>*f<around*|(|x<rsub|0>|)>|\<partial\>*e<rsub|i>>=<frac|\<partial\>*f<around*|(|x<rsub|0>|)>|\<partial\>*x<rsub|i>>=lim<rsub|t\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+t*e<rsub|i>|)>-f<around*|(|x<rsub|0>|)>|t>
+  </equation*>
 
   <subsubsection|Punto estremo>
 
@@ -99,13 +160,59 @@
 
   <subsubsection|Differenziale>
 
+  Preso <math|f:\<Omega\>\<rightarrow\>R> con
+  <math|\<Omega\>\<subseteq\>R<rsup|n>>, <math|f > si dice differenziabile in
+  <math|x<rsub|0>\<in\>\<Omega\>> se
+
+  <\equation*>
+    \<exists\> A:R<rsup|n<rprime|'>>\<rightarrow\>R<text| \ lineare tale che
+    \ >lim<rsub|w\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+w|)>-f<around*|(|x<rsub|0>|)>-A<around*|(|w|)>|<around*|\||w|\|>>=0
+  </equation*>
+
+  L'applicazione lineare <math|A<around*|(|w|)>> si chiama differenziaile di
+  <math|f> nel punto <math|x<rsub|0>> secondo l'incremento di <math|w> e si
+  sindica con
+
+  <\equation*>
+    df<around*|(|x<rsub|0>,w|)>=A<around*|(|w|)><text| \ con
+    \ >x<rsub|0>,w\<in\>R<rsup|n>
+  </equation*>
+
   <subsubsection|Matrice Jacobiana>
 
+  Data una funzione <math|f:R<rsup|n>\<rightarrow\>R<rsup|m>> con
+  <math|x<rsub|0>\<in\>R<rsup|n>> la matrice Jacobiana
+  <math|J<around*|(|x<rsub|0>|)>\<in\>R<rsup|n\<times\>m>> è formata dalle
+  derivate parziali prime di <math|f> nel punto <math|x<rsub|0>>
+
+  <\equation*>
+    J<around*|(|x<rsub|0>|)>=<matrix|<tformat|<table|<row|<cell|\<nabla\>f<rsub|1><around*|(|x<rsub|0>|)>>>|<row|<cell|\<ldots\>>>|<row|<cell|\<nabla\>f<rsub|n><around*|(|x<rsub|0>|)>>>>>>=<matrix|<tformat|<table|<row|<cell|<frac|\<partial\>f<rsub|1><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|1>>>|<cell|\<ldots\>>|<cell|<frac|\<partial\>f<rsub|1><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|n>>>>|<row|<cell|\<ldots\>>|<cell|\<ldots\>>|<cell|\<ldots\>>>|<row|<cell|<frac|\<partial\>f<rsub|n><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|1>>>|<cell|\<ldots\>>|<cell|<frac|\<partial\>f<rsub|n><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|n>>>>>>>
+  </equation*>
+
   <subsubsection|Funzione di classe <math|C<rsup|1><around*|(|\<Omega\>|)>>>
+
+  Presa una funzione <math|f:\<Omega\>\<rightarrow\>R> con
+  <math|\<Omega\>\<in\>R<rsup|n>> si dice di classe
+  <math|C<rsup|1><around*|(|\<Omega\>|)>> se:
+
+  <\itemize>
+    <item><math|f> è continua in <math|\<Omega\>>
+
+    <item><math|f<rprime|'>> è continua <math|\<rightarrow\>> derivate
+    parziali prime continue in <math|\<Omega\>>
+  </itemize>
 
   <subsubsection|Campo di vettori di classe <math|C<rsup|K>>>
 
   <subsubsection|Curva regolare>
+
+  Una curva <math|\<gamma\>:<around*|[|a,b|]>\<rightarrow\>R<rsup|n>> si dirà
+  regolare se:
+
+  <\equation*>
+    <around*|\||<wide|\<gamma\>|\<dot\>><around*|(|t|)>|\|>\<neq\>0<text|
+    \ per ogni \ >t\<in\><around*|[|a,b|]>
+  </equation*>
 
   \ 
 </body>

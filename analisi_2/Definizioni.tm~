@@ -7,159 +7,6 @@
   II>|<doc-author|<author-data|<author-name|Mondini Gianluca e di chiunque
   altro mi aiuti>>>>
 
-  <\table-of-contents|toc>
-    <with|par-left|2tab|1<space|2spc>Sfera
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-1>>
-
-    <with|par-left|4tab|Sfera aperta o intorno di raggio di centro
-    <with|mode|math|x<rsub|0>> e raggio <with|mode|math|p>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-2><vspace|0.15fn>>
-
-    <with|par-left|4tab|Sfera chiusa di centro <with|mode|math|x<rsub|0>> e
-    raggio di <with|mode|math|p> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-3><vspace|0.15fn>>
-
-    <with|par-left|2tab|2<space|2spc>Punto interno
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-4>>
-
-    <with|par-left|2tab|3<space|2spc>Punto esterno
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-5>>
-
-    <with|par-left|2tab|4<space|2spc>Punto di frontiera
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-6>>
-
-    <with|par-left|2tab|5<space|2spc>Punto isolato
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-7>>
-
-    <with|par-left|2tab|6<space|2spc>Punto di accumulazione
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-8>>
-
-    <with|par-left|2tab|7<space|2spc>Insieme aperto
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-9>>
-
-    <with|par-left|2tab|8<space|2spc>Insieme chiuso
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-10>>
-
-    <with|par-left|2tab|9<space|2spc>Insieme limitato
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-11>>
-
-    <with|par-left|2tab|10<space|2spc>Insieme convesso
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-12>>
-
-    <with|par-left|2tab|11<space|2spc>Chiusura di un insieme
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-13>>
-
-    <with|par-left|2tab|12<space|2spc>Insieme compatto
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-14>>
-
-    <with|par-left|2tab|13<space|2spc>Successione
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-15>>
-
-    <with|par-left|2tab|14<space|2spc>Successione convergente
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-16>>
-
-    <with|par-left|2tab|15<space|2spc>Successione divergente
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-17>>
-
-    <with|par-left|2tab|16<space|2spc>Successioni oscillanti
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-18>>
-
-    <with|par-left|2tab|17<space|2spc>Funzione scalare
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-19>>
-
-    <with|par-left|2tab|18<space|2spc>Funzione vettoriale
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-20>>
-
-    <with|par-left|2tab|19<space|2spc>Continuità di
-    <with|mode|math|f:R<rsup|n>\<rightarrow\>R<rsup|m>>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21>>
-
-    <with|par-left|2tab|20<space|2spc>Curva parametrica
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22>>
-
-    <with|par-left|2tab|21<space|2spc>Curva chiusa
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23>>
-
-    <with|par-left|2tab|22<space|2spc>Curva costante
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>>
-
-    <with|par-left|2tab|23<space|2spc>Curva semplice
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25>>
-
-    <with|par-left|2tab|24<space|2spc>Insieme connesso (per archi)
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26>>
-
-    <with|par-left|2tab|25<space|2spc>Funzione oscillante
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27>>
-
-    <with|par-left|2tab|26<space|2spc>Derivata direzionale
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>>
-
-    <with|par-left|2tab|27<space|2spc>Derivata parziale
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29>>
-
-    <with|par-left|2tab|28<space|2spc>Punto estremo
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30>>
-
-    <with|par-left|2tab|29<space|2spc>Funzioni (positivamente) omogenee
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>>
-
-    <with|par-left|2tab|30<space|2spc>Funzioni 0-omogenee
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>>
-
-    <with|par-left|2tab|31<space|2spc>Differenziale
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>>
-
-    <with|par-left|2tab|32<space|2spc>Matrice Jacobiana
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>>
-
-    <with|par-left|2tab|33<space|2spc>Funzione di classe
-    <with|mode|math|C<rsup|1><around*|(|\<Omega\>|)>>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>>
-
-    <with|par-left|2tab|34<space|2spc>Campo di vettori di classe
-    <with|mode|math|C<rsup|K>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36>>
-
-    <with|par-left|2tab|35<space|2spc>Curva regolare
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>>
-  </table-of-contents>
-
   <subsubsection|<paragraph|Sfera aperta (o intorno di raggio di centro
   <math|x<rsub|0>> e raggio <math|p>)>>
 
@@ -230,17 +77,75 @@
 
   <subsubsection|Curva chiusa>
 
+  Una curva chiusa <math|\<gamma\>> è una funzione continua
+
+  <\equation*>
+    \<gamma\><around*|[|a,b|]>\<rightarrow\>\<Omega\><text| \ con
+    \ >\<Omega\>\<subseteq\>R<rsup|n>
+  </equation*>
+
+  tale che\ 
+
+  <\equation*>
+    \<gamma\><around*|(|a|)>=\<gamma\><around*|(|b|)>
+  </equation*>
+
   <subsubsection|Curva costante>
+
+  Una curva costante <math|\<gamma\>> è una funzione
+
+  <\equation*>
+    \<gamma\><around*|[|a,b|]>\<rightarrow\>R<rsup|n><text| \ con
+    \ >\<Omega\>\<subseteq\>R<rsup|n>
+  </equation*>
+
+  tale che
+
+  <\equation*>
+    \<gamma\><around*|(|t|)>=x<rsub|0><text| \ \ \ >\<forall\> t
+    \<in\><around*|[|a,b|]><text| \ e \ >x<rsub|0>\<in\>\<Omega\>
+  </equation*>
 
   <subsubsection|Curva semplice>
 
+  Una curva semplice <math|\<gamma\>> è una funzione
+
+  <\equation*>
+    \<gamma\>:<around*|[|a,b|]>\<rightarrow\>R<rsup|n><text| \ iniettiva su
+    \ ><around*|(|a,b|)>
+  </equation*>
+
+  cioè tale che
+
+  <\equation*>
+    \<gamma\><around*|(|t|)>\<neq\>\<gamma\><around*|(|s|)><text| \ se
+    \ >t\<neq\>s<text| \ per ogni \ >t,s\<in\><around*|(|a,b|)>
+  </equation*>
+
   <subsubsection|Insieme connesso (per archi)>
+
+  Dato <math|\<Omega\>\<subseteq\>R<rsup|n>\<nocomma\>>, si dirà un insieme
+  connesso se
+
+  <\equation*>
+    \<forall\> x,y\<in\>\<Omega\><text| \ >\<exists\>
+    \<gamma\>:<around*|[|a,b|]>\<rightarrow\>\<Omega\><text| \ :
+    \ >\<gamma\><around*|(|a|)>=x<text| \ e \ >g
+  </equation*>
 
   <subsubsection|Funzione oscillante>
 
   <subsubsection|Derivata direzionale>
 
   <subsubsection|Derivata parziale>
+
+  Se nel calcolare la derivata direzionale si usa come direzione quella dei
+  vettori della base canonica la derivata direzionale prende il nome di
+  derivata parziale.
+
+  <\equation*>
+    <frac|\<partial\>*f<around*|(|x<rsub|0>|)>|\<partial\>*e<rsub|i>>=<frac|\<partial\>*f<around*|(|x<rsub|0>|)>|\<partial\>*x<rsub|i>>=lim<rsub|t\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+t*e<rsub|i>|)>-f<around*|(|x<rsub|0>|)>|t>
+  </equation*>
 
   <subsubsection|Punto estremo>
 
@@ -250,13 +155,59 @@
 
   <subsubsection|Differenziale>
 
+  Preso <math|f:\<Omega\>\<rightarrow\>R> con
+  <math|\<Omega\>\<subseteq\>R<rsup|n>>, <math|f > si dice differenziabile in
+  <math|x<rsub|0>\<in\>\<Omega\>> se
+
+  <\equation*>
+    \<exists\> A:R<rsup|n<rprime|'>>\<rightarrow\>R<text| \ lineare tale che
+    \ >lim<rsub|w\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+w|)>-f<around*|(|x<rsub|0>|)>-A<around*|(|w|)>|<around*|\||w|\|>>=0
+  </equation*>
+
+  L'applicazione lineare <math|A<around*|(|w|)>> si chiama differenziaile di
+  <math|f> nel punto <math|x<rsub|0>> secondo l'incremento di <math|w> e si
+  sindica con
+
+  <\equation*>
+    df<around*|(|x<rsub|0>,w|)>=A<around*|(|w|)><text| \ con
+    \ >x<rsub|0>,w\<in\>R<rsup|n>
+  </equation*>
+
   <subsubsection|Matrice Jacobiana>
 
+  Data una funzione <math|f:R<rsup|n>\<rightarrow\>R<rsup|m>> con
+  <math|x<rsub|0>\<in\>R<rsup|n>> la matrice Jacobiana
+  <math|J<around*|(|x<rsub|0>|)>\<in\>R<rsup|n\<times\>m>> è formata dalle
+  derivate parziali prime di <math|f> nel punto <math|x<rsub|0>>
+
+  <\equation*>
+    J<around*|(|x<rsub|0>|)>=<matrix|<tformat|<table|<row|<cell|\<nabla\>f<rsub|1><around*|(|x<rsub|0>|)>>>|<row|<cell|\<ldots\>>>|<row|<cell|\<nabla\>f<rsub|n><around*|(|x<rsub|0>|)>>>>>>=<matrix|<tformat|<table|<row|<cell|<frac|\<partial\>f<rsub|1><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|1>>>|<cell|\<ldots\>>|<cell|<frac|\<partial\>f<rsub|1><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|n>>>>|<row|<cell|\<ldots\>>|<cell|\<ldots\>>|<cell|\<ldots\>>>|<row|<cell|<frac|\<partial\>f<rsub|n><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|1>>>|<cell|\<ldots\>>|<cell|<frac|\<partial\>f<rsub|n><around*|(|x<rsub|0>|)>|\<partial\>x<rsub|n>>>>>>>
+  </equation*>
+
   <subsubsection|Funzione di classe <math|C<rsup|1><around*|(|\<Omega\>|)>>>
+
+  Presa una funzione <math|f:\<Omega\>\<rightarrow\>R> con
+  <math|\<Omega\>\<in\>R<rsup|n>> si dice di classe
+  <math|C<rsup|1><around*|(|\<Omega\>|)>> se:
+
+  <\itemize>
+    <item><math|f> è continua in <math|\<Omega\>>
+
+    <item><math|f<rprime|'>> è continua <math|\<rightarrow\>> derivate
+    parziali prime continue in <math|\<Omega\>>
+  </itemize>
 
   <subsubsection|Campo di vettori di classe <math|C<rsup|K>>>
 
   <subsubsection|Curva regolare>
+
+  Una curva <math|\<gamma\>:<around*|[|a,b|]>\<rightarrow\>R<rsup|n>> si dirà
+  regolare se:
+
+  <\equation*>
+    <around*|\||<wide|\<gamma\>|\<dot\>><around*|(|t|)>|\|>\<neq\>0<text|
+    \ per ogni \ >t\<in\><around*|[|a,b|]>
+  </equation*>
 
   \ 
 </body>
@@ -303,10 +254,15 @@
     <associate|auto-40|<tuple|34|?>>
     <associate|auto-41|<tuple|35|?>>
     <associate|auto-42|<tuple|36|?>>
-    <associate|auto-43|<tuple|37|?>>
+    <associate|auto-43|<tuple|31|?>>
+    <associate|auto-44|<tuple|32|?>>
+    <associate|auto-45|<tuple|33|?>>
+    <associate|auto-46|<tuple|34|?>>
+    <associate|auto-47|<tuple|35|?>>
+    <associate|auto-48|<tuple|36|?>>
     <associate|auto-5|<tuple|2|?>>
     <associate|auto-6|<tuple|3|?>>
-    <associate|auto-7|<tuple|4|?>>
+    <associate|auto-7|<tuple|1|?>>
     <associate|auto-8|<tuple|2.3|?>>
     <associate|auto-9|<tuple|3|?>>
   </collection>
