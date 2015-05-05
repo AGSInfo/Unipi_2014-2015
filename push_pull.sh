@@ -57,7 +57,7 @@ fi
 if [ $1 == "browser" ]
 then
 	echo "Apro il repository nel browser"
-	xdg-open $SERVER
+	xdg-open $SERVER &
 	exit 0
 fi
 
