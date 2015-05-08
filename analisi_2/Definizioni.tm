@@ -214,6 +214,71 @@
     \ per ogni \ >t\<in\><around*|[|a,b|]>
   </equation*>
 
+  <subsubsection|Campi irrotazionali>
+
+  Un campo <math|A> di classe <math|C<rsup|1>> è detto irrotazionale se
+  <math|<around*|(|A<rsub|i>|)><rsub|x<rsub|j>>=<around*|(|A<rsub|j>|)>x<rsub|i>>
+  \ \ <math|\<forall\> i \<neq\>j>
+
+  <subsubsection|Forme chiuse>
+
+  Una forma differenziale <math|\<alpha\><around*|(|x,w|)>=A<around*|(|x|)>*w>
+  è detta chiusa se il suo campo associato <math|A> è irrotazionale
+
+  <subsubsection|Curve deformabili ad omotope>
+
+  Due curve
+
+  <\equation*>
+    \<gamma\><rsub|1><around*|[|0,1|]>\<rightarrow\>\<Omega\>\<nocomma\><text|,
+    \ \ \ >\<gamma\><rsub|2><around*|[|0,1|]>\<rightarrow\>\<Omega\>
+  </equation*>
+
+  e
+
+  <\equation*>
+    \<gamma\><rsub|1><around*|(|0|)>=\<gamma\><rsub|2><around*|(|0|)><text|,
+    \ \ \ >\<gamma\><rsub|1><around*|(|1|)>=\<gamma\><rsub|2><around*|(|1|)>
+  </equation*>
+
+  si dicono deformabili ad omotope se <math|\<exists\>>
+  <math|h:<around*|[|0,1|]>\<times\><around*|[|0,1|]>\<rightarrow\>\<Omega\>>
+  continua tale che
+
+  <\equation*>
+    h<around*|(|0,t|)>=\<gamma\><rsub|1><around*|(|t|)><text| \ e
+    \ >h<around*|(|1,t|)>=\<gamma\><rsub|2><around*|(|t|)>
+  </equation*>
+
+  <subsubsection|Insieme semplicemente connesso>
+
+  Un insieme <math|\<Omega\>\<subseteq\>R<rsup|n>> si dirà semplicemente
+  connesso se ogni curva chiusa
+
+  <\equation*>
+    \<gamma\>:<around*|[|0,1|]>\<rightarrow\>\<Omega\>
+  </equation*>
+
+  è omotopa in <math|\<Omega\>> ad una curva costante
+
+  <\equation*>
+    \<sigma\><around*|(|t|)>\<equiv\>x<rsub|0><text|
+    \ \ \ >\<forall\>t\<in\><around*|[|0,1|]>
+  </equation*>
+
+  <subsubsection|Insieme a stella>
+
+  L'insieme <math|\<Omega\>\<subseteq\>R<rsup|n>> è detto a stella se
+
+  <\equation*>
+    \<exists\>x<rsub|0>\<in\>\<Omega\><text| \ tale che il segmento
+    \ ><wide|x<rsub|0>|\<bar\>>x\<subseteq\>\<Omega\><text| \ >per ogni
+    x\<in\>\<Omega\>
+  </equation*>
+
+  In sostanza, <math|\<Omega\>> è un insieme a stella se esiste un suo punto
+  che \ ``vede tutti gli altri''
+
   \ 
 </body>
 
@@ -259,12 +324,12 @@
     <associate|auto-40|<tuple|34|?>>
     <associate|auto-41|<tuple|35|?>>
     <associate|auto-42|<tuple|36|?>>
-    <associate|auto-43|<tuple|31|?>>
-    <associate|auto-44|<tuple|32|?>>
-    <associate|auto-45|<tuple|33|?>>
-    <associate|auto-46|<tuple|34|?>>
-    <associate|auto-47|<tuple|35|?>>
-    <associate|auto-48|<tuple|36|?>>
+    <associate|auto-43|<tuple|37|?>>
+    <associate|auto-44|<tuple|38|?>>
+    <associate|auto-45|<tuple|39|?>>
+    <associate|auto-46|<tuple|40|?>>
+    <associate|auto-47|<tuple|41|?>>
+    <associate|auto-48|<tuple|42|?>>
     <associate|auto-5|<tuple|2|?>>
     <associate|auto-6|<tuple|3|?>>
     <associate|auto-7|<tuple|1|?>>
@@ -450,6 +515,18 @@
       <with|par-left|<quote|2tab>|36<space|2spc>Curva regolare
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-42>>
+
+      <with|par-left|<quote|2tab>|37<space|2spc>Campi irrotazionali
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>>
+
+      <with|par-left|<quote|2tab>|38<space|2spc>Forme chiuse
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-44>>
+
+      <with|par-left|<quote|2tab>|39<space|2spc>Curve deformabili ad omotope
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-45>>
     </associate>
   </collection>
 </auxiliary>
