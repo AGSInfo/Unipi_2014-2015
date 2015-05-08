@@ -404,6 +404,373 @@
 
   L'algoritmo ha complessità <math|O<around*|(|log<around*|(|n|)>|)>>
 
+  <subsubsection|Restituire l'etichetta del nodo più piccolo di un albero ed
+  eliminare il nodo che la contiene>
+
+  <\cpp-code>
+    void deleteMin(Node *& tree, InfoType &m) {
+
+    \ \ if (tree -\<gtr\> left) // C'è un nodo più piccolo
+
+    \ \ \ \ deleteMin(tree -\<gtr\> left, m);
+
+    \ \ else {
+
+    \ \ \ \ m = tree -\<gtr\> label; // restituisco l'etichetta
+
+    \ \ \ \ Node * a = tree;
+
+    \ \ \ \ // connetto il sottoalbero destro di
+
+    \ \ \ \ // m al padre di m
+
+    \ \ \ \ tree = tree -\<gtr\> right;
+
+    \ \ \ \ // elimino il nodo
+
+    \ \ \ \ delete a;
+
+    \ \ }
+
+    }
+  </cpp-code>
+
+  <subsubsection|Cancellare un nodo ?>
+
+  <\cpp-code>
+    void deleteNode(InfoType n, Node *& tree) {
+
+    \ \ if (tree) {
+
+    \ \ \ \ // n è minore della radice
+
+    \ \ \ \ if (n \<less\> tree -\<gtr\> label) {
+
+    \ \ \ \ \ \ deleteNode(n, tree -\<gtr\> left);
+
+    \ \ \ \ \ \ return;
+
+    \ \ \ \ }
+
+    \ \ \ \ // n è maggiore della radice
+
+    \ \ \ \ if (n \<gtr\> tree -\<gtr\> label) {
+
+    \ \ \ \ \ \ deleteNode(n, tree -\<gtr\> right);
+
+    \ \ \ \ \ \ return;
+
+    \ \ \ \ }
+
+    \ \ \ \ // n non ha figlio sinistro
+
+    \ \ \ \ if (!tree -\<gtr\> left) {
+
+    \ \ \ \ \ \ Node * a = tree;
+
+    \ \ \ \ \ \ tree = tree -\<gtr\> right;
+
+    \ \ \ \ \ \ delete a;
+
+    \ \ \ \ \ \ return;
+
+    \ \ \ \ }
+
+    \ \ \ \ // n non ha figlio destro
+
+    \ \ \ \ if (!tree -\<gtr\> right) {
+
+    \ \ \ \ \ \ Node * a = tree;
+
+    \ \ \ \ \ \ tree = tree -\<gtr\> left;
+
+    \ \ \ \ \ \ delete a;
+
+    \ \ \ \ \ \ return;
+
+    \ \ \ \ }
+
+    \ \ \ \ // n ha entrambi i figli
+
+    \ \ \ \ deleteMin(tree -\<gtr\> right, tree -\<gtr\> label);
+
+    }
+  </cpp-code>
+
+  Questo algoritmo ha complessità <math|O<around*|(|log<around*|(|n|)>|)>>
+
+  <section|Heap>
+
+  Un heap è un albero binario quasi bilanciato con le seguenti proprietà:
+
+  <\itemize>
+    <item>i nodi dell'ultimo livello sono addossati a sinistra
+
+    <item>in ogni sottoalbero l'etichetta della radice è maggiore o uguale a
+    quella di tutti i discendenti
+  </itemize>
+
+  L'heap viene memorizzato in un array
+
+  <subsection|Calcolare le parentele>
+
+  <\itemize>
+    <item>Figlio sinistro di <math|i> = <math|2*i+1>
+
+    <item>Figlio destro di <math|i=2*i+2>
+
+    <item>Padre di <math|i=<frac|i-1|2>>
+  </itemize>
+
+  <subsection|Classe Heap>
+
+  <\cpp-code>
+    class Heap {
+
+    \ \ private:
+
+    \ \ \ \ int * h;
+
+    \ \ \ \ int last;
+
+    \ \ \ \ void up(int);
+
+    \ \ \ \ void down(int);
+
+    \ \ \ \ void exchange(int i, int j);
+
+    \ \ public:
+
+    \ \ \ \ Heap(int);
+
+    \ \ \ \ ~Heap();
+
+    \ \ \ \ void insert(int);
+
+    \ \ \ \ int extract();
+
+    };
+  </cpp-code>
+
+  <subsubsection|Costruttore>
+
+  <\cpp-code>
+    Heap::Heap(int n) {
+
+    \ \ h = new int[n];
+
+    \ \ last = -1;
+
+    }
+  </cpp-code>
+
+  <subsubsection|Distruttore>
+
+  <\cpp-code>
+    Heap::~Heap() {
+
+    \ \ delete h [n];
+
+    }
+  </cpp-code>
+
+  <subsubsection|Inserimento>
+
+  <\itemize>
+    <item>Memorizza l'elemento nella prima posizione libera dell'array
+
+    <item>Fa risalire l'elemento tramite scambi figlio-padre per mantenere la
+    proprietà dello heap
+  </itemize>
+
+  <\cpp-code>
+    void Heap::insert(int x) {
+
+    \ \ h[++last] = x;
+
+    \ \ up(last);
+
+    }
+  </cpp-code>
+
+  <\cpp-code>
+    // i è l'indice dell'elemento da far risalire
+
+    void Heap::up(int i) {
+
+    \ \ // Se non sono sulla radice
+
+    \ \ if (i \<gtr\> 0) {
+
+    \ \ \ \ // Se l'elemento è maggiore del padre
+
+    \ \ \ \ if (h[i] \<gtr\> h[(i-1)/2]) {
+
+    \ \ \ \ \ \ // Scambia il figlio con il padre
+
+    \ \ \ \ \ \ exchange(i, (i-1)/2);
+
+    \ \ \ \ \ \ // chiama up sulla nuova posizione
+
+    \ \ \ \ \ \ up((i-1)/2);
+
+    \ \ \ \ }
+
+    \ \ }
+
+    }
+  </cpp-code>
+
+  La funzione termina in due casi:
+
+  <\itemize>
+    <item>viene chiamata con l'indice 0 (radice)
+
+    <item>L'elemento è inferiore al padre
+  </itemize>
+
+  La complessità è <math|O<around*|(|log<around*|(|n|)>|)>> perché ogni
+  chiamata risale di un livello
+
+  <subsubsection|Estrazione>
+
+  <\itemize>
+    <item>Restituisce il primo elemento dell'array
+
+    <item>Mette l'ultimo elemento al posto della radice e decrementa last
+
+    <item>Fa scendere l'elemento tramite scambi padre-figlio per mantenere la
+    proprietà dello heap
+  </itemize>
+
+  <\cpp-code>
+    int Heap::extract() {
+
+    \ \ int r = h[0];
+
+    \ \ h[0] = h[last--];
+
+    \ \ down(0);
+
+    \ \ return r;
+
+    }
+  </cpp-code>
+
+  <\cpp-code>
+    // i è l'indice dell'elemento da far scendere
+
+    void Heap::down(int i) {
+
+    \ \ // son = indice del figlio sinistro (se esiste)
+
+    \ \ int son = 2*i+1;
+
+    \ \ // se i ha un solo figlio (è l'ultimo dell'array)
+
+    \ \ if (son == last) {
+
+    \ \ \ \ // se il figlio è maggiore del padre
+
+    \ \ \ \ if (h[son] \<gtr\> h[i]) {
+
+    \ \ \ \ \ \ // fai lo scambio, altrimenti termina
+
+    \ \ \ \ \ \ exchange(i, last);
+
+    \ \ \ \ }
+
+    \ \ }
+
+    \ \ // se i ha entrambi i figli
+
+    \ \ else if (son \<less\> last) {
+
+    \ \ \ \ // son = indice del figlio maggiore tra i due
+
+    \ \ \ \ if (h[son] \<less\> h[son+1]) son++;
+
+    \ \ \ \ // se il figlio è maggiore del padre
+
+    \ \ \ \ if (h[son] \<gtr\> h[i]) {
+
+    \ \ \ \ \ \ // fai lo scambio
+
+    \ \ \ \ \ \ exchange(i, son);
+
+    \ \ \ \ \ \ // chiama down sulla nuova posizione
+
+    \ \ \ \ \ \ down(son);
+
+    \ \ \ \ \ \ // altrimenti termina (termina anche se i non ha figli)
+
+    \ \ \ \ }
+
+    \ \ }
+
+    }
+  </cpp-code>
+
+  L'algoritmo ha complessità <math|O<around*|(|log<around*|(|n|)>|)>>
+
+  <section|Ricerca hash>
+
+  <subsection|Alcuni algoritmi>
+
+  <subsubsection|Ricerca tramite hash>
+
+  <\cpp-code>
+    bool hashSearch (int* A, int k, int x) {
+
+    \ \ int i = h(x);
+
+    \ \ if (A[i] == 1) return true;
+
+    \ \ else return false;
+
+    }
+  </cpp-code>
+
+  <subsection|Metodo hash ad accesso non diretto>
+
+  È possibile rilasciare l'iniettività e permettere che due elementi diversi
+  abbiano lo stesso indirizzo hash. Si ha una collisione quando
+
+  <\equation*>
+    h<around*|(|x<rsub|1>|)>=h<around*|(|x<rsub|2>|)>
+  </equation*>
+
+  Bisogno gestire le seguenti situazioni:
+
+  <\itemize>
+    <item>Come cercare un elemento se il suo posto è occupato da un altro
+
+    <item>Come inserire gli elementi
+  </itemize>
+
+  <subsubsection|Soluzione: hash modulare>
+
+  Si scrive una funzione <math|h<around*|(||)>>\ 
+
+  <\equation*>
+    h<around*|(|x|)>=<around*|(|x<text| % >k|)>
+  </equation*>
+
+  In modo tale da essere sicuri di generare tutti e soli gli indici
+  dell'array
+
+  <paragraph|Legge di scansione lineare>Se non si trova l'elemento al suo
+  posto, lo si cerca nelle posizioni successive fino a trovarlo o ad
+  incontrare una posizione vuota.
+
+  L'inserimento è fatto con lo stesso criterio
+
+  <subparagraph|Agglomerato>Gruppo di elementi con indirizzi hash diversi (?)
+
+  La presenza di collisioni ed agglomerati aumenta il tempo di ricerca
+
+  \;
+
   \;
 </body>
 
@@ -412,34 +779,50 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-10|<tuple|2|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-11|<tuple|2.1|2|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-12|<tuple|2.2|2|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-13|<tuple|2.2.1|2|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-14|<tuple|2.2.2|2|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-15|<tuple|2.2.3|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-16|<tuple|2.2.4|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-17|<tuple|2.2.5|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-18|<tuple|3|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-19|<tuple|3.1|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-2|<tuple|1.1|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-20|<tuple|3.1.1|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-21|<tuple|3.1.2|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-22|<tuple|3.1.3|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-23|<tuple|3.1.4|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-24|<tuple|4|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-25|<tuple|4.1|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-26|<tuple|4.2|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-27|<tuple|4.2.1|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-28|<tuple|4.2.2|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-3|<tuple|1.2|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-4|<tuple|1.3|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-5|<tuple|1.3.1|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-6|<tuple|1.3.2|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-7|<tuple|1.3.3|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-8|<tuple|1.3.4|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-9|<tuple|1.4|1|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|2|1>>
+    <associate|auto-11|<tuple|2.1|2>>
+    <associate|auto-12|<tuple|2.2|2>>
+    <associate|auto-13|<tuple|2.2.1|2>>
+    <associate|auto-14|<tuple|2.2.2|2>>
+    <associate|auto-15|<tuple|2.2.3|?>>
+    <associate|auto-16|<tuple|2.2.4|?>>
+    <associate|auto-17|<tuple|2.2.5|?>>
+    <associate|auto-18|<tuple|3|?>>
+    <associate|auto-19|<tuple|3.1|?>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-20|<tuple|3.1.1|?>>
+    <associate|auto-21|<tuple|3.1.2|?>>
+    <associate|auto-22|<tuple|3.1.3|?>>
+    <associate|auto-23|<tuple|3.1.4|?>>
+    <associate|auto-24|<tuple|4|?>>
+    <associate|auto-25|<tuple|4.1|?>>
+    <associate|auto-26|<tuple|4.2|?>>
+    <associate|auto-27|<tuple|4.2.1|?>>
+    <associate|auto-28|<tuple|4.2.2|?>>
+    <associate|auto-29|<tuple|4.2.3|?>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-30|<tuple|4.2.4|?>>
+    <associate|auto-31|<tuple|5|?>>
+    <associate|auto-32|<tuple|5.1|?>>
+    <associate|auto-33|<tuple|5.2|?>>
+    <associate|auto-34|<tuple|5.2.1|?>>
+    <associate|auto-35|<tuple|5.2.2|?>>
+    <associate|auto-36|<tuple|5.2.3|?>>
+    <associate|auto-37|<tuple|5.2.4|?>>
+    <associate|auto-38|<tuple|6|?>>
+    <associate|auto-39|<tuple|6.1|?>>
+    <associate|auto-4|<tuple|1.3|1>>
+    <associate|auto-40|<tuple|6.1.1|?>>
+    <associate|auto-41|<tuple|6.2|?>>
+    <associate|auto-42|<tuple|6.2.1|?>>
+    <associate|auto-43|<tuple|6.2.1.1|?>>
+    <associate|auto-44|<tuple|6.2.1.1.1|?>>
+    <associate|auto-5|<tuple|1.3.1|1>>
+    <associate|auto-6|<tuple|1.3.2|1>>
+    <associate|auto-7|<tuple|1.3.3|1>>
+    <associate|auto-8|<tuple|1.3.4|1>>
+    <associate|auto-9|<tuple|1.4|1>>
   </collection>
 </references>
 
@@ -513,6 +896,50 @@
       <with|par-left|<quote|2tab>|2.2.5<space|2spc>Inserire un nodo
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Alberi
+      generici> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Alcuni algoritmi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>>
+
+      <with|par-left|<quote|2tab>|3.1.1<space|2spc>Contare il numero di nodi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-20>>
+
+      <with|par-left|<quote|2tab>|3.1.2<space|2spc>Contare il numero di
+      foglie <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|2tab>|3.1.3<space|2spc>Inserire un nodo in fondo
+      ad una lista di fratelli <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>>
+
+      <with|par-left|<quote|2tab>|3.1.4<space|2spc>Inserire un nodo son come
+      ultimo figlio di father <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Alberi
+      binari di ricerca> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Proprietà
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Alcuni algoritmi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26>>
+
+      <with|par-left|<quote|2tab>|4.2.1<space|2spc>Cercare un nodo
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-27>>
+
+      <with|par-left|<quote|2tab>|4.2.2<space|2spc>Inserire un nodo
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28>>
     </associate>
   </collection>
 </auxiliary>
