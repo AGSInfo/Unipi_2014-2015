@@ -138,6 +138,12 @@
   curva parametrica (o arco) <math|\<gamma\>> continua appartenente ad
   <math|\<Omega\>> che conginunge i due punti.
 
+  <subsubsection|Insieme semplicemente connesso>
+
+  Definizione ``pratica'': un insieme è semplicemente connesso quando è
+  connesso e ``non ha buchi'' (attenzione! la seguente definizione è valida
+  soltanto in <math|R<rsup|2>>)
+
   <subsubsection|Funzione oscillante>
 
   <subsubsection|Derivata direzionale>
@@ -527,6 +533,14 @@
       <with|par-left|<quote|2tab>|39<space|2spc>Curve deformabili ad omotope
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>>
+
+      <with|par-left|<quote|2tab>|40<space|2spc>Insieme semplicemente
+      connesso <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-46>>
+
+      <with|par-left|<quote|2tab>|41<space|2spc>Insieme a stella
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-47>>
     </associate>
   </collection>
 </auxiliary>
