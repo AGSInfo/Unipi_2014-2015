@@ -947,9 +947,137 @@
 
   La presenza di collisioni ed agglomerati aumenta il tempo di ricerca
 
-  [proseguire da pagina 175]
+  <paragraph|Funzione di ricerca con scansione lineare>
 
-  \;
+  <\cpp-code>
+    bool hashSearch(int *A, int k, int x) {
+
+    \ \ int i = h(x);
+
+    \ \ for (int j=0; j\<less\>k; j++) {
+
+    \ \ \ \ int pos = (i+j) % k;
+
+    \ \ \ \ if (A[pos] == -1) return false;
+
+    \ \ \ \ if (A[pos] == x) return true;
+
+    \ \ }
+
+    \ \ return false;
+
+    }
+  </cpp-code>
+
+  <paragraph|Funzione di insierimento in presenza di cancellazioni>
+
+  <\cpp-code>
+    int hashInsert(int *A, int k, int x) {
+
+    \ \ int i = h(x);
+
+    \ \ for (int j=0; j \<less\> k; j++) {
+
+    \ \ \ \ int pos = (i+j) % k;
+
+    \ \ \ \ // -1: posizione vuota
+
+    \ \ \ \ // -2: posizione disponibile
+
+    \ \ \ \ if ((A[pos] == -1) \|\| (A[pos] == -2)) {
+
+    \ \ \ \ \ \ A[pos] = x;
+
+    \ \ \ \ \ \ return 1;
+
+    \ \ \ \ }
+
+    \ \ }
+
+    \ \ return 0;
+
+    }
+  </cpp-code>
+
+  <section|Grafi>
+
+  <\equation*>
+    <text|Grafo orientato>=<around*|(|N,A|)>
+  </equation*>
+
+  dove
+
+  <\enumerate>
+    <\itemize>
+      <item><math|N=>insieme di nodi
+
+      <item><math|A\<subseteq\>N*\<times\>N> = insieme di archi (coppie
+      ordinate di nodi)
+    </itemize>
+  </enumerate>
+
+  Un grafo orientato con <math|n> nodi ha al massimo <math|n<rsup|2>> archi
+
+  <subsection|Rappresentazioni in memoria di grafi>
+
+  <subsubsection|Tramite liste di adiacenza>
+
+  <\cpp-code>
+    struct Node {
+
+    \ \ int NodeNumber;
+
+    \ \ Node * next;
+
+    };
+
+    \;
+
+    Node* graph[N];
+  </cpp-code>
+
+  <subsubsection|Tramite matrici di adiacenza>
+
+  <\cpp-code>
+    int graph[N][N];
+  </cpp-code>
+
+  <subsection|Rappresentazioni in memoria di grafi con nodi ed archi
+  etichettati>
+
+  <subsubsection|Tramite liste di adiacenza>
+
+  <\cpp-code>
+    struct Node {
+
+    \ \ int NodeNumber;
+
+    \ \ ArcType archLabel;
+
+    \ \ Node * next;
+
+    };
+
+    \;
+
+    Node * graph[N];
+
+    \;
+
+    NodeType nodeLabels[N];
+  </cpp-code>
+
+  NodeType = char
+
+  ArcType = int
+
+  <subsubsection|Tramite matrici di adiacenza>
+
+  <\cpp-code>
+    ArcType graph[N][N];
+
+    NodeType nodeLabels[N];
+  </cpp-code>
 </body>
 
 <initial|<\collection>
@@ -996,7 +1124,16 @@
     <associate|auto-42|<tuple|6.2.1|?>>
     <associate|auto-43|<tuple|6.2.1.1|?>>
     <associate|auto-44|<tuple|6.2.1.1.1|?>>
+    <associate|auto-45|<tuple|6.2.1.2|?>>
+    <associate|auto-46|<tuple|6.2.1.3|?>>
+    <associate|auto-47|<tuple|7|?>>
+    <associate|auto-48|<tuple|7.1|?>>
+    <associate|auto-49|<tuple|7.1.1|?>>
     <associate|auto-5|<tuple|1.3.1|1>>
+    <associate|auto-50|<tuple|7.1.2|?>>
+    <associate|auto-51|<tuple|7.2|?>>
+    <associate|auto-52|<tuple|7.2.1|?>>
+    <associate|auto-53|<tuple|7.2.2|?>>
     <associate|auto-6|<tuple|1.3.2|1>>
     <associate|auto-7|<tuple|1.3.3|1>>
     <associate|auto-8|<tuple|1.3.4|1>>
