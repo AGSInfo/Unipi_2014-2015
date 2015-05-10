@@ -169,6 +169,26 @@
   In pratica, è necessario derivare ``normalmente'' una funzione rispetto ad
   una variabile ponendo l'altra come una costante
 
+  <subsubsection|Metodo Giusti>
+
+  <\enumerate>
+    <item>Calcolo
+
+    <\equation*>
+      g<around*|(|t|)>=f<around*|(|x+t*v|)>
+    </equation*>
+
+    <item>Sostituisco e calcolo il limite
+  </enumerate>
+
+  <\equation*>
+    \;
+  </equation*>
+
+  <\equation*>
+    <frac|\<partial\>*f|\<partial\>*v><around*|(|x|)>=g<rprime|'><around*|(|0|)>=lim<rsub|t\<rightarrow\>0><frac|f<around*|(|x+t*v|)>-f<around*|(|x|)>|t>
+  </equation*>
+
   <subsubsection|Derivate di ordine <math|\<geqslant\>2>>
 
   Necessita di revisione!
@@ -468,31 +488,32 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|3>>
-    <associate|auto-10|<tuple|6.1|4>>
-    <associate|auto-11|<tuple|6.2|4>>
-    <associate|auto-12|<tuple|7|4>>
-    <associate|auto-13|<tuple|8|5>>
-    <associate|auto-14|<tuple|9|5>>
-    <associate|auto-15|<tuple|10|5>>
-    <associate|auto-16|<tuple|10.1|5>>
-    <associate|auto-17|<tuple|11|5>>
-    <associate|auto-18|<tuple|11.1|6>>
-    <associate|auto-19|<tuple|11.1.1|6>>
+    <associate|auto-10|<tuple|6|4>>
+    <associate|auto-11|<tuple|6.1|4>>
+    <associate|auto-12|<tuple|6.2|4>>
+    <associate|auto-13|<tuple|7|5>>
+    <associate|auto-14|<tuple|8|5>>
+    <associate|auto-15|<tuple|9|5>>
+    <associate|auto-16|<tuple|10|5>>
+    <associate|auto-17|<tuple|10.1|5>>
+    <associate|auto-18|<tuple|11|6>>
+    <associate|auto-19|<tuple|11.1|6>>
     <associate|auto-2|<tuple|1.1|3>>
-    <associate|auto-20|<tuple|12|6>>
-    <associate|auto-21|<tuple|12.1|6>>
-    <associate|auto-22|<tuple|12.2|6>>
-    <associate|auto-23|<tuple|12.3|6>>
-    <associate|auto-24|<tuple|12.4|6>>
-    <associate|auto-25|<tuple|13|7>>
-    <associate|auto-26|<tuple|14|7>>
+    <associate|auto-20|<tuple|11.1.1|6>>
+    <associate|auto-21|<tuple|12|6>>
+    <associate|auto-22|<tuple|12.1|6>>
+    <associate|auto-23|<tuple|12.2|6>>
+    <associate|auto-24|<tuple|12.3|6>>
+    <associate|auto-25|<tuple|12.4|7>>
+    <associate|auto-26|<tuple|13|7>>
+    <associate|auto-27|<tuple|14|?>>
     <associate|auto-3|<tuple|2|3>>
     <associate|auto-4|<tuple|3|3>>
     <associate|auto-5|<tuple|4|4>>
     <associate|auto-6|<tuple|4.1|4>>
-    <associate|auto-7|<tuple|5|4>>
-    <associate|auto-8|<tuple|5.1|4>>
-    <associate|auto-9|<tuple|6|4>>
+    <associate|auto-7|<tuple|4.2|4>>
+    <associate|auto-8|<tuple|5|4>>
+    <associate|auto-9|<tuple|5.1|4>>
   </collection>
 </references>
 
