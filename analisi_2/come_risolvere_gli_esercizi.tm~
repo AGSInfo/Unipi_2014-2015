@@ -532,7 +532,7 @@
   Un insieme è aperto se per ogni <math|x<rsub|0>,r>
   <math|B<around*|(|x<rsub|0>,r|)>\<subseteq\>\<Omega\>>
 
-  <subsection|Formule trigonometriche utili>
+  <subsection|Formule utili>
 
   <subsubsection|Formule di addizione e sottrazione>
 
@@ -601,6 +601,19 @@
   <\equation*>
     <choice|<tformat|<table|<row|<cell|\<rho\>*cos<around*|(|\<Theta\>|)>>>|<row|<cell|\<rho\>*sin<around*|(|\<Theta\>|)>>>>>>
   </equation*>
+
+  <subsubsection|Come smontare gli integrali noiosi con le radici>
+
+  <\itemize>
+    <item><math|<sqrt|x<rsup|2>+1> \<longrightarrow\>> si pone
+    <math|x=sinh<around*|(|t|)>>
+
+    <item><math|<sqrt|x<rsup|2>-1>\<longrightarrow\>> si pone
+    <math|x=cosh<around*|(|t|)>>
+
+    <item><math|<sqrt|1-x<rsup|2>>\<longrightarrow\>> si pone
+    <math|x=sin<around*|(|t|)>>\ 
+  </itemize>
 
   <subsection|Lunghezza di una curva>
 
@@ -695,10 +708,11 @@
     <associate|auto-38|<tuple|15.5|?>>
     <associate|auto-39|<tuple|15.6|?>>
     <associate|auto-4|<tuple|2|3>>
-    <associate|auto-40|<tuple|16|?>>
-    <associate|auto-41|<tuple|17|?>>
-    <associate|auto-42|<tuple|18|?>>
-    <associate|auto-43|<tuple|18.1|?>>
+    <associate|auto-40|<tuple|15.7|?>>
+    <associate|auto-41|<tuple|16|?>>
+    <associate|auto-42|<tuple|17|?>>
+    <associate|auto-43|<tuple|18|?>>
+    <associate|auto-44|<tuple|18.1|?>>
     <associate|auto-5|<tuple|3|4>>
     <associate|auto-6|<tuple|4|4>>
     <associate|auto-7|<tuple|4.1|4>>
@@ -860,13 +874,29 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>>
 
+      <with|par-left|<quote|2tab>|15.5<space|2spc>Argomento di un vettore in
+      <with|mode|<quote|math>|R<rsup|2>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38>>
+
+      <with|par-left|<quote|2tab>|15.6<space|2spc>Passaggio alle coordinate
+      cartesiane <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-39>>
+
       <with|par-left|<quote|1tab>|16<space|2spc>Lunghezza di una curva
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-40>>
 
       <with|par-left|<quote|1tab>|17<space|2spc>Integrale curvilineo
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-41>>
+
+      <with|par-left|<quote|1tab>|18<space|2spc>Funzioni utili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42>>
+
+      <with|par-left|<quote|2tab>|18.1<space|2spc>Cardioide
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>>
     </associate>
   </collection>
 </auxiliary>
