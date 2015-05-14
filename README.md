@@ -4,7 +4,8 @@ Appunti di Ingegneria Informatica UNIPI 2014/2015
 ## Contenuti
 
 ### Algoritmi e strutture dati
- - [Dispensa ed esempi di codice] (https://github.com/AGSInfo/Unipi_2014-2015/blob/master/fondamenti_informatica_2/Algoritmi%20e%20strutture%20dati/Alcuni%20appunti.pdf)
+ - [Dispensa ed esempi di codice] 
+(https://github.com/AGSInfo/Unipi_2014-2015/blob/master/fondamenti_informatica_2/Algoritmi%20e%20strutture%20dati/Appunti%20ed%20algoritmi.pdf)
 
 ### Analisi II
  - [Definizioni](https://github.com/AGSInfo/Unipi_2014-2015/blob/master/analisi_2/Definizioni.pdf)
