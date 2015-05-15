@@ -8,6 +8,7 @@ Appunti di Ingegneria Informatica UNIPI 2014/2015
 (https://github.com/AGSInfo/Unipi_2014-2015/blob/master/fondamenti_informatica_2/Algoritmi%20e%20strutture%20dati/Appunti%20ed%20algoritmi.pdf)
 
 ### Analisi II
+ - [Lista delle cose da sapere](https://github.com/AGSInfo/Unipi_2014-2015/blob/master/analisi_2/Lista%20di%20cose%20da%20sapere.md)
  - [Definizioni](https://github.com/AGSInfo/Unipi_2014-2015/blob/master/analisi_2/Definizioni.pdf)
  - [Metodi di risoluzione degli esercizi](https://github.com/AGSInfo/Unipi_2014-2015/blob/master/analisi_2/come_risolvere_gli_esercizi.pdf)
 
