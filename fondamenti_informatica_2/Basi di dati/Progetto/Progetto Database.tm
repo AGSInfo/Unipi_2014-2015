@@ -362,7 +362,7 @@
 
   <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<cwith|3|3|4|4|cell-lborder|2
   >|<cwith|3|3|4|4|cell-rborder|2 >|<cwith|3|3|4|4|cell-bborder|2
-  >|<cwith|3|3|4|4|cell-tborder|2 >|<cwith|2|2|3|3|cell-hyphen|n>|<table|<row|<cell|Nome>|<cell|Tipo>|<cell|Volume>|Motivazione>|<row|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|Sede>|<cell|E>|<cell|5>|<cell|Si
+  >|<cwith|3|3|4|4|cell-tborder|2 >|<cwith|2|2|3|3|cell-hyphen|n>|<table|<row|<cell|<with|font-series|bold|Nome>>|<cell|<with|font-series|bold|Tipo>>|<cell|<with|font-series|bold|Volume>>|<with|font-series|bold|Motivazione>>|<row|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|Sede>|<cell|E>|<cell|5>|<cell|Si
   presume che il sistema centralizzato gestisca 5 sedi
   differenti>>|<row|<cell|Magazzino_Sede>|<cell|R>|<cell|10>|<cell|In media
   ogni Sede ha 2 magazzini>>|<row|<cell|Magazzino>|<cell|E>|<cell|10>|<cell|Cardinalità
@@ -634,11 +634,9 @@
 
     \;
 
-    SELECT
+    SELECT p.nome
 
-    \ \ \ \ p.nome,
-
-    \ \ \ \ COUNT(p.nome) AS "Numero di ordinazioni"
+    \ \ \ \ \ , COUNT(p.nome) AS "Numero di ordinazioni"
 
     FROM
 
@@ -697,25 +695,25 @@
   <\verbatim-code>
     CREATE OR REPLACE VIEW MenuAttuali AS
 
-    \ \ \ \ SELECT
+    \ \ \ \ SELECT sede
 
-    \ \ \ \ \ \ \ \ sede,
+    \ \ \ \ \ \ \ \ \ , idmenu
 
-    \ \ \ \ \ \ \ \ idmenu
+    \ \ \ \ FROM menu
 
-    \ \ \ \ FROM
-
-    \ \ \ \ \ \ \ \ menu
-
-    \ \ \ \ WHERE
-
-    \ \ \ \ \ \ \ \ data_fine IS NULL;
+    \ \ \ \ WHERE data_fine IS NULL;
 
     \;
 
     INSERT INTO piatto_menu
 
-    \ \ \ \ (SELECT idmenu, "lasagne" FROM MenuAttuali WHERE sede = "roma")
+    \ \ \ \ (SELECT idmenu
+
+    \ \ \ \ \ \ \ \ \ \ , "lasagne"
+
+    \ \ \ \ \ FROM MenuAttuali
+
+    \ \ \ \ \ WHERE sede = "roma")
   </verbatim-code>
 
   <\description>
@@ -739,13 +737,9 @@
   </description>
 
   <\verbatim-code>
-    SELECT
+    SELECT C.id_confe
 
-    \ \ \ \ C.id_confe
-
-    FROM
-
-    \ \ \ \ confezione C
+    FROM confezione C
 
     WHERE
 
