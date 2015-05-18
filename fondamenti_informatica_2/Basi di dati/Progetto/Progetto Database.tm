@@ -19,11 +19,8 @@
     </macro>>
   </hide-preamble>
 
-  \;
-
   <\doc-data|<doc-title|Progetto Basi di Dati
-  2014-2015>|<doc-author|<author-data|<author-name|<verbatim|<samp|<em|Alessandro
-  <name|<em|Sieni,Mondini>> Gianluca<name|>>>>>>>>
+  2014-2015>|<doc-author|<author-data|<author-name|>>>>
     \;
 
     \;
@@ -34,8 +31,6 @@
   <|doc-data>
     \;
   </doc-data>
-
-  <new-page*>
 
   <\table-of-contents|toc>
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Introduzione>
@@ -110,22 +105,244 @@
     normalizzazione (BCNF) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-18>>
 
-    <with|par-left|1tab|3.4<space|2spc>Schma logico
+    <with|par-left|1tab|3.4<space|2spc>Schema logico
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-19>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Creazione
+    Database> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-20><vspace|0.5fn>
   </table-of-contents>
 
-  <new-page*>
-
   <section|Introduzione>
-
-  \;
 
   <section|Progettazione Concettuale>
 
   <subsection|Glossario degli attributi>
 
   <subsection|Associazioni>
+
+  <subparagraph|sede_magazzino>
+
+  <\itemize>
+    <item>Cardinalità (1,N) con Magazzino in quanto ogni Sede può avere uno o
+    più magazzini
+
+    <item>Cardinalità (1,1) con Sede in quanto ogni magazzino deve
+    necessariamente appartenere ad una sede soltanto
+  </itemize>
+
+  <subparagraph|magazzino_scaffale>
+
+  <\itemize>
+    <item>Cardinalità (1,N) con Scaffale in quanto ogni Magazzino possiede
+    uno o più scaffali
+
+    <item>Cardinalità (1,1) con Magazzino in quanto ogni Scaffale deve
+    necessariamente appartenere ad un Magazzino soltanto
+  </itemize>
+
+  <subparagraph|scaffale_confezione>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Confezione, in quanto ogni Scaffale può
+    contenere più Confezioni (oppure nessuna Confezione)
+
+    <item>Cardinalità (1,1) con Scaffale, in quanto ogni confezione deve
+    necessariamente appartenere ad uno Scaffale soltanto
+  </itemize>
+
+  <subparagraph|confezione_ingrediente>
+
+  <\itemize>
+    <item>Cardinalità (1,1) con Ingrediente, in quanto ogni Confezione deve
+    necessariamente contenere un Igrediente soltanto
+
+    <item>Cardinalità (0,N) con Confezione, in quanto possono essere presenti
+    più Confezioni di un singolo Ingrediente (oppure nessuna)
+  </itemize>
+
+  <subparagraph|sede_menu>
+
+  <\itemize>
+    <item>Cardinalità (1,N) con Menù, in quanto ogni Sede può avere più di un
+    Menù disponibile
+
+    <item>Cardinalitù (0,1) con Sede, in quanto un singolo Menù può essere
+    disponibile presso una Sede (oppure presso nessuna Sede)
+  </itemize>
+
+  <subparagraph|ingrediente_piatto>
+
+  <\itemize>
+    <item>Cardinalità (1,1) con Piatto, in quanto ogni Piatto deve
+    necessariamente avere un Ingrediente principale soltanto
+
+    <item>Cardinalità (0,1) con Ingrediente...non dovrebbe essere 0 a molti?
+    Ogni ingrediente può essere ingrediente principale di più piatti
+  </itemize>
+
+  <subparagraph|sede_sala>
+
+  <\itemize>
+    <item>Cardinalità (1,N) con Sala, in quanto ogni Sede può avere più di
+    una Sala
+
+    <item>Cardinalità (1,1) con Sede, in quanto ogni Sala deve
+    necessariamente appartenere ad una Sede soltanto
+  </itemize>
+
+  <subparagraph|sala_serata>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Serata, in quanto ogni Sala può essere
+    occupata per diverse Serate (ma anche nessuna)
+
+    <item>Cardinalità (1,1) con Sala, in quanto ogni Serata deve essere
+    necessariamente effettuata in una Sala soltanto
+  </itemize>
+
+  <subparagraph|sala_tavolo>
+
+  <\itemize>
+    <item>Cardinalità (1,N) con Tavolo. in quanto ogni Sala deve essere
+    formata da almeno un Tavolo
+
+    <item>Cardinalità (1,1) con Sale, in quanto ogni Tavolo deve
+    necessariamente appartenere ad ogni Sala soltanto
+  </itemize>
+
+  <subparagraph|serata_account>
+
+  <\itemize>
+    <item>Cardinalità (1,1) con Account, in quanto ogni Serata deve
+    necessariamente essere organizzata da un Account soltanto
+
+    <item>Cardinalità (0,N) con Serata, in quanto ogni Account può
+    organizzare più Serate (ma anche nessuna)
+  </itemize>
+
+  <subparagraph|tavolo_account>
+
+  <\itemize>
+    <item>Cardinalità (1,1) con Account, in quanto ogni Tavolo deve
+    necessariamente essere prenotato da un Account soltanto
+
+    <item>Cardinalità (0,N) con Tavolo, in quanto ogni Account può prenotare
+    diversi Tavoli (ma anche nessuno)
+  </itemize>
+
+  <subparagraph|account_proposta (effettua)>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Proposta, in quanto ogni Account può
+    effettuare più Proposte (ma anche nessuna)
+
+    <item>Cardinalità (1,1) con Account, in quanto ogni Proposta deve
+    necessariamente essere effettuata da un Account soltanto
+  </itemize>
+
+  <subparagraph|account_proposta (valuta)>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Proposta, in quanto ogni Account può valutare
+    più Proposte (ma anche nessuna)
+
+    <item>Cardinalità (1,N) con Account, in quanto ogni Proposta può essere
+    valutata da più Account (ma anche nessuno)
+  </itemize>
+
+  <subparagraph|account_comanda>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Comanda, in quanto ogni Account può
+    effettuare più Comande (ma anche nessuna)
+
+    <item>Cardinalità (0,1) con Account, in quanto ogni Comanda può essere
+    effettuata da un solo Account (ma anche da nessuno nel caso in cui la
+    prenotazione non provenga da un Account)
+  </itemize>
+
+  <subparagraph|comanda_pony>
+
+  <\itemize>
+    <item>Cardinalità (0,1) con Pony, in quanto ogni Comanda può interessare
+    al massimo un Pony
+
+    <item>Cardinalità (1,N) con Comanda, in quanto ogni Pony ...\ 
+  </itemize>
+
+  <subparagraph|pony_consegna>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Consegna, in quanto ogni Pony può effettuare
+    più Consegne (ma anche nessuna)
+
+    <item>Cardinalità (1,N) con Pony, in quanto ...
+  </itemize>
+
+  <subparagraph|piatto_comanda>
+
+  <\itemize>
+    <item>Cardinalità (1,N) con Comanda, in quanto ogni Piatto può essere
+    richiesto in una o più Comande
+
+    <item>Cardinalità (1,N) con Piatto, in quanto ogni Comanda può richiere
+    uno o più piatti
+  </itemize>
+
+  <subparagraph|piatto_passo>
+
+  <\itemize>
+    <item>Cardinalità (1,N) con Passo, in quanto ogni Piatto deve
+    necessariamente essere prepatato mediante uno o più Passi
+
+    <item>Cardinalità (1,1) con Piatto, in quanto ogni Passo può far parte
+    della preparazione di un Piatto soltanto
+  </itemize>
+
+  <subparagraph|passo_strumento>
+
+  <\itemize>
+    <item>Cardinalità (1,1) con Strumento, in quanto ogni Passo ..
+  </itemize>
+
+  <subparagraph|sede_strumento>
+
+  <\itemize>
+    <item>Cardinalità (1,1) con Sede in quanto ogni Strumento può appartenere
+    ad una Sede soltanto
+
+    <item>Cardinalità (1,N) con Strumento in quanto ogni Sede deve
+    necessariamente possedere uno o più Strumenti
+  </itemize>
+
+  <subparagraph|confezione_passi>
+
+  <\itemize>
+    <item>Cardinalità (1,1) con Confezione in quanto ogni Passo richiede una
+    Confezione soltanto
+  </itemize>
+
+  <subparagraph|account_recensione (scrive)>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Recensione in quanto ogni Account può
+    scrivere più di una Recensione (ma anche nessuna)
+
+    <item>Cardinalità (1,1) con Account, in quanto ogni Recensione deve
+    essere scritta da un Account soltanto
+  </itemize>
+
+  <subparagraph|account_recensione (valuta)>
+
+  <\itemize>
+    <item>Cardinalità (0,N) con Account, in quanto ogni Recensione può essere
+    valutata da diversi Account (ma anche nessuno)
+
+    <item>Cardinalità (0,N) con Account, in quanto ogni Account può valutare
+    diverse Recensioni (ma anche nessuna)
+  </itemize>
 
   <section|Progettazione Logica>
 
@@ -155,16 +372,20 @@
 
   <subsubsection|Operazione 1>
 
-  Testo: Identificare tutti i piatti preparabili nell'attuale menu delle sede
-  presente a Roma.
+  <\description>
+    <item*|Testo>Identificare tutti i piatti preparabili nell'attuale menu
+    delle sede presente a Roma.
+  </description>
 
-  Frequenza: 70 volte al giorno.
+  <\description>
+    <item*|Frequenza>70 volte al giorno
+  </description>
 
-  \;
+  <with|font-series|bold|Con ridondanza>
 
-  <strong|Con \ Ridondanza>
-
-  Query:\ 
+  <\description>
+    <item*|Query>
+  </description>
 
   <\verbatim-code>
     Create or replace view PiattiRoma as\ 
@@ -189,26 +410,36 @@
     and C.ingrediente = IP.ingrediente group by C.ingrediente);
   </verbatim-code>
 
-  Tavola degli accessi:\ 
+  <\description>
+    <item*|Tavola degli acessi>
+  </description>
 
-  <strong|Senza Ridondanza >
+  <with|font-series|bold|Senza ridondanza>
 
-  Query:
+  <\description>
+    <item*|Query>
+  </description>
 
-  Tavola degli accessi:
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsubsection|Operazione 2>
 
-  Testo: Per ogni sede identificare il cliente che ha effettuato il maggior
-  numero di recensioni nell \ \ \ \ \ \ \ \ \ \ \ \ attuale mese.
+  <\description>
+    <item*|Testo>Per ogni sede, identificare il cliente che ha effettuato il
+    maggior numero di recensioni nel mese attuale
+  </description>
 
-  Frequenza: 1 volta al mese.
-
-  \;
+  <\description>
+    <item*|Frequenza>1 volta al mese
+  </description>
 
   <strong|Senza Ridondanza>
 
-  Query:
+  <\description>
+    <item*|Query>
+  </description>
 
   <\verbatim-code>
     Create or replace view Piatti_Sedi as\ 
@@ -234,13 +465,15 @@
     and I2.Allergene IS NOT NULL)) order by PS.NomeSede;
   </verbatim-code>
 
-  Tavola degli accessi:
-
-  \;
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <strong|Con Ridondanza>
 
-  Query:
+  <\description>
+    <item*|Query>
+  </description>
 
   <\verbatim-code>
     Create or replace view Piatti_Sedi as\ 
@@ -260,7 +493,9 @@
     where PS2.IdPiatto = PS.IdPiatto and PS2.Allergene IS NOT NULL));
   </verbatim-code>
 
-  Tavola degli accessi:\ 
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsubsection|Operazione 3>
 
@@ -271,7 +506,9 @@
 
   <strong|Senza Ridondanza>
 
-  Query:
+  <\description>
+    <item*|Query>
+  </description>
 
   <\verbatim-code>
     Create or replace view PiattiFirenze as\ 
@@ -301,13 +538,15 @@
     (select * from I where I.allergene is NULL);
   </verbatim-code>
 
-  \ Tavola degli accessi:\ 
-
-  \;
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <strong|Con Ridondanza>
 
-  Query:
+  <\description>
+    <item*|Query>
+  </description>
 
   <\verbatim-code>
     Create or replace view PiattiFirenze as\ 
@@ -336,93 +575,231 @@
     PR.allergene is NULL;
   </verbatim-code>
 
-  Tavola degli accessi:
-
-  \;
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsubsection|Operazione 4>
 
-  Testo: Visualizzare tutti i comuni in ordine decrescente che hanno
-  effettuato richieste take away.
+  <\description>
+    <item*|Testo>Visualizzare tutti i comuni (in ordine decrescente) che
+    hanno effettuato richieste take-away
+  </description>
 
-  Frequenza : 10 volte al giorno.
+  <\description>
+    <item*|Frequenza>10 volte al giorno
+  </description>
 
   Qui le ridondanze trovate non incidono in alcun modo sul comportamento
   della query
 
-  Query:\ 
+  <\description>
+    <item*|Query>
+  </description>
 
   <\verbatim-code>
-    Select Nome,count(*) as N_Consegne from Consegna C\ 
+    SELECT Nome,count(*) AS N_Consegne FROM Consegna C\ 
 
     \;
 
-    group by C.Comune order by N_Consegne asc
+    GROUP BY C.Comune ORDER BY N_Consegne asc
   </verbatim-code>
 
-  Tavola degli accessi:\ 
-
-  \;
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsubsection|Operazione 5>
 
-  Testo: Visualizzare il piatto più richiesti per ogni sede
+  <\description>
+    <item*|Testo>Visualizzare il piatto più richiesto per ogni sede
+  </description>
 
-  Frequenza : 2 volte al giorno.
+  <\description>
+    <item*|Frequenza>2 volte al giorno
+  </description>
 
-  Query:\ 
+  <\description>
+    <item*|Query>
+  </description>
+
+  <\verbatim-code>
+    # Questo dovrebbe visualizzare i piatti con il numero di ordinazioni
+    totali
+
+    # indipendentemente dalla sede, come posso usare GROUP BY per
+    suddividerli
+
+    # in sedi?
+
+    \;
+
+    SELECT
+
+    \ \ \ \ p.nome,
+
+    \ \ \ \ COUNT(p.nome) AS "Numero di ordinazioni"
+
+    FROM
+
+    \ \ \ \ piatto p
+
+    \ \ \ \ \ \ \ \ INNER JOIN
+
+    \ \ \ \ piatto_menu pm
+
+    \ \ \ \ \ \ \ \ ON
+
+    \ \ \ \ pm.id_piatto = p.nome
+  </verbatim-code>
 
   <subsubsection|Operazione 6>
 
-  Testo : Mostrare quale è stato il piatto in per ogni sede \ ad aver avuto
-  il maggior numero di \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ recensioni positive.
+  <\description>
+    <item*|Testo>Mostrare quale è stato il piatto, \ per ogni sede, ad aver
+    avuto il maggior numero di recensioni positive
+  </description>
 
-  Frequenza: 2 volte al giorno.
+  <\description>
+    <item*|Frequenza>2 volte al giorno
+  </description>
 
-  Query:\ 
+  <\description>
+    <item*|Query>
+  </description>
+
+  <\verbatim-code>
+    # Stesso problema della query precedente
+  </verbatim-code>
+
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsubsection|Operazione 7>
 
-  Testo: Inserire un piatto in un menu presente in una sede a scelta.
+  <\description>
+    <item*|Testo>Inserire un piatto in un menu presente in una sede a scelta
+  </description>
 
-  Frequenza : 1 volta al giorno.
+  <\description>
+    <item*|Frequenza>1 volta al giorno
+  </description>
 
   Con Ridondanza
 
   Query: \ \ \ \ \ \ .
 
-  Senza Ridondanza
+  <\description>
+    <item*|Query (senza ridondanza)>
+  </description>
 
-  Query:
+  <\verbatim-code>
+    CREATE OR REPLACE VIEW MenuAttuali AS
+
+    \ \ \ \ SELECT
+
+    \ \ \ \ \ \ \ \ sede,
+
+    \ \ \ \ \ \ \ \ idmenu
+
+    \ \ \ \ FROM
+
+    \ \ \ \ \ \ \ \ menu
+
+    \ \ \ \ WHERE
+
+    \ \ \ \ \ \ \ \ data_fine IS NULL;
+
+    \;
+
+    INSERT INTO piatto_menu
+
+    \ \ \ \ (SELECT idmenu, "lasagne" FROM MenuAttuali WHERE sede = "roma")
+  </verbatim-code>
+
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsubsection|Operazione 8>
 
-  Testo: Per ogni magazzino indicare quali sono le confezioni che sono in
-  scadenza o che sono state \ \ \ \ \ \ \ \ \ aperte(quindi che hanno un
-  degrado più veloce).
+  <\description>
+    <item*|Testo>Per ogni magazzino indicare quali sono le confezioni che
+    sono in scadenza o che sono state aperte(quindi che hanno un degrado più
+    veloce).
+  </description>
 
-  Frequenza : 100 volte al giorno.
+  <\description>
+    <item*|Frequenza>100 volte al giorno
+  </description>
 
-  Query:\ 
+  <\description>
+    <item*|Query>
+  </description>
 
-  \;
+  <\verbatim-code>
+    SELECT
+
+    \ \ \ \ C.id_confe
+
+    FROM
+
+    \ \ \ \ confezione C
+
+    WHERE
+
+    \ \ \ \ # lo stato in uso non viene considerato perché la confezione è
+
+    \ \ \ \ # già in uso, giusto?
+
+    \ \ \ \ # come era stato implementato il tipo Stato?
+
+    \ \ \ \ C.stato = "parziale"
+
+    \ \ \ \ # dove ottengo la data di scadenza?
+  </verbatim-code>
+
+  <\description>
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsubsection|Operazione 9>
 
-  Testo: Indicare il guadagno(al netto delle spese degli ingredienti) al
-  termine di ogni giornata per ciascuna sede
+  <\description>
+    <item*|Test>Indicare il guadagno (al netto delle spese degli ingredienti)
+    al termine di ogni giornata per ciascuna sede
+  </description>
 
-  Frequenza : 1 volta al giorno.
+  <\description>
+    <item*|Frequenza>1 volta al giorno
+  </description>
 
-  Query:\ 
+  <with|font-series|bold|Senza ridondanza>
+
+  <\description>
+    <item*|Query>
+
+    <item*|Tavola degli accessi>
+  </description>
+
+  <with|font-series|bold|Con ridondanza>
+
+  <\description>
+    <item*|Query>
+
+    <item*|Tavola degli accessi>
+  </description>
 
   <subsection|Analisi Ridondanze>
 
   <subsection|Dipendenze funzionali e normalizzazione (BCNF)>
 
-  <subsection|Schma logico>
+  <subsection|Schema logico>
 
   <section|Creazione Database>
+
+  \;
 
   \;
 
@@ -440,27 +817,48 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|3>>
-    <associate|auto-10|<tuple|3.1.4|4>>
-    <associate|auto-11|<tuple|3.1.5|4>>
-    <associate|auto-12|<tuple|3.1.6|5>>
-    <associate|auto-13|<tuple|3.1.7|6>>
-    <associate|auto-14|<tuple|3.1.8|6>>
-    <associate|auto-15|<tuple|3.1.9|6>>
-    <associate|auto-16|<tuple|3.1.10|6>>
-    <associate|auto-17|<tuple|3.2|6>>
-    <associate|auto-18|<tuple|3.3|6>>
-    <associate|auto-19|<tuple|3.4|6>>
+    <associate|auto-10|<tuple|6|4>>
+    <associate|auto-11|<tuple|7|4>>
+    <associate|auto-12|<tuple|8|5>>
+    <associate|auto-13|<tuple|9|6>>
+    <associate|auto-14|<tuple|10|6>>
+    <associate|auto-15|<tuple|11|6>>
+    <associate|auto-16|<tuple|12|6>>
+    <associate|auto-17|<tuple|13|6>>
+    <associate|auto-18|<tuple|14|6>>
+    <associate|auto-19|<tuple|15|6>>
     <associate|auto-2|<tuple|2|3>>
-    <associate|auto-20|<tuple|4|?>>
-    <associate|auto-26|<tuple|3.3.14.1|?>>
-    <associate|auto-29|<tuple|3.3.17|?>>
+    <associate|auto-20|<tuple|16|?>>
+    <associate|auto-21|<tuple|17|?>>
+    <associate|auto-22|<tuple|18|?>>
+    <associate|auto-23|<tuple|19|?>>
+    <associate|auto-24|<tuple|20|?>>
+    <associate|auto-25|<tuple|21|?>>
+    <associate|auto-26|<tuple|22|?>>
+    <associate|auto-27|<tuple|23|?>>
+    <associate|auto-28|<tuple|3|?>>
+    <associate|auto-29|<tuple|3.1|?>>
     <associate|auto-3|<tuple|2.1|3>>
+    <associate|auto-30|<tuple|3.1.1|?>>
+    <associate|auto-31|<tuple|3.1.2|?>>
+    <associate|auto-32|<tuple|3.1.3|?>>
+    <associate|auto-33|<tuple|3.1.4|?>>
+    <associate|auto-34|<tuple|3.1.5|?>>
+    <associate|auto-35|<tuple|3.1.6|?>>
+    <associate|auto-36|<tuple|3.1.7|?>>
+    <associate|auto-37|<tuple|3.1.8|?>>
+    <associate|auto-38|<tuple|3.1.9|?>>
+    <associate|auto-39|<tuple|3.1.10|?>>
     <associate|auto-4|<tuple|2.2|3>>
-    <associate|auto-5|<tuple|3|3>>
-    <associate|auto-6|<tuple|3.1|3>>
-    <associate|auto-7|<tuple|3.1.1|3>>
-    <associate|auto-8|<tuple|3.1.2|3>>
-    <associate|auto-9|<tuple|3.1.3|3>>
+    <associate|auto-40|<tuple|3.2|?>>
+    <associate|auto-41|<tuple|3.3|?>>
+    <associate|auto-42|<tuple|3.4|?>>
+    <associate|auto-43|<tuple|4|?>>
+    <associate|auto-5|<tuple|1|3>>
+    <associate|auto-6|<tuple|2|3>>
+    <associate|auto-7|<tuple|3|3>>
+    <associate|auto-8|<tuple|4|3>>
+    <associate|auto-9|<tuple|5|3>>
   </collection>
 </references>
 
@@ -483,65 +881,138 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
+      sede_magazzino <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5><vspace|0.15fn>
+
+      magazzino_scaffale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6><vspace|0.15fn>
+
+      scaffale_confezione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7><vspace|0.15fn>
+
+      confezione_ingrediente <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8><vspace|0.15fn>
+
+      sede_menu <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9><vspace|0.15fn>
+
+      ingrediente_piatto <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10><vspace|0.15fn>
+
+      sede_sala <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11><vspace|0.15fn>
+
+      sala_serata <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12><vspace|0.15fn>
+
+      sala_tavolo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13><vspace|0.15fn>
+
+      serata_account <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14><vspace|0.15fn>
+
+      tavolo_account <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15><vspace|0.15fn>
+
+      account_proposta (effettua) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16><vspace|0.15fn>
+
+      account_proposta (valuta) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17><vspace|0.15fn>
+
+      account_comanda <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18><vspace|0.15fn>
+
+      comanda_pony <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19><vspace|0.15fn>
+
+      pony_consegna <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-20><vspace|0.15fn>
+
+      piatto_comanda <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21><vspace|0.15fn>
+
+      piatto_passo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22><vspace|0.15fn>
+
+      passo_strumento <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23><vspace|0.15fn>
+
+      sede_strumento <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24><vspace|0.15fn>
+
+      confezione_passi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25><vspace|0.15fn>
+
+      account_recensione (scrive) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26><vspace|0.15fn>
+
+      account_recensione (valuta) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-27><vspace|0.15fn>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Progettazione
       Logica> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5><vspace|0.5fn>
+      <no-break><pageref|auto-28><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>Analisi di alcune operazioni
       effettuabili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|2tab>|3.1.1<space|2spc>Tabella dei volumi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|2tab>|3.1.2<space|2spc>Operazione 1
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>
+      <no-break><pageref|auto-31>>
 
       <with|par-left|<quote|2tab>|3.1.3<space|2spc>Operazione 2
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>>
+      <no-break><pageref|auto-32>>
 
       <with|par-left|<quote|2tab>|3.1.4<space|2spc>Operazione 3
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
+      <no-break><pageref|auto-33>>
 
       <with|par-left|<quote|2tab>|3.1.5<space|2spc>Operazione 4
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|2tab>|3.1.6<space|2spc>Operazione 5
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12>>
+      <no-break><pageref|auto-35>>
 
       <with|par-left|<quote|2tab>|3.1.7<space|2spc>Operazione 6
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|2tab>|3.1.8<space|2spc>Operazione 7
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14>>
+      <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|2tab>|3.1.9<space|2spc>Operazione 8
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
+      <no-break><pageref|auto-38>>
 
       <with|par-left|<quote|2tab>|3.1.10<space|2spc>Operazione 9
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-39>>
 
       <with|par-left|<quote|1tab>|3.2<space|2spc>Analisi Ridondanze
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
+      <no-break><pageref|auto-40>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Dipendenze funzionali e
       normalizzazione (BCNF) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
+      <no-break><pageref|auto-41>>
 
-      <with|par-left|<quote|1tab>|3.4<space|2spc>Schma logico
+      <with|par-left|<quote|1tab>|3.4<space|2spc>Schema logico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-42>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Creazione
+      Database> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
