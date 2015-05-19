@@ -737,21 +737,34 @@
   </description>
 
   <\verbatim-code>
-    SELECT C.id_confe
+    CREATE OR REPLACE VIEW ScadenzaConfezioni AS
 
-    FROM confezione C
+    \ \ SELECT idConfe AS "ID_confezione"
 
-    WHERE
+    \ \ \ \ \ \ \ , idScaffale AS "ID_scaffale"
 
-    \ \ \ \ # lo stato in uso non viene considerato perché la confezione è
+    \ \ \ \ \ \ \ , aspetto
 
-    \ \ \ \ # già in uso, giusto?
+    \ \ \ \ \ \ \ , stato
 
-    \ \ \ \ # come era stato implementato il tipo Stato?
+    \ \ \ \ \ \ \ , ingrediente
 
-    \ \ \ \ C.stato = "parziale"
+    \ \ \ \ \ \ \ , DATEDIFF(day, dataScadenza, GETDATE() AS
+    "giorniAllaScadenza"
 
-    \ \ \ \ # dove ottengo la data di scadenza?
+    \ \ FROM confezione
+
+    \ \ WHERE stato = "in uso";
+
+    \;
+
+    SELECT *
+
+    FROM ScadenzaConfezioni
+
+    WHERE giorniAllaScadenza \<less\> 4;
+
+    \ \ \ \ \ \ \ \ \ 
   </verbatim-code>
 
   <\description>

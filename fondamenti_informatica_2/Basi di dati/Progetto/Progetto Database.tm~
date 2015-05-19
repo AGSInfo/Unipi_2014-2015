@@ -634,11 +634,9 @@
 
     \;
 
-    SELECT
+    SELECT p.nome
 
-    \ \ \ \ p.nome,
-
-    \ \ \ \ COUNT(p.nome) AS "Numero di ordinazioni"
+    \ \ \ \ \ , COUNT(p.nome) AS "Numero di ordinazioni"
 
     FROM
 
@@ -699,21 +697,23 @@
 
     \ \ \ \ SELECT sede
 
-    \ \ \ \ \ \ \ \ \ \ ,idmenu
+    \ \ \ \ \ \ \ \ \ , idmenu
 
-    \ \ \ \ FROM
+    \ \ \ \ FROM menu
 
-    \ \ \ \ \ \ \ \ menu
-
-    \ \ \ \ WHERE
-
-    \ \ \ \ \ \ \ \ data_fine IS NULL;
+    \ \ \ \ WHERE data_fine IS NULL;
 
     \;
 
     INSERT INTO piatto_menu
 
-    \ \ \ \ (SELECT idmenu, "lasagne" FROM MenuAttuali WHERE sede = "roma")
+    \ \ \ \ (SELECT idmenu
+
+    \ \ \ \ \ \ \ \ \ \ , "lasagne"
+
+    \ \ \ \ \ FROM MenuAttuali
+
+    \ \ \ \ \ WHERE sede = "roma")
   </verbatim-code>
 
   <\description>
@@ -737,21 +737,26 @@
   </description>
 
   <\verbatim-code>
-    SELECT C.id_confe
+    CREATE OR REPLACE VIEW ScadenzaConfezioni AS
 
-    FROM confezione C
+    \ \ SELECT idConfe AS "ID_confezione"
 
-    WHERE
+    \ \ \ \ \ \ \ , idScaffale AS "ID_scaffale"
 
-    \ \ \ \ # lo stato in uso non viene considerato perché la confezione è
+    \ \ \ \ \ \ \ , aspetto
 
-    \ \ \ \ # già in uso, giusto?
+    \ \ \ \ \ \ \ , stato
 
-    \ \ \ \ # come era stato implementato il tipo Stato?
+    \ \ \ \ \ \ \ , ingrediente
 
-    \ \ \ \ C.stato = "parziale"
+    \ \ \ \ \ \ \ , DATEDIFF(day, dataScadenza, GETDATE() AS
+    "giorniAllaScadenza"
 
-    \ \ \ \ # dove ottengo la data di scadenza?
+    \ \ FROM confezione
+
+    \ \ WHERE stato = "in uso";
+
+    \ \ \ \ \ \ \ \ \ 
   </verbatim-code>
 
   <\description>
