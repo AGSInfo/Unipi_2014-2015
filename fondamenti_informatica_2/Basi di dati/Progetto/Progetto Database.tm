@@ -762,7 +762,9 @@
 
     FROM ScadenzaConfezioni
 
-    WHERE giorniAllaScadenza \<less\> 4;
+    WHERE giorniAllaScadenza \<less\>= 4
+
+    ORDER BY giorniAllaScadenza ASC;
 
     \ \ \ \ \ \ \ \ \ 
   </verbatim-code>
