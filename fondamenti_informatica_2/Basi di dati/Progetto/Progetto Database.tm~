@@ -201,7 +201,7 @@
 
   - ModificaVariazione(<underline|IdModifica>,VariantePiatto,Modifica)
 
-  - ValutazioneVariazione(<underline|Account,VarianrePiatto>,Valutazione)
+  - ValutazioneVariazione(<underline|Account,VariantePiatto>,Valutazione)
 
   - Serata(<underline|IdSerata>,Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrgan
   \ \ \ \ izzatoreSala,Allestimento,nPersone)
@@ -274,7 +274,9 @@
   Organizzazione>>|<row|<cell|Allestimento>|<cell|R>|<cell|100>|<cell|Cardinalità
   (1,1) con Serata>>|<row|<cell|Illustra>|<cell|R>|<cell|100>|<cell|In media
   0.2 account propongono un nuovo piatto>>|<row|<cell|PropostaPiatto>|<cell|E>|<cell|100>|<cell|Cardinalità
-  (1,1) con Illustra>>|<row|<cell|Ingred>|<cell|>|<cell|>|<cell|>>|<row|<cell|ValutazionePP>|<cell|R>|<cell|400>|<cell|Ciascuna
+  (1,1) con Illustra>>|<row|<cell|IngredientePP>|<cell|R>|<cell|500>|<cell|In
+  media \ ogni PropostaPiatto contiene 5 ingredienti
+  conosciuti>>|<row|<cell|ValutazionePP>|<cell|R>|<cell|400>|<cell|Ciascuna
   PropostaPiatto viene valutata in media 4
   volte>>|<row|<cell|Proposta>|<cell|R>|<cell|250>|<cell|in media ogni
   account su 2 propone una variazione ad un

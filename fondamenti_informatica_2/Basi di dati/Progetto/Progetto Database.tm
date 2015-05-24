@@ -201,7 +201,7 @@
 
   - ModificaVariazione(<underline|IdModifica>,VariantePiatto,Modifica)
 
-  - ValutazioneVariazione(<underline|Account,VarianrePiatto>,Valutazione)
+  - ValutazioneVariazione(<underline|Account,VariantePiatto>,Valutazione)
 
   - Serata(<underline|IdSerata>,Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrgan
   \ \ \ \ izzatoreSala,Allestimento,nPersone)
