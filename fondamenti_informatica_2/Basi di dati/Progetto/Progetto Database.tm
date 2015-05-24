@@ -637,7 +637,7 @@
 
     \ \ \ \ (SELECT idmenu
 
-    \ \ \ \ \ \ \ \ \ \ , "lasagne"
+    \ \ \ \ \ \ \ \ \ \ (SELECT nome FROM Piatto WHERE nome = "lasagna")
 
     \ \ \ \ \ FROM MenuAttuali
 
