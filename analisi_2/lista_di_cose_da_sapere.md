@@ -1,5 +1,4 @@
 # Lista di cose da sapere per l'esame di Analisi 2
-Attenzione, la lista è incompleta!
 
 ## Teoremi
  1. I punti di accumulazione sono limiti di successioni di punti distinti dell'insieme
