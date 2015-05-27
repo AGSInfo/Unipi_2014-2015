@@ -1,6 +1,7 @@
 # Lista di cose da sapere per l'esame di Analisi 2
 
 ## Teoremi
+
  1. I punti di accumulazione sono limiti di successioni di punti distinti dell'insieme (Breve)
  - Th. della permanenza del segno per funzioni continue scalari a variabile vettoriale (Breve)
  - Limite della somma di 2 funzioni vettoriali convergenti (Breve)
@@ -43,7 +44,17 @@
  - Th. di Integrabilità delle funzioni misuabili e limitate su insiemi misurabili e di dimensione finita (Medio)
  - Th. di Fubini,Tonelli,Lebesque(convergenza dominata) BepppoLevi (convergenza monotona) (No dim)
 
-[to be continued..]
+
+## Teoremi Ordinati per Lunghezza
+
+# Teoremi Brevi
+1. I punti di accumulazione sono limiti di successioni di punti distinti dell'insieme 
+2. Th. della permanenza del segno per funzioni continue scalari a variabile vettoriale 
+3. Limite della somma di 2 funzioni vettoriali convergenti 
+4. Continuità di funzioni composte 
+5. Th. di esistenza degli zeri per funzioni continue sui connessi 
+6. La somma di funzioni continue è una funzione continua
+
 
 ## Definizioni
  1. Sfera
