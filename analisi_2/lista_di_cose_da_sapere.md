@@ -47,7 +47,7 @@
 
 ## Teoremi Ordinati per Lunghezza
 
-# Teoremi Brevi
+### Teoremi Brevi
 1. I punti di accumulazione sono limiti di successioni di punti distinti dell'insieme 
 2. Th. della permanenza del segno per funzioni continue scalari a variabile vettoriale 
 3. Limite della somma di 2 funzioni vettoriali convergenti 
