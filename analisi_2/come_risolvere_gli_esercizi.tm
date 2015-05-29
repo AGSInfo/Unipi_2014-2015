@@ -596,11 +596,37 @@
     \<Theta\>=<choice|<tformat|<table|<row|<cell|arctan<around*|(|<frac|y|x>|)>>|<cell|x\<gtr\>0>>|<row|<cell|<frac|\<pi\>|2>>|<cell|x=0\<wedge\>y\<gtr\>0>>|<row|<cell|-<frac|\<pi\>|2>>|<cell|x=0\<wedge\>y\<less\>0>>|<row|<cell|\<pi\>+arctan<around*|(|<frac|y|x>|)>>|<cell|x\<less\>0>>>>>
   </equation*>
 
-  <subsubsection|Passaggio alle coordinate cartesiane>
+  <subsubsection|Da coordinate cartesiane a cooordinate polari piane>
 
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|\<rho\>*cos<around*|(|\<Theta\>|)>>>|<row|<cell|\<rho\>*sin<around*|(|\<Theta\>|)>>>>>>
-  </equation*>
+  <\math>
+    <\text>
+      <eqnarray*|<tformat|<table|<row|<cell|x >|<cell|=>|<cell|\<rho\> cos
+      \<theta\>>>|<row|<cell|y >|<cell|=>|<cell|\<rho\>
+      sin\<theta\>>>|<row|<cell|Jacobiano >|<cell|=>|<cell| \<rho\>>>>>>
+
+      \;
+    </text>
+  </math>
+
+  <subsubsection|Da coordinate cartesiane a coordinate polari cilindriche>
+
+  \;
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|x>|<cell|= >|<cell|\<rho\> cos
+    \<theta\>>>|<row|<cell|y>|<cell|= >|<cell|\<rho\> sin
+    \<theta\>>>|<row|<cell|z >|<cell| = >|<cell|z>>|<row|<cell|Jacobiano>|<cell|=
+    >|<cell|\<rho\>>>>>
+  </eqnarray*>
+
+  <subsubsection|Da coordinate cartesiani a coordinate plari sferiche>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|x>|<cell|=>|<cell|\<rho\>sin\<phi\>cos\<theta\>>>|<row|<cell|y>|<cell|=
+    >|<cell|\<rho\>sin\<phi\>sin\<theta\>>>|<row|<cell|z>|<cell|=
+    >|<cell|\<rho\>cos\<phi\>>>|<row|<cell|Jacobiano>|<cell|=
+    >|<cell|\<rho\><rsup|2>sin\<phi\>>>>>
+  </eqnarray*>
 
   <subsubsection|Come smontare gli integrali noiosi con le radici>
 
@@ -713,10 +739,12 @@
     <associate|auto-39|<tuple|15.6|?>>
     <associate|auto-4|<tuple|2|3>>
     <associate|auto-40|<tuple|15.7|?>>
-    <associate|auto-41|<tuple|16|?>>
-    <associate|auto-42|<tuple|17|?>>
-    <associate|auto-43|<tuple|18|?>>
-    <associate|auto-44|<tuple|18.1|?>>
+    <associate|auto-41|<tuple|15.8|?>>
+    <associate|auto-42|<tuple|15.9|?>>
+    <associate|auto-43|<tuple|16|?>>
+    <associate|auto-44|<tuple|17|?>>
+    <associate|auto-45|<tuple|18|?>>
+    <associate|auto-46|<tuple|18.1|?>>
     <associate|auto-5|<tuple|3|4>>
     <associate|auto-6|<tuple|4|4>>
     <associate|auto-7|<tuple|4.1|4>>
@@ -858,7 +886,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
 
-      <with|par-left|<quote|1tab>|15<space|2spc>Formule trigonometriche utili
+      <with|par-left|<quote|1tab>|15<space|2spc>Formule utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>>
 
@@ -882,25 +910,33 @@
       <with|mode|<quote|math>|R<rsup|2>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>>
 
-      <with|par-left|<quote|2tab>|15.6<space|2spc>Passaggio alle coordinate
-      cartesiane <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|15.6<space|2spc>Da coordinate cartesiane a
+      cooordinate polari piane <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39>>
+
+      <with|par-left|<quote|2tab>|15.7<space|2spc>Da coordinate cartesiane a
+      coordinate polari cilindriche <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-40>>
+
+      <with|par-left|<quote|2tab>|15.8<space|2spc>Come smontare gli integrali
+      noiosi con le radici <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-41>>
 
       <with|par-left|<quote|1tab>|16<space|2spc>Lunghezza di una curva
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|17<space|2spc>Integrale curvilineo
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|1tab>|18<space|2spc>Funzioni utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-44>>
 
       <with|par-left|<quote|2tab>|18.1<space|2spc>Cardioide
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-45>>
     </associate>
   </collection>
 </auxiliary>
