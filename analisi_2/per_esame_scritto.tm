@@ -717,6 +717,10 @@
     <big|int>cos<rsup|2><around*|(|x|)>*dx=<frac|1|2><around*|[|x+sin<around*|(|x|)>*cos<around*|(|x|)>|]>+C
   </equation*>
 
+  <\equation*>
+    <big|int>sin<around*|(|t|)>*cos<around*|(|t|)>*dt=-<frac|1|2>*cos<rsup|2><around*|(|t|)>+C
+  </equation*>
+
   Da verificare:
 
   <\equation*>
@@ -742,65 +746,65 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.5|1>>
-    <associate|auto-11|<tuple|1.6|1>>
-    <associate|auto-12|<tuple|1.7|1>>
-    <associate|auto-13|<tuple|1.8|1>>
-    <associate|auto-14|<tuple|2|1>>
-    <associate|auto-15|<tuple|1.9|1>>
-    <associate|auto-16|<tuple|1.9.1|1>>
+    <associate|auto-10|<tuple|1.5|2>>
+    <associate|auto-11|<tuple|1.6|2>>
+    <associate|auto-12|<tuple|1.7|2>>
+    <associate|auto-13|<tuple|1.8|2>>
+    <associate|auto-14|<tuple|2|2>>
+    <associate|auto-15|<tuple|1.9|2>>
+    <associate|auto-16|<tuple|1.9.1|2>>
     <associate|auto-17|<tuple|1.9.2|2>>
     <associate|auto-18|<tuple|3|2>>
     <associate|auto-19|<tuple|4|2>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-20|<tuple|1.9.3|2>>
-    <associate|auto-21|<tuple|1.10|2>>
-    <associate|auto-22|<tuple|1.11|2>>
-    <associate|auto-23|<tuple|5|2>>
-    <associate|auto-24|<tuple|6|2>>
-    <associate|auto-25|<tuple|1.12|2>>
-    <associate|auto-26|<tuple|1.13|2>>
-    <associate|auto-27|<tuple|1.14|3>>
-    <associate|auto-28|<tuple|1.15|3>>
-    <associate|auto-29|<tuple|1.16|3>>
+    <associate|auto-21|<tuple|1.10|3>>
+    <associate|auto-22|<tuple|1.11|3>>
+    <associate|auto-23|<tuple|5|3>>
+    <associate|auto-24|<tuple|6|3>>
+    <associate|auto-25|<tuple|1.12|3>>
+    <associate|auto-26|<tuple|1.13|4>>
+    <associate|auto-27|<tuple|1.14|4>>
+    <associate|auto-28|<tuple|1.15|4>>
+    <associate|auto-29|<tuple|1.16|4>>
     <associate|auto-3|<tuple|1.1.1|1>>
-    <associate|auto-30|<tuple|1.16.1|3>>
-    <associate|auto-31|<tuple|1.16.2|3>>
-    <associate|auto-32|<tuple|1.16.3|3>>
-    <associate|auto-33|<tuple|1.17|3>>
-    <associate|auto-34|<tuple|7|3>>
-    <associate|auto-35|<tuple|1.18|3>>
-    <associate|auto-36|<tuple|1.19|3>>
-    <associate|auto-37|<tuple|1.20|4>>
-    <associate|auto-38|<tuple|1.20.1|4>>
-    <associate|auto-39|<tuple|2|4>>
+    <associate|auto-30|<tuple|1.16.1|4>>
+    <associate|auto-31|<tuple|1.16.2|4>>
+    <associate|auto-32|<tuple|1.16.3|4>>
+    <associate|auto-33|<tuple|1.17|4>>
+    <associate|auto-34|<tuple|7|5>>
+    <associate|auto-35|<tuple|1.18|5>>
+    <associate|auto-36|<tuple|1.19|5>>
+    <associate|auto-37|<tuple|1.20|6>>
+    <associate|auto-38|<tuple|1.20.1|6>>
+    <associate|auto-39|<tuple|2|6>>
     <associate|auto-4|<tuple|1.1.2|1>>
-    <associate|auto-40|<tuple|2.1|4>>
-    <associate|auto-41|<tuple|2.2|4>>
-    <associate|auto-42|<tuple|2.3|4>>
-    <associate|auto-43|<tuple|2.3.1|4>>
-    <associate|auto-44|<tuple|2.3.2|4>>
-    <associate|auto-45|<tuple|2.4|4>>
-    <associate|auto-46|<tuple|2.4.1|4>>
-    <associate|auto-47|<tuple|2.4.2|4>>
-    <associate|auto-48|<tuple|2.4.3|4>>
-    <associate|auto-49|<tuple|2.4.4|4>>
+    <associate|auto-40|<tuple|2.1|6>>
+    <associate|auto-41|<tuple|2.2|6>>
+    <associate|auto-42|<tuple|2.3|7>>
+    <associate|auto-43|<tuple|2.3.1|7>>
+    <associate|auto-44|<tuple|2.3.2|7>>
+    <associate|auto-45|<tuple|2.4|7>>
+    <associate|auto-46|<tuple|2.4.1|7>>
+    <associate|auto-47|<tuple|2.4.2|7>>
+    <associate|auto-48|<tuple|2.4.3|7>>
+    <associate|auto-49|<tuple|2.4.4|7>>
     <associate|auto-5|<tuple|1.1.3|1>>
-    <associate|auto-50|<tuple|2.5|?>>
-    <associate|auto-51|<tuple|2.5.1|?>>
-    <associate|auto-52|<tuple|2.5.2|?>>
-    <associate|auto-53|<tuple|8|?>>
-    <associate|auto-54|<tuple|2.6|?>>
-    <associate|auto-55|<tuple|2.6.1|?>>
-    <associate|auto-56|<tuple|9|?>>
-    <associate|auto-57|<tuple|10|?>>
-    <associate|auto-58|<tuple|11|?>>
-    <associate|auto-59|<tuple|2.7|?>>
+    <associate|auto-50|<tuple|2.5|8>>
+    <associate|auto-51|<tuple|2.5.1|8>>
+    <associate|auto-52|<tuple|2.5.2|8>>
+    <associate|auto-53|<tuple|8|8>>
+    <associate|auto-54|<tuple|2.6|8>>
+    <associate|auto-55|<tuple|2.6.1|8>>
+    <associate|auto-56|<tuple|9|8>>
+    <associate|auto-57|<tuple|10|8>>
+    <associate|auto-58|<tuple|11|8>>
+    <associate|auto-59|<tuple|2.7|8>>
     <associate|auto-6|<tuple|1.2|1>>
-    <associate|auto-60|<tuple|2.8|?>>
-    <associate|auto-61|<tuple|2.8.1|?>>
-    <associate|auto-62|<tuple|2.8.2|?>>
-    <associate|auto-63|<tuple|2.8.3|?>>
+    <associate|auto-60|<tuple|2.8|8>>
+    <associate|auto-61|<tuple|2.8.1|8>>
+    <associate|auto-62|<tuple|2.8.2|8>>
+    <associate|auto-63|<tuple|2.8.3|9>>
     <associate|auto-64|<tuple|2.8.1|?>>
     <associate|auto-65|<tuple|2.8.2|?>>
     <associate|auto-66|<tuple|2.8.3|?>>
@@ -853,7 +857,7 @@
       <no-break><pageref|auto-10>>
 
       <with|par-left|<quote|1tab>|1.6<space|2spc>Integrale di campo
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      (integrale di linea) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
       <with|par-left|<quote|1tab>|1.7<space|2spc>Area della porzione di
