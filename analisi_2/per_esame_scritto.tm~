@@ -95,6 +95,26 @@
     =<space|1em><big|int><rsub|0><rsup|<frac|\<pi\>|2>>cos<around*|(|\<theta\>|)>*d\<theta\><big|int><rsub|1><rsup|<sqrt|2>>\<rho\>*<sqrt|1+\<rho\><rsup|2>>*d\<rho\><space|1em>=<space|1em>\<ldots\>
   </equation*>
 
+  <subparagraph|Esempio>
+
+  Calcolo della superficie laterale di un solido di rotazione
+
+  <\equation*>
+    S<rsub|laterale>=2*\<pi\>*<big|int><rsub|a><rsup|b>f<around*|(|z|)>*<sqrt|1+f<rprime|'><around*|(|z|)><rsup|2>>*dz
+  </equation*>
+
+  <with|font-series|bold|Esempio>
+
+  Calcolo della superficie di una sfera
+
+  <\equation*>
+    f<around*|(|z|)>=<sqrt|1-z<rsup|2>>
+  </equation*>
+
+  <\equation*>
+    S<rsub|sfera>=2*\<pi\>*<big|int><rsub|-1><rsup|1><sqrt|1-z<rsup|2>>*<sqrt|1+<frac|z<rsup|2>|1-z<rsup|2>>>*dz=4*\<pi\>
+  </equation*>
+
   <subsection|Integrale curvilineo>
 
   <\equation*>
@@ -111,7 +131,11 @@
   <math|f<around*|(|x,y|)>>)>
 
   <\equation*>
-    A=<big|int><rsub|a><rsup|b><around*|(|<big|int><rsub|c><rsup|d><sqrt|a+<around*|(|f<rsub|x>|)><rsup|2>+<around*|(|f<rsub|y>|)><rsup|2>>*dy|)>*dx
+    A=<big|int><rsub|a><rsup|b><big|int><rsub|c<rsup|>><rsup|d><around*|\||f<rsub|x>\<wedge\>f<rsub|y>|\|>*dy*dx???
+  </equation*>
+
+  <\equation*>
+    A=<big|int><rsub|a><rsup|b><around*|(|<big|int><rsub|c><rsup|d><sqrt|1+<around*|(|f<rsub|x>|)><rsup|2>+<around*|(|f<rsub|y>|)><rsup|2>>*dy|)>*dx
   </equation*>
 
   <subsection|Volume>
@@ -135,6 +159,18 @@
 
   <\equation*>
     =<space|1em><big|int><rsub|0><rsup|2*\<pi\>>d*\<theta\><big|int><rsub|a><rsup|b>dz<big|int><rsub|0><rsup|f<around*|(|z|)>>\<rho\>*d*\<theta\>=2*\<pi\><big|int><rsub|a><rsup|b>dz*<frac|1|2>*f<rsup|2><around*|(|z|)>=\<pi\><big|int><rsub|a><rsup|b>f<rsup|2><around*|(|z|)>*dz
+  </equation*>
+
+  <with|font-series|bold|Esempio>
+
+  Calcolo del volume di una sfera
+
+  <\equation*>
+    f<around*|(|z|)>=<sqrt|1-z<rsup|2>>
+  </equation*>
+
+  <\equation*>
+    V<rsub|sfera>=\<pi\>*<big|int><rsub|-1><rsup|1>f<rsup|2><around*|(|z|)>*dz=\<pi\>*<big|int><rsub|-1><rsup|1><around*|(|1-z<rsup|2>|)>*dz=<frac|4|3>*\<pi\>
   </equation*>
 
   <subsection|Integrale su un insieme>
@@ -193,11 +229,11 @@
     entrambe siano <math|\<less\>\<infty\>>
 
     <\equation*>
-      lim<rsub|<around*|(|h,0|)>\<rightarrow\>0><frac|f<around*|(|x,y|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|h>
+      lim<rsub|h\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|h>
     </equation*>
 
     <\equation*>
-      lim<rsub|<around*|(|0,k|)>\<rightarrow\>0><frac|f<around*|(|x,y|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|k>
+      lim<rsub|k\<rightarrow\>0><frac|f<around*|(|x<rsub|0>,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|k>
     </equation*>
 
     <with|font-series|bold|Teorema del differenziale totale:> se <math|A> ha
@@ -729,6 +765,22 @@
     lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|arcsin<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
   </equation*>
 
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|arctan<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|sinh<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|cosh<around*|(|f<around*|(|x|)>|)>-1|f<around*|(|x|)><rsup|2>>=0
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|tanh<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
   <subsection|Integrali>
 
   <subsubsection|Integrazione per parti>
@@ -788,67 +840,67 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.5|2>>
-    <associate|auto-11|<tuple|1.6|2>>
-    <associate|auto-12|<tuple|1.7|2>>
-    <associate|auto-13|<tuple|1.8|2>>
-    <associate|auto-14|<tuple|2|2>>
-    <associate|auto-15|<tuple|1.9|2>>
-    <associate|auto-16|<tuple|1.9.1|2>>
-    <associate|auto-17|<tuple|1.9.2|2>>
-    <associate|auto-18|<tuple|3|2>>
+    <associate|auto-10|<tuple|2|2>>
+    <associate|auto-11|<tuple|1.5|2>>
+    <associate|auto-12|<tuple|1.6|2>>
+    <associate|auto-13|<tuple|1.7|2>>
+    <associate|auto-14|<tuple|1.8|2>>
+    <associate|auto-15|<tuple|3|2>>
+    <associate|auto-16|<tuple|1.9|2>>
+    <associate|auto-17|<tuple|1.9.1|2>>
+    <associate|auto-18|<tuple|1.9.2|2>>
     <associate|auto-19|<tuple|4|2>>
     <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-20|<tuple|1.9.3|2>>
-    <associate|auto-21|<tuple|1.10|3>>
-    <associate|auto-22|<tuple|1.11|3>>
-    <associate|auto-23|<tuple|5|3>>
+    <associate|auto-20|<tuple|5|2>>
+    <associate|auto-21|<tuple|1.9.3|3>>
+    <associate|auto-22|<tuple|1.10|3>>
+    <associate|auto-23|<tuple|1.11|3>>
     <associate|auto-24|<tuple|6|3>>
-    <associate|auto-25|<tuple|1.12|3>>
-    <associate|auto-26|<tuple|1.13|4>>
-    <associate|auto-27|<tuple|1.14|4>>
-    <associate|auto-28|<tuple|1.15|4>>
-    <associate|auto-29|<tuple|1.16|4>>
+    <associate|auto-25|<tuple|7|3>>
+    <associate|auto-26|<tuple|1.12|4>>
+    <associate|auto-27|<tuple|1.13|4>>
+    <associate|auto-28|<tuple|1.14|4>>
+    <associate|auto-29|<tuple|1.15|4>>
     <associate|auto-3|<tuple|1.1.1|1>>
-    <associate|auto-30|<tuple|1.16.1|4>>
-    <associate|auto-31|<tuple|1.16.2|4>>
-    <associate|auto-32|<tuple|1.16.3|4>>
-    <associate|auto-33|<tuple|1.17|4>>
-    <associate|auto-34|<tuple|7|5>>
-    <associate|auto-35|<tuple|1.18|5>>
-    <associate|auto-36|<tuple|1.19|5>>
-    <associate|auto-37|<tuple|1.20|6>>
-    <associate|auto-38|<tuple|1.20.1|6>>
-    <associate|auto-39|<tuple|2|6>>
+    <associate|auto-30|<tuple|1.16|4>>
+    <associate|auto-31|<tuple|1.16.1|4>>
+    <associate|auto-32|<tuple|1.16.2|4>>
+    <associate|auto-33|<tuple|1.16.3|4>>
+    <associate|auto-34|<tuple|1.17|5>>
+    <associate|auto-35|<tuple|8|5>>
+    <associate|auto-36|<tuple|1.18|5>>
+    <associate|auto-37|<tuple|1.19|6>>
+    <associate|auto-38|<tuple|1.20|6>>
+    <associate|auto-39|<tuple|1.20.1|6>>
     <associate|auto-4|<tuple|1.1.2|1>>
-    <associate|auto-40|<tuple|2.1|6>>
-    <associate|auto-41|<tuple|2.2|6>>
-    <associate|auto-42|<tuple|2.3|7>>
-    <associate|auto-43|<tuple|2.3.1|7>>
-    <associate|auto-44|<tuple|2.3.2|7>>
-    <associate|auto-45|<tuple|2.4|7>>
-    <associate|auto-46|<tuple|2.4.1|7>>
-    <associate|auto-47|<tuple|2.4.2|7>>
-    <associate|auto-48|<tuple|2.4.3|7>>
-    <associate|auto-49|<tuple|2.4.4|7>>
+    <associate|auto-40|<tuple|2|6>>
+    <associate|auto-41|<tuple|2.1|6>>
+    <associate|auto-42|<tuple|2.2|7>>
+    <associate|auto-43|<tuple|2.3|7>>
+    <associate|auto-44|<tuple|2.3.1|7>>
+    <associate|auto-45|<tuple|2.3.2|7>>
+    <associate|auto-46|<tuple|2.4|7>>
+    <associate|auto-47|<tuple|2.4.1|7>>
+    <associate|auto-48|<tuple|2.4.2|7>>
+    <associate|auto-49|<tuple|2.4.3|7>>
     <associate|auto-5|<tuple|1.1.3|1>>
-    <associate|auto-50|<tuple|2.5|8>>
-    <associate|auto-51|<tuple|2.5.1|8>>
-    <associate|auto-52|<tuple|2.5.2|8>>
-    <associate|auto-53|<tuple|2.5.3|8>>
-    <associate|auto-54|<tuple|2.6|8>>
-    <associate|auto-55|<tuple|2.6.1|8>>
-    <associate|auto-56|<tuple|8|8>>
+    <associate|auto-50|<tuple|2.4.4|8>>
+    <associate|auto-51|<tuple|2.5|8>>
+    <associate|auto-52|<tuple|2.5.1|8>>
+    <associate|auto-53|<tuple|2.5.2|8>>
+    <associate|auto-54|<tuple|2.5.3|8>>
+    <associate|auto-55|<tuple|2.6|8>>
+    <associate|auto-56|<tuple|2.6.1|8>>
     <associate|auto-57|<tuple|9|8>>
     <associate|auto-58|<tuple|10|8>>
-    <associate|auto-59|<tuple|2.7|8>>
+    <associate|auto-59|<tuple|11|8>>
     <associate|auto-6|<tuple|1.2|1>>
-    <associate|auto-60|<tuple|2.8|8>>
-    <associate|auto-61|<tuple|2.8.1|8>>
-    <associate|auto-62|<tuple|2.8.2|8>>
-    <associate|auto-63|<tuple|2.8.3|9>>
+    <associate|auto-60|<tuple|2.7|8>>
+    <associate|auto-61|<tuple|2.8|8>>
+    <associate|auto-62|<tuple|2.8.1|8>>
+    <associate|auto-63|<tuple|2.8.2|9>>
     <associate|auto-64|<tuple|2.8.3|?>>
-    <associate|auto-65|<tuple|2.8.2|?>>
+    <associate|auto-65|<tuple|2.8.3|?>>
     <associate|auto-66|<tuple|2.8.3|?>>
     <associate|auto-7|<tuple|1.3|1>>
     <associate|auto-8|<tuple|1.4|1>>
@@ -894,214 +946,217 @@
       Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9><vspace|0.15fn>
 
+      Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10><vspace|0.15fn>
+
       <with|par-left|<quote|1tab>|1.5<space|2spc>Integrale curvilineo
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
+      <no-break><pageref|auto-11>>
 
       <with|par-left|<quote|1tab>|1.6<space|2spc>Integrale di campo
       (integrale di linea) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
+      <no-break><pageref|auto-12>>
 
       <with|par-left|<quote|1tab>|1.7<space|2spc>Area della porzione di
       grafico (o superficie di <with|mode|<quote|math>|f<around*|(|x,y|)>>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12>>
+      <no-break><pageref|auto-13>>
 
       <with|par-left|<quote|1tab>|1.8<space|2spc>Volume
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
+      <no-break><pageref|auto-14>>
 
       Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14><vspace|0.15fn>
+      <no-break><pageref|auto-15><vspace|0.15fn>
 
       <with|par-left|<quote|1tab>|1.9<space|2spc>Integrale su un insieme
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
+      <no-break><pageref|auto-16>>
 
       <with|par-left|<quote|2tab>|1.9.1<space|2spc>In 2 variabili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-17>>
 
       <with|par-left|<quote|2tab>|1.9.2<space|2spc>In 3 variabili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
+      <no-break><pageref|auto-18>>
 
       Integrazione per strati <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18><vspace|0.15fn>
+      <no-break><pageref|auto-19><vspace|0.15fn>
 
       Integrazione per fili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19><vspace|0.15fn>
+      <no-break><pageref|auto-20><vspace|0.15fn>
 
       <with|par-left|<quote|2tab>|1.9.3<space|2spc>Cambio di variabile
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <no-break><pageref|auto-21>>
 
       <with|par-left|<quote|1tab>|1.10<space|2spc>Determinare la
       differenziabilità <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
+      <no-break><pageref|auto-22>>
 
       <with|par-left|<quote|1tab>|1.11<space|2spc>Inversione locale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-23>>
 
       Esempio 1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23><vspace|0.15fn>
+      <no-break><pageref|auto-24><vspace|0.15fn>
 
       Esempio 2 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24><vspace|0.15fn>
+      <no-break><pageref|auto-25><vspace|0.15fn>
 
       <with|par-left|<quote|1tab>|1.12<space|2spc>Teorema del Dini
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
+      <no-break><pageref|auto-26>>
 
       <with|par-left|<quote|1tab>|1.13<space|2spc>Direzione di massima
       pendenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
+      <no-break><pageref|auto-27>>
 
       <with|par-left|<quote|1tab>|1.14<space|2spc>Piano tangente a superficie
       cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|1tab>|1.15<space|2spc>Piano tangente al sostegno
       di una superficie parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|1tab>|1.16<space|2spc>Polinomio di Taylor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
+      <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|2tab>|1.16.1<space|2spc>Formula di ordine 1
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
+      <no-break><pageref|auto-31>>
 
       <with|par-left|<quote|2tab>|1.16.2<space|2spc>Formula di ordine 2
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-32>>
 
       <with|par-left|<quote|2tab>|1.16.3<space|2spc>Formula di ordine 3
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-33>>
 
       <with|par-left|<quote|1tab>|1.17<space|2spc>Calcolare il potenziale di
       una forma differenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
+      <no-break><pageref|auto-34>>
 
       Metodo manuale per il cacolo della primitiva
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34><vspace|0.15fn>
+      <no-break><pageref|auto-35><vspace|0.15fn>
 
       <with|par-left|<quote|1tab>|1.18<space|2spc>Vettore normale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|1.19<space|2spc>Massimi e minimi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|1.20<space|2spc>Limiti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-38>>
 
       <with|par-left|<quote|2tab>|1.20.1<space|2spc>Restrinzione su retta
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-39>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Appunti
       utili> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39><vspace|0.5fn>
+      <no-break><pageref|auto-40><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|2.1<space|2spc>Funzioni iperboliche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>>
+      <no-break><pageref|auto-41>>
 
       <with|par-left|<quote|1tab>|2.2<space|2spc>Prodotto vettore (o prodotto
       esterno) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|2.3<space|2spc>Derivate
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|2tab>|2.3.1<space|2spc>Derivate fondamentali
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-44>>
 
       <with|par-left|<quote|2tab>|2.3.2<space|2spc>Derivate di funzioni
       composte <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
+      <no-break><pageref|auto-45>>
 
       <with|par-left|<quote|1tab>|2.4<space|2spc>Formule trigonometriche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>>
+      <no-break><pageref|auto-46>>
 
       <with|par-left|<quote|2tab>|2.4.1<space|2spc>Formule di addizione e
       sottrazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>>
+      <no-break><pageref|auto-47>>
 
       <with|par-left|<quote|2tab>|2.4.2<space|2spc>Formule di duplicazione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <no-break><pageref|auto-48>>
 
       <with|par-left|<quote|2tab>|2.4.3<space|2spc>Formule di bisezione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
+      <no-break><pageref|auto-49>>
 
       <with|par-left|<quote|2tab>|2.4.4<space|2spc>Formule parametriche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
+      <no-break><pageref|auto-50>>
 
       <with|par-left|<quote|1tab>|2.5<space|2spc>Cambi di coordinate
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>>
+      <no-break><pageref|auto-51>>
 
       <with|par-left|<quote|2tab>|2.5.1<space|2spc>Coordinate polari
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>>
+      <no-break><pageref|auto-52>>
 
       <with|par-left|<quote|2tab>|2.5.2<space|2spc>Coordinate sferiche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
+      <no-break><pageref|auto-53>>
 
       <with|par-left|<quote|2tab>|2.5.3<space|2spc>Coordinate cilindriche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-54>>
 
       <with|par-left|<quote|1tab>|2.6<space|2spc>Funzioni utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
+      <no-break><pageref|auto-55>>
 
       <with|par-left|<quote|2tab>|2.6.1<space|2spc>Circonferenza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>>
+      <no-break><pageref|auto-56>>
 
       Equazione cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56><vspace|0.15fn>
-
-      Equazione in coordinate polari <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-57><vspace|0.15fn>
 
-      Equazione parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Equazione in coordinate polari <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-58><vspace|0.15fn>
+
+      Equazione parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-59><vspace|0.15fn>
 
       <with|par-left|<quote|1tab>|2.7<space|2spc>Limiti notevoli
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>>
+      <no-break><pageref|auto-60>>
 
       <with|par-left|<quote|1tab>|2.8<space|2spc>Integrali
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
+      <no-break><pageref|auto-61>>
 
       <with|par-left|<quote|2tab>|2.8.1<space|2spc>Integrazione per parti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-61>>
+      <no-break><pageref|auto-62>>
 
       <with|par-left|<quote|2tab>|2.8.2<space|2spc>Integrali utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62>>
+      <no-break><pageref|auto-63>>
 
       <with|par-left|<quote|2tab>|2.8.3<space|2spc>Sostituzioni utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-64>>
     </associate>
   </collection>
 </auxiliary>
