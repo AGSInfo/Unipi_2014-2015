@@ -193,11 +193,11 @@
     entrambe siano <math|\<less\>\<infty\>>
 
     <\equation*>
-      lim<rsub|<around*|(|h,0|)>\<rightarrow\>0><frac|f<around*|(|x,y|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|h>
+      lim<rsub|h\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|h>
     </equation*>
 
     <\equation*>
-      lim<rsub|<around*|(|0,k|)>\<rightarrow\>0><frac|f<around*|(|x,y|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|k>
+      lim<rsub|k\<rightarrow\>0><frac|f<around*|(|x<rsub|0>,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|k>
     </equation*>
 
     <with|font-series|bold|Teorema del differenziale totale:> se <math|A> ha
@@ -643,10 +643,24 @@
 
   <subsection|Cambi di coordinate>
 
+  <subsubsection|Coordinate polari>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x=\<rho\>*cos<around*|(|\<theta\>|)>>>|<row|<cell|y=\<rho\>*sin<around*|(|\<theta\>|)>>>>>>
+  </equation*>
+
+  <\equation*>
+    <around*|\||J|\|>=\<rho\>
+  </equation*>
+
   <subsubsection|Coordinate sferiche>
 
   <\equation*>
     <choice|<tformat|<table|<row|<cell|x=\<rho\>*sin<around*|(|\<theta\>|)>*cos<around*|(|\<varphi\>|)>>>|<row|<cell|y=\<rho\>*sin<around*|(|\<theta\>|)>*sin<around*|(|\<varphi\>|)>>>|<row|<cell|z=\<rho\>*cos<around*|(|\<theta\>|)>>>>>>
+  </equation*>
+
+  <\equation*>
+    <around*|\||J|\|>=\<rho\><rsup|2>*sin<around*|(|\<theta\>|)>
   </equation*>
 
   <subsubsection|Coordinate cilindriche>
@@ -655,10 +669,8 @@
     <choice|<tformat|<table|<row|<cell|x=r*cos\<theta\>>>|<row|<cell|y=r*sin\<theta\>>>|<row|<cell|z=h>>>>>
   </equation*>
 
-  <subparagraph|Matrice Jacobiana per il cambio di coordinate>
-
   <\equation*>
-    det<matrix|<tformat|<table|<row|<cell|cos<around*|(|\<theta\>|)>>|<cell|-\<rho\>*sin<around*|(|\<theta\>|)>>|<cell|0>>|<row|<cell|sin<around*|(|\<theta\>|)>>|<cell|\<rho\>*cos<around*|(|\<theta\>|)>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|1>>>>>=\<rho\>
+    <around*|\||J|\|>=\<rho\>
   </equation*>
 
   <subsection|Funzioni utili>
@@ -685,7 +697,53 @@
 
   <subsection|Limiti notevoli>
 
-  (inserire)
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|ln<around*|(|1+f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|log<rsub|a><around*|(|1+f<around*|(|x|)>|)>|f<around*|(|x|)>>=<frac|1|ln<around*|(|a|)>>
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|e<rsup|f<around*|(|x|)>>-1|f<around*|(|x|)>>=0
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|a<rsup|f<around*|(|x|)>-1>|f<around*|(|x|)>>=0
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>\<pm\>\<infty\>><around*|(|1+<frac|1|f<around*|(|x|)>>|)><rsup|f<around*|(|x|)>>=e
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|<around*|(|1+f<around*|(|x|)>|)><rsup|c>-1|f<around*|(|x|)>>=c
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|tan<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|arcsin<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|arctan<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|sinh<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|cosh<around*|(|f<around*|(|x|)>|)>-1|f<around*|(|x|)><rsup|2>>=0
+  </equation*>
+
+  <\equation*>
+    lim<rsub|f<around*|(|x|)>\<rightarrow\>0><frac|tanh<around*|(|f<around*|(|x|)>|)>|f<around*|(|x|)>>=1
+  </equation*>
 
   <subsection|Integrali>
 
@@ -793,19 +851,19 @@
     <associate|auto-50|<tuple|2.5|8>>
     <associate|auto-51|<tuple|2.5.1|8>>
     <associate|auto-52|<tuple|2.5.2|8>>
-    <associate|auto-53|<tuple|8|8>>
+    <associate|auto-53|<tuple|2.5.3|8>>
     <associate|auto-54|<tuple|2.6|8>>
     <associate|auto-55|<tuple|2.6.1|8>>
-    <associate|auto-56|<tuple|9|8>>
-    <associate|auto-57|<tuple|10|8>>
-    <associate|auto-58|<tuple|11|8>>
+    <associate|auto-56|<tuple|8|8>>
+    <associate|auto-57|<tuple|9|8>>
+    <associate|auto-58|<tuple|10|8>>
     <associate|auto-59|<tuple|2.7|8>>
     <associate|auto-6|<tuple|1.2|1>>
     <associate|auto-60|<tuple|2.8|8>>
     <associate|auto-61|<tuple|2.8.1|8>>
     <associate|auto-62|<tuple|2.8.2|8>>
     <associate|auto-63|<tuple|2.8.3|9>>
-    <associate|auto-64|<tuple|2.8.1|?>>
+    <associate|auto-64|<tuple|2.8.3|?>>
     <associate|auto-65|<tuple|2.8.2|?>>
     <associate|auto-66|<tuple|2.8.3|?>>
     <associate|auto-7|<tuple|1.3|1>>
@@ -1012,17 +1070,17 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-50>>
 
-      <with|par-left|<quote|2tab>|2.5.1<space|2spc>Coordinate sferiche
+      <with|par-left|<quote|2tab>|2.5.1<space|2spc>Coordinate polari
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-51>>
 
-      <with|par-left|<quote|2tab>|2.5.2<space|2spc>Coordinate cilindriche
+      <with|par-left|<quote|2tab>|2.5.2<space|2spc>Coordinate sferiche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>>
 
-      Matrice Jacobiana per il cambio di coordinate
+      <with|par-left|<quote|2tab>|2.5.3<space|2spc>Coordinate cilindriche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53><vspace|0.15fn>
+      <no-break><pageref|auto-53>>
 
       <with|par-left|<quote|1tab>|2.6<space|2spc>Funzioni utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>

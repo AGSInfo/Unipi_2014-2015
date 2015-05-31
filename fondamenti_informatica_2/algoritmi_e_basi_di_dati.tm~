@@ -471,7 +471,7 @@
 
   <subsection|Merge sort>
 
-  (necessita di revisione)
+  (necessita di revisione, probabilmente è sbagliato)
 
   <\cpp-code>
     void mergeSort(int * arr, int start, int end) {
@@ -939,8 +939,6 @@
 
     <item>La visita simmetrica elenca le etichette in ordine crescente
   </itemize>
-
-  \;
 
   <subsection|Alcuni algoritmi>
 
@@ -1532,6 +1530,73 @@
     <with|font-series|bold|dist> per i suoi immediati successori
   </enumerate>
 
+  <section|Templates>
+
+  <subsection|Esempi di definizione>
+
+  <\cpp-code>
+    template \<less\>class T1\<gtr\>
+
+    T1 somma(T1 a, T2 b) {
+
+    \ \ return a + b;
+
+    }
+  </cpp-code>
+
+  <subsection|Parametri costanti>
+
+  <subsection|Variabili statiche>
+
+  Ogni ``tipo di funzione'' possiede la propria variabile statica
+  indipendente
+
+  <\cpp-code>
+    template\<less\>class Data\<gtr\>
+
+    void typeCounter(Data a) {
+
+    \ \ \ \ \ \ \ \ static int c;
+
+    \ \ \ \ \ \ \ \ c++;
+
+    \ \ \ \ \ \ \ \ cout \<less\>\<less\> "Il counter vale " \<less\>\<less\>
+    c \<less\>\<less\> endl;
+
+    }
+  </cpp-code>
+
+  <section|Derivazione>
+
+  <subsection|Specificatori d'accesso>
+
+  <\itemize>
+    <item>I campi <with|font-series|bold|privati> di una classe non sono
+    accessibili dalle sottoclassi nè dall'esterno
+
+    <item>I campi <with|font-series|bold|protetti> di una classe sono
+    accessibilit dalle sottoclassi, ma non dall'esterno
+
+    <item>I campi <with|font-series|bold|pubblici> di una classe sono
+    accessibili anche dall'esterno
+  </itemize>
+
+  <\itemize>
+    <item>I campi privati, protetti e pubblici rimangono tali in tutta la
+    gerarchia
+  </itemize>
+
+  <subsection|Costruzione degli oggetti>
+
+  Quando un oggetto viene costruito si costruisce prima la parte
+  <with|font-series|bold|BASE> ed in seguito quella
+  <with|font-series|bold|DERIVATA>.
+
+  Viene quindi prima chiamato il costruttore della classe base e poi quello
+  della classe derivata.
+
+  Se la clas
+
   <chapter|Basi di dati>
 
   <section|Normalizzazione>
@@ -1938,22 +2003,29 @@
     <associate|auto-64|<tuple|10.2.2|?>>
     <associate|auto-65|<tuple|10.3|?>>
     <associate|auto-66|<tuple|10.3.1|?>>
-    <associate|auto-67|<tuple|2|?>>
-    <associate|auto-68|<tuple|1|?>>
-    <associate|auto-69|<tuple|1.1|?>>
+    <associate|auto-67|<tuple|11|?>>
+    <associate|auto-68|<tuple|11.1|?>>
+    <associate|auto-69|<tuple|11.2|?>>
     <associate|auto-7|<tuple|2.3.1|1>>
-    <associate|auto-70|<tuple|1.2|?>>
-    <associate|auto-71|<tuple|1.3|?>>
-    <associate|auto-72|<tuple|1.4|?>>
-    <associate|auto-73|<tuple|2|?>>
-    <associate|auto-74|<tuple|2.1|?>>
-    <associate|auto-75|<tuple|2.1.1|?>>
-    <associate|auto-76|<tuple|3|?>>
-    <associate|auto-77|<tuple|3.1|?>>
-    <associate|auto-78|<tuple|3.2|?>>
-    <associate|auto-79|<tuple|3.3|?>>
+    <associate|auto-70|<tuple|11.3|?>>
+    <associate|auto-71|<tuple|12|?>>
+    <associate|auto-72|<tuple|12.1|?>>
+    <associate|auto-73|<tuple|12.2|?>>
+    <associate|auto-74|<tuple|2|?>>
+    <associate|auto-75|<tuple|1|?>>
+    <associate|auto-76|<tuple|1.1|?>>
+    <associate|auto-77|<tuple|1.2|?>>
+    <associate|auto-78|<tuple|1.3|?>>
+    <associate|auto-79|<tuple|1.4|?>>
     <associate|auto-8|<tuple|2.3.2|1>>
-    <associate|auto-80|<tuple|3.3.1|?>>
+    <associate|auto-80|<tuple|2|?>>
+    <associate|auto-81|<tuple|2.1|?>>
+    <associate|auto-82|<tuple|2.1.1|?>>
+    <associate|auto-83|<tuple|3|?>>
+    <associate|auto-84|<tuple|3.1|?>>
+    <associate|auto-85|<tuple|3.2|?>>
+    <associate|auto-86|<tuple|3.3|?>>
+    <associate|auto-87|<tuple|3.3.1|?>>
     <associate|auto-9|<tuple|2.3.3|1>>
   </collection>
 </references>
@@ -2226,62 +2298,82 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-66>>
 
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|2<space|2spc>Basi
-      di dati> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67><vspace|1fn>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Normalizzazione>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Templates>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68><vspace|0.5fn>
+      <no-break><pageref|auto-67><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>Prima forma normale
+      <with|par-left|<quote|1tab>|11.1<space|2spc>Esempi di definizione
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-68>>
+
+      <with|par-left|<quote|1tab>|11.2<space|2spc>Parametri costanti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-69>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Seconda forma normale
+      <with|par-left|<quote|1tab>|11.3<space|2spc>Variabili statiche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-70>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Terza forma normale
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Derivazione>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71>>
+      <no-break><pageref|auto-71><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Forma norale di Boyce e Codd
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72>>
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|2<space|2spc>Basi
+      di dati> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-72><vspace|1fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Definizioni>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Normalizzazione>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-73><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Database NOSQL
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Prima forma normale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-74>>
 
-      <with|par-left|<quote|2tab>|2.1.1<space|2spc>Vantaggi e svantaggi
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Seconda forma normale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-75>>
 
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Terza forma normale
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-76>>
+
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Forma norale di Boyce e Codd
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-77>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Definizioni>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-78><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Database NOSQL
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-79>>
+
+      <with|par-left|<quote|2tab>|2.1.1<space|2spc>Vantaggi e svantaggi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-80>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Schedule>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-76><vspace|0.5fn>
+      <no-break><pageref|auto-81><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>VSR
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-77>>
+      <no-break><pageref|auto-82>>
 
       <with|par-left|<quote|1tab>|3.2<space|2spc>CSR
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>>
+      <no-break><pageref|auto-83>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Locking a due fasi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-79>>
+      <no-break><pageref|auto-84>>
 
       <with|par-left|<quote|2tab>|3.3.1<space|2spc>Come determinare se uno
       schedule è generato da uno scheduer basato su 2PL
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-80>>
+      <no-break><pageref|auto-85>>
     </associate>
   </collection>
 </auxiliary>
