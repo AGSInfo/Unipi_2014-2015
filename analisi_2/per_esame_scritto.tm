@@ -53,7 +53,18 @@
   che in una sola variabile si riduce a
 
   <\equation*>
-    <big|int><rsub|a><rsup|b><sqrt|1+<wide|f<around*|(|t|)>|\<dot\>>>*dt
+    <big|int><rsub|a><rsup|b><sqrt|1+<wide|f<around*|(|t|)>|\<dot\>><rsup|2>>*dt
+  </equation*>
+
+  <with|font-series|bold|Lunghezza di una curva in forma polare>
+
+  La formula è da verificare
+
+  Data una curva polare <math|\<rho\><around*|(|\<theta\>|)>> e
+  <math|\<theta\>\<in\><around*|[|a,b|]>>, si ha
+
+  <\equation*>
+    \<wedge\>\<rho\><around*|(|\<theta\>|)>=<big|int><rsub|a><rsup|b><sqrt|<around*|(|\<rho\><rprime|'><around*|(|\<theta\>|)>|)><rsup|2>+<around*|(|\<rho\><around*|(|\<theta\>|)>|)><rsup|2>>dx
   </equation*>
 
   <subsection|Integrale superficiale>
@@ -131,7 +142,7 @@
   <math|f<around*|(|x,y|)>>)>
 
   <\equation*>
-    A=<big|int><rsub|a><rsup|b><big|int><rsub|c<rsup|>><rsup|d><around*|\||f<rsub|x>\<wedge\>f<rsub|y>|\|>*dy*dx???
+    A=<big|int><rsub|a><rsup|b><big|int><rsub|c<rsup|>><rsup|d><around*|\||f<rsub|x>\<wedge\>f<rsub|y>|\|>*dy*dx
   </equation*>
 
   <\equation*>
