@@ -149,6 +149,14 @@
     A=<big|int><rsub|a><rsup|b><around*|(|<big|int><rsub|c><rsup|d><sqrt|1+<around*|(|f<rsub|x>|)><rsup|2>+<around*|(|f<rsub|y>|)><rsup|2>>*dy|)>*dx
   </equation*>
 
+  <with|font-series|bold|Per curve date in coordinate polari>
+
+  <\equation*>
+    A=<frac|1|2><big|int><rsub|a><rsup|b>r<rsup|2>*d\<theta\>
+  </equation*>
+
+  \;
+
   <subsection|Volume>
 
   <\equation*>
@@ -700,6 +708,12 @@
     <around*|\||J|\|>=\<rho\>
   </equation*>
 
+  <subparagraph|Coordinate polari centrate in <math|P<rsub|0>>>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x=x<rsub|0>+\<rho\>*cos<around*|(|\<theta\>|)>>>|<row|<cell|y=y<rsub|0>+\<rho\>*sin<around*|(|j|)>>>>>>
+  </equation*>
+
   <subsubsection|Coordinate sferiche>
 
   <\equation*>
@@ -713,7 +727,8 @@
   <subsubsection|Coordinate cilindriche>
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|x=r*cos\<theta\>>>|<row|<cell|y=r*sin\<theta\>>>|<row|<cell|z=h>>>>>
+    <choice|<tformat|<table|<row|<cell|x=\<rho\>
+    cos\<theta\>>>|<row|<cell|y=\<rho\>*sin\<theta\>>>|<row|<cell|z=h>>>>>
   </equation*>
 
   <\equation*>
@@ -898,19 +913,19 @@
     <associate|auto-50|<tuple|2.4.4|8>>
     <associate|auto-51|<tuple|2.5|8>>
     <associate|auto-52|<tuple|2.5.1|8>>
-    <associate|auto-53|<tuple|2.5.2|8>>
-    <associate|auto-54|<tuple|2.5.3|8>>
-    <associate|auto-55|<tuple|2.6|9>>
-    <associate|auto-56|<tuple|2.6.1|9>>
-    <associate|auto-57|<tuple|9|9>>
+    <associate|auto-53|<tuple|9|8>>
+    <associate|auto-54|<tuple|2.5.2|8>>
+    <associate|auto-55|<tuple|2.5.3|9>>
+    <associate|auto-56|<tuple|2.6|9>>
+    <associate|auto-57|<tuple|2.6.1|9>>
     <associate|auto-58|<tuple|10|9>>
     <associate|auto-59|<tuple|11|9>>
     <associate|auto-6|<tuple|1.2|1>>
-    <associate|auto-60|<tuple|2.7|9>>
-    <associate|auto-61|<tuple|2.8|9>>
-    <associate|auto-62|<tuple|2.8.1|9>>
-    <associate|auto-63|<tuple|2.8.2|10>>
-    <associate|auto-64|<tuple|2.8.3|10>>
+    <associate|auto-60|<tuple|12|9>>
+    <associate|auto-61|<tuple|2.7|9>>
+    <associate|auto-62|<tuple|2.8|9>>
+    <associate|auto-63|<tuple|2.8.1|10>>
+    <associate|auto-64|<tuple|2.8.2|10>>
     <associate|auto-65|<tuple|2.8.3|?>>
     <associate|auto-66|<tuple|2.8.3|?>>
     <associate|auto-7|<tuple|1.3|1>>
