@@ -1,11 +1,15 @@
 <TeXmacs|1.99.2>
 
-<style|<tuple|generic|italian>>
+<style|<tuple|exam|italian>>
 
 <\body>
   <doc-data|<doc-title|Algoritmi e Basi di
   dati>|<doc-author|<author-data|<author-name|>>>|<doc-author|<author-data|<author-name|Di
   Gianluca Mondini>>>>
+
+  <\table-of-contents|toc>
+    \;
+  </table-of-contents>
 
   <chapter|Algoritmi e strutture dati>
 
@@ -1592,6 +1596,31 @@
   attributo nella parte destra di ogni dipendenza è contenuto in una chiave
   di <with|font-shape|italic|r>.
 
+  <with|font-series|bold|Da domanda d'esame:> Lo studente fornisca la
+  definizione di Terza Forma Normale
+
+  Una tabella <math|r> è in Terza Forma Normale se per ogni dipendenza
+  funzionale non banale <math|X\<rightarrow\>Y> definita su di essa è
+  verificata almeno una delle seguenti condizioni:
+
+  <\itemize>
+    <item><math|X> è superchiave di <math|r>
+
+    <item>Ogni attributo in <math|Y> è contenuto in almeno una chiave di
+    <math|r>
+  </itemize>
+
+  <with|font-series|bold|Da domanda d'esame:> Dare un esempio di relazione
+  non BCNF ma 3NF
+
+  <\verbatim-code>
+    R(_<with|font-series|bold|A>_, _<with|font-series|bold|B>_, C, D)
+
+    AB -\<gtr\> CD
+
+    D -\<gtr\> A
+  </verbatim-code>
+
   <subsection|Forma normale di Boyce e Codd>
 
   <with|font-series|bold|Definizione:> Una relazione R è in forma normale di
@@ -1638,6 +1667,25 @@
 
   La chiusura di un insieme di attributi <math|X<rsup|+>> è costituito dagli
   attributi funzionalmente dipendenti da <math|X>
+
+  <with|font-series|bold|Da domanda esame:>
+
+  Dare un esempio di uso della chiusura di un insieme di attributi
+
+  Individuazione della chiave primaria
+
+  <subsubsection|Algoritmo per il calcolo della chiusura di un insieme di
+  attributi X>
+
+  <with|font-series|bold|Da domanda esame:>
+
+  Definire l'algoritmo per il calcolo della chiusura di un insieme di
+  attributi X
+
+  Si parte da un insieme uguale ad X, per ogni dipendenza
+  <math|A<rsub|>\<rightarrow\>B>, dove A appartiene ad X, B viene aggiunto ad
+  X, finché non ci sono altre dipendenze tali che B non è contenuto
+  nell'insieme costruito fino a questo punto.
 
   <subsection|ACID>
 
@@ -1716,7 +1764,8 @@
   Scalabilità orizzontale, sharding, high availability.
 
   Le applicazioni interessate a queste caratteristiche sono quelle che
-  richiedono tempi di risposta molto bassi sen
+  richiedono tempi di risposta molto bassi senza necessitare di controlli di
+  consistenza molto forti.
 
   <subsubsection|Differenze con un database SQL>
 
@@ -1731,6 +1780,19 @@
   Nei DBMS non relazionali non è possibile attuare controlli sull'integrità
   dei dati e quindi garantirne la consistenza, e non esiste uno standard
   condiviso per la memorizzazione e l'accesso ai dati.
+
+  <with|font-series|bold|Da domanda esame:>
+
+  Quali sono le caratteristiche di un database SQL che non vengono mantenute
+  in uno NoSQL?
+
+  Standardizzazione del modello e del query language
+
+  Portabilità
+
+  Controllo sull'integrità dei dati
+
+  Niente tabelle nella realizzazione fisica
 
   <subsubsection|Equivalente ACID per database NOSQL>
 
@@ -1873,113 +1935,120 @@
   \;
 </body>
 
-<initial|<\collection>
-</collection>>
+<\initial>
+  <\collection>
+    <associate|page-orientation|landscape>
+    <associate|par-columns|2>
+  </collection>
+</initial>
 
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|2.3.4|1>>
-    <associate|auto-100|<tuple|3.3|?>>
-    <associate|auto-101|<tuple|3.3.1|?>>
-    <associate|auto-102|<tuple|3.3.1|?>>
-    <associate|auto-11|<tuple|2.4|2>>
-    <associate|auto-12|<tuple|3|2>>
-    <associate|auto-13|<tuple|3.1|2>>
+    <associate|auto-100|<tuple|3.2|12>>
+    <associate|auto-101|<tuple|3.3|12>>
+    <associate|auto-102|<tuple|3.3.1|12>>
+    <associate|auto-103|<tuple|3.3.1|?>>
+    <associate|auto-104|<tuple|3.3|?>>
+    <associate|auto-105|<tuple|3.3.1|?>>
+    <associate|auto-11|<tuple|2.4|1>>
+    <associate|auto-12|<tuple|3|1>>
+    <associate|auto-13|<tuple|3.1|1>>
     <associate|auto-14|<tuple|3.2|2>>
-    <associate|auto-15|<tuple|1|?>>
-    <associate|auto-16|<tuple|2|?>>
-    <associate|auto-17|<tuple|3|?>>
-    <associate|auto-18|<tuple|4|?>>
-    <associate|auto-19|<tuple|4.1|?>>
+    <associate|auto-15|<tuple|1|2>>
+    <associate|auto-16|<tuple|2|2>>
+    <associate|auto-17|<tuple|3|2>>
+    <associate|auto-18|<tuple|4|2>>
+    <associate|auto-19|<tuple|4.1|2>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|4.2|?>>
-    <associate|auto-21|<tuple|5|?>>
-    <associate|auto-22|<tuple|5.1|?>>
-    <associate|auto-23|<tuple|5.2|?>>
-    <associate|auto-24|<tuple|5.2.1|?>>
-    <associate|auto-25|<tuple|5.2.2|?>>
-    <associate|auto-26|<tuple|5.2.3|?>>
-    <associate|auto-27|<tuple|5.2.4|?>>
-    <associate|auto-28|<tuple|5.2.5|?>>
-    <associate|auto-29|<tuple|5.2.6|?>>
+    <associate|auto-20|<tuple|4.2|3>>
+    <associate|auto-21|<tuple|5|3>>
+    <associate|auto-22|<tuple|5.1|3>>
+    <associate|auto-23|<tuple|5.2|3>>
+    <associate|auto-24|<tuple|5.2.1|3>>
+    <associate|auto-25|<tuple|5.2.2|3>>
+    <associate|auto-26|<tuple|5.2.3|3>>
+    <associate|auto-27|<tuple|5.2.4|3>>
+    <associate|auto-28|<tuple|5.2.5|3>>
+    <associate|auto-29|<tuple|5.2.6|4>>
     <associate|auto-3|<tuple|2|1>>
-    <associate|auto-30|<tuple|5.2.7|?>>
-    <associate|auto-31|<tuple|6|?>>
-    <associate|auto-32|<tuple|6.1|?>>
-    <associate|auto-33|<tuple|6.1.1|?>>
-    <associate|auto-34|<tuple|6.1.2|?>>
-    <associate|auto-35|<tuple|6.1.3|?>>
-    <associate|auto-36|<tuple|6.1.4|?>>
-    <associate|auto-37|<tuple|6.1.5|?>>
-    <associate|auto-38|<tuple|7|?>>
-    <associate|auto-39|<tuple|7.1|?>>
+    <associate|auto-30|<tuple|5.2.7|4>>
+    <associate|auto-31|<tuple|6|4>>
+    <associate|auto-32|<tuple|6.1|4>>
+    <associate|auto-33|<tuple|6.1.1|4>>
+    <associate|auto-34|<tuple|6.1.2|4>>
+    <associate|auto-35|<tuple|6.1.3|4>>
+    <associate|auto-36|<tuple|6.1.4|4>>
+    <associate|auto-37|<tuple|6.1.5|5>>
+    <associate|auto-38|<tuple|7|5>>
+    <associate|auto-39|<tuple|7.1|5>>
     <associate|auto-4|<tuple|2.1|1>>
-    <associate|auto-40|<tuple|7.2|?>>
-    <associate|auto-41|<tuple|7.2.1|?>>
-    <associate|auto-42|<tuple|7.2.2|?>>
-    <associate|auto-43|<tuple|7.2.3|?>>
-    <associate|auto-44|<tuple|7.2.4|?>>
-    <associate|auto-45|<tuple|8|?>>
-    <associate|auto-46|<tuple|8.1|?>>
-    <associate|auto-47|<tuple|8.2|?>>
-    <associate|auto-48|<tuple|8.2.1|?>>
-    <associate|auto-49|<tuple|8.2.2|?>>
+    <associate|auto-40|<tuple|7.2|5>>
+    <associate|auto-41|<tuple|7.2.1|5>>
+    <associate|auto-42|<tuple|7.2.2|5>>
+    <associate|auto-43|<tuple|7.2.3|5>>
+    <associate|auto-44|<tuple|7.2.4|5>>
+    <associate|auto-45|<tuple|8|6>>
+    <associate|auto-46|<tuple|8.1|6>>
+    <associate|auto-47|<tuple|8.2|6>>
+    <associate|auto-48|<tuple|8.2.1|6>>
+    <associate|auto-49|<tuple|8.2.2|6>>
     <associate|auto-5|<tuple|2.2|1>>
-    <associate|auto-50|<tuple|8.2.3|?>>
-    <associate|auto-51|<tuple|8.2.4|?>>
-    <associate|auto-52|<tuple|9|?>>
-    <associate|auto-53|<tuple|9.1|?>>
-    <associate|auto-54|<tuple|9.1.1|?>>
-    <associate|auto-55|<tuple|9.2|?>>
-    <associate|auto-56|<tuple|9.2.1|?>>
-    <associate|auto-57|<tuple|9.2.1.1|?>>
-    <associate|auto-58|<tuple|9.2.1.1.1|?>>
-    <associate|auto-59|<tuple|9.2.1.2|?>>
+    <associate|auto-50|<tuple|8.2.3|6>>
+    <associate|auto-51|<tuple|8.2.4|7>>
+    <associate|auto-52|<tuple|9|7>>
+    <associate|auto-53|<tuple|9.1|7>>
+    <associate|auto-54|<tuple|9.1.1|7>>
+    <associate|auto-55|<tuple|9.2|7>>
+    <associate|auto-56|<tuple|9.2.1|7>>
+    <associate|auto-57|<tuple|9.2.1.1|7>>
+    <associate|auto-58|<tuple|9.2.1.1.1|7>>
+    <associate|auto-59|<tuple|9.2.1.2|7>>
     <associate|auto-6|<tuple|2.3|1>>
-    <associate|auto-60|<tuple|9.2.1.3|?>>
-    <associate|auto-61|<tuple|10|?>>
-    <associate|auto-62|<tuple|10.1|?>>
-    <associate|auto-63|<tuple|10.1.1|?>>
-    <associate|auto-64|<tuple|10.1.2|?>>
-    <associate|auto-65|<tuple|10.2|?>>
-    <associate|auto-66|<tuple|10.2.1|?>>
-    <associate|auto-67|<tuple|10.2.2|?>>
-    <associate|auto-68|<tuple|10.3|?>>
-    <associate|auto-69|<tuple|10.3.1|?>>
+    <associate|auto-60|<tuple|9.2.1.3|7>>
+    <associate|auto-61|<tuple|10|8>>
+    <associate|auto-62|<tuple|10.1|8>>
+    <associate|auto-63|<tuple|10.1.1|8>>
+    <associate|auto-64|<tuple|10.1.2|8>>
+    <associate|auto-65|<tuple|10.2|8>>
+    <associate|auto-66|<tuple|10.2.1|8>>
+    <associate|auto-67|<tuple|10.2.2|8>>
+    <associate|auto-68|<tuple|10.3|8>>
+    <associate|auto-69|<tuple|10.3.1|8>>
     <associate|auto-7|<tuple|2.3.1|1>>
-    <associate|auto-70|<tuple|11|?>>
-    <associate|auto-71|<tuple|11.1|?>>
-    <associate|auto-72|<tuple|11.2|?>>
-    <associate|auto-73|<tuple|11.3|?>>
-    <associate|auto-74|<tuple|12|?>>
-    <associate|auto-75|<tuple|12.1|?>>
-    <associate|auto-76|<tuple|12.2|?>>
-    <associate|auto-77|<tuple|12.3|?>>
-    <associate|auto-78|<tuple|2|?>>
-    <associate|auto-79|<tuple|1|?>>
+    <associate|auto-70|<tuple|11|8>>
+    <associate|auto-71|<tuple|11.1|8>>
+    <associate|auto-72|<tuple|11.2|8>>
+    <associate|auto-73|<tuple|11.3|8>>
+    <associate|auto-74|<tuple|12|8>>
+    <associate|auto-75|<tuple|12.1|8>>
+    <associate|auto-76|<tuple|12.2|9>>
+    <associate|auto-77|<tuple|12.3|9>>
+    <associate|auto-78|<tuple|2|9>>
+    <associate|auto-79|<tuple|1|9>>
     <associate|auto-8|<tuple|2.3.2|1>>
-    <associate|auto-80|<tuple|1.1|?>>
-    <associate|auto-81|<tuple|1.2|?>>
-    <associate|auto-82|<tuple|1.3|?>>
-    <associate|auto-83|<tuple|1.3.0.0.1|?>>
-    <associate|auto-84|<tuple|1.4|?>>
-    <associate|auto-85|<tuple|2|?>>
-    <associate|auto-86|<tuple|2.1|?>>
-    <associate|auto-87|<tuple|2.1.1|?>>
-    <associate|auto-88|<tuple|2.1.1.0.2|?>>
-    <associate|auto-89|<tuple|2.1.2|?>>
+    <associate|auto-80|<tuple|1.1|9>>
+    <associate|auto-81|<tuple|1.2|9>>
+    <associate|auto-82|<tuple|1.3|10>>
+    <associate|auto-83|<tuple|1.3.0.0.1|10>>
+    <associate|auto-84|<tuple|1.4|10>>
+    <associate|auto-85|<tuple|2|10>>
+    <associate|auto-86|<tuple|2.1|10>>
+    <associate|auto-87|<tuple|2.1.1|10>>
+    <associate|auto-88|<tuple|2.1.1.0.2|10>>
+    <associate|auto-89|<tuple|2.1.2|10>>
     <associate|auto-9|<tuple|2.3.3|1>>
-    <associate|auto-90|<tuple|2.2|?>>
-    <associate|auto-91|<tuple|2.3|?>>
-    <associate|auto-92|<tuple|2.3.1|?>>
-    <associate|auto-93|<tuple|2.3.2|?>>
-    <associate|auto-94|<tuple|2.3.2.0.3|?>>
-    <associate|auto-95|<tuple|2.3.3|?>>
-    <associate|auto-96|<tuple|2.3.3.0.4|?>>
-    <associate|auto-97|<tuple|3|?>>
-    <associate|auto-98|<tuple|3.1|?>>
-    <associate|auto-99|<tuple|3.2|?>>
+    <associate|auto-90|<tuple|2.1.3|10>>
+    <associate|auto-91|<tuple|2.2|10>>
+    <associate|auto-92|<tuple|2.3|11>>
+    <associate|auto-93|<tuple|2.3.1|11>>
+    <associate|auto-94|<tuple|2.3.2|11>>
+    <associate|auto-95|<tuple|2.3.2.0.3|11>>
+    <associate|auto-96|<tuple|2.3.3|12>>
+    <associate|auto-97|<tuple|2.3.3.0.4|12>>
+    <associate|auto-98|<tuple|3|12>>
+    <associate|auto-99|<tuple|3.1|12>>
   </collection>
 </references>
 
@@ -2331,45 +2400,64 @@
       insieme di dipendenze <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-87>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>ACID
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>>
+      Dalla soluzione dell'esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-88><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|2.3<space|2spc>Database NOSQL
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|2.1.2<space|2spc>Chiusura di un insieme di
+      attributi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-89>>
 
-      <with|par-left|<quote|2tab>|2.3.1<space|2spc>Vantaggi e svantaggi
+      <with|par-left|<quote|2tab>|2.1.3<space|2spc>Algoritmo per il calcolo
+      della chiusura di un insieme di attributi X
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-90>>
 
-      <with|par-left|<quote|2tab>|2.3.2<space|2spc>Differenze con un database
-      SQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.2<space|2spc>ACID
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-91>>
 
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Database NOSQL
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-92>>
+
+      <with|par-left|<quote|2tab>|2.3.1<space|2spc>Vantaggi e svantaggi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-93>>
+
+      <with|par-left|<quote|2tab>|2.3.2<space|2spc>Differenze con un database
+      SQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-94>>
+
       Da soluzione esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92><vspace|0.15fn>
+      <no-break><pageref|auto-95><vspace|0.15fn>
+
+      <with|par-left|<quote|2tab>|2.3.3<space|2spc>Equivalente ACID per
+      database NOSQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-96>>
+
+      Da una domanda di un compito: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-97><vspace|0.15fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Schedule>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93><vspace|0.5fn>
+      <no-break><pageref|auto-98><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>VSR
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-94>>
+      <no-break><pageref|auto-99>>
 
       <with|par-left|<quote|1tab>|3.2<space|2spc>CSR
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-95>>
+      <no-break><pageref|auto-100>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Locking a due fasi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-96>>
+      <no-break><pageref|auto-101>>
 
       <with|par-left|<quote|2tab>|3.3.1<space|2spc>Come determinare se uno
       schedule è generato da uno scheduer basato su 2PL
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>>
+      <no-break><pageref|auto-102>>
     </associate>
   </collection>
 </auxiliary>

@@ -1,11 +1,416 @@
 <TeXmacs|1.99.2>
 
-<style|<tuple|generic|italian>>
+<style|<tuple|exam|italian>>
 
 <\body>
   <doc-data|<doc-title|Algoritmi e Basi di
   dati>|<doc-author|<author-data|<author-name|>>>|<doc-author|<author-data|<author-name|Di
   Gianluca Mondini>>>>
+
+  <\table-of-contents|toc>
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|1<space|2spc>Algoritmi
+    e strutture dati> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-1><vspace|1fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Algoritmo
+    ricorsivo> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Complessità
+    di un algoritmo> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3><vspace|0.5fn>
+
+    <with|par-left|1tab|2.1<space|2spc>Definizione
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4>>
+
+    <with|par-left|1tab|2.2<space|2spc>Ordine
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-5>>
+
+    <with|par-left|1tab|2.3<space|2spc>Regole
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-6>>
+
+    <with|par-left|2tab|2.3.1<space|2spc>Regola dei fattori costanti
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-7>>
+
+    <with|par-left|2tab|2.3.2<space|2spc>Regola della somma
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-8>>
+
+    <with|par-left|2tab|2.3.3<space|2spc>Regola del prodotto
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-9>>
+
+    <with|par-left|2tab|2.3.4<space|2spc>Altre regole
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-10>>
+
+    <with|par-left|1tab|2.4<space|2spc>Teorema
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-11>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Complessità
+    di un algoritmo ricorsivo> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-12><vspace|0.5fn>
+
+    <with|par-left|1tab|3.1<space|2spc>Esempio: fattoriale di un numero
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-13>>
+
+    <with|par-left|1tab|3.2<space|2spc>Dalla relazione di ricorrenza alla
+    complessità <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-14>>
+
+    Esercizio: fibonacci() ricorsivo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-15><vspace|0.15fn>
+
+    Esempio: mergeSort() <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-16><vspace|0.15fn>
+
+    Esempio: split() <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-17><vspace|0.15fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Algoritmi
+    di ordinamento> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-18><vspace|0.5fn>
+
+    <with|par-left|1tab|4.1<space|2spc>Merge sort
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-19>>
+
+    <with|par-left|1tab|4.2<space|2spc>Insertion sort
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-20>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Alberi
+    binari> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-21><vspace|0.5fn>
+
+    <with|par-left|1tab|5.1<space|2spc>Numero di foglie e di nodi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-22>>
+
+    <with|par-left|1tab|5.2<space|2spc>Alcuni algoritmi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-23>>
+
+    <with|par-left|2tab|5.2.1<space|2spc>Contare il numero dei nodi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-24>>
+
+    <with|par-left|2tab|5.2.2<space|2spc>Contare il numero delle foglie
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-25>>
+
+    <with|par-left|2tab|5.2.3<space|2spc>Cercare un etichetta e resistuire un
+    puntatore <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-26>>
+
+    <with|par-left|2tab|5.2.4<space|2spc>Eliminare tutto l'abero
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-27>>
+
+    <with|par-left|2tab|5.2.5<space|2spc>Inserire un nodo
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-28>>
+
+    <with|par-left|2tab|5.2.6<space|2spc>Compito 2 - Esercizio 4
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-29>>
+
+    <with|par-left|2tab|5.2.7<space|2spc>Compito 1 - Esercizio 4
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-30>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Alberi
+    generici> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-31><vspace|0.5fn>
+
+    <with|par-left|1tab|6.1<space|2spc>Alcuni algoritmi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-32>>
+
+    <with|par-left|2tab|6.1.1<space|2spc>Contare il numero di nodi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-33>>
+
+    <with|par-left|2tab|6.1.2<space|2spc>Contare il numero di foglie
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-34>>
+
+    <with|par-left|2tab|6.1.3<space|2spc>Inserire un nodo in fondo ad una
+    lista di fratelli <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-35>>
+
+    <with|par-left|2tab|6.1.4<space|2spc>Inserire un nodo son come ultimo
+    figlio di father <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-36>>
+
+    <with|par-left|2tab|6.1.5<space|2spc>Compito 1 - Esercizio 5
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-37>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|7<space|2spc>Alberi
+    binari di ricerca> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-38><vspace|0.5fn>
+
+    <with|par-left|1tab|7.1<space|2spc>Proprietà
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-39>>
+
+    <with|par-left|1tab|7.2<space|2spc>Alcuni algoritmi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-40>>
+
+    <with|par-left|2tab|7.2.1<space|2spc>Cercare un nodo
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-41>>
+
+    <with|par-left|2tab|7.2.2<space|2spc>Inserire un nodo
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-42>>
+
+    <with|par-left|2tab|7.2.3<space|2spc>Restituire l'etichetta del nodo più
+    piccolo di un albero ed eliminare il nodo che la contiene
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-43>>
+
+    <with|par-left|2tab|7.2.4<space|2spc>Cancellare un nodo ?
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-44>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|8<space|2spc>Heap>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-45><vspace|0.5fn>
+
+    <with|par-left|1tab|8.1<space|2spc>Calcolare le parentele
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-46>>
+
+    <with|par-left|1tab|8.2<space|2spc>Classe Heap
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-47>>
+
+    <with|par-left|2tab|8.2.1<space|2spc>Costruttore
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-48>>
+
+    <with|par-left|2tab|8.2.2<space|2spc>Distruttore
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-49>>
+
+    <with|par-left|2tab|8.2.3<space|2spc>Inserimento
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-50>>
+
+    <with|par-left|2tab|8.2.4<space|2spc>Estrazione
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-51>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|9<space|2spc>Ricerca
+    hash> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-52><vspace|0.5fn>
+
+    <with|par-left|1tab|9.1<space|2spc>Alcuni algoritmi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-53>>
+
+    <with|par-left|2tab|9.1.1<space|2spc>Ricerca tramite hash
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-54>>
+
+    <with|par-left|1tab|9.2<space|2spc>Metodo hash ad accesso non diretto
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-55>>
+
+    <with|par-left|2tab|9.2.1<space|2spc>Soluzione: hash modulare
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-56>>
+
+    <with|par-left|4tab|Legge di scansione lineare
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-57><vspace|0.15fn>>
+
+    Agglomerato <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-58><vspace|0.15fn>
+
+    <with|par-left|4tab|Funzione di ricerca con scansione lineare
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-59><vspace|0.15fn>>
+
+    <with|par-left|4tab|Funzione di insierimento in presenza di cancellazioni
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-60><vspace|0.15fn>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|10<space|2spc>Grafi>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-61><vspace|0.5fn>
+
+    <with|par-left|1tab|10.1<space|2spc>Rappresentazioni in memoria di grafi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-62>>
+
+    <with|par-left|2tab|10.1.1<space|2spc>Tramite liste di adiacenza
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-63>>
+
+    <with|par-left|2tab|10.1.2<space|2spc>Tramite matrici di adiacenza
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-64>>
+
+    <with|par-left|1tab|10.2<space|2spc>Rappresentazioni in memoria di grafi
+    con nodi ed archi etichettati <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-65>>
+
+    <with|par-left|2tab|10.2.1<space|2spc>Tramite liste di adiacenza
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-66>>
+
+    <with|par-left|2tab|10.2.2<space|2spc>Tramite matrici di adiacenza
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-67>>
+
+    <with|par-left|1tab|10.3<space|2spc>Cammino più breve
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-68>>
+
+    <with|par-left|2tab|10.3.1<space|2spc>Algoritmo di Dijkstra
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-69>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|11<space|2spc>Templates>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-70><vspace|0.5fn>
+
+    <with|par-left|1tab|11.1<space|2spc>Esempi di definizione
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-71>>
+
+    <with|par-left|1tab|11.2<space|2spc>Parametri costanti
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-72>>
+
+    <with|par-left|1tab|11.3<space|2spc>Variabili statiche
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-73>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|12<space|2spc>Derivazione>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-74><vspace|0.5fn>
+
+    <with|par-left|1tab|12.1<space|2spc>Specificatori d'accesso
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-75>>
+
+    <with|par-left|1tab|12.2<space|2spc>Costruzione degli oggetti
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-76>>
+
+    <with|par-left|1tab|12.3<space|2spc>Funzioni virtuali
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-77>>
+
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|2<space|2spc>Basi
+    di dati> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-78><vspace|1fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Normalizzazione>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-79><vspace|0.5fn>
+
+    <with|par-left|1tab|1.1<space|2spc>Prima forma normale
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-80>>
+
+    <with|par-left|1tab|1.2<space|2spc>Seconda forma normale
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-81>>
+
+    <with|par-left|1tab|1.3<space|2spc>Terza forma normale
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-82>>
+
+    Dalla soluzione dell'esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-83><vspace|0.15fn>
+
+    <with|par-left|1tab|1.4<space|2spc>Forma normale di Boyce e Codd
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-84>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Definizioni>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-85><vspace|0.5fn>
+
+    <with|par-left|1tab|2.1<space|2spc>Miste
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-86>>
+
+    <with|par-left|2tab|2.1.1<space|2spc>Chiusura transitiva di un insieme di
+    dipendenze <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-87>>
+
+    Dalla soluzione dell'esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-88><vspace|0.15fn>
+
+    <with|par-left|2tab|2.1.2<space|2spc>Chiusura di un insieme di attributi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-89>>
+
+    <with|par-left|2tab|2.1.3<space|2spc>Algoritmo per il calcolo della
+    chiusura di un insieme di attributi X
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-90>>
+
+    <with|par-left|1tab|2.2<space|2spc>ACID
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-91>>
+
+    <with|par-left|1tab|2.3<space|2spc>Database NOSQL
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-92>>
+
+    <with|par-left|2tab|2.3.1<space|2spc>Vantaggi e svantaggi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-93>>
+
+    <with|par-left|2tab|2.3.2<space|2spc>Differenze con un database SQL
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-94>>
+
+    Da soluzione esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-95><vspace|0.15fn>
+
+    <with|par-left|2tab|2.3.3<space|2spc>Equivalente ACID per database NOSQL
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-96>>
+
+    Da una domanda di un compito: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-97><vspace|0.15fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Schedule>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-98><vspace|0.5fn>
+
+    <with|par-left|1tab|3.1<space|2spc>VSR
+    \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-99>>
+
+    <with|par-left|1tab|3.2<space|2spc>CSR
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-100>>
+
+    <with|par-left|1tab|3.3<space|2spc>Locking a due fasi
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-101>>
+
+    <with|par-left|2tab|3.3.1<space|2spc>Come determinare se uno schedule è
+    generato da uno scheduer basato su 2PL
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-102>>
+  </table-of-contents>
 
   <chapter|Algoritmi e strutture dati>
 
@@ -1592,6 +1997,31 @@
   attributo nella parte destra di ogni dipendenza è contenuto in una chiave
   di <with|font-shape|italic|r>.
 
+  <with|font-series|bold|Da domanda d'esame:> Lo studente fornisca la
+  definizione di Terza Forma Normale
+
+  Una tabella <math|r> è in Terza Forma Normale se per ogni dipendenza
+  funzionale non banale <math|X\<rightarrow\>Y> definita su di essa è
+  verificata almeno una delle seguenti condizioni:
+
+  <\itemize>
+    <item><math|X> è superchiave di <math|r>
+
+    <item>Ogni attributo in <math|Y> è contenuto in almeno una chiave di
+    <math|r>
+  </itemize>
+
+  <with|font-series|bold|Da domanda d'esame:> Dare un esempio di relazione
+  non BCNF ma 3NF
+
+  <\verbatim-code>
+    R(_<with|font-series|bold|A>_, _<with|font-series|bold|B>_, C, D)
+
+    AB -\<gtr\> CD
+
+    D -\<gtr\> A
+  </verbatim-code>
+
   <subsection|Forma normale di Boyce e Codd>
 
   <with|font-series|bold|Definizione:> Una relazione R è in forma normale di
@@ -1638,6 +2068,25 @@
 
   La chiusura di un insieme di attributi <math|X<rsup|+>> è costituito dagli
   attributi funzionalmente dipendenti da <math|X>
+
+  <with|font-series|bold|Da domanda esame:>
+
+  Dare un esempio di uso della chiusura di un insieme di attributi
+
+  Individuazione della chiave primaria
+
+  <subsubsection|Algoritmo per il calcolo della chiusura di un insieme di
+  attributi X>
+
+  <with|font-series|bold|Da domanda esame:>
+
+  Definire l'algoritmo per il calcolo della chiusura di un insieme di
+  attributi X
+
+  Si parte da un insieme uguale ad X, per ogni dipendenza
+  <math|A<rsub|>\<rightarrow\>B>, dove A appartiene ad X, B viene aggiunto ad
+  X, finché non ci sono altre dipendenze tali che B non è contenuto
+  nell'insieme costruito fino a questo punto.
 
   <subsection|ACID>
 
@@ -1732,6 +2181,19 @@
   Nei DBMS non relazionali non è possibile attuare controlli sull'integrità
   dei dati e quindi garantirne la consistenza, e non esiste uno standard
   condiviso per la memorizzazione e l'accesso ai dati.
+
+  <with|font-series|bold|Da domanda esame:>
+
+  Quali sono le caratteristiche di un database SQL che non vengono mantenute
+  in uno NoSQL?
+
+  Standardizzazione del modello e del query language
+
+  Portabilità
+
+  Controllo sull'integrità dei dati
+
+  Niente tabelle nella realizzazione fisica
 
   <subsubsection|Equivalente ACID per database NOSQL>
 
@@ -1874,113 +2336,120 @@
   \;
 </body>
 
-<initial|<\collection>
-</collection>>
+<\initial>
+  <\collection>
+    <associate|page-orientation|landscape>
+    <associate|par-columns|2>
+  </collection>
+</initial>
 
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|2.3.4|1>>
-    <associate|auto-100|<tuple|3.3|?>>
-    <associate|auto-101|<tuple|3.3.1|?>>
-    <associate|auto-102|<tuple|3.3.1|?>>
-    <associate|auto-11|<tuple|2.4|2>>
-    <associate|auto-12|<tuple|3|2>>
-    <associate|auto-13|<tuple|3.1|2>>
+    <associate|auto-100|<tuple|3.2|12>>
+    <associate|auto-101|<tuple|3.3|12>>
+    <associate|auto-102|<tuple|3.3.1|12>>
+    <associate|auto-103|<tuple|3.3.1|?>>
+    <associate|auto-104|<tuple|3.3|?>>
+    <associate|auto-105|<tuple|3.3.1|?>>
+    <associate|auto-11|<tuple|2.4|1>>
+    <associate|auto-12|<tuple|3|1>>
+    <associate|auto-13|<tuple|3.1|1>>
     <associate|auto-14|<tuple|3.2|2>>
-    <associate|auto-15|<tuple|1|?>>
-    <associate|auto-16|<tuple|2|?>>
-    <associate|auto-17|<tuple|3|?>>
-    <associate|auto-18|<tuple|4|?>>
-    <associate|auto-19|<tuple|4.1|?>>
+    <associate|auto-15|<tuple|1|2>>
+    <associate|auto-16|<tuple|2|2>>
+    <associate|auto-17|<tuple|3|2>>
+    <associate|auto-18|<tuple|4|2>>
+    <associate|auto-19|<tuple|4.1|2>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|4.2|?>>
-    <associate|auto-21|<tuple|5|?>>
-    <associate|auto-22|<tuple|5.1|?>>
-    <associate|auto-23|<tuple|5.2|?>>
-    <associate|auto-24|<tuple|5.2.1|?>>
-    <associate|auto-25|<tuple|5.2.2|?>>
-    <associate|auto-26|<tuple|5.2.3|?>>
-    <associate|auto-27|<tuple|5.2.4|?>>
-    <associate|auto-28|<tuple|5.2.5|?>>
-    <associate|auto-29|<tuple|5.2.6|?>>
+    <associate|auto-20|<tuple|4.2|3>>
+    <associate|auto-21|<tuple|5|3>>
+    <associate|auto-22|<tuple|5.1|3>>
+    <associate|auto-23|<tuple|5.2|3>>
+    <associate|auto-24|<tuple|5.2.1|3>>
+    <associate|auto-25|<tuple|5.2.2|3>>
+    <associate|auto-26|<tuple|5.2.3|3>>
+    <associate|auto-27|<tuple|5.2.4|3>>
+    <associate|auto-28|<tuple|5.2.5|3>>
+    <associate|auto-29|<tuple|5.2.6|4>>
     <associate|auto-3|<tuple|2|1>>
-    <associate|auto-30|<tuple|5.2.7|?>>
-    <associate|auto-31|<tuple|6|?>>
-    <associate|auto-32|<tuple|6.1|?>>
-    <associate|auto-33|<tuple|6.1.1|?>>
-    <associate|auto-34|<tuple|6.1.2|?>>
-    <associate|auto-35|<tuple|6.1.3|?>>
-    <associate|auto-36|<tuple|6.1.4|?>>
-    <associate|auto-37|<tuple|6.1.5|?>>
-    <associate|auto-38|<tuple|7|?>>
-    <associate|auto-39|<tuple|7.1|?>>
+    <associate|auto-30|<tuple|5.2.7|4>>
+    <associate|auto-31|<tuple|6|4>>
+    <associate|auto-32|<tuple|6.1|4>>
+    <associate|auto-33|<tuple|6.1.1|4>>
+    <associate|auto-34|<tuple|6.1.2|4>>
+    <associate|auto-35|<tuple|6.1.3|4>>
+    <associate|auto-36|<tuple|6.1.4|4>>
+    <associate|auto-37|<tuple|6.1.5|5>>
+    <associate|auto-38|<tuple|7|5>>
+    <associate|auto-39|<tuple|7.1|5>>
     <associate|auto-4|<tuple|2.1|1>>
-    <associate|auto-40|<tuple|7.2|?>>
-    <associate|auto-41|<tuple|7.2.1|?>>
-    <associate|auto-42|<tuple|7.2.2|?>>
-    <associate|auto-43|<tuple|7.2.3|?>>
-    <associate|auto-44|<tuple|7.2.4|?>>
-    <associate|auto-45|<tuple|8|?>>
-    <associate|auto-46|<tuple|8.1|?>>
-    <associate|auto-47|<tuple|8.2|?>>
-    <associate|auto-48|<tuple|8.2.1|?>>
-    <associate|auto-49|<tuple|8.2.2|?>>
+    <associate|auto-40|<tuple|7.2|5>>
+    <associate|auto-41|<tuple|7.2.1|5>>
+    <associate|auto-42|<tuple|7.2.2|5>>
+    <associate|auto-43|<tuple|7.2.3|5>>
+    <associate|auto-44|<tuple|7.2.4|5>>
+    <associate|auto-45|<tuple|8|6>>
+    <associate|auto-46|<tuple|8.1|6>>
+    <associate|auto-47|<tuple|8.2|6>>
+    <associate|auto-48|<tuple|8.2.1|6>>
+    <associate|auto-49|<tuple|8.2.2|6>>
     <associate|auto-5|<tuple|2.2|1>>
-    <associate|auto-50|<tuple|8.2.3|?>>
-    <associate|auto-51|<tuple|8.2.4|?>>
-    <associate|auto-52|<tuple|9|?>>
-    <associate|auto-53|<tuple|9.1|?>>
-    <associate|auto-54|<tuple|9.1.1|?>>
-    <associate|auto-55|<tuple|9.2|?>>
-    <associate|auto-56|<tuple|9.2.1|?>>
-    <associate|auto-57|<tuple|9.2.1.1|?>>
-    <associate|auto-58|<tuple|9.2.1.1.1|?>>
-    <associate|auto-59|<tuple|9.2.1.2|?>>
+    <associate|auto-50|<tuple|8.2.3|6>>
+    <associate|auto-51|<tuple|8.2.4|7>>
+    <associate|auto-52|<tuple|9|7>>
+    <associate|auto-53|<tuple|9.1|7>>
+    <associate|auto-54|<tuple|9.1.1|7>>
+    <associate|auto-55|<tuple|9.2|7>>
+    <associate|auto-56|<tuple|9.2.1|7>>
+    <associate|auto-57|<tuple|9.2.1.1|7>>
+    <associate|auto-58|<tuple|9.2.1.1.1|7>>
+    <associate|auto-59|<tuple|9.2.1.2|7>>
     <associate|auto-6|<tuple|2.3|1>>
-    <associate|auto-60|<tuple|9.2.1.3|?>>
-    <associate|auto-61|<tuple|10|?>>
-    <associate|auto-62|<tuple|10.1|?>>
-    <associate|auto-63|<tuple|10.1.1|?>>
-    <associate|auto-64|<tuple|10.1.2|?>>
-    <associate|auto-65|<tuple|10.2|?>>
-    <associate|auto-66|<tuple|10.2.1|?>>
-    <associate|auto-67|<tuple|10.2.2|?>>
-    <associate|auto-68|<tuple|10.3|?>>
-    <associate|auto-69|<tuple|10.3.1|?>>
+    <associate|auto-60|<tuple|9.2.1.3|7>>
+    <associate|auto-61|<tuple|10|8>>
+    <associate|auto-62|<tuple|10.1|8>>
+    <associate|auto-63|<tuple|10.1.1|8>>
+    <associate|auto-64|<tuple|10.1.2|8>>
+    <associate|auto-65|<tuple|10.2|8>>
+    <associate|auto-66|<tuple|10.2.1|8>>
+    <associate|auto-67|<tuple|10.2.2|8>>
+    <associate|auto-68|<tuple|10.3|8>>
+    <associate|auto-69|<tuple|10.3.1|8>>
     <associate|auto-7|<tuple|2.3.1|1>>
-    <associate|auto-70|<tuple|11|?>>
-    <associate|auto-71|<tuple|11.1|?>>
-    <associate|auto-72|<tuple|11.2|?>>
-    <associate|auto-73|<tuple|11.3|?>>
-    <associate|auto-74|<tuple|12|?>>
-    <associate|auto-75|<tuple|12.1|?>>
-    <associate|auto-76|<tuple|12.2|?>>
-    <associate|auto-77|<tuple|12.3|?>>
-    <associate|auto-78|<tuple|2|?>>
-    <associate|auto-79|<tuple|1|?>>
+    <associate|auto-70|<tuple|11|8>>
+    <associate|auto-71|<tuple|11.1|8>>
+    <associate|auto-72|<tuple|11.2|8>>
+    <associate|auto-73|<tuple|11.3|8>>
+    <associate|auto-74|<tuple|12|8>>
+    <associate|auto-75|<tuple|12.1|8>>
+    <associate|auto-76|<tuple|12.2|9>>
+    <associate|auto-77|<tuple|12.3|9>>
+    <associate|auto-78|<tuple|2|9>>
+    <associate|auto-79|<tuple|1|9>>
     <associate|auto-8|<tuple|2.3.2|1>>
-    <associate|auto-80|<tuple|1.1|?>>
-    <associate|auto-81|<tuple|1.2|?>>
-    <associate|auto-82|<tuple|1.3|?>>
-    <associate|auto-83|<tuple|1.3.0.0.1|?>>
-    <associate|auto-84|<tuple|1.4|?>>
-    <associate|auto-85|<tuple|2|?>>
-    <associate|auto-86|<tuple|2.1|?>>
-    <associate|auto-87|<tuple|2.1.1|?>>
-    <associate|auto-88|<tuple|2.1.1.0.2|?>>
-    <associate|auto-89|<tuple|2.1.2|?>>
+    <associate|auto-80|<tuple|1.1|9>>
+    <associate|auto-81|<tuple|1.2|9>>
+    <associate|auto-82|<tuple|1.3|10>>
+    <associate|auto-83|<tuple|1.3.0.0.1|10>>
+    <associate|auto-84|<tuple|1.4|10>>
+    <associate|auto-85|<tuple|2|10>>
+    <associate|auto-86|<tuple|2.1|10>>
+    <associate|auto-87|<tuple|2.1.1|10>>
+    <associate|auto-88|<tuple|2.1.1.0.2|10>>
+    <associate|auto-89|<tuple|2.1.2|10>>
     <associate|auto-9|<tuple|2.3.3|1>>
-    <associate|auto-90|<tuple|2.2|?>>
-    <associate|auto-91|<tuple|2.3|?>>
-    <associate|auto-92|<tuple|2.3.1|?>>
-    <associate|auto-93|<tuple|2.3.2|?>>
-    <associate|auto-94|<tuple|2.3.2.0.3|?>>
-    <associate|auto-95|<tuple|2.3.3|?>>
-    <associate|auto-96|<tuple|2.3.3.0.4|?>>
-    <associate|auto-97|<tuple|3|?>>
-    <associate|auto-98|<tuple|3.1|?>>
-    <associate|auto-99|<tuple|3.2|?>>
+    <associate|auto-90|<tuple|2.1.3|10>>
+    <associate|auto-91|<tuple|2.2|10>>
+    <associate|auto-92|<tuple|2.3|11>>
+    <associate|auto-93|<tuple|2.3.1|11>>
+    <associate|auto-94|<tuple|2.3.2|11>>
+    <associate|auto-95|<tuple|2.3.2.0.3|11>>
+    <associate|auto-96|<tuple|2.3.3|12>>
+    <associate|auto-97|<tuple|2.3.3.0.4|12>>
+    <associate|auto-98|<tuple|3|12>>
+    <associate|auto-99|<tuple|3.1|12>>
   </collection>
 </references>
 
@@ -2332,45 +2801,64 @@
       insieme di dipendenze <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-87>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>ACID
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>>
+      Dalla soluzione dell'esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-88><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|2.3<space|2spc>Database NOSQL
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|2.1.2<space|2spc>Chiusura di un insieme di
+      attributi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-89>>
 
-      <with|par-left|<quote|2tab>|2.3.1<space|2spc>Vantaggi e svantaggi
+      <with|par-left|<quote|2tab>|2.1.3<space|2spc>Algoritmo per il calcolo
+      della chiusura di un insieme di attributi X
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-90>>
 
-      <with|par-left|<quote|2tab>|2.3.2<space|2spc>Differenze con un database
-      SQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.2<space|2spc>ACID
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-91>>
 
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Database NOSQL
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-92>>
+
+      <with|par-left|<quote|2tab>|2.3.1<space|2spc>Vantaggi e svantaggi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-93>>
+
+      <with|par-left|<quote|2tab>|2.3.2<space|2spc>Differenze con un database
+      SQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-94>>
+
       Da soluzione esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92><vspace|0.15fn>
+      <no-break><pageref|auto-95><vspace|0.15fn>
+
+      <with|par-left|<quote|2tab>|2.3.3<space|2spc>Equivalente ACID per
+      database NOSQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-96>>
+
+      Da una domanda di un compito: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-97><vspace|0.15fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Schedule>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93><vspace|0.5fn>
+      <no-break><pageref|auto-98><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>VSR
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-94>>
+      <no-break><pageref|auto-99>>
 
       <with|par-left|<quote|1tab>|3.2<space|2spc>CSR
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-95>>
+      <no-break><pageref|auto-100>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Locking a due fasi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-96>>
+      <no-break><pageref|auto-101>>
 
       <with|par-left|<quote|2tab>|3.3.1<space|2spc>Come determinare se uno
       schedule è generato da uno scheduer basato su 2PL
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>>
+      <no-break><pageref|auto-102>>
     </associate>
   </collection>
 </auxiliary>
