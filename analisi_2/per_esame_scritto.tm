@@ -278,6 +278,22 @@
     <around*|\||J<around*|(|x<rsub|0>,y<rsub|0>|)>|\|>=<around*|\||<matrix|<tformat|<table|<row|<cell|f<rsub|x>>|<cell|g<rsub|x>>>|<row|<cell|f<rsub|y>>|<cell|g<rsub|y>>>>>>|\|>\<neq\>0
   </equation*>
 
+  <with|font-series|bold|Metodo pratico>
+
+  <\enumerate>
+    <item>Determino <math|f<around*|(|x,y|)>> e <math|g<around*|(|x,y|)>>
+
+    <item>Calcolo <math|f<rsub|x>,f<rsub|y>,g<rsub|x>,g<rsub|y>> e li
+    inserisco nella matrice Jacobiana
+
+    <\equation*>
+      <matrix|<tformat|<table|<row|<cell|f<rsub|x>>|<cell|g<rsub|x>>>|<row|<cell|f<rsub|y>>|<cell|g<rsub|y>>>>>>
+    </equation*>
+
+    <item>Calcolo il determinante e lo impongo uguale a 0. <math|f> sarà
+    invertibile nei punti trovati.
+  </enumerate>
+
   <subparagraph|Esempio 1>
 
   La trasformazione <math|F:R<rsup|2>\<in\>R<rsup|2>> definita ponendo
@@ -443,7 +459,7 @@
     manualmente una primitiva e verificare che <math|\<nabla\>F=A>
   </enumerate>
 
-  <subparagraph|Metodo manuale per il cacolo della primitiva>
+  <subparagraph|Metodo manuale per il calcolo della primitiva>
 
   <\enumerate>
     <item>Calcolo\ 
@@ -1139,50 +1155,54 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>>
 
-      <with|par-left|<quote|2tab>|2.5.2<space|2spc>Coordinate sferiche
+      Coordinate polari centrate in <with|mode|<quote|math>|P<rsub|0>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-53><vspace|0.15fn>
 
-      <with|par-left|<quote|2tab>|2.5.3<space|2spc>Coordinate cilindriche
+      <with|par-left|<quote|2tab>|2.5.2<space|2spc>Coordinate sferiche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-54>>
 
-      <with|par-left|<quote|1tab>|2.6<space|2spc>Funzioni utili
+      <with|par-left|<quote|2tab>|2.5.3<space|2spc>Coordinate cilindriche
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-55>>
 
-      <with|par-left|<quote|2tab>|2.6.1<space|2spc>Circonferenza
+      <with|par-left|<quote|1tab>|2.6<space|2spc>Funzioni utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-56>>
 
-      Equazione cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57><vspace|0.15fn>
+      <with|par-left|<quote|2tab>|2.6.1<space|2spc>Circonferenza
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-57>>
 
-      Equazione in coordinate polari <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Equazione cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-58><vspace|0.15fn>
 
-      Equazione parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Equazione in coordinate polari <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-59><vspace|0.15fn>
+
+      Equazione parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-60><vspace|0.15fn>
 
       <with|par-left|<quote|1tab>|2.7<space|2spc>Limiti notevoli
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
+      <no-break><pageref|auto-61>>
 
       <with|par-left|<quote|1tab>|2.8<space|2spc>Integrali
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-61>>
+      <no-break><pageref|auto-62>>
 
       <with|par-left|<quote|2tab>|2.8.1<space|2spc>Integrazione per parti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62>>
+      <no-break><pageref|auto-63>>
 
       <with|par-left|<quote|2tab>|2.8.2<space|2spc>Integrali utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-64>>
 
       <with|par-left|<quote|2tab>|2.8.3<space|2spc>Sostituzioni utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-65>>
     </associate>
   </collection>
 </auxiliary>
