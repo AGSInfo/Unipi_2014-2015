@@ -102,7 +102,7 @@ str::size_t pos = str.find("una");
 std::string str3 = str.substr(pos);
 
 // ------------------------------
-// Conversione da string ad altri tipi
+// Conversione da string ad altri tipi - C++ 11
 // ------------------------------
 
 using namespace std;
@@ -118,3 +118,9 @@ int i_hex = stoi (str_hex, nullptr, 16);
 int i_bin = stoi (str_bin, nullptr, 2);
 int i_auto = stoi (str_auto, nullptr, 0);
 
+// ------------------------------
+// Conversione da string ad altri tipi
+// ------------------------------
+#include <stdlib.h>     /* atoi */
+string stringa;
+int intero = atoi(stringa.c_str())
