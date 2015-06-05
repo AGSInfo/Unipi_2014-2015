@@ -60,6 +60,7 @@
 10. Non esistenza dei limiti in 0 per funzioni 0-omogenee non costanti
 11. Funzioni (positivamente) omogenee sulla sfera unitaria convergono in 0 per x -> 0 
 12. Funzioni (negativamente) omogenee non identificamente (?) nulle fuori dall'origine non convergono in 0 
+13. Unicità del differenziale
 13. Legame tra derivate direzionali di una funzione differenziale ed il suo differenziale
 14. Vari lemmi/teoremi sul gradiente identicamente nullo su un aperto connesso
 15. Condizione necessaria di integrabilità: indipendenza dell'integrale dal cammino e differenza di potenziale
