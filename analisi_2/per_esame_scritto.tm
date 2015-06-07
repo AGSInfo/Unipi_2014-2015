@@ -909,11 +909,11 @@
     <associate|auto-21|<tuple|1.9.3|3>>
     <associate|auto-22|<tuple|1.10|3>>
     <associate|auto-23|<tuple|1.11|3>>
-    <associate|auto-24|<tuple|6|3>>
+    <associate|auto-24|<tuple|6|4>>
     <associate|auto-25|<tuple|7|4>>
     <associate|auto-26|<tuple|1.12|4>>
     <associate|auto-27|<tuple|1.13|4>>
-    <associate|auto-28|<tuple|1.14|4>>
+    <associate|auto-28|<tuple|1.14|5>>
     <associate|auto-29|<tuple|1.15|5>>
     <associate|auto-3|<tuple|1.1.1|1>>
     <associate|auto-30|<tuple|1.16|5>>
@@ -921,28 +921,28 @@
     <associate|auto-32|<tuple|1.16.2|5>>
     <associate|auto-33|<tuple|1.16.3|5>>
     <associate|auto-34|<tuple|1.17|5>>
-    <associate|auto-35|<tuple|8|5>>
+    <associate|auto-35|<tuple|8|6>>
     <associate|auto-36|<tuple|1.18|6>>
     <associate|auto-37|<tuple|1.19|6>>
-    <associate|auto-38|<tuple|1.20|6>>
+    <associate|auto-38|<tuple|1.20|7>>
     <associate|auto-39|<tuple|1.20.1|7>>
     <associate|auto-4|<tuple|1.1.2|1>>
     <associate|auto-40|<tuple|2|7>>
     <associate|auto-41|<tuple|2.1|7>>
     <associate|auto-42|<tuple|2.2|7>>
-    <associate|auto-43|<tuple|2.3|7>>
-    <associate|auto-44|<tuple|2.3.1|7>>
-    <associate|auto-45|<tuple|2.3.2|7>>
+    <associate|auto-43|<tuple|2.3|8>>
+    <associate|auto-44|<tuple|2.3.1|8>>
+    <associate|auto-45|<tuple|2.3.2|8>>
     <associate|auto-46|<tuple|2.4|8>>
     <associate|auto-47|<tuple|2.4.1|8>>
     <associate|auto-48|<tuple|2.4.2|8>>
     <associate|auto-49|<tuple|2.4.3|8>>
     <associate|auto-5|<tuple|1.1.3|1>>
     <associate|auto-50|<tuple|2.4.4|8>>
-    <associate|auto-51|<tuple|2.5|8>>
-    <associate|auto-52|<tuple|2.5.1|8>>
-    <associate|auto-53|<tuple|9|8>>
-    <associate|auto-54|<tuple|2.5.2|8>>
+    <associate|auto-51|<tuple|2.5|9>>
+    <associate|auto-52|<tuple|2.5.1|9>>
+    <associate|auto-53|<tuple|9|9>>
+    <associate|auto-54|<tuple|2.5.2|9>>
     <associate|auto-55|<tuple|2.5.3|9>>
     <associate|auto-56|<tuple|2.6|9>>
     <associate|auto-57|<tuple|2.6.1|9>>
@@ -951,12 +951,12 @@
     <associate|auto-6|<tuple|1.2|1>>
     <associate|auto-60|<tuple|12|9>>
     <associate|auto-61|<tuple|2.6.2|9>>
-    <associate|auto-62|<tuple|2.6.3|9>>
+    <associate|auto-62|<tuple|2.6.3|10>>
     <associate|auto-63|<tuple|2.7|10>>
-    <associate|auto-64|<tuple|2.8|10>>
-    <associate|auto-65|<tuple|2.8.1|?>>
-    <associate|auto-66|<tuple|2.8.2|?>>
-    <associate|auto-67|<tuple|2.8.3|?>>
+    <associate|auto-64|<tuple|2.8|11>>
+    <associate|auto-65|<tuple|2.8.1|11>>
+    <associate|auto-66|<tuple|2.8.2|11>>
+    <associate|auto-67|<tuple|2.8.3|11>>
     <associate|auto-68|<tuple|3.2.1|?>>
     <associate|auto-69|<tuple|3.2.2|?>>
     <associate|auto-7|<tuple|1.3|1>>
@@ -1200,25 +1200,33 @@
       Equazione parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|2.7<space|2spc>Limiti notevoli
+      <with|par-left|<quote|2tab>|2.6.2<space|2spc>Seno iperbolico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-61>>
 
-      <with|par-left|<quote|1tab>|2.8<space|2spc>Integrali
+      <with|par-left|<quote|2tab>|2.6.3<space|2spc>Coseno iperbolico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-62>>
 
-      <with|par-left|<quote|2tab>|2.8.1<space|2spc>Integrazione per parti
+      <with|par-left|<quote|1tab>|2.7<space|2spc>Limiti notevoli
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-63>>
 
-      <with|par-left|<quote|2tab>|2.8.2<space|2spc>Integrali utili
+      <with|par-left|<quote|1tab>|2.8<space|2spc>Integrali
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-64>>
 
-      <with|par-left|<quote|2tab>|2.8.3<space|2spc>Sostituzioni utili
+      <with|par-left|<quote|2tab>|2.8.1<space|2spc>Integrazione per parti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-65>>
+
+      <with|par-left|<quote|2tab>|2.8.2<space|2spc>Integrali utili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-66>>
+
+      <with|par-left|<quote|2tab>|2.8.3<space|2spc>Sostituzioni utili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-67>>
     </associate>
   </collection>
 </auxiliary>
