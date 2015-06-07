@@ -124,3 +124,17 @@ int i_auto = stoi (str_auto, nullptr, 0);
 #include <stdlib.h>     /* atoi */
 string stringa;
 int intero = atoi(stringa.c_str())
+
+// ------------------------------
+// Inversione di una stringa
+// ------------------------------
+#include <algorithm>
+string str = "ciao";
+string reversed_str = str;
+reverse(reversed_str.begin(), reversed
+	#include <algorithm>
+	string str = "ciao"
+;
+string reversed_str = str;
+reverse(reversed_str.begin(), reversed_str.end());
+cout << reversed_str << endl; // $ oaic
