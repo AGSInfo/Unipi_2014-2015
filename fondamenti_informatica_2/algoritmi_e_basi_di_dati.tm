@@ -2072,7 +2072,49 @@
   sapevamo l'esito della verifica: dato che lo schedule non era CSR, non
   poteva in nessun modo essere nemmeno 2PL.
 
-  \;
+  <section|Pratico basi di dati>
+
+  <subsection|Creazione di un trigger>
+
+  <\cpp-code>
+    DELIMITER $$
+
+    \;
+
+    CREATE TRIGGER NomeTrigger
+
+    BEFORE INSERT ON NomeTabella FOR EACH ROW
+
+    \ \ BEGIN
+
+    \ \ \ \ [corpo_trigger]
+
+    \ \ END $$
+
+    DELIMITER ;
+  </cpp-code>
+
+  <subsection|Creazione di una stored procedure>
+
+  <\cpp-code>
+    <\verbatim-code>
+      DROP PROCEDURE IF EXISTS NomeProcedura;
+
+      \;
+
+      DELIMITER <math|>
+
+      CREATE PROCEDURE NomeProcedura(IN argomento VARCHAR(20))
+
+      \ \ BEGIN
+
+      \ \ \ \ [corpo_trigger]
+
+      \ \ END $$
+
+      DELIMITER;
+    </verbatim-code>
+  </cpp-code>
 </body>
 
 <\initial>
@@ -2094,7 +2136,10 @@
     <associate|auto-105|<tuple|5.2|19>>
     <associate|auto-106|<tuple|5.3|20>>
     <associate|auto-107|<tuple|5.3.1|?>>
+    <associate|auto-108|<tuple|6|?>>
+    <associate|auto-109|<tuple|6.1|?>>
     <associate|auto-11|<tuple|2.4|1>>
+    <associate|auto-110|<tuple|6.2|?>>
     <associate|auto-12|<tuple|3|1>>
     <associate|auto-13|<tuple|3.1|1>>
     <associate|auto-14|<tuple|3.2|2>>
