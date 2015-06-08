@@ -48,6 +48,13 @@ myvector.push_back(3);
 // Rimozione dalla coda
 myvector.pop_back();
 
+// ------------------------------
+// Funzioni utili
+// ------------------------------
+
+// Lunghezza di un vettore
+vettore.size()
+
 // ##############################
 // STRINGHE
 // ##############################
@@ -121,20 +128,39 @@ int i_auto = stoi (str_auto, nullptr, 0);
 // ------------------------------
 // Conversione da string ad altri tipi
 // ------------------------------
-#include <stdlib.h>     /* atoi */
+#include <stdlib.h>     /* atoi() */
 string stringa;
 int intero = atoi(stringa.c_str())
 
 // ------------------------------
 // Inversione di una stringa
 // ------------------------------
-#include <algorithm>
+#include <algorithm> /* reverse() */
 string str = "ciao";
 string reversed_str = str;
 reverse(reversed_str.begin(), reversed
-	#include <algorithm>
-	string str = "ciao"
-;
-string reversed_str = str;
-reverse(reversed_str.begin(), reversed_str.end());
 cout << reversed_str << endl; // $ oaic
+
+// ##############################
+// ALBERI BINARI DI RICERCA
+// ##############################
+
+// ------------------------------
+// Inserimento di un valore
+// ------------------------------
+
+void insert(Node *& tree, int value) {
+	if (!tree) {
+		tree = new Node;
+		tree -> label = value;
+		tree -> s = tree -> d = -1;
+		tree -> left = tree -> right = NULL;
+		return;
+	}
+	if (value <= tree -> label) {
+		insert(tree -> left, value);
+		return;
+	}
+	insert(tree -> right, value);
+	return;
+}
