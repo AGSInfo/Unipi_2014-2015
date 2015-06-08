@@ -1,0 +1,878 @@
+<TeXmacs|1.99.2>
+
+<style|<tuple|generic|italian>>
+
+<\body>
+  <section|Vettori>
+
+  <subsection|Esempi di costruttori>
+
+  <\cpp-code>
+    // Creazione di un vettore vuoto
+
+    std::vector\<less\>int\<gtr\> first;
+
+    \;
+
+    // Inserimento di due valori
+
+    std::vector\<less\>int\<gtr\> second (4,100);
+
+    \;
+
+    // Copia di un pezzo di second
+
+    std::vector\<less\>int\<gtr\> third(second.begin(), second.end());
+
+    \;
+
+    // Copia di third
+
+    std::vector\<less\>int\<gtr\> fourth (third);
+
+    \;
+
+    // Creazione a partire da un array
+
+    int myints[] = {12, 4, 532, 1, 4};
+
+    std::vector\<less\>int\<gtr\> fifth (myints, myints + sizeof(myints) /
+    sizeof(int);
+  </cpp-code>
+
+  <subsection|Iterare su di un vettore>
+
+  <\cpp-code>
+    // Scrivo il contenuto di un vettore
+
+    for (std::vector\<less\>int\<gtr\>::iterator it = fifth.begin(); it !=
+    fifth.end(); i++) {
+
+    \ \ \ \ \ \ \ \ std::cout \<less\>\<less\> ' ' \<less\>\<less\> *it;
+
+    }
+
+    std::cout \<less\>\<less\> std::endl;
+  </cpp-code>
+
+  <subsection|Modificare un vettore>
+
+  <\cpp-code>
+    // Inserimento in coda
+
+    myvector.push_back(3);
+
+    \;
+
+    // Rimozione dalla coda
+
+    myvector.pop_back();
+  </cpp-code>
+
+  <section|Stringhe>
+
+  <subsection|Esempi di costruttori>
+
+  <\cpp-code>
+    std::string s0 ("Hello world!");
+  </cpp-code>
+
+  <subsection|Iterare su una stringa>
+
+  <\cpp-code>
+    std::string str ("Ciao mondo!");
+
+    for (std::string::iterator it = str.begin(); it!=str.end(); i++) {
+
+    \ \ \ \ \ \ \ \ std::cout \<less\>\<less\> *it;
+
+    }
+
+    std::cout \<less\>\<less\> std::endl;
+  </cpp-code>
+
+  <subsection|Funzioni utili>
+
+  <\cpp-code>
+    // Lunghezza
+
+    str.length();
+
+    \;
+
+    // Appendere in fondo ad una stringa
+
+    std::string str;
+
+    std::ifstream file ("test.txt", std::ios::in);
+
+    if (file) {
+
+    \ \ \ \ \ \ \ \ while (!file.eof()) str.push_back(file.get());
+
+    }
+
+    std::cout \<less\>\<less\> str \<less\>\<less\> std::endl;
+
+    \;
+
+    // Appendere una stringa ad un'altra stringa
+
+    str2.append(str1);
+
+    \;
+
+    // Cercare un elemento in una stringa
+
+    std::size_t found = str.find(str2);
+
+    if (found != std::string::npos) {
+
+    \ \ \ \ \ \ \ \ std::cout \<less\>\<less\> found \<less\>\<less\>
+    std::endl;
+
+    }
+
+    \;
+
+    // Generare sottostringhe
+
+    std::string str = "Sono una stringa di prova";
+
+    // Parto dal char 3 e ne estraggo 5
+
+    std::string str2 = str.substr(3, 5);
+
+    // Effettuo una ricerca
+
+    str::size_t pos = str.find("una");
+
+    // Genero una stringa contente "una stringa di prova"
+
+    std::string str3 = str.substr(pos);
+  </cpp-code>
+
+  <subsection|Conversione da <with|font-shape|italic|string> ad altri tipi>
+
+  <\cpp-code>
+    #include \<less\>stdlib.h\<gtr\> \ \ \ \ /* atoi */
+
+    string stringa;
+
+    int intero = atoi(stringa.c_str())
+  </cpp-code>
+
+  <subsection|Conversione da <with|font-shape|italic|string> ad altri tipi -
+  Solo <with|font-shape|italic|C++ 11>>
+
+  <\cpp-code>
+    using namespace std;
+
+    string str_dec = "2001, A Space Odyssey";
+
+    string str_hex = "40c3";
+
+    string str_bin = "-1010101110101";
+
+    string str_auto = "0x7f";
+
+    \;
+
+    string::size_type sz;
+
+    \;
+
+    int i_dec = stoi (str_dec, &sz);
+
+    int i_hex = stoi (str_hex, nullptr, 16);
+
+    int i_bin = stoi (str_bin, nullptr, 2);
+
+    int i_auto = stoi (str_auto, nullptr, 0);
+  </cpp-code>
+
+  <subsection|Inversione di una stringa>
+
+  <\cpp-code>
+    #include \<algorithm\>
+
+    string str = "ciao";
+
+    string reversed_str = str;
+
+    reverse(reversed_str.begin(), reversed_str.end());
+
+    cout \<less\>\<less\> reversed_str \<less\>\<less\> endl; // $ oaic
+  </cpp-code>
+
+  <section|Alberi binari>
+
+  <section|Alberi binari>
+
+  <\itemize>
+    <item>NULL è un albero binario
+
+    <item>Un nodo <math|p> più due alberi binari Bs e Bd forma un albero
+    binario
+  </itemize>
+
+  <subsection|Numero di foglie e di nodi>
+
+  Un albero binario bilanciato con livello <math|k> ha
+
+  <\itemize>
+    <item><math|2<rsup|k+1>-1> nodi
+
+    <item><math|2<rsup|k>> foglie
+  </itemize>
+
+  <subsection|Alcuni algoritmi>
+
+  <subsubsection|Contare il numero dei nodi>
+
+  <\cpp-code>
+    int nodes(Node* tree) {
+
+    \ \ if (!tree) return 0;
+
+    \ \ return 1 + nodes(tree -\<gtr\> left) + nodes(tree -\<gtr\> right);
+
+    }
+  </cpp-code>
+
+  <subsubsection|Contare il numero delle foglie>
+
+  <\cpp-code>
+    int leaves(Node* tree) {
+
+    \ \ if (!tree) return 0;
+
+    \ \ if (!tree -\<gtr\> left && !tree -\<gtr\> right) return 1;
+
+    \ \ return leaves(tree -\<gtr\> left) + leaves(tree -\<gtr\> right);
+
+    } \ 
+  </cpp-code>
+
+  <subsubsection|Cercare un etichetta e resistuire un puntatore>
+
+  Se il nodo non compare nell'albero, viene restituito NULL. Se l'albero
+  contiene più di un'etichetta, viene restituito un puntatore al primo
+
+  <\cpp-code>
+    Node* findNode(Infotype n, Node* tree) {
+
+    \ \ // L'albero è vuoto, l'etichetta non può esserci
+
+    \ \ if (!tree) return NULL;
+
+    \ \ // Trovata l'etichetta, restituisco il puntatore
+
+    \ \ if (tree -\<gtr\> label == n) return tree;
+
+    \ \ // Cerco a sinistra
+
+    \ \ Node* a = findNode(n, tree -\<gtr\> left);
+
+    \ \ // Controllo se il puntatore della ricerca "a sinistra"
+
+    \ \ // a resistuito qualcosa di interessante, altrimenti cerco a destra
+
+    \ \ if (a) return a;
+
+    \ \ else return findNode(n, tree -\<gtr\> right);
+
+    }
+  </cpp-code>
+
+  <subsubsection|Eliminare tutto l'abero>
+
+  Alla fine il puntatore deve essere NULL
+
+  <\cpp-code>
+    void delTree(Node* &tree) {
+
+    \ \ if (tree) {
+
+    \ \ \ \ delTree(tree -\<gtr\> left);
+
+    \ \ \ \ delTree(tree -\<gtr\> right);
+
+    \ \ \ \ delete tree;
+
+    \ \ \ \ tree = NULL;
+
+    \ \ }
+
+    }
+  </cpp-code>
+
+  <subsubsection|Inserire un nodo>
+
+  Inserisce un nodo (son) come figlio di father, sinistro se
+  <math|c=<rprime|'>l<rprime|'>> oppure destro se
+  <math|c=<rprime|'>r<rprime|'>>.
+
+  Ritorna 1 se l'operazione ha successo, 0 altrimenti. Se l'albero è vuoto,
+  inserisce il nodo come radice
+
+  <\cpp-code>
+    int insertNode(Node* &tree, InfoType son, InfoType father, char c) {
+
+    \ \ // Caso in cui l'albero sia vuoto
+
+    \ \ if (!tree) {
+
+    \ \ \ \ tree = new Node;
+
+    \ \ \ \ tree -\<gtr\> label = son;
+
+    \ \ \ \ tree -\<gtr\> left = tree -\<gtr\> right = NULL;
+
+    \ \ \ \ return 1;
+
+    \ \ }
+
+    \ \ // Caso normale
+
+    \ \ // Effettuo la ricerca di father con la funzione
+
+    \ \ // di ricerca nodo (vedi sopra)
+
+    \ \ Node * a = findNode(father, tree);
+
+    \ \ // Se il nodo non è stato trovato, restituisco 0 e mi fermo
+
+    \ \ if (!a) return 0;
+
+    \ \ // Inserimento come figlio sinistro
+
+    \ \ if (c == 'l' && !a -\<gtr\> left) {
+
+    \ \ \ \ a -\<gtr\> left = new Node;
+
+    \ \ \ \ a -\<gtr\> left -\<gtr\> label = son;
+
+    \ \ \ \ a -\<gtr\> left -\<gtr\> left = a -\<gtr\> left -\<gtr\> right =
+    NULL;
+
+    \ \ \ \ return 1;
+
+    \ \ }
+
+    \ \ if (c == 'r' && !a -\<gtr\> right) {
+
+    \ \ \ \ a -\<gtr\> right = new Node;
+
+    \ \ \ \ a -\<gtr\> right -\<gtr\> label = son;
+
+    \ \ \ \ a -\<gtr\> right -\<gtr\> left = a -\<gtr\> right -\<gtr\> right
+    = NULL;
+
+    \ \ \ \ return 1;
+
+    \ \ }
+
+    }\ 
+  </cpp-code>
+
+  <subsubsection|Compito 2 - Esercizio 4>
+
+  Scrivere una funzione che, dato un albero binario ad etichette di tipo
+  string, con puntatore alla radice t, restituisca come risultato il numero
+  di nodi che hanno numero dispari di discendenti. Si calcoli la complessità
+  della soluzione proposta in funzione del numero di nodi dell'albero.
+
+  <\cpp-code>
+    int dispari(Node* t, int & nodi) {
+
+    \ \ if (!t) {
+
+    \ \ \ \ nodi = 0;
+
+    \ \ \ \ return 0;
+
+    \ \ }
+
+    \ \ int cs, cd, nodis, nodid;
+
+    \ \ cs = dispari(t -\<gtr\> left, nodis);
+
+    \ \ cd = dispari(t -\<gtr\> left, nodid);
+
+    \ \ nodi = nodis + nodid + 1;
+
+    \ \ return cs + cd + ((nodis + nodid) % 2);
+
+    }
+  </cpp-code>
+
+  La funzione è <math|O<around*|(|n|)>>
+
+  <subsubsection|Compito 1 - Esercizio 4>
+
+  Scrivere una funzione ricorsiva che, dato un albero binario a etichette
+  intere, conta il numero di nodi che hanno più foglie maggiori o uguali a
+  zero che minori di zero tra i propri discendenti.
+
+  <\cpp-code>
+    int conta(const Node * t, int & pos, int & neg) {
+
+    \ \ if (!t) {
+
+    \ \ \ \ pos = 0;
+
+    \ \ \ \ neg = 0;
+
+    \ \ \ \ return 0;
+
+    \ \ }
+
+    \ \ if (!t -\<gtr\> left && !t -\<gtr\> right) {
+
+    \ \ \ \ pos = (t -\<gtr\> info \<gtr\>= 0) ? 1 : 0;
+
+    \ \ \ \ neg = (t -\<gtr\> info \<less\> 0) \ ? 1 : 0;
+
+    \ \ \ \ return 0;
+
+    \ \ }
+
+    \ \ int pos_left, pos_right;
+
+    \ \ int neg_left, neg_right;
+
+    \ \ int conta_left = conta(t -\<gtr\> left, pos_left, neg_left);
+
+    \ \ int conta_right = conta(t -\<gtr\> right, pos_right, neg_right);
+
+    \ \ pos = pos_left + pos_right;
+
+    \ \ neg = neg_left + neg_right;
+
+    \ \ return (pos \<gtr\> neg) ? 1 : 0 + conta_left + conta_right;
+
+    }
+  </cpp-code>
+
+  <section|Alberi generici>
+
+  <\itemize>
+    <item>Un nodo <math|p> è un albero
+  </itemize>
+
+  <\itemize>
+    <item>Un nodo più una sequenza di alberi
+    <math|A<rsub|1>\<ldots\>A<rsub|n>> è un albero
+  </itemize>
+
+  <subsection|Alcuni algoritmi>
+
+  <subsubsection|Contare il numero di nodi>
+
+  Vedi l'algoritmo per gli alberi binari
+
+  <subsubsection|Contare il numero di foglie>
+
+  <\cpp-code>
+    int leaves(Node* tree) {
+
+    \ \ if (!tree) return 0;
+
+    \ \ // Caso della foglia
+
+    \ \ if (!tree -\<gtr\> left) return 1 + leaves(tree -\<gtr\> right);
+
+    \ \ // "Non caso" della foglia
+
+    \ \ return leaves(tree -\<gtr\> left) + leaves(tree -\<gtr\> right);
+  </cpp-code>
+
+  <subsubsection|Inserire un nodo in fondo ad una lista di fratelli>
+
+  <\cpp-code>
+    void addSon(InfoType x, Node* &tree) {
+
+    \ \ // Caso in cui la lista sia vuota
+
+    \ \ if (!tree) {
+
+    \ \ \ \ tree = new Node;
+
+    \ \ \ \ tree -\<gtr\> label = x;
+
+    \ \ \ \ tree -\<gtr\> left = tree -\<gtr\> right = NULL;
+
+    \ \ }
+
+    \ \ else {
+
+    \ \ \ \ addSon(x, tree -\<gtr\> right);
+
+    \ \ }
+
+    }
+  </cpp-code>
+
+  <subsubsection|Inserire un nodo son come ultimo figlio di father>
+
+  Se l'albero è vuoto, lo inserisce come radice
+
+  <\cpp-code>
+    int insert(InfoType son, InfoType father, Node* &tree) {
+
+    \ \ if (!tree) {
+
+    \ \ \ \ tree = new Node;
+
+    \ \ \ \ tree -\<gtr\> label = son;
+
+    \ \ \ \ tree -\<gtr\> left = tree -\<gtr\> right = NULL;
+
+    \ \ \ \ return 1;
+
+    \ \ }
+
+    \ \ Node* a = findNode(father, tree);
+
+    \ \ if (!a) return 0;
+
+    \ \ addSon(son, a -\<gtr\> left);
+
+    \ \ return 1;
+
+    }
+  </cpp-code>
+
+  <subsubsection|Compito 1 - Esercizio 5>
+
+  Scrivere una funzione che, dato un albero generico a etichette intere e
+  memorizzazione figlio-fratello, conta il numero di nodi che hanno più figli
+  maggiori o uguali a zero che minori di zero.
+
+  <\cpp-code>
+    int conta(const Node* t) {
+
+    \ \ if (!t) return 0;
+
+    \ \ const Node * n;
+
+    \ \ int pos = 0, neg = 0;
+
+    \ \ for (n = t -\<gtr\> left; n != NULL; n = n -\<gtr\> right) {
+
+    \ \ \ \ if (n -\<gtr\> info \<gtr\>= 0) pos++;
+
+    \ \ \ \ else neg++;
+
+    \ \ return (pos \<gtr\> neg) ? 1 : 0 + conta(t -\<gtr\> left) + conta(t
+    -\<gtr\> right);
+
+    }
+  </cpp-code>
+
+  <section|Complessità di un algoritmo>
+
+  <subsection|Dalla relazione di ricorrenza alla complessità>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=a>
+
+    <item><math|T<around*|(|n|)>=b+T<around*|(|n-1|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)> \<in\>O<around*|(|n|)>
+  </equation*>
+
+  <\itemize>
+    <item><math|T<around*|(|1|)>=a>
+
+    <item><math|T<around*|(|n|)>=b*n+T<around*|(|n-1|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)> \<in\> O<around*|(|n<rsup|2>|)>
+  </equation*>
+
+  <\itemize>
+    <item><math|T<around*|(|1|)>=a>
+
+    <item><math|T<around*|(|n|)>=b*n+2*T<around*|(|n/2|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)> \<in\> O<around*|(|n*log<around*|(|n|)>|)>
+  </equation*>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=a>
+
+    <item><math|T<around*|(|n|)>=b+T<around*|(|n-1|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)> \<in\> O<around*|(|n|)>
+  </equation*>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=a>
+
+    <item><math|T<around*|(|n|)>=b+T<around*|(|n/2|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)>\<in\>O<around*|(|log<around*|(|n|)>|)>
+  </equation*>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=a>
+
+    <item><math|T<around*|(|n|)>=b+2*T<around*|(|n/2|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)> \<in\> O<around*|(|n|)>
+  </equation*>
+
+  <\itemize>
+    <item><math|T<around*|(|1|)>=a>
+
+    <item><math|T<around*|(|n|)>=b+2*T<around*|(|n-1|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)> \<noplus\>\<in\> O<around*|(|2<rsup|n>|)>
+  </equation*>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=d>
+
+    <item><math|T<around*|(|n|)>=b*n<rsup|k>+T<around*|(|n-1|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)> \<in\> O<around*|(|n<rsup|k+1>|)>
+  </equation*>
+
+  <subparagraph|Esempio: fibonacci() ricorsivo>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=T<around*|(|1|)>=d>
+
+    <item><math|T<around*|(|n|)>=b+T<around*|(|n-1|)>+T<around*|(|n-2|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)>\<in\>O<around*|(|2<rsup|n>|)>
+  </equation*>
+
+  <with|font-series|bold|Esempio: fibonacci() non ricorsivo>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=d>
+
+    <item><math|T<around*|(|n|)>=b+T<around*|(|n-1|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)>\<in\>O<around*|(|n|)>
+  </equation*>
+
+  <subparagraph|Esempio: mergeSort()>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=T<around*|(|1|)>=d>
+
+    <item><math|T<around*|(|n|)>=b*n+2*T<around*|(|n/2|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)>\<in\>O<around*|(|n*log<around*|(|n|)>|)>
+  </equation*>
+
+  <subparagraph|Esempio: split()>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=T<around*|(|1|)>=d>
+
+    <item><math|T<around*|(|n|)>=b+T<around*|(|n-2|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)>\<in\>O<around*|(|n|)>
+  </equation*>
+
+  <with|font-series|bold|Esempio: merge()>
+
+  <\itemize>
+    <item><math|T<around*|(|0|)>=d>
+
+    <item><math|T<around*|(|n|)>=b+T<around*|(|n-1|)>>
+  </itemize>
+
+  <\equation*>
+    T<around*|(|n|)>\<in\>O<around*|(|n|)>
+  </equation*>
+</body>
+
+<initial|<\collection>
+</collection>>
+
+<\references>
+  <\collection>
+    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-10|<tuple|2.5|?>>
+    <associate|auto-11|<tuple|2.6|?>>
+    <associate|auto-12|<tuple|3|?>>
+    <associate|auto-13|<tuple|4|?>>
+    <associate|auto-14|<tuple|4.1|?>>
+    <associate|auto-15|<tuple|4.2|?>>
+    <associate|auto-16|<tuple|4.2.1|?>>
+    <associate|auto-17|<tuple|4.2.2|?>>
+    <associate|auto-18|<tuple|4.2.3|?>>
+    <associate|auto-19|<tuple|4.2.4|?>>
+    <associate|auto-2|<tuple|1.1|?>>
+    <associate|auto-20|<tuple|4.2.5|?>>
+    <associate|auto-21|<tuple|4.2.6|?>>
+    <associate|auto-22|<tuple|4.2.7|?>>
+    <associate|auto-23|<tuple|5|?>>
+    <associate|auto-24|<tuple|5.1|?>>
+    <associate|auto-25|<tuple|5.1.1|?>>
+    <associate|auto-26|<tuple|5.1.2|?>>
+    <associate|auto-27|<tuple|5.1.3|?>>
+    <associate|auto-28|<tuple|5.1.4|?>>
+    <associate|auto-29|<tuple|5.1.5|?>>
+    <associate|auto-3|<tuple|1.2|?>>
+    <associate|auto-30|<tuple|6|?>>
+    <associate|auto-31|<tuple|6.1|?>>
+    <associate|auto-32|<tuple|1|?>>
+    <associate|auto-33|<tuple|2|?>>
+    <associate|auto-34|<tuple|3|?>>
+    <associate|auto-35|<tuple|3|?>>
+    <associate|auto-4|<tuple|1.3|?>>
+    <associate|auto-5|<tuple|2|?>>
+    <associate|auto-6|<tuple|2.1|?>>
+    <associate|auto-7|<tuple|2.2|?>>
+    <associate|auto-8|<tuple|2.3|?>>
+    <associate|auto-9|<tuple|2.4|?>>
+  </collection>
+</references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|toc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Vettori>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-1><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Esempi di costruttori
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>>
+
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Iterare su di un vettore
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Modificare un vettore
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Stringhe>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Esempi di costruttori
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Iterare su una stringa
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Funzioni utili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|1tab>|2.4<space|2spc>Conversione da
+      <with|font-shape|<quote|italic>|string> ad altri tipi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|1tab>|2.5<space|2spc>Conversione da
+      <with|font-shape|<quote|italic>|string> ad altri tipi - Solo
+      <with|font-shape|<quote|italic>|C++ 11>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|2.6<space|2spc>Inversione di una stringa
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Alberi
+      binari> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Alberi
+      binari> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Numero di foglie e di nodi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Alcuni algoritmi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|2tab>|4.2.1<space|2spc>Contare il numero dei nodi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
+      <with|par-left|<quote|2tab>|4.2.2<space|2spc>Contare il numero delle
+      foglie <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>>
+
+      <with|par-left|<quote|2tab>|4.2.3<space|2spc>Cercare un etichetta e
+      resistuire un puntatore <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18>>
+
+      <with|par-left|<quote|2tab>|4.2.4<space|2spc>Eliminare tutto l'abero
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>>
+
+      <with|par-left|<quote|2tab>|4.2.5<space|2spc>Inserire un nodo
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-20>>
+
+      <with|par-left|<quote|2tab>|4.2.6<space|2spc>Compito 2 - Esercizio 4
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|2tab>|4.2.7<space|2spc>Compito 1 - Esercizio 4
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Alberi
+      generici> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Complessità
+      di un algoritmo> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Dalla relazione di
+      ricorrenza alla complessità <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
+
+      Esempio: fibonacci() ricorsivo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26><vspace|0.15fn>
+
+      Esempio: mergeSort() <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-27><vspace|0.15fn>
+
+      Esempio: split() <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28><vspace|0.15fn>
+    </associate>
+  </collection>
+</auxiliary>
