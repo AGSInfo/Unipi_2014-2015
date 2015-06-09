@@ -762,6 +762,14 @@
 
   <section|Heap>
 
+  Un heap (binario) è una struttura dati composta da un array che possiamo
+  considerare come un albero binario quasi completo. Ogni nodo dell'albero
+  corrisponde a un elemento dell'array. Tutti i livelli dell'albero sono
+  compeltamente riempiti, tranne eventualmente l'ultimo l'ultimo che può
+  essere riempito da sinistra fino ad un certo punto.
+
+  <strong|Definizione alternativa>
+
   Un heap è un albero binario quasi bilanciato con le seguenti proprietà:
 
   <\itemize>
