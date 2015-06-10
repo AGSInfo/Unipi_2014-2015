@@ -76,7 +76,6 @@
 
 1.  Cambio di variabile nei limiti
 2.  Th. di Fermat sull'annullarsi delle derivate direzionali in ogni punto di estremo locale interno nel quale esse esistono
-3.  Unicità del differenziale
 4.  Le funzioni differenziali sono continue
 5.  Th. di rettificabilità delle curve C^1
 6.  Th. di Integrabilità delle funzioni misuabili e limitate su insiemi misurabili e di dimensione finita
