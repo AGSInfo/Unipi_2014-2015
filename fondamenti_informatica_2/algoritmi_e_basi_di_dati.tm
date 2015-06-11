@@ -1229,7 +1229,7 @@
     }
   </cpp-code>
 
-  <paragraph|Funzione di insierimento in presenza di cancellazioni>
+  <paragraph|Funzione di inserimento in presenza di cancellazioni>
 
   <\cpp-code>
     int hashInsert(int *A, int k, int x) {
@@ -1454,7 +1454,7 @@
     accessibili dalle sottoclassi nè dall'esterno
 
     <item>I campi <with|font-series|bold|protetti> di una classe sono
-    accessibilit dalle sottoclassi, ma non dall'esterno
+    accessibili dalle sottoclassi, ma non dall'esterno
 
     <item>I campi <with|font-series|bold|pubblici> di una classe sono
     accessibili anche dall'esterno
@@ -1538,6 +1538,9 @@
   A.Cognome = ``Mastroianni'' <math|\<wedge\>> A.Nome = ``Marcello''}
 
   \;
+
+  <with|font-series|bold|Nota:> nel calcolo referenziale delle tuple non è
+  possibile esprimere un ``unione''
 
   <section|Normalizzazione>
 
@@ -2096,13 +2099,15 @@
 
   <subsection|Creazione di una stored procedure>
 
+  Viene fornita una stringa come parametro d'ingresso
+
   <\cpp-code>
     <\verbatim-code>
       DROP PROCEDURE IF EXISTS NomeProcedura;
 
       \;
 
-      DELIMITER <math|>
+      DELIMITER <math|>$$
 
       CREATE PROCEDURE NomeProcedura(IN argomento VARCHAR(20))
 
@@ -2140,6 +2145,7 @@
     <associate|auto-109|<tuple|6.1|?>>
     <associate|auto-11|<tuple|2.4|1>>
     <associate|auto-110|<tuple|6.2|?>>
+    <associate|auto-111|<tuple|6.2|?>>
     <associate|auto-12|<tuple|3|1>>
     <associate|auto-13|<tuple|3.1|1>>
     <associate|auto-14|<tuple|3.2|2>>
@@ -2475,7 +2481,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-59><vspace|0.15fn>>
 
-      <with|par-left|<quote|4tab>|Funzione di insierimento in presenza di
+      <with|par-left|<quote|4tab>|Funzione di inserimento in presenza di
       cancellazioni <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60><vspace|0.15fn>>
 
@@ -2666,6 +2672,18 @@
       schedule è generato da uno scheduer basato su 2PL
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-107>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Pratico
+      basi di dati> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-108><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Creazione di un trigger
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-109>>
+
+      <with|par-left|<quote|1tab>|6.2<space|2spc>Creazione di una stored
+      procedure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-110>>
     </associate>
   </collection>
 </auxiliary>
