@@ -1765,6 +1765,28 @@
   superchiave con tutti attributi essenziali per derivare ogni attributo del
   sistema) lo schema relazionale è in BCNF
 
+  <section|Regole di Armstrong>
+
+  <\description>
+    <item*|Unione>
+
+    <\equation*>
+      <around*|{|X\<rightarrow\>Y,X\<rightarrow\>Z|}>\<Longrightarrow\>X\<rightarrow\>YZ
+    </equation*>
+
+    <item*|Pseudotransitività>
+
+    <\equation*>
+      <around*|{|X\<rightarrow\>Y,WY\<rightarrow\>Z|}>\<Longrightarrow\>XW\<rightarrow\>YZ
+    </equation*>
+
+    <item*|Decomposizione>
+
+    <\equation*>
+      <around*|{|X\<rightarrow\>Y,Z\<subseteq\>Y|}>\<Longrightarrow\>X\<rightarrow\>Z
+    </equation*>
+  </description>
+
   <section|Definizioni>
 
   <subsection|Miste>
@@ -2157,19 +2179,20 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|2.3.4|1>>
-    <associate|auto-100|<tuple|3.3.3|19>>
-    <associate|auto-101|<tuple|3.3.3.0.4|19>>
-    <associate|auto-102|<tuple|4|19>>
+    <associate|auto-100|<tuple|4.3.2.0.3|19>>
+    <associate|auto-101|<tuple|4.3.3|19>>
+    <associate|auto-102|<tuple|4.3.3.0.4|19>>
     <associate|auto-103|<tuple|5|20>>
-    <associate|auto-104|<tuple|5.1|20>>
-    <associate|auto-105|<tuple|5.2|20>>
-    <associate|auto-106|<tuple|5.3|20>>
-    <associate|auto-107|<tuple|5.3.1|20>>
-    <associate|auto-108|<tuple|6|21>>
-    <associate|auto-109|<tuple|6.1|21>>
+    <associate|auto-104|<tuple|6|20>>
+    <associate|auto-105|<tuple|6.1|20>>
+    <associate|auto-106|<tuple|6.2|20>>
+    <associate|auto-107|<tuple|6.3|20>>
+    <associate|auto-108|<tuple|6.3.1|21>>
+    <associate|auto-109|<tuple|7|21>>
     <associate|auto-11|<tuple|2.4|1>>
-    <associate|auto-110|<tuple|6.2|21>>
-    <associate|auto-111|<tuple|6.2|?>>
+    <associate|auto-110|<tuple|7.1|21>>
+    <associate|auto-111|<tuple|7.2|?>>
+    <associate|auto-112|<tuple|7.2|?>>
     <associate|auto-12|<tuple|3|1>>
     <associate|auto-13|<tuple|3.1|1>>
     <associate|auto-14|<tuple|3.2|2>>
@@ -2256,16 +2279,16 @@
     <associate|auto-88|<tuple|2.4|17>>
     <associate|auto-89|<tuple|3|17>>
     <associate|auto-9|<tuple|2.3.3|1>>
-    <associate|auto-90|<tuple|3.1|17>>
-    <associate|auto-91|<tuple|3.1.1|17>>
-    <associate|auto-92|<tuple|3.1.1.0.2|17>>
-    <associate|auto-93|<tuple|3.1.2|17>>
-    <associate|auto-94|<tuple|3.1.3|18>>
-    <associate|auto-95|<tuple|3.2|18>>
-    <associate|auto-96|<tuple|3.3|18>>
-    <associate|auto-97|<tuple|3.3.1|18>>
-    <associate|auto-98|<tuple|3.3.2|19>>
-    <associate|auto-99|<tuple|3.3.2.0.3|19>>
+    <associate|auto-90|<tuple|4|17>>
+    <associate|auto-91|<tuple|4.1|17>>
+    <associate|auto-92|<tuple|4.1.1|17>>
+    <associate|auto-93|<tuple|4.1.1.0.2|17>>
+    <associate|auto-94|<tuple|4.1.2|18>>
+    <associate|auto-95|<tuple|4.1.3|18>>
+    <associate|auto-96|<tuple|4.2|18>>
+    <associate|auto-97|<tuple|4.3|18>>
+    <associate|auto-98|<tuple|4.3.1|19>>
+    <associate|auto-99|<tuple|4.3.2|19>>
   </collection>
 </references>
 
@@ -2622,92 +2645,96 @@
       Codd <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-88>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Definizioni>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Regole
+      di Armstrong> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-89><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Miste
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Definizioni>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-90>>
+      <no-break><pageref|auto-90><vspace|0.5fn>
 
-      <with|par-left|<quote|2tab>|3.1.1<space|2spc>Chiusura transitiva di un
-      insieme di dipendenze <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Miste
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-91>>
 
+      <with|par-left|<quote|2tab>|4.1.1<space|2spc>Chiusura transitiva di un
+      insieme di dipendenze <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-92>>
+
       Dalla soluzione dell'esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92><vspace|0.15fn>
+      <no-break><pageref|auto-93><vspace|0.15fn>
 
-      <with|par-left|<quote|2tab>|3.1.2<space|2spc>Chiusura di un insieme di
+      <with|par-left|<quote|2tab>|4.1.2<space|2spc>Chiusura di un insieme di
       attributi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93>>
-
-      <with|par-left|<quote|2tab>|3.1.3<space|2spc>Algoritmo per il calcolo
-      della chiusura di un insieme di attributi X
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-94>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>ACID
+      <with|par-left|<quote|2tab>|4.1.3<space|2spc>Algoritmo per il calcolo
+      della chiusura di un insieme di attributi X
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-95>>
 
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Database NOSQL
+      <with|par-left|<quote|1tab>|4.2<space|2spc>ACID
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-96>>
 
-      <with|par-left|<quote|2tab>|3.3.1<space|2spc>Vantaggi e svantaggi
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Database NOSQL
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-97>>
 
-      <with|par-left|<quote|2tab>|3.3.2<space|2spc>Differenze con un database
-      SQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|4.3.1<space|2spc>Vantaggi e svantaggi
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-98>>
 
-      Da soluzione esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-99><vspace|0.15fn>
+      <with|par-left|<quote|2tab>|4.3.2<space|2spc>Differenze con un database
+      SQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-99>>
 
-      <with|par-left|<quote|2tab>|3.3.3<space|2spc>Equivalente ACID per
+      Da soluzione esame: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-100><vspace|0.15fn>
+
+      <with|par-left|<quote|2tab>|4.3.3<space|2spc>Equivalente ACID per
       database NOSQL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-100>>
+      <no-break><pageref|auto-101>>
 
       Da una domanda di un compito: <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-101><vspace|0.15fn>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Schedule
-      (pratico)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-102><vspace|0.5fn>
+      <no-break><pageref|auto-102><vspace|0.15fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Schedule
-      (molto teorico)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      (pratico)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-103><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|5.1<space|2spc>VSR
-      \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-104>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Schedule
+      (molto teorico)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-104><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|5.2<space|2spc>CSR
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.1<space|2spc>VSR
+      \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-105>>
 
-      <with|par-left|<quote|1tab>|5.3<space|2spc>Locking a due fasi
+      <with|par-left|<quote|1tab>|6.2<space|2spc>CSR
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-106>>
 
-      <with|par-left|<quote|2tab>|5.3.1<space|2spc>Come determinare se uno
-      schedule è generato da uno scheduer basato su 2PL
+      <with|par-left|<quote|1tab>|6.3<space|2spc>Locking a due fasi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-107>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Pratico
-      basi di dati> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-108><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|6.1<space|2spc>Creazione di un trigger
+      <with|par-left|<quote|2tab>|6.3.1<space|2spc>Come determinare se uno
+      schedule è generato da uno scheduer basato su 2PL
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-109>>
+      <no-break><pageref|auto-108>>
 
-      <with|par-left|<quote|1tab>|6.2<space|2spc>Creazione di una stored
-      procedure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Pratico
+      basi di dati> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-109><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|7.1<space|2spc>Creazione di un trigger
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-110>>
+
+      <with|par-left|<quote|1tab>|7.2<space|2spc>Creazione di una stored
+      procedure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-111>>
     </associate>
   </collection>
 </auxiliary>
