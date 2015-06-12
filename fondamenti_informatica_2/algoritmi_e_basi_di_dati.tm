@@ -1447,8 +1447,6 @@
     }
   </cpp-code>
 
-  <subsection|Parametri costanti>
-
   <subsection|Variabili statiche>
 
   Ogni ``tipo di funzione'' possiede la propria variabile statica
@@ -2179,18 +2177,18 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|2.3.4|1>>
-    <associate|auto-100|<tuple|4.3.2.0.3|19>>
-    <associate|auto-101|<tuple|4.3.3|19>>
-    <associate|auto-102|<tuple|4.3.3.0.4|19>>
-    <associate|auto-103|<tuple|5|20>>
-    <associate|auto-104|<tuple|6|20>>
-    <associate|auto-105|<tuple|6.1|20>>
-    <associate|auto-106|<tuple|6.2|20>>
-    <associate|auto-107|<tuple|6.3|20>>
-    <associate|auto-108|<tuple|6.3.1|21>>
-    <associate|auto-109|<tuple|7|21>>
+    <associate|auto-100|<tuple|4.3.3|19>>
+    <associate|auto-101|<tuple|4.3.3.0.4|19>>
+    <associate|auto-102|<tuple|5|19>>
+    <associate|auto-103|<tuple|6|20>>
+    <associate|auto-104|<tuple|6.1|20>>
+    <associate|auto-105|<tuple|6.2|20>>
+    <associate|auto-106|<tuple|6.3|20>>
+    <associate|auto-107|<tuple|6.3.1|20>>
+    <associate|auto-108|<tuple|7|21>>
+    <associate|auto-109|<tuple|7.1|21>>
     <associate|auto-11|<tuple|2.4|1>>
-    <associate|auto-110|<tuple|7.1|21>>
+    <associate|auto-110|<tuple|7.2|21>>
     <associate|auto-111|<tuple|7.2|?>>
     <associate|auto-112|<tuple|7.2|?>>
     <associate|auto-12|<tuple|3|1>>
@@ -2262,33 +2260,33 @@
     <associate|auto-72|<tuple|12|14>>
     <associate|auto-73|<tuple|12.1|14>>
     <associate|auto-74|<tuple|12.2|14>>
-    <associate|auto-75|<tuple|12.3|14>>
-    <associate|auto-76|<tuple|13|14>>
-    <associate|auto-77|<tuple|13.1|14>>
-    <associate|auto-78|<tuple|13.2|15>>
-    <associate|auto-79|<tuple|13.3|15>>
+    <associate|auto-75|<tuple|13|14>>
+    <associate|auto-76|<tuple|13.1|14>>
+    <associate|auto-77|<tuple|13.2|14>>
+    <associate|auto-78|<tuple|13.3|15>>
+    <associate|auto-79|<tuple|2|15>>
     <associate|auto-8|<tuple|2.3.2|1>>
-    <associate|auto-80|<tuple|2|15>>
-    <associate|auto-81|<tuple|1|15>>
-    <associate|auto-82|<tuple|1.1|15>>
-    <associate|auto-83|<tuple|2|15>>
-    <associate|auto-84|<tuple|2.1|16>>
-    <associate|auto-85|<tuple|2.2|16>>
-    <associate|auto-86|<tuple|2.3|17>>
-    <associate|auto-87|<tuple|2.3.0.0.1|17>>
-    <associate|auto-88|<tuple|2.4|17>>
-    <associate|auto-89|<tuple|3|17>>
+    <associate|auto-80|<tuple|1|15>>
+    <associate|auto-81|<tuple|1.1|15>>
+    <associate|auto-82|<tuple|2|15>>
+    <associate|auto-83|<tuple|2.1|15>>
+    <associate|auto-84|<tuple|2.2|16>>
+    <associate|auto-85|<tuple|2.3|16>>
+    <associate|auto-86|<tuple|2.3.0.0.1|17>>
+    <associate|auto-87|<tuple|2.4|17>>
+    <associate|auto-88|<tuple|3|17>>
+    <associate|auto-89|<tuple|4|17>>
     <associate|auto-9|<tuple|2.3.3|1>>
-    <associate|auto-90|<tuple|4|17>>
-    <associate|auto-91|<tuple|4.1|17>>
-    <associate|auto-92|<tuple|4.1.1|17>>
-    <associate|auto-93|<tuple|4.1.1.0.2|17>>
-    <associate|auto-94|<tuple|4.1.2|18>>
-    <associate|auto-95|<tuple|4.1.3|18>>
-    <associate|auto-96|<tuple|4.2|18>>
-    <associate|auto-97|<tuple|4.3|18>>
-    <associate|auto-98|<tuple|4.3.1|19>>
-    <associate|auto-99|<tuple|4.3.2|19>>
+    <associate|auto-90|<tuple|4.1|17>>
+    <associate|auto-91|<tuple|4.1.1|17>>
+    <associate|auto-92|<tuple|4.1.1.0.2|17>>
+    <associate|auto-93|<tuple|4.1.2|17>>
+    <associate|auto-94|<tuple|4.1.3|18>>
+    <associate|auto-95|<tuple|4.2|18>>
+    <associate|auto-96|<tuple|4.3|18>>
+    <associate|auto-97|<tuple|4.3.1|18>>
+    <associate|auto-98|<tuple|4.3.2|19>>
+    <associate|auto-99|<tuple|4.3.2.0.3|19>>
   </collection>
 </references>
 
