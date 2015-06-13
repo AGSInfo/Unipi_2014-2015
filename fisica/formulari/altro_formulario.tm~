@@ -86,14 +86,7 @@
 
   <subsection|Variazione di energia potenziale>
 
-  Quando una carica di prova positiva <math|q<rsub|0>> si sposta dal punto
-  <math|<around*|(|A|)>> al punto <math|<around*|(|B|)>> in un campo
-  elettrico <math|<wide|E|\<vect\>>>, la variazione di energia potenziale del
-  sistema carica-campo è
-
-  <\equation*>
-    \<Delta\>U=-q<rsub|0>*<big|int><rsub|<around*|(|A|)>><rsup|<around*|(|B|)>><wide|E|\<vect\>>*\<cdot\>d<wide|s|\<vect\>>
-  </equation*>
+  \;
 
   <section|Campo magnetico>
 
