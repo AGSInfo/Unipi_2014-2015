@@ -1,0 +1,2 @@
+La costante elastica della molla Ã¨ nota ed Ã¨ pari a K=15N/m.
+
