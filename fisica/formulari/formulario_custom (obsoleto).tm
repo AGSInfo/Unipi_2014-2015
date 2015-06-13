@@ -28,6 +28,8 @@
       W=F*\<Delta\>r*cos<around*|(|\<theta\>|)>
     </equation*>
 
+    Il lavoro può anche essere negativo!
+
     <\item*>
       Lavoro di una forza variabile
     </item*>
@@ -370,6 +372,9 @@
       2<space|2spc>Costanti di uso comune
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
+
+      3<space|2spc>Momenti d'inerzia <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3>
     </associate>
   </collection>
 </auxiliary>
