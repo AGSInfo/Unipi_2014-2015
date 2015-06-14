@@ -110,4 +110,4 @@
  - Rotore (va saputa?)
  - Componente convessa
  - Derivata di una curva
-[to be continued..]
+ - Dominio Normale
