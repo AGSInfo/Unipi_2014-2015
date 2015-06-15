@@ -130,7 +130,7 @@
   Data una superficie chiusa,
 
   <\equation*>
-    \<Phi\><rsub|E>=<big|oint><wide|E|\<vect\>>\<cdot\>d<wide|A|\<vect\>>=<frac|<big|sum>q<rsub|in>|\<varepsilon\><rsub|0>>
+    \<Phi\><rsub|S><around*|(|<wide|E|\<vect\>>|)>=<big|oint><wide|E|\<vect\>>\<cdot\>d<wide|A|\<vect\>>=<frac|<big|sum>q<rsub|in>|\<varepsilon\><rsub|0>>
   </equation*>
 
   \;
@@ -142,6 +142,14 @@
   cariche interne diviso <math|\<varepsilon\><rsub|0>>. Le cariche esterne
   non danno un contributo al flusso in quanto le linee di forza entrano ed
   escono, quindi la somma dei contributi è nulla.
+
+  <subsection|Relazione con il campo magnetico>
+
+  Un campo magnetico variabile genera un campo elettrico
+
+  <\equation*>
+    <big|oint><rsub|L><around*|(|<wide|E|\<vect\>>|)>=-<frac|d|d*t>*\<Phi\><rsub|S><around*|(|<wide|B|\<vect\>>|)>
+  </equation*>
 
   <subsection|Equilibrio elettrostatico>
 
@@ -237,6 +245,30 @@
   circonferenza di raggio <math|r> e considerando la corrente <math|I> come
   l'unica corrente concatenata alla linea <math|\<gamma\>>.
 
+  <subsection|Teorema di Ampère-Maxwell>
+
+  Rispetto al teorema di Ampère tiene conto anche delle variazioni di campo
+  elettrico
+
+  <\equation*>
+    <big|oint><rsub|\<gamma\>>B*=\<mu\><rsub|0><around*|(|I<rsub|conc>+\<varepsilon\><rsub|0>*<tfrac|\<partial\>\<Phi\><rsub|S><around*|(|<wide|E|\<vect\>>|)>|\<partial\>*t>|)>
+  </equation*>
+
+  La superficie <math|S> ha come bordo <math|\<gamma\>>
+
+  Il termine <math|\<varepsilon\><rsub|0>*<tfrac|\<partial\>\<Phi\><rsub|S><around*|(|<wide|E|\<vect\>>|)>|\<partial\>*t>>
+  prende il nome di <with|font-series|bold|corrente di spostamento>
+
+  \ <subsection|Legge di Gauss per il campo magnetico>
+
+  <\equation*>
+    \<Phi\><rsub|S><around*|(|<wide|B|\<vect\>>|)>=0
+  </equation*>
+
+  Ovvero non è possibile isolare un monopolo magnetico. Un ulteriore
+  conseguenza è che il campo magnetico <math|<wide|B|\<vect\>>> è
+  solenoidale, ovvero è composto da linee chiuse.
+
   <subsection|Particella in movimento in un campo magnetico uniforme>
 
   La traiettoria della particella è circolare, ed il piano del cerchio è
@@ -318,6 +350,9 @@
   </itemize>
 </body>
 
+<initial|<\collection>
+</collection>>
+
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|?>>
@@ -326,15 +361,18 @@
     <associate|auto-12|<tuple|1.9|?>>
     <associate|auto-13|<tuple|1.10|?>>
     <associate|auto-14|<tuple|1.11|?>>
-    <associate|auto-15|<tuple|2|?>>
-    <associate|auto-16|<tuple|2.1|?>>
-    <associate|auto-17|<tuple|2.1.1|?>>
-    <associate|auto-18|<tuple|2.2|?>>
-    <associate|auto-19|<tuple|2.3|?>>
+    <associate|auto-15|<tuple|1.12|?>>
+    <associate|auto-16|<tuple|2|?>>
+    <associate|auto-17|<tuple|2.1|?>>
+    <associate|auto-18|<tuple|2.1.1|?>>
+    <associate|auto-19|<tuple|2.2|?>>
     <associate|auto-2|<tuple|2|?>>
-    <associate|auto-20|<tuple|2.4|?>>
-    <associate|auto-21|<tuple|2.5|?>>
-    <associate|auto-22|<tuple|3|?>>
+    <associate|auto-20|<tuple|2.3|?>>
+    <associate|auto-21|<tuple|2.4|?>>
+    <associate|auto-22|<tuple|2.5|?>>
+    <associate|auto-23|<tuple|2.6|?>>
+    <associate|auto-24|<tuple|2.7|?>>
+    <associate|auto-25|<tuple|3|?>>
     <associate|auto-3|<tuple|1|?>>
     <associate|auto-4|<tuple|1.1|?>>
     <associate|auto-5|<tuple|1.2|?>>
@@ -416,25 +454,29 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>Particella in movimento in
-      un campo magnetico uniforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Teorema di Ampère-Maxwell
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-18>>
 
-      <with|par-left|<quote|1tab>|2.3<space|2spc>Momento di dipolo magnetico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Particella in movimento in
+      un campo magnetico uniforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      <with|par-left|<quote|1tab>|2.4<space|2spc>Campo magnetico generato da
-      un solenoide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.4<space|2spc>Momento di dipolo magnetico
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|1tab>|2.5<space|2spc>Energia potenziale magnetica
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.5<space|2spc>Campo magnetico generato da
+      un solenoide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|1tab>|2.6<space|2spc>Energia potenziale magnetica
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>>
 
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|3<space|2spc>Costanti>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22><vspace|1fn>
+      <no-break><pageref|auto-23><vspace|1fn>
     </associate>
   </collection>
 </auxiliary>
