@@ -151,3 +151,12 @@ b. Dimostrazione della continuità
 15) Condizione del rotore per campi di classe C1 e integrabili (ovvero un campo di classe C1 e integrabile è rotazionale)
 16) CS per l’integrabilità
 17) Se tutte le derivate direzionali in una sfera si annullano a tappeto allora la funzione è costante
+
+### Altra lista
+1) Forma chiusa/esatta
+2) Curva parametrica
+3) Punto interno/esterno
+4) Differenziale
+5) Misura di Lebesgue
+6) Limite per x→x0 f(x) = infinito, f funzione vettoriale
+7) Limite per x→x0 f(x) = -infinito, f funzione da Rn a R
