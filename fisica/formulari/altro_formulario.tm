@@ -247,8 +247,8 @@
 
   <subsection|Teorema di Ampère-Maxwell>
 
-  Rispetto al teorema di Ampère tiene conto anche delle variazioni di campo
-  elettrico
+  Rispetto al teorema di Ampère tiene conto anche delle
+  <with|font-series|bold|variazioni di campo elettrico>
 
   <\equation*>
     <big|oint><rsub|\<gamma\>>B*=\<mu\><rsub|0><around*|(|I<rsub|conc>+\<varepsilon\><rsub|0>*<tfrac|\<partial\>\<Phi\><rsub|S><around*|(|<wide|E|\<vect\>>|)>|\<partial\>*t>|)>
@@ -355,31 +355,31 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?>>
-    <associate|auto-10|<tuple|1.7|?>>
-    <associate|auto-11|<tuple|1.8|?>>
-    <associate|auto-12|<tuple|1.9|?>>
-    <associate|auto-13|<tuple|1.10|?>>
-    <associate|auto-14|<tuple|1.11|?>>
-    <associate|auto-15|<tuple|1.12|?>>
-    <associate|auto-16|<tuple|2|?>>
-    <associate|auto-17|<tuple|2.1|?>>
-    <associate|auto-18|<tuple|2.1.1|?>>
-    <associate|auto-19|<tuple|2.2|?>>
-    <associate|auto-2|<tuple|2|?>>
-    <associate|auto-20|<tuple|2.3|?>>
-    <associate|auto-21|<tuple|2.4|?>>
-    <associate|auto-22|<tuple|2.5|?>>
-    <associate|auto-23|<tuple|2.6|?>>
-    <associate|auto-24|<tuple|2.7|?>>
-    <associate|auto-25|<tuple|3|?>>
-    <associate|auto-3|<tuple|1|?>>
-    <associate|auto-4|<tuple|1.1|?>>
-    <associate|auto-5|<tuple|1.2|?>>
-    <associate|auto-6|<tuple|1.3|?>>
-    <associate|auto-7|<tuple|1.4|?>>
-    <associate|auto-8|<tuple|1.5|?>>
-    <associate|auto-9|<tuple|1.6|?>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|1.7|2>>
+    <associate|auto-11|<tuple|1.8|3>>
+    <associate|auto-12|<tuple|1.9|3>>
+    <associate|auto-13|<tuple|1.10|3>>
+    <associate|auto-14|<tuple|1.11|3>>
+    <associate|auto-15|<tuple|1.12|3>>
+    <associate|auto-16|<tuple|2|4>>
+    <associate|auto-17|<tuple|2.1|4>>
+    <associate|auto-18|<tuple|2.1.1|4>>
+    <associate|auto-19|<tuple|2.2|4>>
+    <associate|auto-2|<tuple|2|1>>
+    <associate|auto-20|<tuple|2.3|4>>
+    <associate|auto-21|<tuple|2.4|4>>
+    <associate|auto-22|<tuple|2.5|5>>
+    <associate|auto-23|<tuple|2.6|5>>
+    <associate|auto-24|<tuple|2.7|5>>
+    <associate|auto-25|<tuple|3|5>>
+    <associate|auto-3|<tuple|1|1>>
+    <associate|auto-4|<tuple|1.1|1>>
+    <associate|auto-5|<tuple|1.2|1>>
+    <associate|auto-6|<tuple|1.3|1>>
+    <associate|auto-7|<tuple|1.4|2>>
+    <associate|auto-8|<tuple|1.5|2>>
+    <associate|auto-9|<tuple|1.6|2>>
   </collection>
 </references>
 
@@ -426,57 +426,65 @@
       Gauss) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|1.8<space|2spc>Equilibrio elettrostatico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.8<space|2spc>Relazione con il campo
+      magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
-      <with|par-left|<quote|1tab>|1.9<space|2spc>Differenza di potenziale
+      <with|par-left|<quote|1tab>|1.9<space|2spc>Equilibrio elettrostatico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|1.10<space|2spc>Variazione di energia
-      potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.10<space|2spc>Differenza di potenziale
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|1.11<space|2spc>Condensatore
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.11<space|2spc>Variazione di energia
+      potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
+
+      <with|par-left|<quote|1tab>|1.12<space|2spc>Condensatore
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Campo
       magnetico> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15><vspace|0.5fn>
+      <no-break><pageref|auto-16><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|2.1<space|2spc>Teorema di Ampère
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-17>>
 
       <with|par-left|<quote|2tab>|2.1.1<space|2spc>Legge di Biot-Savart
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
+      <no-break><pageref|auto-18>>
 
       <with|par-left|<quote|1tab>|2.2<space|2spc>Teorema di Ampère-Maxwell
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
-
-      <with|par-left|<quote|1tab>|2.3<space|2spc>Particella in movimento in
-      un campo magnetico uniforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      <with|par-left|<quote|1tab>|2.4<space|2spc>Momento di dipolo magnetico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Legge di Gauss per il campo
+      magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|1tab>|2.5<space|2spc>Campo magnetico generato da
-      un solenoide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.4<space|2spc>Particella in movimento in
+      un campo magnetico uniforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|1tab>|2.6<space|2spc>Energia potenziale magnetica
+      <with|par-left|<quote|1tab>|2.5<space|2spc>Momento di dipolo magnetico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22>>
 
+      <with|par-left|<quote|1tab>|2.6<space|2spc>Campo magnetico generato da
+      un solenoide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>>
+
+      <with|par-left|<quote|1tab>|2.7<space|2spc>Energia potenziale magnetica
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>>
+
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|3<space|2spc>Costanti>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23><vspace|1fn>
+      <no-break><pageref|auto-25><vspace|1fn>
     </associate>
   </collection>
 </auxiliary>
