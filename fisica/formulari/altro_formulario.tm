@@ -19,9 +19,41 @@
 
   <chapter|Cinematica>
 
-  \;
+  <section|Energia meccanica>
 
-  \;
+  <subsection|Energia cinetica del centro di massa>
+
+  <\equation*>
+    E<rsub|c>=<frac|1|2>*m*v<rsup|2>
+  </equation*>
+
+  <subsection|Energia cinetica di rotazione>
+
+  <\equation*>
+    E<rsub|rot>=<frac|1|2>*m*v<rsup|2>=<frac|1|2>*m*r<rsup|2>*w<rsup|2>
+  </equation*>
+
+  a questo punto si pone <math|m*r<rsup|2>=I> e si ottiene
+
+  <\equation*>
+    E<rsub|rot>=<frac|1|2>*I*w<rsup|2>
+  </equation*>
+
+  <section|Pendolo>
+
+  <subsection|Periodo di oscillazione>
+
+  <subsubsection|Pendolo semplice>
+
+  <\equation*>
+    T=2*\<pi\>*<sqrt|<frac|l|g>>
+  </equation*>
+
+  <subsubsection|Pendolo fisico>
+
+  <\equation*>
+    T=2*\<pi\>*<sqrt|<frac|I|m*g*d>>
+  </equation*>
 
   <chapter|Elettromagnetismo>
 
@@ -350,36 +382,40 @@
   </itemize>
 </body>
 
-<initial|<\collection>
-</collection>>
-
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.7|2>>
-    <associate|auto-11|<tuple|1.8|3>>
-    <associate|auto-12|<tuple|1.9|3>>
-    <associate|auto-13|<tuple|1.10|3>>
-    <associate|auto-14|<tuple|1.11|3>>
-    <associate|auto-15|<tuple|1.12|3>>
-    <associate|auto-16|<tuple|2|4>>
-    <associate|auto-17|<tuple|2.1|4>>
-    <associate|auto-18|<tuple|2.1.1|4>>
-    <associate|auto-19|<tuple|2.2|4>>
-    <associate|auto-2|<tuple|2|1>>
-    <associate|auto-20|<tuple|2.3|4>>
-    <associate|auto-21|<tuple|2.4|4>>
-    <associate|auto-22|<tuple|2.5|5>>
-    <associate|auto-23|<tuple|2.6|5>>
-    <associate|auto-24|<tuple|2.7|5>>
-    <associate|auto-25|<tuple|3|5>>
-    <associate|auto-3|<tuple|1|1>>
-    <associate|auto-4|<tuple|1.1|1>>
-    <associate|auto-5|<tuple|1.2|1>>
-    <associate|auto-6|<tuple|1.3|1>>
-    <associate|auto-7|<tuple|1.4|2>>
-    <associate|auto-8|<tuple|1.5|2>>
-    <associate|auto-9|<tuple|1.6|2>>
+    <associate|auto-10|<tuple|1|2>>
+    <associate|auto-11|<tuple|1.1|3>>
+    <associate|auto-12|<tuple|1.2|3>>
+    <associate|auto-13|<tuple|1.3|3>>
+    <associate|auto-14|<tuple|1.4|3>>
+    <associate|auto-15|<tuple|1.5|3>>
+    <associate|auto-16|<tuple|1.6|4>>
+    <associate|auto-17|<tuple|1.7|4>>
+    <associate|auto-18|<tuple|1.8|4>>
+    <associate|auto-19|<tuple|1.9|4>>
+    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-20|<tuple|1.10|4>>
+    <associate|auto-21|<tuple|1.11|4>>
+    <associate|auto-22|<tuple|1.12|5>>
+    <associate|auto-23|<tuple|2|5>>
+    <associate|auto-24|<tuple|2.1|5>>
+    <associate|auto-25|<tuple|2.1.1|5>>
+    <associate|auto-26|<tuple|2.2|?>>
+    <associate|auto-27|<tuple|2.3|?>>
+    <associate|auto-28|<tuple|2.4|?>>
+    <associate|auto-29|<tuple|2.5|?>>
+    <associate|auto-3|<tuple|1.1|1>>
+    <associate|auto-30|<tuple|2.6|?>>
+    <associate|auto-31|<tuple|2.7|?>>
+    <associate|auto-32|<tuple|3|?>>
+    <associate|auto-4|<tuple|1.2|1>>
+    <associate|auto-5|<tuple|2|1>>
+    <associate|auto-6|<tuple|2.1|1>>
+    <associate|auto-7|<tuple|2.1.1|2>>
+    <associate|auto-8|<tuple|2.1.2|2>>
+    <associate|auto-9|<tuple|2|2>>
   </collection>
 </references>
 
