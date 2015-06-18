@@ -19,6 +19,29 @@
 
   <chapter|Cinematica>
 
+  <section|Calcolo del centro di massa>
+
+  <subsection|In un sistema di <math|N> punti materiali>
+
+  (da verificare)
+
+  <\equation*>
+    R<rsub|x>=<frac|m<rsub|1>*r<rsub|1<rsub|x>>+m<rsub|2>*r<rsub|2<rsub|x>>+\<ldots\>+m<rsub|n>*r<rsub|n<rsub|x>>|M>=<frac|<big|sum><rsub|i=1><rsup|n>m<rsub|i>*r<rsub|i<rsub|x>>|<big|sum><rsub|i=1><rsup|n>m<rsub|i>>
+  </equation*>
+
+  dove <math|M=m<rsub|1>+m<rsub|2>+\<ldots\>m<rsub|n>>, <math|R<rsub|x>> è la
+  componente <math|x> del vettore centro di massa, <math|r<rsub|i<rsub|x>>> è
+  la componente <math|x> del vettore del centro di massa <math|m<rsub|i>>
+
+  <subsection|In un sistema continuo>
+
+  <\equation*>
+    M<around*|(|\<Omega\>|)>=<big|int><rsub|\<Omega\>>\<rho\><around*|(|r|)>*d<with|font-shape|italic|V>
+  </equation*>
+
+  Dove <math|\<rho\><around*|(|r|)>> è una funzione scalare rappresentante la
+  densità
+
   <section|Energia meccanica>
 
   <subsection|Energia cinetica del centro di massa>
@@ -37,6 +60,62 @@
 
   <\equation*>
     E<rsub|rot>=<frac|1|2>*I*w<rsup|2>
+  </equation*>
+
+  <section|Impulso>
+
+  (da verificare)
+
+  <math|F=m*a> \ \ \ <math|a=<frac|v<rsub|2>-v<rsub|1>|t<rsub|2>-t<rsub|1>>>
+  \ \ \ <math|F*<around*|(|t<rsub|2>-t<rsub|1>|)>=m*v<rsub|2>-m*v<rsub|1>>
+  \ \ \ <math|q=m*v> \ \ <math|I=F*<around*|(|t<rsub|2>-t<rsub|1>|)>>
+
+  dove <math|I> è l'impulso, che rappresenta il prodotto della forza
+  applicata ad un corpo per l'intervallo di tempo in cui tale forza viene
+  applicata.
+
+  Si ha quindi che l'impulso è la variazione della quantità di moto
+
+  <\equation*>
+    \<Delta\><wide|p|\<vect\>>=<big|int><rsub|t<rsub|0>><rsup|t<rsub|1>><wide|F|\<vect\>>*dt
+  </equation*>
+
+  <subsection|Teorema dell'impulso>
+
+  Il teorema dell'impulso (o della variazione della quantità di moto)
+  consiste nell'affermazione: il secondo principio della dinamica comporta
+  che l'impulso corrisponde alla variazione della quantità di moto del sistma
+  in un intervallo temporale. Infatti per il secondo principio:
+
+  <\equation*>
+    <wide|F|\<vect\>>=<frac|d<wide|p|\<vect\>>|d*t>
+  </equation*>
+
+  Sfruttando la definizione di differenziale di una funzione
+
+  <\equation*>
+    d<wide|p|\<vect\>>=<wide|F|\<vect\>>*d*t
+  </equation*>
+
+  Integrando entrando ambo i membri tra due istanti <math|t<rsub|0>> e
+  <math|t<rsub|1>> otteniamo:
+
+  <\equation*>
+    <big|int><rsub|<wide|p|\<vect\>><around*|(|t<rsub|0>|)>><rsup|<wide|p|\<vect\>><around*|(|t<rsub|1>|)>>d<wide|p|\<vect\>>=<big|int><rsub|t<rsub|0>><rsup|t<rsub|1>><wide|F|\<vect\>>*d*t
+  </equation*>
+
+  ma la primitiva di un differenziale è la grandezza differenziata, e in base
+  al teorema di Torricelli:
+
+  <\equation*>
+    <wide|p|\<vect\>><around*|(|t<rsub|1>|)>-<wide|p|\<vect\>><around*|(|t<rsub|0>|)>=<big|int><rsub|t<rsub|0>><rsup|t<rsub|1>><wide|F|\<vect\>>*dt
+  </equation*>
+
+  Nel caso in cui la forza sia costante, la si può portare fuori dal segno
+  d'integrale, cosicché:
+
+  <\equation*>
+    \<Delta\><wide|p|\<vect\>>=<wide|F|\<vect\>>*\<Delta\>t
   </equation*>
 
   <section|Pendolo>
@@ -400,45 +479,53 @@
       m<rsub|e>\<cong\>9.1093826\<times\>10<rsup|-31> kg
     </equation*>
   </itemize>
+
+  <chapter|Momenti d'inerzia>
+
+  \;
 </body>
 
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1|2>>
-    <associate|auto-11|<tuple|1.1|3>>
-    <associate|auto-12|<tuple|1.2|3>>
-    <associate|auto-13|<tuple|1.3|3>>
-    <associate|auto-14|<tuple|1.4|3>>
-    <associate|auto-15|<tuple|1.5|3>>
-    <associate|auto-16|<tuple|1.6|4>>
-    <associate|auto-17|<tuple|1.7|4>>
-    <associate|auto-18|<tuple|1.7.1|4>>
-    <associate|auto-19|<tuple|1.8|4>>
+    <associate|auto-10|<tuple|4|2>>
+    <associate|auto-11|<tuple|4.1|3>>
+    <associate|auto-12|<tuple|4.1.1|3>>
+    <associate|auto-13|<tuple|4.1.2|3>>
+    <associate|auto-14|<tuple|2|3>>
+    <associate|auto-15|<tuple|1|3>>
+    <associate|auto-16|<tuple|1.1|4>>
+    <associate|auto-17|<tuple|1.2|4>>
+    <associate|auto-18|<tuple|1.3|4>>
+    <associate|auto-19|<tuple|1.4|4>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|1.9|4>>
-    <associate|auto-21|<tuple|1.10|4>>
-    <associate|auto-22|<tuple|1.11|5>>
-    <associate|auto-23|<tuple|1.12|5>>
-    <associate|auto-24|<tuple|2|5>>
-    <associate|auto-25|<tuple|2.1|5>>
-    <associate|auto-26|<tuple|2.1.1|?>>
-    <associate|auto-27|<tuple|2.2|?>>
-    <associate|auto-28|<tuple|2.3|?>>
-    <associate|auto-29|<tuple|2.4|?>>
+    <associate|auto-20|<tuple|1.5|4>>
+    <associate|auto-21|<tuple|1.6|4>>
+    <associate|auto-22|<tuple|1.7|5>>
+    <associate|auto-23|<tuple|1.7.1|5>>
+    <associate|auto-24|<tuple|1.8|5>>
+    <associate|auto-25|<tuple|1.9|5>>
+    <associate|auto-26|<tuple|1.10|?>>
+    <associate|auto-27|<tuple|1.11|?>>
+    <associate|auto-28|<tuple|1.12|?>>
+    <associate|auto-29|<tuple|2|?>>
     <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-30|<tuple|2.5|?>>
-    <associate|auto-31|<tuple|2.6|?>>
-    <associate|auto-32|<tuple|2.7|?>>
-    <associate|auto-33|<tuple|3|?>>
-    <associate|auto-34|<tuple|3|?>>
-    <associate|auto-35|<tuple|3|?>>
+    <associate|auto-30|<tuple|2.1|?>>
+    <associate|auto-31|<tuple|2.1.1|?>>
+    <associate|auto-32|<tuple|2.2|?>>
+    <associate|auto-33|<tuple|2.3|?>>
+    <associate|auto-34|<tuple|2.4|?>>
+    <associate|auto-35|<tuple|2.5|?>>
+    <associate|auto-36|<tuple|2.6|?>>
+    <associate|auto-37|<tuple|2.7|?>>
+    <associate|auto-38|<tuple|3|?>>
+    <associate|auto-39|<tuple|4|?>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-5|<tuple|2|1>>
     <associate|auto-6|<tuple|2.1|1>>
-    <associate|auto-7|<tuple|2.1.1|2>>
-    <associate|auto-8|<tuple|2.1.2|2>>
-    <associate|auto-9|<tuple|2|2>>
+    <associate|auto-7|<tuple|2.2|2>>
+    <associate|auto-8|<tuple|3|2>>
+    <associate|auto-9|<tuple|3.1|2>>
   </collection>
 </references>
 
@@ -513,65 +600,69 @@
       Gauss) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
 
+      <with|par-left|<quote|2tab>|1.7.1<space|2spc>Scelta della superficie
+      <with|mode|<quote|math>|E> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18>>
+
       <with|par-left|<quote|1tab>|1.8<space|2spc>Relazione con il campo
       magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
+      <no-break><pageref|auto-19>>
 
       <with|par-left|<quote|1tab>|1.9<space|2spc>Equilibrio elettrostatico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-20>>
 
       <with|par-left|<quote|1tab>|1.10<space|2spc>Differenza di potenziale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <no-break><pageref|auto-21>>
 
       <with|par-left|<quote|1tab>|1.11<space|2spc>Variazione di energia
       potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
+      <no-break><pageref|auto-22>>
 
       <with|par-left|<quote|1tab>|1.12<space|2spc>Condensatore
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-23>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Campo
       magnetico> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23><vspace|0.5fn>
+      <no-break><pageref|auto-24><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|2.1<space|2spc>Teorema di Ampère
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
+      <no-break><pageref|auto-25>>
 
       <with|par-left|<quote|2tab>|2.1.1<space|2spc>Legge di Biot-Savart
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
+      <no-break><pageref|auto-26>>
 
       <with|par-left|<quote|1tab>|2.2<space|2spc>Teorema di Ampère-Maxwell
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
+      <no-break><pageref|auto-27>>
 
       <with|par-left|<quote|1tab>|2.3<space|2spc>Legge di Gauss per il campo
       magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|1tab>|2.4<space|2spc>Particella in movimento in
       un campo magnetico uniforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|1tab>|2.5<space|2spc>Momento di dipolo magnetico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
+      <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|1tab>|2.6<space|2spc>Campo magnetico generato da
       un solenoide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
+      <no-break><pageref|auto-31>>
 
       <with|par-left|<quote|1tab>|2.7<space|2spc>Energia potenziale magnetica
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-32>>
 
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|3<space|2spc>Costanti>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32><vspace|1fn>
+      <no-break><pageref|auto-33><vspace|1fn>
     </associate>
   </collection>
 </auxiliary>
