@@ -34,7 +34,9 @@
   Un insieme <math|\<Omega\>\<subseteq\>R<rsup|n>> si dirà semplicemente
   connesso se ogni curva chiusa <math|\<gamma\>:<around*|[|0,1|]>\<rightarrow\>\<Omega\>>
   è omotopa in <math|\<Omega\>> ad una curva costante
-  <math|\<sigma\><around*|(|t|)>\<equiv\>x<rsub|0><space|1em>\<forall\>t\<in\><around*|[|0,1|]>>
+  <math|\<sigma\><around*|(|t|)>\<equiv\>x<rsub|0><space|1em>\<forall\>t\<in\><around*|[|0,1|]>>.
+  In <math|R<rsup|2>> un insieme è semplicemente connesso se è connesso
+  ``senza buchi''.
 
   <subsubsection|Insieme aperto>
 
@@ -80,17 +82,19 @@
 
   <\enumerate>
     <item>Verifico che la funzione <math|f<around*|(|x,y|)>> sia continua in
-    <math|<around*|(|x<rsub|0>,y<rsub|0>|)>>
+    <math|<around*|(|x<rsub|0>,y<rsub|0>|)>>, utilizzando il limite se
+    necessario
 
-    <item>Calcolo le derivate parziali utilizzando il limite, verificando che
-    entrambe siano <math|\<less\>\<infty\>>
+    <item>Verifico che la funzione sia derivabile calcolando le derivate
+    parziali utilizzando il limite, verificando che entrambe siano
+    <math|\<less\>\<infty\>>
 
     <\equation*>
-      lim<rsub|h\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|h>
+      f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)><space|1em>=<space|1em>lim<rsub|h\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|h>
     </equation*>
 
     <\equation*>
-      lim<rsub|k\<rightarrow\>0><frac|f<around*|(|x<rsub|0>,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|k>
+      f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)><space|1em>=<space|1em>lim<rsub|k\<rightarrow\>0><frac|f<around*|(|x<rsub|0>,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|k>
     </equation*>
 
     <with|font-series|bold|Teorema del differenziale totale:> se <math|A> ha
@@ -102,6 +106,58 @@
     <\equation*>
       lim<rsub|<around*|(|h,k|)>\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>|<sqrt|h<rsup|2>+k<rsup|2>>>
     </equation*>
+  </enumerate>
+
+  <subsection|Calcolare il potenziale di una forma differenziale>
+
+  <\equation*>
+    <text|Forma differenziale >w<around*|(|x,y|)>=A<rsub|1><around*|(|x,y|)>*dx+A<rsub|2><around*|(|x,y|)>*dy
+  </equation*>
+
+  \;
+
+  Data una forma differenziale <math|A<rsub|1><around*|(|x,y|)>*dx+A<rsub|2><around*|(|x,y|)>*dy>
+
+  <\enumerate>
+    <item>Controllo che la forma differenziale sia chiusa (il campo associato
+    <math|A=<around*|(|A<rsub|1><around*|(|x,y|)>,A<rsub|2><around*|(|x,y|)>|)>>
+    deve essere irrotazionale)
+
+    <\equation*>
+      <around*|(|A<rsub|1>|)><rsub|y>=<around*|(|A<rsub|2>|)><rsub|x>
+    </equation*>
+
+    Se la forma non è chiusa, significa che non può essere esatta e quindi
+    neanche integrabile (grazie alla condizione del rotore) [fine].
+
+    <item>Se il dominio è semplicemente connesso, oltre ad essere chiusa è
+    anche esatta e quindi la forma è integrabile [fine].
+
+    <item>Calcolo manualmente una primitiva
+
+    <item>Verifico che <math|\<nabla\>F=A>
+  </enumerate>
+
+  <subparagraph|Metodo manuale per il calcolo della primitiva>
+
+  <\enumerate>
+    <item>Calcolo\ 
+
+    <\equation*>
+      <big|int><around*|[|A<rsub|1><around*|(|x,y|)>|]>*dx=f<around*|(|x,y|)>+C<around*|(|y|)>
+    </equation*>
+
+    <item>Derivo <math|f<around*|(|x,y|)>+C<around*|(|y|)>> rispetto a
+    <math|y> e pongo la derivata = <math|A<rsub|2><around*|(|x,y|)>>
+
+    <\equation*>
+      <frac|d|dy><around*|[|f<around*|(|x,y|)>+C<around*|(|y|)>|]>=A<rsub|2><around*|(|x,y|)>
+    </equation*>
+
+    <item>Ricavo <math|>C (eventulmente integrando
+    <math|C<rprime|'><around*|(|y|)>> del passaggio precedente) e sostituisco
+    il valore trovato in <math|f<around*|(|x,y|)>+C<around*|(|y|)>>, il
+    risultato è il potenziale (ovvero una primitiva)
   </enumerate>
 
   <subsection|Lunghezza di una curva>
@@ -494,56 +550,6 @@
     <text|(formula di ordine I)> \<noplus\>+<frac|1|2>*f<rsub|x*x><around*|(|x<rsub|0>,y<rsub|0>|)><around*|(|x-x<rsub|0>|)><rsup|2>+f<rsub|x*y><around*|(|x<rsub|0>,y<rsub|0>|)><around*|(|x-x<rsub|0>|)><around*|(|y-y<rsub|0>|)>+<frac|1|2>f<rsub|y*y><around*|(|x<rsub|0>,y<rsub|0>|)><around*|(|y-y<rsub|0>|)><rsup|2>
   </equation*>
 
-  <subsection|Calcolare il potenziale di una forma differenziale>
-
-  <\equation*>
-    <text|Forma differenziale >w<around*|(|x,y|)>=A<rsub|1><around*|(|x,y|)>*dx+A<rsub|2><around*|(|x,y|)>*dy
-  </equation*>
-
-  \;
-
-  Data una forma differenziale <math|A<rsub|1><around*|(|x,y|)>*dx+A<rsub|2><around*|(|x,y|)>*dy>
-
-  <\enumerate>
-    <item>Controllo che la forma differenziale sia chiusa (il campo associato
-    <math|A=<around*|(|A<rsub|1><around*|(|x,y|)>,A<rsub|2><around*|(|x,y|)>|)>>
-    deve essere irrotazionale)
-
-    <\equation*>
-      <around*|(|A<rsub|1>|)><rsub|y>=<around*|(|A<rsub|2>|)><rsub|x>
-    </equation*>
-
-    Se la forma non è chiusa, significa che non può essere esatta.
-
-    <item>Se il dominio è semplicemente connesso, essendo una forma chiusa è
-    anche esatta e quindi la forma è integrabile
-
-    <item>Se il dominio non è semplicemente connesso, devo calcolare
-    manualmente una primitiva e verificare che <math|\<nabla\>F=A>
-  </enumerate>
-
-  <subparagraph|Metodo manuale per il calcolo della primitiva>
-
-  <\enumerate>
-    <item>Calcolo\ 
-
-    <\equation*>
-      <big|int><around*|[|A<rsub|1><around*|(|x,y|)>|]>*dx=f<around*|(|x,y|)>+C<around*|(|y|)>
-    </equation*>
-
-    <item>Derivo <math|f<around*|(|x,y|)>+C<around*|(|y|)>> rispetto a
-    <math|y> e pongo la derivata = <math|A<rsub|2><around*|(|x,y|)>>
-
-    <\equation*>
-      <frac|d|dy><around*|[|f<around*|(|x,y|)>+C<around*|(|y|)>|]>=A<rsub|2><around*|(|x,y|)>
-    </equation*>
-
-    <item>Ricavo <math|>C (eventulmente integrando
-    <math|C<rprime|'><around*|(|y|)>> del passaggio precedente) e sostituisco
-    il valore trovato in <math|f<around*|(|x,y|)>+C<around*|(|y|)>>, il
-    risultato è il potenziale (ovvero una primitiva)
-  </enumerate>
-
   <subsection|Massimi e minimi>
 
   Devo considerare i punti critici della funzione pondendo tutte le derivate
@@ -920,35 +926,35 @@
     <associate|auto-10|<tuple|1.3.1|3>>
     <associate|auto-11|<tuple|1.4|3>>
     <associate|auto-12|<tuple|1.5|4>>
-    <associate|auto-13|<tuple|1.6|4>>
-    <associate|auto-14|<tuple|1.7|4>>
-    <associate|auto-15|<tuple|1.8|4>>
-    <associate|auto-16|<tuple|1.9|4>>
-    <associate|auto-17|<tuple|1|5>>
-    <associate|auto-18|<tuple|2|5>>
-    <associate|auto-19|<tuple|1.10|5>>
+    <associate|auto-13|<tuple|1|4>>
+    <associate|auto-14|<tuple|1.6|4>>
+    <associate|auto-15|<tuple|1.7|4>>
+    <associate|auto-16|<tuple|1.8|4>>
+    <associate|auto-17|<tuple|1.9|5>>
+    <associate|auto-18|<tuple|1.10|5>>
+    <associate|auto-19|<tuple|2|5>>
     <associate|auto-2|<tuple|1.1|3>>
     <associate|auto-20|<tuple|3|5>>
     <associate|auto-21|<tuple|1.11|6>>
-    <associate|auto-22|<tuple|1.11.1|6>>
-    <associate|auto-23|<tuple|1.11.2|6>>
-    <associate|auto-24|<tuple|4|6>>
-    <associate|auto-25|<tuple|5|6>>
-    <associate|auto-26|<tuple|1.11.3|6>>
-    <associate|auto-27|<tuple|1.12|6>>
-    <associate|auto-28|<tuple|6|6>>
-    <associate|auto-29|<tuple|7|7>>
+    <associate|auto-22|<tuple|4|6>>
+    <associate|auto-23|<tuple|1.12|6>>
+    <associate|auto-24|<tuple|1.12.1|6>>
+    <associate|auto-25|<tuple|1.12.2|6>>
+    <associate|auto-26|<tuple|5|6>>
+    <associate|auto-27|<tuple|6|6>>
+    <associate|auto-28|<tuple|1.12.3|6>>
+    <associate|auto-29|<tuple|1.13|7>>
     <associate|auto-3|<tuple|1.1.1|3>>
-    <associate|auto-30|<tuple|1.13|7>>
-    <associate|auto-31|<tuple|1.14|7>>
-    <associate|auto-32|<tuple|1.15|7>>
-    <associate|auto-33|<tuple|1.16|8>>
-    <associate|auto-34|<tuple|1.17|8>>
-    <associate|auto-35|<tuple|1.18|8>>
-    <associate|auto-36|<tuple|1.18.1|8>>
-    <associate|auto-37|<tuple|1.18.2|8>>
-    <associate|auto-38|<tuple|1.19|8>>
-    <associate|auto-39|<tuple|8|8>>
+    <associate|auto-30|<tuple|7|7>>
+    <associate|auto-31|<tuple|8|7>>
+    <associate|auto-32|<tuple|1.14|7>>
+    <associate|auto-33|<tuple|1.15|8>>
+    <associate|auto-34|<tuple|1.16|8>>
+    <associate|auto-35|<tuple|1.17|8>>
+    <associate|auto-36|<tuple|1.18|8>>
+    <associate|auto-37|<tuple|1.19|8>>
+    <associate|auto-38|<tuple|1.19.1|8>>
+    <associate|auto-39|<tuple|1.19.2|8>>
     <associate|auto-4|<tuple|1.1.2|3>>
     <associate|auto-40|<tuple|1.20|9>>
     <associate|auto-41|<tuple|2|9>>
