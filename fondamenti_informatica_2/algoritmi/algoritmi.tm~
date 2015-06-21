@@ -1584,7 +1584,138 @@
 
   <subsection|Algoritmi non deterministici>
 
-  Si aggiunge il comando <math|>
+  Si aggiunge il comando <math|choice<around*|(|I|)>>, dove <math|I> è un
+  insieme.
+
+  <math|choice<around*|(|I|)>> sceglie non deterministicamente un elemento
+  dell'insieme I
+
+  \;
+
+  <with|font-series|bold|Algoritmo non deterministico di ricerca in array>
+
+  <\cpp-code>
+    int nSearch(int* a, int n, int x) {
+
+    \ \ int i = choiche({0..n-1});
+
+    \ \ if (a[i] == x) {
+
+    \ \ \ \ return 1;
+
+    \ \ }
+
+    \ \ else {
+
+    \ \ \ \ return 0;
+
+    \ \ }
+
+    }
+  </cpp-code>
+
+  Complessità: <math|O<around*|(|1|)>>
+
+  <subsubsection|Relazione tra determinismo e nondeterminismo>
+
+  Per ogni algoritmo nondeterministico ne esiste uno deterministico che lo
+  simula, esplorando lo spazio delle soluzioni, fino a trovare un successo.
+
+  Se le soluzioni sono in numero esponenziale l'algoritmo deterministico avrà
+  complessità esponenziale.
+
+  <\definition>
+    P = Insieme di tutti i problemi decisionali risolubili in tempo
+    polinomiale con un algoritmo deterministico
+  </definition>
+
+  <\definition>
+    NP = Insieme di tutti i problemi decisionali risolubili in tempo
+    polinomiale con un algoritmo nondeterministico (NP: Nondeterministico
+    Polinomiale)
+  </definition>
+
+  <\definition>
+    Un problema P1 si riduce ad un altro problema P2 se ogni soluzione di P1
+    può ottenersi deterministicamente in tempo polinomiale da una soluzione
+    di P2
+  </definition>
+
+  <subsection|Teorema di Cook>
+
+  <\theorem>
+    <with|font-series|bold|Teorema di Cook> per qualsiasi problema R in NP
+    vale che R è riducibile al problema della soddisfattibilità della formula
+    logica
+
+    <\equation*>
+      R\<leqslant\>P<rsub|S>
+    </equation*>
+  </theorem>
+
+  Se si trovasse un algoritmo polinomiale per <math|P<rsub|S>> allora tutti i
+  problemi in <with|font-shape|italic|NP> sarebbero risolubili in tempo
+  polnomiale e quindi <math|P> sarebbe uguale ad <with|font-shape|italic|NP>
+
+  <subsection|NP-completezza>
+
+  Un problema <with|font-shape|italic|R> è NP-completo se
+
+  <\itemize>
+    <item>R appartiene ad NP
+  </itemize>
+
+  e
+
+  <\itemize>
+    <item><math|P<rsub|s>\<leqslant\>R>
+  </itemize>
+
+  Se si trovasse un algoritmo polinomiale per un problema NP-completo, allora
+  tutti i problemi in NP sarebbero risolubili in tempo polinomiale e quindi P
+  sarebbe uguale ad NP
+
+  <subsection|Problemi NP-Completi>
+
+  È stato dimostrato che i seguenti problemi e altri sono NP-Completi
+
+  <\itemize>
+    <item>Commesso viaggiatore
+
+    <item>Colorazione di mappa
+
+    <item>Zaino
+
+    <item><with|font-shape|italic|n>-regine
+  </itemize>
+
+  Quindo uno qualsiasi di questi problemi può essere usato al posto di
+  <math|P<rsub|S>> nella dimostrazione di NP-completezza
+
+  <subsubsection|Dimostrare che un problema <math|R> è
+  <with|font-shape|italic|NP->Completo>
+
+  Per dimostrare che un problema <math|R> è NP-Completo:
+
+  <\itemize>
+    <item><with|font-series|bold|R appartiene ad NP> \ individuare un
+    algoritmo polinomiale nondeterministico per risolvere P
+
+    <item><with|font-series|bold|esiste un problema NP-Completo che si riduce
+    a R> se ne sceglie uno fra i problemi NP-Completi noti che sia facilmente
+    riducibile a R
+  </itemize>
+
+  <with|font-series|bold|Perché ci serve dimostrare che un problema è
+  NP-Completo?>
+
+  Perchè non riusciamo a risolverlo con algoritmo polinomiale e vogliamo
+  dimostrache che on ci si riesce a meno che P non sia uguale a NP, problema
+  tuttora non risolto
+
+  <subsubsection|Caratterizzazione alternativa dei problemi NP-Completi>
+
+  Problemi NP-Completi: probl
 
   <with|font-series|bold|><section|Templates>
 
@@ -1755,21 +1886,21 @@
     <associate|auto-75|<tuple|14|14>>
     <associate|auto-76|<tuple|14.1|14>>
     <associate|auto-77|<tuple|14.2|14>>
-    <associate|auto-78|<tuple|15|15>>
-    <associate|auto-79|<tuple|15.1|15>>
+    <associate|auto-78|<tuple|14.2.1|15>>
+    <associate|auto-79|<tuple|14.3|15>>
     <associate|auto-8|<tuple|2.3.2|1>>
-    <associate|auto-80|<tuple|15.2|15>>
-    <associate|auto-81|<tuple|16|15>>
-    <associate|auto-82|<tuple|16.1|15>>
-    <associate|auto-83|<tuple|16.2|15>>
-    <associate|auto-84|<tuple|16.3|16>>
-    <associate|auto-85|<tuple|2.3|16>>
-    <associate|auto-86|<tuple|2.3.0.0.1|17>>
-    <associate|auto-87|<tuple|2.4|17>>
-    <associate|auto-88|<tuple|3|17>>
-    <associate|auto-89|<tuple|4|17>>
+    <associate|auto-80|<tuple|14.4|15>>
+    <associate|auto-81|<tuple|14.5|15>>
+    <associate|auto-82|<tuple|14.5.1|15>>
+    <associate|auto-83|<tuple|14.5.2|15>>
+    <associate|auto-84|<tuple|15|16>>
+    <associate|auto-85|<tuple|15.1|16>>
+    <associate|auto-86|<tuple|15.2|17>>
+    <associate|auto-87|<tuple|16|17>>
+    <associate|auto-88|<tuple|16.1|17>>
+    <associate|auto-89|<tuple|16.2|17>>
     <associate|auto-9|<tuple|2.3.3|1>>
-    <associate|auto-90|<tuple|4.1|17>>
+    <associate|auto-90|<tuple|16.3|17>>
     <associate|auto-91|<tuple|4.1.1|17>>
     <associate|auto-92|<tuple|4.1.1.0.2|17>>
     <associate|auto-93|<tuple|4.1.2|17>>
@@ -2027,78 +2158,98 @@
       greedy (golosi)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-61><vspace|0.5fn>
 
+      <with|par-left|<quote|1tab>|11.1<space|2spc>Metodo top-down
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-62>>
+
+      <with|par-left|<quote|1tab>|11.2<space|2spc>Algoritmo di Huffman
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-63>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Grafi>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62><vspace|0.5fn>
+      <no-break><pageref|auto-64><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|12.1<space|2spc>Rappresentazioni in memoria
       di grafi <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-65>>
 
       <with|par-left|<quote|2tab>|12.1.1<space|2spc>Tramite liste di
       adiacenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-66>>
 
       <with|par-left|<quote|2tab>|12.1.2<space|2spc>Tramite matrici di
       adiacenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>>
+      <no-break><pageref|auto-67>>
 
       <with|par-left|<quote|1tab>|12.2<space|2spc>Rappresentazioni in memoria
       di grafi con nodi ed archi etichettati
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66>>
+      <no-break><pageref|auto-68>>
 
       <with|par-left|<quote|2tab>|12.2.1<space|2spc>Tramite liste di
       adiacenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67>>
+      <no-break><pageref|auto-69>>
 
       <with|par-left|<quote|2tab>|12.2.2<space|2spc>Tramite matrici di
       adiacenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
+      <no-break><pageref|auto-70>>
 
       <with|par-left|<quote|1tab>|12.3<space|2spc>Cammino più breve
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>>
+      <no-break><pageref|auto-71>>
 
       <with|par-left|<quote|2tab>|12.3.1<space|2spc>Algoritmo di Dijkstra
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>>
+      <no-break><pageref|auto-72>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|13<space|2spc>Esercizi>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71><vspace|0.5fn>
+      <no-break><pageref|auto-73><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|13.1<space|2spc>Più lunga sottosequenza
       comune (PLSC) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72>>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Templates>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|14.1<space|2spc>Esempi di definizione
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-74>>
 
-      <with|par-left|<quote|1tab>|14.2<space|2spc>Variabili statiche
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>NP-Completezza>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-75>>
+      <no-break><pageref|auto-75><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|15<space|2spc>Derivazione>
+      <with|par-left|<quote|1tab>|14.1<space|2spc>Alcuni problemi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-76><vspace|0.5fn>
+      <no-break><pageref|auto-76>>
 
-      <with|par-left|<quote|1tab>|15.1<space|2spc>Specificatori d'accesso
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|14.2<space|2spc>Algoritmi non
+      deterministici <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-77>>
 
-      <with|par-left|<quote|1tab>|15.2<space|2spc>Costruzione degli oggetti
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|15<space|2spc>Templates>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>>
+      <no-break><pageref|auto-78><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|15.3<space|2spc>Funzioni virtuali
+      <with|par-left|<quote|1tab>|15.1<space|2spc>Esempi di definizione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-79>>
+
+      <with|par-left|<quote|1tab>|15.2<space|2spc>Variabili statiche
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-80>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Derivazione>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-81><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|16.1<space|2spc>Specificatori d'accesso
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-82>>
+
+      <with|par-left|<quote|1tab>|16.2<space|2spc>Costruzione degli oggetti
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-83>>
+
+      <with|par-left|<quote|1tab>|16.3<space|2spc>Funzioni virtuali
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-84>>
     </associate>
   </collection>
 </auxiliary>
