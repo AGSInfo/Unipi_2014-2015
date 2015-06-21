@@ -1558,8 +1558,6 @@
   questo caso viene chiamato automaticamente.
 
   <subsection|Funzioni virtuali>
-
-  \;
 </body>
 
 <\initial>
