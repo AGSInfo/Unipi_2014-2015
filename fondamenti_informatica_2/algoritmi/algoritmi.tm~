@@ -1584,13 +1584,7 @@
 
   <subsection|Algoritmi non deterministici>
 
-  Si aggiunge il comando <math|choice<around*|(|I|)>>, dove <math|I> è un
-  insieme.
-
-  <math|choice<around*|(|I|)>> sceglie non deterministicamente un elemento
-  dell'insieme I
-
-  [continuare da pagina 251]
+  Si aggiunge il comando <math|>
 
   <with|font-series|bold|><section|Templates>
 
