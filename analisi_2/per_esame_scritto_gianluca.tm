@@ -86,8 +86,8 @@
     necessario
 
     <item>Verifico che la funzione sia derivabile calcolando le derivate
-    parziali utilizzando il limite, verificando che entrambe siano
-    <math|\<less\>\<infty\>>
+    parziali utilizzando il limite, verificando che esistano entrambe
+    <math|<around*|(|\<neq\>\<pm\>\<infty\>|)>>
 
     <\equation*>
       f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)><space|1em>=<space|1em>lim<rsub|h\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>|h>
@@ -104,7 +104,7 @@
     <item>Verifico la differenziabilità
 
     <\equation*>
-      lim<rsub|<around*|(|h,k|)>\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>|<sqrt|h<rsup|2>+k<rsup|2>>>
+      lim<rsub|<around*|(|h,k|)>\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>*h-f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>*k|<sqrt|h<rsup|2>+k<rsup|2>>>
     </equation*>
   </enumerate>
 
@@ -1042,111 +1042,111 @@
       differenziabilità <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
-      <with|par-left|<quote|1tab>|1.5<space|2spc>Lunghezza di una curva
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5<space|2spc>Calcolare il potenziale di
+      una forma differenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|1.6<space|2spc>Integrale curvilineo
+      Metodo manuale per il calcolo della primitiva
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
+      <no-break><pageref|auto-13><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|1.7<space|2spc>Integrale di campo
-      (integrale di linea) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Lunghezza di una curva
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|1tab>|1.8<space|2spc>Area della porzione di
-      grafico (o superficie di <with|mode|<quote|math>|f<around*|(|x,y|)>>)
+      <with|par-left|<quote|1tab>|1.7<space|2spc>Integrale curvilineo
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
-      <with|par-left|<quote|1tab>|1.9<space|2spc>Integrale superficiale
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.8<space|2spc>Integrale di campo
+      (integrale di linea) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
-      Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17><vspace|0.15fn>
-
-      Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18><vspace|0.15fn>
-
-      <with|par-left|<quote|1tab>|1.10<space|2spc>Volume
+      <with|par-left|<quote|1tab>|1.9<space|2spc>Area della porzione di
+      grafico (o superficie di <with|mode|<quote|math>|f<around*|(|x,y|)>>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-17>>
+
+      <with|par-left|<quote|1tab>|1.10<space|2spc>Integrale superficiale
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18>>
+
+      Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19><vspace|0.15fn>
 
       Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|1.11<space|2spc>Integrale su un insieme
+      <with|par-left|<quote|1tab>|1.11<space|2spc>Volume
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|2tab>|1.11.1<space|2spc>In 2 variabili
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22><vspace|0.15fn>
 
-      <with|par-left|<quote|2tab>|1.11.2<space|2spc>In 3 variabili
+      <with|par-left|<quote|1tab>|1.12<space|2spc>Integrale su un insieme
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-23>>
 
+      <with|par-left|<quote|2tab>|1.12.1<space|2spc>In 2 variabili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>>
+
+      <with|par-left|<quote|2tab>|1.12.2<space|2spc>In 3 variabili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
+
       Integrazione per strati <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24><vspace|0.15fn>
+      <no-break><pageref|auto-26><vspace|0.15fn>
 
       Integrazione per fili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25><vspace|0.15fn>
+      <no-break><pageref|auto-27><vspace|0.15fn>
 
-      <with|par-left|<quote|2tab>|1.11.3<space|2spc>Cambio di variabile
+      <with|par-left|<quote|2tab>|1.12.3<space|2spc>Cambio di variabile
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
+      <no-break><pageref|auto-28>>
 
-      <with|par-left|<quote|1tab>|1.12<space|2spc>Inversione locale
+      <with|par-left|<quote|1tab>|1.13<space|2spc>Inversione locale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-29>>
 
       Esempio 1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28><vspace|0.15fn>
+      <no-break><pageref|auto-30><vspace|0.15fn>
 
       Esempio 2 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29><vspace|0.15fn>
+      <no-break><pageref|auto-31><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|1.13<space|2spc>Teorema del Dini
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
-
-      <with|par-left|<quote|1tab>|1.14<space|2spc>Direzione di massima
-      pendenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
-
-      <with|par-left|<quote|1tab>|1.15<space|2spc>Vettore normale
+      <with|par-left|<quote|1tab>|1.14<space|2spc>Teorema del Dini
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
 
-      <with|par-left|<quote|1tab>|1.16<space|2spc>Piano tangente a superficie
-      cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.15<space|2spc>Direzione di massima
+      pendenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>>
 
-      <with|par-left|<quote|1tab>|1.17<space|2spc>Piano tangente al sostegno
-      di una superficie parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.16<space|2spc>Vettore normale
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
-      <with|par-left|<quote|1tab>|1.18<space|2spc>Polinomio di Taylor
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.17<space|2spc>Piano tangente a superficie
+      cartesiana <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-35>>
 
-      <with|par-left|<quote|2tab>|1.18.1<space|2spc>Formula di ordine 1
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.18<space|2spc>Piano tangente al sostegno
+      di una superficie parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>>
 
-      <with|par-left|<quote|2tab>|1.18.2<space|2spc>Formula di ordine 2
+      <with|par-left|<quote|1tab>|1.19<space|2spc>Polinomio di Taylor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>>
 
-      <with|par-left|<quote|1tab>|1.19<space|2spc>Calcolare il potenziale di
-      una forma differenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|1.19.1<space|2spc>Formula di ordine 1
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>>
 
-      Metodo manuale per il calcolo della primitiva
+      <with|par-left|<quote|2tab>|1.19.2<space|2spc>Formula di ordine 2
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39><vspace|0.15fn>
+      <no-break><pageref|auto-39>>
 
       <with|par-left|<quote|1tab>|1.20<space|2spc>Massimi e minimi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
