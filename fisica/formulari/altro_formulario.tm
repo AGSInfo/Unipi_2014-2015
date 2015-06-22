@@ -686,7 +686,205 @@
     </equation*>
   </itemize>
 
-  <chapter|Momenti d'inerzia>
+  <\chapter>
+    Momenti d'inerzia
+  </chapter>
+
+  <section|Massa puntiforme>
+
+  Una massa puntiforme non ha momento di inerzia intorno al proprio asse. Nel
+  caso in cui l'asse di rotazione sia ad una distanza <math|r> dal centro di
+  massa si ha
+
+  <\equation*>
+    I=m*r<rsup|2>
+  </equation*>
+
+  <section|Asta>
+
+  Se un asta (infinitamente sottile ma rigida) di lunghezza <math|L> e di
+  massa <math|m> ruota attorno ad una sua estremità si ha che
+
+  <\equation*>
+    I<rsub|estremità>=<frac|m*L<rsup|2>|3>
+  </equation*>
+
+  altrimenti, se l'asse di rotazione è al centro
+
+  <\equation*>
+    I<rsub|centrale>=<frac|m*L<rsup|2>|12>
+  </equation*>
+
+  <section|Circonferenza>
+
+  Circonferenza sottile (quindi anche un toro sottile) di raggio <math|r> e
+  di massa <math|m> che ruota attorno all'asse <math|z> ha
+
+  <\equation*>
+    I<rsub|z>=m*r<rsup|2>
+  </equation*>
+
+  <\equation*>
+    I<rsub|x>=I<rsub|y>=<frac|m*r<rsup|2>|2>
+  </equation*>
+
+  <section|Disco>
+
+  Disco solido e sottile (in pratica è un cilindro spiaccicato) di raggio
+  <math|r> e di massa <math|m> che ruota attorno all'asse <math|z>
+
+  <\equation*>
+    I<rsub|z>=<frac|m*r<rsup|2>|2>
+  </equation*>
+
+  <\equation*>
+    I<rsub|x>=I<rsub|y>=<frac|m*r<rsup|2>|4>
+  </equation*>
+
+  <section|Cilindro>
+
+  Superficie cilindrica sottile con estremità aperte, di raggio <math|r> e di
+  massa <math|m>
+
+  <\equation*>
+    I=m*r<rsup|2>
+  </equation*>
+
+  Cilindro solido di raggio <math|r>, altezza <math|h> e massa <math|m>
+
+  <\equation*>
+    I<rsub|z>=<frac|m*r<rsup|2>|2>
+  </equation*>
+
+  <\equation*>
+    I<rsub|x>=I<rsub|y>=<frac|1|12>*m*<around*|(|3*r<rsup|2>+h<rsup|2>|)>
+  </equation*>
+
+  Tubo cilindrico con pareti spesse ed estremità aperte, di raggio interno
+  <math|r<rsub|1>>, raggio esterno <math|r<rsub|2>>, lunghezza <math|h> e
+  massa <math|m>
+
+  <\equation*>
+    I<rsub|z>=<frac|1|2>*m*<around*|(|r<rsub|1><rsup|2>+r<rsub|2><rsup|2>|)>
+  </equation*>
+
+  <\equation*>
+    I<rsub|x>=I<rsub|y>=<frac|1|12>*m*<around*|[|3*<around*|(|r<rsub|2><rsup|2>+r<rsub|1><rsup|2>|)>+h<rsup|2>|]>
+  </equation*>
+
+  <section|Sfera>
+
+  Sfera cava di raggio <math|r> e massa <math|m>
+
+  <\equation*>
+    I=<frac|2*m*r<rsup|2>|3>
+  </equation*>
+
+  (una sfera cava può essere considerata come costituita da due pile di
+  cerchi infinitamente sottili, uno sopra l'altro, con i raggi che aumentano
+  da 0 a <math|r>)
+
+  Sfera piene di raggio <math|r> e massa <math|m>
+
+  <\equation*>
+    I=<frac|2*m*r<rsup|2>|5>
+  </equation*>
+
+  <section|Cono>
+
+  Cono cavo circolare retto con raggio <math|r>, altezza <math|h> e massa
+  <math|m>
+
+  <\equation*>
+    I<rsub|z>=<frac|3|10>*m*r<rsup|2>
+  </equation*>
+
+  <\equation*>
+    I<rsub|x>=I<rsub|y>=<frac|3|5>*m*<around*|(|<frac|r<rsup|2>|4>+h<rsup|2>|)>
+  </equation*>
+
+  <section|Toro>
+
+  Toro con raggio del tubo <math|a>, distanza dal centro del tubo al centro
+  del toro <math|b> e massa <math|m>.
+
+  Il momento di inerzia intorno al diametro vale
+
+  <\equation*>
+    I<rsub|diametro>=<frac|1|8>*<around*|(|4*a<rsup|2>+5*b<rsup|2>|)>*m
+  </equation*>
+
+  mentre quello attorno all'asse verticale
+
+  <\equation*>
+    I<rsub|verticale>=<around*|(|a<rsup|2>+<frac|3|4>*b<rsup|2>|)>*m
+  </equation*>
+
+  <section|Ellissoide>
+
+  Ellissoide solido di semiassi <math|\<alpha\>,\<beta\>> e
+  <math|\<varsigma\>> con asse di rotazione <math|a> e massa <math|m>
+
+  <\equation*>
+    I<rsub|\<alpha\>>=<frac|m<around*|(|\<beta\><rsup|2>+\<varsigma\><rsup|2>|)>|5>
+  </equation*>
+
+  <section|Piastra>
+
+  Piastra rettangolare sottile di altezza <math|h>, larghezza <math|w> e
+  massa <math|m>.
+
+  Con asse di rotazione all'estremità della piastra
+
+  <\equation*>
+    I<rsub|estremità>=<frac|m*h<rsup|2>|3>+<frac|m*w<rsup|2>|12>
+  </equation*>
+
+  Con asse di rotazione centrale
+
+  <\equation*>
+    I<rsub|centrale>=<frac|m*<around*|(|h<rsup|2>+w<rsup|2>|)>|12>
+  </equation*>
+
+  <section|Parallelepipedo>
+
+  Parallelepipedo solido di altezza <math|h>, larghezza <math|w>, profondità
+  <math|d> e massa <math|m>
+
+  <\equation*>
+    I<rsub|h>=<frac|1|12>*m*<around*|(|w<rsup|2>+d<rsup|2>|)>
+  </equation*>
+
+  <\equation*>
+    I<rsub|w>=<frac|1|12>*m*<around*|(|h<rsup|2>+d<rsup|2>|)>
+  </equation*>
+
+  <\equation*>
+    I<rsub|d>=<frac|1|12>*m*<around*|(|h<rsup|2>+w<rsup|2>|)>
+  </equation*>
+
+  se fosse stato un cubo di lato <math|s>
+
+  <\equation*>
+    I=<frac|m*s<rsup|2>|6>
+  </equation*>
+
+  Parallelepipedo solido di altezza <math|D>, larghezza <math|W>, lunghezza
+  <math|L> e massa <math|m> lungo la diagonale più lunga.
+
+  <\equation*>
+    I<rsub|diagonale più lunga> =<frac|m*<around*|(|W<rsup|2>*D<rsup|2>+L<rsup|2>*D<rsup|2>+L<rsup|2>*W<rsup|2>|)>|6*<around*|(|L<rsup|2>+W<rsup|2>+D<rsup|2>|)>>
+  </equation*>
+
+  se fosse stato un cubo di lato <math|s>
+
+  <\equation*>
+    I=<frac|m*s<rsup|2>|6>
+  </equation*>
+
+  \;
+
+  \;
 
   \;
 </body>
@@ -736,8 +934,8 @@
     <associate|auto-34|<tuple|2.4.1|5>>
     <associate|auto-35|<tuple|2.4.2|5>>
     <associate|auto-36|<tuple|2.4.3|5>>
-    <associate|auto-37|<tuple|2.5|5>>
-    <associate|auto-38|<tuple|2.5.1|5>>
+    <associate|auto-37|<tuple|2.5|6>>
+    <associate|auto-38|<tuple|2.5.1|6>>
     <associate|auto-39|<tuple|2.6|6>>
     <associate|auto-4|<tuple|1.2|1>>
     <associate|auto-40|<tuple|2.7|6>>
@@ -745,7 +943,7 @@
     <associate|auto-42|<tuple|2.9|6>>
     <associate|auto-43|<tuple|2.9.1|6>>
     <associate|auto-44|<tuple|2.10|6>>
-    <associate|auto-45|<tuple|2.10.1|6>>
+    <associate|auto-45|<tuple|2.10.1|7>>
     <associate|auto-46|<tuple|2.11|7>>
     <associate|auto-47|<tuple|2.11.1|7>>
     <associate|auto-48|<tuple|2.12|7>>
@@ -757,8 +955,8 @@
     <associate|auto-53|<tuple|3.2.1|7>>
     <associate|auto-54|<tuple|3.2.2|7>>
     <associate|auto-55|<tuple|3.3|7>>
-    <associate|auto-56|<tuple|3.4|7>>
-    <associate|auto-57|<tuple|3.4.1|7>>
+    <associate|auto-56|<tuple|3.4|8>>
+    <associate|auto-57|<tuple|3.4.1|8>>
     <associate|auto-58|<tuple|3.5|8>>
     <associate|auto-59|<tuple|3.5.1|8>>
     <associate|auto-6|<tuple|2.1|1>>
@@ -769,9 +967,22 @@
     <associate|auto-64|<tuple|4.1.1|8>>
     <associate|auto-65|<tuple|4.1.2|8>>
     <associate|auto-66|<tuple|3|8>>
-    <associate|auto-67|<tuple|4|?>>
+    <associate|auto-67|<tuple|4|9>>
+    <associate|auto-68|<tuple|1|9>>
+    <associate|auto-69|<tuple|2|9>>
     <associate|auto-7|<tuple|2.2|1>>
+    <associate|auto-70|<tuple|3|9>>
+    <associate|auto-71|<tuple|4|9>>
+    <associate|auto-72|<tuple|5|9>>
+    <associate|auto-73|<tuple|6|10>>
+    <associate|auto-74|<tuple|7|10>>
+    <associate|auto-75|<tuple|8|10>>
+    <associate|auto-76|<tuple|9|10>>
+    <associate|auto-77|<tuple|10|10>>
+    <associate|auto-78|<tuple|11|11>>
+    <associate|auto-79|<tuple|12|9>>
     <associate|auto-8|<tuple|3|1>>
+    <associate|auto-80|<tuple|12|?>>
     <associate|auto-9|<tuple|3.1|2>>
   </collection>
 </references>
@@ -1032,17 +1243,65 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-63>>
 
-      <with|par-left|<quote|2tab>|4.1.1<space|2spc>Reattanza capacitiva
+      <with|par-left|<quote|2tab>|4.1.1<space|2spc>Reattanza induttiva
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-64>>
 
+      <with|par-left|<quote|2tab>|4.1.2<space|2spc>Reattanza capacitiva
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-65>>
+
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|3<space|2spc>Costanti>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65><vspace|1fn>
+      <no-break><pageref|auto-66><vspace|1fn>
 
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|4<space|2spc>Momenti
       d'inerzia> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66><vspace|1fn>
+      <no-break><pageref|auto-67><vspace|1fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Massa
+      puntiforme> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-68><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Asta>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-69><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Circonferenza>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-70><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Disco>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-71><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Cilindro>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-72><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Sfera>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-73><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Cono>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-74><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Toro>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-75><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>Ellissoide>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-76><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|10<space|2spc>Piastra>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-77><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Parallelepipedo>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-78><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
