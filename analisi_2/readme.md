@@ -56,61 +56,80 @@
 7. Th. di Fubini,Tonelli,Lebesque(convergenza dominata) BepppoLevi (convergenza monotona)
 
 ## Definizioni
- 1. Sfera
- - Punto interno
- - Punto esterno
- - Punto di frontiera
- - Punto isolato
- - Punto di accumulazione
- - Insieme aperto
- - Insieme chiuso
- - Insieme limitato
- - Insieme convesso
- - Chiusura di un insieme
- - Sucessione
- - Successione convergente
- - Successione divergenti
- - Successione oscillante
- - Funzione scalare
- - Funzione vettoriale
- - Continuità di f : R^n -> R^m
- - Curva parametrica
- - Curva chiusa
- - Curva costante
- - Curva semplice
- - Insieme connesso (per archi)
- - Funzioni oscillanti
- - Derivata direzionale
- - Derivata parziale
- - Punti estremi
- - Gradiente di una funzione
- - Funzione (positivamente) omogenea
- - Rapporto di funzioni omogenee
- - Funzioni 0-omogenee
- - Differenziale
- - Formula del differenziale
- - Funzione di classe C^1
- - Equazione delle curve di livello
- - Direzione di massima pendenza per una funzione differenziabile
- - Funzioni tangenti in un punto
- - Piano tangente e vettore normale al grafico di una funzione differenziale
- - Derivate seconde
- - Matrice hessiana
- - Campo di vettori di classe C^k
- - Forma differenziale lineare
- - Campo associato ad una forma e forma associata ad un campo
- - Curva regolare
- - Campi irrotazionali
- - Forma chiusa
- - Forma esatta
- - Congiunzione di curbe
- - Curve deformabili ad omotope
- - Insieme semplicemente connesso
- - Insieme a stella
- - Rotore (va saputa?)
- - Componente convessa
- - Derivata di una curva
- - Dominio Normale
+1. Sfera
+- Punto interno
+- Punto esterno
+- Punto di frontiera
+- Punto isolato
+- Punto di accumulazione
+- Insieme aperto
+- Insieme chiuso
+- Insieme limitato
+- Insieme convesso
+- Chiusura di un insieme
+- Sucessione
+- Successione convergente
+- Successione divergenti
+- Successione oscillante
+- Funzione scalare
+- Funzione vettoriale
+- Continuità di f : R^n -> R^m
+- Curva parametrica
+- Curva chiusa
+- Curva costante
+- Curva semplice
+- Insieme connesso (per archi)
+- Funzioni oscillanti
+- Derivata direzionale
+- Derivata parziale
+- Punti estremi
+- Gradiente di una funzione
+- Funzione (positivamente) omogenea
+- Rapporto di funzioni omogenee
+- Funzioni 0-omogenee
+- Differenziale
+- Formula del differenziale
+- Funzione di classe C^1
+- Equazione delle curve di livello
+- Direzione di massima pendenza per una funzione differenziabile
+- Funzioni tangenti in un punto
+- Piano tangente e vettore normale al grafico di una funzione differenziale
+- Derivate seconde
+- Matrice hessiana
+- Campo di vettori di classe C^k
+- Forma differenziale lineare
+- Campo associato ad una forma e forma associata ad un campo
+- Curva regolare
+- Campi irrotazionali
+- Forma chiusa
+- Forma esatta
+- Congiunzione di curbe
+- Curve deformabili ad omotope
+- Insieme semplicemente connesso
+- Insieme a stella
+- Rotore (va saputa?)
+- Componente connessa
+- Derivata di una curva
+- Dominio Normale
+- Ascissa curvilinea
+- Integrale curvilineo di una funzione definita sul sostegno di una curva C¹
+- Curve equivalenti
+- Curve deformabili ad omotope
+- Integrale di una curva
+- Lunghezza di una curva
+- Insieme compatto
+- Plurintervallo
+- Misura di un intervallo in R
+- Misura di un intervallo in R²
+- Misura di un intervallo in R^n
+- Misura degli insiemi aperti
+- Misura delig insiemi compatti
+- Misura interna ed esterna di un insieme arbitrario
+- Funzione misurabile
+- Funzione numerabile
+- Misura di insiemi non limitati
+- Integrabilità secondo Lebesgue
+- Proprietà dell'integrale di lebesgue
 
 ## Lista presa da Facebook, da integrare alla precedente
 
@@ -142,13 +161,13 @@
 - Insieme misurabile
 - Punto di frontiera
 - Curva rettificabile
-9) Curva regolare
-10) Campo Integrabile
-11) Superficie regolare
-12) Integrabilità
-13) Limite
-14) Convergenza
-15) Vettore Tangente
+- Curva regolare
+- Campo Integrabile
+- Superficie regolare
+- Integrabilità
+- Limite
+- Convergenza
+- Vettore Tangente
 
 ### Teoremi
 1. Teorema degli zeri in più variabili
@@ -183,10 +202,10 @@
 - Enunciato di funzioni composte
 
 ### Altra lista
- 1. Forma chiusa/esatta
- - Curva parametrica
- - Punto interno/esterno
- - Differenziale
- - Misura di Lebesgue
- - Limite per x→x0 f(x) = infinito, f funzione vettoriale
- - Limite per x→x0 f(x) = -infinito, f funzione da Rn a R
+1. Forma chiusa/esatta
+- Curva parametrica
+- Punto interno/esterno
+- Differenziale
+- Misura di Lebesgue
+- Limite per x→x0 f(x) = infinito, f funzione vettoriale
+- Limite per x→x0 f(x) = -infinito, f funzione da Rn a R
