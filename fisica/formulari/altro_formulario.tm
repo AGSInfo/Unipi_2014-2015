@@ -345,6 +345,20 @@
     U=<frac|1|2>C*\<Delta\>V=<frac|1|2>*<frac|Q<rsup|2>|C>
   </equation*>
 
+  <subsubsection|Capacità di un condensatore piano a facce parallele>
+
+  <\equation*>
+    C=\<varepsilon\>*<frac|S|d>
+  </equation*>
+
+  dove <math|\<varepsilon\>=\<varepsilon\><rsub|r>*\<varepsilon\><rsub|0>>
+
+  <subsubsection|Energia in un condensatore>
+
+  <\equation*>
+    W=<frac|1|2>*C*V<rsup|2>=U
+  </equation*>
+
   <section|Campo magnetico>
 
   Il campo magnetico è costituito da linee chiuse
@@ -556,6 +570,52 @@
     E=-B*\<ell\>*v
   </equation*>
 
+  <subsection|Forza di Lorentz>
+
+  <\equation*>
+    <wide|F|\<vect\>>=q*<wide|E|\<vect\>>+q*<around*|(|<wide|v|\<vect\>>\<times\><wide|B|\<vect\>>|)>
+  </equation*>
+
+  <subsection|Equazioni di Maxwell>
+
+  <\equation*>
+    <big|oint><wide|E|\<vect\>>\<cdot\>d<wide|A|\<vect\>>=<frac|q|\<varepsilon\><rsub|0>>
+  </equation*>
+
+  <\equation*>
+    <big|oint><wide|B|\<vect\>>\<cdot\>d<wide|A|\<vect\>>=0
+  </equation*>
+
+  <\equation*>
+    <big|oint><wide|E|\<vect\>>*\<cdot\>d<wide|s|\<vect\>>=-<frac|d\<Phi\><rsub|B>|d*t>
+  </equation*>
+
+  <\equation*>
+    <big|oint><wide|B|\<vect\>>\<cdot\>d<wide|s|\<vect\>>=\<mu\><rsub|0>*I+\<varepsilon\><rsub|0>*\<mu\><rsub|0>*<frac|d*\<Phi\><rsub|E>|d*t>
+  </equation*>
+
+  <subsection|Corrente di spostamento>
+
+  In una regione dello spazio dove si ha una variazione del campo elettrico
+  nel tempo, c'è una corrente di spostamento che è definita come
+
+  <\equation*>
+    I<rsub|d>=\<varepsilon\><rsub|0>*<frac|d*\<Phi\><rsub|E>|d*t>
+  </equation*>
+
+  dove <math|\<Phi\><rsub|E>=<big|int><wide|E|\<vect\>>*\<cdot\><wide|d*A|\<vect\>>>
+  è il flusso del campo elettrico
+
+  <subsection|Vettore di Poynting>
+
+  Il flusso di energia della radiazione elettromagnetica per unità di area e
+  per unità di tempo è descritto dal <with|font-series|bold|vettore di
+  Poynting <math|<wide|S|\<vect\>>>>
+
+  <\equation*>
+    <wide|S|\<vect\>>\<equiv\><frac|1|\<mu\>*<rsub|0>>*<around*|(|<wide|E|\<vect\>>\<times\><wide|B|\<vect\>>|)>
+  </equation*>
+
   <section|Circuiti in corrente continua>
 
   <subsection|F.e.m. autoindotta>
@@ -612,7 +672,7 @@
   <subsubsection|Frequenza di oscillazione>
 
   <\equation*>
-    \<omega\>=<frac|1|<sqrt|L*C>>
+    \<omega\><rsub|0>=<frac|1|<sqrt|L*C>>
   </equation*>
 
   L'energia in un circuito <with|font-shape|italic|LC> è continuamente
@@ -633,7 +693,34 @@
     \<omega\><rsub|d>=<around*|[|<frac|1|L*C>-<around*|(|<frac|R|2*L>|)><rsup|2>|]><rsup|<frac*|1|2>>
   </equation*>
 
+  <subsubsection|Corrente efficace>
+
+  <\equation*>
+    I<rsub|eff>=<frac|\<Delta\>V<rsub|eff>|<sqrt|R<rsup|2>+<around*|(|X<rsub|L>-X<rsub|C>|)><rsup|2>>>
+  </equation*>
+
+  <subsubsection|Impedenza>
+
+  <\equation*>
+    Z\<equiv\><sqrt|R<rsup|2>+<around*|(|X<rsub|L>-X<rsub|C>|)><rsup|2>>
+  </equation*>
+
+  <subsubsection|Angolo di fase tra corrente e tensione>
+
+  <\equation*>
+    \<Phi\>=tan<rsup|-1><around*|(|<frac|X<rsub|L>-X<rsub|C>|R>|)>
+  </equation*>
+
   <section|Circuiti in corrente alternata>
+
+  <subsection|Frequenza di risonanza>
+
+  <\equation*>
+    \<omega\><rsub|0>=<frac|1|<sqrt|L*C>>
+  </equation*>
+
+  se la frequenza del generatore è uguale a <math|\<omega\><rsub|0>>, la
+  corrente raggiunge il suo valore massimo
 
   <subsection|Reattanze>
 
@@ -647,6 +734,36 @@
 
   <\equation*>
     X<rsub|C>=<frac|1|\<omega\>*C><space|1em><around*|[|\<Omega\>|]>
+  </equation*>
+
+  <subsection|Corrente e tensione efficace>
+
+  <\equation*>
+    I<rsub|eff>=<frac|I<rsub|max>|<sqrt|2>>=0.707\<cdot\>I<rsub|max>
+  </equation*>
+
+  <\equation*>
+    \<Delta\>V<rsub|eff>=<frac|\<Delta\>V<rsub|max>|<sqrt|2>>=0.707\<cdot\>\<Delta\>V<rsub|max>
+  </equation*>
+
+  <subsection|Potenza media>
+
+  La potenza media fornita da un generatore ad un circuito RLC è
+
+  <\equation*>
+    P<rsub|media>=I<rsub|eff>*\<Delta\>V<rsub|eff>*cos<around*|(|\<Phi\>|)>
+  </equation*>
+
+  un espressione equivalente è
+
+  <\equation*>
+    P<rsub|media>=I<rsup|2><rsub|eff>*R
+  </equation*>
+
+  <subsection|Trasformatore>
+
+  <\equation*>
+    \<Delta\>v<rsub|2>=<frac|N<rsub|2>|N<rsub|1>>*\<Delta\>v<rsub|1>
   </equation*>
 
   <chapter|Costanti>
@@ -894,96 +1011,112 @@
     <associate|font-base-size|10>
     <associate|page-bot|2cm>
     <associate|page-even|1cm>
+    <associate|page-height|auto>
     <associate|page-medium|paper>
     <associate|page-odd|1cm>
+    <associate|page-orientation|portrait>
     <associate|page-right|1cm>
     <associate|page-screen-margin|false>
     <associate|page-top|1cm>
+    <associate|page-type|a5>
+    <associate|page-width|auto>
+    <associate|par-columns|1>
   </collection>
 </initial>
 
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|4|2>>
-    <associate|auto-11|<tuple|4.1|2>>
-    <associate|auto-12|<tuple|4.1.1|2>>
-    <associate|auto-13|<tuple|4.1.2|2>>
-    <associate|auto-14|<tuple|2|2>>
-    <associate|auto-15|<tuple|1|2>>
-    <associate|auto-16|<tuple|1.1|2>>
-    <associate|auto-17|<tuple|1.2|2>>
-    <associate|auto-18|<tuple|1.3|3>>
-    <associate|auto-19|<tuple|1.4|3>>
+    <associate|auto-10|<tuple|4|3>>
+    <associate|auto-11|<tuple|4.1|3>>
+    <associate|auto-12|<tuple|4.1.1|3>>
+    <associate|auto-13|<tuple|4.1.2|3>>
+    <associate|auto-14|<tuple|2|3>>
+    <associate|auto-15|<tuple|1|3>>
+    <associate|auto-16|<tuple|1.1|4>>
+    <associate|auto-17|<tuple|1.2|4>>
+    <associate|auto-18|<tuple|1.3|4>>
+    <associate|auto-19|<tuple|1.4|4>>
     <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|1.5|3>>
-    <associate|auto-21|<tuple|1.6|3>>
-    <associate|auto-22|<tuple|1.7|3>>
-    <associate|auto-23|<tuple|1.7.1|4>>
-    <associate|auto-24|<tuple|1.8|4>>
-    <associate|auto-25|<tuple|1.9|4>>
-    <associate|auto-26|<tuple|1.10|4>>
-    <associate|auto-27|<tuple|1.11|4>>
-    <associate|auto-28|<tuple|1.12|4>>
-    <associate|auto-29|<tuple|2|5>>
+    <associate|auto-20|<tuple|1.5|5>>
+    <associate|auto-21|<tuple|1.6|5>>
+    <associate|auto-22|<tuple|1.7|5>>
+    <associate|auto-23|<tuple|1.7.1|6>>
+    <associate|auto-24|<tuple|1.8|6>>
+    <associate|auto-25|<tuple|1.9|6>>
+    <associate|auto-26|<tuple|1.10|7>>
+    <associate|auto-27|<tuple|1.11|7>>
+    <associate|auto-28|<tuple|1.12|7>>
+    <associate|auto-29|<tuple|1.12.1|7>>
     <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-30|<tuple|2.1|5>>
-    <associate|auto-31|<tuple|2.2|5>>
-    <associate|auto-32|<tuple|2.3|5>>
-    <associate|auto-33|<tuple|2.4|5>>
-    <associate|auto-34|<tuple|2.4.1|5>>
-    <associate|auto-35|<tuple|2.4.2|5>>
-    <associate|auto-36|<tuple|2.4.3|5>>
-    <associate|auto-37|<tuple|2.5|6>>
-    <associate|auto-38|<tuple|2.5.1|6>>
-    <associate|auto-39|<tuple|2.6|6>>
+    <associate|auto-30|<tuple|1.12.2|8>>
+    <associate|auto-31|<tuple|2|8>>
+    <associate|auto-32|<tuple|2.1|8>>
+    <associate|auto-33|<tuple|2.2|8>>
+    <associate|auto-34|<tuple|2.3|8>>
+    <associate|auto-35|<tuple|2.4|9>>
+    <associate|auto-36|<tuple|2.4.1|9>>
+    <associate|auto-37|<tuple|2.4.2|9>>
+    <associate|auto-38|<tuple|2.4.3|9>>
+    <associate|auto-39|<tuple|2.5|9>>
     <associate|auto-4|<tuple|1.2|1>>
-    <associate|auto-40|<tuple|2.7|6>>
-    <associate|auto-41|<tuple|2.8|6>>
-    <associate|auto-42|<tuple|2.9|6>>
-    <associate|auto-43|<tuple|2.9.1|6>>
-    <associate|auto-44|<tuple|2.10|6>>
-    <associate|auto-45|<tuple|2.10.1|7>>
-    <associate|auto-46|<tuple|2.11|7>>
-    <associate|auto-47|<tuple|2.11.1|7>>
-    <associate|auto-48|<tuple|2.12|7>>
-    <associate|auto-49|<tuple|2.13|7>>
-    <associate|auto-5|<tuple|2|1>>
-    <associate|auto-50|<tuple|3|7>>
-    <associate|auto-51|<tuple|3.1|7>>
-    <associate|auto-52|<tuple|3.2|7>>
-    <associate|auto-53|<tuple|3.2.1|7>>
-    <associate|auto-54|<tuple|3.2.2|7>>
-    <associate|auto-55|<tuple|3.3|7>>
-    <associate|auto-56|<tuple|3.4|8>>
-    <associate|auto-57|<tuple|3.4.1|8>>
-    <associate|auto-58|<tuple|3.5|8>>
-    <associate|auto-59|<tuple|3.5.1|8>>
-    <associate|auto-6|<tuple|2.1|1>>
-    <associate|auto-60|<tuple|3.6|8>>
-    <associate|auto-61|<tuple|3.6.1|8>>
-    <associate|auto-62|<tuple|4|8>>
-    <associate|auto-63|<tuple|4.1|8>>
-    <associate|auto-64|<tuple|4.1.1|8>>
-    <associate|auto-65|<tuple|4.1.2|8>>
-    <associate|auto-66|<tuple|3|8>>
-    <associate|auto-67|<tuple|4|9>>
-    <associate|auto-68|<tuple|1|9>>
-    <associate|auto-69|<tuple|2|9>>
-    <associate|auto-7|<tuple|2.2|1>>
-    <associate|auto-70|<tuple|3|9>>
-    <associate|auto-71|<tuple|4|9>>
-    <associate|auto-72|<tuple|5|9>>
-    <associate|auto-73|<tuple|6|10>>
-    <associate|auto-74|<tuple|7|10>>
-    <associate|auto-75|<tuple|8|10>>
-    <associate|auto-76|<tuple|9|10>>
-    <associate|auto-77|<tuple|10|10>>
-    <associate|auto-78|<tuple|11|11>>
-    <associate|auto-79|<tuple|12|9>>
-    <associate|auto-8|<tuple|3|1>>
-    <associate|auto-80|<tuple|12|?>>
+    <associate|auto-40|<tuple|2.5.1|9>>
+    <associate|auto-41|<tuple|2.6|10>>
+    <associate|auto-42|<tuple|2.7|10>>
+    <associate|auto-43|<tuple|2.8|10>>
+    <associate|auto-44|<tuple|2.9|10>>
+    <associate|auto-45|<tuple|2.9.1|11>>
+    <associate|auto-46|<tuple|2.10|11>>
+    <associate|auto-47|<tuple|2.10.1|11>>
+    <associate|auto-48|<tuple|2.11|11>>
+    <associate|auto-49|<tuple|2.11.1|11>>
+    <associate|auto-5|<tuple|2|2>>
+    <associate|auto-50|<tuple|2.12|11>>
+    <associate|auto-51|<tuple|2.13|12>>
+    <associate|auto-52|<tuple|2.14|12>>
+    <associate|auto-53|<tuple|2.15|12>>
+    <associate|auto-54|<tuple|2.16|12>>
+    <associate|auto-55|<tuple|2.17|12>>
+    <associate|auto-56|<tuple|3|13>>
+    <associate|auto-57|<tuple|3.1|13>>
+    <associate|auto-58|<tuple|3.2|13>>
+    <associate|auto-59|<tuple|3.2.1|13>>
+    <associate|auto-6|<tuple|2.1|2>>
+    <associate|auto-60|<tuple|3.2.2|13>>
+    <associate|auto-61|<tuple|3.3|13>>
+    <associate|auto-62|<tuple|3.4|13>>
+    <associate|auto-63|<tuple|3.4.1|13>>
+    <associate|auto-64|<tuple|3.5|14>>
+    <associate|auto-65|<tuple|3.5.1|14>>
+    <associate|auto-66|<tuple|3.6|14>>
+    <associate|auto-67|<tuple|3.6.1|14>>
+    <associate|auto-68|<tuple|3.6.2|14>>
+    <associate|auto-69|<tuple|3.6.3|14>>
+    <associate|auto-7|<tuple|2.2|2>>
+    <associate|auto-70|<tuple|3.6.4|14>>
+    <associate|auto-71|<tuple|4|14>>
+    <associate|auto-72|<tuple|4.1|14>>
+    <associate|auto-73|<tuple|4.2|15>>
+    <associate|auto-74|<tuple|4.2.1|15>>
+    <associate|auto-75|<tuple|4.2.2|15>>
+    <associate|auto-76|<tuple|4.3|15>>
+    <associate|auto-77|<tuple|4.4|15>>
+    <associate|auto-78|<tuple|4.5|16>>
+    <associate|auto-79|<tuple|3|16>>
+    <associate|auto-8|<tuple|3|2>>
+    <associate|auto-80|<tuple|4|16>>
+    <associate|auto-81|<tuple|1|16>>
+    <associate|auto-82|<tuple|2|17>>
+    <associate|auto-83|<tuple|3|17>>
+    <associate|auto-84|<tuple|4|17>>
+    <associate|auto-85|<tuple|5|18>>
+    <associate|auto-86|<tuple|6|18>>
+    <associate|auto-87|<tuple|7|18>>
+    <associate|auto-88|<tuple|8|18>>
+    <associate|auto-89|<tuple|9|19>>
     <associate|auto-9|<tuple|3.1|2>>
+    <associate|auto-90|<tuple|10|?>>
+    <associate|auto-91|<tuple|11|?>>
   </collection>
 </references>
 
@@ -1187,121 +1320,165 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-49>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Circuiti
-      in corrente continua> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50><vspace|0.5fn>
+      <with|par-left|<quote|1tab>|2.14<space|2spc>Forza di Lorentz
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-50>>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>F.e.m. autoindotta
+      <with|par-left|<quote|1tab>|2.15<space|2spc>Equazioni di Maxwell
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-51>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Induttanze salienti
+      <with|par-left|<quote|1tab>|2.16<space|2spc>Corrente di spostamento
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>>
 
-      <with|par-left|<quote|2tab>|3.2.1<space|2spc>Bobina
+      <with|par-left|<quote|1tab>|2.17<space|2spc>Vettore di Poynting
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-53>>
 
-      <with|par-left|<quote|2tab>|3.2.2<space|2spc>Solendoie (in aria)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Circuiti
+      in corrente continua> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-54><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Densità di energia
+      <with|par-left|<quote|1tab>|3.1<space|2spc>F.e.m. autoindotta
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-55>>
 
-      <with|par-left|<quote|1tab>|3.4<space|2spc>Circuito RL
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Induttanze salienti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-56>>
 
-      <with|par-left|<quote|2tab>|3.4.1<space|2spc>Corrente nel circuito
+      <with|par-left|<quote|2tab>|3.2.1<space|2spc>Bobina
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-57>>
 
-      <with|par-left|<quote|1tab>|3.5<space|2spc>Circuito LC
+      <with|par-left|<quote|2tab>|3.2.2<space|2spc>Solendoie (in aria)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-58>>
 
-      <with|par-left|<quote|2tab>|3.5.1<space|2spc>Frequenza di oscillazione
+      <with|par-left|<quote|1tab>|3.3<space|2spc>Densità di energia
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-59>>
 
-      <with|par-left|<quote|1tab>|3.6<space|2spc>Circuito RLC
+      <with|par-left|<quote|1tab>|3.4<space|2spc>Circuito RL
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60>>
 
-      <with|par-left|<quote|2tab>|3.6.1<space|2spc>Carica sul condensatore
+      <with|par-left|<quote|2tab>|3.4.1<space|2spc>Corrente nel circuito
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-61>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Circuiti
-      in corrente alternata> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62><vspace|0.5fn>
+      <with|par-left|<quote|1tab>|3.5<space|2spc>Circuito LC
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-62>>
 
-      <with|par-left|<quote|1tab>|4.1<space|2spc>Reattanze
+      <with|par-left|<quote|2tab>|3.5.1<space|2spc>Frequenza di oscillazione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-63>>
 
-      <with|par-left|<quote|2tab>|4.1.1<space|2spc>Reattanza induttiva
+      <with|par-left|<quote|1tab>|3.6<space|2spc>Circuito RLC
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-64>>
 
-      <with|par-left|<quote|2tab>|4.1.2<space|2spc>Reattanza capacitiva
+      <with|par-left|<quote|2tab>|3.6.1<space|2spc>Carica sul condensatore
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-65>>
 
+      <with|par-left|<quote|2tab>|3.6.2<space|2spc>Corrente efficace
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-66>>
+
+      <with|par-left|<quote|2tab>|3.6.3<space|2spc>Impedenza
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-67>>
+
+      <with|par-left|<quote|2tab>|3.6.4<space|2spc>Angolo di fase tra
+      corrente e tensione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-68>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Circuiti
+      in corrente alternata> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-69><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Frequenza di risonanza
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-70>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Reattanze
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-71>>
+
+      <with|par-left|<quote|2tab>|4.2.1<space|2spc>Reattanza induttiva
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-72>>
+
+      <with|par-left|<quote|2tab>|4.2.2<space|2spc>Reattanza capacitiva
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-73>>
+
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Corrente e tensione efficace
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-74>>
+
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Potenza media
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-75>>
+
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Trasformatore
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-76>>
+
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|3<space|2spc>Costanti>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66><vspace|1fn>
+      <no-break><pageref|auto-77><vspace|1fn>
 
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|4<space|2spc>Momenti
       d'inerzia> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67><vspace|1fn>
+      <no-break><pageref|auto-78><vspace|1fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Massa
       puntiforme> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68><vspace|0.5fn>
+      <no-break><pageref|auto-79><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Asta>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69><vspace|0.5fn>
+      <no-break><pageref|auto-80><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Circonferenza>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70><vspace|0.5fn>
+      <no-break><pageref|auto-81><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Disco>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71><vspace|0.5fn>
+      <no-break><pageref|auto-82><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Cilindro>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72><vspace|0.5fn>
+      <no-break><pageref|auto-83><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Sfera>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73><vspace|0.5fn>
+      <no-break><pageref|auto-84><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Cono>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-74><vspace|0.5fn>
+      <no-break><pageref|auto-85><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Toro>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-75><vspace|0.5fn>
+      <no-break><pageref|auto-86><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>Ellissoide>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-76><vspace|0.5fn>
+      <no-break><pageref|auto-87><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|10<space|2spc>Piastra>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-77><vspace|0.5fn>
+      <no-break><pageref|auto-88><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Parallelepipedo>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78><vspace|0.5fn>
+      <no-break><pageref|auto-89><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
