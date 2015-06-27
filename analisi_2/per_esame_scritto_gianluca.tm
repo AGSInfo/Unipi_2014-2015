@@ -189,6 +189,12 @@
     \<wedge\>\<rho\><around*|(|\<theta\>|)>=<big|int><rsub|a><rsup|b><sqrt|<around*|(|\<rho\><rprime|'><around*|(|\<theta\>|)>|)><rsup|2>+<around*|(|\<rho\><around*|(|\<theta\>|)>|)><rsup|2>>dx
   </equation*>
 
+  Altra formula
+
+  <\equation*>
+    \<wedge\><around*|(|\<gamma\>|)>=<big|int><rsub|a><rsup|b><sqrt|<around*|[|<wide|\<rho\><around*|(|t|)>|\<dot\>>|]><rsup|2>+<around*|[|\<rho\><around*|(|t|)>|]><rsup|2>\<cdot\><around*|[|\<theta\><around*|(|t|)>|]><rsup|2>>
+  </equation*>
+
   <subsection|Integrale curvilineo>
 
   <\equation*>
