@@ -139,9 +139,9 @@
     <item>Se il dominio è semplicemente connesso, oltre ad essere chiusa è
     anche esatta e quindi la forma è integrabile [fine].
 
-    <item>Calcolo manualmente una primitiva
+    <item>Calcolo manualmente una primitiva <math|F>
 
-    <item>Verifico che <math|\<nabla\>F=A>
+    <item>Se <math|\<nabla\>F=A>, la forma è integrabile.
   </enumerate>
 
   <subparagraph|Metodo manuale per il calcolo della primitiva>
