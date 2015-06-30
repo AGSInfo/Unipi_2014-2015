@@ -791,6 +791,20 @@
     x<rsub|0><rsup|2>+y<rsub|0><rsup|2>-c\<gtr\>0
   </equation*>
 
+  <with|font-series|bold|Trovare il centro di una circonferenza>
+
+  Data una circonferenza
+
+  <\equation*>
+    x<rsup|2>+y<rsup|2>+a*x+b*y+c=0
+  </equation*>
+
+  questa ha centro in
+
+  <\equation*>
+    x<rsub|C>=-<frac|a|2>,<space|1em>y<rsub|C>=-<frac|b|2>
+  </equation*>
+
   <subparagraph|Equazione in coordinate polari>
 
   <\equation*>

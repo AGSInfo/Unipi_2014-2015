@@ -757,6 +757,20 @@
     x<rsub|0><rsup|2>+y<rsub|0><rsup|2>-c\<gtr\>0
   </equation*>
 
+  <with|font-series|bold|Trovare il centro di una circonferenza>
+
+  Data una circonferenza
+
+  <\equation*>
+    x<rsup|2>+y<rsup|2>+a*x+b*y+c=0
+  </equation*>
+
+  questa ha centro in
+
+  <\equation*>
+    x<rsub|C>=-<frac|a|2>,<space|1em>y<rsub|C>=-<frac|b|2>
+  </equation*>
+
   <subparagraph|Equazione in coordinate polari>
 
   <\equation*>
@@ -768,6 +782,10 @@
   <\equation*>
     C:<choice|<tformat|<table|<row|<cell|x=x<rsub|0>+R*cos<around*|(|t|)>>>|<row|<cell|y=y<rsub|0>+R*sin<around*|(|t|)>>>>>>t\<in\><around*|[|0,2*\<pi\>|]>
   </equation*>
+
+  <subsubsection|Ellisse>
+
+  \;
 
   <subsubsection|Seno iperbolico>
 
@@ -974,11 +992,11 @@
     <associate|auto-6|<tuple|1.2|1>>
     <associate|auto-60|<tuple|2.6.2|9>>
     <associate|auto-61|<tuple|2.6.3|9>>
-    <associate|auto-62|<tuple|2.7|10>>
-    <associate|auto-63|<tuple|2.8|10>>
-    <associate|auto-64|<tuple|2.8.1|11>>
-    <associate|auto-65|<tuple|2.8.2|11>>
-    <associate|auto-66|<tuple|2.8.3|11>>
+    <associate|auto-62|<tuple|2.6.4|10>>
+    <associate|auto-63|<tuple|2.7|10>>
+    <associate|auto-64|<tuple|2.8|11>>
+    <associate|auto-65|<tuple|2.8.1|11>>
+    <associate|auto-66|<tuple|2.8.2|11>>
     <associate|auto-67|<tuple|2.8.3|11>>
     <associate|auto-68|<tuple|2.8.3|?>>
     <associate|auto-69|<tuple|2.9.3|?>>
@@ -1024,64 +1042,64 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Lunghezza di una curva
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Determinare la
+      differenziabilità <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|1.5<space|2spc>Integrale curvilineo
+      <with|par-left|<quote|1tab>|1.5<space|2spc>Lunghezza di una curva
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|1.6<space|2spc>Integrale di campo
-      (integrale di linea) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Integrale curvilineo
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
-      <with|par-left|<quote|1tab>|1.7<space|2spc>Area della porzione di
-      grafico (o superficie di <with|mode|<quote|math>|f<around*|(|x,y|)>>)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.7<space|2spc>Integrale di campo
+      (integrale di linea) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|1.8<space|2spc>Integrale superficiale
+      <with|par-left|<quote|1tab>|1.8<space|2spc>Area della porzione di
+      grafico (o superficie di <with|mode|<quote|math>|f<around*|(|x,y|)>>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14><vspace|0.15fn>
+      <with|par-left|<quote|1tab>|1.9<space|2spc>Integrale superficiale
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14>>
 
       Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|1.9<space|2spc>Volume
+      Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16><vspace|0.15fn>
+
+      <with|par-left|<quote|1tab>|1.10<space|2spc>Volume
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-17>>
 
       Esempio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17><vspace|0.15fn>
+      <no-break><pageref|auto-18><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|1.10<space|2spc>Integrale su un insieme
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
-
-      <with|par-left|<quote|2tab>|1.10.1<space|2spc>In 2 variabili
+      <with|par-left|<quote|1tab>|1.11<space|2spc>Integrale su un insieme
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      <with|par-left|<quote|2tab>|1.10.2<space|2spc>In 3 variabili
+      <with|par-left|<quote|2tab>|1.11.1<space|2spc>In 2 variabili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      Integrazione per strati <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21><vspace|0.15fn>
+      <with|par-left|<quote|2tab>|1.11.2<space|2spc>In 3 variabili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
 
-      Integrazione per fili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Integrazione per strati <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22><vspace|0.15fn>
 
-      <with|par-left|<quote|2tab>|1.10.3<space|2spc>Cambio di variabile
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>>
+      Integrazione per fili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23><vspace|0.15fn>
 
-      <with|par-left|<quote|1tab>|1.11<space|2spc>Determinare la
-      differenziabilità <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|1.11.3<space|2spc>Cambio di variabile
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|1tab>|1.12<space|2spc>Inversione locale

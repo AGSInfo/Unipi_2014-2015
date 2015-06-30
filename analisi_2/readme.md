@@ -209,3 +209,45 @@
 - Misura di Lebesgue
 - Limite per x→x0 f(x) = infinito, f funzione vettoriale
 - Limite per x→x0 f(x) = -infinito, f funzione da Rn a R
+
+### Altra lista
+
+#### Definizioni
+
+1) Insieme aperto
+2) Insieme connesso
+3) Insieme stella
+4) Punto di accumulazione
+5) Punto di frontiera
+6) Funzione differenziabile
+7) Funzione α-omogenea
+8) Curva rettificabile
+9) Curva regolare
+10) Campo Integrabile
+11) Superficie regolare
+12) Integrabilità
+13) Limite
+14) Convergenza
+15) Vettore Tangente
+
+#### Teoremi
+
+1) Teorema degli zeri in più variabili
+2) Teorema della permanenza del segno in più variabili
+3) Teorema di Gauss – chiede anche i vari lemmi separatamente
+4) Teorema di Fermat sui massimi e minimi locali
+5) Se F è differenziabile allora è continua
+6) Se F è differenziabile allora esistono tutte le derivate direzionali e sono uguali a …
+7) Condizione necessaria sufficiente del Teorema Fondamentale dell’Integrazione
+8) Indipendenza dell’Integrale dal cammino per campi Integrabili
+9) Condizione del Rotore per i Campi Integrabili
+10) Funzione di classe C1 è differenziabile (esempio)
+11) Teorema del Dini – nelle sue versioni:
+a. Costruzione del δ e della φ (senza continuità)
+b. Dimostrazione della continuità
+12) Funzione che verifica il Rotore ma che non è Integrabile
+13) Teorema dell’invarianza omotopica
+14) Una curva di classe C1 è rettificabile
+15) Condizione del rotore per campi di classe C1 e integrabili (ovvero un campo di classe C1 e integrabile è rotazionale)
+16) CS per l’integrabilità
+17) Se tutte le derivate direzionali in una sfera si annullano a tappeto allora la funzione è costante
