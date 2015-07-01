@@ -41,15 +41,15 @@
   <subsubsection|Insieme aperto>
 
   In ogni punto dell'insieme è possibile ``spostarsi di poco'' senza uscire
-  dall'insieme
+  dall'insieme.
+
+  Ogni punto di un insieme aperto è interno all'insieme.
 
   <subsubsection|Insieme chiuso>
 
   È il complementare di un insieme aperto
 
   <subsubsection|Insieme compatto>
-
-  (da verificare)
 
   Un insieme è compatto se è chiuso e limitato
 
@@ -110,7 +110,7 @@
     <item>Verifico la differenziabilità
 
     <\equation*>
-      lim<rsub|<around*|(|h,k|)>\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>*h-f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>*k|<sqrt|h<rsup|2>+k<rsup|2>>>
+      lim<rsub|<around*|(|h,k|)>\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>*h-f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>*k|<sqrt|h<rsup|2>+k<rsup|2>>>=0
     </equation*>
   </enumerate>
 
@@ -178,9 +178,9 @@
     <big|int><rsub|a><rsup|b><sqrt|1+<wide|f<around*|(|t|)>|\<dot\>><rsup|2>>*dt
   </equation*>
 
-  <with|font-series|bold|Lunghezza di una curva in forma polare>
+  <with|font-series|bold|Lunghezza di una curva in coordinate polari piane>
 
-  La formula è da verificare
+  (la formula è da verificare)
 
   Data una curva polare <math|\<rho\><around*|(|\<theta\>|)>> e
   <math|\<theta\>\<in\><around*|[|a,b|]>>, si ha
@@ -194,6 +194,18 @@
   <\equation*>
     \<wedge\><around*|(|\<gamma\>|)>=<big|int><rsub|a><rsup|b><sqrt|<around*|[|<wide|\<rho\><around*|(|t|)>|\<dot\>>|]><rsup|2>+<around*|[|\<rho\><around*|(|t|)>|]><rsup|2>\<cdot\><around*|[|\<theta\><around*|(|t|)>|]><rsup|2>>
   </equation*>
+
+  <with|font-series|bold|Lunghezza di una curva in coordinate polari
+  cilindriche>
+
+  <\equation*>
+    \<wedge\><around*|(|t|)>=<big|int><rsub|a><rsup|b><sqrt|<around*|[|<wide|\<rho\><around*|(|t|)>|\<dot\>>|]><rsup|2>+<around*|[|\<rho\><around*|(|t|)>|]><rsup|2>\<cdot\><around*|[|<wide|\<theta\><around*|(|t|)>|\<dot\>>|]><rsup|2>+<around*|[|z<around*|(|t|)>|]><rsup|2>>\<cdot\>dt
+  </equation*>
+
+  <with|font-series|bold|Lunghezza di una curva in coordinate polari
+  sferiche>
+
+  (vedi appunti ``verdi'')
 
   <subsection|Integrale curvilineo>
 
@@ -535,17 +547,19 @@
   Necessita di revisione!
 
   <\enumerate>
-    <item>Calcolo <math|f<around*|(|x<rsub|0>|)>> se necessario
-
     <item>Calcolo il vettore normale alla superficie parametrica
 
     <\equation*>
-      \<Phi\>u<matrix|<tformat|<table|<row|<cell|x<rsub|0>>>|<row|<cell|y<rsub|0>>>>>>\<wedge\>\<Phi\><rsub|v><matrix|<tformat|<table|<row|<cell|x<rsub|0>>>|<row|<cell|y<rsub|0>>>>>>=<around*|(|E<rsub|1>,E<rsub|2>,E<rsub|3>|)>
+      \<Phi\>u<matrix|<tformat|<table|<row|<cell|u<rsub|0>>>|<row|<cell|v<rsub|0>>>>>>\<wedge\>\<Phi\><rsub|v><matrix|<tformat|<table|<row|<cell|u<rsub|0>>>|<row|<cell|v<rsub|0>>>>>>=<matrix|<tformat|<table|<row|<cell|E<rsub|1>>>|<row|<cell|E<rsub|2>>>|<row|<cell|E<rsub|3>>>>>>
     </equation*>
 
     e se <math|= 0> la superfice è non regolare
 
-    <item>Piano tangente = <math|E<rsub|1><around*|(|x-x<rsub|0>|)>+E<rsub|2><around*|(|y-y<rsub|0>|)>+E<rsub|3><around*|(|z-z<rsub|0>|)>>
+    <item>Scrivo l'equazione del piano tangente\ 
+
+    <\equation*>
+      E<rsub|1><around*|(|x-x<rsub|0>|)>+E<rsub|2><around*|(|y-y<rsub|0>|)>+E<rsub|3><around*|(|z-z<rsub|0>|)>=0
+    </equation*>
   </enumerate>
 
   <subsection|Polinomio di Taylor>
@@ -817,6 +831,24 @@
     C:<choice|<tformat|<table|<row|<cell|x=x<rsub|0>+R*cos<around*|(|t|)>>>|<row|<cell|y=y<rsub|0>+R*sin<around*|(|t|)>>>>>>t\<in\><around*|[|0,2*\<pi\>|]>
   </equation*>
 
+  <subsubsection|Ellisse>
+
+  <\equation*>
+    <frac|x<rsup|2>|a<rsup|2>>+<frac|y<rsup|2>|b<rsup|2>>=1
+  </equation*>
+
+  <with|font-series|bold|Equazione parametrica>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x=a*cos<around*|(|t|)>>>|<row|<cell|y=b*sin<around*|(|t|)>>>|<row|<cell|o\<leqslant\>t\<leqslant\>2*\<pi\>>>>>>
+  </equation*>
+
+  <with|font-series|bold|Area>
+
+  <\equation*>
+    A=\<pi\>*a*b
+  </equation*>
+
   <subsubsection|Seno iperbolico>
 
   <\equation*>
@@ -1018,14 +1050,14 @@
     <associate|auto-61|<tuple|12|11>>
     <associate|auto-62|<tuple|2.5.2|11>>
     <associate|auto-63|<tuple|2.5.3|11>>
-    <associate|auto-64|<tuple|2.6|12>>
-    <associate|auto-65|<tuple|2.7|12>>
-    <associate|auto-66|<tuple|2.7.1|12>>
-    <associate|auto-67|<tuple|2.7.2|12>>
-    <associate|auto-68|<tuple|2.7.3|13>>
-    <associate|auto-69|<tuple|1.1.7.3|?>>
+    <associate|auto-64|<tuple|2.5.4|12>>
+    <associate|auto-65|<tuple|2.6|12>>
+    <associate|auto-66|<tuple|2.7|12>>
+    <associate|auto-67|<tuple|2.7.1|12>>
+    <associate|auto-68|<tuple|2.7.2|13>>
+    <associate|auto-69|<tuple|2.7.3|?>>
     <associate|auto-7|<tuple|1.1.5|3>>
-    <associate|auto-70|<tuple|3.2.3|?>>
+    <associate|auto-70|<tuple|2.7.3|?>>
     <associate|auto-8|<tuple|1.1.6|3>>
     <associate|auto-9|<tuple|1.2|3>>
   </collection>
