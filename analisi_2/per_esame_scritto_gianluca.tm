@@ -3,7 +3,7 @@
 <style|<tuple|book|italian>>
 
 <\body>
-  <doc-data|<doc-title|Scritto analisi 2>>
+  <doc-data|<doc-title|Scritto analisi 2 (v2)>>
 
   \;
 
@@ -41,15 +41,15 @@
   <subsubsection|Insieme aperto>
 
   In ogni punto dell'insieme è possibile ``spostarsi di poco'' senza uscire
-  dall'insieme
+  dall'insieme.
+
+  Ogni punto di un insieme aperto è interno all'insieme.
 
   <subsubsection|Insieme chiuso>
 
   È il complementare di un insieme aperto
 
   <subsubsection|Insieme compatto>
-
-  (da verificare)
 
   Un insieme è compatto se è chiuso e limitato
 
@@ -110,7 +110,7 @@
     <item>Verifico la differenziabilità
 
     <\equation*>
-      lim<rsub|<around*|(|h,k|)>\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>*h-f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>*k|<sqrt|h<rsup|2>+k<rsup|2>>>
+      lim<rsub|<around*|(|h,k|)>\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+h,y<rsub|0>+k|)>-f<around*|(|x<rsub|0>,y<rsub|0>|)>-f<rsub|x><around*|(|x<rsub|0>,y<rsub|0>|)>*h-f<rsub|y><around*|(|x<rsub|0>,y<rsub|0>|)>*k|<sqrt|h<rsup|2>+k<rsup|2>>>=0
     </equation*>
   </enumerate>
 
@@ -178,9 +178,9 @@
     <big|int><rsub|a><rsup|b><sqrt|1+<wide|f<around*|(|t|)>|\<dot\>><rsup|2>>*dt
   </equation*>
 
-  <with|font-series|bold|Lunghezza di una curva in forma polare>
+  <with|font-series|bold|Lunghezza di una curva in coordinate polari piane>
 
-  La formula è da verificare
+  (la formula è da verificare)
 
   Data una curva polare <math|\<rho\><around*|(|\<theta\>|)>> e
   <math|\<theta\>\<in\><around*|[|a,b|]>>, si ha
@@ -194,6 +194,18 @@
   <\equation*>
     \<wedge\><around*|(|\<gamma\>|)>=<big|int><rsub|a><rsup|b><sqrt|<around*|[|<wide|\<rho\><around*|(|t|)>|\<dot\>>|]><rsup|2>+<around*|[|\<rho\><around*|(|t|)>|]><rsup|2>\<cdot\><around*|[|\<theta\><around*|(|t|)>|]><rsup|2>>
   </equation*>
+
+  <with|font-series|bold|Lunghezza di una curva in coordinate polari
+  cilindriche>
+
+  <\equation*>
+    \<wedge\><around*|(|t|)>=<big|int><rsub|a><rsup|b><sqrt|<around*|[|<wide|\<rho\><around*|(|t|)>|\<dot\>>|]><rsup|2>+<around*|[|\<rho\><around*|(|t|)>|]><rsup|2>\<cdot\><around*|[|<wide|\<theta\><around*|(|t|)>|\<dot\>>|]><rsup|2>+<around*|[|z<around*|(|t|)>|]><rsup|2>>\<cdot\>dt
+  </equation*>
+
+  <with|font-series|bold|Lunghezza di una curva in coordinate polari
+  sferiche>
+
+  (vedi appunti ``verdi'')
 
   <subsection|Integrale curvilineo>
 
@@ -535,17 +547,19 @@
   Necessita di revisione!
 
   <\enumerate>
-    <item>Calcolo <math|f<around*|(|x<rsub|0>|)>> se necessario
-
     <item>Calcolo il vettore normale alla superficie parametrica
 
     <\equation*>
-      \<Phi\>u<matrix|<tformat|<table|<row|<cell|x<rsub|0>>>|<row|<cell|y<rsub|0>>>>>>\<wedge\>\<Phi\><rsub|v><matrix|<tformat|<table|<row|<cell|x<rsub|0>>>|<row|<cell|y<rsub|0>>>>>>=<around*|(|E<rsub|1>,E<rsub|2>,E<rsub|3>|)>
+      \<Phi\>u<matrix|<tformat|<table|<row|<cell|u<rsub|0>>>|<row|<cell|v<rsub|0>>>>>>\<wedge\>\<Phi\><rsub|v><matrix|<tformat|<table|<row|<cell|u<rsub|0>>>|<row|<cell|v<rsub|0>>>>>>=<matrix|<tformat|<table|<row|<cell|E<rsub|1>>>|<row|<cell|E<rsub|2>>>|<row|<cell|E<rsub|3>>>>>>
     </equation*>
 
     e se <math|= 0> la superfice è non regolare
 
-    <item>Piano tangente = <math|E<rsub|1><around*|(|x-x<rsub|0>|)>+E<rsub|2><around*|(|y-y<rsub|0>|)>+E<rsub|3><around*|(|z-z<rsub|0>|)>>
+    <item>Scrivo l'equazione del piano tangente\ 
+
+    <\equation*>
+      E<rsub|1><around*|(|x-x<rsub|0>|)>+E<rsub|2><around*|(|y-y<rsub|0>|)>+E<rsub|3><around*|(|z-z<rsub|0>|)>=0
+    </equation*>
   </enumerate>
 
   <subsection|Polinomio di Taylor>
@@ -791,6 +805,20 @@
     x<rsub|0><rsup|2>+y<rsub|0><rsup|2>-c\<gtr\>0
   </equation*>
 
+  <with|font-series|bold|Trovare il centro di una circonferenza>
+
+  Data una circonferenza
+
+  <\equation*>
+    x<rsup|2>+y<rsup|2>+a*x+b*y+c=0
+  </equation*>
+
+  questa ha centro in
+
+  <\equation*>
+    x<rsub|C>=-<frac|a|2>,<space|1em>y<rsub|C>=-<frac|b|2>
+  </equation*>
+
   <subparagraph|Equazione in coordinate polari>
 
   <\equation*>
@@ -801,6 +829,24 @@
 
   <\equation*>
     C:<choice|<tformat|<table|<row|<cell|x=x<rsub|0>+R*cos<around*|(|t|)>>>|<row|<cell|y=y<rsub|0>+R*sin<around*|(|t|)>>>>>>t\<in\><around*|[|0,2*\<pi\>|]>
+  </equation*>
+
+  <subsubsection|Ellisse>
+
+  <\equation*>
+    <frac|x<rsup|2>|a<rsup|2>>+<frac|y<rsup|2>|b<rsup|2>>=1
+  </equation*>
+
+  <with|font-series|bold|Equazione parametrica>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x=a*cos<around*|(|t|)>>>|<row|<cell|y=b*sin<around*|(|t|)>>>|<row|<cell|o\<leqslant\>t\<leqslant\>2*\<pi\>>>>>>
+  </equation*>
+
+  <with|font-series|bold|Area>
+
+  <\equation*>
+    A=\<pi\>*a*b
   </equation*>
 
   <subsubsection|Seno iperbolico>
@@ -935,9 +981,17 @@
 
 <\initial>
   <\collection>
-    <associate|page-medium|papyrus>
-    <associate|page-orientation|portrait>
-    <associate|par-columns|1>
+    <associate|page-bot|1cm>
+    <associate|page-even|2cm>
+    <associate|page-medium|paper>
+    <associate|page-odd|2cm>
+    <associate|page-orientation|landscape>
+    <associate|page-right|1cm>
+    <associate|page-screen-margin|false>
+    <associate|page-top|2cm>
+    <associate|page-width-margin|false>
+    <associate|par-columns|2>
+    <associate|par-mode|left>
     <associate|preamble|false>
   </collection>
 </initial>
@@ -947,71 +1001,71 @@
     <associate|auto-1|<tuple|1|3>>
     <associate|auto-10|<tuple|1.3|3>>
     <associate|auto-11|<tuple|1.3.1|3>>
-    <associate|auto-12|<tuple|1.4|4>>
-    <associate|auto-13|<tuple|1.5|4>>
+    <associate|auto-12|<tuple|1.4|3>>
+    <associate|auto-13|<tuple|1.5|3>>
     <associate|auto-14|<tuple|1|4>>
     <associate|auto-15|<tuple|1.6|4>>
     <associate|auto-16|<tuple|1.7|4>>
-    <associate|auto-17|<tuple|1.8|5>>
-    <associate|auto-18|<tuple|1.9|5>>
-    <associate|auto-19|<tuple|1.10|5>>
+    <associate|auto-17|<tuple|1.8|4>>
+    <associate|auto-18|<tuple|1.9|4>>
+    <associate|auto-19|<tuple|1.10|4>>
     <associate|auto-2|<tuple|1.1|3>>
-    <associate|auto-20|<tuple|2|5>>
-    <associate|auto-21|<tuple|3|6>>
-    <associate|auto-22|<tuple|1.11|6>>
-    <associate|auto-23|<tuple|4|6>>
-    <associate|auto-24|<tuple|1.12|6>>
-    <associate|auto-25|<tuple|1.12.1|6>>
-    <associate|auto-26|<tuple|1.12.2|6>>
-    <associate|auto-27|<tuple|5|6>>
-    <associate|auto-28|<tuple|6|6>>
-    <associate|auto-29|<tuple|1.12.3|7>>
+    <associate|auto-20|<tuple|2|4>>
+    <associate|auto-21|<tuple|3|5>>
+    <associate|auto-22|<tuple|1.11|5>>
+    <associate|auto-23|<tuple|4|5>>
+    <associate|auto-24|<tuple|1.12|5>>
+    <associate|auto-25|<tuple|1.12.1|5>>
+    <associate|auto-26|<tuple|1.12.2|5>>
+    <associate|auto-27|<tuple|5|5>>
+    <associate|auto-28|<tuple|6|5>>
+    <associate|auto-29|<tuple|1.12.3|5>>
     <associate|auto-3|<tuple|1.1.1|3>>
-    <associate|auto-30|<tuple|1.13|7>>
-    <associate|auto-31|<tuple|7|7>>
-    <associate|auto-32|<tuple|8|7>>
-    <associate|auto-33|<tuple|1.14|8>>
-    <associate|auto-34|<tuple|1.15|8>>
-    <associate|auto-35|<tuple|1.16|8>>
-    <associate|auto-36|<tuple|1.17|8>>
-    <associate|auto-37|<tuple|1.18|8>>
-    <associate|auto-38|<tuple|1.19|8>>
-    <associate|auto-39|<tuple|1.19.1|8>>
+    <associate|auto-30|<tuple|1.13|5>>
+    <associate|auto-31|<tuple|7|6>>
+    <associate|auto-32|<tuple|8|6>>
+    <associate|auto-33|<tuple|1.14|6>>
+    <associate|auto-34|<tuple|1.15|6>>
+    <associate|auto-35|<tuple|1.16|6>>
+    <associate|auto-36|<tuple|1.17|6>>
+    <associate|auto-37|<tuple|1.18|6>>
+    <associate|auto-38|<tuple|1.19|7>>
+    <associate|auto-39|<tuple|1.19.1|7>>
     <associate|auto-4|<tuple|1.1.2|3>>
-    <associate|auto-40|<tuple|1.19.2|9>>
-    <associate|auto-41|<tuple|1.20|9>>
-    <associate|auto-42|<tuple|2|9>>
-    <associate|auto-43|<tuple|2.1|9>>
-    <associate|auto-44|<tuple|2.2|9>>
-    <associate|auto-45|<tuple|2.2.1|10>>
-    <associate|auto-46|<tuple|2.2.2|10>>
-    <associate|auto-47|<tuple|2.3|10>>
-    <associate|auto-48|<tuple|2.3.1|10>>
-    <associate|auto-49|<tuple|2.3.2|10>>
+    <associate|auto-40|<tuple|1.19.2|7>>
+    <associate|auto-41|<tuple|1.20|7>>
+    <associate|auto-42|<tuple|2|7>>
+    <associate|auto-43|<tuple|2.1|7>>
+    <associate|auto-44|<tuple|2.2|7>>
+    <associate|auto-45|<tuple|2.2.1|7>>
+    <associate|auto-46|<tuple|2.2.2|7>>
+    <associate|auto-47|<tuple|2.3|8>>
+    <associate|auto-48|<tuple|2.3.1|8>>
+    <associate|auto-49|<tuple|2.3.2|8>>
     <associate|auto-5|<tuple|1.1.3|3>>
-    <associate|auto-50|<tuple|2.3.3|10>>
-    <associate|auto-51|<tuple|2.3.4|10>>
-    <associate|auto-52|<tuple|2.4|10>>
-    <associate|auto-53|<tuple|2.4.1|11>>
-    <associate|auto-54|<tuple|9|11>>
-    <associate|auto-55|<tuple|2.4.2|11>>
-    <associate|auto-56|<tuple|2.4.3|11>>
-    <associate|auto-57|<tuple|2.5|11>>
-    <associate|auto-58|<tuple|2.5.1|11>>
-    <associate|auto-59|<tuple|10|11>>
+    <associate|auto-50|<tuple|2.3.3|8>>
+    <associate|auto-51|<tuple|2.3.4|8>>
+    <associate|auto-52|<tuple|2.4|8>>
+    <associate|auto-53|<tuple|2.4.1|8>>
+    <associate|auto-54|<tuple|9|8>>
+    <associate|auto-55|<tuple|2.4.2|8>>
+    <associate|auto-56|<tuple|2.4.3|8>>
+    <associate|auto-57|<tuple|2.5|8>>
+    <associate|auto-58|<tuple|2.5.1|8>>
+    <associate|auto-59|<tuple|10|8>>
     <associate|auto-6|<tuple|1.1.4|3>>
-    <associate|auto-60|<tuple|11|11>>
-    <associate|auto-61|<tuple|12|11>>
-    <associate|auto-62|<tuple|2.5.2|11>>
-    <associate|auto-63|<tuple|2.5.3|12>>
-    <associate|auto-64|<tuple|2.6|12>>
-    <associate|auto-65|<tuple|2.7|12>>
-    <associate|auto-66|<tuple|2.7.1|12>>
-    <associate|auto-67|<tuple|2.7.2|13>>
-    <associate|auto-68|<tuple|2.7.3|?>>
-    <associate|auto-69|<tuple|1.1.7.3|?>>
+    <associate|auto-60|<tuple|11|9>>
+    <associate|auto-61|<tuple|12|9>>
+    <associate|auto-62|<tuple|2.5.2|9>>
+    <associate|auto-63|<tuple|2.5.3|9>>
+    <associate|auto-64|<tuple|2.5.4|9>>
+    <associate|auto-65|<tuple|2.6|9>>
+    <associate|auto-66|<tuple|2.7|9>>
+    <associate|auto-67|<tuple|2.7.1|9>>
+    <associate|auto-68|<tuple|2.7.2|10>>
+    <associate|auto-69|<tuple|2.7.3|10>>
     <associate|auto-7|<tuple|1.1.5|3>>
-    <associate|auto-70|<tuple|3.2.3|?>>
+    <associate|auto-70|<tuple|2.7.3|?>>
     <associate|auto-8|<tuple|1.1.6|3>>
     <associate|auto-9|<tuple|1.2|3>>
   </collection>
@@ -1254,33 +1308,37 @@
       Equazione parametrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-61><vspace|0.15fn>
 
-      <with|par-left|<quote|2tab>|2.5.2<space|2spc>Seno iperbolico
+      <with|par-left|<quote|2tab>|2.5.2<space|2spc>Ellisse
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-62>>
 
-      <with|par-left|<quote|2tab>|2.5.3<space|2spc>Coseno iperbolico
+      <with|par-left|<quote|2tab>|2.5.3<space|2spc>Seno iperbolico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-63>>
 
-      <with|par-left|<quote|1tab>|2.6<space|2spc>Limiti notevoli
+      <with|par-left|<quote|2tab>|2.5.4<space|2spc>Coseno iperbolico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-64>>
 
-      <with|par-left|<quote|1tab>|2.7<space|2spc>Integrali
+      <with|par-left|<quote|1tab>|2.6<space|2spc>Limiti notevoli
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-65>>
 
-      <with|par-left|<quote|2tab>|2.7.1<space|2spc>Integrazione per parti
+      <with|par-left|<quote|1tab>|2.7<space|2spc>Integrali
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-66>>
 
-      <with|par-left|<quote|2tab>|2.7.2<space|2spc>Integrali utili
+      <with|par-left|<quote|2tab>|2.7.1<space|2spc>Integrazione per parti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-67>>
 
-      <with|par-left|<quote|2tab>|2.7.3<space|2spc>Sostituzioni utili
+      <with|par-left|<quote|2tab>|2.7.2<space|2spc>Integrali utili
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-68>>
+
+      <with|par-left|<quote|2tab>|2.7.3<space|2spc>Sostituzioni utili
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-69>>
     </associate>
   </collection>
 </auxiliary>
