@@ -19,6 +19,12 @@
 
   <chapter|Cinematica>
 
+  <section|Legge oraria>
+
+  <\equation*>
+    x<around*|(|t|)>=<big|int><rsub|0><rsup|t>v<around*|(|T|)>*d*T
+  </equation*>
+
   <section|Calcolo del centro di massa>
 
   <subsection|In un sistema di <math|N> punti materiali>
@@ -47,7 +53,7 @@
   <subsection|Energia cinetica del centro di massa>
 
   <\equation*>
-    E<rsub|c>=<frac|1|2>*m*v<rsup|2>
+    E<rsub|c>=<frac|1|2>*m*v<rsup|2>\<space\><space|1em><around*|[|J|]>
   </equation*>
 
   <subsection|Energia cinetica di rotazione>
@@ -62,7 +68,7 @@
     E<rsub|rot>=<frac|1|2>*I*w<rsup|2>
   </equation*>
 
-  <subsection|Energia cinetica e quantità di moto>
+  <subsection|Relazione tra energia cinetica e quantità di moto>
 
   <\equation*>
     E<rsub|c>=<frac|p<rsup|2>|2*m>
@@ -105,8 +111,13 @@
   Si ha quindi che l'impulso è la variazione della quantità di moto
 
   <\equation*>
-    \<Delta\><wide|p|\<vect\>>=<big|int><rsub|t<rsub|0>><rsup|t<rsub|1>><wide|F|\<vect\>>*dt
+    \<Delta\><wide|p|\<vect\>>=<big|int><rsub|t<rsub|0>><rsup|t<rsub|1>><wide|F|\<vect\>>*dt<space|1em><around*|[|N*s|]>
   </equation*>
+
+  <with|font-series|bold|Esempio> dovendo calcolare l'impulso esercitato su
+  di un perno <math|A> è sufficiente calcolare la differenza della quantità
+  di moto finale ed iniziale del sistema (nel caso in cui <math|A> sia
+  l'unica causa della riduzione della quantità di moto)
 
   <subsection|Teorema dell'impulso>
 
@@ -145,6 +156,85 @@
   <\equation*>
     \<Delta\><wide|p|\<vect\>>=<wide|F|\<vect\>>*\<Delta\>t
   </equation*>
+
+  <section|Urti>
+
+  <subsection|Urto elastico>
+
+  In generale, nella risoluzione di un problema d'urto completamente
+  elastico, si parte dalla conservazione della <hlink|quantità di
+  moto|https://it.wikipedia.org/wiki/Quantit%C3%A0_di_moto> e
+  dell'<hlink|energia cinetica|https://it.wikipedia.org/wiki/Energia_cinetica>
+  prima e dopo l'urto.
+
+  <\itemize>
+    <item>La quantità di moto del sistema si conserva per definizione di
+    urto: durante un urto, infatti, è possibile considerare il sistema
+    isolato a causa delle <hlink|forze impulsive|https://it.wikipedia.org/wiki/Forza_impulsiva>
+    che i corpi che interagiscono si scambiano, e quindi è possibile
+    trascurare le altre forze in gioco (es.
+    <hlink|gravitazionale|https://it.wikipedia.org/wiki/Forza_di_gravit%C3%A0>);
+  </itemize>
+
+  <\itemize>
+    <item>Per definizione di urto elastico, si deve conservare
+    l'<hlink|energia meccanica|https://it.wikipedia.org/wiki/Energia_meccanica>
+    totale del sistema. Considerato però che il sistema è isolato durante
+    l'urto, i potenziali delle forze esterne si trascurano e rimane
+    unicamente l'energia cinetica dei corpi.
+  </itemize>
+
+  <subsection|Urto anaelastico>
+
+  La legge di conservazione della <hlink|quantità di
+  moto|https://it.wikipedia.org/wiki/Quantit%C3%A0_di_moto> del sistema è:
+
+  <\equation*>
+    P<rsub|t>=<big|sum>M\<cdot\>v=cost
+  </equation*>
+
+  per gli <with|font-shape|italic|urti anelastici totali>, si può scrivere
+
+  <\equation*>
+    m<rsub|1>v*<rsub|1>+m<rsub|2>v*<rsub|2>=<around*|(|m<rsub|1>+m<rsub|2>|)>\<cdot\>V
+  </equation*>
+
+  dove <math|m<rsub|1>v<rsub|1>> e <math|m<rsub|2>*v<rsub|2>> rappresentano
+  le quantità di moto prima dell'urto rispettivamente del primo corpo di
+  massa <math|m<rsub|1>> e del secondo corpo di massa <math|m<rsub|2>>,
+  mentre <math|<around*|(|m<rsub|1>+m<rsub|2>|)>\<cdot\>V> è la quantità di
+  moto dell'intero sistema dopo l'urto, cioè quando i due corpi si fondono in
+  un unico corpo di massa pari alla somma delle precedenti,
+  <math|m<rsub|1>+m<rsub|2>>
+
+  <math|V>, ricavabile dalla precedente espressione, rappresenta la velocità
+  con cui si muovono i due corpi insieme dopo l'urto.
+
+  <with|font-series|bold|Energia dissipata> Se si suppone per semplicità che
+  non vi siano variazioni di energia potenziale (caso più comune), allora la
+  perdita di energia meccanica è dovuta alla sola variazione di energia
+  cinetica. L'energia cinetica dissipata durante l'urto completamente
+  anaelastico, è
+
+  <\equation*>
+    -\<Delta\>K=K<rsub|i>-K<rsub|f>=<frac|1|2>*m<rsub|1>*v<rsub|1><rsup|2>+<frac|1|2>m<rsub|2>v<rsub|2>-<frac|1|2><around*|(|m<rsub|1>+m<rsub|2>|)>V<rsup|2>=<frac|1|2>m<rsub|r><around*|(|v<rsub|1>-v<rsub|2>|)><rsup|2>*
+  </equation*>
+
+  dove\ 
+
+  <\equation*>
+    m<rsub|r>=<frac|m<rsub|1>*m<rsub|2>|m<rsub|1>+m<rsub|2>>
+  </equation*>
+
+  <section|Conservazione di quantità di moto e momento angolare>
+
+  <\itemize>
+    <item>La quantità di moto non si conserva nel caso in cui esista un
+    vincolo che esercita una forza impulsiva
+
+    <item>Il momento angolare si conserva anche nel caso in cui esista un
+    vincolo soltanto nel caso in cui questo abbia braccio nullo.
+  </itemize>
 
   <section|Pendolo>
 
@@ -193,7 +283,7 @@
   [da verificare]
 
   <\equation*>
-    <around*|\||M|\|>=\<alpha\>I
+    <around*|\||M|\|>=\<omega\>I
   </equation*>
 
   <subsection|Momento angolare>
@@ -395,7 +485,7 @@
   <subsection|Differenza di potenziale>
 
   <\equation*>
-    \<Delta\>V<rsub|A*B>=V<rsub|A>-V<rsub|B>\<equiv\><frac|\<Delta\>U|q<rsub|2>>=-<big|int><rsub|A><rsup|B><wide|E|\<vect\>>\<cdot\>d<wide|s|\<vect\>>
+    \<Delta\>V<rsub|A*B>=V<rsub|A>-V<rsub|B>\<equiv\><frac|\<Delta\>U|q<rsub|2>>=<big|int><rsub|A><rsup|B><wide|E|\<vect\>>\<cdot\>d<wide|l|\<vect\>>
   </equation*>
 
   <\equation*>
@@ -468,6 +558,17 @@
 
   <\equation*>
     W=<frac|1|2>*C*V<rsup|2>=U
+  </equation*>
+
+  <subsection|Energia potenziale di un elettrone>
+
+  (da verificare)
+
+  La differenza di energia potenziale dell'elettronce tra quando è in
+  <math|A> e quando si trova in <math|A> è data da:
+
+  <\equation*>
+    \<Delta\>U=q<rsub|e>*V<around*|(|A|)>-q<rsub|e>*V<around*|(|B|)>
   </equation*>
 
   <section|Campo magnetico>
@@ -547,7 +648,7 @@
   <subsubsection|Solenoide>
 
   <\equation*>
-    B=\<mu\><rsub|0>*<frac|N|\<ell\>>I=\<mu\><rsub|0>*n*I
+    B=\<mu\><rsub|0>*<frac|N|\<ell\>>I=\<mu\><rsub|0>*n*I<space|1em><around*|[|T|]>
   </equation*>
 
   dove <math|N> è il numero totale di spire, <math|n> il numero di spire per
@@ -589,6 +690,8 @@
 
   <subsection|Particella in movimento in un campo magnetico uniforme>
 
+  (da verificare)
+
   La traiettoria della particella è circolare, ed il piano del cerchio è
   perpendicolare al campo magnetico. Il raggio <math|r> della traiettoria
   circolare è
@@ -604,7 +707,17 @@
     \<omega\>=<frac|q*B|m>
   </equation*>
 
-  \;
+  <with|font-series|bold|Esempio> Il raggio di curvatura nella prima regione
+  si calcola da
+
+  <\equation*>
+    <around*|\||F|\|>=q*V*B<separating-space|1em>F=m*a=m*V<rsup|2>/R
+    <space|1em>\<Longrightarrow\><space|1em>q*V*B=m*V<rsup|2>/R
+  </equation*>
+
+  <\equation*>
+    R=<frac|q*B|m*V> <around*|[|m|]>
+  </equation*>
 
   <subsubsection|Tipologie di sostanze magnetiche>
 
@@ -704,6 +817,14 @@
     <wide|F|\<vect\>>=q*<wide|E|\<vect\>>+q*<around*|(|<wide|v|\<vect\>>\<times\><wide|B|\<vect\>>|)>
   </equation*>
 
+  <\equation*>
+    <wide|F<rsub|B>|\<vect\>>=I*<around*|(|<wide|d|\<vect\>>\<times\><wide|B|\<vect\>>|)>
+  </equation*>
+
+  <\equation*>
+    <around*|\||F|\|>=q*V*B
+  </equation*>
+
   <subsection|Equazioni di Maxwell>
 
   <\equation*>
@@ -788,6 +909,10 @@
 
   <\equation*>
     P=<frac|V<rsup|2><around*|(|t|)>|R>
+  </equation*>
+
+  <\equation*>
+    P=<big|int><rsub|0><rsup|t>R*I<around*|(|t|)><rsup|2>*d*t
   </equation*>
 
   <subsection|Valore della resistenza>
@@ -1244,6 +1369,7 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+<<<<<<< HEAD
     <associate|auto-10|<tuple|2.5|2>>
     <associate|auto-100|<tuple|4.4|18>>
     <associate|auto-101|<tuple|4.5|19>>
@@ -1360,6 +1486,130 @@
     <associate|auto-97|<tuple|4.2.1|18>>
     <associate|auto-98|<tuple|4.2.2|18>>
     <associate|auto-99|<tuple|4.3|18>>
+=======
+    <associate|auto-10|<tuple|3.4|2>>
+    <associate|auto-100|<tuple|4|18>>
+    <associate|auto-101|<tuple|4.1|19>>
+    <associate|auto-102|<tuple|4.2|19>>
+    <associate|auto-103|<tuple|4.2.1|19>>
+    <associate|auto-104|<tuple|4.2.2|19>>
+    <associate|auto-105|<tuple|4.3|20>>
+    <associate|auto-106|<tuple|4.4|20>>
+    <associate|auto-107|<tuple|4.5|20>>
+    <associate|auto-108|<tuple|3|20>>
+    <associate|auto-109|<tuple|4|20>>
+    <associate|auto-11|<tuple|3.5|2>>
+    <associate|auto-110|<tuple|1|21>>
+    <associate|auto-111|<tuple|2|21>>
+    <associate|auto-112|<tuple|5|21>>
+    <associate|auto-113|<tuple|1|22>>
+    <associate|auto-114|<tuple|2|22>>
+    <associate|auto-115|<tuple|3|22>>
+    <associate|auto-116|<tuple|4|22>>
+    <associate|auto-117|<tuple|5|23>>
+    <associate|auto-118|<tuple|6|?>>
+    <associate|auto-119|<tuple|7|?>>
+    <associate|auto-12|<tuple|3.6|2>>
+    <associate|auto-120|<tuple|8|?>>
+    <associate|auto-121|<tuple|9|?>>
+    <associate|auto-122|<tuple|10|?>>
+    <associate|auto-123|<tuple|11|?>>
+    <associate|auto-13|<tuple|4|3>>
+    <associate|auto-14|<tuple|4.1|3>>
+    <associate|auto-15|<tuple|5|3>>
+    <associate|auto-16|<tuple|5.1|3>>
+    <associate|auto-17|<tuple|5.2|4>>
+    <associate|auto-18|<tuple|6|4>>
+    <associate|auto-19|<tuple|7|4>>
+    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-20|<tuple|7.1|4>>
+    <associate|auto-21|<tuple|7.1.1|4>>
+    <associate|auto-22|<tuple|7.1.2|4>>
+    <associate|auto-23|<tuple|8|4>>
+    <associate|auto-24|<tuple|8.1|4>>
+    <associate|auto-25|<tuple|8.2|5>>
+    <associate|auto-26|<tuple|9|5>>
+    <associate|auto-27|<tuple|9.1|5>>
+    <associate|auto-28|<tuple|9.2|5>>
+    <associate|auto-29|<tuple|9.3|5>>
+    <associate|auto-3|<tuple|2|1>>
+    <associate|auto-30|<tuple|2|5>>
+    <associate|auto-31|<tuple|1|6>>
+    <associate|auto-32|<tuple|1.1|6>>
+    <associate|auto-33|<tuple|1.1.1|6>>
+    <associate|auto-34|<tuple|1.2|7>>
+    <associate|auto-35|<tuple|1.3|7>>
+    <associate|auto-36|<tuple|1.4|7>>
+    <associate|auto-37|<tuple|1.5|8>>
+    <associate|auto-38|<tuple|1.6|8>>
+    <associate|auto-39|<tuple|1.7|8>>
+    <associate|auto-4|<tuple|2.1|1>>
+    <associate|auto-40|<tuple|1.8|9>>
+    <associate|auto-41|<tuple|1.8.1|9>>
+    <associate|auto-42|<tuple|1.9|9>>
+    <associate|auto-43|<tuple|1.10|9>>
+    <associate|auto-44|<tuple|1.11|9>>
+    <associate|auto-45|<tuple|1.12|10>>
+    <associate|auto-46|<tuple|1.13|10>>
+    <associate|auto-47|<tuple|1.13.1|10>>
+    <associate|auto-48|<tuple|1.13.2|10>>
+    <associate|auto-49|<tuple|1.13.3|10>>
+    <associate|auto-5|<tuple|2.2|1>>
+    <associate|auto-50|<tuple|1.13.4|10>>
+    <associate|auto-51|<tuple|1.14|11>>
+    <associate|auto-52|<tuple|2|11>>
+    <associate|auto-53|<tuple|2.1|11>>
+    <associate|auto-54|<tuple|2.2|11>>
+    <associate|auto-55|<tuple|2.3|11>>
+    <associate|auto-56|<tuple|2.4|11>>
+    <associate|auto-57|<tuple|2.5|11>>
+    <associate|auto-58|<tuple|2.5.1|12>>
+    <associate|auto-59|<tuple|2.5.2|12>>
+    <associate|auto-6|<tuple|3|1>>
+    <associate|auto-60|<tuple|2.5.3|12>>
+    <associate|auto-61|<tuple|2.6|12>>
+    <associate|auto-62|<tuple|2.6.1|13>>
+    <associate|auto-63|<tuple|2.7|13>>
+    <associate|auto-64|<tuple|2.8|13>>
+    <associate|auto-65|<tuple|2.9|13>>
+    <associate|auto-66|<tuple|2.9.1|14>>
+    <associate|auto-67|<tuple|2.10|14>>
+    <associate|auto-68|<tuple|2.10.1|14>>
+    <associate|auto-69|<tuple|2.11|14>>
+    <associate|auto-7|<tuple|3.1|2>>
+    <associate|auto-70|<tuple|2.11.1|14>>
+    <associate|auto-71|<tuple|2.11.2|15>>
+    <associate|auto-72|<tuple|2.12|15>>
+    <associate|auto-73|<tuple|2.13|15>>
+    <associate|auto-74|<tuple|2.14|15>>
+    <associate|auto-75|<tuple|2.15|15>>
+    <associate|auto-76|<tuple|2.16|15>>
+    <associate|auto-77|<tuple|2.17|16>>
+    <associate|auto-78|<tuple|2.18|16>>
+    <associate|auto-79|<tuple|2.19|16>>
+    <associate|auto-8|<tuple|3.2|2>>
+    <associate|auto-80|<tuple|2.20|16>>
+    <associate|auto-81|<tuple|3|16>>
+    <associate|auto-82|<tuple|3.1|16>>
+    <associate|auto-83|<tuple|3.2|16>>
+    <associate|auto-84|<tuple|3.3|16>>
+    <associate|auto-85|<tuple|3.4|17>>
+    <associate|auto-86|<tuple|3.4.1|17>>
+    <associate|auto-87|<tuple|3.4.2|17>>
+    <associate|auto-88|<tuple|3.5|17>>
+    <associate|auto-89|<tuple|3.6|17>>
+    <associate|auto-9|<tuple|3.3|2>>
+    <associate|auto-90|<tuple|3.6.1|17>>
+    <associate|auto-91|<tuple|3.7|17>>
+    <associate|auto-92|<tuple|3.7.1|17>>
+    <associate|auto-93|<tuple|3.8|18>>
+    <associate|auto-94|<tuple|3.8.1|18>>
+    <associate|auto-95|<tuple|3.9|18>>
+    <associate|auto-96|<tuple|3.9.1|18>>
+    <associate|auto-97|<tuple|3.9.2|18>>
+    <associate|auto-98|<tuple|3.9.3|18>>
+    <associate|auto-99|<tuple|3.9.4|18>>
+>>>>>>> 2a2141e7107bf71f556dc219d5b7bbccf6311399
   </collection>
 </references>
 
