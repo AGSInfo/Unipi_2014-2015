@@ -642,6 +642,10 @@
 
   Il campo magnetico è costituito da linee chiuse
 
+  <\equation*>
+    \<Phi\><rsub|B>=<wide|S|\<vect\>>\<cdot\><wide|B|\<vect\>>
+  </equation*>
+
   \;
 
   Per conoscere il valore di <math|B<around*|(|t|)>> per <math|t=t<rsub|1>>
@@ -674,7 +678,7 @@
   corrente continua <math|I> è
 
   <\equation*>
-    <wide|d*B|\<vect\>>=<frac|\<mu\><rsub|0>|4*\<pi\>><frac|I*<wide|d*s|\<vect\>>\<times\><wide|r|^>|r<rsup|2>>
+    <wide|d*B|\<vect\>>=<frac|\<mu\><rsub|0>|4*\<pi\>><frac|I*d<wide|s|\<vect\>>\<times\><wide|r|^>|r<rsup|2>>
   </equation*>
 
   dove <math|r> è la distanza del punto <math|P> dall'elemento di corrente e
@@ -803,8 +807,6 @@
   L'energia potenziale del sistema formato da un momento di dipolo magnetico
   in un campo magnetico è
 
-  [da verificare]
-
   <\equation*>
     U=-<wide|\<mu\>|\<vect\>>\<cdot\><wide|B|\<vect\>>
   </equation*>
@@ -866,18 +868,29 @@
   conduttore hanno direzioni tali da produrre un campo magnetico che si
   oppone alla variazione che le ha prodotte.
 
-  <section|Forza di Lorentz>
+  <section|Forza su una carica/forza di Lorentz>
 
   <\equation*>
-    <wide|F|\<vect\>>=q*<wide|E|\<vect\>>+q*<around*|(|<wide|v|\<vect\>>\<times\><wide|B|\<vect\>>|)>
+    <wide|F|\<vect\>><rsub|B>=q*<around*|(|<wide|v|\<vect\>>*\<times\><wide|B|\<vect\>>|)>
+  </equation*>
+
+  Per determinare la direzione: pugno chiuso con pollice diretto verso
+  <math|<wide|F<rsub|B>|\<vect\>>>, esterno della mano verso
+  <math|<wide|v|\<vect\>>> e l'interno verso <math|<wide|B|\<vect\>>>
+
+  <\equation*>
+    <wide|F|\<vect\>>=<wide|F|\<vect\>><rsub|E>+<wide|F|\<vect\>><rsub|B>=q*<wide|E|\<vect\>>+q*<around*|(|<wide|v|\<vect\>>\<times\><wide|B|\<vect\>>|)>
   </equation*>
 
   <\equation*>
-    <wide|F<rsub|>|\<vect\>>=I*<around*|(|<wide|d|\<vect\>>\<times\><wide|B|\<vect\>>|)>
+    <around*|\||F<rsub|B>|\|>=<around*|\||q|\|>*v*B*sin<around*|(|\<theta\><rsub|angolo
+    più piccolo tra <wide|v|\<vect\>> e <wide|B|\<vect\>>> |)>
   </equation*>
 
+  \;
+
   <\equation*>
-    <around*|\||F|\|>=q*V*B
+    <wide|F<rsub|B><rsub|>|\<vect\>>=I*<around*|(|<wide|d|\<vect\>>\<times\><wide|B|\<vect\>>|)>
   </equation*>
 
   <subsection|Forza agente su un conduttore rettilineo>
@@ -892,6 +905,8 @@
 
   <math|<wide|L|\<vect\>>> è orientato nel verso della corrente <math|I>
 
+  \;
+
   <subsection|Forza agente su un filo di forma arbitraria>
 
   Se un filo di forma arbitraria, percorso da una corrente <math|I>, è
@@ -905,6 +920,16 @@
   Per determinare la forza totale agente sul filo si deve integrare
   l'equazione precedente, ricordando che sia <math|<wide|B|\<vect\>>> che
   <math|<wide|d*s|\<vect\>>> possono variare da punto a punto
+
+  <subsection|Momento meccanico>
+
+  Il momento meccanico <math|<wide|\<tau\>|\<vect\>>> delle forze magnetiche
+  esercitato su una spira percorsa da corrente immersa in un campo magnetico
+  uniforme <math|<wide|B|\<vect\>>> è
+
+  <\equation*>
+    <wide|\<tau\>|\<vect\>>=<wide|\<mu\>|\<vect\>>\<times\><wide|B|\<vect\>>
+  </equation*>
 
   <section|Equazioni di Maxwell>
 
@@ -964,15 +989,7 @@
   (ponendo il pollice nella direzione della corrente <math|I> che scorre
   lungo il ``contorno'' di <math|S>)
 
-  <subsection|Momento meccanico>
-
-  Il momento meccanico <math|<wide|\<tau\>|\<vect\>>> delle forze magnetiche
-  esercitato su una spira percorsa da corrente immersa in un campo magnetico
-  uniforme <math|<wide|B|\<vect\>>> è
-
-  <\equation*>
-    <wide|\<tau\>|\<vect\>>=<wide|\<mu\>|\<vect\>>\<times\><wide|B|\<vect\>>
-  </equation*>
+  \;
 
   <subsection|Forza magnetica su di una particella>
 
@@ -1637,12 +1654,12 @@
     <associate|auto-49|<tuple|3.5.1|13>>
     <associate|auto-5|<tuple|1.2.1|5>>
     <associate|auto-50|<tuple|3.5.2|13>>
-    <associate|auto-51|<tuple|3.6|14>>
-    <associate|auto-52|<tuple|3.7|14>>
-    <associate|auto-53|<tuple|3.7.1|14>>
-    <associate|auto-54|<tuple|3.7.2|14>>
-    <associate|auto-55|<tuple|3.7.3|14>>
-    <associate|auto-56|<tuple|3.7.4|14>>
+    <associate|auto-51|<tuple|3.5.3|14>>
+    <associate|auto-52|<tuple|3.6|14>>
+    <associate|auto-53|<tuple|3.7|14>>
+    <associate|auto-54|<tuple|3.7.1|14>>
+    <associate|auto-55|<tuple|3.7.2|14>>
+    <associate|auto-56|<tuple|3.7.3|14>>
     <associate|auto-57|<tuple|3.8|14>>
     <associate|auto-58|<tuple|4|15>>
     <associate|auto-59|<tuple|4.1|15>>
@@ -1700,402 +1717,342 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      1.1<space|2spc>Legge oraria <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.1<space|2spc>Impulso <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
 
-      1.2<space|2spc>Calcolo del centro di massa
+      <with|par-left|<quote|1tab>|1.1.1<space|2spc>Teorema dell'impulso
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>
+      <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.2.1<space|2spc>In un sistema di
-      <with|mode|<quote|math>|N> punti materiali
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
+      1.2<space|2spc>Urti <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>
 
-      <with|par-left|<quote|1tab>|1.2.2<space|2spc>In un sistema continuo
+      <with|par-left|<quote|1tab>|1.2.1<space|2spc>Urto elastico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      1.3<space|2spc>Energia meccanica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>
-
-      <with|par-left|<quote|1tab>|1.3.1<space|2spc>Lavoro ed energia cinetica
+      <with|par-left|<quote|1tab>|1.2.2<space|2spc>Urto anaelastico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-6>>
 
-      1.4<space|2spc>Impulso <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.3<space|2spc>Conservazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>
+
+      1.4<space|2spc>Moto oscillatorio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>
 
-      <with|par-left|<quote|1tab>|1.4.1<space|2spc>Teorema dell'impulso
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4.1<space|2spc>Energia cinetica e
+      potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      1.5<space|2spc>Urti <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>
-
-      <with|par-left|<quote|1tab>|1.5.1<space|2spc>Urto elastico
+      <with|par-left|<quote|1tab>|1.4.2<space|2spc>Forza frenante
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
+      <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|1.5.2<space|2spc>Urto anaelastico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12>>
+      1.5<space|2spc>Pendolo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>
 
-      1.6<space|2spc>Conservazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.6<space|2spc>Molla <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12>
+
+      1.7<space|2spc>Moto circolare <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>
 
-      1.7<space|2spc>Moto oscillatorio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.8<space|2spc>Accelerazione angolare
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>
 
-      <with|par-left|<quote|1tab>|1.7.1<space|2spc>Energia cinetica e
-      potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
-
-      <with|par-left|<quote|1tab>|1.7.2<space|2spc>Forza frenante
+      1.9<space|2spc>Momento di una forza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-15>
 
-      1.8<space|2spc>Pendolo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>
-
-      1.9<space|2spc>Molla <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>
-
-      1.10<space|2spc>Moto circolare <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>
-
-      1.11<space|2spc>Accelerazione angolare
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>
-
-      1.12<space|2spc>Momento di una forza
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>
-
-      1.13<space|2spc>Momento angolare <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>
+      1.10<space|2spc>Momento angolare <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Campo
       elettrico> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23><vspace|0.5fn>
+      <no-break><pageref|auto-17><vspace|0.5fn>
 
       2.1<space|2spc>Forza di Coulomb <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>
+      <no-break><pageref|auto-18>
 
-      <with|par-left|<quote|2tab>|2.1.0.1<space|2spc>Energia potenziale
-      (Coulomb) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
-
-      <with|par-left|<quote|1tab>|2.1.1<space|2spc>Quantità totale di carica
+      <with|par-left|<quote|1tab>|2.1.1<space|2spc>Vettore campo elettrico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
+      <no-break><pageref|auto-19>>
 
-      <with|par-left|<quote|1tab>|2.1.2<space|2spc>Vettore campo elettrico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
-
-      <with|par-left|<quote|1tab>|2.1.3<space|2spc>Lavoro per spostare una
+      <with|par-left|<quote|1tab>|2.1.2<space|2spc>Lavoro per spostare una
       carica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>>
+      <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|1tab>|2.1.4<space|2spc>Energia potenziale di un
+      <with|par-left|<quote|1tab>|2.1.3<space|2spc>Energia potenziale di un
       elettrone <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
+      <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|1tab>|2.1.5<space|2spc>Energia potenziale
+      <with|par-left|<quote|1tab>|2.1.4<space|2spc>Energia potenziale
       elettrica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
+      <no-break><pageref|auto-22>>
 
-      <with|par-left|<quote|1tab>|2.1.6<space|2spc>Momento di dipolo
+      <with|par-left|<quote|1tab>|2.1.5<space|2spc>Momento di dipolo
       elettrico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-23>>
 
-      <with|par-left|<quote|1tab>|2.1.7<space|2spc>Flusso elettrico
+      <with|par-left|<quote|1tab>|2.1.6<space|2spc>Flusso elettrico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-24>>
 
       2.2<space|2spc>Legge di Gauss <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
-
-      <with|par-left|<quote|2tab>|2.2.0.1<space|2spc>Scelta della superficie
-      <with|mode|<quote|math>|E> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
-
-      <with|par-left|<quote|1tab>|2.2.1<space|2spc>Relazione con il campo
-      magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
-
-      <with|par-left|<quote|1tab>|2.2.2<space|2spc>Equilibrio elettrostatico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-25>
 
       2.3<space|2spc>Potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>
+      <no-break><pageref|auto-26>
 
       <with|par-left|<quote|1tab>|2.3.1<space|2spc>Superficie di un coduttore
       carico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-27>>
 
       <with|par-left|<quote|1tab>|2.3.2<space|2spc>Differenza di potenziale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|1tab>|2.3.3<space|2spc>Variazione di energia
       potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>>
+      <no-break><pageref|auto-29>>
 
       2.4<space|2spc>Condensatore <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>
+      <no-break><pageref|auto-30>
 
       <with|par-left|<quote|1tab>|2.4.1<space|2spc>Capacità di condensatori
       salienti <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-31>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Campo
       magnetico> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|3.0.2<space|2spc>Campo magnetico dato come
-      derivata <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
-
-      <with|par-left|<quote|1tab>|3.0.3<space|2spc>Flusso magnetico
-      attraverso una superficie <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>>
+      <no-break><pageref|auto-32><vspace|0.5fn>
 
       3.1<space|2spc>Teorema di Ampere <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>
+      <no-break><pageref|auto-33>
 
       3.2<space|2spc>Legge di Biot-Savart
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>
+      <no-break><pageref|auto-34>
 
       <with|par-left|<quote|1tab>|3.2.1<space|2spc>Fili paralleli
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
+      <no-break><pageref|auto-35>>
 
       <with|par-left|<quote|1tab>|3.2.2<space|2spc>Alcuni campi magnetici
       salienti <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|2tab>|3.2.2.1<space|2spc>Filo rettilineo uniforme
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>>
+      <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|3.2.3<space|2spc>Alcuni flussi magnetici
       salienti <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>>
+      <no-break><pageref|auto-38>>
 
       <with|par-left|<quote|2tab>|3.2.3.1<space|2spc>Solenoide
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
+      <no-break><pageref|auto-39>>
 
       <with|par-left|<quote|1tab>|3.2.4<space|2spc>Teorema di Ampère-Maxwell
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-40>>
 
       <with|par-left|<quote|1tab>|3.2.5<space|2spc>Legge di Gauss per il
       campo magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
+      <no-break><pageref|auto-41>>
 
       <with|par-left|<quote|1tab>|3.2.6<space|2spc>Particella in movimento in
       un campo magnetico uniforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|2tab>|3.2.6.1<space|2spc>Tipologie di sostanze
       magnetiche <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|1tab>|3.2.7<space|2spc>Energia potenziale
       magnetica <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>>
+      <no-break><pageref|auto-44>>
 
-      <with|par-left|<quote|1tab>|3.2.8<space|2spc>Legge di Faraday
-      dell'induzione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>>
-
-      <with|par-left|<quote|2tab>|3.2.8.1<space|2spc>Forma generale
+      3.3<space|2spc>Legge di Faraday dell'induzione
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>>
+      <no-break><pageref|auto-45>
 
-      <with|par-left|<quote|2tab>|3.2.8.2<space|2spc>Legge di Faraday per una
-      sbarretta <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
-
-      <with|par-left|<quote|1tab>|3.2.9<space|2spc>Legge di Lenz
+      <with|par-left|<quote|2tab>|3.3.0.1<space|2spc>Forma generale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-61>>
+      <no-break><pageref|auto-46>>
 
-      3.3<space|2spc>Forza di Lorentz <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62>
+      3.4<space|2spc>Legge di Lenz <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-47>
 
-      <with|par-left|<quote|1tab>|3.3.1<space|2spc>Forza agente su un
+      3.5<space|2spc>Forza di Lorentz <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-48>
+
+      <with|par-left|<quote|1tab>|3.5.1<space|2spc>Forza agente su un
       conduttore rettilineo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-49>>
 
-      <with|par-left|<quote|1tab>|3.3.2<space|2spc>Forza agente su un filo di
+      <with|par-left|<quote|1tab>|3.5.2<space|2spc>Forza agente su un filo di
       forma arbitraria <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-50>>
 
-      3.4<space|2spc>Equazioni di Maxwell
+      3.6<space|2spc>Equazioni di Maxwell
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>
+      <no-break><pageref|auto-51>
 
-      3.5<space|2spc>Corrente di spostamento
+      3.7<space|2spc>Corrente di spostamento
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66>
+      <no-break><pageref|auto-52>
 
-      <with|par-left|<quote|1tab>|3.5.1<space|2spc>Vettore di Poynting
+      <with|par-left|<quote|1tab>|3.7.1<space|2spc>Vettore di Poynting
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67>>
+      <no-break><pageref|auto-53>>
 
-      <with|par-left|<quote|1tab>|3.5.2<space|2spc>Momento di dipolo
+      <with|par-left|<quote|1tab>|3.7.2<space|2spc>Momento di dipolo
       magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
+      <no-break><pageref|auto-54>>
 
-      <with|par-left|<quote|1tab>|3.5.3<space|2spc>Momento meccanico
+      <with|par-left|<quote|1tab>|3.7.3<space|2spc>Momento meccanico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>>
+      <no-break><pageref|auto-55>>
 
-      <with|par-left|<quote|1tab>|3.5.4<space|2spc>Forza magnetica su di una
+      <with|par-left|<quote|1tab>|3.7.4<space|2spc>Forza magnetica su di una
       particella <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>>
+      <no-break><pageref|auto-56>>
 
-      3.6<space|2spc>Induttanza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71>
+      3.8<space|2spc>Induttanza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-57>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Circuiti
       elettrici> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72><vspace|0.5fn>
+      <no-break><pageref|auto-58><vspace|0.5fn>
 
       4.1<space|2spc>Conduttore <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73>
+      <no-break><pageref|auto-59>
 
       <with|par-left|<quote|1tab>|4.1.1<space|2spc>Potenza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-74>>
+      <no-break><pageref|auto-60>>
 
       4.2<space|2spc>Circuiti in corrente continua
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-75>
+      <no-break><pageref|auto-61>
 
       <with|par-left|<quote|1tab>|4.2.1<space|2spc>Valore della resistenza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-76>>
+      <no-break><pageref|auto-62>>
 
       <with|par-left|<quote|1tab>|4.2.2<space|2spc>F.e.m. autoindotta
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-77>>
+      <no-break><pageref|auto-63>>
 
       <with|par-left|<quote|1tab>|4.2.3<space|2spc>Induttanze salienti
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>>
+      <no-break><pageref|auto-64>>
 
       <with|par-left|<quote|1tab>|4.2.4<space|2spc>Mutua induttanza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-79>>
+      <no-break><pageref|auto-65>>
 
       <with|par-left|<quote|1tab>|4.2.5<space|2spc>Densità di energia
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-80>>
+      <no-break><pageref|auto-66>>
 
       4.3<space|2spc>Circuito RC <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-81>
+      <no-break><pageref|auto-67>
 
       <with|par-left|<quote|1tab>|4.3.1<space|2spc>Condensatore (carica)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-82>>
+      <no-break><pageref|auto-68>>
 
       <with|par-left|<quote|1tab>|4.3.2<space|2spc>Condensatore (scarica)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-83>>
+      <no-break><pageref|auto-69>>
 
       4.4<space|2spc>Circuito RL <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-84>
-
-      <with|par-left|<quote|2tab>|4.4.0.1<space|2spc>Corrente nel circuito
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-85>>
+      <no-break><pageref|auto-70>
 
       4.5<space|2spc>Circuito LC <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-86>
+      <no-break><pageref|auto-71>
 
-      <with|par-left|<quote|2tab>|4.5.0.2<space|2spc>Frequenza di
+      <with|par-left|<quote|2tab>|4.5.0.1<space|2spc>Frequenza di
       oscillazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-87>>
+      <no-break><pageref|auto-72>>
 
       4.6<space|2spc>Circuito RLC <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>
+      <no-break><pageref|auto-73>
 
       4.7<space|2spc>Circuiti in corrente alternata
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-89>
+      <no-break><pageref|auto-74>
 
       <with|par-left|<quote|1tab>|4.7.1<space|2spc>Frequenza di risonanza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-90>>
+      <no-break><pageref|auto-75>>
 
       <with|par-left|<quote|1tab>|4.7.2<space|2spc>Trasformatore
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-91>>
+      <no-break><pageref|auto-76>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Costanti>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92><vspace|0.5fn>
+      <no-break><pageref|auto-77><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Formule
       geometriche> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93><vspace|0.5fn>
+      <no-break><pageref|auto-78><vspace|0.5fn>
 
       6.1<space|2spc>Sfera <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-94>
+      <no-break><pageref|auto-79>
 
       6.2<space|2spc>Piramide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-95>
+      <no-break><pageref|auto-80>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Momenti
       d'inerzia> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-96><vspace|0.5fn>
+      <no-break><pageref|auto-81><vspace|0.5fn>
 
       7.1<space|2spc>Massa puntiforme <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>
+      <no-break><pageref|auto-82>
 
       7.2<space|2spc>Asta <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-98>
+      <no-break><pageref|auto-83>
 
       7.3<space|2spc>Circonferenza <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-99>
+      <no-break><pageref|auto-84>
 
       7.4<space|2spc>Disco <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-100>
+      <no-break><pageref|auto-85>
 
       7.5<space|2spc>Cilindro <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-101>
+      <no-break><pageref|auto-86>
 
       7.6<space|2spc>Sfera <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-102>
+      <no-break><pageref|auto-87>
 
       7.7<space|2spc>Cono <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-103>
+      <no-break><pageref|auto-88>
 
       7.8<space|2spc>Toro <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-104>
+      <no-break><pageref|auto-89>
 
       7.9<space|2spc>Ellissoide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-105>
+      <no-break><pageref|auto-90>
 
       7.10<space|2spc>Piastra <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-106>
+      <no-break><pageref|auto-91>
 
       7.11<space|2spc>Parallelepipedo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-107>
+      <no-break><pageref|auto-92>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Misto>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-108><vspace|0.5fn>
+      <no-break><pageref|auto-93><vspace|0.5fn>
 
       8.1<space|2spc>Prodotto vettore <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-109>
+      <no-break><pageref|auto-94>
     </associate>
   </collection>
 </auxiliary>
