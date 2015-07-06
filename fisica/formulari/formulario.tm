@@ -91,40 +91,6 @@
   di moto finale ed iniziale del sistema (nel caso in cui <math|A> sia
   l'unica causa della riduzione della quantità di moto)
 
-  <subsection|Teorema dell'impulso>
-
-  Il teorema dell'impulso (o della variazione della quantità di moto)
-  consiste nell'affermazione: il secondo principio della dinamica comporta
-  che l'impulso corrisponde alla variazione della quantità di moto del sistma
-  in un intervallo temporale. Infatti per il secondo principio:
-
-  <\equation*>
-    <wide|F|\<vect\>>=<frac|d<wide|p|\<vect\>>|d*t>
-  </equation*>
-
-  Sfruttando la definizione di differenziale di una funzione
-
-  <\equation*>
-    d<wide|p|\<vect\>>=<wide|F|\<vect\>>*d*t
-  </equation*>
-
-  Integrando entrando ambo i membri tra due istanti <math|t<rsub|0>> e
-  <math|t<rsub|1>> otteniamo:
-
-  <\equation*>
-    <big|int><rsub|<wide|p|\<vect\>><around*|(|t<rsub|0>|)>><rsup|<wide|p|\<vect\>><around*|(|t<rsub|1>|)>>d<wide|p|\<vect\>>=<big|int><rsub|t<rsub|0>><rsup|t<rsub|1>><wide|F|\<vect\>>*d*t
-  </equation*>
-
-  ma la primitiva di un differenziale è la grandezza differenziata, e in base
-  al teorema di Torricelli:
-
-  <\equation*>
-    <wide|p|\<vect\>><around*|(|t<rsub|1>|)>-<wide|p|\<vect\>><around*|(|t<rsub|0>|)>=<big|int><rsub|t<rsub|0>><rsup|t<rsub|1>><wide|F|\<vect\>>*dt
-  </equation*>
-
-  Nel caso in cui la forza sia costante, la si può portare fuori dal segno
-  d'integrale, cosicché:
-
   <\equation*>
     \<Delta\><wide|p|\<vect\>>=<wide|F|\<vect\>>*\<Delta\>t
   </equation*>
@@ -334,8 +300,6 @@
   <\equation*>
     P<rsub|otenza angolare>=<frac|d*W|d*t>=\<tau\>*\<omega\>
   </equation*>
-
-  \;
 
   <chapter|Campo elettrico>
 
@@ -1562,8 +1526,8 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|5>>
-    <associate|auto-10|<tuple|1.4.2|6>>
+    <associate|auto-1|<tuple|1|3>>
+    <associate|auto-10|<tuple|1.5|5>>
     <associate|auto-100|<tuple|8.1|25>>
     <associate|auto-101|<tuple|8.1|25>>
     <associate|auto-102|<tuple|8.1|26>>
@@ -1574,7 +1538,7 @@
     <associate|auto-107|<tuple|8.1|26>>
     <associate|auto-108|<tuple|7.10|27>>
     <associate|auto-109|<tuple|7.11|27>>
-    <associate|auto-11|<tuple|1.5|6>>
+    <associate|auto-11|<tuple|1.6|5>>
     <associate|auto-110|<tuple|8|14>>
     <associate|auto-111|<tuple|8.1|14>>
     <associate|auto-112|<tuple|8.1|15>>
@@ -1585,7 +1549,7 @@
     <associate|auto-117|<tuple|8.1|15>>
     <associate|auto-118|<tuple|8.1|15>>
     <associate|auto-119|<tuple|8.1|15>>
-    <associate|auto-12|<tuple|1.6|6>>
+    <associate|auto-12|<tuple|1.7|5>>
     <associate|auto-120|<tuple|8.1|15>>
     <associate|auto-121|<tuple|8.1|16>>
     <associate|auto-122|<tuple|8.1|16>>
@@ -1596,7 +1560,7 @@
     <associate|auto-127|<tuple|8.1|16>>
     <associate|auto-128|<tuple|8.1|16>>
     <associate|auto-129|<tuple|8.1|17>>
-    <associate|auto-13|<tuple|1.7|7>>
+    <associate|auto-13|<tuple|1.8|5>>
     <associate|auto-130|<tuple|8|17>>
     <associate|auto-131|<tuple|8.1|17>>
     <associate|auto-132|<tuple|8.1|17>>
@@ -1607,101 +1571,101 @@
     <associate|auto-137|<tuple|8|18>>
     <associate|auto-138|<tuple|8.1|?>>
     <associate|auto-139|<tuple|8.1|?>>
-    <associate|auto-14|<tuple|1.8|7>>
+    <associate|auto-14|<tuple|1.9|5>>
     <associate|auto-140|<tuple|8.1|?>>
     <associate|auto-141|<tuple|8.1|?>>
     <associate|auto-142|<tuple|8.1|?>>
     <associate|auto-143|<tuple|8.1|?>>
     <associate|auto-144|<tuple|8.1|?>>
     <associate|auto-145|<tuple|8.1|?>>
-    <associate|auto-15|<tuple|1.9|7>>
-    <associate|auto-16|<tuple|1.10|7>>
-    <associate|auto-17|<tuple|2|7>>
-    <associate|auto-18|<tuple|2.1|7>>
-    <associate|auto-19|<tuple|2.1.1|7>>
-    <associate|auto-2|<tuple|1.1|5>>
-    <associate|auto-20|<tuple|2.1.2|8>>
-    <associate|auto-21|<tuple|2.1.3|8>>
-    <associate|auto-22|<tuple|2.1.4|8>>
-    <associate|auto-23|<tuple|2.1.5|9>>
-    <associate|auto-24|<tuple|2.1.6|9>>
-    <associate|auto-25|<tuple|2.2|9>>
-    <associate|auto-26|<tuple|2.3|9>>
-    <associate|auto-27|<tuple|2.3.1|9>>
-    <associate|auto-28|<tuple|2.3.2|9>>
-    <associate|auto-29|<tuple|2.3.3|9>>
-    <associate|auto-3|<tuple|1.1.1|5>>
-    <associate|auto-30|<tuple|2.4|9>>
-    <associate|auto-31|<tuple|2.4.1|10>>
-    <associate|auto-32|<tuple|3|10>>
-    <associate|auto-33|<tuple|3.1|10>>
-    <associate|auto-34|<tuple|3.2|10>>
-    <associate|auto-35|<tuple|3.2.1|10>>
-    <associate|auto-36|<tuple|3.2.2|10>>
-    <associate|auto-37|<tuple|3.2.2.1|11>>
-    <associate|auto-38|<tuple|3.2.3|11>>
-    <associate|auto-39|<tuple|3.2.3.1|11>>
-    <associate|auto-4|<tuple|1.2|5>>
-    <associate|auto-40|<tuple|3.2.4|11>>
-    <associate|auto-41|<tuple|3.2.5|11>>
-    <associate|auto-42|<tuple|3.2.6|11>>
-    <associate|auto-43|<tuple|3.2.6.1|13>>
-    <associate|auto-44|<tuple|3.2.7|13>>
-    <associate|auto-45|<tuple|3.3|13>>
-    <associate|auto-46|<tuple|3.3.0.1|13>>
-    <associate|auto-47|<tuple|3.4|13>>
-    <associate|auto-48|<tuple|3.5|13>>
-    <associate|auto-49|<tuple|3.5.1|13>>
-    <associate|auto-5|<tuple|1.2.1|5>>
-    <associate|auto-50|<tuple|3.5.2|13>>
-    <associate|auto-51|<tuple|3.5.3|14>>
-    <associate|auto-52|<tuple|3.6|14>>
-    <associate|auto-53|<tuple|3.7|14>>
-    <associate|auto-54|<tuple|3.7.1|14>>
-    <associate|auto-55|<tuple|3.7.2|14>>
-    <associate|auto-56|<tuple|3.7.3|14>>
-    <associate|auto-57|<tuple|3.8|14>>
-    <associate|auto-58|<tuple|4|15>>
-    <associate|auto-59|<tuple|4.1|15>>
-    <associate|auto-6|<tuple|1.2.2|5>>
-    <associate|auto-60|<tuple|4.1.1|15>>
-    <associate|auto-61|<tuple|4.2|15>>
-    <associate|auto-62|<tuple|4.2.1|15>>
-    <associate|auto-63|<tuple|4.2.2|15>>
-    <associate|auto-64|<tuple|4.2.3|15>>
-    <associate|auto-65|<tuple|4.2.4|16>>
-    <associate|auto-66|<tuple|4.2.5|16>>
-    <associate|auto-67|<tuple|4.3|16>>
-    <associate|auto-68|<tuple|4.3.1|16>>
-    <associate|auto-69|<tuple|4.3.2|16>>
-    <associate|auto-7|<tuple|1.3|5>>
-    <associate|auto-70|<tuple|4.4|16>>
-    <associate|auto-71|<tuple|4.5|16>>
-    <associate|auto-72|<tuple|4.5.0.1|17>>
-    <associate|auto-73|<tuple|4.6|17>>
-    <associate|auto-74|<tuple|4.7|17>>
-    <associate|auto-75|<tuple|4.7.1|17>>
-    <associate|auto-76|<tuple|4.7.2|17>>
-    <associate|auto-77|<tuple|5|17>>
-    <associate|auto-78|<tuple|6|17>>
-    <associate|auto-79|<tuple|6.1|17>>
-    <associate|auto-8|<tuple|1.4|5>>
-    <associate|auto-80|<tuple|6.2|18>>
-    <associate|auto-81|<tuple|7|18>>
-    <associate|auto-82|<tuple|7.1|18>>
-    <associate|auto-83|<tuple|7.2|18>>
-    <associate|auto-84|<tuple|7.3|18>>
-    <associate|auto-85|<tuple|7.4|18>>
-    <associate|auto-86|<tuple|7.5|18>>
-    <associate|auto-87|<tuple|7.6|18>>
-    <associate|auto-88|<tuple|7.7|18>>
-    <associate|auto-89|<tuple|7.8|19>>
-    <associate|auto-9|<tuple|1.4.1|6>>
-    <associate|auto-90|<tuple|7.9|19>>
-    <associate|auto-91|<tuple|7.10|19>>
-    <associate|auto-92|<tuple|7.11|21>>
-    <associate|auto-93|<tuple|8|23>>
-    <associate|auto-94|<tuple|8.1|23>>
+    <associate|auto-15|<tuple|1.10|5>>
+    <associate|auto-16|<tuple|2|5>>
+    <associate|auto-17|<tuple|2.1|7>>
+    <associate|auto-18|<tuple|2.1.1|7>>
+    <associate|auto-19|<tuple|2.1.2|7>>
+    <associate|auto-2|<tuple|1.1|3>>
+    <associate|auto-20|<tuple|2.1.3|7>>
+    <associate|auto-21|<tuple|2.1.4|7>>
+    <associate|auto-22|<tuple|2.1.5|7>>
+    <associate|auto-23|<tuple|2.1.6|8>>
+    <associate|auto-24|<tuple|2.2|8>>
+    <associate|auto-25|<tuple|2.3|8>>
+    <associate|auto-26|<tuple|2.3.1|8>>
+    <associate|auto-27|<tuple|2.3.2|9>>
+    <associate|auto-28|<tuple|2.3.3|9>>
+    <associate|auto-29|<tuple|2.4|9>>
+    <associate|auto-3|<tuple|1.2|3>>
+    <associate|auto-30|<tuple|2.4.1|9>>
+    <associate|auto-31|<tuple|3|9>>
+    <associate|auto-32|<tuple|3.1|11>>
+    <associate|auto-33|<tuple|3.2|11>>
+    <associate|auto-34|<tuple|3.2.1|11>>
+    <associate|auto-35|<tuple|3.2.2|11>>
+    <associate|auto-36|<tuple|3.2.2.1|11>>
+    <associate|auto-37|<tuple|3.2.3|11>>
+    <associate|auto-38|<tuple|3.2.3.1|11>>
+    <associate|auto-39|<tuple|3.2.4|11>>
+    <associate|auto-4|<tuple|1.2.1|4>>
+    <associate|auto-40|<tuple|3.2.5|12>>
+    <associate|auto-41|<tuple|3.2.6|12>>
+    <associate|auto-42|<tuple|3.2.6.1|12>>
+    <associate|auto-43|<tuple|3.2.7|12>>
+    <associate|auto-44|<tuple|3.3|12>>
+    <associate|auto-45|<tuple|3.3.0.1|12>>
+    <associate|auto-46|<tuple|3.4|13>>
+    <associate|auto-47|<tuple|3.5|13>>
+    <associate|auto-48|<tuple|3.5.1|13>>
+    <associate|auto-49|<tuple|3.5.2|13>>
+    <associate|auto-5|<tuple|1.2.2|4>>
+    <associate|auto-50|<tuple|3.5.3|13>>
+    <associate|auto-51|<tuple|3.6|13>>
+    <associate|auto-52|<tuple|3.7|13>>
+    <associate|auto-53|<tuple|3.7.1|14>>
+    <associate|auto-54|<tuple|3.7.2|14>>
+    <associate|auto-55|<tuple|3.7.3|14>>
+    <associate|auto-56|<tuple|3.8|14>>
+    <associate|auto-57|<tuple|4|14>>
+    <associate|auto-58|<tuple|4.1|15>>
+    <associate|auto-59|<tuple|4.1.1|15>>
+    <associate|auto-6|<tuple|1.3|4>>
+    <associate|auto-60|<tuple|4.2|15>>
+    <associate|auto-61|<tuple|4.2.1|15>>
+    <associate|auto-62|<tuple|4.2.2|15>>
+    <associate|auto-63|<tuple|4.2.3|15>>
+    <associate|auto-64|<tuple|4.2.4|15>>
+    <associate|auto-65|<tuple|4.2.5|15>>
+    <associate|auto-66|<tuple|4.3|16>>
+    <associate|auto-67|<tuple|4.3.1|16>>
+    <associate|auto-68|<tuple|4.3.2|16>>
+    <associate|auto-69|<tuple|4.4|16>>
+    <associate|auto-7|<tuple|1.4|4>>
+    <associate|auto-70|<tuple|4.5|16>>
+    <associate|auto-71|<tuple|4.5.0.1|16>>
+    <associate|auto-72|<tuple|4.6|16>>
+    <associate|auto-73|<tuple|4.7|16>>
+    <associate|auto-74|<tuple|4.7.1|17>>
+    <associate|auto-75|<tuple|4.7.2|17>>
+    <associate|auto-76|<tuple|5|17>>
+    <associate|auto-77|<tuple|6|19>>
+    <associate|auto-78|<tuple|6.1|21>>
+    <associate|auto-79|<tuple|6.2|21>>
+    <associate|auto-8|<tuple|1.4.1|4>>
+    <associate|auto-80|<tuple|7|21>>
+    <associate|auto-81|<tuple|7.1|23>>
+    <associate|auto-82|<tuple|7.2|23>>
+    <associate|auto-83|<tuple|7.3|23>>
+    <associate|auto-84|<tuple|7.4|23>>
+    <associate|auto-85|<tuple|7.5|23>>
+    <associate|auto-86|<tuple|7.6|23>>
+    <associate|auto-87|<tuple|7.7|24>>
+    <associate|auto-88|<tuple|7.8|24>>
+    <associate|auto-89|<tuple|7.9|24>>
+    <associate|auto-9|<tuple|1.4.2|5>>
+    <associate|auto-90|<tuple|7.10|24>>
+    <associate|auto-91|<tuple|7.11|24>>
+    <associate|auto-92|<tuple|8|24>>
+    <associate|auto-93|<tuple|8.1|25>>
+    <associate|auto-94|<tuple|8.1|25>>
     <associate|auto-95|<tuple|8.1|23>>
     <associate|auto-96|<tuple|8.1|25>>
     <associate|auto-97|<tuple|8.1|25>>
@@ -1887,7 +1851,8 @@
       3.4<space|2spc>Legge di Lenz <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-47>
 
-      3.5<space|2spc>Forza di Lorentz <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.5<space|2spc>Forza su una carica/forza di Lorentz
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-48>
 
       <with|par-left|<quote|1tab>|3.5.1<space|2spc>Forza agente su un
@@ -1898,27 +1863,27 @@
       forma arbitraria <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-50>>
 
-      3.6<space|2spc>Equazioni di Maxwell
+      <with|par-left|<quote|1tab>|3.5.3<space|2spc>Momento meccanico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>
+      <no-break><pageref|auto-51>>
 
-      3.7<space|2spc>Corrente di spostamento
+      3.6<space|2spc>Equazioni di Maxwell
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>
 
+      3.7<space|2spc>Corrente di spostamento
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-53>
+
       <with|par-left|<quote|1tab>|3.7.1<space|2spc>Vettore di Poynting
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-54>>
 
       <with|par-left|<quote|1tab>|3.7.2<space|2spc>Momento di dipolo
       magnetico <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
-
-      <with|par-left|<quote|1tab>|3.7.3<space|2spc>Momento meccanico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-55>>
 
-      <with|par-left|<quote|1tab>|3.7.4<space|2spc>Forza magnetica su di una
+      <with|par-left|<quote|1tab>|3.7.3<space|2spc>Forza magnetica su di una
       particella <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-56>>
 
