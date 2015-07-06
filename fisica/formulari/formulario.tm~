@@ -1233,6 +1233,8 @@
     Z<rsub|<around*|(|impedenza|)>>\<equiv\><sqrt|R<rsup|2>+<around*|(|X<rsub|L>-X<rsub|C>|)><rsup|2>>
   </equation*>
 
+  <subsubsection|Angolo di fase tra corrente e tensione>
+
   <\equation*>
     \<Phi\><rsub|<around*|(|fase tra corrente e
     tensione|)>>=tan<rsup|-1><around*|(|<frac|X<rsub|L>-X<rsub|C>|R>|)>
@@ -1249,19 +1251,21 @@
   se la frequenza del generatore è uguale a <math|\<omega\><rsub|0>>, la
   corrente raggiunge il suo valore massimo
 
-  \;
+  <subsection|Reattanze>
+
+  <subsubsection|Reattanza induttiva>
 
   <\equation*>
-    X<rsub|L <around*|(|reattanza induttiva|)>>=\<omega\>*L<space|1em><around*|[|\<Omega\>|]>
+    X<rsub|L>=\<omega\>*L<space|1em><around*|[|\<Omega\>|]>
   </equation*>
 
-  \;
+  <subsubsection|Reattanza capacitiva>
 
   <\equation*>
-    X<rsub|C <around*|(|reattanza capacitiva|)>>=<frac|1|\<omega\>*C><space|1em><around*|[|\<Omega\>|]>
+    X<rsub|C>=<frac|1|\<omega\>*C><space|1em><around*|[|\<Omega\>|]>
   </equation*>
 
-  \;
+  <subsection|Corrente e tensione efficace>
 
   <\equation*>
     I<rsub|eff>=<frac|I<rsub|max>|<sqrt|2>>=0.707\<cdot\>I<rsub|max>
@@ -1271,7 +1275,7 @@
     \<Delta\>V<rsub|eff>=<frac|\<Delta\>V<rsub|max>|<sqrt|2>>=0.707\<cdot\>\<Delta\>V<rsub|max>
   </equation*>
 
-  \;
+  <subsection|Potenza media>
 
   La potenza media fornita da un generatore ad un circuito RLC è
 
@@ -1597,22 +1601,22 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|1.5|2>>
-    <associate|auto-100|<tuple|7.4|14>>
-    <associate|auto-101|<tuple|7.5|14>>
-    <associate|auto-102|<tuple|7.6|14>>
-    <associate|auto-103|<tuple|7.7|14>>
-    <associate|auto-104|<tuple|7.8|14>>
-    <associate|auto-105|<tuple|7.9|14>>
-    <associate|auto-106|<tuple|7.10|14>>
-    <associate|auto-107|<tuple|7.11|14>>
-    <associate|auto-108|<tuple|8|14>>
-    <associate|auto-109|<tuple|8.1|14>>
+    <associate|auto-100|<tuple|6.1|14>>
+    <associate|auto-101|<tuple|6.2|14>>
+    <associate|auto-102|<tuple|7|14>>
+    <associate|auto-103|<tuple|7.1|14>>
+    <associate|auto-104|<tuple|7.2|14>>
+    <associate|auto-105|<tuple|7.3|14>>
+    <associate|auto-106|<tuple|7.4|14>>
+    <associate|auto-107|<tuple|7.5|14>>
+    <associate|auto-108|<tuple|7.6|14>>
+    <associate|auto-109|<tuple|7.7|14>>
     <associate|auto-11|<tuple|1.5.1|2>>
-    <associate|auto-110|<tuple|8.1|14>>
-    <associate|auto-111|<tuple|8.1|14>>
-    <associate|auto-112|<tuple|8.1|15>>
-    <associate|auto-113|<tuple|8.1|15>>
-    <associate|auto-114|<tuple|8.1|15>>
+    <associate|auto-110|<tuple|7.8|14>>
+    <associate|auto-111|<tuple|7.9|14>>
+    <associate|auto-112|<tuple|7.10|15>>
+    <associate|auto-113|<tuple|7.11|15>>
+    <associate|auto-114|<tuple|8|15>>
     <associate|auto-115|<tuple|8.1|15>>
     <associate|auto-116|<tuple|8.1|15>>
     <associate|auto-117|<tuple|8.1|15>>
@@ -1728,18 +1732,18 @@
     <associate|auto-86|<tuple|4.5|12>>
     <associate|auto-87|<tuple|4.5.0.2|12>>
     <associate|auto-88|<tuple|4.6|12>>
-    <associate|auto-89|<tuple|4.7|12>>
+    <associate|auto-89|<tuple|4.6.0.3|12>>
     <associate|auto-9|<tuple|1.4.1|2>>
-    <associate|auto-90|<tuple|4.7.1|13>>
-    <associate|auto-91|<tuple|4.7.2|13>>
-    <associate|auto-92|<tuple|5|13>>
-    <associate|auto-93|<tuple|6|13>>
-    <associate|auto-94|<tuple|6.1|13>>
-    <associate|auto-95|<tuple|6.2|13>>
-    <associate|auto-96|<tuple|7|13>>
-    <associate|auto-97|<tuple|7.1|13>>
-    <associate|auto-98|<tuple|7.2|13>>
-    <associate|auto-99|<tuple|7.3|13>>
+    <associate|auto-90|<tuple|4.7|13>>
+    <associate|auto-91|<tuple|4.7.1|13>>
+    <associate|auto-92|<tuple|4.7.2|13>>
+    <associate|auto-93|<tuple|4.7.2.1|13>>
+    <associate|auto-94|<tuple|4.7.2.2|13>>
+    <associate|auto-95|<tuple|4.7.3|13>>
+    <associate|auto-96|<tuple|4.7.4|13>>
+    <associate|auto-97|<tuple|4.7.5|13>>
+    <associate|auto-98|<tuple|5|13>>
+    <associate|auto-99|<tuple|6|13>>
   </collection>
 </references>
 
