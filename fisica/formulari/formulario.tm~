@@ -301,6 +301,8 @@
     P<rsub|otenza angolare>=<frac|d*W|d*t>=\<tau\>*\<omega\>
   </equation*>
 
+  \;
+
   <chapter|Campo elettrico>
 
   ``Definizione'': Forza per unità di carica che una carica sonda percepisce
@@ -1485,6 +1487,25 @@
     I=<frac|m*s<rsup|2>|6>
   </equation*>
 
+  <section|Sistema punti materiali>
+
+  <\equation*>
+    I<rsub|z>=<big|sum><rsub|i=1><rsup|n>m<rsub|1>r<rsub|1><rsup|2>
+  </equation*>
+
+  <section|Corpo rigido>
+
+  <\equation*>
+    I<rsub|z>=<big|int><rsub|V>\<rho\>*r<rsup|2>*d*V
+  </equation*>
+
+  <section|Teorema degli assi paralleli>
+
+  Il momento di inerzia rispetto ad un asse <math|a>, parallelo ad un altro
+  <math|c> passante per il centro di massa, si ottiene sommando al momento di
+  inerzia iniziale rispettto a <math|c> il prodotto tra la massa del corpo
+  stesso e il quadrato della distanza tra gli assi <math|c> ed <math|a>
+
   <chapter|Misto>
 
   <section|Prodotto vettore>
@@ -1495,9 +1516,7 @@
   formato da A e B e il suo verso è determinato dalla regola della mano
   destra
 
-  <\equation*>
-    \;
-  </equation*>
+  \;
 
   \;
 
@@ -1663,10 +1682,10 @@
     <associate|auto-9|<tuple|1.4.2|5>>
     <associate|auto-90|<tuple|7.10|24>>
     <associate|auto-91|<tuple|7.11|24>>
-    <associate|auto-92|<tuple|8|24>>
-    <associate|auto-93|<tuple|8.1|25>>
-    <associate|auto-94|<tuple|8.1|25>>
-    <associate|auto-95|<tuple|8.1|23>>
+    <associate|auto-92|<tuple|7.12|24>>
+    <associate|auto-93|<tuple|7.13|25>>
+    <associate|auto-94|<tuple|7.14|25>>
+    <associate|auto-95|<tuple|8|23>>
     <associate|auto-96|<tuple|8.1|25>>
     <associate|auto-97|<tuple|8.1|25>>
     <associate|auto-98|<tuple|8.1|25>>
@@ -1676,6 +1695,9 @@
 
 <\auxiliary>
   <\collection>
+    <\associate|table>
+      <tuple|normal||<pageref|auto-16>>
+    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Cinematica>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -1684,54 +1706,50 @@
       1.1<space|2spc>Impulso <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
 
-      <with|par-left|<quote|1tab>|1.1.1<space|2spc>Teorema dell'impulso
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
-
       1.2<space|2spc>Urti <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>
+      <no-break><pageref|auto-3>
 
       <with|par-left|<quote|1tab>|1.2.1<space|2spc>Urto elastico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5>>
+      <no-break><pageref|auto-4>>
 
       <with|par-left|<quote|1tab>|1.2.2<space|2spc>Urto anaelastico
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <no-break><pageref|auto-5>>
 
       1.3<space|2spc>Conservazione <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>
+      <no-break><pageref|auto-6>
 
       1.4<space|2spc>Moto oscillatorio <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>
+      <no-break><pageref|auto-7>
 
       <with|par-left|<quote|1tab>|1.4.1<space|2spc>Energia cinetica e
       potenziale <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>>
+      <no-break><pageref|auto-8>>
 
       <with|par-left|<quote|1tab>|1.4.2<space|2spc>Forza frenante
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
+      <no-break><pageref|auto-9>>
 
       1.5<space|2spc>Pendolo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>
+      <no-break><pageref|auto-10>
 
       1.6<space|2spc>Molla <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12>
+      <no-break><pageref|auto-11>
 
       1.7<space|2spc>Moto circolare <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>
+      <no-break><pageref|auto-12>
 
       1.8<space|2spc>Accelerazione angolare
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14>
+      <no-break><pageref|auto-13>
 
       1.9<space|2spc>Momento di una forza
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>
+      <no-break><pageref|auto-14>
 
       1.10<space|2spc>Momento angolare <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>
+      <no-break><pageref|auto-15>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Campo
       elettrico> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -2012,12 +2030,23 @@
       7.11<space|2spc>Parallelepipedo <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-92>
 
+      7.12<space|2spc>Sistema punti materiali
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-93>
+
+      7.13<space|2spc>Corpo rigido <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-94>
+
+      7.14<space|2spc>Teorema degli assi paralleli
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-95>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Misto>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93><vspace|0.5fn>
+      <no-break><pageref|auto-96><vspace|0.5fn>
 
       8.1<space|2spc>Prodotto vettore <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-94>
+      <no-break><pageref|auto-97>
     </associate>
   </collection>
 </auxiliary>
