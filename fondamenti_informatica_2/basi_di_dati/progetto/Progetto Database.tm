@@ -579,6 +579,10 @@
     \ \ \ \ pm.id_piatto = p.nome
   </verbatim-code>
 
+  <\verbatim-code>
+    SELECT\ 
+  </verbatim-code>
+
   <subsubsection|Operazione 6>
 
   <\description>
