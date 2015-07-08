@@ -1,11 +1,9 @@
 DROP DATABASE IF EXISTS ProgettoRistoranti;
-
 CREATE DATABASE ProgettoRistoranti;
-
 USE ProgettoRistoranti;
 
 --------------------------------------------------------------------------------
--- CREAZIONE TABELLE
+-- Creazione tabelle
 --------------------------------------------------------------------------------
 
 CREATE TABLE Sede (
@@ -65,7 +63,7 @@ CREATE TABLE UtilizziStrumento (
       Utilizzo INT,
       Strumento INT,
       PRIMARY KEY (Utilizzo, Strumento)
-)
+);
 
 CREATE TABLE Ricetta (
       IdRicetta INT,
@@ -79,7 +77,7 @@ CREATE TABLE IngredienteRicetta (
       Ingrediente INT,
       Quantità FLOAT,
       PRIMARY KEY (Ricetta) # perché non anche ingrediente??
-)
+);
 
 CREATE TABLE Passo (
       Ricetta INT,
@@ -180,8 +178,8 @@ CREATE TABLE Account (
 );
 
 CREATE TABLE Recensione (
-      IdRecensione INT,
       Account VARCHAR(20),
+      IdRecensione INT,
       GiudizioGlobale INT,
       GiudizioTesto INT,
       PRIMARY KEY (IdRecensione)
@@ -189,7 +187,7 @@ CREATE TABLE Recensione (
 
 ## Aggiustare nome nel documento
 CREATE TABLE DomandaQuestionario (
-      IdComanda INT,
+      IdDomanda INT,
       Domanda BLOB,
       PRIMARY KEY (IdDomanda)
 );
@@ -199,4 +197,84 @@ CREATE TABLE Compilazione (
       IdRecensione INT,
       IdRisposta INT,
       PRIMARY KEY (IdDomanda, IdRecensione, IdRisposta)
+);
+
+## Aggiustare il nome nel documento
+CREATE TABLE Risposta (
+      IdRisposta INT,
+      Risposta BLOB,
+      Scala INT,
+      PRIMARY KEY (IdRisposta)
+);
+
+## Aggiustare il nome del documento?
+## A che serve questa tabella??
+CREATE TABLE PossibilitàRisposta (
+      IdDomanda INT,
+      IdRisposta INT,
+      PRIMARY KEY (IdDomanda)
+);
+
+CREATE TABLE ValutazioneRecensione (
+      Account VARCHAR(20),
+      Recensione INT,
+      Veridicità INT,
+      Accuratezza INT,
+      Descrizione BLOB,
+      PRIMARY KEY (Account, Recensione)
+);
+
+CREATE TABLE PropostaPiatto (
+      IdPropostaPiatto INT,
+      Account VARCHAR(20),
+      Nome VARCHAR(20),
+      PRIMARY KEY (IdPropostaPiatto)
+);
+
+## Aggiustare il nome del documento
+CREATE TABLE IngredienteNuovoPiatto (
+      PropostaPiatto INT,
+      Ingrediente INT,
+      Quantità FLOAT,
+      PRIMARY KEY (PropostaPiatto, Ingrediente)
+);
+
+CREATE TABLE ValutazionePropostaPiatto (
+      Account VARCHAR(20),
+      PropostaPiatto INT,
+      Valutazione INT,
+      Descrizione BLOB,
+      PRIMARY KEY (Account, PropostaPiatto)
+);
+
+CREATE TABLE VariantePiatto (
+      IdVariante INT,
+      Account VARCHAR(20),
+      Piatto INT,
+      PRIMARY KEY (IdVariante)
+);
+
+CREATE TABLE ModificaVariazione (
+      IdModifica INT,
+      VariantePiatto INT,
+      Modifica BLOB, ## ???
+      PRIMARY KEY (IdModifica)
+);
+
+CREATE TABLE ValutazioneVariazione (
+      Account VARCHAR(20),
+      VariantePiatto INT,
+      Valutazione INT,
+      PRIMARY KEY (Account, VariantePiatto)
+);
+
+CREATE TABLE Serata (
+      IdSerata INT,
+      Account VARCHAR(20),
+      NomeOrganizzatore VARCHAR(20),
+      CognomeOrganizzatore VARCHAR(20),
+      TelefonoOrganizzatoreSala INT,
+      Allestimento BLOB,
+      nPersone INT,
+      PRIMARY KEY (IdSerata)
 );
