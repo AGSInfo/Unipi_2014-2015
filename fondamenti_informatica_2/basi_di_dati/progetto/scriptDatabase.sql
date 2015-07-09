@@ -11,19 +11,34 @@ CREATE TABLE Sede (
       Via VARCHAR(20),
       nCivico INT,
       Citta VARCHAR(20),
+
       PRIMARY KEY (IdSede)
 );
 
 CREATE TABLE Magazzino (
       IdMagazzino INT NOT NULL AUTO_INCREMENT,
       IdSede INT,
-      PRIMARY KEY (IdMagazzino)
+
+      PRIMARY KEY (IdMagazzino),
+      FOREIGN KEY (IdSede) REFERENCES Sede(IdSede)
 );
 
 CREATE TABLE Scaffale (
       IdScaffale INT NOT NULL AUTO_INCREMENT,
       IdMagazzino INT,
-      PRIMARY KEY (IdScaffale)
+
+      PRIMARY KEY (IdScaffale),
+      FOREIGN KEY (IdMagazzino) REFERENCES Magazzino(IdMagazzino)
+);
+
+CREATE TABLE Ingrediente (
+      IdIngrediente INT NOT NULL AUTO_INCREMENT,
+      Nome VARCHAR(20),
+      Provenienza VARCHAR(20),
+      TipoProduzione VARCHAR(20),
+      Allergene BOOLEAN,
+
+      PRIMARY KEY (IdIngrediente)
 );
 
 CREATE TABLE Confezione (
@@ -38,16 +53,10 @@ CREATE TABLE Confezione (
       QuantitaRimanente FLOAT,
       Ingrediente INT,
       Scaffale INT,
-      PRIMARY KEY (IdConfezione)
-);
 
-CREATE TABLE Ingrediente (
-      IdIngrediente INT NOT NULL AUTO_INCREMENT,
-      Nome VARCHAR(20),
-      Provenienza VARCHAR(20),
-      TipoProduzione VARCHAR(20),
-      Allergene BOOLEAN,
-      PRIMARY KEY (IdIngrediente)
+      PRIMARY KEY (IdConfezione),
+      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
+      FOREIGN KEY (Scaffale) REFERENCES Scaffale(IdScaffale)
 );
 
 ## Sistemare nome nel documento
@@ -55,6 +64,7 @@ CREATE TABLE Strumento (
       IdStrumento INT NULL AUTO_INCREMENT,
       Tipo VARCHAR(20),
       Nome VARCHAR(20),
+
       PRIMARY KEY (IdStrumento)
 );
 
@@ -62,12 +72,15 @@ CREATE TABLE Strumento (
 CREATE TABLE UtilizziStrumento (
       Utilizzo INT,
       Strumento INT,
-      PRIMARY KEY (Utilizzo, Strumento)
+
+      PRIMARY KEY (Utilizzo, Strumento),
+      FOREIGN KEY (Strumento) REFERENCES Strumento(IdStrumento)
 );
 
 CREATE TABLE Ricetta (
       IdRicetta INT NOT NULL AUTO_INCREMENT,
       TestoRicetta BLOB, # ???
+
       PRIMARY KEY (IdRicetta)
 );
 
@@ -76,7 +89,10 @@ CREATE TABLE IngredienteRicetta (
       Ricetta INT,
       Ingrediente INT,
       Quantità FLOAT,
-      PRIMARY KEY (Ricetta) # perché non anche ingrediente??
+
+      PRIMARY KEY (Ricetta, Ingrediente), # perché c'è scritto solo ricetta??
+      FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
+      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente)
 );
 
 CREATE TABLE Passo (
@@ -87,7 +103,11 @@ CREATE TABLE Passo (
       TempoUtilizzo INT, # In secondi
       Ingrediente INT,
       QuantitàUtilizzata FLOAT,
-      PRIMARY KEY (Ricetta, nPasso)
+
+      PRIMARY KEY (Ricetta, nPasso),
+      FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
+      FOREIGN KEY (Strumento) REFERENCES Strumento(IdStrumento),
+      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente)
 );
 
 CREATE TABLE Menu (
@@ -95,7 +115,9 @@ CREATE TABLE Menu (
       Sede INT,
       DataInizio DATE,
       DataFine DATE,
-      PRIMARY KEY (IdMenu)
+
+      PRIMARY KEY (IdMenu),
+      FOREIGN KEY (Sede) REFERENCES Sede(IdSede)
 );
 
 CREATE TABLE Piatto (
@@ -103,13 +125,17 @@ CREATE TABLE Piatto (
       Menu INT,
       Ricetta INT,
       Novita BOOLEAN, ## ??
-      PRIMARY KEY (IdPiatto)
+
+      PRIMARY KEY (IdPiatto),
+      FOREIGN KEY (Menu) REFERENCES Menu(IdMenu),
+      FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta)
 );
 
 ## A che serve questa tabella?
 CREATE TABLE VariazioniPiatto (
       IdPiatto INT,
       DescrizioneVariazione BLOB,
+
       PRIMARY KEY (IdPiatto)
 );
 
@@ -121,6 +147,7 @@ CREATE TABLE Comanda (
       Account VARCHAR(20),
       Stato INT,
       Prezzo FLOAT,
+
       PRIMARY KEY (IdComanda)
 );
 
@@ -133,7 +160,23 @@ CREATE TABLE Ordine (
       Variazione3 BLOB, ## ??
       OrdineConsegna INT,
       Stato INT,
-      PRIMARY KEY (IdOrdine)
+
+      PRIMARY KEY (IdOrdine),
+      FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda)
+);
+
+CREATE TABLE Account (
+      Username VARCHAR(20),
+      Password VARCHAR(20),
+      Nome VARCHAR(20),
+      Cognome VARCHAR(20),
+      Via VARCHAR(20),
+      nCivico INT,
+      Comune VARCHAR(20),
+      Citta VARCHAR(20),
+      FruibilitaPrenotazioni BOOLEAN DEFAULT TRUE,
+      Sesso INT, # 0 per maschio, 1 per femmina
+      PRIMARY KEY (Username)
 );
 
 CREATE TABLE Prenotazione (
@@ -143,7 +186,9 @@ CREATE TABLE Prenotazione (
       Tavolo INT,
       OraPrenotazione TIMESTAMP,
       nPersone INT,
+
       PRIMARY KEY (IdPrenotazione)
+      FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
 CREATE TABLE Pony (
@@ -163,19 +208,6 @@ CREATE TABLE StatoConsegna (
       PRIMARY KEY (IdStato)
 );
 
-CREATE TABLE Account (
-      Username VARCHAR(20),
-      Password VARCHAR(20),
-      Nome VARCHAR(20),
-      Cognome VARCHAR(20),
-      Via VARCHAR(20),
-      nCivico INT,
-      Comune VARCHAR(20),
-      Citta VARCHAR(20),
-      FruibilitaPrenotazioni BOOLEAN DEFAULT TRUE,
-      Sesso INT, # 0 per maschio, 1 per femmina
-      PRIMARY KEY (Username)
-);
 
 CREATE TABLE Recensione (
       Account VARCHAR(20),
@@ -300,16 +332,16 @@ INSERT INTO Sede (Via, nCivico, Citta) VALUES
 
 INSERT INTO Magazzino (IdSede) VALUES
       (2),
-      (6),
-      (1),
-      (2),
-      (3),
       (4),
-      (7),
+      (1),
+      (2),
+      (5),
+      (3),
+      (2),
       (2),
       (1),
-      (8),
-      (9);
+      (2),
+      (1);
 
 INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Citta, Sesso) VALUES
       ("mario01", "qweutr", "Mario", "Rossi", "del commercio", 98, "Pisa", "Pisa", 0),
