@@ -3,18 +3,18 @@
 ## Teoremi (Ordinati Per Lunghezza )
 
 ### Teoremi Brevi
-1. I punti di accumulazione sono limiti di successioni di punti distinti dell'insieme 
-2. Th. della permanenza del segno per funzioni continue scalari a variabile vettoriale 
-3. Limite della somma di 2 funzioni vettoriali convergenti 
-4. Continuità di funzioni composte 
-5. Th. di esistenza degli zeri per funzioni continue sui connessi 
+1. I punti di accumulazione sono limiti di successioni di punti distinti dell'insieme
+2. Th. della permanenza del segno per funzioni continue scalari a variabile vettoriale
+3. Limite della somma di 2 funzioni vettoriali convergenti
+4. Continuità di funzioni composte
+5. Th. di esistenza degli zeri per funzioni continue sui connessi
 6. La somma di funzioni continue è una funzione continua
 7. Th. della permanenza del segno per funzioni convergenti
 8. Divergenza edi polinomi complessi non costanti all'infinito
 9. Le funzioni reali contine divergenti all'infinito hanno minimo globale
 10. Non esistenza dei limiti in 0 per funzioni 0-omogenee non costanti
-11. Funzioni (positivamente) omogenee sulla sfera unitaria convergono in 0 per x -> 0 
-12. Funzioni (negativamente) omogenee non identificamente (?) nulle fuori dall'origine non convergono in 0 
+11. Funzioni (positivamente) omogenee sulla sfera unitaria convergono in 0 per x -> 0
+12. Funzioni (negativamente) omogenee non identificamente (?) nulle fuori dall'origine non convergono in 0
 13. Unicità del differenziale
 13. Legame tra derivate direzionali di una funzione differenziale ed il suo differenziale
 14. Vari lemmi/teoremi sul gradiente identicamente nullo su un aperto connesso
@@ -23,7 +23,7 @@
 17. Condizione necessaria di integrabilità di campi e forme C^1 sulle derivate delle componenti (condizione del rotore): **Questo teorema viene chiesto spesso quando l'esame è "zoppicante"**
 18. Lemma sulla congiunzione di curve
 19. Lemma sui cammini opposti
-20. Integrale nullo del campo su curve chiuse 
+20. Integrale nullo del campo su curve chiuse
 21. Gli insiemi a stella sono semplicemente connessi
 
 
@@ -39,7 +39,7 @@
 
 ### Teoremi Lunghi
 
-1. Th. fondamentale dell'algebra di Gauss: ogni polinomio complesso non costante ha zeri complessi 
+1. Th. fondamentale dell'algebra di Gauss: ogni polinomio complesso non costante ha zeri complessi
 2. Th. di Ulisse Dini in ipotesi di continuità globale e di stretta monotonia rispetto ad una variabile
 3. Th. del differenziale totale (differenziabilità di funzioni di classe C^1)
 4. Th. sulle funzioni implicite (Dini) nel caso di funzioni di classe C^1
@@ -49,9 +49,9 @@
 
 1. Th. di Weierstrass sull'esistenza dei punti estremi per le funzioni continue sui chiusi limitati
 2. Th. sul differenziale di funzioni composte
-3. Th. di Schwartz 
+3. Th. di Schwartz
 4. Th. di Ulisse Dini sulle funzioni implicite nel caso di sistemi a più equazioni
-5. Th. di Inversione Locale 
+5. Th. di Inversione Locale
 6. Invarianza per omotopia dell'integrale di un campo irrotazionale
 7. Th. di Fubini,Tonelli,Lebesque(convergenza dominata) BepppoLevi (convergenza monotona)
 
@@ -168,6 +168,36 @@
 - Limite
 - Convergenza
 - Vettore Tangente
+- Differenziale
+- Matrice Jacobiana
+- Curva rettificabile
+- Misura insieme aperto
+- Vettore normale ad una superficie parametrica
+- Derivata direzionale
+- Funzione omogenea
+- Punto interno
+- Curva regolare
+- Forma esatta
+- Punto di frontiera
+- Forma chiusa
+- Superficie regolare
+- Punto di accumulazione
+- Insieme semplicemente connesso
+- Punto interno
+- Insieme convesso
+- Piano tangente
+- Campo irrotazionale
+- Misura insieme aperto
+- Insieme aperto
+- Pt. di accumulazione
+- Area superficie parametrica
+- Misura insieme aperto
+- Matrice Jacobiana
+- Insieme aperto
+- Pt. di accumulazione
+- Area superficie parametrica
+- Misura insieme aperto
+- Matrice Jacobiana
 
 ### Teoremi
 1. Teorema degli zeri in più variabili
@@ -200,6 +230,15 @@
 - C.S. per integrabilità
 - Se il campo è integrabile allora è irrotazionale
 - Enunciato di funzioni composte
+- Se un campo è integrabile allora è irrotazionale
+- F è differenziabile allora ha le derivate direzionale
+- F è differenziabile allora ammette derivate direzionali
+- Differenziale totale
+- Teorema fondamentale dell'integrazione
+- Teorema di torricelli
+- F è differenziabile -> esistono tutte le derivate
+- Indipendenza dell'integrale dal cammino
+- Insieme a stella -> semplciemente connesso
 
 ### Altra lista
 1. Forma chiusa/esatta

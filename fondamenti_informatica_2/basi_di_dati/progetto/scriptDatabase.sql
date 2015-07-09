@@ -214,9 +214,9 @@ CREATE TABLE StatoConsegna (
 
 CREATE TABLE Recensione (
       Account VARCHAR(20),
-      IdRecensione INT,
+      IdRecensione INT NOT NULL AUTO_INCREMENT,
       GiudizioGlobale INT,
-      GiudizioTesto INT,
+      GiudizioTesto BLOB,
 
       PRIMARY KEY (IdRecensione),
       FOREIGN KEY (Account) REFERENCES Account(Username)
@@ -268,7 +268,8 @@ CREATE TABLE ValutazioneRecensione (
       Descrizione BLOB,
 
       PRIMARY KEY (Account, Recensione),
-      FOREIGN KEY (Account) REFERENCES Account(Username)
+      FOREIGN KEY (Account) REFERENCES Account(Username),
+      FOREIGN KEY (Recensione) REFERENCES Recensione(IdRecensione)
 );
 
 CREATE TABLE PropostaPiatto (
@@ -353,6 +354,29 @@ CREATE TABLE Serata (
 -- Creazione trigger
 --------------------------------------------------------------------------------
 
+-- Evita che una persona valuti una recensione fatta da se stessa
+DELIMITER $$
+DROP TRIGGER IF EXISTS ValutaRecensione;
+CREATE TRIGGER ValutaRecensione
+BEFORE INSERT ON ValutazioneRecensione FOR EACH ROW
+BEGIN
+
+      SET @accountRecensione = (
+            SELECT COUNT(*)
+            FROM Recensione R
+            WHERE R.IdRecensione = NEW.Recensione
+            AND R.Account = NEW.Account
+      );
+
+      IF @accountRecensione <> 0 THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = "Impossibile valutare se stessi.";
+      END IF;
+END $$
+DELIMITER ;
+
+
+
 --------------------------------------------------------------------------------
 -- Inserimento elementi nelle tabelle
 --------------------------------------------------------------------------------
@@ -381,11 +405,18 @@ INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Ci
       ("mario01", "qweutr", "Mario", "Rossi", "del commercio", 98, "Pisa", "Pisa", 0),
       ("luca12", "tretre1", "Luca", "Paoli", "Est", 78, "Collesalvetti", "Livorno", 0),
       ("paola44", "54354tf", "Paola", "Amici", "Roma", 125, "Livorno", "Livorno", 1),
-      ("ettore11", "rengregre", "Ettore", "Sallusti", "del vascello", 90, "Cecina", "Livorno", 0);
+      ("ettore11", "rengregre", "Ettore", "Sallusti", "del vascello", 90, "Cecina", "Livorno", 0),
+      ("laura44", "nty34843", "Laura", "Rossi", "Europa", 9, "Pisa", "Pisa", 0);
+
+INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto) VALUES
+      ("mario01", 5, "Veramente ottimo!"),
+      ("luca12", 2, "Poco soddisfatto.."),
+      ("ettore11", 3, "Abbastanza buono..");
 
 INSERT INTO ValutazioneRecensione (Account, Recensione, Veridicita, Accuratezza, Descrizione) VALUES
-      ("mario01", 3, 2, 1, "Pessima recensione"),
-      ("mario01", 4, 5, 5, "Pienamente d'accordo");
+      ("mario01", 2, 2, 1, "Pessima recensione"),
+      ("mario01", 3, 5, 5, "Pienamente d'accordo"),
+      ("luca12", 1, 1, 2, "Recensione molto scarsa");
 
 --------------------------------------------------------------------------------
 -- Query di prova
@@ -394,4 +425,5 @@ INSERT INTO ValutazioneRecensione (Account, Recensione, Veridicita, Accuratezza,
 SELECT * FROM Sede;
 SELECT * FROM Magazzino;
 SELECT * FROM Account;
+SELECT * FROM Recensione;
 SELECT * FROM ValutazioneRecensione;
