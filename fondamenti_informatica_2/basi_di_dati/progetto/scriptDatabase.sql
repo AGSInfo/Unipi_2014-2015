@@ -187,7 +187,7 @@ CREATE TABLE Prenotazione (
       OraPrenotazione TIMESTAMP,
       nPersone INT,
 
-      PRIMARY KEY (IdPrenotazione)
+      PRIMARY KEY (IdPrenotazione),
       FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
@@ -195,6 +195,7 @@ CREATE TABLE Pony (
       IdPony INT NOT NULL AUTO_INCREMENT,
       TipoMezzo INT,
       Stato INT,
+
       PRIMARY KEY (IdPony)
 );
 
@@ -205,7 +206,9 @@ CREATE TABLE StatoConsegna (
       Stato INT,
       Ora TIMESTAMP,
       Data DATE,
-      PRIMARY KEY (IdStato)
+
+      PRIMARY KEY (IdStato),
+      FOREIGN KEY (Pony) REFERENCES Pony(IdPony)
 );
 
 
@@ -214,21 +217,17 @@ CREATE TABLE Recensione (
       IdRecensione INT,
       GiudizioGlobale INT,
       GiudizioTesto INT,
-      PRIMARY KEY (IdRecensione)
+
+      PRIMARY KEY (IdRecensione),
+      FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
 ## Aggiustare nome nel documento
 CREATE TABLE DomandaQuestionario (
       IdDomanda INT NOT NULL AUTO_INCREMENT,
       Domanda BLOB,
-      PRIMARY KEY (IdDomanda)
-);
 
-CREATE TABLE Compilazione (
-      IdDomanda INT,
-      IdRecensione INT,
-      IdRisposta INT,
-      PRIMARY KEY (IdDomanda, IdRecensione, IdRisposta)
+      PRIMARY KEY (IdDomanda)
 );
 
 ## Aggiustare il nome nel documento
@@ -239,12 +238,26 @@ CREATE TABLE Risposta (
       PRIMARY KEY (IdRisposta)
 );
 
+CREATE TABLE Compilazione (
+      IdDomanda INT,
+      IdRecensione INT,
+      IdRisposta INT,
+
+      PRIMARY KEY (IdDomanda, IdRecensione, IdRisposta),
+      FOREIGN KEY (IdDomanda) REFERENCES DomandaQuestionario(IdDomanda),
+      FOREIGN KEY (IdRecensione) REFERENCES Recensione(IdRecensione),
+      FOREIGN KEY (IdRisposta) REFERENCES Risposta(IdRisposta)
+);
+
 ## Aggiustare il nome del documento?
 ## A che serve questa tabella??
-CREATE TABLE PossibilitàRisposta (
+CREATE TABLE PossibilitaRisposta (
       IdDomanda INT,
       IdRisposta INT,
+
       PRIMARY KEY (IdDomanda)
+      #FOREIGN KEY (IdDomanda) REFERENCES Domanda(IdDomanda),
+      #FOREIGN KEY (IdRisposta) REFERENCES Risposta(IdRisposta)
 );
 
 CREATE TABLE ValutazioneRecensione (
@@ -253,14 +266,18 @@ CREATE TABLE ValutazioneRecensione (
       Veridicita INT,
       Accuratezza INT,
       Descrizione BLOB,
-      PRIMARY KEY (Account, Recensione)
+
+      PRIMARY KEY (Account, Recensione),
+      FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
 CREATE TABLE PropostaPiatto (
       IdPropostaPiatto INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
       Nome VARCHAR(20),
-      PRIMARY KEY (IdPropostaPiatto)
+
+      PRIMARY KEY (IdPropostaPiatto),
+      FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
 ## Aggiustare il nome del documento
@@ -268,7 +285,10 @@ CREATE TABLE IngredienteNuovoPiatto (
       PropostaPiatto INT,
       Ingrediente INT,
       Quantità FLOAT,
-      PRIMARY KEY (PropostaPiatto, Ingrediente)
+
+      PRIMARY KEY (PropostaPiatto, Ingrediente),
+      FOREIGN KEY (PropostaPiatto) REFERENCES PropostaPiatto(IdPropostaPiatto),
+      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente)
 );
 
 CREATE TABLE ValutazionePropostaPiatto (
@@ -276,34 +296,46 @@ CREATE TABLE ValutazionePropostaPiatto (
       PropostaPiatto INT,
       Valutazione INT,
       Descrizione BLOB,
-      PRIMARY KEY (Account, PropostaPiatto)
+
+      PRIMARY KEY (Account, PropostaPiatto),
+      FOREIGN KEY (Account) REFERENCES Account(Username),
+      FOREIGN KEY (PropostaPiatto) REFERENCES PropostaPiatto(IdPropostaPiatto)
 );
 
 CREATE TABLE VariantePiatto (
       IdVariante INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
       Piatto INT,
-      PRIMARY KEY (IdVariante)
+
+      PRIMARY KEY (IdVariante),
+      FOREIGN KEY (Account) REFERENCES Account(Username),
+      FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto)
 );
 
 CREATE TABLE ModificaVariazione (
       IdModifica INT NOT NULL AUTO_INCREMENT,
       VariantePiatto INT,
       Modifica BLOB, ## ???
-      PRIMARY KEY (IdModifica)
+
+      PRIMARY KEY (IdModifica),
+      FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante)
 );
 
 CREATE TABLE ValutazioneVariazione (
       Account VARCHAR(20),
       VariantePiatto INT,
       Valutazione INT,
-      PRIMARY KEY (Account, VariantePiatto)
+
+      PRIMARY KEY (Account, VariantePiatto),
+      FOREIGN KEY (Account) REFERENCES Account(Username),
+      FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante)
 );
 
 # Il organizzatore può essere diverso dal nome
 # di colui che ha effettuato la "prenotazione" della serata?
 # se deve essere uguale, il nome ed il cognome non sono deducibili
 # dalla tabella Account?
+# Come è collegata la serata ad una certa sede??
 CREATE TABLE Serata (
       IdSerata INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
@@ -312,7 +344,9 @@ CREATE TABLE Serata (
       TelefonoOrganizzatoreSala INT,
       Allestimento BLOB,
       nPersone INT,
-      PRIMARY KEY (IdSerata)
+
+      PRIMARY KEY (IdSerata),
+      FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
 --------------------------------------------------------------------------------
