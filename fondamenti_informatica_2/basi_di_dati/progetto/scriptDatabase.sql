@@ -50,7 +50,7 @@ CREATE TABLE Confezione (
       DataConsegna DATE,
       DataScadenza DATE,
       Aspetto ENUM ("intatto", "rovinato"),
-      Stato ENUM ("completo", "parziale", "in uso"), # ???
+      Stato ENUM ("completo", "parziale", "in uso") DEFAULT "completo", # ???
       QuantitaRimanente FLOAT,
       Ingrediente INT,
       Scaffale INT,
@@ -93,7 +93,8 @@ CREATE TABLE IngredienteRicetta (
 
       PRIMARY KEY (Ricetta, Ingrediente), # perché c'è scritto solo ricetta??
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
-      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente)
+      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
+      CHECK (Quantita >= 0)
 );
 
 CREATE TABLE Passo (
@@ -108,7 +109,8 @@ CREATE TABLE Passo (
       PRIMARY KEY (Ricetta, nPasso),
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
       FOREIGN KEY (Strumento) REFERENCES Strumento(IdStrumento),
-      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente)
+      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
+      CHECK (TempoUtilizzo >= 0 AND QuantitaUtilizzata >= 0)
 );
 
 CREATE TABLE Menu (
@@ -118,7 +120,8 @@ CREATE TABLE Menu (
       DataFine DATE,
 
       PRIMARY KEY (IdMenu),
-      FOREIGN KEY (Sede) REFERENCES Sede(IdSede)
+      FOREIGN KEY (Sede) REFERENCES Sede(IdSede),
+      CHECK (DataInizio <= DataFine)
 );
 
 CREATE TABLE Piatto (
@@ -172,11 +175,12 @@ CREATE TABLE Account (
       Nome VARCHAR(20),
       Cognome VARCHAR(20),
       Via VARCHAR(20),
-      nCivico INT,
+      nCivico SMALLINT,
       Comune VARCHAR(20),
       Citta VARCHAR(20),
       FruibilitaPrenotazioni BOOLEAN DEFAULT TRUE,
       Sesso ENUM ("maschio", "femmina"),
+
       PRIMARY KEY (Username)
 );
 
@@ -184,7 +188,7 @@ CREATE TABLE Prenotazione (
       IdPrenotazione INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
       NumeroTelefono INT,
-      Tavolo INT,
+      Tavolo SMALLINT,
       OraPrenotazione TIMESTAMP,
       nPersone INT,
 
@@ -204,11 +208,12 @@ CREATE TABLE StatoConsegna (
       IdStato INT NOT NULL AUTO_INCREMENT,
       Comanda INT,
       Pony INT,
-      Stato INT,
+      Stato ENUM ("programmato", "in consegna", "consegnato"), ## controllare questi valori
       Ora TIMESTAMP,
       Data DATE,
 
       PRIMARY KEY (IdStato),
+      FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda),
       FOREIGN KEY (Pony) REFERENCES Pony(IdPony)
 );
 
@@ -292,7 +297,8 @@ CREATE TABLE IngredienteNuovoPiatto (
 
       PRIMARY KEY (PropostaPiatto, Ingrediente),
       FOREIGN KEY (PropostaPiatto) REFERENCES PropostaPiatto(IdPropostaPiatto),
-      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente)
+      FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
+      CHECK (Quantita >= 0)
 );
 
 CREATE TABLE ValutazionePropostaPiatto (
@@ -343,7 +349,7 @@ CREATE TABLE ValutazioneVariazione (
 # Come è collegata la serata ad una certa sede??
 CREATE TABLE Serata (
       IdSerata INT NOT NULL AUTO_INCREMENT,
-      Account VARCHAR(20),
+      Account VARCHAR(20) NOT NULL,
       NomeOrganizzatore VARCHAR(20),
       CognomeOrganizzatore VARCHAR(20),
       TelefonoOrganizzatoreSala INT,
