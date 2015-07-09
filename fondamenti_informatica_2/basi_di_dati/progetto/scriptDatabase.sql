@@ -9,10 +9,11 @@ USE ProgettoRistoranti;
 CREATE TABLE Sede (
       IdSede INT NOT NULL AUTO_INCREMENT,
       Via VARCHAR(20),
-      nCivico INT,
+      nCivico SMALLINT,
       Citta VARCHAR(20),
 
-      PRIMARY KEY (IdSede)
+      PRIMARY KEY (IdSede),
+      UNIQUE (Via, nCivico, Citta)
 );
 
 CREATE TABLE Magazzino (
@@ -35,7 +36,7 @@ CREATE TABLE Ingrediente (
       IdIngrediente INT NOT NULL AUTO_INCREMENT,
       Nome VARCHAR(20),
       Provenienza VARCHAR(20),
-      TipoProduzione VARCHAR(20),
+      TipoProduzione ENUM ("intensiva", "biologica"),
       Allergene BOOLEAN,
 
       PRIMARY KEY (IdIngrediente)
@@ -48,8 +49,8 @@ CREATE TABLE Confezione (
       DataAcquisto DATE,
       DataConsegna DATE,
       DataScadenza DATE,
-      Aspetto INT, # ???
-      Stato INT, # ???
+      Aspetto ENUM ("intatto", "rovinato"),
+      Stato ENUM ("completo", "parziale", "in uso"), # ???
       QuantitaRimanente FLOAT,
       Ingrediente INT,
       Scaffale INT,
@@ -88,7 +89,7 @@ CREATE TABLE Ricetta (
 CREATE TABLE IngredienteRicetta (
       Ricetta INT,
       Ingrediente INT,
-      Quantità FLOAT,
+      Quantita FLOAT,
 
       PRIMARY KEY (Ricetta, Ingrediente), # perché c'è scritto solo ricetta??
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
@@ -97,12 +98,12 @@ CREATE TABLE IngredienteRicetta (
 
 CREATE TABLE Passo (
       Ricetta INT,
-      nPasso INT,
+      nPasso SMALLINT,
       DescrizionePasso BLOB,
       Strumento INT,
       TempoUtilizzo INT, # In secondi
       Ingrediente INT,
-      QuantitàUtilizzata FLOAT,
+      QuantitaUtilizzata FLOAT,
 
       PRIMARY KEY (Ricetta, nPasso),
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
@@ -175,7 +176,7 @@ CREATE TABLE Account (
       Comune VARCHAR(20),
       Citta VARCHAR(20),
       FruibilitaPrenotazioni BOOLEAN DEFAULT TRUE,
-      Sesso INT, # 0 per maschio, 1 per femmina
+      Sesso ENUM ("maschio", "femmina"),
       PRIMARY KEY (Username)
 );
 
@@ -194,7 +195,7 @@ CREATE TABLE Prenotazione (
 CREATE TABLE Pony (
       IdPony INT NOT NULL AUTO_INCREMENT,
       TipoMezzo INT,
-      Stato INT,
+      Stato ENUM ("libero", "occupato"),
 
       PRIMARY KEY (IdPony)
 );
@@ -219,7 +220,8 @@ CREATE TABLE Recensione (
       GiudizioTesto BLOB,
 
       PRIMARY KEY (IdRecensione),
-      FOREIGN KEY (Account) REFERENCES Account(Username)
+      FOREIGN KEY (Account) REFERENCES Account(Username),
+      CHECK (GiudizioGlobale >= 0 AND GiudizioGlobale <= 5)
 );
 
 ## Aggiustare nome nel documento
@@ -269,7 +271,8 @@ CREATE TABLE ValutazioneRecensione (
 
       PRIMARY KEY (Account, Recensione),
       FOREIGN KEY (Account) REFERENCES Account(Username),
-      FOREIGN KEY (Recensione) REFERENCES Recensione(IdRecensione)
+      FOREIGN KEY (Recensione) REFERENCES Recensione(IdRecensione),
+      CHECK (Veridicita >= 0 AND Veridicita <= 5 AND Accuratezza >= 0 AND Accuratezza <= 5)
 );
 
 CREATE TABLE PropostaPiatto (
@@ -285,7 +288,7 @@ CREATE TABLE PropostaPiatto (
 CREATE TABLE IngredienteNuovoPiatto (
       PropostaPiatto INT,
       Ingrediente INT,
-      Quantità FLOAT,
+      Quantita FLOAT,
 
       PRIMARY KEY (PropostaPiatto, Ingrediente),
       FOREIGN KEY (PropostaPiatto) REFERENCES PropostaPiatto(IdPropostaPiatto),
@@ -329,7 +332,8 @@ CREATE TABLE ValutazioneVariazione (
 
       PRIMARY KEY (Account, VariantePiatto),
       FOREIGN KEY (Account) REFERENCES Account(Username),
-      FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante)
+      FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante),
+      CHECK (Valutazione >= 0 OR Valutazione <= 5)
 );
 
 # Il organizzatore può essere diverso dal nome
@@ -375,8 +379,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-
-
 --------------------------------------------------------------------------------
 -- Inserimento elementi nelle tabelle
 --------------------------------------------------------------------------------
@@ -402,11 +404,11 @@ INSERT INTO Magazzino (IdSede) VALUES
       (1);
 
 INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Citta, Sesso) VALUES
-      ("mario01", "qweutr", "Mario", "Rossi", "del commercio", 98, "Pisa", "Pisa", 0),
-      ("luca12", "tretre1", "Luca", "Paoli", "Est", 78, "Collesalvetti", "Livorno", 0),
-      ("paola44", "54354tf", "Paola", "Amici", "Roma", 125, "Livorno", "Livorno", 1),
-      ("ettore11", "rengregre", "Ettore", "Sallusti", "del vascello", 90, "Cecina", "Livorno", 0),
-      ("laura44", "nty34843", "Laura", "Rossi", "Europa", 9, "Pisa", "Pisa", 0);
+      ("mario01", "qweutr", "Mario", "Rossi", "del commercio", 98, "Pisa", "Pisa", "maschio"),
+      ("luca12", "tretre1", "Luca", "Paoli", "Est", 78, "Collesalvetti", "Livorno", "maschio"),
+      ("paola44", "54354tf", "Paola", "Amici", "Roma", 125, "Livorno", "Livorno", "femmina"),
+      ("ettore11", "rengregre", "Ettore", "Sallusti", "del vascello", 90, "Cecina", "Livorno", "maschio"),
+      ("laura44", "nty34843", "Laura", "Rossi", "Europa", 9, "Pisa", "Pisa", "femmina");
 
 INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto) VALUES
       ("mario01", 5, "Veramente ottimo!"),
