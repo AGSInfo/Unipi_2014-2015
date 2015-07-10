@@ -1,3 +1,7 @@
+--------------------------------------------------------------------------------
+-- Creazione ed apertura del database
+--------------------------------------------------------------------------------
+
 DROP DATABASE IF EXISTS ProgettoRistoranti;
 CREATE DATABASE ProgettoRistoranti;
 USE ProgettoRistoranti;
@@ -16,6 +20,8 @@ CREATE TABLE Sede (
       UNIQUE (Via, nCivico, Citta)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE Magazzino (
       IdMagazzino INT NOT NULL AUTO_INCREMENT,
       IdSede INT,
@@ -24,6 +30,8 @@ CREATE TABLE Magazzino (
       FOREIGN KEY (IdSede) REFERENCES Sede(IdSede)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE Scaffale (
       IdScaffale INT NOT NULL AUTO_INCREMENT,
       IdMagazzino INT,
@@ -31,6 +39,8 @@ CREATE TABLE Scaffale (
       PRIMARY KEY (IdScaffale),
       FOREIGN KEY (IdMagazzino) REFERENCES Magazzino(IdMagazzino)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Ingrediente (
       IdIngrediente INT NOT NULL AUTO_INCREMENT,
@@ -41,6 +51,8 @@ CREATE TABLE Ingrediente (
 
       PRIMARY KEY (IdIngrediente)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Confezione (
       IdConfezione INT NOT NULL AUTO_INCREMENT,
@@ -60,7 +72,8 @@ CREATE TABLE Confezione (
       FOREIGN KEY (Scaffale) REFERENCES Scaffale(IdScaffale)
 );
 
-## Sistemare nome nel documento
+--------------------------------------------------------------------------------
+
 CREATE TABLE Strumento (
       IdStrumento INT NULL AUTO_INCREMENT,
       Tipo VARCHAR(20),
@@ -69,7 +82,8 @@ CREATE TABLE Strumento (
       PRIMARY KEY (IdStrumento)
 );
 
-## Sistemare nome nel documento
+--------------------------------------------------------------------------------
+
 CREATE TABLE UtilizziStrumento (
       Utilizzo INT,
       Strumento INT,
@@ -78,6 +92,8 @@ CREATE TABLE UtilizziStrumento (
       FOREIGN KEY (Strumento) REFERENCES Strumento(IdStrumento)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE Ricetta (
       IdRicetta INT NOT NULL AUTO_INCREMENT,
       TestoRicetta BLOB, # ???
@@ -85,7 +101,8 @@ CREATE TABLE Ricetta (
       PRIMARY KEY (IdRicetta)
 );
 
-## Sistemare nome nel documento
+--------------------------------------------------------------------------------
+
 CREATE TABLE IngredienteRicetta (
       Ricetta INT,
       Ingrediente INT,
@@ -96,6 +113,8 @@ CREATE TABLE IngredienteRicetta (
       FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
       CHECK (Quantita >= 0)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Passo (
       Ricetta INT,
@@ -113,6 +132,8 @@ CREATE TABLE Passo (
       CHECK (TempoUtilizzo >= 0 AND QuantitaUtilizzata >= 0)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE Menu (
       IdMenu INT NOT NULL AUTO_INCREMENT,
       Sede INT,
@@ -123,6 +144,8 @@ CREATE TABLE Menu (
       FOREIGN KEY (Sede) REFERENCES Sede(IdSede),
       CHECK (DataInizio <= DataFine)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Piatto (
       IdPiatto INT NOT NULL AUTO_INCREMENT,
@@ -135,6 +158,8 @@ CREATE TABLE Piatto (
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta)
 );
 
+--------------------------------------------------------------------------------
+
 ## A che serve questa tabella?
 CREATE TABLE VariazioniPiatto (
       IdPiatto INT,
@@ -142,6 +167,8 @@ CREATE TABLE VariazioniPiatto (
 
       PRIMARY KEY (IdPiatto)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Comanda (
       IdComanda INT NOT NULL AUTO_INCREMENT,
@@ -154,6 +181,8 @@ CREATE TABLE Comanda (
 
       PRIMARY KEY (IdComanda)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Ordine (
       IdOrdine INT NOT NULL AUTO_INCREMENT,
@@ -168,6 +197,8 @@ CREATE TABLE Ordine (
       PRIMARY KEY (IdOrdine),
       FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Account (
       Username VARCHAR(20),
@@ -184,6 +215,8 @@ CREATE TABLE Account (
       PRIMARY KEY (Username)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE Prenotazione (
       IdPrenotazione INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
@@ -196,6 +229,8 @@ CREATE TABLE Prenotazione (
       FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE Pony (
       IdPony INT NOT NULL AUTO_INCREMENT,
       TipoMezzo INT,
@@ -203,6 +238,8 @@ CREATE TABLE Pony (
 
       PRIMARY KEY (IdPony)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE StatoConsegna (
       IdStato INT NOT NULL AUTO_INCREMENT,
@@ -217,6 +254,7 @@ CREATE TABLE StatoConsegna (
       FOREIGN KEY (Pony) REFERENCES Pony(IdPony)
 );
 
+--------------------------------------------------------------------------------
 
 CREATE TABLE Recensione (
       Account VARCHAR(20),
@@ -229,7 +267,8 @@ CREATE TABLE Recensione (
       CHECK (GiudizioGlobale >= 0 AND GiudizioGlobale <= 5)
 );
 
-## Aggiustare nome nel documento
+--------------------------------------------------------------------------------
+
 CREATE TABLE DomandaQuestionario (
       IdDomanda INT NOT NULL AUTO_INCREMENT,
       Domanda BLOB,
@@ -237,13 +276,16 @@ CREATE TABLE DomandaQuestionario (
       PRIMARY KEY (IdDomanda)
 );
 
-## Aggiustare il nome nel documento
+--------------------------------------------------------------------------------
+
 CREATE TABLE Risposta (
       IdRisposta INT NOT NULL AUTO_INCREMENT,
       Risposta BLOB,
       Scala INT,
       PRIMARY KEY (IdRisposta)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE Compilazione (
       IdDomanda INT,
@@ -256,7 +298,8 @@ CREATE TABLE Compilazione (
       FOREIGN KEY (IdRisposta) REFERENCES Risposta(IdRisposta)
 );
 
-## Aggiustare il nome del documento?
+--------------------------------------------------------------------------------
+
 ## A che serve questa tabella??
 CREATE TABLE PossibilitaRisposta (
       IdDomanda INT,
@@ -266,6 +309,8 @@ CREATE TABLE PossibilitaRisposta (
       #FOREIGN KEY (IdDomanda) REFERENCES Domanda(IdDomanda),
       #FOREIGN KEY (IdRisposta) REFERENCES Risposta(IdRisposta)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE ValutazioneRecensione (
       Account VARCHAR(20),
@@ -280,6 +325,8 @@ CREATE TABLE ValutazioneRecensione (
       CHECK (Veridicita >= 0 AND Veridicita <= 5 AND Accuratezza >= 0 AND Accuratezza <= 5)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE PropostaPiatto (
       IdPropostaPiatto INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
@@ -289,7 +336,8 @@ CREATE TABLE PropostaPiatto (
       FOREIGN KEY (Account) REFERENCES Account(Username)
 );
 
-## Aggiustare il nome del documento
+--------------------------------------------------------------------------------
+
 CREATE TABLE IngredienteNuovoPiatto (
       PropostaPiatto INT,
       Ingrediente INT,
@@ -300,6 +348,8 @@ CREATE TABLE IngredienteNuovoPiatto (
       FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
       CHECK (Quantita >= 0)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE ValutazionePropostaPiatto (
       Account VARCHAR(20),
@@ -312,6 +362,8 @@ CREATE TABLE ValutazionePropostaPiatto (
       FOREIGN KEY (PropostaPiatto) REFERENCES PropostaPiatto(IdPropostaPiatto)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE VariantePiatto (
       IdVariante INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
@@ -322,6 +374,8 @@ CREATE TABLE VariantePiatto (
       FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto)
 );
 
+--------------------------------------------------------------------------------
+
 CREATE TABLE ModificaVariazione (
       IdModifica INT NOT NULL AUTO_INCREMENT,
       VariantePiatto INT,
@@ -330,6 +384,8 @@ CREATE TABLE ModificaVariazione (
       PRIMARY KEY (IdModifica),
       FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante)
 );
+
+--------------------------------------------------------------------------------
 
 CREATE TABLE ValutazioneVariazione (
       Account VARCHAR(20),
@@ -341,6 +397,8 @@ CREATE TABLE ValutazioneVariazione (
       FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante),
       CHECK (Valutazione >= 0 OR Valutazione <= 5)
 );
+
+--------------------------------------------------------------------------------
 
 # Il organizzatore può essere diverso dal nome
 # di colui che ha effettuato la "prenotazione" della serata?
@@ -394,7 +452,10 @@ INSERT INTO Sede (Via, nCivico, Citta) VALUES
       ("Fratelli", 23, "Roma"),
       ("delle Vittime", 12, "Roma"),
       ("Europa", 2, "Pisa"),
-      ("Filzi", 10, "Livorno");
+      ("Filzi", 10, "Livorno"),
+      ("dell Anima", 6, "Milano");
+
+--------------------------------------------------------------------------------
 
 INSERT INTO Magazzino (IdSede) VALUES
       (2),
@@ -409,6 +470,8 @@ INSERT INTO Magazzino (IdSede) VALUES
       (2),
       (1);
 
+--------------------------------------------------------------------------------
+
 INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Citta, Sesso) VALUES
       ("mario01", "qweutr", "Mario", "Rossi", "del commercio", 98, "Pisa", "Pisa", "maschio"),
       ("luca12", "tretre1", "Luca", "Paoli", "Est", 78, "Collesalvetti", "Livorno", "maschio"),
@@ -416,10 +479,14 @@ INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Ci
       ("ettore11", "rengregre", "Ettore", "Sallusti", "del vascello", 90, "Cecina", "Livorno", "maschio"),
       ("laura44", "nty34843", "Laura", "Rossi", "Europa", 9, "Pisa", "Pisa", "femmina");
 
+--------------------------------------------------------------------------------
+
 INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto) VALUES
       ("mario01", 5, "Veramente ottimo!"),
       ("luca12", 2, "Poco soddisfatto.."),
       ("ettore11", 3, "Abbastanza buono..");
+
+--------------------------------------------------------------------------------
 
 INSERT INTO ValutazioneRecensione (Account, Recensione, Veridicita, Accuratezza, Descrizione) VALUES
       ("mario01", 2, 2, 1, "Pessima recensione"),
@@ -435,3 +502,205 @@ SELECT * FROM Magazzino;
 SELECT * FROM Account;
 SELECT * FROM Recensione;
 SELECT * FROM ValutazioneRecensione;
+
+---------------------------------------------------------------------------------
+-- Query richieste dal progetto
+--------------------------------------------------------------------------------
+
+-- Query 1
+-- Identificare tutti i piatti preparabili nell'attuale menu della sede
+-- presente a Roma
+-- Frequenza: 70 volte al giorno
+
+DELIMITER $$
+CREATE PROCEDURE Query1()
+BEGIN
+      Create or replace view PiattiRoma as
+      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
+      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
+      and S.Citta = "Roma" and M.DataFine is NULL;
+
+      Select * from PiattiRoma as PR ,Ingredienti_Piatto as IP where
+      PR.id = IP.ID_Piatto and IP.qta >
+      (Select sum(qta) from Magazzino M,Sede S,Scaffale SC, Confezione C where
+      M.Sede = S.Id and S.citta = "Roma" and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
+      and C.ingrediente = IP.ingrediente group by C.ingrediente);
+END $$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+-- Query 2
+-- Per ogni sede, identificare il cliente che ha effettuato il maggior numeero
+-- di recensioni nel mese attuale
+-- Frequenza: 1 volta al mese
+
+DELIMITER $$
+CREATE PROCEDURE Query2SenzaRid()
+BEGIN
+      Create or replace view Piatti_Sedi as
+      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
+      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
+      and M.DataFine is NULL;
+
+      Select * from Piatti_Sede PS, Passi P, Ingredienti I where
+      Ps.Id = P.Id_Piatto and P.ID_Ingrediente = I.id
+      group by PS.Id
+      Having (count(*) = (SELECT count(*) from Passi P2, Ingredienti I2
+      where P2.ID_Ingrediente = I2.ID and P2.Id_Piatto = P.Id_Piatto
+      and I2.Allergene IS NOT NULL)) order by PS.NomeSede;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE Query2ConRid()
+BEGIN
+      Create or replace view Piatti_Sedi as
+      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
+      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
+      and M.DataFine is NULL;
+
+      Select * from Piatti_Sedi as PS group by PS.IdPiatto
+      having(count(*) = (select count(*) from PiattiSedi as PS2
+      where PS2.IdPiatto = PS.IdPiatto and PS2.Allergene IS NOT NULL));
+END $$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+-- Query 3
+-- Visualizzare l'attuale menù, esclusi i piatti che contengono almeno un allergene
+-- nella sede di Firenze
+-- Frequenza: 200 volte al giorno
+
+DELIMITER $$
+CREATE PROCEDURE Query3SenzaRid()
+BEGIN
+      Create or replace view PiattiFirenze as
+      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
+      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
+      and S.Citta = "Firenze" and M.DataFine is NULL;
+
+      Select * from PiattiFirenze as PR ,Ingredienti_Piatto as IP,Ingredienti AS I where
+      PR.id = IP.ID_Piatto and I.id = IP.Id_Ingrediente
+      and IP.qta >
+      (Select sum(qta) from Magazzino M,Sede S,Scaffale SC, Confezione C where
+      M.Sede = S.Id and S.citta = "Firenze" and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
+      and C.ingrediente = IP.ingrediente group by C.ingrediente) and NOT EXISTS
+      (select * from I where I.allergene is NULL);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE Query3ConRid()
+BEGIN
+      Create or replace view PiattiFirenze as
+      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
+      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
+      and S.Citta = "Firenze" and M.DataFine is NULL;
+
+      Select * from PiattiFirenze as PR ,Ingredienti_Piatto as IP,Ingredienti AS I where
+      PR.id = IP.ID_Piatto and I.id = IP.Id_Ingrediente
+      and IP.qta >
+      (Select sum(qta) from Magazzino M,Sede S,Scaffale SC, Confezione C where
+      M.Sede = S.Id and S.citta = "Firenze" and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
+      and C.ingrediente = IP.ingrediente group by C.ingrediente) and PR.allergene is NULL;
+END $$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+-- Query 4
+-- Visualizzare tutti i comuni (in ordine decrescente) che hanno effettuato
+-- richieste take-away
+-- Frequenza: 10 volte al giorno
+
+-- Qui le ridondanze non incidono in alcun modo sul comportamento della query
+
+DELIMITER $$
+CREATE PROCEDURE Query4()
+BEGIN
+      SELECT Nome,
+            COUNT(*) AS N_Consegne
+      FROM
+            Consegna C
+      GROUP BY
+            C.Comune ## select di un risultato che non è nel group by?
+      ORDER BY
+            N_Consegne ASC;
+END $$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+-- Query 5
+-- Elenca i clienti per i quali non è più possibile effettuare prenotazioni
+DELIMITER $$
+CREATE PROCEDURE Query5()
+BEGIN
+      SELECT Nome, Cognome, Via, nCivico, Comune, Citta
+      FROM Account
+      WHERE FruibilitaPrenotazioni = FALSE;
+END $$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+-- Query 6
+-- Per ogni città  nel quale esiste una sede, indicare il numero di clienti registrati residenti
+-- nella città stessa
+DELIMITER $$
+CREATE PROCEDURE Query6()
+BEGIN
+      CREATE OR REPLACE VIEW ListaCitta AS
+      SELECT DISTINCT S.Citta
+      FROM Sede S;
+
+      CREATE OR REPLACE VIEW ComuneAccount AS
+      SELECT
+            LC.Citta AS Citta
+      FROM
+            ListaCitta LC LEFT OUTER JOIN Account A
+      ON
+            LC.Citta = A.Citta;
+
+      SELECT * FROM ComuneAccount;
+END $$
+DELIMITER ;
+
+CALL Query6();
+
+--------------------------------------------------------------------------------
+
+-- Query 7
+
+DELIMITER $$
+CREATE PROCEDURE Query7()
+BEGIN
+      -- scrivere query
+END $$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+-- Query 8
+
+DELIMITER $$
+CREATE PROCEDURE Query8()
+BEGIN
+      -- scrivere query
+END $$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+-- Query 9
+-- Indicare il guadagno (al netto delle spese degli ingredienti) al termine di
+-- ogni giornata per ciascuna sede
+
+DELIMITER $$
+CREATE PROCEDURE Query9()
+BEGIN
+      -- scrivere query
+END $$
+DELIMITER ;

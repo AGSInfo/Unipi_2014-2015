@@ -32,92 +32,6 @@
     \;
   </doc-data>
 
-  <\table-of-contents|toc>
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Introduzione>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-1><vspace|0.5fn>
-
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Progettazione
-    Concettuale> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-2><vspace|0.5fn>
-
-    <with|par-left|1tab|2.1<space|2spc>Glossario degli attributi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-3>>
-
-    <with|par-left|1tab|2.2<space|2spc>Associazioni
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-4>>
-
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Progettazione
-    Logica> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-5><vspace|0.5fn>
-
-    <with|par-left|1tab|3.1<space|2spc>Modello Logico
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-6>>
-
-    <with|par-left|1tab|3.2<space|2spc>Analisi di alcune operazioni
-    effettuabili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-7>>
-
-    <with|par-left|2tab|3.2.1<space|2spc>Tabella dei volumi
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-8>>
-
-    <with|par-left|2tab|3.2.2<space|2spc>Operazione 1
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-9>>
-
-    <with|par-left|2tab|3.2.3<space|2spc>Operazione 2
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-10>>
-
-    <with|par-left|2tab|3.2.4<space|2spc>Operazione 3
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-11>>
-
-    <with|par-left|2tab|3.2.5<space|2spc>Operazione 4
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-12>>
-
-    <with|par-left|2tab|3.2.6<space|2spc>Operazione 5
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-13>>
-
-    <with|par-left|2tab|3.2.7<space|2spc>Operazione 6
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-14>>
-
-    <with|par-left|2tab|3.2.8<space|2spc>Operazione 7
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-15>>
-
-    <with|par-left|2tab|3.2.9<space|2spc>Operazione 8
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-16>>
-
-    <with|par-left|2tab|3.2.10<space|2spc>Operazione 9
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-17>>
-
-    <with|par-left|1tab|3.3<space|2spc>Analisi Ridondanze
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-18>>
-
-    <with|par-left|1tab|3.4<space|2spc>Dipendenze funzionali e
-    normalizzazione (BCNF) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-19>>
-
-    <with|par-left|1tab|3.5<space|2spc>Schema logico
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-20>>
-
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Creazione
-    Database> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21><vspace|0.5fn>
-  </table-of-contents>
-
   <section|Introduzione>
 
   <section|Progettazione Concettuale>
@@ -126,85 +40,75 @@
 
   <subsection|Associazioni>
 
-  \;
-
   <section|Progettazione Logica>
 
   <subsection|Modello Logico>
 
-  \;
+  - Account(Username,Password,Nome,Cognome,Via,nCivico,Comune,Citta,FruibilitàPrenotazioni,Sesso)
 
-  - Sede(<underline|IdSede>,via,nCivico,Citta)
+  - Comanda(IdComanda,Tavolo,Ora,TakeAway,Account,Stato,Prezzo)
 
-  - Magazzino(<underline|IdMagazzino>,IdSede)
+  - Compilazione(IdDomanda,IdRecensione,IdRisposta)
 
-  - Scaffale(<underline|IdScaffale>,IdMagazzino)
+  - Confezione(IdConfezione,Peso,PrezzoAcquisto,DataAquisto,DataConsegna,DataScadenza,Aspetto,Stato,QuantitaRimanente,Ingrediente,Scaffale)
 
-  - Confezione(<underline|IdConfezione>,Peso,PrezzoAcquisto,DataAquisto,DataConsegna,DataScad
-  \ \ \ enza,Aspetto,Stato,QuantitaRimanente,Ingrediente,Scaffale)
+  - DomandeQuestionario(IdDomanda,Domanda)
 
-  - Ingrediente(<underline|IdIngrediente>,Nome,Provenienza,TipoProduzione,Allergene)
+  - Ingrediente(IdIngrediente,Nome,Provenienza,TipoProduzione,Allergene)
 
-  - Strumenti(<underline|IdStrumento>,Tipo,Nome)
+  - IngredienteNuovoPiatto(PropostaPiatto,Ingrediente,Quantità)
 
-  - UtilizziStruemnto(<underline|Utilizzo,Strumento>)
+  - IngredienteRicetta(Ricetta,Ingrediente,Quantità)
 
-  - Utilizzi(<underline|IdUtilizzo>,DescrizioneUtilizzo)
+  - Magazzino(IdMagazzino,IdSede)
 
-  - Ricetta(<underline|IdRicetta>,TestoRicetta)
+  - Menu(IdMenu,Sede,DataInizio,DataFine)
 
-  - IngredientiRicetta(<underline|Ricetta>,Ingrediente,Quantità)
+  - ModificaVariazione(IdModifica,VariantePiatto,Modifica)
 
-  - Passo(<underline|Ricetta,nPasso>,DescrizionePasso,Strumento,TempoUtilizzo,Ingrediente,QuantitaUt
-  \ \ ilizzata)
+  - Ordine(IdOrdine,Comanda,Piatto,Variazione1,Variazione2,Variazione3,OrdineConsegna,Stato)
 
-  - Menu(<underline|IdMenu>,Sede,DataInizio,DataFine)
+  - Passo(Ricetta,nPasso,DescrizionePasso,Strumento,TempoUtilizzo,Ingrediente,QuantitaUtilizzata)
 
-  - Piatto(<underline|IdPiatto>,Menu,Ricetta,Novita)
+  - Piatto(IdPiatto,Menu,Ricetta,Novita)
 
-  - VariazioniPiatto(<underline|IdPiatto>,DescrizioneVariazione)
+  - Pony(IdPony,TipoMezzo,Stato)
 
-  - Comanda(<underline|IdComanda>,Tavolo,Ora,TakeAway,Account,Stato,Prezzo)
+  - PossibilitaRisposta(IdDomanda,IdRisposta)
 
-  - Ordine(<underline|IdOrdine>,Comanda,Piatto,Variazione1,Variazione2,Variazione3,OrdineCons
-  \ \ \ \ \ \ \ \ \ \ egna,Stato)
+  - Prenotazione(IdPrenotazione,Account,NumeroTelefono,Tavolo,OraPrenotazione,nPersone)
 
-  - Prenotazione(<underline|IdPrenotazione>,Account,NumeroTelefono,Tavolo,OraPrenotazione,nPers
-  \ \ \ \ \ one)
+  - PropostaPiatto(idPropostaPiatto,Account,Nome)
 
-  - Pony(<underline|IdPony>,TipoMezzo,Stato)
+  - Recensione(IdRecensione,Account,GiudizioGlobale,GiudizioTesto)
 
-  - StatoConsegna(<underline|IdStato>,Comanda,Pony,Stato,Ora,Data)
+  - Ricetta(IdRicetta,TestoRicetta)
 
-  - Account(<underline|Username>,Password,Nome,Cognome,Via,nCivico,Comune,Citta,FruibilitàPre
-  \ \ \ \ notazioni,Sesso)
+  - Risposta(IdRisposta,Risposta,Scala)
 
-  - Recensione(<underline|IdRecensione>,Account,GiudizioGlobale,GiudizioTesto)
+  - Scaffale(IdScaffale,IdMagazzino)
 
-  - DomandeQuestionario(<underline|IdDomanda>,Domanda)
+  - Sede(IdSede,via,nCivico,Citta)
 
-  - Compilazione(<underline|IdDomanda,IdRecensione,IdRisposta>)
+  - Serata(IdSerata,Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrganizzatoreSala,Allestimento,nPersone)
 
-  - Risposte(<underline|IdRisposta>,Risposta,Scala)
+  - StatoConsegna(IdStato,Comanda,Pony,Stato,Ora,Data)
 
-  - PossibilitaRisposte(<underline|IdDomanda>,IdRisposta)
+  - Strumenti(IdStrumento,Tipo,Nome)
 
-  - ValutazioneRecensione(<underline|Account,Recensione>,Veridicita,Accuratezza,Descrizione)
+  - Utilizzo(IdUtilizzo,DescrizioneUtilizzo)
 
-  - PropostaPiatto(<underline|idPropostaPiatto>,Account,Nome)
+  - UtilizzoStrumento(Utilizzo,Strumento)
 
-  - IngredientiNuovoPiatto(<underline|PropostaPiatto,Ingrediente>,Quantità)
+  - ValutazionePropostaPiatto(Account,PropostaPiatto,Valutazione,Descrizione)
 
-  - ValutazionePropostaPiatto(<underline|Account,PropostaPiatto>,Valutazione,Descrizione)
+  - ValutazioneRecensione(Account,Recensione,Veridicita,Accuratezza,Descrizione)
 
-  - VariantePiatto(<underline|IdVariante>,Account,Piatto)
+  - ValutazioneVariazione(Account,VariantePiatto,Valutazione)
 
-  - ModificaVariazione(<underline|IdModifica>,VariantePiatto,Modifica)
+  - VariantePiatto(IdVariante,Account,Piatto)
 
-  - ValutazioneVariazione(<underline|Account,VariantePiatto>,Valutazione)
-
-  - Serata(<underline|IdSerata>,Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrgan
-  \ \ \ \ izzatoreSala,Allestimento,nPersone)
+  - VariazionePiatto(IdPiatto,DescrizioneVariazione)
 
   <subsection|Analisi di alcune operazioni effettuabili>
 
@@ -296,442 +200,6 @@
   con \ RelazioneC>>|<row|<cell|Occupazione>|<cell|R>|<cell|60>|<cell|3000 /
   50 = 60 in media>>|<row|<cell|>|<cell|>|<cell|>|<cell|>>>>>
 
-  \;
-
-  <subsubsection|Operazione 1>
-
-  <\description>
-    <item*|Testo>Identificare tutti i piatti preparabili nell'attuale menu
-    delle sede presente a Roma.
-  </description>
-
-  <\description>
-    <item*|Frequenza>70 volte al giorno
-  </description>
-
-  <with|font-series|bold|Con ridondanza>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    Create or replace view PiattiRoma as\ 
-
-    select * from Piatto P, Menu_Piatto MP, \ M, Sede S where
-
-    P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
-
-    and S.Citta = "Roma" and M.DataFine is NULL;
-
-    \;
-
-    Select * from PiattiRoma as PR ,Ingredienti_Piatto as IP where\ 
-
-    PR.id = IP.ID_Piatto and IP.qta \<gtr\>\ 
-
-    (Select sum(qta) from Magazzino M,Sede S,Scaffale SC, Confezione C where
-
-    M.Sede = S.Id and S.citta = "Roma" and SC.Id_Magazzino = S.Id and
-    C.scaffale = SC.id
-
-    and C.ingrediente = IP.ingrediente group by C.ingrediente);
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli acessi>
-  </description>
-
-  <with|font-series|bold|Senza ridondanza>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <subsubsection|Operazione 2>
-
-  <\description>
-    <item*|Testo>Per ogni sede, identificare il cliente che ha effettuato il
-    maggior numero di recensioni nel mese attuale
-  </description>
-
-  <\description>
-    <item*|Frequenza>1 volta al mese
-  </description>
-
-  <strong|Senza Ridondanza>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    Create or replace view Piatti_Sedi as\ 
-
-    select * from Piatto P, Menu_Piatto MP, \ M, Sede S where
-
-    P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id\ 
-
-    and M.DataFine is NULL;
-
-    \;
-
-    Select * from Piatti_Sede PS, Passi P, Ingredienti I where
-
-    Ps.Id = P.Id_Piatto and P.ID_Ingrediente = I.id\ 
-
-    group by PS.Id\ 
-
-    Having (count(*) = (SELECT count(*) from Passi P2, Ingredienti I2\ 
-
-    where P2.ID_Ingrediente = I2.ID and P2.Id_Piatto = P.Id_Piatto\ 
-
-    and I2.Allergene IS NOT NULL)) order by PS.NomeSede;
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <strong|Con Ridondanza>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    Create or replace view Piatti_Sedi as\ 
-
-    select * from Piatto P, Menu_Piatto MP, \ M, Sede S where
-
-    P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id\ 
-
-    and M.DataFine is NULL;
-
-    \;
-
-    Select * from Piatti_Sedi as PS group by PS.IdPiatto\ 
-
-    having(count(*) = (select count(*) from PiattiSedi as PS2\ 
-
-    where PS2.IdPiatto = PS.IdPiatto and PS2.Allergene IS NOT NULL));
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <subsubsection|Operazione 3>
-
-  Testo: Visualizzare l'attuale menu esclusi i piatti che contengono almeno
-  un allergene nella sede di Firenze.
-
-  Frequenza : 200 volte al giorno.
-
-  <strong|Senza Ridondanza>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    Create or replace view PiattiFirenze as\ 
-
-    select * from Piatto P, Menu_Piatto MP, \ M, Sede S where
-
-    P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
-
-    and S.Citta = "Firenze" and M.DataFine is NULL;
-
-    \;
-
-    Select * from PiattiFirenze as PR ,Ingredienti_Piatto as IP,Ingredienti
-    AS I where\ 
-
-    PR.id = IP.ID_Piatto and I.id = IP.Id_Ingrediente
-
-    and IP.qta \<gtr\>\ 
-
-    (Select sum(qta) from Magazzino M,Sede S,Scaffale SC, Confezione C where
-
-    M.Sede = S.Id and S.citta = "Firenze" and SC.Id_Magazzino = S.Id and
-    C.scaffale = SC.id
-
-    and C.ingrediente = IP.ingrediente group by C.ingrediente) and NOT EXISTS\ 
-
-    (select * from I where I.allergene is NULL);
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <strong|Con Ridondanza>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    Create or replace view PiattiFirenze as\ 
-
-    select * from Piatto P, Menu_Piatto MP, \ M, Sede S where
-
-    P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
-
-    and S.Citta = "Firenze" and M.DataFine is NULL;
-
-    \;
-
-    Select * from PiattiFirenze as PR ,Ingredienti_Piatto as IP,Ingredienti
-    AS I where\ 
-
-    PR.id = IP.ID_Piatto and I.id = IP.Id_Ingrediente
-
-    and IP.qta \<gtr\>\ 
-
-    (Select sum(qta) from Magazzino M,Sede S,Scaffale SC, Confezione C where
-
-    M.Sede = S.Id and S.citta = "Firenze" and SC.Id_Magazzino = S.Id and
-    C.scaffale = SC.id
-
-    and C.ingrediente = IP.ingrediente group by C.ingrediente) and
-    PR.allergene is NULL;
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <subsubsection|Operazione 4>
-
-  <\description>
-    <item*|Testo>Visualizzare tutti i comuni (in ordine decrescente) che
-    hanno effettuato richieste take-away
-  </description>
-
-  <\description>
-    <item*|Frequenza>10 volte al giorno
-  </description>
-
-  Qui le ridondanze trovate non incidono in alcun modo sul comportamento
-  della query
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    SELECT Nome,count(*) AS N_Consegne FROM Consegna C\ 
-
-    \;
-
-    GROUP BY C.Comune ORDER BY N_Consegne asc
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <subsubsection|Operazione 5>
-
-  <\description>
-    <item*|Testo>Visualizzare il piatto più richiesto per ogni sede
-  </description>
-
-  <\description>
-    <item*|Frequenza>2 volte al giorno
-  </description>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    # Questo dovrebbe visualizzare i piatti con il numero di ordinazioni
-    totali
-
-    # indipendentemente dalla sede, come posso usare GROUP BY per
-    suddividerli
-
-    # in sedi?
-
-    \;
-
-    SELECT p.nome
-
-    \ \ \ \ \ , COUNT(p.nome) AS "Numero di ordinazioni"
-
-    FROM
-
-    \ \ \ \ piatto p
-
-    \ \ \ \ \ \ \ \ INNER JOIN
-
-    \ \ \ \ piatto_menu pm
-
-    \ \ \ \ \ \ \ \ ON
-
-    \ \ \ \ pm.id_piatto = p.nome
-  </verbatim-code>
-
-  <\verbatim-code>
-    SELECT\ 
-  </verbatim-code>
-
-  <subsubsection|Operazione 6>
-
-  <\description>
-    <item*|Testo>Mostrare quale è stato il piatto, \ per ogni sede, ad aver
-    avuto il maggior numero di recensioni positive
-  </description>
-
-  <\description>
-    <item*|Frequenza>2 volte al giorno
-  </description>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    # Stesso problema della query precedente
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <subsubsection|Operazione 7>
-
-  <\description>
-    <item*|Testo>Inserire un piatto in un menu presente in una sede a scelta
-  </description>
-
-  <\description>
-    <item*|Frequenza>1 volta al giorno
-  </description>
-
-  Con Ridondanza
-
-  Query: \ \ \ \ \ \ .
-
-  <\description>
-    <item*|Query (senza ridondanza)>
-  </description>
-
-  <\verbatim-code>
-    CREATE OR REPLACE VIEW MenuAttuali AS
-
-    \ \ \ \ SELECT sede
-
-    \ \ \ \ \ \ \ \ \ , idmenu
-
-    \ \ \ \ FROM menu
-
-    \ \ \ \ WHERE data_fine IS NULL;
-
-    \;
-
-    INSERT INTO piatto_menu
-
-    \ \ \ \ (SELECT idmenu
-
-    \ \ \ \ \ \ \ \ \ \ (SELECT nome FROM Piatto WHERE nome = "lasagna")
-
-    \ \ \ \ \ FROM MenuAttuali
-
-    \ \ \ \ \ WHERE sede = "roma")
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <subsubsection|Operazione 8>
-
-  <\description>
-    <item*|Testo>Per ogni magazzino indicare quali sono le confezioni che
-    sono in scadenza o che sono state aperte(quindi che hanno un degrado più
-    veloce).
-  </description>
-
-  <\description>
-    <item*|Frequenza>100 volte al giorno
-  </description>
-
-  <\description>
-    <item*|Query>
-  </description>
-
-  <\verbatim-code>
-    CREATE OR REPLACE VIEW ScadenzaConfezioni AS
-
-    \ \ SELECT idConfe AS "ID_confezione"
-
-    \ \ \ \ \ \ \ , idScaffale AS "ID_scaffale"
-
-    \ \ \ \ \ \ \ , aspetto
-
-    \ \ \ \ \ \ \ , stato
-
-    \ \ \ \ \ \ \ , ingrediente
-
-    \ \ \ \ \ \ \ , DATEDIFF(day, dataScadenza, GETDATE() AS
-    "giorniAllaScadenza"
-
-    \ \ FROM confezione
-
-    \ \ WHERE stato = "in uso";
-
-    \;
-
-    SELECT *
-
-    FROM ScadenzaConfezioni
-
-    WHERE giorniAllaScadenza \<less\>= 4
-
-    ORDER BY giorniAllaScadenza ASC;
-
-    \ \ \ \ \ \ \ \ \ 
-  </verbatim-code>
-
-  <\description>
-    <item*|Tavola degli accessi>
-  </description>
-
-  <subsubsection|Operazione 9>
-
-  <\description>
-    <item*|Test>Indicare il guadagno (al netto delle spese degli ingredienti)
-    al termine di ogni giornata per ciascuna sede
-  </description>
-
-  <\description>
-    <item*|Frequenza>1 volta al giorno
-  </description>
-
-  <with|font-series|bold|Senza ridondanza>
-
-  <\description>
-    <item*|Query>
-
-    <item*|Tavola degli accessi>
-  </description>
-
-  <with|font-series|bold|Con ridondanza>
-
-  <\description>
-    <item*|Query>
-
-    <item*|Tavola degli accessi>
-  </description>
-
   <subsection|Analisi Ridondanze>
 
   <subsection|Dipendenze funzionali e normalizzazione (BCNF)>
@@ -759,10 +227,10 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|3.2.3|4>>
-    <associate|auto-11|<tuple|3.2.4|5>>
-    <associate|auto-12|<tuple|3.2.5|6>>
-    <associate|auto-13|<tuple|3.2.6|6>>
+    <associate|auto-10|<tuple|3.4|4>>
+    <associate|auto-11|<tuple|3.5|5>>
+    <associate|auto-12|<tuple|4|6>>
+    <associate|auto-13|<tuple|4|6>>
     <associate|auto-14|<tuple|3.2.7|6>>
     <associate|auto-15|<tuple|3.2.8|6>>
     <associate|auto-16|<tuple|3.2.9|7>>
@@ -800,7 +268,7 @@
     <associate|auto-6|<tuple|3.1|1>>
     <associate|auto-7|<tuple|3.2|3>>
     <associate|auto-8|<tuple|3.2.1|3>>
-    <associate|auto-9|<tuple|3.2.2|4>>
+    <associate|auto-9|<tuple|3.3|4>>
   </collection>
 </references>
 
