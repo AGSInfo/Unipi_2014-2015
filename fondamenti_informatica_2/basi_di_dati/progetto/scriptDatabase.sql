@@ -443,6 +443,51 @@ BEGIN
 END $$
 DELIMITER ;
 
+-- Controllo che Siano presenti nella giusta quantità tutti gli ingredienti per preparare il piatto
+
+Delimiter $$
+Create Trigger ControllaMenu 
+before insert on Menu for each row
+	begin
+    SET @IngredientiPiatto = (Select count(Distinct IR.Ingrediente)
+							 from Piatto P inner join Ricetta R on P.Ricetta = R.IdRicetta
+							 inner join IngredienteRicetta IR on R.IdRicetta = IR.Ricetta
+                             where P.IdPiatto = New.Piatto);
+                             
+	SET @IngredientiDisponibili = (Select count(distinct IR.Ingrediente) from Sede S 
+									inner join Magazzino M inner join Scaffale SC 
+									inner join Confezione C
+									inner join IngredienteRicetta IR
+                                    inner join Ricetta R
+                                    inner join Piatto P
+									on S.IdSede = M.Sede and M.IdMagazzino = SC.Magazzino 
+									and SC.IdScaffale = C.Scaffale
+									and P.Ricetta = R.IdRicetta and R.IdRicetta = IR.Ricetta
+									where S.IdSede = NEW.Sede and P.IdPiatto = NEW.Piatto
+                                    group by IR.Ingrediente having sum(C.QuantitaRimanente) >= IR.Quantita);
+    
+    if @ingredientiPiatto > @ingredientiDisponibili then
+			SIGNAL SQLSTATE '45000'
+			SET MESSAGE_TEXT = "ingredienti non disponibili per preparare il piatto";
+        
+	end if;
+    end $$
+Delimiter ;
+
+-- Controllo che sia sufficiente il numero di persone che parteciperanno alla serata organizzata
+
+Delimiter $$
+#Ho scelto il valore 10 a caso, questo sarà poi il valore che sceglierà il proprietario del ristorante
+Create Trigger ControllaSerata 
+before insert on Serata for each row
+	begin 	
+		SET @Persone = (select NEW.nPersone);
+        if (@Persone < 10) then 
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = "Numero di persone Insufficente";
+		end if;
+    end $$
+delimiter ;
+
 --------------------------------------------------------------------------------
 -- Inserimento elementi nelle tabelle
 --------------------------------------------------------------------------------
