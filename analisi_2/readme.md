@@ -20,7 +20,8 @@
 14. Vari lemmi/teoremi sul gradiente identicamente nullo su un aperto connesso
 15. Condizione necessaria di integrabilità: indipendenza dell'integrale dal cammino e differenza di potenziale
 16. Condizione di integrabilità sulle curve chiuse
-17. Condizione necessaria di integrabilità di campi e forme C^1 sulle derivate delle componenti (condizione del rotore): **Questo teorema viene chiesto spesso quando l'esame è "zoppicante"**
+17. Condizione necessaria di integrabilità di campi e forme C^1 sulle derivate delle componenti (condizione del rotore):
+	**Questo teorema viene chiesto spesso quando l'esame è "zoppicante"**
 18. Lemma sulla congiunzione di curve
 19. Lemma sui cammini opposti
 20. Integrale nullo del campo su curve chiuse
