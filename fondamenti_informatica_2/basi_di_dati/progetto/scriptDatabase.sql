@@ -261,7 +261,7 @@ CREATE TABLE Recensione (
       IdRecensione INT NOT NULL AUTO_INCREMENT,
       GiudizioGlobale INT,
       GiudizioTesto BLOB,
-
+	  DataRecensione DATE,
       PRIMARY KEY (IdRecensione),
       FOREIGN KEY (Account) REFERENCES Account(Username),
       CHECK (GiudizioGlobale >= 0 AND GiudizioGlobale <= 5)
@@ -776,9 +776,9 @@ INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Ci
 --------------------------------------------------------------------------------
 
 INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto) VALUES
-      ("mario01", 5, "Veramente ottimo!"),
-      ("luca12", 2, "Poco soddisfatto.."),
-      ("ettore11", 3, "Abbastanza buono..");
+      ("mario01", 5, "Veramente ottimo!",current_date()),
+      ("luca12", 2, "Poco soddisfatto..",current_date()),
+      ("ettore11", 3, "Abbastanza buono..",current_date());
 
 --------------------------------------------------------------------------------
 
