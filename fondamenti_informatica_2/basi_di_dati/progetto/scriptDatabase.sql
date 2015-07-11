@@ -56,7 +56,7 @@ CREATE TABLE Ingrediente (
 
 CREATE TABLE Confezione (
       IdConfezione INT NOT NULL AUTO_INCREMENT,
-      Peso FLOAT,
+      Peso FLOAT, # in grammi
       PrezzoAcquisto FLOAT,
       DataAcquisto DATE,
       DataConsegna DATE,
@@ -443,110 +443,69 @@ BEGIN
 END $$
 DELIMITER ;
 
+--------------------------------------------------------------------------------
+
 -- Controllo che Siano presenti nella giusta quantità tutti gli ingredienti per preparare il piatto
 
+/* NON "COMPILA"
 Delimiter $$
-Create Trigger ControllaMenu 
+Create Trigger ControllaMenu
 before insert on Menu for each row
 	begin
     SET @IngredientiPiatto = (Select count(Distinct IR.Ingrediente)
 							 from Piatto P inner join Ricetta R on P.Ricetta = R.IdRicetta
 							 inner join IngredienteRicetta IR on R.IdRicetta = IR.Ricetta
                              where P.IdPiatto = New.Piatto);
-                             
-	SET @IngredientiDisponibili = (Select count(distinct IR.Ingrediente) from Sede S 
-									inner join Magazzino M inner join Scaffale SC 
+
+	SET @IngredientiDisponibili = (Select count(distinct IR.Ingrediente) from Sede S
+									inner join Magazzino M inner join Scaffale SC
 									inner join Confezione C
 									inner join IngredienteRicetta IR
                                     inner join Ricetta R
                                     inner join Piatto P
-									on S.IdSede = M.Sede and M.IdMagazzino = SC.Magazzino 
+									on S.IdSede = M.Sede and M.IdMagazzino = SC.Magazzino
 									and SC.IdScaffale = C.Scaffale
 									and P.Ricetta = R.IdRicetta and R.IdRicetta = IR.Ricetta
 									where S.IdSede = NEW.Sede and P.IdPiatto = NEW.Piatto
                                     group by IR.Ingrediente having sum(C.QuantitaRimanente) >= IR.Quantita);
-    
+
     if @ingredientiPiatto > @ingredientiDisponibili then
 			SIGNAL SQLSTATE '45000'
 			SET MESSAGE_TEXT = "ingredienti non disponibili per preparare il piatto";
-        
+
 	end if;
     end $$
 Delimiter ;
+
+*/
+--------------------------------------------------------------------------------
 
 -- Controllo che sia sufficiente il numero di persone che parteciperanno alla serata organizzata
 
 Delimiter $$
 #Ho scelto il valore 10 a caso, questo sarà poi il valore che sceglierà il proprietario del ristorante
-Create Trigger ControllaSerata 
+Create Trigger ControllaSerata
 before insert on Serata for each row
-	begin 	
+	begin
 		SET @Persone = (select NEW.nPersone);
-        if (@Persone < 10) then 
+        if (@Persone < 10) then
 			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = "Numero di persone Insufficente";
 		end if;
     end $$
 delimiter ;
 
 --------------------------------------------------------------------------------
--- Inserimento elementi nelle tabelle
---------------------------------------------------------------------------------
 
-INSERT INTO Sede (Via, nCivico, Citta) VALUES
-      ("Pascoli", 45, "Pisa"),
-      ("Fratelli", 23, "Roma"),
-      ("delle Vittime", 12, "Roma"),
-      ("Europa", 2, "Pisa"),
-      ("Filzi", 10, "Livorno"),
-      ("dell Anima", 6, "Milano");
+-- Imposto la quantità delle confezioni appena arrivate al peso nominale d'acquisto
+DELIMITER $$
+CREATE TRIGGER ResetPeso
+BEFORE INSERT ON Confezione FOR EACH ROW
+BEGIN
+      SET NEW.QuantitaRimanente = NEW.Peso;
+END $$
+DELIMITER ;
 
---------------------------------------------------------------------------------
 
-INSERT INTO Magazzino (IdSede) VALUES
-      (2),
-      (4),
-      (1),
-      (2),
-      (5),
-      (3),
-      (2),
-      (2),
-      (1),
-      (2),
-      (1);
-
---------------------------------------------------------------------------------
-
-INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Citta, Sesso) VALUES
-      ("mario01", "qweutr", "Mario", "Rossi", "del commercio", 98, "Pisa", "Pisa", "maschio"),
-      ("luca12", "tretre1", "Luca", "Paoli", "Est", 78, "Collesalvetti", "Livorno", "maschio"),
-      ("paola44", "54354tf", "Paola", "Amici", "Roma", 125, "Livorno", "Livorno", "femmina"),
-      ("ettore11", "rengregre", "Ettore", "Sallusti", "del vascello", 90, "Cecina", "Livorno", "maschio"),
-      ("laura44", "nty34843", "Laura", "Rossi", "Europa", 9, "Pisa", "Pisa", "femmina");
-
---------------------------------------------------------------------------------
-
-INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto) VALUES
-      ("mario01", 5, "Veramente ottimo!"),
-      ("luca12", 2, "Poco soddisfatto.."),
-      ("ettore11", 3, "Abbastanza buono..");
-
---------------------------------------------------------------------------------
-
-INSERT INTO ValutazioneRecensione (Account, Recensione, Veridicita, Accuratezza, Descrizione) VALUES
-      ("mario01", 2, 2, 1, "Pessima recensione"),
-      ("mario01", 3, 5, 5, "Pienamente d'accordo"),
-      ("luca12", 1, 1, 2, "Recensione molto scarsa");
-
---------------------------------------------------------------------------------
--- Query di prova
---------------------------------------------------------------------------------
-
-SELECT * FROM Sede;
-SELECT * FROM Magazzino;
-SELECT * FROM Account;
-SELECT * FROM Recensione;
-SELECT * FROM ValutazioneRecensione;
 
 ---------------------------------------------------------------------------------
 -- Query richieste dal progetto
@@ -712,17 +671,18 @@ BEGIN
       SELECT * FROM ComuneAccount;
 END $$
 DELIMITER ;
-
-CALL Query6();
-
 --------------------------------------------------------------------------------
 
 -- Query 7
-
+-- Data una certa sede, elenca le confezioni che sono disponibili in magazzino
+-- aggiungere anche il nome dell'ingrediente
 DELIMITER $$
-CREATE PROCEDURE Query7()
+CREATE PROCEDURE Query7(IN _IdSede INT)
 BEGIN
-      -- scrivere query
+      SELECT *
+      FROM (Confezione C INNER JOIN Scaffale S
+      ON C.Scaffale = S.IdScaffale) NATURAL JOIN Magazzino M
+      WHERE M.IdSede = _IdSede;
 END $$
 DELIMITER ;
 
@@ -749,3 +709,94 @@ BEGIN
       -- scrivere query
 END $$
 DELIMITER ;
+
+--------------------------------------------------------------------------------
+-- Inserimento elementi nelle tabelle
+--------------------------------------------------------------------------------
+
+INSERT INTO Sede (Via, nCivico, Citta) VALUES
+      ("Pascoli", 45, "Pisa"),
+      ("Fratelli", 23, "Roma"),
+      ("delle Vittime", 12, "Roma"),
+      ("Europa", 2, "Pisa"),
+      ("Filzi", 10, "Livorno"),
+      ("Rossini", 61, "Milano"),
+      ("Mozart", 11, "Roma"),
+      ("Beethoven", 2, "Pisa"),
+      ("Italia", 91, "Pescara"),
+      ("dell Anima", 6, "Milano");
+
+--------------------------------------------------------------------------------
+
+INSERT INTO Magazzino (IdSede) VALUES
+      (1), (2), (3), (4), (5), (6), (7), (8), (9), (10),
+      (2), (2), (1), (9), (1), (2), (3), (4), (5), (6), (7), (8), (8), (7),
+      (1), (3), (10), (3), (4), (5);
+
+--------------------------------------------------------------------------------
+
+INSERT INTO Scaffale (IdMagazzino) VALUES
+      (2), (2), (1), (9), (1), (2), (3), (4), (5), (6), (7), (8), (8), (7),
+      (1), (3), (10), (3), (4), (5);
+
+--------------------------------------------------------------------------------
+
+INSERT INTO Ingrediente (Nome, Provenienza, TipoProduzione, Allergene) VALUES
+      ("Farina", "Italia", "intensiva", FALSE),
+      ("Zucchero", "Italia", "intensiva", FALSE),
+      ("Fragole", "Francia", "biologica", TRUE),
+      ("Salmone", "Norvegia", "biologica", FALSE),
+      ("Uova", "Italia", "intensiva", FALSE),
+      ("Uova", "Italia", "biologica", FALSE),
+      ("Spaghetti", "Germania", "intensiva", FALSE),
+      ("Sale", "Finlandia", "biologica", FALSE),
+      ("Aragoste", "Italia", "intensiva", TRUE),
+      ("Tagliatelle", "Italia", "biologica", FALSE);
+
+--------------------------------------------------------------------------------
+
+INSERT INTO Confezione (Peso, PrezzoAcquisto, DataAcquisto, DataConsegna, DataScadenza, Aspetto, Ingrediente, Scaffale) VALUES
+      (1000, 1, "2015-01-01", "2015-01-10", "2016-01-01", "intatto", 1, 3),
+      (1000, 1, "2015-01-01", "2015-01-10", "2016-01-01", "intatto", 1, 3),
+      (1000, 1, "2015-01-01", "2015-01-10", "2016-01-01", "intatto", 1, 1),
+      (1000, 1, "2015-01-01", "2015-01-10", "2016-01-01", "intatto", 1, 7);
+
+
+--------------------------------------------------------------------------------
+
+INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Citta, Sesso) VALUES
+      ("mario01", "qweutr", "Mario", "Rossi", "del commercio", 98, "Pisa", "Pisa", "maschio"),
+      ("luca12", "tretre1", "Luca", "Paoli", "Est", 78, "Collesalvetti", "Livorno", "maschio"),
+      ("paola44", "54354tf", "Paola", "Amici", "Roma", 125, "Livorno", "Livorno", "femmina"),
+      ("lucia11", "4n3aaaa", "Lucia", "Ettori", "del Valico", 1, "Pisa", "Pisa", "femmina"),
+      ("gianfra22", "fewnf911", "Gianfranco", "Spostali", "del Risorgimento", 34, "Cenaia", "Pisa", "Femmina"),
+      ("ettore11", "rengregre", "Ettore", "Sallusti", "del vascello", 90, "Cecina", "Livorno", "maschio"),
+      ("laura44", "nty34843", "Laura", "Rossi", "Europa", 9, "Pisa", "Pisa", "femmina");
+
+--------------------------------------------------------------------------------
+
+INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto) VALUES
+      ("mario01", 5, "Veramente ottimo!"),
+      ("luca12", 2, "Poco soddisfatto.."),
+      ("ettore11", 3, "Abbastanza buono..");
+
+--------------------------------------------------------------------------------
+
+INSERT INTO ValutazioneRecensione (Account, Recensione, Veridicita, Accuratezza, Descrizione) VALUES
+      ("mario01", 2, 2, 1, "Pessima recensione"),
+      ("mario01", 3, 5, 5, "Pienamente d'accordo"),
+      ("luca12", 1, 1, 2, "Recensione molto scarsa");
+
+--------------------------------------------------------------------------------
+-- Query di prova
+--------------------------------------------------------------------------------
+
+SELECT * FROM Account;
+SELECT * FROM Ingrediente;
+SELECT * FROM Magazzino;
+SELECT * FROM Recensione;
+SELECT * FROM Scaffale;
+SELECT * FROM Confezione;
+SELECT * FROM Sede;
+SELECT * FROM ValutazioneRecensione;
+CALL Query7(1);
