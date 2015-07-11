@@ -261,7 +261,7 @@ CREATE TABLE Recensione (
       IdRecensione INT NOT NULL AUTO_INCREMENT,
       GiudizioGlobale INT,
       GiudizioTesto BLOB,
-	  DataRecensione DATE,
+	DataRecensione DATE,
       PRIMARY KEY (IdRecensione),
       FOREIGN KEY (Account) REFERENCES Account(Username),
       CHECK (GiudizioGlobale >= 0 AND GiudizioGlobale <= 5)
@@ -679,9 +679,24 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE Query7(IN _IdSede INT)
 BEGIN
-      SELECT *
-      FROM (Confezione C INNER JOIN Scaffale S
-      ON C.Scaffale = S.IdScaffale) NATURAL JOIN Magazzino M
+      SELECT
+            Nome AS NomeIngrediente,
+            IdConfezione,
+            Peso,
+            PrezzoAcquisto,
+            DataAcquisto,
+            DataConsegna,
+            DataScadenza,
+            Aspetto,
+            Stato,
+            QuantitaRimanente,
+            IdScaffale,
+            Provenienza,
+            TipoProduzione,
+            Allergene
+      FROM ((Confezione C INNER JOIN Scaffale S
+      ON C.Scaffale = S.IdScaffale) NATURAL JOIN Magazzino M) INNER JOIN Ingrediente I
+      ON I.IdIngrediente = C.Ingrediente
       WHERE M.IdSede = _IdSede;
 END $$
 DELIMITER ;
@@ -689,13 +704,25 @@ DELIMITER ;
 --------------------------------------------------------------------------------
 
 -- Query 8
-
+-- Per ogni magazzino, elenca la quantità rimanente di ogni ingrediente
 DELIMITER $$
-CREATE PROCEDURE Query8()
+CREATE PROCEDURE Query8(IN _IdMagazzino INT)
 BEGIN
-      -- scrivere query
+      SELECT
+            I.Nome,
+            SUM(QuantitaRimanente) AS QuantitàTotaleRimanente
+      FROM
+            (((Magazzino M NATURAL JOIN Scaffale S)
+                  INNER JOIN Confezione C ON C.Scaffale = S.IdScaffale)
+                  INNER JOIN Ingrediente I ON I.IdIngrediente = C.Ingrediente)
+      WHERE
+            IdMagazzino = _IdMagazzino
+      GROUP BY I.Ingrediente;
+
 END $$
 DELIMITER ;
+
+CALL Query8(3);
 
 --------------------------------------------------------------------------------
 
@@ -775,10 +802,10 @@ INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Ci
 
 --------------------------------------------------------------------------------
 
-INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto) VALUES
-      ("mario01", 5, "Veramente ottimo!",current_date()),
-      ("luca12", 2, "Poco soddisfatto..",current_date()),
-      ("ettore11", 3, "Abbastanza buono..",current_date());
+INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto, DataRecensione) VALUES
+      ("mario01", 5, "Veramente ottimo!", current_date()),
+      ("luca12", 2, "Poco soddisfatto..", current_date()),
+      ("ettore11", 3, "Abbastanza buono..", current_date());
 
 --------------------------------------------------------------------------------
 
