@@ -108,7 +108,7 @@ CREATE TABLE IngredienteRicetta (
       Ingrediente INT,
       Quantita FLOAT,
 
-      PRIMARY KEY (Ricetta, Ingrediente), # perché c'è scritto solo ricetta??
+      PRIMARY KEY (Ricetta, Ingrediente), # perché c è scritto solo ricetta??
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
       FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
       CHECK (Quantita >= 0)
@@ -156,11 +156,12 @@ CREATE TABLE Piatto (
       PRIMARY KEY (IdPiatto),
       FOREIGN KEY (Menu) REFERENCES Menu(IdMenu),
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta)
+
 );
 
 --------------------------------------------------------------------------------
 
-## A che serve questa tabella?
+-- A che serve questa tabella?
 CREATE TABLE VariazioniPiatto (
       IdPiatto INT,
       DescrizioneVariazione BLOB,
@@ -179,7 +180,7 @@ CREATE TABLE Comanda (
       Stato INT,
       Prezzo FLOAT,
       
-      FOREIGN KEY (Tavolo) REFERENCES Tavolo(IdTavolo)
+      /* FOREIGN KEY (Tavolo) REFERENCES Tavolo(IdTavolo), */
       PRIMARY KEY (IdComanda)
 );
 
@@ -448,6 +449,10 @@ DELIMITER ;
 
 -- Controllo che Siano presenti nella giusta quantità tutti gli ingredienti per preparare il piatto
 
+/* QUESTA QUERY NON COMPILA
+ * L'errore è ERROR 1054 (42S22) at line 453: Unknown column 'Piatto' in 'NEW'
+
+
 Delimiter $$
 Create Trigger ControllaMenu
 before insert on Menu for each row
@@ -479,7 +484,7 @@ before insert on Menu for each row
     end $$
 Delimiter ;
 
-
+*/
 --------------------------------------------------------------------------------
 
 -- Controllo che sia sufficiente il numero di persone che parteciperanno alla serata organizzata
@@ -724,8 +729,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL Query8(3);
-
 --------------------------------------------------------------------------------
 
 -- Query 9
@@ -813,7 +816,7 @@ INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto, DataRecensione)
 
 INSERT INTO ValutazioneRecensione (Account, Recensione, Veridicita, Accuratezza, Descrizione) VALUES
       ("mario01", 2, 2, 1, "Pessima recensione"),
-      ("mario01", 3, 5, 5, "Pienamente d'accordo"),
+      ("mario01", 3, 5, 5, "Pienamente d accordo"),
       ("luca12", 1, 1, 2, "Recensione molto scarsa");
 
 --------------------------------------------------------------------------------
