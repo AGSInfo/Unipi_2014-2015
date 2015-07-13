@@ -149,29 +149,41 @@ CREATE TABLE Menu (
 
 CREATE TABLE Piatto (
       IdPiatto INT NOT NULL AUTO_INCREMENT,
-      Menu INT,
       Ricetta INT,
-      Novita BOOLEAN, ## ??
+      Novita BOOLEAN, ## Si Booleano TRUE : Novita , FALSE : Non Novita
 
       PRIMARY KEY (IdPiatto),
-      FOREIGN KEY (Menu) REFERENCES Menu(IdMenu),
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta)
 
 );
+-------------------------------------------------------------------------------
 
+CREATE TABLE PiattoMenu(
+	IdPiatto INT NOT NULL,
+	IdMenu INT NOT NULL,
+	Prezzo FLOAT,
+	
+	PRIMARY KEY( IdPiatto,IdMenu),
+	FOREIGN KEY (Menu) REFERENCES Menu(IdMenu),
+	FOREIGN KEY (IdPiatto) REFERENCES Piatto(IdPiatto)
+	
+);
 --------------------------------------------------------------------------------
 
--- A che serve questa tabella?
+-- Questa tabella indica le possibili variazioni che può avere un piatto 
+
 CREATE TABLE VariazioniPiatto (
+	
+	  IdVariazione INT,
       IdPiatto INT,
       DescrizioneVariazione BLOB,
-
-      PRIMARY KEY (IdPiatto)
+      PRIMARY KEY (IdVariazione,IdPiatto)
 );
 
 --------------------------------------------------------------------------------
 
 CREATE TABLE Comanda (
+	
       IdComanda INT NOT NULL AUTO_INCREMENT,
       Tavolo INT,
       Ora TIMESTAMP,
@@ -180,7 +192,8 @@ CREATE TABLE Comanda (
       Stato INT,
       Prezzo FLOAT,
       
-      /* FOREIGN KEY (Tavolo) REFERENCES Tavolo(IdTavolo), */
+      FOREIGN KEY (Tavolo) REFERENCES Tavolo(IdTavolo), 
+	
       PRIMARY KEY (IdComanda)
 );
 
@@ -190,14 +203,19 @@ CREATE TABLE Ordine (
       IdOrdine INT NOT NULL AUTO_INCREMENT,
       Comanda INT,
       Piatto INT,
-      Variazione1 BLOB, ## ??
-      Variazione2 BLOB, ## ??
-      Variazione3 BLOB, ## ??
+      Variazione1 INT,
+      Variazione2 INT, 
+      Variazione3 INT, #
       OrdineConsegna INT,
       Stato INT,
 
-      PRIMARY KEY (IdOrdine),
-      FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda)
+     PRIMARY KEY (IdOrdine),
+     FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda)
+	 FOREIGN KEY (Variazione1) REFERENCES VariazioniPiatto(IdVariazione)
+	 FOREIGN KEY (Variazione2) REFERENCES VariazioniPiatto(IdVariazione)
+	 FOREIGN KEY (Variazione3) REFERENCES VariazioniPiatto(IdVariazione)
+	 FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto)
+	 FOREIGN KEY (Piatto) REFERENCES VariazioniPiatto(IdPiatto)
 );
 
 --------------------------------------------------------------------------------
