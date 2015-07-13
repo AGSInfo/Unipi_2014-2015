@@ -200,6 +200,7 @@
 - Misura insieme aperto
 - Matrice Jacobiana
 
+
 ### Teoremi
 1. Teorema degli zeri in più variabili
 - Teorema della permanenza del segno in più variabili
@@ -291,3 +292,45 @@ b. Dimostrazione della continuità
 15) Condizione del rotore per campi di classe C1 e integrabili (ovvero un campo di classe C1 e integrabile è rotazionale)
 16) CS per l’integrabilità
 17) Se tutte le derivate direzionali in una sfera si annullano a tappeto allora la funzione è costante
+
+## Roba chiesta al secondo appello
+
+### Definizioni
+
+- Differenziale
+- Matrice jacobiana
+- Curva rettificabile
+- Misura insieme aperto
+- Vettore normale ad una superficie parametrica
+- Derivata direzionale
+- Funzione omogenea
+- Punto interno
+- Curva regolare
+- Forma esatta
+- Punto di frontiera
+- Forma chiusa
+- Superficie regolare
+- Punto di accumulazione
+- Insieme sempl. connesso
+- Piano tangente ad una superficie parametrica
+- Punto interno
+- Insieme convesso
+- Piano tangente
+- Campo Irrotazionale
+- Misura insieme aperto
+- Insieme Aperto
+- Pt. di Accumulazione
+- Area superficie parametrica
+- Misura Insieme Aperto
+- Matrice Jacobiana
+
+### Teoremi
+
+- Se un campo è integrabile allora è irrotazionale
+- F è differenziabile allora ha le derivate direzionali
+- Differenziale totale
+- Teorema fondamentale dell'Integrazione
+- Torricelli
+- F differenziabile -> Esistono tutte le derivate
+- Indipendenza dell'integrale dal cammino
+- Insieme a stella -> semplicemente connesso
