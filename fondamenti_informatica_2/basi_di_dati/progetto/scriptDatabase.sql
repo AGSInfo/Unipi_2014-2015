@@ -528,20 +528,51 @@ DELIMITER ;
 -- Identificare tutti i piatti preparabili nell'attuale menu della sede
 -- presente a Roma
 -- Frequenza: 70 volte al giorno
+-- In questo caso è presente la ridondanza Ingrediente_ricetta che associa la quantita
+-- totale di un singolo ingrediente necessaria alla preparazione della ricetta
 
 DELIMITER $$
-CREATE PROCEDURE Query1()
+CREATE PROCEDURE Query1ConRid()
 BEGIN
       Create or replace view PiattiRoma as
-      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
-      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
-      and S.Citta = "Roma" and M.DataFine is NULL;
+      select P.IdPiatto,P.Nome,P.Ricetta
+      from Piatto P inner Menu_Piatto MP inner join Menu M inner join Sede S
+      on P.IdPiatto = MP.IdPiatto and MP.IdMenu = M.IdMenu and M.Sede = S.IdSede
+      where S.Citta = "Roma" and M.DataFine is NULL;
 
-      Select * from PiattiRoma as PR ,Ingredienti_Piatto as IP where
-      PR.id = IP.ID_Piatto and IP.qta >
-      (Select sum(qta) from Magazzino M,Sede S,Scaffale SC, Confezione C where
-      M.Sede = S.Id and S.citta = "Roma" and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
-      and C.ingrediente = IP.ingrediente group by C.ingrediente);
+      SELECT DISTINCT P.IdPiatto,P.Nome
+      from PiattiRoma PR inner join Ricetta R inner join IngredienteRicetta IR inner join IngredientePrincipale IP 
+      on PR.Ricetta = R.IdRicetta and R.IdRicetta = IR.Ricetta and IP.Ricetta = R.IdRicetta
+      where IR.Quantita >
+      		(Select sum(C.QuantitaRimanente) 
+      		from Magazzino M inner join Sede S inner join Scaffale SC inner join  Confezione C 
+      		on M.Sede = S.Id and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
+      		where S.citta = "Roma" and C.ingrediente = IR.ingrediente
+      		group by C.ingrediente);
+      and IP.Quantita > 
+      		(Select sum(C2.QuantitaRimanente) 
+      		from Magazzino M2 inner join Sede S2 inner join Scaffale SC2 inner join  Confezione C2 
+      		on M2.Sede = S2.Id and SC2.Id_Magazzino = S2.Id and C2.scaffale = SC2.id
+      		where S2.citta = "Roma" and C2.ingrediente = IR2.ingrediente and C2.Stato = "Integro"
+      		group by C2.ingrediente);
+      		
+END $$
+CREATE PROCEDURE Query1SenzaRid()
+BEGIN
+      Create or replace view PiattiRoma as
+      select P.IdPiatto,P.Nome,P.Ricetta
+      from Piatto P inner Menu_Piatto MP inner join Menu M inner join Sede S
+      on P.IdPiatto = MP.IdPiatto and MP.IdMenu = M.IdMenu and M.Sede = S.IdSede
+      where S.Citta = "Roma" and M.DataFine is NULL;
+
+      SELECT DISTINCT P.IdPiatto,P.Nome
+      from PiattiRoma PR inner join Ricetta R inner join IngredienteRicetta IR
+      on PR.Ricetta = R.IdRicetta and R.IdRicetta = IR.Ricetta
+      where IR.Quantita >
+      		(Select sum(qta) 
+      		from Magazzino M inner join Sede S inner join Scaffale SC inner join  Confezione C 
+      		on M.Sede = S.Id and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
+      		where S.citta = "Roma" C.ingrediente = IR.ingrediente group by C.ingrediente):
 END $$
 DELIMITER ;
 
