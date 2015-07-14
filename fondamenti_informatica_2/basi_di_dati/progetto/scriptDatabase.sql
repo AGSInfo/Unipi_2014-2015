@@ -218,7 +218,22 @@ CREATE TABLE Ordine (
 );
 
 --------------------------------------------------------------------------------
-
+CREATE TABLE Tavolo(
+	INT IdTavolo AUTO_INCREMENT,
+	INT NumTavolo,
+	INT Posti,
+	INT Sala,
+	BOOL Stato,
+	PRIMARY KEY(IdTavolo)
+	FOREIGN KEY (Sala) REFERENCES Sala(Id_Sala)
+	UNIQUE(NumTavolo,Sala)
+);
+CREATE TABLE Sala(
+	INT IdSala NOT NULL AUTO_INCREMENT,
+	INT Sede,
+	PRIMARY KEY(IdSala)
+	FOREIGN KEY(Sede) REFERENCES Sede(IdSede)
+)
 CREATE TABLE Account (
       Username VARCHAR(20),
       Password VARCHAR(20),
@@ -419,22 +434,20 @@ CREATE TABLE ValutazioneVariazione (
 
 --------------------------------------------------------------------------------
 
-# Il organizzatore può essere diverso dal nome
-# di colui che ha effettuato la "prenotazione" della serata?
-# se deve essere uguale, il nome ed il cognome non sono deducibili
-# dalla tabella Account?
-# Come è collegata la serata ad una certa sede??
+# L'organizzatore può essere diverso in quanto la prenotazione della serata può essere fatta 
 CREATE TABLE Serata (
       IdSerata INT NOT NULL AUTO_INCREMENT,
-      Account VARCHAR(20) NOT NULL,
+      Account VARCHAR(20),
       NomeOrganizzatore VARCHAR(20),
       CognomeOrganizzatore VARCHAR(20),
       TelefonoOrganizzatoreSala INT,
       Allestimento BLOB,
       nPersone INT,
+      Sala INT
 
       PRIMARY KEY (IdSerata),
       FOREIGN KEY (Account) REFERENCES Account(Username)
+      FOREIGN KEY (Sala)  REFERENCES Sala(Id_Sala)
 );
 
 --------------------------------------------------------------------------------
@@ -559,44 +572,6 @@ DELIMITER ;
 --------------------------------------------------------------------------------
 
 -- Query 2
--- Per ogni sede, identificare il cliente che ha effettuato il maggior numeero
--- di recensioni nel mese attuale
--- Frequenza: 1 volta al mese
-
-DELIMITER $$
-CREATE PROCEDURE Query2SenzaRid()
-BEGIN
-      Create or replace view Piatti_Sedi as
-      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
-      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
-      and M.DataFine is NULL;
-
-      Select * from Piatti_Sede PS, Passi P, Ingredienti I where
-      Ps.Id = P.Id_Piatto and P.ID_Ingrediente = I.id
-      group by PS.Id
-      Having (count(*) = (SELECT count(*) from Passi P2, Ingredienti I2
-      where P2.ID_Ingrediente = I2.ID and P2.Id_Piatto = P.Id_Piatto
-      and I2.Allergene IS NOT NULL)) order by PS.NomeSede;
-END $$
-DELIMITER ;
-
-DELIMITER $$
-CREATE PROCEDURE Query2ConRid()
-BEGIN
-      Create or replace view Piatti_Sedi as
-      select * from Piatto P, Menu_Piatto MP,  M, Sede S where
-      P.Id = MP.Id_Piatto and MP.Id_Menu = M.id and M.Sede = S.id
-      and M.DataFine is NULL;
-
-      Select * from Piatti_Sedi as PS group by PS.IdPiatto
-      having(count(*) = (select count(*) from PiattiSedi as PS2
-      where PS2.IdPiatto = PS.IdPiatto and PS2.Allergene IS NOT NULL));
-END $$
-DELIMITER ;
-
---------------------------------------------------------------------------------
-
--- Query 3
 -- Visualizzare l'attuale menù, esclusi i piatti che contengono almeno un allergene
 -- nella sede di Firenze
 -- Frequenza: 200 volte al giorno
@@ -638,7 +613,7 @@ DELIMITER ;
 
 --------------------------------------------------------------------------------
 
--- Query 4
+-- Query 3
 -- Visualizzare tutti i comuni (in ordine decrescente) che hanno effettuato
 -- richieste take-away
 -- Frequenza: 10 volte al giorno
@@ -648,21 +623,15 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE Query4()
 BEGIN
-      SELECT Nome,
-            COUNT(*) AS N_Consegne
-      FROM
-            Consegna C
-      GROUP BY
-            C.Comune ## select di un risultato che non è nel group by?
-      ORDER BY
-            N_Consegne ASC;
+  
 END $$
 DELIMITER ;
 
 --------------------------------------------------------------------------------
 
--- Query 5
+-- Query 4
 -- Elenca i clienti per i quali non è più possibile effettuare prenotazioni
+
 DELIMITER $$
 CREATE PROCEDURE Query5()
 BEGIN
@@ -674,7 +643,7 @@ DELIMITER ;
 
 --------------------------------------------------------------------------------
 
--- Query 6
+-- Query 5
 -- Per ogni città  nel quale esiste una sede, indicare il numero di clienti registrati residenti
 -- nella città stessa
 DELIMITER $$
@@ -683,16 +652,8 @@ BEGIN
       CREATE OR REPLACE VIEW ListaCitta AS
       SELECT DISTINCT S.Citta
       FROM Sede S;
-
-      CREATE OR REPLACE VIEW ComuneAccount AS
-      SELECT
-            LC.Citta AS Citta
-      FROM
-            ListaCitta LC LEFT OUTER JOIN Account A
-      ON
-            LC.Citta = A.Citta;
-
-      SELECT * FROM ComuneAccount;
+      
+      Select * from Account 
 END $$
 DELIMITER ;
 --------------------------------------------------------------------------------
@@ -749,7 +710,7 @@ DELIMITER ;
 --------------------------------------------------------------------------------
 
 -- Query 9
--- Indicare il guadagno (al netto delle spese degli ingredienti) al termine di
+-- Indicare il Ricavo al termine di
 -- ogni giornata per ciascuna sede
 
 DELIMITER $$
