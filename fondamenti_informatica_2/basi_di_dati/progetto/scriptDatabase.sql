@@ -173,11 +173,10 @@ CREATE TABLE Menu_Piatto(
 -- Questa tabella indica le possibili variazioni che può avere un piatto 
 
 CREATE TABLE VariazioniPiatto (
-	
-	  IdVariazione INT,
-      IdPiatto INT,
-      DescrizioneVariazione BLOB,
-      PRIMARY KEY (IdVariazione)
+	IdVariazione INT,
+	IdPiatto INT,
+	DescrizioneVariazione BLOB,
+	PRIMARY KEY (IdVariazione)
 );
 
 --------------------------------------------------------------------------------
@@ -200,21 +199,21 @@ CREATE TABLE Comanda (
 --------------------------------------------------------------------------------
 
 CREATE TABLE Ordine (
-      IdOrdine INT NOT NULL AUTO_INCREMENT,
-      Comanda INT,
-      Piatto INT,
-      Variazione1 INT,
-      Variazione2 INT, 
-      Variazione3 INT, #
-      OrdineConsegna INT,
-      Stato INT,
+	IdOrdine INT NOT NULL AUTO_INCREMENT,
+	Comanda INT,
+	Piatto INT,
+	Variazione1 INT,
+	Variazione2 INT, 
+	Variazione3 INT, #
+	OrdineConsegna INT,
+	Stato INT,
 
-     PRIMARY KEY (IdOrdine),
-     FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda)
-	 FOREIGN KEY (Variazione1) REFERENCES VariazioniPiatto(IdVariazione)
-	 FOREIGN KEY (Variazione2) REFERENCES VariazioniPiatto(IdVariazione)
-	 FOREIGN KEY (Variazione3) REFERENCES VariazioniPiatto(IdVariazione)
-	 FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto)
+	PRIMARY KEY (IdOrdine),
+	FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda)
+	FOREIGN KEY (Variazione1) REFERENCES VariazioniPiatto(IdVariazione)
+	FOREIGN KEY (Variazione2) REFERENCES VariazioniPiatto(IdVariazione)
+	FOREIGN KEY (Variazione3) REFERENCES VariazioniPiatto(IdVariazione)
+	FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto)
 );
 
 --------------------------------------------------------------------------------
@@ -228,25 +227,29 @@ CREATE TABLE Tavolo(
 	FOREIGN KEY (Sala) REFERENCES Sala(Id_Sala)
 	UNIQUE(NumTavolo,Sala)
 );
+
 CREATE TABLE Sala(
 	INT IdSala NOT NULL AUTO_INCREMENT,
 	INT Sede,
 	PRIMARY KEY(IdSala)
 	FOREIGN KEY(Sede) REFERENCES Sede(IdSede)
-)
-CREATE TABLE Account (
-      Username VARCHAR(20),
-      Password VARCHAR(20),
-      Nome VARCHAR(20),
-      Cognome VARCHAR(20),
-      Via VARCHAR(20),
-      nCivico SMALLINT,
-      Comune VARCHAR(20),
-      Citta VARCHAR(20),
-      FruibilitaPrenotazioni BOOLEAN DEFAULT TRUE,
-      Sesso ENUM ("maschio", "femmina"),
+);
 
-      PRIMARY KEY (Username)
+--------------------------------------------------------------------------------
+
+CREATE TABLE Account (
+	Username VARCHAR(20),
+	Password VARCHAR(20),
+	Nome VARCHAR(20),
+	Cognome VARCHAR(20),
+	Via VARCHAR(20),
+	nCivico SMALLINT,
+	Comune VARCHAR(20),
+	Citta VARCHAR(20),
+	FruibilitaPrenotazioni BOOLEAN DEFAULT TRUE,
+	Sesso ENUM ("maschio", "femmina"),
+
+	PRIMARY KEY (Username)
 );
 
 --------------------------------------------------------------------------------
@@ -410,7 +413,7 @@ CREATE TABLE ValutazioneVariazione (
 
 --------------------------------------------------------------------------------
 
-# L'organizzatore può essere diverso in quanto la prenotazione della serata può essere fatta 
+# L organizzatore può essere diverso in quanto la prenotazione della serata può essere fatta 
 CREATE TABLE Serata (
       IdSerata INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
@@ -419,7 +422,7 @@ CREATE TABLE Serata (
       TelefonoOrganizzatoreSala INT,
       Allestimento BLOB,
       nPersone INT,
-      Sala INT
+      Sala INT,
 
       PRIMARY KEY (IdSerata),
       FOREIGN KEY (Account) REFERENCES Account(Username)
