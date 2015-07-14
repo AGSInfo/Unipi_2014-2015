@@ -644,13 +644,13 @@ DELIMITER ;
 -- Per ogni città  nel quale esiste una sede, indicare il numero di clienti registrati residenti
 -- nella città stessa
 DELIMITER $$
-CREATE PROCEDURE Query6()
+CREATE PROCEDURE Query5()
 BEGIN
       CREATE OR REPLACE VIEW ListaCitta AS
-      SELECT DISTINCT S.Citta
+      SELECT DISTINCT S.Citta as Citta
       FROM Sede S;
-      
-      Select * from Account 
+      Select A.Citta,Count(*) as ClientiRegistrati from Account A Inner join ListaCitta LC on A.Citta = LC.Citta
+      group by A.Citta
 END $$
 DELIMITER ;
 --------------------------------------------------------------------------------
