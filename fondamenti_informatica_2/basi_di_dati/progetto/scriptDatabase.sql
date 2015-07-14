@@ -532,7 +532,7 @@ DELIMITER ;
 -- totale di un singolo ingrediente necessaria alla preparazione della ricetta
 
 DELIMITER $$
-CREATE PROCEDURE Query1ConRid()
+CREATE PROCEDURE Query1()
 BEGIN
       Create or replace view PiattiRoma as
       select P.IdPiatto,P.Nome,P.Ricetta
@@ -540,7 +540,7 @@ BEGIN
       on P.IdPiatto = MP.IdPiatto and MP.IdMenu = M.IdMenu and M.Sede = S.IdSede
       where S.Citta = "Roma" and M.DataFine is NULL;
 
-      SELECT DISTINCT P.IdPiatto,P.Nome
+      SELECT PR.IdPiatto,PR.Nome
       from PiattiRoma PR inner join Ricetta R inner join IngredienteRicetta IR inner join IngredientePrincipale IP 
       on PR.Ricetta = R.IdRicetta and R.IdRicetta = IR.Ricetta and IP.Ricetta = R.IdRicetta
       where IR.Quantita >
@@ -555,24 +555,11 @@ BEGIN
       		on M2.Sede = S2.Id and SC2.Id_Magazzino = S2.Id and C2.scaffale = SC2.id
       		where S2.citta = "Roma" and C2.ingrediente = IR2.ingrediente and C2.Stato = "Integro"
       		group by C2.ingrediente);
-      		
-END $$
-CREATE PROCEDURE Query1SenzaRid()
-BEGIN
-      Create or replace view PiattiRoma as
-      select P.IdPiatto,P.Nome,P.Ricetta
-      from Piatto P inner Menu_Piatto MP inner join Menu M inner join Sede S
-      on P.IdPiatto = MP.IdPiatto and MP.IdMenu = M.IdMenu and M.Sede = S.IdSede
-      where S.Citta = "Roma" and M.DataFine is NULL;
-
-      SELECT DISTINCT P.IdPiatto,P.Nome
-      from PiattiRoma PR inner join Ricetta R inner join IngredienteRicetta IR
-      on PR.Ricetta = R.IdRicetta and R.IdRicetta = IR.Ricetta
-      where IR.Quantita >
-      		(Select sum(qta) 
-      		from Magazzino M inner join Sede S inner join Scaffale SC inner join  Confezione C 
-      		on M.Sede = S.Id and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
-      		where S.citta = "Roma" C.ingrediente = IR.ingrediente group by C.ingrediente):
+      group by P.IdPiatto having count(*) IN 
+      		(SELECT count(*) FROM PiattiRoma PR2 inner join Ricetta R2 inner join IngredienteRicetta IR2
+      		on PR2.Ricetta = R2.IdRicetta and R2.IdRicetta = IR2.Ricetta 
+      		where PR2.IdPiatto = PR.IdPiatto)	
+      	
 END $$
 DELIMITER ;
 
