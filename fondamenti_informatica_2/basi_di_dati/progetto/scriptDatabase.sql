@@ -177,7 +177,7 @@ CREATE TABLE VariazioniPiatto (
 	  IdVariazione INT,
       IdPiatto INT,
       DescrizioneVariazione BLOB,
-      PRIMARY KEY (IdVariazione,IdPiatto)
+      PRIMARY KEY (IdVariazione)
 );
 
 --------------------------------------------------------------------------------
@@ -215,7 +215,6 @@ CREATE TABLE Ordine (
 	 FOREIGN KEY (Variazione2) REFERENCES VariazioniPiatto(IdVariazione)
 	 FOREIGN KEY (Variazione3) REFERENCES VariazioniPiatto(IdVariazione)
 	 FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto)
-	 FOREIGN KEY (Piatto) REFERENCES VariazioniPiatto(IdPiatto)
 );
 
 --------------------------------------------------------------------------------
