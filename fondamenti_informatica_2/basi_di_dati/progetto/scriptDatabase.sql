@@ -255,12 +255,13 @@ CREATE TABLE Prenotazione (
       IdPrenotazione INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
       NumeroTelefono INT,
-      Tavolo SMALLINT,
+      Tavolo INT,
       OraPrenotazione TIMESTAMP,
       nPersone INT,
 
       PRIMARY KEY (IdPrenotazione),
       FOREIGN KEY (Account) REFERENCES Account(Username)
+      FOREIGN KEY(Tavolo) REFERENCES Tavolo(IdTavolo)
 );
 
 --------------------------------------------------------------------------------
