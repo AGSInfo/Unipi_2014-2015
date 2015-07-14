@@ -158,7 +158,7 @@ CREATE TABLE Piatto (
 );
 -------------------------------------------------------------------------------
 
-CREATE TABLE PiattoMenu(
+CREATE TABLE Menu_Piatto(
 	IdPiatto INT NOT NULL,
 	IdMenu INT NOT NULL,
 	Prezzo FLOAT,
