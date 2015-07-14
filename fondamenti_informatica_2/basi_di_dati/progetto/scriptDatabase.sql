@@ -252,6 +252,7 @@ CREATE TABLE Account (
 --------------------------------------------------------------------------------
 
 CREATE TABLE Prenotazione (
+
       IdPrenotazione INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
       NumeroTelefono INT,
@@ -270,7 +271,6 @@ CREATE TABLE Pony (
       IdPony INT NOT NULL AUTO_INCREMENT,
       TipoMezzo INT,
       Stato ENUM ("libero", "occupato"),
-
       PRIMARY KEY (IdPony)
 );
 
@@ -280,9 +280,8 @@ CREATE TABLE StatoConsegna (
       IdStato INT NOT NULL AUTO_INCREMENT,
       Comanda INT,
       Pony INT,
-      Stato ENUM ("programmato", "in consegna", "consegnato"), ## controllare questi valori
+      Stato ENUM ("Programmato","in consegna", "consegnato","Ritorno"),
       Ora TIMESTAMP,
-      Data DATE,
 
       PRIMARY KEY (IdStato),
       FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda),
@@ -295,8 +294,8 @@ CREATE TABLE Recensione (
       Account VARCHAR(20),
       IdRecensione INT NOT NULL AUTO_INCREMENT,
       GiudizioGlobale INT,
-      GiudizioTesto BLOB,
-	DataRecensione DATE,
+      GiudizioTesto TEXT,
+      DataRecensione DATE,
       PRIMARY KEY (IdRecensione),
       FOREIGN KEY (Account) REFERENCES Account(Username),
       CHECK (GiudizioGlobale >= 0 AND GiudizioGlobale <= 5)
@@ -306,44 +305,20 @@ CREATE TABLE Recensione (
 
 CREATE TABLE DomandaQuestionario (
       IdDomanda INT NOT NULL AUTO_INCREMENT,
-      Domanda BLOB,
-
+      Domanda TEXT,
       PRIMARY KEY (IdDomanda)
 );
 
 --------------------------------------------------------------------------------
 
-CREATE TABLE Risposta (
-      IdRisposta INT NOT NULL AUTO_INCREMENT,
-      Risposta BLOB,
-      Scala INT,
-      PRIMARY KEY (IdRisposta)
-);
-
---------------------------------------------------------------------------------
-
-CREATE TABLE Compilazione (
-      IdDomanda INT,
-      IdRecensione INT,
-      IdRisposta INT,
-
-      PRIMARY KEY (IdDomanda, IdRecensione, IdRisposta),
-      FOREIGN KEY (IdDomanda) REFERENCES DomandaQuestionario(IdDomanda),
-      FOREIGN KEY (IdRecensione) REFERENCES Recensione(IdRecensione),
-      FOREIGN KEY (IdRisposta) REFERENCES Risposta(IdRisposta)
-);
-
---------------------------------------------------------------------------------
-
-## A che serve questa tabella??
-CREATE TABLE PossibilitaRisposta (
-      IdDomanda INT,
-      IdRisposta INT,
-
-      PRIMARY KEY (IdDomanda)
-      #FOREIGN KEY (IdDomanda) REFERENCES Domanda(IdDomanda),
-      #FOREIGN KEY (IdRisposta) REFERENCES Risposta(IdRisposta)
-);
+CREATE TABLE Compilazione(
+     IdRecensione INT,
+     IdDomanda INT,
+      Risposta VARCHAR(25),
+      PRIMARY KEY (IdRecensione,IdDomanda),
+      FOREIGN KEY(IdRecensione) REFERENCES Recensione(IdRecensione),
+      FOREIGN KEY(IdDomanda) REFERENCES DomandaQuestionario(IdDomanda)
+ );
 
 --------------------------------------------------------------------------------
 
