@@ -577,7 +577,7 @@ DELIMITER ;
 -- Frequenza: 200 volte al giorno
 
 DELIMITER $$
-CREATE PROCEDURE Query3SenzaRid()
+CREATE PROCEDURE Query2SenzaRid()
 BEGIN
       Create or replace view PiattiFirenze as
       select * from Piatto P, Menu_Piatto MP,  M, Sede S where
@@ -595,7 +595,7 @@ END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE Query3ConRid()
+CREATE PROCEDURE Query2ConRid()
 BEGIN
       Create or replace view PiattiFirenze as
       select * from Piatto P, Menu_Piatto MP,  M, Sede S where
@@ -614,16 +614,19 @@ DELIMITER ;
 --------------------------------------------------------------------------------
 
 -- Query 3
--- Visualizzare tutti i comuni (in ordine decrescente) che hanno effettuato
+-- Visualizzare tutte le citta  (in ordine decrescente) che hanno effettuato
 -- richieste take-away
 -- Frequenza: 10 volte al giorno
 
 -- Qui le ridondanze non incidono in alcun modo sul comportamento della query
 
 DELIMITER $$
-CREATE PROCEDURE Query4()
+CREATE PROCEDURE Query3()
 BEGIN
-  
+  	Select A.Citta, count(*) as OrdiniTakeAway
+  	from Comanda C inner join Account A on C.Account = A.Username
+  	group by A.Citta
+  	Order by OrdiniTakeAway
 END $$
 DELIMITER ;
 
@@ -633,7 +636,7 @@ DELIMITER ;
 -- Elenca i clienti per i quali non è più possibile effettuare prenotazioni
 
 DELIMITER $$
-CREATE PROCEDURE Query5()
+CREATE PROCEDURE Query4()
 BEGIN
       SELECT Nome, Cognome, Via, nCivico, Comune, Citta
       FROM Account
