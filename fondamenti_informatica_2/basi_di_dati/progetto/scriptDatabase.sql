@@ -162,15 +162,15 @@ CREATE TABLE Menu_Piatto(
 	IdPiatto INT NOT NULL,
 	IdMenu INT NOT NULL,
 	Prezzo FLOAT,
-	
+
 	PRIMARY KEY( IdPiatto,IdMenu),
-	FOREIGN KEY (Menu) REFERENCES Menu(IdMenu),
+	FOREIGN KEY (IdMenu) REFERENCES Menu(IdMenu),
 	FOREIGN KEY (IdPiatto) REFERENCES Piatto(IdPiatto)
-	
+
 );
 --------------------------------------------------------------------------------
 
--- Questa tabella indica le possibili variazioni che può avere un piatto 
+-- Questa tabella indica le possibili variazioni che può avere un piatto
 
 CREATE TABLE VariazioniPiatto (
 	IdVariazione INT,
@@ -182,7 +182,7 @@ CREATE TABLE VariazioniPiatto (
 --------------------------------------------------------------------------------
 
 CREATE TABLE Comanda (
-	
+
       IdComanda INT NOT NULL AUTO_INCREMENT,
       Tavolo INT,
       Ora TIMESTAMP,
@@ -190,9 +190,9 @@ CREATE TABLE Comanda (
       Account VARCHAR(20),
       Stato INT,
       Prezzo FLOAT,
-      
-      FOREIGN KEY (Tavolo) REFERENCES Tavolo(IdTavolo), 
-	
+
+      FOREIGN KEY (Tavolo) REFERENCES Tavolo(IdTavolo),
+
       PRIMARY KEY (IdComanda)
 );
 
@@ -203,7 +203,7 @@ CREATE TABLE Ordine (
 	Comanda INT,
 	Piatto INT,
 	Variazione1 INT,
-	Variazione2 INT, 
+	Variazione2 INT,
 	Variazione3 INT, #
 	OrdineConsegna INT,
 	Stato INT,
@@ -413,7 +413,7 @@ CREATE TABLE ValutazioneVariazione (
 
 --------------------------------------------------------------------------------
 
-# L organizzatore può essere diverso in quanto la prenotazione della serata può essere fatta 
+# L organizzatore può essere diverso in quanto la prenotazione della serata può essere fatta
 CREATE TABLE Serata (
       IdSerata INT NOT NULL AUTO_INCREMENT,
       Account VARCHAR(20),
@@ -544,25 +544,25 @@ BEGIN
       where S.Citta = "Roma" and M.DataFine is NULL;
 
       SELECT PR.IdPiatto,PR.Nome
-      from PiattiRoma PR inner join Ricetta R inner join IngredienteRicetta IR inner join IngredientePrincipale IP 
+      from PiattiRoma PR inner join Ricetta R inner join IngredienteRicetta IR inner join IngredientePrincipale IP
       on PR.Ricetta = R.IdRicetta and R.IdRicetta = IR.Ricetta and IP.Ricetta = R.IdRicetta
       where IR.Quantita >
-      		(Select sum(C.QuantitaRimanente) 
-      		from Magazzino M inner join Sede S inner join Scaffale SC inner join  Confezione C 
+      		(Select sum(C.QuantitaRimanente)
+      		from Magazzino M inner join Sede S inner join Scaffale SC inner join  Confezione C
       		on M.Sede = S.Id and SC.Id_Magazzino = S.Id and C.scaffale = SC.id
       		where S.citta = "Roma" and C.ingrediente = IR.ingrediente
       		group by C.ingrediente);
-      and IP.Quantita > 
-      		(Select sum(C2.QuantitaRimanente) 
-      		from Magazzino M2 inner join Sede S2 inner join Scaffale SC2 inner join  Confezione C2 
+      and IP.Quantita >
+      		(Select sum(C2.QuantitaRimanente)
+      		from Magazzino M2 inner join Sede S2 inner join Scaffale SC2 inner join  Confezione C2
       		on M2.Sede = S2.Id and SC2.Id_Magazzino = S2.Id and C2.scaffale = SC2.id
       		where S2.citta = "Roma" and C2.ingrediente = IR2.ingrediente and C2.Stato = "Integro"
       		group by C2.ingrediente);
-      group by P.IdPiatto having count(*) IN 
+      group by P.IdPiatto having count(*) IN
       		(SELECT count(*) FROM PiattiRoma PR2 inner join Ricetta R2 inner join IngredienteRicetta IR2
-      		on PR2.Ricetta = R2.IdRicetta and R2.IdRicetta = IR2.Ricetta 
-      		where PR2.IdPiatto = PR.IdPiatto)	
-      	
+      		on PR2.Ricetta = R2.IdRicetta and R2.IdRicetta = IR2.Ricetta
+      		where PR2.IdPiatto = PR.IdPiatto)
+
 END $$
 DELIMITER ;
 
@@ -644,7 +644,7 @@ DELIMITER ;
 --------------------------------------------------------------------------------
 
 -- Query 5
--- Per ogni città  nel quale esiste una sede, indicare il numero di clienti registrati residenti
+-- Per ogni città per la quale esiste una sede, indicare il numero di clienti registrati residenti
 -- nella città stessa
 DELIMITER $$
 CREATE PROCEDURE Query5()
@@ -667,6 +667,7 @@ BEGIN
       SELECT
             Nome AS NomeIngrediente,
             IdConfezione,
+            I.Nome
             Peso,
             PrezzoAcquisto,
             DataAcquisto,
