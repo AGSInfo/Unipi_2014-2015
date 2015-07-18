@@ -93,3 +93,32 @@ BEGIN
 ## END $$
 
 ## DELIMITER ;
+
+-- Aggiornamento Stato comanda in base all'ordine
+
+DELIMITER $$
+
+CREATE TRIGGER AggiornaComanda AFTER UPDATE ON Ordine
+FOR EACH ROW
+BEGIN
+	SET @stato = NEW.Stato;
+    if(@stato = 'preparazione') THEN
+		SET @piattiServiti = (select count(*) from Ordine O inner join Comanda C on O.Comanda = C.IdComanda
+							 where O.Stato = 'servito' and C.IdComanda = NEW.Comdanda);
+        if(@piattiServiti > 0) THEN
+			Update Comnda C inner join Ordine O on C.IdComanda = O.Comanda
+			set C.Stato = 'Parzaie' WHERE O.IdOrdine = NEW.IdOrdine;
+		else 
+			Update Comnda C inner join Ordine O on C.IdComanda = O.Comanda
+			set C.Stato = 'Preparazione' WHERE C.IdComanda = NEW.Comanda;
+		end if;
+	elseif(@stato = 'servito') THEN
+		  SET @piattinonserviti = (select count(*) from Ordine O inner join Comanda C on O.Comanda = C.IdComanda
+									where O.Stato <> 'servito' and C.IdComanda = NEW.Comdanda);
+		  if(@piattinonserviti = 0) THEN
+				Update Comnda C inner join Ordine O on C.IdComanda = O.Comanda
+				set C.Stato = 'evasa' WHERE C.IdCoamanda = NEW.Comanda;
+			end if;
+	end if;
+    
+END $$
