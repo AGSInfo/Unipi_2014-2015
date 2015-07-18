@@ -87,7 +87,7 @@ CREATE TABLE Strumento (
 
 CREATE TABLE Ricetta (
       IdRicetta INT NOT NULL AUTO_INCREMENT,
-      TestoRicetta TEXT, 
+      TestoRicetta TEXT,
 	  IngredientePrincipale INT,
       Quantita FLOAT,
       PRIMARY KEY (IdRicetta)
@@ -99,7 +99,7 @@ CREATE TABLE IngredienteRicetta (
       Ricetta INT,
       Ingrediente INT,
       Quantita FLOAT,
-		
+
       PRIMARY KEY (Ricetta, Ingrediente), # perché c è scritto solo ricetta??
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta),
       FOREIGN KEY (Ingrediente) REFERENCES Ingrediente(IdIngrediente),
@@ -145,7 +145,7 @@ CREATE TABLE Piatto (
       Nome VARCHAR(60),
 	  Novita BOOL,
       Ricetta INT,
-      
+
       PRIMARY KEY (IdPiatto),
       FOREIGN KEY (Ricetta) REFERENCES Ricetta(IdRicetta)
 
@@ -157,18 +157,18 @@ CREATE TABLE Menu_Piatto(
 	IdPiatto INT NOT NULL,
 	IdMenu INT NOT NULL,
 	Prezzo FLOAT,
-    
+
 	PRIMARY KEY( IdPiatto,IdMenu),
 	FOREIGN KEY (IdMenu) REFERENCES Menu(IdMenu),
 	FOREIGN KEY (IdPiatto) REFERENCES Piatto(IdPiatto)
-	
+
 );
 --------------------------------------------------------------------------------
 
--- Questa tabella indica le possibili variazioni che può avere un piatto 
+-- Questa tabella indica le possibili variazioni che può avere un piatto
 
 CREATE TABLE VariazioniPiatto (
-	
+
 	  IdVariazione INT AUTO_INCREMENT,
       IdPiatto INT,
       DescrizioneVariazione Text,
@@ -184,7 +184,7 @@ Create table Sala (
 	FOREIGN KEY(Sede) REFERENCES Sede(IdSede)
 );
 
-CREATE TABLE Tavolo 
+CREATE TABLE Tavolo
 (
 
 	IdTavolo INT AUTO_INCREMENT,
@@ -193,24 +193,24 @@ CREATE TABLE Tavolo
 	Sala INT,
 	PRIMARY KEY(IdTavolo),
 	FOREIGN KEY (Sala) REFERENCES Sala(IdSala),
-    
+
 	UNIQUE(NumTavolo,Sala)
 );
 
 CREATE TABLE Comanda (
-	
+
       IdComanda INT NOT NULL AUTO_INCREMENT,
       IdTavolo INT,
       Ora TIMESTAMP,
       TakeAway BOOLEAN,
       Account VARCHAR(20),
       Stato ENUM('nuova','parziale','evasa') DEFAULT 'nuova',
-      
+
       PRIMARY KEY (IdComanda),
-      
+
       FOREIGN KEY (IdTavolo) REFERENCES Tavolo(IdTavolo)
-	
-      
+
+
 );
 
 --------------------------------------------------------------------------------
@@ -220,7 +220,7 @@ CREATE TABLE Ordine (
       Comanda INT,
       Piatto INT,
       Variazione1 INT,
-      Variazione2 INT, 
+      Variazione2 INT,
       Variazione3 INT,
       Stato enum('attesa','preparazione','servizio') Default 'attesa',
 
@@ -266,7 +266,7 @@ CREATE TABLE Prenotazione (
 CREATE TABLE Pony (
       IdPony INT NOT NULL AUTO_INCREMENT,
       TipoMezzo INT,
-      Stato ENUM ('libero', 'occupato'),
+      Stato ENUM ('libero', 'occupato') DEFAULT 'libero',
       PRIMARY KEY (IdPony)
 );
 
@@ -276,7 +276,7 @@ CREATE TABLE StatoConsegna (
       IdStato INT NOT NULL AUTO_INCREMENT,
       Comanda INT,
       Pony INT,
-      Stato ENUM ('Programmato','in consegna', 'consegnato','Ritorno'),
+      Stato ENUM ('programmato', 'in consegna', 'consegnato', 'ritorno') DEFAULT 'programmato',
       Ora TIMESTAMP,
 
       PRIMARY KEY (IdStato),
@@ -293,8 +293,8 @@ CREATE TABLE Recensione (
       GiudizioGlobale INT,
       GiudizioTesto TEXT,
       DataRecensione DATE,
-      
-      
+
+
       Tipo ENUM ('Ristorante','Piatto'),
       PiattoRecensito INT,
       PRIMARY KEY (IdRecensione),
