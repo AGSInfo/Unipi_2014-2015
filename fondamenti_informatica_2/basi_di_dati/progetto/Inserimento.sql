@@ -57,7 +57,7 @@ INSERT INTO Ingrediente (Nome, Provenienza, TipoProduzione, Allergene) VALUES
       ("Tartufo","Italia",NULL,False),
       ("Carne di Cinghiale","Italia",NULL,False),
       ("Panna da cucina","Italia","Biologica",TRUE);
-      
+
 
 -- ------------------------------------------------------------------------------
 TRUNCATE TABLE Confezione;
@@ -78,7 +78,7 @@ INSERT INTO Confezione (Peso, PrezzoAcquisto, DataAcquisto, DataConsegna, DataSc
       (1000, 1, "2015-01-01", "2015-01-10", "2016-01-01", 'intatto', 10, 3),
       (1000, 1, "2015-01-01", "2015-01-10", "2016-01-01", 'intatto', 2, 1),
       (1000, 1, "2015-01-01", "2015-01-10", "2016-01-01", 'rovinato', 4, 7),
-      (5000,15,"2015-03-21","2015-03-23","2105-03.27",'intatto',11,7);
+      (5000,15,"2015-03-21","2015-03-23","2105-03-27",'intatto',11,7);
 
 -- ------------------------------------------------------------------------------
 Truncate Table Strumento;
@@ -93,9 +93,9 @@ INSERT INTO Strumento (Tipo,Nome,Utilizzo) VALUES
 
 -- -----------------------------------------------------------------------------------
 Truncate Table Ricetta;
-INSERT INTO Ricetta (TestoRicetta,IngredientePrincipale,Quantita) VALUES 
-("Per realizzare la ricetta del pollo alla maceratese inizia col procurarti 
-un pollo ruspante da 1 kg e 1/2 diviso in 8 pezzi e con le interiora a parte. Sala e pepa i pezzi di pollo dentro e fuori. Pulisci le interiora, 
+INSERT INTO Ricetta (TestoRicetta,IngredientePrincipale,Quantita) VALUES
+("Per realizzare la ricetta del pollo alla maceratese inizia col procurarti
+un pollo ruspante da 1 kg e 1/2 diviso in 8 pezzi e con le interiora a parte. Sala e pepa i pezzi di pollo dentro e fuori. Pulisci le interiora,
 riducile a tocchetti e soffriggile in una casseruola con l’olio e il burro. Quindi unisci i pezzi di pollo e rosolali girandoli un paio di volte.
 ,Aggiungi brodo e acqua, in pari quantità, in modo da raggiungere un livello di 5 cm. Copri la casseruola con un foglio di alluminio e poi con il coperchio e cuoci per circa un’ora.
 ,Togli il pollo dalla casseruola e mettilo su un piatto da portata. Filtra il fondo di cottura, sbattilo con i tuorli, il succo del limone, sale
@@ -105,16 +105,16 @@ riducile a tocchetti e soffriggile in una casseruola con l’olio e il burro. Qu
  Tagliate i pomodori a pezzi. Prendete una casseruola ampia e antiaderente, versatevi tre cucchiai di olio extravergine di oliva, e portatelo a temperatura.
  Pelate le cipolle, tritatele. Fatele soffriggere dolcemente nell'olio. Aggiungete i pomodori e fateli cuocere a fiamma media fino a
  quando l'acqua dell'ortaggio non si rapprende regalandoci una meravigliosa salsa, sempre mescolando di quando in quando (circa 25 minuti).
-Aggiungete una presa di zucchero per regolare l'acidità. Nel frattempo lessate gli spaghetti in abbondante acqua salata in ebollizione, 
-scolateli al dente. A fine cottura dei pomodori freschi, insaporite con sale e basilico sminuzzato. Spegnete i fornelli e lasciate 
+Aggiungete una presa di zucchero per regolare l'acidità. Nel frattempo lessate gli spaghetti in abbondante acqua salata in ebollizione,
+scolateli al dente. A fine cottura dei pomodori freschi, insaporite con sale e basilico sminuzzato. Spegnete i fornelli e lasciate
 riposare il tutto per qualche minuto. Versate gli spaghetti direttamente nella pentola della salsa (se non dovete conservarla) e mescolate per bene.
  Impiattate e condite con un filo di olio d'oliva a crudo.",NULL,NULL),
- 
+
 ("Cuocete gli spaghetti in acqua bollente e salata.
 Nel frattempo, tagliate il guanciale a listarelle e fatelo soffriggere in una padella senza aggiungere olio.
 In contemporanea sbattere i tuorli delle uova con il pecorino in una terrina: aggiungete due cucchiai di acqua di cottura degli spaghetti e una macinata di pepe nero.
 Scolate gli spaghetti al dente.
-Versate gli spaghetti nella padella col guanciale e mescolate bene. 
+Versate gli spaghetti nella padella col guanciale e mescolate bene.
 Togliete la padella da fuoco e aggiungete i tuorli sbattuti: mescolate bene e aggiungete un cucchiaio dell'acqua di cottura per un risultato cremoso.
 Spolverate con Pecorino grattugiato e una macinata di pepe nero.
 Servite immediatamente.",NULL,NULL),
@@ -124,35 +124,35 @@ Servite immediatamente.",NULL,NULL),
 Nel frattempo, tagliate il guanciale a listarelle e fatelo soffriggere in una padella senza aggiungere olio.
 In contemporanea sbattere i tuorli delle uova con il pecorino in una terrina: aggiungete due cucchiai di acqua di cottura degli spaghetti e una macinata di pepe nero.
 Scolate gli spaghetti al dente.
-Versate gli spaghetti nella padella col guanciale e mescolate bene. 
+Versate gli spaghetti nella padella col guanciale e mescolate bene.
 Togliete la padella da fuoco e aggiungete i tuorli sbattuti: mescolate bene e aggiungete un cucchiaio dell'acqua di cottura per un risultato cremoso.
 Spolverate con Pecorino grattugiato e una macinata di pepe nero.
 Servite immediatamente.",NULL,NULL),
 
-("Preparate la brace in modo che sia viva ma senza fiamma. Se usate una bistecchiera, 
-fatela scaldare bene. Mettete la bistecca a temperatura ambiante sulla griglia, 
-fatela cuocere per 5 minuti ogni lato fino a che la superficie sarà ben colorita e leggermente abbrustolita. 
+("Preparate la brace in modo che sia viva ma senza fiamma. Se usate una bistecchiera,
+fatela scaldare bene. Mettete la bistecca a temperatura ambiante sulla griglia,
+fatela cuocere per 5 minuti ogni lato fino a che la superficie sarà ben colorita e leggermente abbrustolita.
 Togliete la bistecca dal fuoco, insaporite con sale e pepe entrambi i lati e portate in tavola.",15,500),
 
 ("per prima cosa prepariamo la pasta in questo modo: su di una spianatoia sistemate la farina a fontana e al centro mettete l'olio,
- il lievito sciolto in un pò d'acqua tiepida e un pizzico si sale. Impastate il tutto, unendo altra acqua se serve, e fate una bella palla 
+ il lievito sciolto in un pò d'acqua tiepida e un pizzico si sale. Impastate il tutto, unendo altra acqua se serve, e fate una bella palla
 (la pasta deve risultare asciutta e soda). Copritela con un canovaccio pulitissimo e fatela riposare almeno 2 ore in un luogo caldo ed asciutto.
 Trascorso il tempo tagliate la pasta in tante parti per quante pizze volete ricavare. Stendetela col mattarello e datele la tradizionale forma rotonda.
-Aggiungete il pomodoro sgocciolato e spezzettato e il sale. Dopo circa 20 minuti di cottura a 250 gradi aggiungete la mozzarella e l'olio, 
+Aggiungete il pomodoro sgocciolato e spezzettato e il sale. Dopo circa 20 minuti di cottura a 250 gradi aggiungete la mozzarella e l'olio,
 quando la mozzarella sarà diventata filante aggiungete il basilico. Sfornate dopo qualche minuto e servite caldissimo.",NULL,NULL),
 
-("Esplora il significato del termine: Sbattete le uova e pepatele (senza salarle perché il sale staccherebbe l’impanatura durante la cottura). 
+("Esplora il significato del termine: Sbattete le uova e pepatele (senza salarle perché il sale staccherebbe l’impanatura durante la cottura).
 Incidete le costolette lungo il bordo di tessuto connettivo, per evitare che si arriccino durante la cottura, poi intingetele nelle uova, bagnandole uniformemente;
  quindi passatele nel pangrattato, facendo in modo che se ne rivestano bene.
-Sciogliete il burro nella padella, facendolo scaldare fino a quando diventerà di colore nocciola molto intenso, quindi friggetevi le cotolette, 
-girandole una sola volta a metà cottura: dovrebbero essere sufficienti 6-8 minuti per lato. 
+Sciogliete il burro nella padella, facendolo scaldare fino a quando diventerà di colore nocciola molto intenso, quindi friggetevi le cotolette,
+girandole una sola volta a metà cottura: dovrebbero essere sufficienti 6-8 minuti per lato.
 Togliete le cotolette dalla padella usando il mestolo forato, salatele e servitele irrorate con una parte del burro di cottura,
- dopo averle decorate con spicchi di limone e qualche fogliolina di prezzemolo.Sbattete le uova e pepatele 
+ dopo averle decorate con spicchi di limone e qualche fogliolina di prezzemolo.Sbattete le uova e pepatele
  (senza salarle perché il sale staccherebbe l’impanatura durante la cottura). Incidete le costolette lungo il bordo di tessuto connettivo,
  per evitare che si arriccino durante la cottura, poi intingetele nelle uova, bagnandole uniformemente; quindi passatele nel pangrattato, facendo in modo che se ne rivestano bene.
 Sciogliete il burro nella padella, facendolo scaldare fino a quando diventerà di colore nocciola molto intenso,
- quindi friggetevi le cotolette, girandole una sola volta a metà cottura: dovrebbero essere sufficienti 6-8 minuti per lato. 
-Togliete le cotolette dalla padella usando il mestolo forato, salatele e servitele 
+ quindi friggetevi le cotolette, girandole una sola volta a metà cottura: dovrebbero essere sufficienti 6-8 minuti per lato.
+Togliete le cotolette dalla padella usando il mestolo forato, salatele e servitele
 irrorate con una parte del burro di cottura, dopo averle decorate con spicchi di limone e qualche fogliolina di prezzemolo.",16,150);
 
 -- ------------------------------------------------------------------------------
@@ -172,7 +172,7 @@ INSERT INTO Passo (Ricetta,nPasso,DescrizionePasso,Strumento,TempoUtilizzo, Ingr
 
 -- ------------------------------------------------------------------------------
 truncate TABLE Piatto;
-INSERT INTO Piatto (Nome,Novita,Ricetta) VALUES 
+INSERT INTO Piatto (Nome,Novita,Ricetta) VALUES
 
 ("Pollo alla Maceratese",TRUE,1),
 ("Pasta al Pomodoro",TRUE,2),
@@ -194,7 +194,7 @@ INSERT INTO Account (Username, Password, Nome, Cognome, Via, nCivico, Comune, Ci
 	  ("FraMaria87", "abdu1212","Francesco", "Maria", "Danimarca", 34, "Firenze", "Firenze", 'M'),
       ("Samu81", "renegade32", "Samuele", "Vittorini", "Aretina", 356, "Sieci", "Firenze", 'M'),
       ("laura84", "farmar1822", "Laura", "Grazini", "Europa", 9, "Vinovo", "Torino", 'F');
-      
+
 -- ------------------------------------------------------------------------------
 TRUNCATE TABLE Recensione;
 
@@ -207,9 +207,9 @@ INSERT INTO Recensione (Account, GiudizioGlobale, GiudizioTesto, DataRecensione,
       ("Samu81", 4, "Molto buono..", current_date(),'Piatto',NULL),
 	  ("laura84", 5, "Piatto Delizioso, consigliatissimo!", current_date(),'Piatto',NULL),
       ("FraMaria87", 2, "Piatto che non vale il prezzo", current_date(),'Piatto',NULL),
-      ("lucia11", 3, "Ottimo Ristorante,servizio ottimo e piatti deliziosi", current_date(),'Ristorante',NULL),
-	  ("mario01", 5, "Piatto Meraviglioso,ottima la qualità degli ingredienti e sapori eccezionali!", current_date(),'Piatto',NULL);
-     
+      ("lucia11", 3, "Ottimo Ristorante, servizio ottimo e piatti deliziosi", current_date(),'Ristorante',NULL),
+	  ("mario01", 5, "Piatto Meraviglioso, ottima la qualità degli ingredienti e sapori eccezionali!", current_date(),'Piatto',NULL);
+
 -- ------------------------------------------------------------------------------
 TRUNCATE TABLE ValutazioneRecensione;
 
@@ -224,23 +224,23 @@ INSERT INTO ValutazioneRecensione (Account, Recensione, Veridicita, Accuratezza,
       ("ettore11", 8, 5, 4, "Recensione scritta molto bene"),
       ("FraMaria87", 7, 5, 2, "Mi trovo in accordo con la recensione ma comunque è troppo approssimativa"),
 	  ("gianfra22", 10, 5, 5, "Recensione esaustiva e corretta secondo i miei parametri");
-      
+
 -- ------------------------------------------------------------------------------
 
  TRUNCATE TABLE Menu;
 
- INSERT INTO Menu (Sede,DataInizio,DataFine) VALUES 
+ INSERT INTO Menu (Sede,DataInizio,DataFine) VALUES
 	(1,current_date()-interval 4 month,NULL),
 	(2,current_date()-interval 4 month,NULL),
 	(3,current_date()-interval 4 month,NULL),
-	(4,current_date()-interval 4 month,NULL), 
+	(4,current_date()-interval 4 month,NULL),
     (5,current_date()-interval 4 month,NULL),
 	(6,current_date()-interval 4 month,NULL),
 	(7,current_date()-interval 4 month,NULL),
     (8,current_date()-interval 4 month,NULL),
     (9,current_date()-interval 4 month,NULL),
     (10,current_date()-interval 4 month,NULL);
-    
+
 -- -------------------------------------------------------------------------------
 
 
@@ -299,7 +299,7 @@ INSERT INTO Comanda(IdTavolo,Ora,TakeAway,Account) VALUES
 
 Truncate table Ordine;
 
-INSERT INTO Ordine (Comanda,Piatto,Variazione1,Variazione2,Variazione3) VALUES 
+INSERT INTO Ordine (Comanda,Piatto,Variazione1,Variazione2,Variazione3) VALUES
 (1,2,NULL,NULL,NULL),(1,1,NULL,NULL,NULL),(2,4,3,NULL,NULL),(2,3,1,2,NULL),
 (3,5,NULL,NULL,NULL),(4,5,6,7,NULL),(6,5,6,NULL,NULL),(5,1,NULL,NULL,NULL),
 (10,6,NULL,NULL,NULL),(10,6,8,NULL,NULL),(9,1,NULL,NULL,NULL),(9,4,NULL,NULL,NULL);
@@ -354,7 +354,7 @@ INSERT INTO PropostaPiatto (Account,Nome) VALUES
 ("lucia11","Risotto al tartufo"),
 ("ettore11","Pasta al sugo di cinghiale"),("ettore11","Frittura mista");
 
--- ------------------------------------------------------------------------------------------- 
+-- -------------------------------------------------------------------------------------------
 
 Truncate Table  IngredienteNuovoPiatto;
 
@@ -412,7 +412,7 @@ INSERT INTO ValutazioneVariazione (Account,VariantePiatto,Valutazione) VALUES
 
 TRUNCATE TABLE Serata;
 
-INSERT INTO Serata(Account,NomeOrganizzatore,CognomeOrganizzatore,Allestimento,nPersone,Sala,Data) 
+INSERT INTO Serata(Account,NomeOrganizzatore,CognomeOrganizzatore,Allestimento,nPersone,Sala,Data)
 VALUES
 ("ettore11",NULL,NULL,NULL,"Decorazioni Colorate",20,1,current_timestamp()),
 ("lucia11",NULL,NULL,NULL,"Tavoli in cerchio",10,3,current_timestamp()),
