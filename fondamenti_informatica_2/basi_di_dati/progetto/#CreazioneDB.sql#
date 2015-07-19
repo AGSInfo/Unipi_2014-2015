@@ -88,7 +88,7 @@ CREATE TABLE Strumento (
 CREATE TABLE Ricetta (
       IdRicetta INT NOT NULL AUTO_INCREMENT,
       TestoRicetta TEXT,
-	  IngredientePrincipale INT,
+      IngredientePrincipale INT,
       Quantita FLOAT,
       PRIMARY KEY (IdRicetta)
 );
@@ -143,7 +143,7 @@ CREATE TABLE Menu (
 CREATE TABLE Piatto (
       IdPiatto INT NOT NULL AUTO_INCREMENT,
       Nome VARCHAR(60),
-	Novita BOOL,
+	  Novita BOOL,
       Ricetta INT,
 
       PRIMARY KEY (IdPiatto),
