@@ -122,3 +122,15 @@ BEGIN
 	end if;
     
 END $$
+DELIMITER $$
+
+-- Trigger che gestisce in automatico la ridondanza allergene
+
+CREATE TRIGGER GestioneAllergene AFTER UPDATE ON Passo
+FOR EACH ROW
+BEGIN
+	SET @allergene = (select Allergene from ingrediente where IdIngrediente = NEW.Ingrediente);
+    if(@allergene = TRUE) then
+		UPDATE Ricetta SET allergene = TRUE where IdRicetta = NEW.Ricetta;
+	end if;
+END $$
