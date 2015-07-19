@@ -53,6 +53,87 @@
     una data sala
   </description>
 
+  <chapter|Dipendenze funzionali>
+
+  IdSede \ \ \<gtr\> \ \ Via, Numero Civico, Citta
+
+  Via, Numero Civico, Citta \ \ \<gtr\> \ \ IdSede
+
+  IdMagazzino \ \ \<gtr\> \ \ IdSede
+
+  IdScaffale \ \ \<gtr\> \ \ IdMagazzino\ 
+
+  IdIngrediente \ \ \<gtr\> \ \ Nome, Provenienza, TipoProduzione, Allergene
+
+  IdConfezione \ \ \<gtr\> \ \ Peso, PrezzoAcquisto, DataAcquisto,
+  DataConsegna, DataScadenza, Aspetto, Stato, Quantit‡Rimanente,
+  IdIngrediente, IdScaffale
+
+  IdStrumento \ \ \<gtr\> \ \ TipoStrumento, NomeStrumento, UtilizzoStrumento
+
+  IdRicetta \ \ \<gtr\> \ \ TestoRicetta, IdIngrediente (ingrediente
+  principale)
+
+  IdRicetta, IdIngrediente \ \ \<gtr\> \ \ Quantita
+
+  IdRicetta, IdPasso \ \ \<gtr\> \ \ DescrizionePasso, Strumento,
+  TempoUtilizzo, Ingrediente, QuantitaUtilizzata
+
+  IdMenu \ \ \<gtr\> \ \ IdSede, DataInizio, DataFine
+
+  IdPiatto \ \ \<gtr\> \ \ Nome, Novita, IdRicetta
+
+  IdPiatto, IdMenu \ \ \<gtr\> \ \ Prezzo
+
+  IdVariazione \ \ \<gtr\> \ \ Piatto, DescrizioneVariazione
+
+  IdSala \ \ \<gtr\> \ \ IdSede
+
+  IdTavolo \ \ \<gtr\> \ \ Sala, Posti, NumeroTavolo
+
+  IdComanda \ \ \<gtr\> \ \ Tavolo, Ora, TakeAway, Account, Stato
+
+  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto, Variazione1, Variazione2,
+  Variazione3
+
+  Username \ \ \<gtr\> \ \ Password, Nome, Cognome, Via, nCivico, Comune,
+  Citta, Fruibilit‡Prenotazioni, Sesso
+
+  IdPrenotazione \ \ \<gtr\> \ \ Username, NumeroTelefono, IdTavolo,
+  OraPrenotazione, Numero di persone
+
+  IdPony \ \ \<gtr\> \ \ Tipo di mezzo, Stato
+
+  IdStatoConsegna \ \ \<gtr\> \ \ IdComanda, IdPony, Stato, Ora
+
+  IdRecensione \ \ \<gtr\> \ \ Username, GiudizioGlobale, GiudizioTesto,
+  DataRecensione
+
+  IdDomanda \ \ \<gtr\> \ \ Domanda
+
+  IdRecensione, IdDomanda \ \ \<gtr\> \ \ Risposta
+
+  Username, IdRecensione \ \ \<gtr\> \ \ Veridicit‡, Accuratezza, Descrizione
+
+  IdPropostaPiatto \ \ \<gtr\> \ \ Account, Nome
+
+  IdPropostaPiatto, IdIngrediente \ \ \<gtr\> \ \ Quantit‡
+
+  Username, IdPropostaPiatto \ \ \<gtr\> \ \ Valutazione, Descrizione
+
+  IdVariante \ \ \<gtr\> \ \ Username, IdPiatto
+
+  IdModifica \ \ \<gtr\> \ \ VariantePiatto, Modifica
+
+  Username, VariantePiatto \ \ \<gtr\> \ \ Valutazione
+
+  IdSerata \ \ \<gtr\> \ \ Account, NomeOrganizzatore, CognomeOrganizzatore,
+  TelefonoOrganizzatoreSala, Allestimento, NumeroDiPersone, IdSala, Data
+
+  \;
+
+  \;
+
   \;
 </body>
 
@@ -61,7 +142,8 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?|../../../../.TeXmacs/texts/scratch/no_name_1.tm>>
+    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-2|<tuple|2|?>>
   </collection>
 </references>
 
