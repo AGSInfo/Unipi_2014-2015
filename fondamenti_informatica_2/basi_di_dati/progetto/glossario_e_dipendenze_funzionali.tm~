@@ -55,77 +55,135 @@
 
   <chapter|Dipendenze funzionali>
 
-  IdSede -\<gtr\> Via, NCivico, Citta
+  IdSede \ \ \<gtr\> \ \ Via, Numero Civico, Citta
 
-  Via, NCivico, Citta -\<gtr\> IdSede
+  Sede Ë in BCNF
 
-  IdMagazzino -\<gtr\> IdSede
+  Magazzino Ë in BCNF
 
-  IdScaffale -\<gtr\> IdMagazzino\ 
+  IdScaffale \ \ \<gtr\> \ \ IdMagazzino\ 
 
-  IdIngrediente -\<gtr\> Nome, Provenienza, TipoProduzione, Allergene
+  Scaffale Ë in BCNF\ 
 
-  IdConfezione -\<gtr\> Peso, PrezzoAcquisto, DataAcquisto, DataConsegna,
-  DataScadenza, Aspetto, Stato, Quantit‡Rimanente, IdIngrediente, IdScaffale
+  IdIngrediente \ \ \<gtr\> \ \ Nome, Provenienza, TipoProduzione, Allergene
 
-  IdStrumento -\<gtr\> TipoStrumento, NomeStrumento, UtilizzoStrumento
+  Ingrediente Ë in BCNF
 
-  IdRicetta -\<gtr\> TestoRicetta, IdIngrediente (ingrediente principale)
+  IdConfezione \ \ \<gtr\> \ \ Peso, PrezzoAcquisto, DataAcquisto,
+  DataConsegna, DataScadenza, Aspetto, Stato, Quantit‡Rimanente,
+  IdIngrediente, IdScaffale
 
-  IdRicetta, IdIngrediente -\<gtr\> Quantita
+  Confezione Ë in BCNF
 
-  IdRicetta, IdPasso -\<gtr\> DescrizionePasso, Strumento, TempoUtilizzo,
-  Ingrediente, QuantitaUtilizzata
+  IdStrumento \ \ \<gtr\> \ \ TipoStrumento, NomeStrumento,
+  UtilizzoStrumento,Sede
 
-  IdMenu -\<gtr\> IdSede, DataInizio, DataFine
+  Strumento Ë in BCNF
 
-  IdPiatto -\<gtr\> Nome, Novita, IdRicetta
+  IdRicetta \ \ \<gtr\> \ \ TestoRicetta, IdIngrediente (ingrediente
+  principale),Quantita
 
-  IdPiatto, IdMenu -\<gtr\> Prezzo
+  Ricetta Ë in BCNF
 
-  IdVariazione -\<gtr\> Piatto, DescrizioneVariazione
+  IdRicetta, IdPasso \ \ \<gtr\> \ \ DescrizionePasso, Strumento,
+  TempoUtilizzo, Ingrediente, QuantitaUtilizzata,Allergene
 
-  IdSala -\<gtr\> IdSede
+  Passo Ë in BCNF
 
-  IdTavolo -\<gtr\> Sala, Posti, NumeroTavolo
+  IdMenu \ \ \<gtr\> \ \ IdSede, DataInizio, DataFine
 
-  IdComanda -\<gtr\> Tavolo, Ora, TakeAway, Account, Stato
+  Menu Ë in BCNF
 
-  IdOrdine -\<gtr\> Comanda, Piatto, Variazione1, Variazione2, Variazione3
+  IdPiatto \ \ \<gtr\> \ \ Nome, Novita, IdRicetta
 
-  Username -\<gtr\> Password, Nome, Cognome, Via, nCivico, Comune, Citta,
-  Fruibilit‡Prenotazioni, Sesso
+  Piatto Ë in BCNF
 
-  IdPrenotazione -\<gtr\> Username, NumeroTelefono, IdTavolo,
+  IdPiatto, IdMenu \ \ \<gtr\> \ \ Prezzo
+
+  MenuPiatto Ë in BCNF
+
+  IdVariazione \ \ \<gtr\> \ \ Piatto, DescrizioneVariazione
+
+  VariazionePiatto Ë in BCNF
+
+  IdSala \ \ \<gtr\> \ \ IdSede
+
+  Sala Ë in BCNF
+
+  IdTavolo \ \ \<gtr\> \ \ Sala, Posti, NumeroTavolo
+
+  Tavolo È in BCNF
+
+  IdComanda \ \ \<gtr\> \ \ Tavolo, Ora, TakeAway, Account, Stato
+
+  Comanda Ë in BCNF
+
+  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto, Variazione1, Variazione2,
+  Variazione3
+
+  Ordine Ë in BCNF
+
+  Username \ \ \<gtr\> \ \ Password, Nome, Cognome, Via, nCivico, Comune,
+  Citta, Fruibilit‡Prenotazioni, Sesso
+
+  Account Ë in BCNF
+
+  IdPrenotazione \ \ \<gtr\> \ \ Username, NumeroTelefono, IdTavolo,
   OraPrenotazione, Numero di persone
 
-  IdPony -\<gtr\> Tipo di mezzo, Stato
+  Prenotazione Ë in BCNF
 
-  IdStatoConsegna -\<gtr\> IdComanda, IdPony, Stato, Ora
+  IdPony \ \ \<gtr\> \ \ Tipo di mezzo, Stato
 
-  IdRecensione -\<gtr\> Username, GiudizioGlobale, GiudizioTesto,
+  Pony Ë in BCNF
+
+  IdStatoConsegna \ \ \<gtr\> \ \ IdComanda, IdPony, Stato, Ora
+
+  StatoConsegna Ë in BCNF
+
+  IdRecensione \ \ \<gtr\> \ \ Username, GiudizioGlobale, GiudizioTesto,
   DataRecensione
 
-  IdDomanda -\<gtr\> Domanda
+  Recensione Ë in BCNF
 
-  IdRecensione, IdDomanda -\<gtr\> Risposta
+  IdDomanda \ \ \<gtr\> \ \ Domanda
 
-  Username, IdRecensione -\<gtr\> Veridicit‡, Accuratezza, Descrizione
+  Domanda Ë in BCNF
 
-  IdPropostaPiatto -\<gtr\> Account, Nome
+  IdRecensione, IdDomanda \ \ \<gtr\> \ \ Risposta
 
-  IdPropostaPiatto, IdIngrediente -\<gtr\> Quantit‡
+  Compilazione Ë in BCNF
 
-  Username, IdPropostaPiatto -\<gtr\> Valutazione, Descrizione
+  Username, IdRecensione \ \ \<gtr\> \ \ Veridicit‡, Accuratezza, Descrizione
 
-  IdVariante -\<gtr\> Username, IdPiatto
+  ValutazioneRecensione Ë in BCNF
 
-  IdModifica -\<gtr\> VariantePiatto, Modifica
+  IdPropostaPiatto \ \ \<gtr\> \ \ Account, Nome
 
-  Username, VariantePiatto -\<gtr\> Valutazione
+  PropostaPiatto Ë in BCNF\ 
 
-  IdSerata -\<gtr\> Account, NomeOrganizzatore, CognomeOrganizzatore,
-  TelefonoOrganizzatoreSala, A
+  IdPropostaPiatto, IdIngrediente \ \ \<gtr\> \ \ Quantit‡
+
+  IngredientePropostaPiatto Ë in BCNF
+
+  Username, IdPropostaPiatto \ \ \<gtr\> \ \ Valutazione, Descrizione
+
+  ValutazionePropostaPiatto Ë in BCNF
+
+  IdVariante \ \ \<gtr\> \ \ Username, IdPiatto
+
+  VariantePiatto Ë in BCNF
+
+  IdModifica \ \ \<gtr\> \ \ VariantePiatto, Modifica
+
+  ModificaVariantePiatto Ë in BCNF
+
+  Username, VariantePiatto \ \ \<gtr\> \ \ Valutazione
+
+  ValutazioneVaria
+
+  IdSerata \ \ \<gtr\> \ \ Account, NomeOrganizzatore, CognomeOrganizzatore,
+  TelefonoOrganizzatoreSala, Allestimento, NumeroDiPersone, IdSala, Data
 
   \;
 
@@ -150,6 +208,10 @@
       <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Glossario>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|1fn>
+
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|2<space|2spc>Dipendenze
+      funzionali> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2><vspace|1fn>
     </associate>
   </collection>
 </auxiliary>

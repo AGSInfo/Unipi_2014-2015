@@ -20,6 +20,7 @@ Menu(\ul IdMenu\ulnone ,Sede,DataInizio,DataFine)\
 PiattoMenu(\ul IdMenu,IdPiatt\ulnone o)\
 Piatto(\ul IdPiatto\ulnone ,Ricetta,Novita)\
 VariazioniPiatto(\ul IdPiatto\ulnone ,DescrizioneVariazione)\
+Prenotazione(IdPrenotazione,Account,Telefono,nPersone,Tavolo,OraPrenotaziones)\
 Comanda(\ul IdComanda\ulnone ,Tavolo,Ora,TakeAway,Account,Stato,Prezzo)\
 Ordine(\ul IdOrdine\ulnone ,Comanda,Piatto,Variazione1,Variazione2,Variazione3,OrdineConsegna,Stato)\
 Prenotazione(\ul IdPrenotazione\ulnone ,Account,NumeroTelefono,Tavolo,OraPrenotazione,nPersone)\
@@ -27,10 +28,8 @@ Pony(\ul IdPony\ulnone ,TipoMezzo,Stato)\
 StatoConsegna(\ul IdStato\ulnone ,Comanda,Pony,Stato,Ora,Data)\
 Account(\ul Username\ulnone ,Password,Nome,Cognome,Via,nCivico,Comune,Citta,Fruibilit\'e0Prenotazioni,Sesso)\
 Recensione(\ul IdRecensione\ulnone ,Account,GiudizioGlobale,GiudizioTesto)\
-DomandeQuestionario(\ul IdDomanda\ulnone ,Domanda)\
-Compilazione(\ul IdDomanda\ulnone ,\ul IdRecensione\ulnone ,\ul IdRisposta\ulnone )\
-Risposte(\ul IdRisposta\ulnone ,Risposta,Scala)\
-PossibilitaRisposte(\ul IdDomanda,IdRisposta\ulnone )\
+Risposte(\ul IdRecensione,IdDomanda,\ulnone Risposta)\
+Domande\ul (IdDomanda,\ulnone DescrizioneDomanda)\
 ValutazioneRecensione(\ul Account,Recensione\ulnone ,Veridicita,Accuratezza,Descrizione)\
 PropostaPiatto(\ul idPropostaPiatto\ulnone ,Account,Nome)\
 IngredientiNuovoPiatto(\ul PropostaPiatto\ulnone ,\ul Ingrediente\ulnone ,Quantit\'e0)\
@@ -38,7 +37,7 @@ ValutazionePropostaPiatto(\ul Account,PropostaPiatto\ulnone ,Valutazione)\
 VariantePiatto(\ul IdVariante\ulnone ,Account,Piatto)\
 ModificaVariazione(\ul IdModifica\ulnone ,VariazionePiatto,Modifica)\
 ValutazioneVariazione(\ul Account,VariazionePiatto\ulnone ,Valutazione)\
-Serata(\ul IdSerata,\ulnone Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrganizzatoreSala,Allestimento,nPersone)\
+Serata(\ul IdSerata,\ulnone Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrganizzatoreSala,Allestimento,nPersone,Sala)\
 \
 \
 \
