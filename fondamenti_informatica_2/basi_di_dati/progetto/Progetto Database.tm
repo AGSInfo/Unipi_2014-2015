@@ -254,6 +254,102 @@
 
   \;
 
+  <subsection|Vincoli di Integrita Referenziali>
+
+  - Esiste un vincolo di integrita referenziale tra l'attributo IdSede di
+  Magazzino e IdSede di Sede
+
+  - Esiste un vincolo di integrita referenziale tra l'attributo IdMagazzino
+  di Magazzino e IdMagazzino di Magazzino
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Ingrediente
+  di Confezione e IdIngrediente di Ingrediente e tra Scaffale di Confezione e
+  IdScaffale di Scaffale
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sede di
+  Strumento e IdSede di Sede
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo
+  IngredientePrincipale di Ricetgta e IdIngrediente di Ingrediente
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Ingrediente
+  di IngredienteRicetta e IdIngrediente di Ingrediente e tra Ricetta di
+  IngredienteRicetta e IdRicetta di Ricetta
+
+  -Esistono tre vincoli di integrita referenziale tra l'attributo Ingrediente
+  di Passo e IdIngrediente di Ingrediente e tra Ricetta di Passo e IdRicetta
+  di Ricetta e tra Struemnto di Passo e IdStrumento di Strumento
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sede di Menu e
+  IdSede di Sede
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Ricetta di
+  Piatto e IdRicetta di Ricetta
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo IdMenu di
+  Menu_Piatto e \ IdMenu di Menu \ e tra IdPiatto di Menu_Piatto e IdPiatto
+  di Piatto
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo IdPiatto di
+  VariazioniPiatto e IdPiatto di Piatto
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sede di Sala e
+  IdSede di Sede
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sala di tavolo
+  e IdSala di Sala
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Comanda di
+  Ordine e IdComanda di di Comanda e tra Piatto di Ordine e IdPiatto di
+  Piatto
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo IdOrdine di
+  OrdineVariazione e IdOrdine di di Ordine e tra IdVariazione di
+  OrdineVariazione e IdVariazione di VaraizioniPiatto
+
+  -Esistno due vincoli di integrita referenziale tra l'attributo Account di
+  Prenotazione e Username di Account e tra Tavolo di prenotazione e IdTavolo
+  di Tavolo
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Comanda di
+  StatoConsegna e IdComanda di Comanda e tra Pony di StatoConsegna e IdPony
+  di Pony
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  Recensione e Username di Account e tra PiattoRecensito di Recensione e
+  IdPiatto \ di Piatto
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo
+  IdRecensione di Compilazione e IdRecensione di Recensione e tra IdDomanda
+  di Recensione e IdDomanda di Domanda
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  ValutazioneRecensione e Username di Account e tra Recensione di
+  ValutazioneRecensione e IdRecensione di Recensione
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Accountdi
+  PropostaPiatto e Username di Account
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Proposta di
+  IngredienteNuovoPiatto e IdPropostaPiatto di PropostaPiatto e tra
+  Ingrediente di IngredientNuovoPiatto e IdIngrediente di Ingredinete
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  ValutazioneRecensione e Username di Account e tra Recensione di
+  ValutazioneRecensione e IdRecensione di Recensione
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo VariantePiatto
+  di ModificaVariazione e IdVariante di VariantePiatto
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  ValutazioneRecensione e Username di Account e tra Recensione di
+  ValutazioneRecensione e IdRecensione di Recensione
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  Serata e Username di Account e tra Sala di Seraya e IdSala di Sala
+
+  \;
+
   <subsection|Dipendenze funzionali e normalizzazione (BCNF)>
 
   -IdSede \ \ \<gtr\> \ \ Via, Numero Civico, Citta
@@ -390,8 +486,6 @@
 
   Serata è in BCNF
 
-  <subsection|Schema logico>
-
   <section|Creazione Database>
 
   \;
@@ -497,13 +591,9 @@
       normalizzazione (BCNF) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|3.4<space|2spc>Schema logico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Creazione
       Database> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11><vspace|0.5fn>
+      <no-break><pageref|auto-10><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

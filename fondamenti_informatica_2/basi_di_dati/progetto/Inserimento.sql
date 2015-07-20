@@ -324,11 +324,17 @@ INSERT INTO Comanda(IdTavolo,Ora,TakeAway,Account) VALUES
 
 Truncate table Ordine;
 
-INSERT INTO Ordine (Comanda,Piatto,Variazione1,Variazione2,Variazione3) VALUES
-      (1,2,NULL,NULL,NULL),(1,1,NULL,NULL,NULL),(2,4,3,NULL,NULL),(2,3,1,2,NULL),
-      (3,5,NULL,NULL,NULL),(4,5,6,7,NULL),(6,5,6,NULL,NULL),(5,1,NULL,NULL,NULL),
-      (10,6,NULL,NULL,NULL),(10,6,8,NULL,NULL),(9,1,NULL,NULL,NULL),(9,4,NULL,NULL,NULL);
+INSERT INTO Ordine (Comanda,Piatto) VALUES
+      (1,2),(1,1),(2,4),(2,3),
+      (3,5),(4,5,(6,5),(5,1),
+      (10,6),(9,1),(9,4);
 
+-- ---------------------------------------------------------------------------------
+
+Truncate table OrdineVariazione;
+INSERT INTO OrdineVariazione(IdOrdine,IdVariazione) VALUE
+(3,3),(4,1),(4,2),(6,5),
+(6,7),(7,6)(10,8),
 
 -- -------------------------------------------------------------------------------------
 

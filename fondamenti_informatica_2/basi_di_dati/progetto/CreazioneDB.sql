@@ -151,7 +151,8 @@ CREATE TABLE Menu (
       DataFine DATE,
 
       PRIMARY KEY (IdMenu),
-      FOREIGN KEY (Sede) REFERENCES Sede(IdSede),
+      FOREIGN KEY (Sede) REFERENCES Sede(IdSede) ON DELETE CASCADE 
+	  ON UPDATE CASCADE,
       CHECK (DataInizio <= DataFine)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
 -- Esiste un vincolo di integrita referenziale tra l'attributo Sede
@@ -185,8 +186,7 @@ CREATE TABLE Menu_Piatto(
 	FOREIGN KEY (IdPiatto) REFERENCES Piatto(IdPiatto) ON DELETE CASCADE
 
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo IdMenu di Menu_Piatto e 
--- IdMenu di Menu  e tra IdPiatto di Menu_Piatto e IdPiatto di Piatto
+
 --------------------------------------------------------------------------------
 
 
@@ -198,8 +198,7 @@ CREATE TABLE VariazioniPiatto (
       PRIMARY KEY (IdVariazione),
       FOREIGN KEY (IdPiatto) REFERENCES Piatto(IdPiatto) on Delete CASCADE
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esiste un vincolo di integrita referenziale tra l'attributo IdPiatto 
--- di VariazioniPiatto e IdPiatto di Piatto
+
 --------------------------------------------------------------------------------
 Create table Sala (
     IdSala INT NOT NULL AUTO_INCREMENT,
@@ -207,8 +206,7 @@ Create table Sala (
 	PRIMARY KEY(IdSala),
 	FOREIGN KEY(Sede) REFERENCES Sede(IdSede) ON DELETE CASCADE
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esiste un vincolo di integrita referenziale tra l'attributo Sede
--- di Sala e IdSede di Sede
+
 
 CREATE TABLE Tavolo
 (
@@ -222,8 +220,7 @@ CREATE TABLE Tavolo
 
 	UNIQUE(NumTavolo,Sala)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esiste un vincolo di integrita referenziale tra l'attributo Sala
--- di tavolo e IdSala di Sala
+
 
 CREATE TABLE Comanda (
 
@@ -240,26 +237,28 @@ CREATE TABLE Comanda (
 
 
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esiste un vincolo di integrita referenziale tra l'attributo IdTavolo
--- di Comanda e IdTavolo di Tavolo
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE Ordine (
       IdOrdine INT NOT NULL AUTO_INCREMENT,
       Comanda INT,
       Piatto INT,
-      Variazione1 INT,
-      Variazione2 INT,
-      Variazione3 INT,
       Stato enum('attesa','preparazione','servizio') Default 'attesa',
 
      PRIMARY KEY (IdOrdine),
-     FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda),
-	 FOREIGN KEY (Variazione1) REFERENCES VariazioniPiatto(IdVariazione) ON DELETE SET NULL,
-	 FOREIGN KEY (Variazione2) REFERENCES VariazioniPiatto(IdVariazione) ON DELETE SET NULL,
-	 FOREIGN KEY (Variazione3) REFERENCES VariazioniPiatto(IdVariazione) ON DELETE SET NULL,
-	 FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto)
+     FOREIGN  KEY (Comanda) REFERENCES Comanda(IdComanda) ON DELETE CASCADE,
+	 FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto) ON DELETE SET NULL
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
+
+CREATE TABLE OrdineVariazione(
+	IdOrdine INT NOT NULL,
+	IdVariazione INT NOT NULL,
+	PRIMARY KEY(IdOrdine,IdVariazione)
+	FOREIGN KEY (IdOrdine) REFERENCES Ordine(IdOrdine) on DELETE CASCADE
+	FOREIGN KEY (IdVariazione) REFERENCES VariazioniPiatto(IdVarazione) on DELETE CASCADE
+)ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 
 CREATE TABLE Account (
       Username VARCHAR(20),
@@ -289,9 +288,7 @@ CREATE TABLE Prenotazione (
       FOREIGN KEY (Account) REFERENCES Account(Username) on Delete Cascade on UPDATE CASCADE,
       FOREIGN KEY(Tavolo) REFERENCES Tavolo(IdTavolo) ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistno due vincoli di integrita referenziale tra l'attributo Account
--- di Prenotazione e Username di Account e tra Tavolo di prenotazione
--- e IdTavolo di Tavolo
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE Pony (
@@ -314,9 +311,7 @@ CREATE TABLE StatoConsegna (
       FOREIGN KEY (Comanda) REFERENCES Comanda(IdComanda) ON DELETE CASCADE,
       FOREIGN KEY (Pony) REFERENCES Pony(IdPony) ON DELETE SET NULL
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Comanda
--- di StatoConsegna e IdComanda di Comanda e tra Pony di StatoConsegna 
--- e IdPony di Pony
+-
 --------------------------------------------------------------------------------
 
 CREATE TABLE Recensione (
@@ -335,9 +330,7 @@ CREATE TABLE Recensione (
 	  FOREIGN KEY (PiattoRecensito) REFERENCES Piatto( IdPiatto) ON DELETE CASCADE,
 	  CHECK (GiudizioGlobale >= 0 AND GiudizioGlobale <= 5)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Account
--- di Recensione e Username di Account e tra PiattoRecensito di Recensione 
--- e IdPiatto  di Piatto
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE DomandaQuestionario (
@@ -357,9 +350,7 @@ CREATE TABLE Compilazione(
 	 FOREIGN KEY(IdRecensione) REFERENCES Recensione(IdRecensione) ON DELETE CASCADE,
 	 FOREIGN KEY(IdDomanda) REFERENCES DomandaQuestionario(IdDomanda) ON DELETE CASCADE
  )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo IdRecensione
--- di Compilazione e IdRecensione di Recensione e tra IdDomanda di Recensione 
--- e IdDomanda di Domanda
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE ValutazioneRecensione (
@@ -374,9 +365,7 @@ CREATE TABLE ValutazioneRecensione (
       FOREIGN KEY (Recensione) REFERENCES Recensione(IdRecensione) ON DELETE CASCADE,
       CHECK (Veridicita >= 0 AND Veridicita <= 5 AND Accuratezza >= 0 AND Accuratezza <= 5)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Account
--- di ValutazioneRecensione e Username di Account e tra Recensione 
--- di ValutazioneRecensione e IdRecensione di Recensione
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE PropostaPiatto (
@@ -387,8 +376,7 @@ CREATE TABLE PropostaPiatto (
       PRIMARY KEY (IdPropostaPiatto),
       FOREIGN KEY (Account) REFERENCES Account(Username)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esiste un vincolo di integrita referenziale tra l'attributo Account
--- di PropostaPiatto e Username di Account 
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE IngredienteNuovoPiatto (
@@ -403,9 +391,7 @@ CREATE TABLE IngredienteNuovoPiatto (
       ON DELETE CASCADE,
       CHECK (Quantita >= 0)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Proposta
--- di IngredienteNuovoPiatto e IdPropostaPiatto di PropostaPiatto
---  e tra Ingrediente di IngredientNuovoPiatto e IdIngrediente di Ingredinete
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE ValutazionePropostaPiatto (
@@ -419,9 +405,7 @@ CREATE TABLE ValutazionePropostaPiatto (
       FOREIGN KEY (PropostaPiatto) REFERENCES PropostaPiatto(IdPropostaPiatto)
       ON DELETE CASCADE
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Account
--- di ValutazioneRecensione e Username di Account e tra Recensione 
--- di ValutazioneRecensione e IdRecensione di Recensione
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE VariantePiatto (
@@ -433,9 +417,7 @@ CREATE TABLE VariantePiatto (
       FOREIGN KEY (Account) REFERENCES Account(Username) ON DELETE CASCADE,
       FOREIGN KEY (Piatto) REFERENCES Piatto(IdPiatto) ON DELETE CASCADE
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Account
--- di VariantePiatto e Username di Account e tra Piatto 
--- di VariantePiatto e IdPiatto di Piatto
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE ModificaVariazione (
@@ -446,8 +428,7 @@ CREATE TABLE ModificaVariazione (
       PRIMARY KEY (IdModifica),
       FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esiste un vincolo di integrita referenziale tra l'attributo 
--- VariantePiatto di ModificaVariazione e IdVariante di VariantePiatto
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE ValutazioneVariazione (
@@ -460,9 +441,7 @@ CREATE TABLE ValutazioneVariazione (
       FOREIGN KEY (VariantePiatto) REFERENCES VariantePiatto(IdVariante),
       CHECK (Valutazione >= 0 OR Valutazione <= 5)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Account
--- di ValutazioneRecensione e Username di Account e tra Recensione 
--- di ValutazioneRecensione e IdRecensione di Recensione
+
 --------------------------------------------------------------------------------
 
 CREATE TABLE Serata (
@@ -480,6 +459,3 @@ CREATE TABLE Serata (
       FOREIGN KEY (Account) REFERENCES Account(Username),
       FOREIGN KEY (Sala)  REFERENCES Sala(IdSala)
 )ENGINE=INNODB DEFAULT CHARSET=latin1;
--- Esistono due vincoli di integrita referenziale tra l'attributo Account
--- di Serata e Username di Account e tra Sala 
--- di Seraya e IdSala di Sala

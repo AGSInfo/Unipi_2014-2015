@@ -122,6 +122,10 @@ BEGIN
 	end if;
     
 END $$
+
+DELIMITER ;
+
+
 DELIMITER $$
 
 -- Trigger che gestisce in automatico la ridondanza allergene
@@ -134,3 +138,29 @@ BEGIN
 		UPDATE Ricetta SET allergene = TRUE where IdRicetta = NEW.Ricetta;
 	end if;
 END $$
+DELIMITER ;
+DELIMITER $$
+
+CREATE TRIGGER GestioneVariazione BEFORE INSERT ON OrdineVariazione
+FOR EACH ROW
+BEGIN
+	-- Verifico il numero di Variazioni Inserite
+	SET @Variazioni = (Select count(*) from OrdineVariazione OV where OV.IdOrdine = O.IdOrdine)
+	IF(Variazioni > 3) then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT="Massimo 3 variazioni";
+	else
+	-- Verifico l'integrita della varizione
+		SET @Presente = (Select count(*) VariazioniPiatto VP
+					 	inner join OrdineVariazione OV 
+					 	on VP.IdVariazione = OV.IdVariazione
+					 	inner join Ordine O
+					 	on OV.IdOrdine = O.IdOrdine
+					 	where VP.IdVariazione = NEW.IdVariazione
+					 	and O.IdOrdine = NEW.IdOrdine
+					 	and O.IdPiatto = VP.IdPiatto);
+		if(@Presente < 1) then
+				SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT="Variazione non consentita";
+		end if;
+	end if;
+END $$
+DELIMITER ;
