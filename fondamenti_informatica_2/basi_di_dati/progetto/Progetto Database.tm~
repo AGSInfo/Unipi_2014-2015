@@ -38,50 +38,53 @@
 
   <subsection|Glossario>
 
-  <item*|Account>Profilo personale di un cliente iscritto tramite il portale
-  online
+  <\description>
+    <item*|Account>Profilo personale di un cliente iscritto tramite il
+    portale online
 
-  <item*|Comanda>Prenotazione da parte di un tavolo oppure di un account per
-  una determinata ora
+    <item*|Comanda>Prenotazione da parte di un tavolo oppure di un account
+    per una determinata ora
 
-  <item*|Tavolo>Struttura che permette ad numero prefissato di persone di
-  consumare del cibo all'interno di una data sala
+    <item*|Tavolo>Struttura che permette ad numero prefissato di persone di
+    consumare del cibo all'interno di una data sala
 
-  <item*|Sala>Luogo fisico appartenente ad una determinata sede al cui
-  interno sono contenuti dei tavoli
+    <item*|Sala>Luogo fisico appartenente ad una determinata sede al cui
+    interno sono contenuti dei tavoli
 
-  <item*|TakeAway>Servizio che permette di consumare un pasto al di fuori
-  della sede
+    <item*|TakeAway>Servizio che permette di consumare un pasto al di fuori
+    della sede
 
-  <item*|Ingrediente>Unità indivisibile che compone le ricette
+    <item*|Ingrediente>Unità indivisibile che compone le ricette
 
-  <item*|Confezione>Contenitore di una certa quantità di un dato ingrediente
+    <item*|Confezione>Contenitore di una certa quantità di un dato
+    ingrediente
 
-  <item*|Magazzino>Luogo di stoccaggio delle confezioni, assegnato
-  univocamente ad una sede
+    <item*|Magazzino>Luogo di stoccaggio delle confezioni, assegnato
+    univocamente ad una sede
 
-  <item*|Passo (ricetta)>Passo che compone una ricetta; fa riferimento ad al
-  massimo un ingrediente ed uno strumento utilizzato.
+    <item*|Passo (ricetta)>Passo che compone una ricetta; fa riferimento ad
+    al massimo un ingrediente ed uno strumento utilizzato.
 
-  <item*|Pony>Mezzo di trasporto a due o quattro ruote che permette di
-  consegnare a domicilio un pasto
+    <item*|Pony>Mezzo di trasporto a due o quattro ruote che permette di
+    consegnare a domicilio un pasto
 
-  <item*|Sede>Struttura fisica presso la quale è possibile consumare pasti
+    <item*|Sede>Struttura fisica presso la quale è possibile consumare pasti
 
-  <item*|Scaffale>Struttura adibita al contenimento di una o più confezioni
+    <item*|Scaffale>Struttura adibita al contenimento di una o più confezioni
 
-  <item*|Prenotazione>Richiesta da parte di un account di prenotazione di un
-  tavolo presso una determinata sede
+    <item*|Prenotazione>Richiesta da parte di un account di prenotazione di
+    un tavolo presso una determinata sede
 
-  <item*|Recensione>Valutazione da parte di un account di un piatto oppure di
-  un ristorante
+    <item*|Recensione>Valutazione da parte di un account di un piatto oppure
+    di un ristorante
 
-  <item*|Valutazione recensione>Valutazione da parte di un account di una
-  recensione scritta da un altro account
+    <item*|Valutazione recensione>Valutazione da parte di un account di una
+    recensione scritta da un altro account
 
-  <item*|Serata>Evento della durata di una sera che prevede un determinato
-  allestimento, l'utilizzo di un certo numero di tavoli e l'occupazione di
-  una data sala
+    <item*|Serata>Evento della durata di una sera che prevede un determinato
+    allestimento, l'utilizzo di un certo numero di tavoli e l'occupazione di
+    una data sala
+  </description>
 
   <subsection|Associazioni>
 
@@ -247,7 +250,113 @@
   50 = 60 in media>>|<row|<cell|Richiesta>|<cell|R>|<cell|10000>|<cell|In
   media ogni comanda richiede 2 piatti>>|<row|<cell|Ordine>|<cell|E>|<cell|10000>|<cell|Cardinalità
   (1,1) con Richiesta>>|<row|<cell|IngredienteRicetta>|<cell|R>|<cell|600>|<cell|In
-  media 1 ricetta usa 6 Ingredienti>>>>>
+  media 1 ricetta usa 6 Ingredienti>>|<row|<cell|OrdineVariazione>|<cell|R>|<cell|5000>|<cell|In
+  media un ordine su due richiede una varia>>>>>
+
+  <subsubsection|Analisi Ridondanze>
+
+  Dalle Tavole di accesso è possibile vedere che le due ridondanze
+  (l'attributo allergene e l'associazione ingredientePiatto) portano alcuni
+  benefici in termini di operazioni elementari, anche se non in grande
+  quantità. Data la natura delle ridondanze è comunque opportuno conservarle
+  in quanto non sono richieste particolari operazioni di aggiornamento in
+  quanto sia gli ingrdienti necessari che l'indicazione se un piatto è un
+  allergene o meno sono ridondanze che una volta ottenuto non necessitano di
+  aggiornamenti,fatta eccezione per alcuni rarrissimi casi.
+
+  <subsection|Vincoli di Integrita Referenziali>
+
+  - Esiste un vincolo di integrita referenziale tra l'attributo IdSede di
+  Magazzino e IdSede di Sede
+
+  - Esiste un vincolo di integrita referenziale tra l'attributo IdMagazzino
+  di Magazzino e IdMagazzino di Magazzino
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Ingrediente
+  di Confezione e IdIngrediente di Ingrediente e tra Scaffale di Confezione e
+  IdScaffale di Scaffale
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sede di
+  Strumento e IdSede di Sede
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo
+  IngredientePrincipale di Ricetgta e IdIngrediente di Ingrediente
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Ingrediente
+  di IngredienteRicetta e IdIngrediente di Ingrediente e tra Ricetta di
+  IngredienteRicetta e IdRicetta di Ricetta
+
+  -Esistono tre vincoli di integrita referenziale tra l'attributo Ingrediente
+  di Passo e IdIngrediente di Ingrediente e tra Ricetta di Passo e IdRicetta
+  di Ricetta e tra Struemnto di Passo e IdStrumento di Strumento
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sede di Menu e
+  IdSede di Sede
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Ricetta di
+  Piatto e IdRicetta di Ricetta
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo IdMenu di
+  Menu_Piatto e \ IdMenu di Menu \ e tra IdPiatto di Menu_Piatto e IdPiatto
+  di Piatto
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo IdPiatto di
+  VariazioniPiatto e IdPiatto di Piatto
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sede di Sala e
+  IdSede di Sede
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Sala di tavolo
+  e IdSala di Sala
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Comanda di
+  Ordine e IdComanda di di Comanda e tra Piatto di Ordine e IdPiatto di
+  Piatto
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo IdOrdine di
+  OrdineVariazione e IdOrdine di di Ordine e tra IdVariazione di
+  OrdineVariazione e IdVariazione di VaraizioniPiatto
+
+  -Esistno due vincoli di integrita referenziale tra l'attributo Account di
+  Prenotazione e Username di Account e tra Tavolo di prenotazione e IdTavolo
+  di Tavolo
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Comanda di
+  StatoConsegna e IdComanda di Comanda e tra Pony di StatoConsegna e IdPony
+  di Pony
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  Recensione e Username di Account e tra PiattoRecensito di Recensione e
+  IdPiatto \ di Piatto
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo
+  IdRecensione di Compilazione e IdRecensione di Recensione e tra IdDomanda
+  di Recensione e IdDomanda di Domanda
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  ValutazioneRecensione e Username di Account e tra Recensione di
+  ValutazioneRecensione e IdRecensione di Recensione
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo Accountdi
+  PropostaPiatto e Username di Account
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Proposta di
+  IngredienteNuovoPiatto e IdPropostaPiatto di PropostaPiatto e tra
+  Ingrediente di IngredientNuovoPiatto e IdIngrediente di Ingredinete
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  ValutazioneRecensione e Username di Account e tra Recensione di
+  ValutazioneRecensione e IdRecensione di Recensione
+
+  -Esiste un vincolo di integrita referenziale tra l'attributo VariantePiatto
+  di ModificaVariazione e IdVariante di VariantePiatto
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  ValutazioneRecensione e Username di Account e tra Recensione di
+  ValutazioneRecensione e IdRecensione di Recensione
+
+  -Esistono due vincoli di integrita referenziale tra l'attributo Account di
+  Serata e Username di Account e tra Sala di Seraya e IdSala di Sala
 
   \;
 
@@ -318,10 +427,11 @@
 
   Comanda è in BCNF
 
-  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto, Variazione1, Variazione2,
-  Variazione3
+  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto,Stato
 
   Ordine è in BCNF
+
+  OrdineVariazione è in BCNF
 
   Username \ \ \<gtr\> \ \ Password, Nome, Cognome, Via, nCivico, Comune,
   Citta, FruibilitàPrenotazioni, Sesso
@@ -387,8 +497,6 @@
 
   Serata è in BCNF
 
-  <subsection|Schema logico>
-
   <section|Creazione Database>
 
   \;
@@ -410,8 +518,8 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|3.4|4>>
-    <associate|auto-11|<tuple|4|5>>
+    <associate|auto-10|<tuple|3.3|6>>
+    <associate|auto-11|<tuple|3.4|6>>
     <associate|auto-12|<tuple|4|6>>
     <associate|auto-13|<tuple|4|6>>
     <associate|auto-14|<tuple|3.2.7|6>>
@@ -449,9 +557,9 @@
     <associate|auto-43|<tuple|4|?>>
     <associate|auto-5|<tuple|3|1>>
     <associate|auto-6|<tuple|3.1|1>>
-    <associate|auto-7|<tuple|3.2|3>>
-    <associate|auto-8|<tuple|3.2.1|3>>
-    <associate|auto-9|<tuple|3.3|4>>
+    <associate|auto-7|<tuple|3.2|2>>
+    <associate|auto-8|<tuple|3.2.1|2>>
+    <associate|auto-9|<tuple|3.2.2|4>>
   </collection>
 </references>
 
@@ -466,7 +574,7 @@
       Concettuale> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Glossario degli attributi
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Glossario
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
@@ -494,13 +602,9 @@
       normalizzazione (BCNF) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|3.4<space|2spc>Schema logico
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Creazione
       Database> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11><vspace|0.5fn>
+      <no-break><pageref|auto-10><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

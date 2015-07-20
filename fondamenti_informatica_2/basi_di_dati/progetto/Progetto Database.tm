@@ -86,77 +86,9 @@
     una data sala
   </description>
 
-  <subsection|Associazioni>
-
   <section|Progettazione Logica>
 
   <subsection|Modello Logico>
-
-  - Account(Username,Password,Nome,Cognome,Via,nCivico,Comune,Citta,Fruibilit‡Prenotazioni,Sesso)
-
-  - Comanda(IdComanda,Tavolo,Ora,TakeAway,Account,Stato,Prezzo)
-
-  - Compilazione(IdDomanda,IdRecensione,IdRisposta)
-
-  - Confezione(IdConfezione,Peso,PrezzoAcquisto,DataAquisto,DataConsegna,DataScadenza,Aspetto,Stato,QuantitaRimanente,Ingrediente,Scaffale)
-
-  - DomandeQuestionario(IdDomanda,Domanda)
-
-  - Ingrediente(IdIngrediente,Nome,Provenienza,TipoProduzione,Allergene)
-
-  - IngredienteNuovoPiatto(PropostaPiatto,Ingrediente,Quantit‡)
-
-  - IngredienteRicetta(Ricetta,Ingrediente,Quantit‡)
-
-  - Magazzino(IdMagazzino,IdSede)
-
-  - Menu(IdMenu,Sede,DataInizio,DataFine)
-
-  - ModificaVariazione(IdModifica,VariantePiatto,Modifica)
-
-  - Ordine(IdOrdine,Comanda,Piatto,Variazione1,Variazione2,Variazione3,OrdineConsegna,Stato)
-
-  - Passo(Ricetta,nPasso,DescrizionePasso,Strumento,TempoUtilizzo,Ingrediente,QuantitaUtilizzata)
-
-  - Piatto(IdPiatto,Menu,Ricetta,Novita)
-
-  - Pony(IdPony,TipoMezzo,Stato)
-
-  - PossibilitaRisposta(IdDomanda,IdRisposta)
-
-  - Prenotazione(IdPrenotazione,Account,NumeroTelefono,Tavolo,OraPrenotazione,nPersone)
-
-  - PropostaPiatto(idPropostaPiatto,Account,Nome)
-
-  - Recensione(IdRecensione,Account,GiudizioGlobale,GiudizioTesto)
-
-  - Ricetta(IdRicetta,TestoRicetta)
-
-  - Risposta(IdRisposta,Risposta,Scala)
-
-  - Scaffale(IdScaffale,IdMagazzino)
-
-  - Sede(IdSede,via,nCivico,Citta)
-
-  - Serata(IdSerata,Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrganizzatoreSala,Allestimento,nPersone)
-
-  - StatoConsegna(IdStato,Comanda,Pony,Stato,Ora,Data)
-
-  - Strumenti(IdStrumento,Tipo,Nome)
-
-  - Utilizzo(IdUtilizzo,DescrizioneUtilizzo)
-
-  - UtilizzoStrumento(Utilizzo,Strumento)
-
-  - ValutazionePropostaPiatto(Account,PropostaPiatto,Valutazione,Descrizione)
-
-  - ValutazioneRecensione(Account,Recensione,Veridicita,Accuratezza,Descrizione)
-
-  - ValutazioneVariazione(Account,VariantePiatto,Valutazione)
-
-  - VariantePiatto(IdVariante,Account,Piatto)
-
-  - VariazionePiatto(IdPiatto,DescrizioneVariazione)
 
   <subsection|Analisi di alcune operazioni effettuabili>
 
@@ -250,9 +182,19 @@
   50 = 60 in media>>|<row|<cell|Richiesta>|<cell|R>|<cell|10000>|<cell|In
   media ogni comanda richiede 2 piatti>>|<row|<cell|Ordine>|<cell|E>|<cell|10000>|<cell|Cardinalit‡
   (1,1) con Richiesta>>|<row|<cell|IngredienteRicetta>|<cell|R>|<cell|600>|<cell|In
-  media 1 ricetta usa 6 Ingredienti>>>>>
+  media 1 ricetta usa 6 Ingredienti>>|<row|<cell|OrdineVariazione>|<cell|R>|<cell|1000>|<cell|In
+  media un ordine su dieci richiede una variazione>>>>>
 
-  \;
+  <subsubsection|Analisi Ridondanze>
+
+  Dalle Tavole di accesso Ë possibile vedere che le due ridondanze
+  (l'attributo allergene e l'associazione ingredientePiatto) portano alcuni
+  benefici in termini di operazioni elementari, anche se non in grande
+  quantit‡. Data la natura delle ridondanze Ë comunque opportuno conservarle
+  in quanto non sono richieste particolari operazioni di aggiornamento in
+  quanto sia gli ingrdienti necessari che l'indicazione se un piatto Ë un
+  allergene o meno sono ridondanze che una volta ottenuto non necessitano di
+  aggiornamenti,fatta eccezione per alcuni rarrissimi casi.
 
   <subsection|Vincoli di Integrita Referenziali>
 
@@ -540,15 +482,15 @@
     <associate|auto-37|<tuple|3.1.8|?>>
     <associate|auto-38|<tuple|3.1.9|?>>
     <associate|auto-39|<tuple|3.1.10|?>>
-    <associate|auto-4|<tuple|2.2|1>>
+    <associate|auto-4|<tuple|3|1>>
     <associate|auto-40|<tuple|3.2|?>>
     <associate|auto-41|<tuple|3.3|?>>
     <associate|auto-42|<tuple|3.4|?>>
     <associate|auto-43|<tuple|4|?>>
-    <associate|auto-5|<tuple|3|1>>
-    <associate|auto-6|<tuple|3.1|1>>
-    <associate|auto-7|<tuple|3.2|2>>
-    <associate|auto-8|<tuple|3.2.1|2>>
+    <associate|auto-5|<tuple|3.1|1>>
+    <associate|auto-6|<tuple|3.2|1>>
+    <associate|auto-7|<tuple|3.2.1|2>>
+    <associate|auto-8|<tuple|3.2.2|2>>
     <associate|auto-9|<tuple|3.3|4>>
   </collection>
 </references>

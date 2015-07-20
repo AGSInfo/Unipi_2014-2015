@@ -15,24 +15,25 @@ Ricetta(\ul IdRicetta\ulnone ,TestoRicetta,IngredientePrincipale,Quantita,Allerg
 IngredientiRicetta(\ul Ricetta,Ingrediente\ulnone ,Quantit\'e0)\
 Passo(\ul Ricetta,nPasso\ulnone ,DescrizionePasso,Strumento,TempoUtilizzo,Ingrediente,QuantitaUtilizzata)\
 Menu(\ul IdMenu\ulnone ,Sede,DataInizio,DataFine)\
+Piatto(\ul IdPiatto\ulnone ,Nome,Novit\'e0, Ricetta)\
 Menu_Piatto(\ul IdMenu,IdPiatt\ulnone o)\
-Piatto(\ul IdPiatto\ulnone ,Ricetta,Novita)\
 VariazioniPiatto(\ul IdVariazione\ulnone ,IdPiatto,DescrizioneVariazione)\
-Prenotazione(IdPrenotazione,Account,Telefono,nPersone,Tavolo,OraPrenotaziones)\
-Comanda(\ul IdComanda\ulnone ,IdTavolo,Ora,TakeAway,Account,Stato,Prezzo)\
+Sala(\ul IdSala\ulnone ,Sede)\
+Tavolo(\ul IdTavolo\ulnone ,NumTavolo,Posti,Sala)\
+Comanda(\ul IdComanda\ulnone ,IdTavolo,Ora,TakeAway,Account,Stato)\
 Ordine(\ul IdOrdine\ulnone ,Comanda,Piatto,Stato)\
 OrdineVariazione(\ul IdOrdine,IdVariazione\ulnone )\
+Account(\ul Username\ulnone ,Password,Nome,Cognome,Via,nCivico,Comune,Citta,Fruibilit\'e0Prenotazioni,Sesso)\
 Prenotazione(\ul IdPrenotazione\ulnone ,Account,NumeroTelefono,Tavolo,OraPrenotazione,nPersone)\
 Pony(\ul IdPony\ulnone ,TipoMezzo,Stato)\
-StatoConsegna(\ul IdStato\ulnone ,Comanda,Pony,Stato,Ora,Data)\
-Account(\ul Username\ulnone ,Password,Nome,Cognome,Via,nCivico,Comune,Citta,Fruibilit\'e0Prenotazioni,Sesso)\
-Recensione(\ul IdRecensione\ulnone ,Account,GiudizioGlobale,GiudizioTesto)\
+StatoConsegna(\ul IdStato\ulnone ,Comanda,Pony,Stato,Ora)\
+Recensione(\ul IdRecensione\ulnone ,Account,GiudizioGlobale,GiudizioTesto,DataRecensione,Tipo,PiattoRecensito)\
+DomandaQuestionario\ul (IdDomanda,\ulnone Domanda)\
 Compilazione(\ul IdRecensione,IdDomanda,\ulnone Risposta)\
-Domande\ul (IdDomanda,\ulnone DescrizioneDomanda)\
 ValutazioneRecensione(\ul Account,Recensione\ulnone ,Veridicita,Accuratezza,Descrizione)\
-PropostaPiatto(\ul idPropostaPiatto\ulnone ,Account,Nome)\
+PropostaPiatto(\ul IdPropostaPiatto\ulnone ,Account,Nome)\
 IngredientiNuovoPiatto(\ul PropostaPiatto\ulnone ,\ul Ingrediente\ulnone ,Quantit\'e0)\
-ValutazionePropostaPiatto(\ul Account,PropostaPiatto\ulnone ,Valutazione)\
+ValutazionePropostaPiatto(\ul Account,PropostaPiatto\ulnone ,Valutazione,Descrizione)\
 VariantePiatto(\ul IdVariante\ulnone ,Account,Piatto)\
 ModificaVariazione(\ul IdModifica\ulnone ,VariazionePiatto,Modifica)\
 ValutazioneVariazione(\ul Account,VariazionePiatto\ulnone ,Valutazione)\
