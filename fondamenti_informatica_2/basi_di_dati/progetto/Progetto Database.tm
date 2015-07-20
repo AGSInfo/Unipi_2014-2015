@@ -417,10 +417,11 @@
 
   Comanda Ë in BCNF
 
-  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto, Variazione1, Variazione2,
-  Variazione3
+  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto,Stato
 
   Ordine Ë in BCNF
+
+  OrdineVariazione Ë in BCNF
 
   Username \ \ \<gtr\> \ \ Password, Nome, Cognome, Via, nCivico, Comune,
   Citta, Fruibilit‡Prenotazioni, Sesso
