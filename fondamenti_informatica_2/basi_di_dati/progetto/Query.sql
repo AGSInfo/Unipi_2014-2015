@@ -319,3 +319,29 @@ inner join Ricetta R on P.Ricetta = R.IdRicetta inner join Passo P
 on R.IdRicetta = P.Ricetta
 where M.DataFine IS NULL
 group BY P.Ingrediente
+
+-- Query 10
+/*
+      Per ogni tipologia di Pony, elencare il numero di mezzi liberi
+
+      TAVOLA ACCESSI
+      (nessuna ridondanza)
+
+	Frequenza: 20 volte al giorno
+
+      OPERAZIONI ELEMENTARI LETTURA:
+
+	- Effettuo 50 letture su Pony per trovare quelli liberi
+
+	Letture in un giorno: 20 x 50 = 1000
+
+*/
+
+SELECT
+      P.TipoMezzo,
+      COUNT(*)
+FROM
+      Pony P
+WHERE
+      P.Stato = 'libero'
+GROUP BY P.TipoMezzo;
