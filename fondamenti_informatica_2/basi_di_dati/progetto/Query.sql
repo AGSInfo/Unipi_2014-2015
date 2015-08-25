@@ -318,7 +318,7 @@ inner join Piatto P on MP.Piatto = P.IdPiatto
 inner join Ricetta R on P.Ricetta = R.IdRicetta inner join Passo P
 on R.IdRicetta = P.Ricetta
 where M.DataFine IS NULL
-group BY P.Ingrediente
+group BY P.Ingrediente;
 
 -- Query 10
 /*
@@ -345,3 +345,36 @@ FROM
 WHERE
       P.Stato = 'libero'
 GROUP BY P.TipoMezzo;
+
+-- Query 11
+/*
+
+      Indicare Quale sia la sede avente la cucina meno fornita
+	  ed indicare quali piatti non possono essere preparati
+	  con gli strumenti di tale cucina
+
+*/
+
+Create or replace VIEW CucinaMenoFornita as 
+
+Select S.IdSede from Sede S inner join Strumento ST
+on S.IdSede = ST.Sede 
+group by S.IdSede
+having count(Distinct ST.Nome) <= 
+ALL (Select count(Distinct ST2.Nome) 
+	from Sede S2 inner join Strumento ST2
+	group by S2.Sede);
+    
+Select P.IdPiatto,P.Nome from Piatto P 
+where Exists 
+	(Select * from Piatto P2 inner join 
+	 Ricetta R on P2.Ricetta = R.IdRicetta 
+	 inner join Passo PA on PA.Ricetta = R.IdRicetta
+	 where P2.IdPiatto = P.IdPiatto 
+	 AND PA.Strumento NOT IN
+	 	(Select S.Nome 
+		from CucinaMenoFornita CF inner join StrumentoSede SS 
+		on SS.Sede = CF.Sede 
+		inner join
+		Strumento S on SS.Strumento = S.Nome);
+	 

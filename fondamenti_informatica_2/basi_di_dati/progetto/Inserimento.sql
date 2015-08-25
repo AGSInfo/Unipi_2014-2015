@@ -91,6 +91,12 @@ INSERT INTO Strumento (Tipo,Nome,Utilizzo) VALUES
 ('S',"Taglia Verdure","Tagliare le Verdure"),('S',"Lavello","Lavare gli ingrediento"),
 ('S',"Fornelli","Cuocere a fiamma"),('M',"Affettatrice","Affettare la carne"),
 ('S',"Brace","Cottura");
+-- -----------------------------------------------------------------------
+Truncate Table StrumentoSede;
+
+INSERT INTO StrumentoSede (Strumento,Sede) VALUES
+("Forno",1),("Forno",2),("Forno",3),("Fornelli",1),("Fornelli",2),
+("Mixer",1),("Mixer",5),("Mixer",6),("Mixer",8),("Forno",8),("Taaglia Verdure",1),("Taglia Verdure",4),("Brace",1);
 
 -- -----------------------------------------------------------------------------------
 Truncate Table Ricetta;
@@ -160,15 +166,15 @@ irrorate con una parte del burro di cottura, dopo averle decorate con spicchi di
 TRUNCATE TABLE Passo;
 INSERT INTO Passo (Ricetta,nPasso,DescrizionePasso,Strumento,TempoUtilizzo, Ingrediente,QuantitaUtilizzata) VALUES
       (1,1,"Salare e pepare 1.5 Kg di pollo diviso in 8 pezzi",NULL,3,11,1500),
-      (1,2,"Soffriggere le interiora del pollo e uniscile agli 8 pezzi",9,5,NULL,NULL),
-      (1,3,"Aggiungere Brodo e Acqua fino a raggiungere 5 cm",NULL,2,12,20),
+      (1,2,"Soffriggere le interiora del pollo e uniscile agli 8 pezzi","Fornelli",5,NULL,NULL),
+      (1,3,"Aggiungere Brodo e Acqua fino a raggiungere 5 cm","Fornelli",2,12,20),
       (1,4,"Preparare il Sugo con due tuorli di uova",NULL,2,5,2),
       (1,5,"Aggiungere il succo di Limone e condire con sale e pepe",NULL,1,13,1),
       (1,6,"Servire in Tavola",NULL,NULL,NULL,NULL),
-      (2,1,"Buttare i pomodori in una pentola di acqua salata e lasciarli bollire per 2 minuti",NULL,3,18,100),
+      (2,1,"Buttare i pomodori in una pentola di acqua salata e lasciarli bollire per 2 minuti","Fornelli",3,18,100),
       (2,2,"Pelare i pomodori e versarli in una pentola insieme a 3 cucchiai di olio",NULL,1,NULL,NULL),
       (2,3,"Tritare le cipolle e falle soffiriggere nel l'olio insieme ai pomodori a fiamma media",NULL,25,19,20),
-      (2,4,"Preparare gli spacchetti facendoli bollire",NULL,14,20,100),
+      (2,4,"Preparare gli spacchetti facendoli bollire","Fornelli",14,20,100),
       (2,5,"Condire gli spaghetti scolati con il sugo",NULL,1,NULL,NULL);
 
 -- ------------------------------------------------------------------------------

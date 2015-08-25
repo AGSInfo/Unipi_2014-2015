@@ -32,7 +32,7 @@
     \;
   </doc-data>
 
-  <section|Introduzione>
+  \;
 
   <section|Progettazione Concettuale>
 
@@ -86,77 +86,12 @@
     una data sala
   </description>
 
-  <subsection|Associazioni>
+  <subsection|Modello Concettuale (Schema ER)>
+
+  In Allegato trovate lo Schema Entity-Relationship del progetto da noi
+  effettuato.
 
   <section|Progettazione Logica>
-
-  <subsection|Modello Logico>
-
-  - Account(Username,Password,Nome,Cognome,Via,nCivico,Comune,Citta,Fruibilit‡Prenotazioni,Sesso)
-
-  - Comanda(IdComanda,Tavolo,Ora,TakeAway,Account,Stato,Prezzo)
-
-  - Compilazione(IdDomanda,IdRecensione,IdRisposta)
-
-  - Confezione(IdConfezione,Peso,PrezzoAcquisto,DataAquisto,DataConsegna,DataScadenza,Aspetto,Stato,QuantitaRimanente,Ingrediente,Scaffale)
-
-  - DomandeQuestionario(IdDomanda,Domanda)
-
-  - Ingrediente(IdIngrediente,Nome,Provenienza,TipoProduzione,Allergene)
-
-  - IngredienteNuovoPiatto(PropostaPiatto,Ingrediente,Quantit‡)
-
-  - IngredienteRicetta(Ricetta,Ingrediente,Quantit‡)
-
-  - Magazzino(IdMagazzino,IdSede)
-
-  - Menu(IdMenu,Sede,DataInizio,DataFine)
-
-  - ModificaVariazione(IdModifica,VariantePiatto,Modifica)
-
-  - Ordine(IdOrdine,Comanda,Piatto,Variazione1,Variazione2,Variazione3,OrdineConsegna,Stato)
-
-  - Passo(Ricetta,nPasso,DescrizionePasso,Strumento,TempoUtilizzo,Ingrediente,QuantitaUtilizzata)
-
-  - Piatto(IdPiatto,Menu,Ricetta,Novita)
-
-  - Pony(IdPony,TipoMezzo,Stato)
-
-  - PossibilitaRisposta(IdDomanda,IdRisposta)
-
-  - Prenotazione(IdPrenotazione,Account,NumeroTelefono,Tavolo,OraPrenotazione,nPersone)
-
-  - PropostaPiatto(idPropostaPiatto,Account,Nome)
-
-  - Recensione(IdRecensione,Account,GiudizioGlobale,GiudizioTesto)
-
-  - Ricetta(IdRicetta,TestoRicetta)
-
-  - Risposta(IdRisposta,Risposta,Scala)
-
-  - Scaffale(IdScaffale,IdMagazzino)
-
-  - Sede(IdSede,via,nCivico,Citta)
-
-  - Serata(IdSerata,Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrganizzatoreSala,Allestimento,nPersone)
-
-  - StatoConsegna(IdStato,Comanda,Pony,Stato,Ora,Data)
-
-  - Strumenti(IdStrumento,Tipo,Nome)
-
-  - Utilizzo(IdUtilizzo,DescrizioneUtilizzo)
-
-  - UtilizzoStrumento(Utilizzo,Strumento)
-
-  - ValutazionePropostaPiatto(Account,PropostaPiatto,Valutazione,Descrizione)
-
-  - ValutazioneRecensione(Account,Recensione,Veridicita,Accuratezza,Descrizione)
-
-  - ValutazioneVariazione(Account,VariantePiatto,Valutazione)
-
-  - VariantePiatto(IdVariante,Account,Piatto)
-
-  - VariazionePiatto(IdPiatto,DescrizioneVariazione)
 
   <subsection|Analisi di alcune operazioni effettuabili>
 
@@ -174,7 +109,7 @@
 
   <tabular|<tformat|<cwith|3|3|4|4|cell-lborder|2
   >|<cwith|3|3|4|4|cell-rborder|2 >|<cwith|3|3|4|4|cell-bborder|2
-  >|<cwith|3|3|4|4|cell-tborder|2 >|<cwith|2|2|3|3|cell-hyphen|n>|<twith|table-hmode|auto>|<cwith|13|13|4|4|cell-vpart|10>|<table|<row|<cell|<with|font-series|bold|Nome>>|<cell|<with|font-series|bold|Tipo>>|<cell|<with|font-series|bold|Volume>>|<with|font-series|bold|Motivazione>>|<row|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|Sede>|<cell|E>|<cell|5>|<cell|Si
+  >|<cwith|3|3|4|4|cell-tborder|2 >|<cwith|2|2|3|3|cell-hyphen|n>|<cwith|13|13|4|4|cell-vpart|10>|<table|<row|<cell|<with|font-series|bold|Nome>>|<cell|<with|font-series|bold|Tipo>>|<cell|<with|font-series|bold|Volume>>|<with|font-series|bold|Motivazione>>|<row|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|Sede>|<cell|E>|<cell|5>|<cell|Si
   presume che il sistema centralizzato gestisca 5 sedi
   >>|<row|<cell|Possiede>|<cell|R>|<cell|10>|<cell|In media ogni Sede ha 2
   magazzini>>|<row|<cell|Magazzino>|<cell|E>|<cell|10>|<cell|Cardinalit‡
@@ -189,13 +124,14 @@
   uno scaffale conterr‡ 5 confezioni (2000 / 400 =
   5)>>|<row|<cell|Ricetta>|E|<cell|100>|<cell|Si ipotizza che siano inserite
   nel sistema 100 diverse ricette>>|<row|<cell|Principale>|<cell|R>|<cell|50>|<cell|Si
-  ipotizza che in media solo 0,5 ricette richiedano un ingrediente
+  ipotizza che in media solo 0,5 ricette con un ingrediente
   principale>>|<row|<cell|Procedimento>|<cell|R>|<cell|1000>|<cell|In media
   una ricetta Ë composta da 10 passaggi>>|<row|<cell|Passi>|<cell|E>|<cell|1000>|<cell|Cardinalit‡
   (1,1) con Procedimento>>|<row|<cell|IngrdientePasso>|<cell|R>|<cell|1000>|<cell|Cardinalit‡
   (1,1) con Passi>>|<row|<cell|Utilzzo>|<cell|R>|<cell|1000>|<cell|CardinalitÚ
   (1,1) con Passi>>|<row|<cell|Strumento>|<cell|E>|<cell|40>|<cell|Si ipotzza
-  siano presenti 40 struementi>>|<row|<cell|Locazione>|<cell|R>|<cell|5>|<cell|Cardinalit‡
+  siano presenti 40 struementi>>|<row|<cell|StrumentoSede>|<cell|R>|<cell|400>|<cell|In
+  Media ogni cucina Ë composta da 10 strumenti>>|<row|<cell|Locazione>|<cell|R>|<cell|5>|<cell|Cardinalit‡
   (0,1) con Sede>>|<row|<cell|Esposizione>|<cell|R>|<cell|100>|<cell|Si
   ipotizza che in media vengano memorizzato 20 menu per sede
   >>|<row|<cell|Menu>|<cell|E>|<cell|100>|<cell|Cardinalit‡ (1,1) con
@@ -211,7 +147,7 @@
   ogni sala Ë composta da 10 tavoli>>|<row|<cell|Tavolo>|<cell|E>|<cell|400>|<cell|Cardinalit‡(1,1)
   con Presenza>>|<row|<cell|Account>|<cell|E>|<cell|500>|<cell|Si ipotizzano
   che siano registrati 500 account nel sistema>>|<row|<cell|RelazioneAP>|<cell|R>|<cell|2900>|<cell|In
-  media ogni account effettua 5 prenotazioni e 400 invece siano
+  media ogni account effettua 5 prenotazioni e 400 sono
   telefoniche>>|<row|<cell|Prenotazione>|<cell|E>|<cell|2900>|<cell|Cardinalit‡(1,1)
   con RelazioneAP>>|<row|<cell|Occupa>|<cell|R>|<cell|2900>|<cell|Cardinalit‡(1,1)
   con Prenotazione>>|<row|<cell|Scrittura>|<cell|R>|<cell|1500>|<cell|In
@@ -220,7 +156,7 @@
   presume siano presenti 2000 Valutazioni di
   recensioni>>|<row|<cell|DomandeQuest>|<cell|E>|<cell|10>|<cell|Si
   ipotizzano 10 domande per questionario>>|<row|<cell|Compilazione>|<cell|R>|<cell|15000>|<cell|Ogni
-  questionario Ë composto da 10 domande da cui deve essere scelta una solo
+  questionario Ë composto da 10 domande con una solo
   risposta>>|<row|<cell|Organizzazione>|<cell|R>|<cell|100>|<cell|Si ipotizza
   che in media 0.2 account organizzino una
   serata>>|<row|<cell|Serata>|<cell|E>|<cell|100>|<cell|Cardinalit‡ (1,1) con
@@ -235,23 +171,29 @@
   account su 2 propone una variazione ad un
   piatto>>|<row|<cell|VariazionePiatto>|<cell|E>|<cell|250>|<cell|Cardinalit‡(1,1)
   con Proposta>>|<row|<cell|ElementiVar.>|<cell|R>|<cell|750>|<cell|Ogni
-  VariazionePiatto contiene in media tre modifiche ad un piatto
-  esistente>>|<row|<cell|ModificheVar.>|<cell|E>|<cell|750>|Cardinalit‡ (1,1)
-  con ElementiVariazione.>|<row|<cell|Locazione>|<cell|R>|<cell|4000>|<cell|In
+  VariazionePiatto contiene in media 3 modifiche ad un piatto
+  >>|<row|<cell|ModificheVar.>|<cell|E>|<cell|750>|Cardinalit‡ (1,1) con
+  ElementiVariazione.>|<row|<cell|Locazione>|<cell|R>|<cell|4000>|<cell|In
   media da ogni tavolo sono partite 10 comande>>|<row|<cell|Comanda>|<cell|E>|<cell|5000>|<cell|Cardinalit‡(1,1)
   con Locazione pi˘ 1000 comande take away>>|<row|<cell|Invio>|<cell|R>|<cell|1000>|<cell|Cardinalit‡(0,1)
-  con Comanda in quanto vengono inviate solo 1000 comande
-  take-away>>|<row|<cell|Pony>|<cell|E>|<cell|50>|<cell|Si ipotizzano 50 pony
-  presenti>>|<row|<cell|Associtato>|<cell|R>|<cell|5>|<cell|Cardinalit‡(1,1)
+  in quanto solo 1000 comande sono take away>>|<row|<cell|Pony>|<cell|E>|<cell|50>|<cell|Si
+  ipotizzano 50 pony presenti>>|<row|<cell|Associtato>|<cell|R>|<cell|5>|<cell|Cardinalit‡(1,1)
   con Sede (In media 10 pony per Sede)>>|<row|<cell|RelazioneC>|<cell|R>|<cell|3000>|<cell|Ogni
-  consegna prevede 3 stati (Partito,Consegnato,Tornato) quindi 3 * 1000 =
+  consegna prevede 3 stati quindi 3 * 1000 =
   3000>>|<row|<cell|StatiConsegna>|<cell|E>|<cell|3000>|<cell|Cardinalit‡(1,1)
   con \ RelazioneC>>|<row|<cell|Occupazione>|<cell|R>|<cell|60>|<cell|3000 /
   50 = 60 in media>>|<row|<cell|Richiesta>|<cell|R>|<cell|10000>|<cell|In
   media ogni comanda richiede 2 piatti>>|<row|<cell|Ordine>|<cell|E>|<cell|10000>|<cell|Cardinalit‡
   (1,1) con Richiesta>>|<row|<cell|IngredienteRicetta>|<cell|R>|<cell|600>|<cell|In
-  media 1 ricetta usa 6 Ingredienti>>|<row|<cell|OrdineVariazione>|<cell|R>|<cell|5000>|<cell|In
-  media un ordine su due richiede una varia>>>>>
+  media 1 ricetta usa 6 Ingredienti>>|<row|<cell|OrdineVariazione>|<cell|R>|<cell|1000>|<cell|In
+  media un ordine su dieci richiede una variazione>>>>>
+
+  <subsubsection|Operazioni significative sui Dati>
+
+  Sull'apposito documento Ë possibile trovare le operazioni fondamentale
+  effettuate sui dati divise in due parti: la prima prevede un analisi delle
+  operazioni effeuttate sui dati (lettura o scrittura) mentre la seconda
+  prevede la conversione di tale operazione nel linguaggio SQL.
 
   <subsubsection|Analisi Ridondanze>
 
@@ -263,6 +205,78 @@
   quanto sia gli ingrdienti necessari che l'indicazione se un piatto Ë un
   allergene o meno sono ridondanze che una volta ottenuto non necessitano di
   aggiornamenti,fatta eccezione per alcuni rarrissimi casi.
+
+  <subsection|Modello Logico>
+
+  <strong|Sede>(<underline|IdSede>,via,nCivico,Citta)
+
+  <strong|Magazzino>(<underline|IdMagazzino>,IdSede)
+
+  <strong|Scaffale>(<underline|IdScaffale>,IdMagazzino)
+
+  <strong|Confezione>(<underline|IdConfezione>,Peso,PrezzoAcquisto,DataAquisto,DataConsegna,DataScadenza,Aspetto,Stato,QuantitaRimanente,Ingrediente,Scaffale)
+
+  <strong|Ingrediente>(<underline|IdIngrediente>,Nome,Provenienza,TipoProduzione,Allergene)
+
+  <strong|Strumento>(<underline|><underline|Nome>,Tipo,Utilizzo)
+
+  <strong|StrumentoSede>(<underline|Nome,Sede>)
+
+  <strong|Ricetta>(<underline|IdRicetta>,TestoRicetta,IngredientePrincipale,Quantita,Allergene)
+
+  <strong|IngredientiRicetta>(<underline|Ricetta,Ingrediente>,Quantit‡)
+
+  <strong|Passo>(<underline|Ricetta,nPasso>,DescrizionePasso,Strumento,TempoUtilizzo,Ingrediente,QuantitaUtilizzata)
+
+  <strong|Menu>(<underline|IdMenu>,Sede,DataInizio,DataFine)
+
+  <strong|Piatto>(<underline|IdPiatto>,Nome,Novit‡, Ricetta)
+
+  <strong|Menu_Piatto>(<underline|IdMenu>,IdPiatto)
+
+  <strong|VariazioniPiatto>(<underline|IdVariazione>,IdPiatto,DescrizioneVariazione)
+
+  <strong|Sala>(<underline|IdSala>,Sede)
+
+  <strong|Tavolo>(<underline|IdTavolo>,NumTavolo,Posti,Sala,Occupato)
+
+  <strong|Comanda>(<underline|IdComanda>,IdTavolo,Ora,TakeAway,Account,Stato)
+
+  <strong|Ordine>(<underline|IdOrdine>,Comanda,Piatto,Stato)
+
+  <strong|OrdineVariazione>(IdOrdine,IdVariazione)
+
+  <strong|Account>(<underline|Username>,Password,Nome,Cognome,Via,nCivico,Comune,Citta,Fruibilit‡Prenotazioni,Sesso)
+
+  <strong|Prenotazione>(<underline|IdPrenotazione>,Account,NumeroTelefono,Tavolo,OraPrenotazione,nPersone)
+
+  <strong|Pony>(<underline|IdPony>,TipoMezzo,Stato)
+
+  <strong|StatoConsegna>(<underline|IdStato>,Comanda,Pony,Stato,Ora)
+
+  <strong|Recensione>(<underline|IdRecensione>,Account,GiudizioGlobale,GiudizioTesto,DataRecensione,Tipo,PiattoRecensito)
+
+  <strong|DomandaQuestionario>(<underline|IdDomanda>,Domanda)
+
+  <strong|Compilazione>(I<underline|dRecensione,IdDomanda>,Risposta)
+
+  <strong|ValutazioneRecensione>(<underline|Account>,<underline|Recensione>,Veridicita,Accuratezza,Descrizione)
+
+  <strong|PropostaPiatto>(<underline|IdPropostaPiatto>,Account,Nome)
+
+  <strong|IngredientiNuovoPiatto>(<underline|PropostaPiatto>,<underline|Ingrediente>,Quantit‡)
+
+  <strong|ValutazionePropostaPiatto>(<underline|Account>,<underline|PropostaPiatto>,Valutazione,Descrizione)
+
+  <strong|VariantePiatto>(<underline|IdVariante>,Account,Piatto)
+
+  <strong|ModificaVariazione>(<underline|IdModifica>,VariazionePiatto,Modifica)
+
+  <strong|ValutazioneVariazione>(<underline|Account>,<underline|VariazionePiatto>,Valutazione)
+
+  <strong|Serata>(<underline|IdSerata>,Account,NomeOrganizzatore,CognomeOrganizzatore,TelefonoOrganizzatoreSala,Allestimento,nPersone,Sala)
+
+  \;
 
   <subsection|Vincoli di Integrita Referenziali>
 
@@ -362,142 +376,205 @@
 
   <subsection|Dipendenze funzionali e normalizzazione (BCNF)>
 
-  -IdSede \ \ \<gtr\> \ \ Via, Numero Civico, Citta
+  IdSede \ \ \<gtr\> \ \ Via, Numero Civico, Citta
 
-  - Sede Ë in BCNF
+  - <strong|Sede> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdMagazzino \<gtr\> IdSede
 
-  - Magazzino Ë in BCNF
+  - <strong|Magazzino> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdScaffale \ \ \<gtr\> \ \ IdMagazzino\ 
 
-  - Scaffale Ë in BCNF\ 
+  - <strong|Scaffale> Ë in BCNF\ 
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdIngrediente \ \ \<gtr\> \ \ Nome, Provenienza, TipoProduzione, Allergene
 
-  - Ingrediente Ë in BCNF
+  - <strong|Ingrediente> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdConfezione \ \ \<gtr\> \ \ Peso, PrezzoAcquisto, DataAcquisto,
   DataConsegna, DataScadenza, Aspetto, Stato, Quantit‡Rimanente,
   IdIngrediente, IdScaffale
 
-  - Confezione Ë in BCNF
+  - <strong|Confezione> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdStrumento \ \ \<gtr\> \ \ TipoStrumento, NomeStrumento,
   UtilizzoStrumento,Sede
 
-  - Strumento Ë in BCNF
+  - <strong|Strumento> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdRicetta \ \ \<gtr\> \ \ TestoRicetta, IdIngrediente (ingrediente
   principale),Quantita
 
-  Ricetta Ë in BCNF
+  - <strong|Ricetta> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdRicetta, IdPasso \ \ \<gtr\> \ \ DescrizionePasso, Strumento,
   TempoUtilizzo, Ingrediente, QuantitaUtilizzata,Allergene
 
-  Passo Ë in BCNF
+  - <strong|Passo> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdMenu \ \ \<gtr\> \ \ IdSede, DataInizio, DataFine
 
-  Menu Ë in BCNF
+  - <strong|Menu> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdPiatto \ \ \<gtr\> \ \ Nome, Novita, IdRicetta
 
-  Piatto Ë in BCNF
+  - <strong|Piatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdPiatto, IdMenu \ \ \<gtr\> \ \ Prezzo
 
-  MenuPiatto Ë in BCNF
+  - <strong|MenuPiatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdVariazione \ \ \<gtr\> \ \ Piatto, DescrizioneVariazione
 
-  VariazionePiatto Ë in BCNF
+  - <strong|VariazionePiatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdSala \ \ \<gtr\> \ \ IdSede
 
-  Sala Ë in BCNF
+  - <strong|Sala> Ë in BCNF
 
-  IdTavolo \ \ \<gtr\> \ \ Sala, Posti, NumeroTavolo
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
-  Tavolo È in BCNF
+  IdTavolo \ \ \<gtr\> \ \ Sala, Posti, NumeroTavolo,Occupato
+
+  - <strong|Tavolo> È in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdComanda \ \ \<gtr\> \ \ Tavolo, Ora, TakeAway, Account, Stato
 
-  Comanda Ë in BCNF
+  - <strong|Comanda> Ë in BCNF
 
-  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto,Stato
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
-  Ordine Ë in BCNF
+  IdOrdine \ \ \<gtr\> \ \ Comanda, Piatto,Stato,Ora,Tavolo
 
-  OrdineVariazione Ë in BCNF
+  - <strong|Ordine> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   Username \ \ \<gtr\> \ \ Password, Nome, Cognome, Via, nCivico, Comune,
   Citta, Fruibilit‡Prenotazioni, Sesso
 
-  Account Ë in BCNF
+  - <strong|Account> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdPrenotazione \ \ \<gtr\> \ \ Username, NumeroTelefono, IdTavolo,
   OraPrenotazione, Numero di persone
 
-  Prenotazione Ë in BCNF
+  - <strong|Prenotazione> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdPony \ \ \<gtr\> \ \ Tipo di mezzo, Stato
 
-  Pony Ë in BCNF
+  - <strong|Pony> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdStatoConsegna \ \ \<gtr\> \ \ IdComanda, IdPony, Stato, Ora
 
-  StatoConsegna Ë in BCNF
+  - <strong|StatoConsegna> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdRecensione \ \ \<gtr\> \ \ Username, GiudizioGlobale, GiudizioTesto,
   DataRecensione
 
-  Recensione Ë in BCNF
+  - <strong|Recensione> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdDomanda \ \ \<gtr\> \ \ Domanda
 
-  Domanda Ë in BCNF
+  - <strong|Domanda> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdRecensione, IdDomanda \ \ \<gtr\> \ \ Risposta
 
-  Compilazione Ë in BCNF
+  - <strong|Compilazione> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   Username, IdRecensione \ \ \<gtr\> \ \ Veridicit‡, Accuratezza, Descrizione
 
-  ValutazioneRecensione Ë in BCNF
+  - <strong|ValutazioneRecensione> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdPropostaPiatto \ \ \<gtr\> \ \ Account, Nome
 
-  PropostaPiatto Ë in BCNF\ 
+  - <strong|PropostaPiatto> Ë in BCNF\ 
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdPropostaPiatto, IdIngrediente \ \ \<gtr\> \ \ Quantit‡
 
-  IngredientePropostaPiatto Ë in BCNF
+  - <strong|IngredientePropostaPiatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   Username, IdPropostaPiatto \ \ \<gtr\> \ \ Valutazione, Descrizione
 
-  ValutazionePropostaPiatto Ë in BCNF
+  - <strong|ValutazionePropostaPiatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdVariante \ \ \<gtr\> \ \ Username, IdPiatto
 
-  VariantePiatto Ë in BCNF
+  - <strong|VariantePiatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdModifica \ \ \<gtr\> \ \ VariantePiatto, Modifica
 
-  ModificaVariantePiatto Ë in BCNF
+  - <strong|ModificaVariantePiatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   Username, VariantePiatto \ \ \<gtr\> \ \ Valutazione
 
-  ValutazioneVariantePiatto Ë in BCNF
+  - <strong|ValutazioneVariantePiatto> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   IdSerata \ \ \<gtr\> \ \ Account, NomeOrganizzatore, CognomeOrganizzatore,
   TelefonoOrganizzatoreSala, Allestimento, NumeroDiPersone, IdSala, Data
 
-  Serata Ë in BCNF
+  - <strong|Serata> Ë in BCNF
+
+  <emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash><emdash>-
 
   <section|Creazione Database>
+
+  Negli appositi documenti Ë possibile trovare l'intero script che permette
+  di creare e di popolare tutto il database
 
   \;
 
@@ -518,17 +595,17 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|3.3|6>>
-    <associate|auto-11|<tuple|3.4|6>>
-    <associate|auto-12|<tuple|4|6>>
-    <associate|auto-13|<tuple|4|6>>
+    <associate|auto-10|<tuple|2.3|6>>
+    <associate|auto-11|<tuple|2.4|8>>
+    <associate|auto-12|<tuple|3|10>>
+    <associate|auto-13|<tuple|4|10>>
     <associate|auto-14|<tuple|3.2.7|6>>
     <associate|auto-15|<tuple|3.2.8|6>>
     <associate|auto-16|<tuple|3.2.9|7>>
     <associate|auto-17|<tuple|3.2.10|7>>
     <associate|auto-18|<tuple|3.3|8>>
     <associate|auto-19|<tuple|3.4|8>>
-    <associate|auto-2|<tuple|2|1>>
+    <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-20|<tuple|3.5|8>>
     <associate|auto-21|<tuple|4|8>>
     <associate|auto-22|<tuple|18|?>>
@@ -539,7 +616,7 @@
     <associate|auto-27|<tuple|23|?>>
     <associate|auto-28|<tuple|3|?>>
     <associate|auto-29|<tuple|3.1|?>>
-    <associate|auto-3|<tuple|2.1|1>>
+    <associate|auto-3|<tuple|1.2|2>>
     <associate|auto-30|<tuple|3.1.1|?>>
     <associate|auto-31|<tuple|3.1.2|?>>
     <associate|auto-32|<tuple|3.1.3|?>>
@@ -550,61 +627,69 @@
     <associate|auto-37|<tuple|3.1.8|?>>
     <associate|auto-38|<tuple|3.1.9|?>>
     <associate|auto-39|<tuple|3.1.10|?>>
-    <associate|auto-4|<tuple|2.2|1>>
+    <associate|auto-4|<tuple|2|2>>
     <associate|auto-40|<tuple|3.2|?>>
     <associate|auto-41|<tuple|3.3|?>>
     <associate|auto-42|<tuple|3.4|?>>
     <associate|auto-43|<tuple|4|?>>
-    <associate|auto-5|<tuple|3|1>>
-    <associate|auto-6|<tuple|3.1|1>>
-    <associate|auto-7|<tuple|3.2|2>>
-    <associate|auto-8|<tuple|3.2.1|2>>
-    <associate|auto-9|<tuple|3.2.2|4>>
+    <associate|auto-5|<tuple|2.1|2>>
+    <associate|auto-6|<tuple|2.1.1|2>>
+    <associate|auto-7|<tuple|2.1.2|4>>
+    <associate|auto-8|<tuple|2.1.3|5>>
+    <associate|auto-9|<tuple|2.2|5>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Introduzione>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Progettazione
+      Concettuale> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Progettazione
-      Concettuale> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Glossario
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Glossario
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>>
+
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Modello Concettuale (Schema
+      ER) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>Associazioni
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Progettazione
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Progettazione
       Logica> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5><vspace|0.5fn>
+      <no-break><pageref|auto-4><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Modello Logico
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Analisi di alcune operazioni
+      effettuabili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5>>
+
+      <with|par-left|<quote|2tab>|2.1.1<space|2spc>Tabella dei volumi
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Analisi di alcune operazioni
-      effettuabili <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|2.1.2<space|2spc>Operazioni significative
+      sui Dati <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|2tab>|3.2.1<space|2spc>Tabella dei volumi
+      <with|par-left|<quote|2tab>|2.1.3<space|2spc>Analisi Ridondanze
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Dipendenze funzionali e
-      normalizzazione (BCNF) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Modello Logico
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Creazione
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Vincoli di Integrita
+      Referenziali <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|2.4<space|2spc>Dipendenze funzionali e
+      normalizzazione (BCNF) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Creazione
       Database> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10><vspace|0.5fn>
+      <no-break><pageref|auto-12><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
