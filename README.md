@@ -18,6 +18,16 @@ Appunti di Ingegneria Informatica UNIPI 2014/2015
 ### Algebra Lineare
  - [Definizioni e teoremi](https://github.com/AGSInfo/Unipi_2014-2015/blob/master/algebra_lineare/Longhetto.pdf)
 
+# Unipi 2015_2016
+
+## Primo Periodo
+
+### Calcolo Numerico
+
+### Reti Logiche
+
+### Elettrotecnica
+
 ## Informazioni sulla modifica
 Prima di effettuare qualsiasi modifica è necessario aver letto attentamente il file [STANDARD.pdf](https://github.com/AGSInfo/Unipi_2014-2015/blob/master/STANDARD.pdf?raw=true). Il file è soggetto a modifiche, controllare regolarmente i commit relativi ad esso.
 
